@@ -1637,7 +1637,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "韦鲁斯开始蓄力，随后进行一次远距离的强力射击，蓄力时间越长，伤害越高。",
-            "dynamicDescription": "<attention>开始蓄力：</attention>韦鲁斯为一次强力射击深深挽弓，自我<status>减速</status>@MoveSpeedMod*-100@%。在@MaxChannelDuration@秒后，如果未将箭射出去，则韦鲁斯会取消这个技能并返还其@ManaRefund*100@%法力消耗。<br><br><attention>释放：</attention>韦鲁斯将箭射出，造成<physicalDamage>@TotalDamageMinTooltip@物理伤害</physicalDamage>，每命中一个敌人就会降低@FalloffPercent*100@%(最低降至@MinDamagePercent*100@%)。伤害和<keywordMajor>枯萎</keywordMajor>的引爆效果会基于蓄力时间至多提升至@MaxChargeAmp*100@%(最大值为<physicalDamage>@TotalDamageMax@</physicalDamage>) 。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<attention>开始蓄力：</attention>韦鲁斯为下一箭挽弓，自我<status>减速</status>@MoveSpeedMod*-100@%。@MaxChannelDuration@秒后，如果未将箭射出，则韦鲁斯取消该技能并返还其@ManaRefund*100@%法力消耗。<br><br><attention>释放：</attention>韦鲁斯将箭射出，造成<physicalDamage>@TotalDamageMin@物理伤害</physicalDamage>，每命中一个敌人，该伤害降低@FalloffPercent*100@%(最低降至@MinDamagePercent*100@%)。伤害和<keywordMajor>枯萎</keywordMajor>的引爆效果会基于蓄力时间至多提升@MaxChannelAmp*100@%(最高可达<physicalDamage>@TotalDamageMax@物理伤害</physicalDamage>)。@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

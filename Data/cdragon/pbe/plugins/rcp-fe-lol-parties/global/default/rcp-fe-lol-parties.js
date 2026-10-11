@@ -246,7 +246,13 @@
                         i = d.default.isFullLaunchEnabled(),
                         s = d.default.isHextechTFTQueue(e?.gameConfig?.queueId);
                     if (i && n && !s) {
-                        if (d.default.launchTFT()) return v.default.gameInviteAccept(), Promise.resolve();
+                        const e = {
+                            path: "/rcp-fe-lol-parties",
+                            screen: "rcp-fe-lol-parties",
+                            subScreen: "friends-list-party-invite",
+                            buttonClicked: "accept-invite"
+                        };
+                        if (d.default.launchTFT(e)) return v.default.gameInviteAccept(), Promise.resolve();
                         o.logger.warn("[PartyAPI] TFT full launch callback not registered; falling through to lobby accept.")
                     }
                     return this._binding.post(`/lol-lobby/v2/received-invitations/${t}/accept`).then((() => {
@@ -1025,11 +1031,11 @@
                             u = o.gameSelectModeGroup || i.MODE_GROUP_NAMES.AlternativeLeagueModes,
                             {
                                 gameMode: d
-                            } = o,
-                            {
-                                assetMutator: p
-                            } = o,
-                            h = o?.isVisible;
+                            } = o;
+                        [1230, 1231, 1232, 1235].includes(a) && (o.assetMutator = "TFT_Set18_Halloween_CT");
+                        const {
+                            assetMutator: p
+                        } = o, h = o?.isVisible;
                         t[c] = t[c] ? t[c] : {}, t[c][u] || (t[c][u] = {
                             mapId: m,
                             gameMode: d,
@@ -11956,7 +11962,13 @@
                     }))
                 },
                 confirmButtonClicked: function() {
-                    if (this.get("showTFTLaunchButton")) return this.get("fullLaunchService").launchTFT(), Promise.resolve();
+                    if (this.get("showTFTLaunchButton")) {
+                        const e = {
+                            path: "/mode-select",
+                            screen: "rcp-fe-lol-parties"
+                        };
+                        return this.get("fullLaunchService").launchTFT(e), Promise.resolve()
+                    }
                     o.datadogRum.startOperation(o.datadogRum.XP_CGL_PREGAME_LOBBY_CREATE, this._buildLobbyCreateContext());
                     try {
                         if (this.get("selected.isTrainingGame") && !this.get("selected.isCreatingCustomGame")) return this.startTutorial();

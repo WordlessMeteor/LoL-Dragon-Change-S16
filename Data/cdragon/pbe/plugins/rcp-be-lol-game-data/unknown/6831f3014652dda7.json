@@ -841,7 +841,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "星形に爆発して敵にマークを付与するミサイルを発射する。マークを付与した敵を攻撃すると、移動速度が増加する。",
-            "dynamicDescription": "敵に命中するか、射程の限界に達すると爆発する弾を発射する。爆発により<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、敵に@DebuffDuration@秒間マークを付与する。<br><br>マークが付与された対象にダメージを与えると、ルシアンは@BuffDuration@秒間<speed>@MoveSpeedAmount@の移動速度</speed>を獲得する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "敵に命中するか、射程の限界に達すると爆発する弾を発射する。爆発により<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、敵に@DebuffDuration@秒間マークを付与する。<br><br>マークが付与された対象にダメージを与えると、@BuffDuration@秒間<speed>@MoveSpeedAmount@の移動速度</speed>を獲得する。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1141,7 +1141,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "二挺拳銃を構えて弾丸を高速で連射する。",
-            "dynamicDescription": "@Duration@秒間、一定方向に素早く射撃しながら自由に移動する。弾丸は最初に命中した敵に当たり、それぞれに<physicalDamage>@DamagePerBullet@の物理ダメージ</physicalDamage>を与える。射撃回数は<attackSpeed>攻撃速度</attackSpeed>に応じて増加する。<br><br>合計@TotalNumShots@発以上: <physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>。<br><spellName>二挺掃射</spellName>は、ミニオンに<attention>@PercentDamageAmpToMinions@%</attention>のダメージを与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@Duration@秒間、一定方向に素早く射撃しながら自由に移動する。弾丸は最初に当たった敵に命中し、それぞれに<physicalDamage>@DamagePerBullet@の物理ダメージ</physicalDamage>を与える。射撃回数は<attackSpeed>攻撃速度</attackSpeed>に応じて増加する。<br><br>合計@TotalNumShots@発以上: <physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage><br><spellName>二挺掃射</spellName>は、ミニオンに<attention>@PercentDamageAmpToMinions@%</attention>のダメージを与える。@SpellModifierDescriptionAppend@",
             "range": [
                 1400.0,
                 1400.0,

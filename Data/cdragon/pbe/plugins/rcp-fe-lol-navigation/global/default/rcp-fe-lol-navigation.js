@@ -13759,7 +13759,7 @@
                 }
                 init() {
                     this.navigationItem = this.createNavigationItem(), this.summonerBinding = (0, i.dataBinding)("/lol-summoner", i.websocket), this.platformConfigBinding = (0, i.dataBinding)("/lol-platform-config", i.websocket), this.settingsBinding = (0, i.dataBinding)("/lol-settings", i.websocket), this.clientConfigBinding = (0, i.dataBinding)("/lol-client-config", i.websocket), this.summonerBinding.observe("/v1/current-summoner", this, (e => {
-                        e && e.puuid && (this.summonerBinding.unobserve("/v1/current-summoner", this), e.summonerLevel < 1 || this.platformConfigBinding.observe("/v1/initial-configuration-complete", this, (e => {
+                        e && e.puuid && (this.summonerBinding.unobserve("/v1/current-summoner", this), this.summonerLevel = e.summonerLevel, e.summonerLevel < 1 || this.platformConfigBinding.observe("/v1/initial-configuration-complete", this, (e => {
                             e && (this.platformConfigBinding.unobserve("/v1/initial-configuration-complete", this), this.platformConfigBinding.observe("/v1/namespaces/LootConfig", this, (e => {
                                 this.lootEnabled = !!e.Enabled, e.LootTooltipDisabled ? this._navTooltip.innerHTML = "" : (this._navTooltip.innerHTML = (0, a.default)(i.tra, this.lootEnabled, this.summonerLevel, 1), this.settingsBinding.addObserver("/v2/ready", this, this._handleSettingsReady), this.clientConfigBinding.addObserver("/v3/client-config/lol.client_settings.sanctum.active_banners", this, this._handleSanctumActiveBannersConfig)), this.NavigationPlugin.setItemEnabled(this.navigationItem, this.lootEnabled), this.lootEnabled ? this._lootCallToActionObserver || (this._lootCallToActionObserver = new s.default(i.dataBinding.bindTo(i.websocket), i.tra, this), this._lootCallToActionObserver.startObserver()) : this._lootCallToActionObserver && (this._lootCallToActionObserver.removeObserver(), this._lootCallToActionObserver = null)
                             })))
@@ -13809,7 +13809,7 @@
                     })
                 }
                 _shouldShowSanctumEat() {
-                    return this._requirements.settingsReady && this._requirements.eatPlatformConfigEnabled && !this._requirements.eatSeen && !this._eatShownThisSession
+                    return this._requirements.settingsReady && this._requirements.eatPlatformConfigEnabled && !this._requirements.eatSeen && !this._eatShownThisSession && this.summonerLevel >= 10
                 }
                 _enableSanctumEAT() {
                     this._eatShownThisSession = !0, this.NavigationPlugin.setItemAlert(this.navigationItem, !0), this.NavigationPlugin.setAttentionTooltip(this.navigationItem, {
@@ -25289,7 +25289,8 @@
                 classNameBindings: ["readyCheck.isStateMachineStateDeclined:ready-check-map-background-declined"],
                 gameflow: a.Ember.inject.service("gameflow"),
                 readyCheck: a.Ember.inject.service("ready-check"),
-                backgroundImage: a.Ember.computed("gameflow.assets.ready-check-background", "readyCheck.isStateMachineStateInProgress", (function() {
+                backgroundImage: a.Ember.computed("gameflow.assets.ready-check-background", "readyCheck.isStateMachineStateInProgress", "gameflow.isTFTChonccHalloween", (function() {
+                    if (this.get("gameflow.isTFTChonccHalloween")) return "lol-game-data/assets/ASSETS/UX/TFT/OutOfGame/Backgrounds/ready-check-TFT-CTHALLOWEEN.jpg";
                     const e = this.get("gameflow.assets.ready-check-background");
                     if (this.get("readyCheck.isStateMachineStateInProgress") && !e) {
                         const e = this.get("gameflow.queue.id"),
@@ -25369,10 +25370,11 @@
                 readyCheckMatchFoundString: i.Ember.computed("isStrawberry", (function() {
                     return this.get("isStrawberry") ? this.get("tra.ready_check_match_found_STRAWBERRY") : this.get("tra.ready_check_match_found")
                 })),
-                queueTypeString: i.Ember.computed("gameflow.map.isRGM", "gameflow.queueType", "tra.ready_check_queue_type_RANKED_SOLO_5x5", (function() {
+                queueTypeString: i.Ember.computed("gameflow.map.isRGM", "gameflow.queueType", "tra.ready_check_queue_type_RANKED_SOLO_5x5", "isTFTChonccHalloween", (function() {
                     const e = this.get("gameflow.queueType");
                     if (!e) return "";
                     if (this.get("gameflow.map.isRGM")) return this.get("tra.ready_check_featured");
+                    if (this.get("isTFTChonccHalloween")) return this.get("tra.ready_check_queue_type_CHONCC_HALLOWEEN_TFT");
                     {
                         const t = "ready_check_queue_type_" + e;
                         return this.get(`tra.${t}`)
@@ -25387,6 +25389,7 @@
                 isCherry: i.Ember.computed.alias("gameflow.isCherry"),
                 isStrawberry: i.Ember.computed.alias("gameflow.isStrawberry"),
                 isTFT: i.Ember.computed.alias("gameflow.isTFT"),
+                isTFTChonccHalloween: i.Ember.computed.alias("gameflow.isTFTChonccHalloween"),
                 isNotTeamVsTeam: i.Ember.computed.or("isCherry", "isStrawberry", "isTFT")
             })
         }, (e, t, n) => {
@@ -27667,6 +27670,9 @@
                     isCherry: i.Ember.computed.equal("queue.gameMode", "CHERRY"),
                     isStrawberry: i.Ember.computed.equal("queue.gameMode", "STRAWBERRY"),
                     isTFT: i.Ember.computed.equal("queue.gameMode", "TFT"),
+                    isTFTChonccHalloween: i.Ember.computed("isTFT", "queue.id", (function() {
+                        return this.get("isTFT") && [1230, 1231, 1232, 1235].includes(this.get("queue.id"))
+                    })),
                     isJade: i.Ember.computed.equal("queue.gameMode", "JADE"),
                     getGameMode() {
                         return this.get("queue.gameMode")

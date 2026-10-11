@@ -8614,19 +8614,19 @@
                         if (n && n.queueId) {
                             const t = e.queues && e.queues.byId[n.queueId];
                             if (t) {
-                                const n = e.mapByGameModeAndMapId(t.gameMode, t.mapId, t.assetMutator);
-                                if (n) {
-                                    if (n.isRGM) return e.t("open_party_short_desc_RGM");
+                                const o = e.mapByGameModeAndMapId(t.gameMode, t.mapId, t.assetMutator);
+                                if (o) {
+                                    if (o.isRGM) return e.t("open_party_short_desc_RGM");
                                     if ("NEXUSBLITZ" === t.gameMode) return e.t("game_mode_nexus_blitz");
                                     if ("CHERRY" === t.gameMode) return e.t("game_mode_cherry");
                                     if ("STRAWBERRY" === t.gameMode) return e.t("game_mode_strawberry");
                                     if ("BRAWL" === t.gameMode) return e.t("game_mode_brawl");
-                                    if ("TFT" === t.gameMode) return t.assetMutator.length > 0 ? t.description + " (" + e.t("map_TFT_short_name") + ")" : t.type.includes("RANKED") ? e.t("game_type_ranked") + " (" + e.t("map_TFT_short_name") + ")" : e.t("game_mode_tft");
-                                    const o = [],
-                                        i = ["("];
-                                    t.assetMutator ? i.push(e.t(`map_${n.mapStringId}_${t.assetMutator}_short_name`)) : i.push(e.t(`map_${n.mapStringId}_short_name`)), i.push(")");
-                                    const a = i.join("");
-                                    return t.gameMode === r.GAME_MODES.JADE ? "kVersusAI" === t.gameSelectCategory ? o.push(this.get("tra.queue_jade_coop_queue")) : o.push(this.get("tra.queue_jade_pvp_queue")) : t.gameMode === r.GAME_MODES.CRAB ? o.push(e.t("queue_crab_pvp_queue")) : "VersusAi" === t.category ? (o.push(e.getBotQueueDifficultyString(t)), o.push(a)) : t.type === r.QUEUES.JADE_RANKED_SOLO_5x5 ? o.push(this.get("tra.queue_jade_ranked_solo_5x5")) : (t.type.includes("RANKED_FLEX") ? o.push(e.t("game_type_ranked_flex")) : t.type.includes("RANKED_SOLO") && t.type !== r.QUEUES.JADE_RANKED_SOLO_5x5 ? o.push(e.t("game_type_ranked_soloduo")) : "SWIFTPLAY" === t.gameMode ? o.push(e.t("queue_normal_swiftplay")) : "QuickplayPickStrategy" === t.pickMode ? o.push(e.t("queue_normal_quickplay")) : "TeamBuilderDraftPickStrategy" === t.pickMode ? o.push(e.t("queue_normal_draft")) : "AllRandomPickStrategy" === t.pickMode ? o.push(e.t("game_name_aram")) : o.push(e.t("queue_normal_blind")), o.push(a)), o.join(" ")
+                                    if ("TFT" === t.gameMode) return [1230, 1231, 1232, 1235].includes(t.id || n.queueId) || t.assetMutator.length > 0 ? t.description + " (" + e.t("map_TFT_short_name") + ")" : t.type.includes("RANKED") ? e.t("game_type_ranked") + " (" + e.t("map_TFT_short_name") + ")" : e.t("game_mode_tft");
+                                    const i = [],
+                                        a = ["("];
+                                    t.assetMutator ? a.push(e.t(`map_${o.mapStringId}_${t.assetMutator}_short_name`)) : a.push(e.t(`map_${o.mapStringId}_short_name`)), a.push(")");
+                                    const s = a.join("");
+                                    return t.gameMode === r.GAME_MODES.JADE ? "kVersusAI" === t.gameSelectCategory ? i.push(this.get("tra.queue_jade_coop_queue")) : i.push(this.get("tra.queue_jade_pvp_queue")) : t.gameMode === r.GAME_MODES.CRAB ? i.push(e.t("queue_crab_pvp_queue")) : "VersusAi" === t.category ? (i.push(e.getBotQueueDifficultyString(t)), i.push(s)) : t.type === r.QUEUES.JADE_RANKED_SOLO_5x5 ? i.push(this.get("tra.queue_jade_ranked_solo_5x5")) : (t.type.includes("RANKED_FLEX") ? i.push(e.t("game_type_ranked_flex")) : t.type.includes("RANKED_SOLO") && t.type !== r.QUEUES.JADE_RANKED_SOLO_5x5 ? i.push(e.t("game_type_ranked_soloduo")) : "SWIFTPLAY" === t.gameMode ? i.push(e.t("queue_normal_swiftplay")) : "QuickplayPickStrategy" === t.pickMode ? i.push(e.t("queue_normal_quickplay")) : "TeamBuilderDraftPickStrategy" === t.pickMode ? i.push(e.t("queue_normal_draft")) : "AllRandomPickStrategy" === t.pickMode ? i.push(e.t("game_name_aram")) : i.push(e.t("queue_normal_blind")), i.push(s)), i.join(" ")
                                 }
                             }
                         }
@@ -16263,7 +16263,7 @@
                 gameStartFormatted: r.Ember.computed("gameStart", "now", (function() {
                     return (0, i.formatGameStartTime)(this.get("now") - this.get("gameStart"))
                 })),
-                gameQueueTypeString: r.Ember.computed("gameType", "gameMode", "map", "queueAssetMutator", (function() {
+                gameQueueTypeString: r.Ember.computed("gameType", "gameMode", "map", "queueId", "queueAssetMutator", (function() {
                     const e = this.get("gameMode"),
                         t = this.get("map"),
                         n = this.get("queueAssetMutator");
@@ -16271,7 +16271,7 @@
                         const r = this.getMapModeData(t.id, e, n);
                         if (r && r.isRGM) return this.get("tra.game_type_featured")
                     }
-                    return this.get("tra.game_type_" + this.get("gameType"))
+                    return [1230, 1231, 1232, 1235].includes(this.get("queueId")) ? this.get("tra.game_type_CHONCC_HALLOWEEN_TFT") : this.get("tra.game_type_" + this.get("gameType"))
                 })),
                 mapId: r.Ember.computed("queuesByType", "gameQueueType", "lol", (function() {
                     return (this.get("queuesByType").get(this.get("gameQueueType")) || {}).mapId || this.get("lol.mapId")
@@ -21465,7 +21465,7 @@
                         case "BRAWL":
                             return this.get("tra.game_mode_brawl");
                         case "TFT":
-                            return n.assetMutator.length > 0 ? n.description + " (" + this.get("tra.map_TFT_short_name") + ")" : n.type.includes("RANKED") ? this.get("tra.game_type_ranked") + " (" + this.get("tra.map_TFT_short_name") + ")" : this.get("tra.game_mode_tft");
+                            return [1230, 1231, 1232, 1235].includes(n.id || t.queueId) || n.assetMutator.length > 0 ? n.description + " (" + this.get("tra.map_TFT_short_name") + ")" : n.type.includes("RANKED") ? this.get("tra.game_type_ranked") + " (" + this.get("tra.map_TFT_short_name") + ")" : this.get("tra.game_mode_tft");
                         default:
                             return this._buildPartyQueueString(n, r)
                     }

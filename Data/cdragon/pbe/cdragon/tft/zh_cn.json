@@ -54754,14 +54754,14 @@
             "apiName": "DA_ReturningFriendUpgrade",
             "associatedTraits": [],
             "composition": [],
-            "desc": "TFT18_Charm_ReturningFriend_Upgrade_Description",
+            "desc": "获得1个携带着<Set18CharmUpgrade>3个【巨人腰带】</Set18CharmUpgrade>的【训练假人】。",
             "effects": {},
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
             "id": null,
             "incompatibleTraits": [],
             "isAugment": false,
-            "name": "TFT18_Charm_ReturningFriend_Upgrade_Name",
+            "name": "回归的好友",
             "tags": [
                 "{5b609ae2}"
             ],
@@ -56594,7 +56594,7 @@
             "apiName": "DA_RoomForAShroomUpgrade",
             "associatedTraits": [],
             "composition": [],
-            "desc": "TFT18_Charm_RoomForAShroom_Upgrade_Description",
+            "desc": "获得@ShroomsToGrantUpgrade@个随机蘑菇。",
             "effects": {
                 "{6cddf9fd}": 3.0
             },
@@ -56603,7 +56603,7 @@
             "id": null,
             "incompatibleTraits": [],
             "isAugment": false,
-            "name": "TFT18_Charm_RoomForAShroom_Upgrade_Name",
+            "name": "摸些蘑菇",
             "tags": [
                 "{5b609ae2}"
             ],
@@ -57109,7 +57109,7 @@
             "apiName": "DA_RoomForAShroom",
             "associatedTraits": [],
             "composition": [],
-            "desc": "TFT18_Charm_RoomForAShroom_Description",
+            "desc": "获得@ShroomsToGrant@个随机蘑菇。",
             "effects": {
                 "{f2956f6f}": 2.0
             },
@@ -57118,7 +57118,7 @@
             "id": null,
             "incompatibleTraits": [],
             "isAugment": false,
-            "name": "TFT18_Charm_RoomForAShroom_Name",
+            "name": "摸些蘑菇",
             "tags": [
                 "{5b609ae2}"
             ],
@@ -83256,8 +83256,8 @@
             "composition": [],
             "desc": "战斗开始时，你的前排每有1名弈子，后两排的弈子就会获得@AbilityPowerPcntPerFrontLiner*100@%法术加成和@AttackDamagePcntPerFrontLiner*100@%物理加成。",
             "effects": {
-                "{910d2567}": 0.09000000357627869,
-                "{dac37571}": 0.10000000149011612
+                "{910d2567}": 0.10999999940395355,
+                "{dac37571}": 0.10999999940395355
             },
             "from": null,
             "icon": "assets/maps/tft/icons/augments/hexcore/holdtheline_iii.tex",
@@ -83276,7 +83276,7 @@
             "composition": [],
             "desc": "战斗开始时：弈子为其他邻格弈子提供@Armor_Silver@护甲和魔抗。这个效果可以叠加。",
             "effects": {
-                "{9724cae4}": 6.0
+                "{9724cae4}": 7.0
             },
             "from": null,
             "icon": "assets/maps/tft/icons/augments/hexcore/grouphug1_i.tex",
@@ -83411,7 +83411,7 @@
             "composition": [],
             "desc": "你的队伍获得@InitialStacks@%物理加成和法术加成。在每场玩家对战回合结束后，该加成提升@StacksPerCombat@%。1费弈子们获得双倍该加成。",
             "effects": {
-                "{6af58d52}": 5.0,
+                "{6af58d52}": 3.0,
                 "{b584a6db}": 1.0
             },
             "from": null,
@@ -83487,7 +83487,7 @@
             "composition": [],
             "desc": "在你购买经验值时，获得额外@AdditionalXP@经验值。立刻获得@InstantXP@经验值。",
             "effects": {
-                "InstantXP": 6.0,
+                "InstantXP": 10.0,
                 "{322ef094}": 2.0
             },
             "from": null,
@@ -83661,6 +83661,27 @@
             "unique": false
         },
         {
+            "apiName": "DA_ConstructACompanion",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "你购买的下个@UnitCost@费弈子变为@ActorLevel@星。获得@NumGold@金币。",
+            "effects": {
+                "NumGold": 2.0,
+                "UnitCost": 1.0,
+                "{141b5538}": 3.0
+            },
+            "from": null,
+            "icon": "assets/maps/tft/icons/augments/hexcore/constructacompanion_iii.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": true,
+            "name": "挑个好伙计！",
+            "tags": [
+                "{ce1fd21c}"
+            ],
+            "unique": false
+        },
+        {
             "apiName": "DA_SpreadingRootsPlus",
             "associatedTraits": [],
             "composition": [],
@@ -83706,7 +83727,7 @@
             "composition": [],
             "desc": "获得@NumItemsToGrant@个【正义之手】。携带【正义之手】的友军获得<TFTKeyword>技能暴击</TFTKeyword>和@CriticalStrikeChance*100@%暴击几率。<br><br><rules>【技能暴击】：技能伤害可以造成暴击。额外的【技能暴击】提供10%暴击伤害。</rules>",
             "effects": {
-                "CriticalStrikeChance": 0.25,
+                "CriticalStrikeChance": 0.15000000596046448,
                 "{cf436c6a}": 2.0
             },
             "from": null,
@@ -83807,7 +83828,7 @@
             "composition": [],
             "desc": "每拥有1个黄铜级羁绊，你的队伍获得@DamageAmp*100@%伤害增幅和@Armor@护甲与魔法抗性。",
             "effects": {
-                "Armor": 4.0,
+                "Armor": 3.0,
                 "DamageAmp": 0.02500000037252903
             },
             "from": null,
@@ -83827,9 +83848,9 @@
             "composition": [],
             "desc": "你每获得1利息，你弈子们获得@MaxHealthPerInterest@永久最大生命值。你的最大利息提升@MaxInterestInc@。立刻获得@InstantGold@金币。",
             "effects": {
-                "InstantGold": 8.0,
+                "InstantGold": 10.0,
                 "{77dbf275}": 2.0,
-                "{da66a800}": 10.0
+                "{da66a800}": 12.0
             },
             "from": null,
             "icon": "assets/maps/tft/icons/augments/hexcore/investmentstrategy_iii.tex",
@@ -84396,8 +84417,8 @@
             "desc": "友军每受到@ProcAttackCount@次攻击，会对附近的敌人造成@DamageI@~@DamageI_4@(基于当前阶段)魔法伤害(@Cooldown@秒冷却)。",
             "effects": {
                 "Cooldown": 1.0,
-                "{75249118}": 90.0,
-                "{b342e48b}": 30.0,
+                "{7b249a8a}": 80.0,
+                "{b342e48b}": 25.0,
                 "{c6163c80}": 4.0
             },
             "from": null,
@@ -84522,26 +84543,6 @@
             "incompatibleTraits": [],
             "isAugment": true,
             "name": "清晰头脑",
-            "tags": [
-                "{ce1fd21c}"
-            ],
-            "unique": false
-        },
-        {
-            "apiName": "DA_PandorasItemsII",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "回合开始时：你备战席的装备会随机变化。<br><br>获得@NumberOfComponentsII@件随机基础装备和@GoldAmountII@金币。",
-            "effects": {
-                "{739a48af}": 2.0,
-                "{98f3fe09}": 4.0
-            },
-            "from": null,
-            "icon": "assets/maps/tft/icons/augments/hexcore/pandora2.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": true,
-            "name": "潘朵拉的装备 II",
             "tags": [
                 "{ce1fd21c}"
             ],
@@ -84804,7 +84805,7 @@
             "composition": [],
             "desc": "你的队伍获得@CritChance_I@%暴击几率和<TFTKeyword>技能暴击</TFTKeyword>。<br><br><rules>【技能暴击】：技能伤害可以造成暴击。额外的【技能暴击】提供10%暴击伤害。</rules>",
             "effects": {
-                "{eb825291}": 10.0
+                "{eb825291}": 15.0
             },
             "from": null,
             "icon": "assets/maps/tft/icons/augments/hexcore/jeweled-lotus-ii.tex",
@@ -84836,6 +84837,27 @@
             "name": "日月同辉",
             "tags": [
                 "{ce1fd21c}"
+            ],
+            "unique": false
+        },
+        {
+            "apiName": "DA_ForgeAFriend",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "你购买的下个@UnitCost@费弈子变为@ActorLevel@星。获得@NumGold@金币。",
+            "effects": {
+                "NumGold": 5.0,
+                "UnitCost": 1.0,
+                "{141b5538}": 3.0
+            },
+            "from": null,
+            "icon": "assets/maps/tft/icons/augments/hexcore/constructacompanion_iii.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": true,
+            "name": "锻造挚友",
+            "tags": [
+                "{d11fd6d5}"
             ],
             "unique": false
         },
@@ -84903,7 +84925,7 @@
             "composition": [],
             "desc": "获得2个【次级英雄复制器】。获得@Gold@金币。",
             "effects": {
-                "Gold": 4.0
+                "Gold": 6.0
             },
             "from": null,
             "icon": "assets/maps/tft/icons/augments/hexcore/heroic-grab-bag-ii.tex",
@@ -85022,7 +85044,7 @@
             "desc": "立刻以及接下来的@Rounds@个回合开始时，获得@XPPerRound_Plus@经验值。",
             "effects": {
                 "rounds": 3.0,
-                "{5ad11391}": 10.0,
+                "{5ad11391}": 9.0,
                 "{822fdcb5}": 3.0
             },
             "from": null,
@@ -85230,7 +85252,7 @@
             "composition": [],
             "desc": "战斗开始时：友军获得@AttackSpeedMultiplier*100@%攻击速度，持续@BuffDuration@秒。在参与击杀后，友军向他们的下个目标冲刺，并再次获得该加成。",
             "effects": {
-                "BuffDuration": 3.0,
+                "BuffDuration": 4.0,
                 "{ad998bcf}": 0.25
             },
             "from": null,
@@ -85314,7 +85336,7 @@
             "composition": [],
             "desc": "每有1名拥有相同羁绊的友军，这些弈子们就会获得@ADAP*100@%物理加成、@ADAP*100@%法术加成、@resists@护甲和@resists@魔法抗性。",
             "effects": {
-                "ADAP": 0.019999999552965164,
+                "ADAP": 0.02500000037252903,
                 "Resists": 2.0
             },
             "from": null,
@@ -85483,26 +85505,6 @@
             "incompatibleTraits": [],
             "isAugment": true,
             "name": "源计划植入",
-            "tags": [
-                "{ce1fd21c}"
-            ],
-            "unique": false
-        },
-        {
-            "apiName": "DA_DoubleTrouble",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "如果你恰好登场了相同英雄的2个弈子，那么他们都会获得@DamageStatAdd*100@%物理加成和法术加成、@DefenseStatAdd@护甲和魔法抗性。当你将弈子升至3星时，获得该英雄的1个2星弈子。",
-            "effects": {
-                "{14ae3030}": 25.0,
-                "{65020e89}": 0.25
-            },
-            "from": null,
-            "icon": "assets/maps/tft/icons/augments/hexcore/double-trouble-ii.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": true,
-            "name": "好事成双",
             "tags": [
                 "{ce1fd21c}"
             ],
@@ -86183,8 +86185,8 @@
             "composition": [],
             "desc": "你每获得1利息，你弈子们获得@MaxHealthPerInterest@永久最大生命值。立刻获得@InstantGold@金币。",
             "effects": {
-                "InstantGold": 4.0,
-                "{da66a800}": 8.0
+                "InstantGold": 6.0,
+                "{da66a800}": 9.0
             },
             "from": null,
             "icon": "assets/maps/tft/icons/augments/hexcore/investmentstrategy_ii.tex",
@@ -86260,7 +86262,7 @@
             "composition": [],
             "desc": "获得1个包裹，包含1个@1StarCost@费弈子、1个2星@2StarCost@费弈子和@Gold@金币。<br><br>在接下来的@Stages@个阶段开始时，再次获得该包裹。",
             "effects": {
-                "Gold": 3.0,
+                "Gold": 5.0,
                 "{04a101fa}": 2.0,
                 "{34512474}": 1.0,
                 "{3ae20dd9}": 5.0
@@ -86528,7 +86530,7 @@
             "composition": [],
             "desc": "每有1名拥有相同羁绊的友军，这些弈子们就会获得@ADAP*100@%物理加成、@ADAP*100@%法术加成、@resists@护甲和@resists@魔法抗性。",
             "effects": {
-                "ADAP": 0.03500000014901161,
+                "ADAP": 0.03999999910593033,
                 "Resists": 3.5
             },
             "from": null,
@@ -86862,7 +86864,7 @@
             "desc": "获得1件随机基础装备和@NumGold@金币。下7次你赢得玩家对战回合时，获得1件不同的随机基础装备。在此之后，获得@CompletionGold@金币。",
             "effects": {
                 "NumGold": 1.0,
-                "{4daea365}": 5.0
+                "{4daea365}": 1.0
             },
             "from": null,
             "icon": "assets/maps/tft/icons/augments/hexcore/missing-t3.tex",
@@ -87231,7 +87233,7 @@
             "composition": [],
             "desc": "获得1个【坚定之心】。【坚定之心】的携带者每存活@SurvivePeriodInSeconds@秒，【坚定之心】就会额外获得@MaxHealthGain@永久最大生命值。",
             "effects": {
-                "MaxHealthGain": 16.0,
+                "MaxHealthGain": 18.0,
                 "{40e6f170}": 10.0
             },
             "from": null,
@@ -87500,7 +87502,7 @@
             "composition": [],
             "desc": "战斗开始时：弈子为其他邻格弈子提供@Armor_Gold@护甲和魔抗。这个效果可以叠加。",
             "effects": {
-                "{cf29d61f}": 9.0
+                "{cf29d61f}": 10.0
             },
             "from": null,
             "icon": "assets/maps/tft/icons/augments/hexcore/grouphug2_ii.tex",
@@ -87791,6 +87793,26 @@
             "unique": false
         },
         {
+            "apiName": "DA_PandorasItemsIIPlus",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "TFT18_Augment_PandorasItemsIIPlus_desc",
+            "effects": {
+                "{739a48af}": 2.0,
+                "{c39cd1c9}": 4.0
+            },
+            "from": null,
+            "icon": "assets/maps/tft/icons/augments/hexcore/missing-t2.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": true,
+            "name": "TFT18_Augment_PandorasItemsIIPlus_name",
+            "tags": [
+                "{ce1fd21c}"
+            ],
+            "unique": false
+        },
+        {
             "apiName": "DA_BronzeForLifeI",
             "associatedTraits": [],
             "composition": [],
@@ -87815,7 +87837,7 @@
             "composition": [],
             "desc": "你的队伍体型变大，获得@FlatHealth@生命值和@HealthMultiplier*100@%最大生命值。",
             "effects": {
-                "FlatHealth": 200.0,
+                "FlatHealth": 225.0,
                 "{52fcdfb4}": 0.10000002384185791
             },
             "from": null,
@@ -87875,7 +87897,7 @@
                 "HealthLoss": 20.0,
                 "NumChampions": 3.0,
                 "NumRounds": 5.0,
-                "{461c2a88}": 8.0
+                "{461c2a88}": 5.0
             },
             "from": null,
             "icon": "assets/maps/tft/icons/augments/hexcore/missing-t1.tex",
@@ -87935,7 +87957,7 @@
             "desc": "获得1个【振奋盔甲】。每@TimeIntervalSeconds@秒，【振奋盔甲】会治疗@HexRange@格内的友军@PercentMissingHealth*100@%已损失生命值。",
             "effects": {
                 "HexRange": 1.0,
-                "PercentMissingHealth": 0.07500000298023224,
+                "PercentMissingHealth": 0.09000000357627869,
                 "{0f5a682a}": 5.0
             },
             "from": null,
@@ -99911,6 +99933,7 @@
                 "DA_CommerceCore",
                 "DA_ComponentBuffet",
                 "DA_ComponentQuest",
+                "DA_ConstructACompanion",
                 "DA_CookingPot",
                 "DA_Coronation",
                 "DA_Corrosion",
@@ -99920,7 +99943,6 @@
                 "DA_CyberneticUplink_Gold",
                 "DA_DeadlierBlades",
                 "DA_DeadlierCaps",
-                "DA_DoubleTrouble",
                 "DA_Dummify",
                 "DA_EarlyLearnings",
                 "DA_ElectrochargeI",
@@ -99939,6 +99961,7 @@
                 "DA_Flexible",
                 "DA_FlowingTears",
                 "DA_FocusedFire",
+                "DA_ForgeAFriend",
                 "DA_ForgedInStrength",
                 "DA_FrontlineFoundation",
                 "DA_FutureFocused",
@@ -100006,8 +100029,8 @@
                 "DA_OneBuffTwoBuff",
                 "DA_PandorasBench",
                 "DA_PandorasItemsI",
-                "DA_PandorasItemsII",
                 "DA_PandorasItemsIII",
+                "DA_PandorasItemsIIPlus",
                 "DA_PartialAscension",
                 "DA_PatienceIsAVirtue",
                 "DA_PatientStudy",
@@ -101141,7 +101164,7 @@
                         "critMultiplier": 1.399999976158142,
                         "damage": 50.0,
                         "hp": 1100.0,
-                        "initialMana": 30.0,
+                        "initialMana": 50.0,
                         "magicResist": 50.0,
                         "mana": 110.0,
                         "range": 1.0
@@ -102036,14 +102059,14 @@
                     "squareIcon": "assets/characters/tft18_varus/skins/base/images/tft18_varus_splash_tile_9.tex",
                     "stats": {
                         "armor": 25.0,
-                        "attackSpeed": 0.699999988079071,
+                        "attackSpeed": 0.75,
                         "critChance": 0.25,
                         "critMultiplier": 1.399999976158142,
                         "damage": 40.0,
                         "hp": 500.0,
-                        "initialMana": 30.0,
+                        "initialMana": 20.0,
                         "magicResist": 25.0,
-                        "mana": 120.0,
+                        "mana": 110.0,
                         "range": 4.0
                     },
                     "tileIcon": "assets/characters/tft18_varus/tft18_varus_square.tex",
@@ -103263,7 +103286,7 @@
                         "attackSpeed": 0.75,
                         "critChance": 0.25,
                         "critMultiplier": 1.399999976158142,
-                        "damage": 55.0,
+                        "damage": 60.0,
                         "hp": 650.0,
                         "initialMana": 20.0,
                         "magicResist": 35.0,
@@ -104444,7 +104467,7 @@
                                 "ShieldRatio": 0.05000000074505806,
                                 "{092e2b2b}": 3.0,
                                 "{0a2e2cbe}": 5.0,
-                                "{0b2e2e51}": 7.0,
+                                "{0b2e2e51}": 8.0,
                                 "{5cfe766f}": 0.4000000059604645,
                                 "{617a160e}": 0.1499999761581421,
                                 "{7e77da03}": 12.0,
@@ -104484,8 +104507,8 @@
                             "minUnits": 7,
                             "style": 5,
                             "variables": {
-                                "AttackSpeedIncrease": 0.4500000476837158,
-                                "HealthIncrease": 0.4500000476837158,
+                                "AttackSpeedIncrease": 0.5499999523162842,
+                                "HealthIncrease": 0.5499999523162842,
                                 "{aa3fad66}": 1.0
                             }
                         }
@@ -104819,7 +104842,7 @@
                             "minUnits": 4,
                             "style": 3,
                             "variables": {
-                                "{6eab9c5e}": 0.32999998331069946,
+                                "{6eab9c5e}": 0.30000001192092896,
                                 "{f8c73243}": 0.06000000238418579
                             }
                         },
@@ -105197,8 +105220,8 @@
                             "minUnits": 3,
                             "style": 3,
                             "variables": {
-                                "AbilityPower": 0.10000000149011612,
-                                "AttackSpeed": 0.12000000476837158,
+                                "AbilityPower": 0.11999999731779099,
+                                "AttackSpeed": 0.10000002384185791,
                                 "{6d27fbd4}": 1.0
                             }
                         },
@@ -105207,8 +105230,8 @@
                             "minUnits": 4,
                             "style": 3,
                             "variables": {
-                                "AbilityPower": 0.14000000059604645,
-                                "AttackSpeed": 0.15999996662139893,
+                                "AbilityPower": 0.1599999964237213,
+                                "AttackSpeed": 0.13999998569488525,
                                 "{6d27fbd4}": 1.0
                             }
                         },
@@ -105217,8 +105240,8 @@
                             "minUnits": 5,
                             "style": 5,
                             "variables": {
-                                "AbilityPower": 0.18000000715255737,
-                                "AttackSpeed": 0.20000004768371582,
+                                "AbilityPower": 0.20000000298023224,
+                                "AttackSpeed": 0.1799999475479126,
                                 "{6d27fbd4}": 1.0
                             }
                         }
@@ -519756,7 +519779,7 @@
                         "critMultiplier": 1.399999976158142,
                         "damage": 50.0,
                         "hp": 1100.0,
-                        "initialMana": 30.0,
+                        "initialMana": 50.0,
                         "magicResist": 50.0,
                         "mana": 110.0,
                         "range": 1.0
@@ -520651,14 +520674,14 @@
                     "squareIcon": "assets/characters/tft18_varus/skins/base/images/tft18_varus_splash_tile_9.tex",
                     "stats": {
                         "armor": 25.0,
-                        "attackSpeed": 0.699999988079071,
+                        "attackSpeed": 0.75,
                         "critChance": 0.25,
                         "critMultiplier": 1.399999976158142,
                         "damage": 40.0,
                         "hp": 500.0,
-                        "initialMana": 30.0,
+                        "initialMana": 20.0,
                         "magicResist": 25.0,
-                        "mana": 120.0,
+                        "mana": 110.0,
                         "range": 4.0
                     },
                     "tileIcon": "assets/characters/tft18_varus/tft18_varus_square.tex",
@@ -521878,7 +521901,7 @@
                         "attackSpeed": 0.75,
                         "critChance": 0.25,
                         "critMultiplier": 1.399999976158142,
-                        "damage": 55.0,
+                        "damage": 60.0,
                         "hp": 650.0,
                         "initialMana": 20.0,
                         "magicResist": 35.0,
@@ -522280,7 +522303,7 @@
                                 "ShieldRatio": 0.05000000074505806,
                                 "{092e2b2b}": 3.0,
                                 "{0a2e2cbe}": 5.0,
-                                "{0b2e2e51}": 7.0,
+                                "{0b2e2e51}": 8.0,
                                 "{5cfe766f}": 0.4000000059604645,
                                 "{617a160e}": 0.1499999761581421,
                                 "{7e77da03}": 12.0,
@@ -522320,8 +522343,8 @@
                             "minUnits": 7,
                             "style": 5,
                             "variables": {
-                                "AttackSpeedIncrease": 0.4500000476837158,
-                                "HealthIncrease": 0.4500000476837158,
+                                "AttackSpeedIncrease": 0.5499999523162842,
+                                "HealthIncrease": 0.5499999523162842,
                                 "{aa3fad66}": 1.0
                             }
                         }
@@ -522655,7 +522678,7 @@
                             "minUnits": 4,
                             "style": 3,
                             "variables": {
-                                "{6eab9c5e}": 0.32999998331069946,
+                                "{6eab9c5e}": 0.30000001192092896,
                                 "{f8c73243}": 0.06000000238418579
                             }
                         },
@@ -523033,8 +523056,8 @@
                             "minUnits": 3,
                             "style": 3,
                             "variables": {
-                                "AbilityPower": 0.10000000149011612,
-                                "AttackSpeed": 0.12000000476837158,
+                                "AbilityPower": 0.11999999731779099,
+                                "AttackSpeed": 0.10000002384185791,
                                 "{6d27fbd4}": 1.0
                             }
                         },
@@ -523043,8 +523066,8 @@
                             "minUnits": 4,
                             "style": 3,
                             "variables": {
-                                "AbilityPower": 0.14000000059604645,
-                                "AttackSpeed": 0.15999996662139893,
+                                "AbilityPower": 0.1599999964237213,
+                                "AttackSpeed": 0.13999998569488525,
                                 "{6d27fbd4}": 1.0
                             }
                         },
@@ -523053,8 +523076,8 @@
                             "minUnits": 5,
                             "style": 5,
                             "variables": {
-                                "AbilityPower": 0.18000000715255737,
-                                "AttackSpeed": 0.20000004768371582,
+                                "AbilityPower": 0.20000000298023224,
+                                "AttackSpeed": 0.1799999475479126,
                                 "{6d27fbd4}": 1.0
                             }
                         }

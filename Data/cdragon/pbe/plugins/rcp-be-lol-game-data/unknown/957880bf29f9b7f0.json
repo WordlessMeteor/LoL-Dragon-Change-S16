@@ -145,7 +145,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "次の通常攻撃が追加物理ダメージを与え、亡霊グールを召喚する。亡霊グールは追加ダメージを与え、他のグールよりも移動速度が増加する。亡霊グールが生存している間、自身の移動速度も増加する。",
-            "dynamicDescription": "次の通常攻撃は追加で<scaleAD>@TotalDamageTooltip@の物理ダメージ</scaleAD>を与え、<keywordMajor>亡霊グール</keywordMajor> を@GhoulTime@秒間、召喚する。<br><br><keywordMajor>亡霊グール</keywordMajor>は<scaleAD>@BaseSpectralAD@の追加攻撃力</scaleAD>と<speed>@MovementSpeed*100@%の増加移動速度</speed>を獲得する。グールが生存している間、ヨリックは<speed>@MovementSpeed*100@%の移動速度</speed>を獲得する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "次の通常攻撃は追加で<scaleAD>@TotalDamageTooltip@の物理ダメージ</scaleAD>を与え、<keywordMajor>亡霊グール</keywordMajor>を@GhoulTime@秒間、召喚する。<br><br><keywordMajor>亡霊グール</keywordMajor>は<scaleAD>@BaseSpectralAD@の追加攻撃力</scaleAD>と<speed>@MovementSpeed*100@%の増加移動速度</speed>を獲得する。グールが生存している間、ヨリックも<speed>@MovementSpeed*100@%の移動速度</speed>を獲得する。@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -295,7 +295,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "腐敗グールを召喚する。このグールは激しい爆発と共に現れ、周囲の敵にダメージとスロウ効果を与える。腐敗グールは周囲の敵にスロウ効果を与える。",
-            "dynamicDescription": "激しい爆発を発生させ、範囲内の敵に<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>と@ActiveSlowDuration@秒間@ActiveSlow*100@%の<status>スロウ効果</status>を与え、@GhoulTime@秒間持続する<keywordMajor>腐敗グール</keywordMajor>を1体召喚する。<br><br><keywordMajor>腐敗グール</keywordMajor>は周囲の敵に<status>スロウ効果</status>を@PersistentSlow*100@%与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "激しい爆発を発生させ、範囲内の敵に<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>と@ActiveSlowDuration@秒間@ActiveSlow*100@%の<status>スロウ効果</status>を与え、@GhoulTime@秒間持続する<keywordMajor>腐敗グール</keywordMajor>を1体召喚する。<br><br><keywordMajor>腐敗グール</keywordMajor>は周囲の敵に@PersistentSlow*100@%の<status>スロウ効果</status>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -445,7 +445,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "対象から体力を吸収し、貪欲グールを1体召喚する。このグールは自身が与えたダメージに応じてヨリックの体力を回復させる。",
-            "dynamicDescription": "ヨリックは<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、与えたダメージの最大@HealingPercentage*100@%にあたる体力を<healing>回復</healing>する。対象の背後に<keywordMajor>貪欲グール</keywordMajor>を1体、最大@GhoulTime@秒間召喚する。<br><br><keywordMajor>貪欲グール</keywordMajor>は、自身が与えたダメージの@HealingPercentage*100@%にあたる体力分、ヨリックが回復する。ミニオンに対する回復効果は@MinionHealEffectiveness*100@%になる。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、与えたダメージの最大@HealingPercentage*100@%にあたる体力を<healing>回復</healing>する。対象の背後に<keywordMajor>貪欲グール</keywordMajor>を1体、最大@GhoulTime@秒間召喚する。<br><br><keywordMajor>貪欲グール</keywordMajor>は、自身が与えたダメージの@HealingPercentage*100@%分、ヨリックの体力を回復させる。ミニオンに対する回復効果は@MinionHealEffectiveness*100@%になる。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -595,7 +595,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ヨリックはいずれかの味方を模したレヴェナントを召喚する。その味方がレヴェナントの生存中に倒されると、レヴェナントは自身を犠牲にしてその味方を復活させ、復讐を遂げるための時間を与える。",
-            "dynamicDescription": "味方チャンピオンの姿を模した亡霊を召喚する。亡霊は対象の味方の<scaleAD>@DamagePercent*100@%にあたる攻撃力</scaleAD>を持ち、@CloneDuration@秒間持続する。その味方がレヴェナントの生存中に倒されると、レヴェナントは自身を犠牲にしてその味方を最大@ReviveDuration@秒間復活させる。<br><br>レヴェナントはAltキーを押しながら右クリック、またはこのスキルを再使用することで操作できる。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "味方チャンピオンの姿を模したレヴェナントを召喚する。レヴェナントは対象の味方の<scaleAD>@DamagePercent*100@%にあたる攻撃力</scaleAD>を持ち、@CloneDuration@秒間持続する。その味方がレヴェナントの生存中に倒されると、レヴェナントは自身を犠牲にしてその味方を最大@ReviveDuration@秒間復活させる。<br><br>レヴェナントはAltキーを押しながら右クリック、またはこのスキルを再使用することで操作できる。@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,

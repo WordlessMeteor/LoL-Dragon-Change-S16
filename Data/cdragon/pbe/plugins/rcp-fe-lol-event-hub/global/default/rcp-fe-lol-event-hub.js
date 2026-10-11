@@ -4769,7 +4769,9 @@
                     isEmbedded: s.Ember.computed.bool("model.navOptions.targetDivId"),
                     handledNavRequestId: null,
                     availableEvents: s.Ember.computed("eventHubService.events.[]", "model.navOptions.eventId", "model.navOptions.eventName", "model.navOptions.eventHubType", (function() {
-                        const e = (this.get("eventHubService.events") || []).map((({
+                        const e = this.get("eventHubService.events");
+                        if (!Array.isArray(e)) return [];
+                        const t = e.map((({
                                 eventId: e,
                                 eventInfo: {
                                     eventName: t,
@@ -4782,19 +4784,19 @@
                                 eventName: t,
                                 route: (0, a.getRouteByEventHubType)(n, s)
                             }))),
-                            t = this.get("navOptionsEventId");
-                        if (t && !e.find((e => e.eventId === t))) {
-                            const n = s.Ember.get(this, "model.navOptions.eventHubType") || "kActivityCenterMilestones",
-                                l = s.Ember.get(this, "model.navOptions.eventName") || `Test: ${t}`;
-                            e.push({
-                                eventId: t,
-                                eventType: n,
+                            n = this.get("navOptionsEventId");
+                        if (n && !t.find((e => e.eventId === n))) {
+                            const e = s.Ember.get(this, "model.navOptions.eventHubType") || "kActivityCenterMilestones",
+                                l = s.Ember.get(this, "model.navOptions.eventName") || `Test: ${n}`;
+                            t.push({
+                                eventId: n,
+                                eventType: e,
                                 eventName: l,
-                                route: (0, a.getRouteByEventHubType)(n),
+                                route: (0, a.getRouteByEventHubType)(e),
                                 isUnknown: !0
                             })
                         }
-                        return e
+                        return t
                     })),
                     init() {
                         this._super(...arguments), this.handleAvailableEventsChanged = this.handleAvailableEventsChanged.bind(this), this.handleIsVisibleChanged = this.handleIsVisibleChanged.bind(this), this.addObserver("isVisible", this, this.handleIsVisibleChanged), this.addObserver("availableEvents", this.handleAvailableEventsChanged), this.addObserver("navRequestId", this.handleAvailableEventsChanged)

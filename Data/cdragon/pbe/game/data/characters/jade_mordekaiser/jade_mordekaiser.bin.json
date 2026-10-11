@@ -1395,7 +1395,8 @@
         "mRootSpell": "{73cdfc9f}",
         "mChildSpells": [
             "{73cdfc9f}",
-            "{73cdfc9f}"
+            "{73cdfc9f}",
+            "{72cd2100}"
         ],
         "mName": "Jade_MordekaiserWAbility",
         "__type": "AbilityObject"
@@ -1968,11 +1969,71 @@
         },
         "__type": "SpellObject"
     },
+    "{72cd2100}": {
+        "ObjectName": "Jade_MordekaiserWCast",
+        "objectPath": "{72cd2100}",
+        "mScriptName": "Jade_MordekaiserWCast",
+        "mSpell": {
+            "mAffectsTypeFlags": 1029,
+            "mAnimationName": "Spell2Self",
+            "mCastTime": 0.25,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.25,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                750.0,
+                750.0,
+                750.0,
+                750.0,
+                750.0,
+                750.0,
+                750.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    750.0,
+                    750.0,
+                    750.0,
+                    750.0,
+                    750.0,
+                    750.0,
+                    750.0
+                ],
+                "{0a3e0478}": 750.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mSpeed": 1500.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.934999942779541,
+            "mMissileEffectKey": "{878b10eb}",
+            "SpellEventToAudioEventSuffix": {
+                "16": "Play_sfx_MordekaiserSkin301_MordekaiserWHeal_OnCast",
+                "13": "Play_sfx_MordekaiserSkin301_MordekaiserW_cast_vfx"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
     "{73cdfc9f}": {
         "ObjectName": "Jade_MordekaiserW",
         "objectPath": "{73cdfc9f}",
         "mScriptName": "Jade_MordekaiserW",
         "mSpell": {
+            "flags": 4,
             "mAffectsTypeFlags": 1029,
             "DataValues": [
                 {
@@ -2130,8 +2191,7 @@
                 ],
                 "__type": "MissileSpecification"
             },
-            "mCastType": 1,
-            "mMissileEffectKey": "{7a0d3b4e}",
+            "mMissileEffectKey": "{878b10eb}",
             "mFloatVarsDecimals": [
                 0,
                 0,
@@ -2150,10 +2210,6 @@
                 0,
                 0
             ],
-            "SpellEventToAudioEventSuffix": {
-                "16": "Play_sfx_MordekaiserSkin301_MordekaiserWHeal_OnCast",
-                "13": "Play_sfx_MordekaiserSkin301_MordekaiserW_cast_vfx"
-            },
             "mSpellCooldownOrSealedQueueThreshold": 0.25,
             "mClientData": {
                 "mTooltipData": {
