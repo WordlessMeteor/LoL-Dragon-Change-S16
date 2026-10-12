@@ -3,17 +3,17 @@
         "mRootSpell": "Characters/Jade_Nami/Spells/Jade_NamiQAbility/Jade_NamiQ",
         "mChildSpells": [
             "Characters/Jade_Nami/Spells/Jade_NamiQAbility/Jade_NamiQ",
-            "{b89a6b4c}",
-            "{29c7406e}",
-            "{0538142e}"
+            "Characters/Jade_Nami/Spells/Jade_NamiQAbility/Jade_NamiQDebuff",
+            "Characters/Jade_Nami/Spells/Jade_NamiQAbility/Jade_NamiQDummyMissile",
+            "Characters/Jade_Nami/Spells/Jade_NamiQAbility/Jade_NamiQMissile"
         ],
         "mName": "Jade_NamiQAbility",
         "AbilityTraits": 2048,
         "__type": "AbilityObject"
     },
-    "{0538142e}": {
+    "Characters/Jade_Nami/Spells/Jade_NamiQAbility/Jade_NamiQMissile": {
         "ObjectName": "Jade_NamiQMissile",
-        "objectPath": "{0538142e}",
+        "objectPath": "Characters/Jade_Nami/Spells/Jade_NamiQAbility/Jade_NamiQMissile",
         "mScriptName": "Jade_NamiQMissile",
         "mSpell": {
             "flags": 4194316,
@@ -130,9 +130,9 @@
         },
         "__type": "SpellObject"
     },
-    "{29c7406e}": {
+    "Characters/Jade_Nami/Spells/Jade_NamiQAbility/Jade_NamiQDummyMissile": {
         "ObjectName": "Jade_NamiQDummyMissile",
-        "objectPath": "{29c7406e}",
+        "objectPath": "Characters/Jade_Nami/Spells/Jade_NamiQAbility/Jade_NamiQDummyMissile",
         "mScriptName": "Jade_NamiQDummyMissile",
         "mSpell": {
             "mAffectsTypeFlags": 7183,
@@ -282,9 +282,9 @@
         },
         "__type": "SpellObject"
     },
-    "{b89a6b4c}": {
+    "Characters/Jade_Nami/Spells/Jade_NamiQAbility/Jade_NamiQDebuff": {
         "ObjectName": "Jade_NamiQDebuff",
-        "objectPath": "{b89a6b4c}",
+        "objectPath": "Characters/Jade_Nami/Spells/Jade_NamiQAbility/Jade_NamiQDebuff",
         "mScriptName": "Jade_NamiQDebuff",
         "mSpell": {
             "mAffectsTypeFlags": 1029,
@@ -810,10 +810,10 @@
         "mRootSpell": "Characters/Jade_Nami/Spells/Jade_NamiRAbility/Jade_NamiR",
         "mChildSpells": [
             "Characters/Jade_Nami/Spells/Jade_NamiRAbility/Jade_NamiR",
-            "{9a05ee5f}",
-            "{a01510b6}",
-            "{d271d94a}",
-            "{7fe6900a}"
+            "Characters/Jade_Nami/Spells/Jade_NamiRAbility/Jade_NamiRPassive",
+            "Characters/Jade_Nami/Spells/Jade_NamiRAbility/Jade_NamiRMissile",
+            "Characters/Jade_Nami/Spells/Jade_NamiRAbility/Jade_NamiRWaveSlow",
+            "Characters/Jade_Nami/Spells/Jade_NamiRAbility/Jade_NamiRVision"
         ],
         "mLifetimeManuallyManaged": true,
         "mName": "Jade_NamiRAbility",
@@ -821,9 +821,9 @@
         "AbilityTraits": 2050,
         "__type": "AbilityObject"
     },
-    "{23945897}": {
+    "Characters/Jade_Nami/Spells/Jade_NamiBasicAttack": {
         "ObjectName": "Jade_NamiBasicAttack",
-        "objectPath": "{23945897}",
+        "objectPath": "Characters/Jade_Nami/Spells/Jade_NamiBasicAttack",
         "mScriptName": "Jade_NamiBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -935,14 +935,14 @@
         "mRootSpell": "Characters/Jade_Nami/Spells/Jade_NamiEAbility/Jade_NamiE",
         "mChildSpells": [
             "Characters/Jade_Nami/Spells/Jade_NamiEAbility/Jade_NamiE",
-            "{2810d553}"
+            "Characters/Jade_Nami/Spells/Jade_NamiEAbility/Jade_NamiESlow"
         ],
         "mName": "Jade_NamiEAbility",
         "__type": "AbilityObject"
     },
-    "{2810d553}": {
+    "Characters/Jade_Nami/Spells/Jade_NamiEAbility/Jade_NamiESlow": {
         "ObjectName": "Jade_NamiESlow",
-        "objectPath": "{2810d553}",
+        "objectPath": "Characters/Jade_Nami/Spells/Jade_NamiEAbility/Jade_NamiESlow",
         "mScriptName": "Jade_NamiESlow",
         "mBuff": {
             "mTooltipData": {
@@ -1370,10 +1370,10 @@
         },
         "__type": "SpellObject"
     },
-    "{2f70437e}": {
-        "mRootSpell": "{9a3f577e}",
+    "Characters/Jade_Nami/Spells/Jade_NamiPassiveAbility": {
+        "mRootSpell": "Characters/Jade_Nami/Spells/Jade_NamiPassiveAbility/Jade_NamiPassive",
         "mChildSpells": [
-            "{9a3f577e}"
+            "Characters/Jade_Nami/Spells/Jade_NamiPassiveAbility/Jade_NamiPassive"
         ],
         "mName": "Jade_NamiPassiveAbility",
         "mType": 3,
@@ -1383,18 +1383,18 @@
         "mRootSpell": "Characters/Jade_Nami/Spells/Jade_NamiWAbility/Jade_NamiW",
         "mChildSpells": [
             "Characters/Jade_Nami/Spells/Jade_NamiWAbility/Jade_NamiW",
-            "{2fbca6fc}",
-            "{6d74fe92}",
-            "{6b6da458}",
-            "{51e7e7f6}"
+            "Characters/Jade_Nami/Spells/Jade_NamiWAbility/Jade_NamiWAlly",
+            "Characters/Jade_Nami/Spells/Jade_NamiWAbility/Jade_NamiWEnemy",
+            "Characters/Jade_Nami/Spells/Jade_NamiWAbility/Jade_NamiWMissileAlly",
+            "Characters/Jade_Nami/Spells/Jade_NamiWAbility/Jade_NamiWMissileEnemy"
         ],
         "mName": "Jade_NamiWAbility",
         "AbilityTraits": 4,
         "__type": "AbilityObject"
     },
-    "{2fbca6fc}": {
+    "Characters/Jade_Nami/Spells/Jade_NamiWAbility/Jade_NamiWAlly": {
         "ObjectName": "Jade_NamiWAlly",
-        "objectPath": "{2fbca6fc}",
+        "objectPath": "Characters/Jade_Nami/Spells/Jade_NamiWAbility/Jade_NamiWAlly",
         "mScriptName": "Jade_NamiWAlly",
         "mSpell": {
             "flags": 4,
@@ -1538,9 +1538,9 @@
         },
         "__type": "SpellObject"
     },
-    "{51e7e7f6}": {
+    "Characters/Jade_Nami/Spells/Jade_NamiWAbility/Jade_NamiWMissileEnemy": {
         "ObjectName": "Jade_NamiWMissileEnemy",
-        "objectPath": "{51e7e7f6}",
+        "objectPath": "Characters/Jade_Nami/Spells/Jade_NamiWAbility/Jade_NamiWMissileEnemy",
         "mScriptName": "Jade_NamiWMissileEnemy",
         "mSpell": {
             "flags": 4,
@@ -1656,9 +1656,9 @@
         },
         "__type": "SpellObject"
     },
-    "{6b6da458}": {
+    "Characters/Jade_Nami/Spells/Jade_NamiWAbility/Jade_NamiWMissileAlly": {
         "ObjectName": "Jade_NamiWMissileAlly",
-        "objectPath": "{6b6da458}",
+        "objectPath": "Characters/Jade_Nami/Spells/Jade_NamiWAbility/Jade_NamiWMissileAlly",
         "mScriptName": "Jade_NamiWMissileAlly",
         "mSpell": {
             "flags": 4,
@@ -1774,9 +1774,9 @@
         },
         "__type": "SpellObject"
     },
-    "{6d74fe92}": {
+    "Characters/Jade_Nami/Spells/Jade_NamiWAbility/Jade_NamiWEnemy": {
         "ObjectName": "Jade_NamiWEnemy",
-        "objectPath": "{6d74fe92}",
+        "objectPath": "Characters/Jade_Nami/Spells/Jade_NamiWAbility/Jade_NamiWEnemy",
         "mScriptName": "Jade_NamiWEnemy",
         "mSpell": {
             "flags": 4,
@@ -2387,9 +2387,9 @@
         },
         "__type": "SpellObject"
     },
-    "{7fe6900a}": {
+    "Characters/Jade_Nami/Spells/Jade_NamiRAbility/Jade_NamiRVision": {
         "ObjectName": "Jade_NamiRVision",
-        "objectPath": "{7fe6900a}",
+        "objectPath": "Characters/Jade_Nami/Spells/Jade_NamiRAbility/Jade_NamiRVision",
         "mScriptName": "Jade_NamiRVision",
         "mBuff": {
             "mDescription": "game_buff_tooltip_ZyraSeedTrapVision",
@@ -2397,18 +2397,18 @@
         },
         "__type": "SpellObject"
     },
-    "{9a05ee5f}": {
+    "Characters/Jade_Nami/Spells/Jade_NamiRAbility/Jade_NamiRPassive": {
         "ObjectName": "Jade_NamiRPassive",
-        "objectPath": "{9a05ee5f}",
+        "objectPath": "Characters/Jade_Nami/Spells/Jade_NamiRAbility/Jade_NamiRPassive",
         "mScriptName": "Jade_NamiRPassive",
         "mBuff": {
             "__type": "BuffData"
         },
         "__type": "SpellObject"
     },
-    "{a01510b6}": {
+    "Characters/Jade_Nami/Spells/Jade_NamiRAbility/Jade_NamiRMissile": {
         "ObjectName": "Jade_NamiRMissile",
-        "objectPath": "{a01510b6}",
+        "objectPath": "Characters/Jade_Nami/Spells/Jade_NamiRAbility/Jade_NamiRMissile",
         "mScriptName": "Jade_NamiRMissile",
         "mSpell": {
             "mAffectsTypeFlags": 7183,
@@ -3060,9 +3060,9 @@
         },
         "__type": "SpellObject"
     },
-    "{d271d94a}": {
+    "Characters/Jade_Nami/Spells/Jade_NamiRAbility/Jade_NamiRWaveSlow": {
         "ObjectName": "Jade_NamiRWaveSlow",
-        "objectPath": "{d271d94a}",
+        "objectPath": "Characters/Jade_Nami/Spells/Jade_NamiRAbility/Jade_NamiRWaveSlow",
         "mScriptName": "Jade_NamiRWaveSlow",
         "mBuff": {
             "mTooltipData": {
@@ -3078,9 +3078,9 @@
         },
         "__type": "SpellObject"
     },
-    "{9a3f577e}": {
+    "Characters/Jade_Nami/Spells/Jade_NamiPassiveAbility/Jade_NamiPassive": {
         "ObjectName": "Jade_NamiPassive",
-        "objectPath": "{9a3f577e}",
+        "objectPath": "Characters/Jade_Nami/Spells/Jade_NamiPassiveAbility/Jade_NamiPassive",
         "mScriptName": "Jade_NamiPassive",
         "mSpell": {
             "DataValues": [
@@ -3276,9 +3276,9 @@
         },
         "__type": "SpellObject"
     },
-    "{be1a0acf}": {
+    "Characters/Jade_Nami/Spells/Jade_NamiSkin51Manager": {
         "ObjectName": "Jade_NamiSkin51Manager",
-        "objectPath": "{be1a0acf}",
+        "objectPath": "Characters/Jade_Nami/Spells/Jade_NamiSkin51Manager",
         "mScriptName": "Jade_NamiSkin51Manager",
         "__type": "SpellObject"
     },
@@ -4780,7 +4780,7 @@
                         "mRuleName": "Basic 1",
                         "mConditions": [
                             {
-                                "mSpell": "{23945897}",
+                                "mSpell": "Characters/Jade_Nami/Spells/Jade_NamiBasicAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -5530,7 +5530,7 @@
                         "mRuleName": "Basic 1",
                         "mConditions": [
                             {
-                                "mSpell": "{23945897}",
+                                "mSpell": "Characters/Jade_Nami/Spells/Jade_NamiBasicAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -6115,7 +6115,7 @@
                                 "__type": "ContextualConditionChanceToPlay"
                             },
                             {
-                                "mSpell": "{0538142e}",
+                                "mSpell": "Characters/Jade_Nami/Spells/Jade_NamiQAbility/Jade_NamiQMissile",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -6204,7 +6204,7 @@
                                 "__type": "ContextualConditionChanceToPlay"
                             },
                             {
-                                "mSpell": "{0538142e}",
+                                "mSpell": "Characters/Jade_Nami/Spells/Jade_NamiQAbility/Jade_NamiQMissile",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -6569,13 +6569,13 @@
             "BaseSpell"
         ],
         "extraSpellsList": [
-            "{a01510b6}",
-            "{29c7406e}",
-            "{2fbca6fc}",
-            "{51e7e7f6}",
-            "{6b6da458}",
-            "{0538142e}",
-            "{6d74fe92}",
+            "Characters/Jade_Nami/Spells/Jade_NamiRAbility/Jade_NamiRMissile",
+            "Characters/Jade_Nami/Spells/Jade_NamiQAbility/Jade_NamiQDummyMissile",
+            "Characters/Jade_Nami/Spells/Jade_NamiWAbility/Jade_NamiWAlly",
+            "Characters/Jade_Nami/Spells/Jade_NamiWAbility/Jade_NamiWMissileEnemy",
+            "Characters/Jade_Nami/Spells/Jade_NamiWAbility/Jade_NamiWMissileAlly",
+            "Characters/Jade_Nami/Spells/Jade_NamiQAbility/Jade_NamiQMissile",
+            "Characters/Jade_Nami/Spells/Jade_NamiWAbility/Jade_NamiWEnemy",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Characters/Jade_Nami/Spells/Jade_NamiCritAttack",
@@ -6591,7 +6591,7 @@
             "Characters/Jade_Nami/Spells/Jade_NamiQAbility",
             "Characters/Jade_Nami/Spells/Jade_NamiWAbility",
             "Characters/Jade_Nami/Spells/Jade_NamiEAbility",
-            "{2f70437e}"
+            "Characters/Jade_Nami/Spells/Jade_NamiPassiveAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_Nami",
         "passiveLuaName": "Jade_NamiPassive",
@@ -6717,10 +6717,10 @@
             "Ranged"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Sorcery",
-        "mCharacterPassiveSpell": "{9a3f577e}",
+        "mCharacterPassiveSpell": "Characters/Jade_Nami/Spells/Jade_NamiPassiveAbility/Jade_NamiPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{9a3f577e}",
+                "mParentPassiveBuff": "Characters/Jade_Nami/Spells/Jade_NamiPassiveAbility/Jade_NamiPassive",
                 "__type": "CharacterPassiveData"
             },
             {
@@ -6734,7 +6734,7 @@
                 "__type": "CharacterPassiveData"
             },
             {
-                "mParentPassiveBuff": "{be1a0acf}",
+                "mParentPassiveBuff": "Characters/Jade_Nami/Spells/Jade_NamiSkin51Manager",
                 "SkinFilter": {
                     "__type": "SkinFilterData"
                 },

@@ -1,5 +1,5 @@
 {
-    "{0d4fc342}": {
+    "Characters/Jade_Ashe/Spells/Jade_AshePassiveAbility": {
         "mRootSpell": "Characters/Jade_Ashe/Spells/Jade_AshePassiveAbility/Jade_AsheFocus",
         "mChildSpells": [
             "Characters/Jade_Ashe/Spells/Jade_AshePassiveAbility/Jade_AsheFocus",
@@ -13,7 +13,7 @@
         "mRootSpell": "Characters/Jade_Ashe/Spells/Jade_AsheEnchantedCrystalArrowAbility/Jade_AsheEnchantedCrystalArrow",
         "mChildSpells": [
             "Characters/Jade_Ashe/Spells/Jade_AsheEnchantedCrystalArrowAbility/Jade_AsheEnchantedCrystalArrow",
-            "{d411f3ba}"
+            "Characters/Jade_Ashe/Spells/Jade_AsheEnchantedCrystalArrowAbility/Jade_AsheChilled"
         ],
         "mName": "Jade_AsheEnchantedCrystalArrowAbility",
         "__type": "AbilityObject"
@@ -140,8 +140,8 @@
         "mRootSpell": "Characters/Jade_Ashe/Spells/Jade_AsheVolleyAbility/Jade_AsheVolley",
         "mChildSpells": [
             "Characters/Jade_Ashe/Spells/Jade_AsheVolleyAbility/Jade_AsheVolley",
-            "{d441b182}",
-            "{956bd2cd}"
+            "Characters/Jade_Ashe/Spells/Jade_AsheVolleyAbility/Jade_AsheVolleyAttack",
+            "Characters/Jade_Ashe/Spells/Jade_AsheVolleyAbility/Jade_AsheVolleyAttackWithSound"
         ],
         "mName": "Jade_AsheVolleyAbility",
         "__type": "AbilityObject"
@@ -206,7 +206,7 @@
                     ],
                     "__type": "SpellEffectAmount"
                 },
-                "{bffdf499}": {
+                "Kiwi": {
                     "value": [
                         18.0,
                         18.0,
@@ -736,9 +736,9 @@
         },
         "__type": "SpellObject"
     },
-    "{956bd2cd}": {
+    "Characters/Jade_Ashe/Spells/Jade_AsheVolleyAbility/Jade_AsheVolleyAttackWithSound": {
         "ObjectName": "Jade_AsheVolleyAttackWithSound",
-        "objectPath": "{956bd2cd}",
+        "objectPath": "Characters/Jade_Ashe/Spells/Jade_AsheVolleyAbility/Jade_AsheVolleyAttackWithSound",
         "mScriptName": "Jade_AsheVolleyAttackWithSound",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -873,9 +873,9 @@
         },
         "__type": "SpellObject"
     },
-    "{d441b182}": {
+    "Characters/Jade_Ashe/Spells/Jade_AsheVolleyAbility/Jade_AsheVolleyAttack": {
         "ObjectName": "Jade_AsheVolleyAttack",
-        "objectPath": "{d441b182}",
+        "objectPath": "Characters/Jade_Ashe/Spells/Jade_AsheVolleyAbility/Jade_AsheVolleyAttack",
         "mScriptName": "Jade_AsheVolleyAttack",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1268,9 +1268,9 @@
         },
         "__type": "SpellObject"
     },
-    "{aac94f85}": {
+    "Characters/Jade_Ashe/Spells/Jade_AsheSpiritOfTheHawkAbility/Jade_AsheArchersMark": {
         "ObjectName": "Jade_AsheArchersMark",
-        "objectPath": "{aac94f85}",
+        "objectPath": "Characters/Jade_Ashe/Spells/Jade_AsheSpiritOfTheHawkAbility/Jade_AsheArchersMark",
         "mScriptName": "Jade_AsheArchersMark",
         "__type": "SpellObject"
     },
@@ -1382,11 +1382,11 @@
                     "__type": "GameCalculation"
                 }
             },
-            "{fe87f21e}": [
+            "LastHitData": [
                 {
                     "{6166b756}": "{da9201cc}",
                     "{7a9d64ea}": true,
-                    "__type": "{fe87f21e}"
+                    "__type": "LastHitData"
                 }
             ],
             "mImgIconName": [
@@ -1922,9 +1922,9 @@
         },
         "__type": "SpellObject"
     },
-    "{d411f3ba}": {
+    "Characters/Jade_Ashe/Spells/Jade_AsheEnchantedCrystalArrowAbility/Jade_AsheChilled": {
         "ObjectName": "Jade_AsheChilled",
-        "objectPath": "{d411f3ba}",
+        "objectPath": "Characters/Jade_Ashe/Spells/Jade_AsheEnchantedCrystalArrowAbility/Jade_AsheChilled",
         "mScriptName": "Jade_AsheChilled",
         "mSpell": {
             "mImgIconName": [
@@ -3253,7 +3253,7 @@
             "__type": "CatalogEntry"
         },
         "mDescriptionTraKey": "Jade_Portrait_Description_Ashe_Feeney",
-        "{55bb9b57}": 4,
+        "PortraitId": 4,
         "{ff3c9ff8}": "{e79c1e24}",
         "image": {
             "image": "assets/characters/jade_ashe/skins/base/jade_asheloadscreen_feeney.tex",
@@ -3269,7 +3269,7 @@
             "__type": "CatalogEntry"
         },
         "mDescriptionTraKey": "Jade_Portrait_Description_Ashe_LoR_01",
-        "{55bb9b57}": 3,
+        "PortraitId": 3,
         "{ff3c9ff8}": "{e15eb251}",
         "image": {
             "image": "assets/characters/jade_ashe/skins/base/jade_asheloadscreen_lor_01.tex",
@@ -5015,10 +5015,10 @@
             "BaseSpell"
         ],
         "extraSpellsList": [
-            "{d441b182}",
+            "Characters/Jade_Ashe/Spells/Jade_AsheVolleyAbility/Jade_AsheVolleyAttack",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
-            "{956bd2cd}",
+            "Characters/Jade_Ashe/Spells/Jade_AsheVolleyAbility/Jade_AsheVolleyAttackWithSound",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -5033,7 +5033,7 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{0d4fc342}",
+            "Characters/Jade_Ashe/Spells/Jade_AshePassiveAbility",
             "Characters/Jade_Ashe/Spells/Jade_AsheQAbility",
             "Characters/Jade_Ashe/Spells/Jade_AsheSpiritOfTheHawkAbility",
             "Characters/Jade_Ashe/Spells/Jade_AsheEnchantedCrystalArrowAbility",
