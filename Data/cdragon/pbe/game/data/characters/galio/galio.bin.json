@@ -392,13 +392,13 @@
                         {
                             "name": "StunDurationOuter",
                             "values": [
-                                1.5,
-                                1.5,
-                                1.5,
-                                1.5,
-                                1.5,
-                                1.5,
-                                1.5
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
                             ],
                             "__type": "SpellDataValue"
                         },
@@ -492,6 +492,14 @@
                 ],
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Galio/Spells/GalioRAbility/GalioRSpellPassive",
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mCantCancelWhileWindingUp": true,
             "mCantCancelWhileChanneling": true,
             "cantCastWhileRooted": true,
@@ -1268,6 +1276,39 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "PassiveShieldHealthRatio",
+                            "values": [
+                                0.05000000074505806,
+                                0.05999999865889549,
+                                0.07000000029802322,
+                                0.07999999821186066,
+                                0.09000000357627869,
+                                0.10000000149011612,
+                                0.10999999940395355
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "CCDurationMax",
+                            "values": [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "TotalPassiveShield": {
                     "mFormulaParts": [
@@ -1432,6 +1473,14 @@
                 1.25,
                 1.25,
                 1.25
+            ],
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Galio/Spells/GalioWAbility/GalioWPassive",
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
             ],
             "mCanTriggerChargeSpellWhileDisabled": true,
             "mCantCancelWhileWindingUp": true,
@@ -1784,6 +1833,15 @@
             "mAnimationName": "",
             "mImgIconName": [
                 "ASSETS/Characters/Galio/HUD/Icons2D/Galio_Passive.dds"
+            ],
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Galio/Spells/GalioPassiveAbility/GalioPassive",
+                    "mWhenToAddSpell": 0,
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
             ],
             "mCooldownNotAffectedByCDR": true,
             "cannotBeSuppressed": true,

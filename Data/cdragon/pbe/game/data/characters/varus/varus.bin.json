@@ -226,12 +226,12 @@
             "{f9c2333e}": {
                 "cherry": {
                     "value": [
-                        16.0,
-                        16.0,
+                        14.0,
                         14.0,
                         12.0,
                         10.0,
                         8.0,
+                        6.0,
                         6.0
                     ],
                     "__type": "SpellEffectAmount"
@@ -252,6 +252,32 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                }
+            },
+            "{66185ec4}": {
+                "cherry": {
+                    "Calculations": {
+                        "TotalDamage": {
+                            "mFormulaParts": [
+                                {
+                                    "mDataValue": "BaseDamage",
+                                    "__type": "NamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mStat": 2,
+                                    "mStatFormula": 2,
+                                    "mDataValue": "BonusADRatio",
+                                    "__type": "StatByNamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mCoefficient": 0.5,
+                                    "__type": "StatByCoefficientCalculationPart"
+                                }
+                            ],
+                            "__type": "GameCalculation"
+                        }
+                    },
+                    "__type": "{4acf67d2}"
                 }
             },
             "mAnimationName": "Spell3",
@@ -1848,6 +1874,14 @@
                 "{0a3e0478}": 40.0,
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Varus/Spells/VarusWAbility/VarusW",
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "canCastWhileDisabled": true,
             "mCantCancelWhileWindingUp": true,
             "mDoesntBreakChannels": true,
@@ -6632,6 +6666,15 @@
                 ],
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Varus/Spells/VarusRPassive",
+                    "mWhenToAddSpell": 0,
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mCantCancelWhileWindingUp": true,
             "mProjectTargetToCastRange": true,
             "alwaysSnapFacing": true,

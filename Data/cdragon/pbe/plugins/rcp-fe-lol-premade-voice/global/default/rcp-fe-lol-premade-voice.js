@@ -3162,8 +3162,9 @@
                     }
                     if (n && (n.style.display = "none"), !e) return void(t.style.display = "none");
                     t.style.display = "";
-                    const i = e.charAt(0).toUpperCase() + e.slice(1);
-                    this.addInnerHtml(i, this._selectors.key)
+                    const i = e.replace(/^Button\s+(\d+)$/i, "MB$1"),
+                        a = i.charAt(0).toUpperCase() + i.slice(1);
+                    this.addInnerHtml(a, this._selectors.key)
                 }
             }
             a.tagName = "lol-parties-key-bind-indicator";

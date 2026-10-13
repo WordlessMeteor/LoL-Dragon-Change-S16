@@ -73,13 +73,13 @@
                         {
                             "name": "PassiveDamageADRatio",
                             "values": [
-                                0.0003000000142492354,
-                                0.0003000000142492354,
-                                0.0003000000142492354,
-                                0.0003000000142492354,
-                                0.0003000000142492354,
-                                0.0003000000142492354,
-                                0.0003000000142492354
+                                0.00019999999494757503,
+                                0.00019999999494757503,
+                                0.00019999999494757503,
+                                0.00019999999494757503,
+                                0.00019999999494757503,
+                                0.00019999999494757503,
+                                0.00019999999494757503
                             ],
                             "__type": "SpellDataValue"
                         },
@@ -389,6 +389,35 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                }
+            },
+            "{66185ec4}": {
+                "cherry": {
+                    "Calculations": {
+                        "TotalDamage": {
+                            "mFormulaParts": [
+                                {
+                                    "mDataValue": "Damage",
+                                    "__type": "NamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mStat": 2,
+                                    "mStatFormula": 2,
+                                    "mSubpart": {
+                                        "mDataValue": "BADRatio",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "__type": "StatBySubPartCalculationPart"
+                                },
+                                {
+                                    "mCoefficient": 0.25,
+                                    "__type": "StatByCoefficientCalculationPart"
+                                }
+                            ],
+                            "__type": "GameCalculation"
+                        }
+                    },
+                    "__type": "{4acf67d2}"
                 }
             },
             "mCoefficient": 0.8999999761581421,
@@ -1314,6 +1343,26 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                }
+            },
+            "{66185ec4}": {
+                "cherry": {
+                    "Calculations": {
+                        "StabDamage": {
+                            "mFormulaParts": [
+                                {
+                                    "mDataValue": "BaseDamage",
+                                    "__type": "NamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mCoefficient": 1.5,
+                                    "__type": "StatByCoefficientCalculationPart"
+                                }
+                            ],
+                            "__type": "GameCalculation"
+                        }
+                    },
+                    "__type": "{4acf67d2}"
                 }
             },
             "mCoefficient": 1.0,

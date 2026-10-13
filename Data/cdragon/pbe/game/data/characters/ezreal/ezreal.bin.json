@@ -2679,12 +2679,12 @@
             "{f9c2333e}": {
                 "cherry": {
                     "value": [
-                        50.0,
-                        50.0,
+                        40.0,
                         40.0,
                         30.0,
-                        30.0,
-                        30.0,
+                        20.0,
+                        20.0,
+                        20.0,
                         30.0
                     ],
                     "__type": "SpellEffectAmount"
@@ -2729,6 +2729,31 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                }
+            },
+            "{66185ec4}": {
+                "cherry": {
+                    "Calculations": {
+                        "Damage": {
+                            "mFormulaParts": [
+                                {
+                                    "mDataValue": "BaseDamage",
+                                    "__type": "NamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mStat": 2,
+                                    "mCoefficient": 1.5,
+                                    "__type": "StatByCoefficientCalculationPart"
+                                },
+                                {
+                                    "mCoefficient": 1.100000023841858,
+                                    "__type": "StatByCoefficientCalculationPart"
+                                }
+                            ],
+                            "__type": "GameCalculation"
+                        }
+                    },
+                    "__type": "{4acf67d2}"
                 }
             },
             "mCoefficient": 0.8999999761581421,

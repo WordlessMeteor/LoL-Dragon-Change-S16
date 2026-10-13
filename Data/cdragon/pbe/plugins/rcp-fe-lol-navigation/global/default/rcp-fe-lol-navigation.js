@@ -15989,7 +15989,11 @@
                     } catch (e) {
                         return void a.logger.error("Failed to select tab", e)
                     }
-                    this._transitionState()
+                    this._transitionState(), n && a.Navigation.activityCenter.isActivityCenterVisible() && a.Navigation.sendTFTScreenLoadTelemetryEvent({
+                        path: `/rcp-fe-lol-navigation/activity-center/${n}`,
+                        screen: "activity-center",
+                        subScreen: n
+                    })
                 },
                 _checkValidTabId(e) {
                     let t = e;
