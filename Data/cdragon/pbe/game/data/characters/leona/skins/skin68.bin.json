@@ -57390,11 +57390,6 @@
         "name": "Characters/Leona/Skins/Skin68/Materials/Leona_Skin68_Hair_inst",
         "samplerValues": [
             {
-                "TextureName": "Inner_Fresnel_Mask",
-                "texturePath": "assets/shared/materials/black.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "assets/characters/leona/skins/skin68/leona_skin68_tx_cm.tex",
                 "addressU": 2,
@@ -57406,6 +57401,11 @@
                 "texturePath": "assets/characters/leona/skins/skin64/leona_skin64_hair_mask_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Pattern_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -57480,6 +57480,11 @@
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
+                "TextureName": "Inner_Fresnel_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "DeformNoise",
                 "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -57512,7 +57517,7 @@
         ],
         "paramValues": [
             {
-                "name": "Fresnel_pow",
+                "name": "Fresnel_As_Mask_Power",
                 "value": [
                     0.05000000074505806,
                     0.0,
@@ -57522,7 +57527,7 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "Fresnel_Intensity",
+                "name": "Fresnel_As_Mask_Intensity",
                 "value": [
                     1.0,
                     0.0,
@@ -57645,46 +57650,6 @@
                 "name": "Ribbon_SegmentCount",
                 "value": [
                     5.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "modelHeight",
-                "value": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMin",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "rimOffset",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMax",
-                "value": [
-                    1.0,
                     0.0,
                     0.0,
                     0.0
@@ -58272,21 +58237,31 @@
             {
                 "name": "USE_INNER_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
-                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "name": "PATTERN_TWO_MASK_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "PATTERN_ONE_MASK_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "on": false,
+                "Group": "Pattern",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "PATTERN_ONE_ADDITIVE_MASK",
                 "on": false,
+                "Group": "Pattern",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
@@ -58305,14 +58280,6 @@
                 "name": "USE_VERTEX_ANIMATION_TO_SIMULATE_RIBBON",
                 "on": false,
                 "Group": "Vertex_Animation",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_RIM",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
@@ -58486,11 +58453,6 @@
         "name": "Characters/Leona/Skins/Skin68/Materials/Leona_Skin68_Aspect_Card_inst",
         "samplerValues": [
             {
-                "TextureName": "Inner_Fresnel_Mask",
-                "texturePath": "assets/shared/materials/black.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "assets/characters/leona/skins/skin68/leona_skin68_hair_card_tx_cm.tex",
                 "addressU": 2,
@@ -58502,6 +58464,11 @@
                 "texturePath": "assets/characters/leona/skins/skin64/black.tex",
                 "addressU": 1,
                 "addressV": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Pattern_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -58576,6 +58543,11 @@
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
+                "TextureName": "Inner_Fresnel_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "DeformNoise",
                 "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -58608,7 +58580,7 @@
         ],
         "paramValues": [
             {
-                "name": "Fresnel_pow",
+                "name": "Fresnel_As_Mask_Power",
                 "value": [
                     0.05000000074505806,
                     0.0,
@@ -58618,7 +58590,7 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "Fresnel_Intensity",
+                "name": "Fresnel_As_Mask_Intensity",
                 "value": [
                     1.0,
                     0.0,
@@ -58741,46 +58713,6 @@
                 "name": "Ribbon_SegmentCount",
                 "value": [
                     5.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "modelHeight",
-                "value": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMin",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "rimOffset",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMax",
-                "value": [
-                    1.0,
                     0.0,
                     0.0,
                     0.0
@@ -59338,21 +59270,31 @@
             {
                 "name": "USE_INNER_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
-                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "name": "PATTERN_TWO_MASK_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "PATTERN_ONE_MASK_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "on": false,
+                "Group": "Pattern",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "PATTERN_ONE_ADDITIVE_MASK",
                 "on": false,
+                "Group": "Pattern",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
@@ -59371,14 +59313,6 @@
                 "name": "USE_VERTEX_ANIMATION_TO_SIMULATE_RIBBON",
                 "on": false,
                 "Group": "Vertex_Animation",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_RIM",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
@@ -59532,11 +59466,6 @@
         "name": "Characters/Leona/Skins/Skin68/Materials/Leona_Skin68_HairGold",
         "samplerValues": [
             {
-                "TextureName": "Inner_Fresnel_Mask",
-                "texturePath": "assets/shared/materials/black.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "assets/characters/leona/skins/skin68/leona_skin68_hair_gradient_tx_cm.tex",
                 "addressU": 2,
@@ -59548,6 +59477,11 @@
                 "texturePath": "assets/shared/materials/white.tex",
                 "addressU": 1,
                 "addressV": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Pattern_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -59622,6 +59556,11 @@
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
+                "TextureName": "Inner_Fresnel_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "DeformNoise",
                 "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -59654,7 +59593,7 @@
         ],
         "paramValues": [
             {
-                "name": "Fresnel_pow",
+                "name": "Fresnel_As_Mask_Power",
                 "value": [
                     0.05000000074505806,
                     0.0,
@@ -59664,7 +59603,7 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "Fresnel_Intensity",
+                "name": "Fresnel_As_Mask_Intensity",
                 "value": [
                     1.0,
                     0.0,
@@ -59787,46 +59726,6 @@
                 "name": "Ribbon_SegmentCount",
                 "value": [
                     5.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "modelHeight",
-                "value": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMin",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "rimOffset",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMax",
-                "value": [
-                    1.0,
                     0.0,
                     0.0,
                     0.0
@@ -60366,21 +60265,31 @@
             {
                 "name": "USE_INNER_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
-                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "name": "PATTERN_TWO_MASK_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "PATTERN_ONE_MASK_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "on": false,
+                "Group": "Pattern",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "PATTERN_ONE_ADDITIVE_MASK",
                 "on": false,
+                "Group": "Pattern",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
@@ -60399,14 +60308,6 @@
                 "name": "USE_VERTEX_ANIMATION_TO_SIMULATE_RIBBON",
                 "on": false,
                 "Group": "Vertex_Animation",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_RIM",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
@@ -61386,11 +61287,6 @@
         "name": "Characters/Leona/Skins/Skin68/Materials/Leona_Skin68_Aspect_R_inst",
         "samplerValues": [
             {
-                "TextureName": "Inner_Fresnel_Mask",
-                "texturePath": "assets/shared/materials/black.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "assets/characters/leona/skins/skin68/leona_skin68_r_hair_tx_cm.tex",
                 "addressU": 2,
@@ -61402,6 +61298,11 @@
                 "texturePath": "assets/characters/leona/skins/skin64/leona_skin64_hair_base_mask_test_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Pattern_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -61476,6 +61377,11 @@
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
+                "TextureName": "Inner_Fresnel_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "DeformNoise",
                 "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -61508,7 +61414,7 @@
         ],
         "paramValues": [
             {
-                "name": "Fresnel_pow",
+                "name": "Fresnel_As_Mask_Power",
                 "value": [
                     0.05000000074505806,
                     0.0,
@@ -61518,7 +61424,7 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "Fresnel_Intensity",
+                "name": "Fresnel_As_Mask_Intensity",
                 "value": [
                     1.0,
                     0.0,
@@ -61641,46 +61547,6 @@
                 "name": "Ribbon_SegmentCount",
                 "value": [
                     5.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "modelHeight",
-                "value": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMin",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "rimOffset",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMax",
-                "value": [
-                    1.0,
                     0.0,
                     0.0,
                     0.0
@@ -62256,21 +62122,31 @@
             {
                 "name": "USE_INNER_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
-                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "name": "PATTERN_TWO_MASK_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "PATTERN_ONE_MASK_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "on": false,
+                "Group": "Pattern",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "PATTERN_ONE_ADDITIVE_MASK",
                 "on": false,
+                "Group": "Pattern",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
@@ -62289,14 +62165,6 @@
                 "name": "USE_VERTEX_ANIMATION_TO_SIMULATE_RIBBON",
                 "on": false,
                 "Group": "Vertex_Animation",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_RIM",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
@@ -62976,11 +62844,6 @@
         "name": "Characters/Leona/Skins/Skin68/Materials/Leona_Skin68_Aspect_inst",
         "samplerValues": [
             {
-                "TextureName": "Inner_Fresnel_Mask",
-                "texturePath": "assets/shared/materials/black.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "assets/characters/leona/skins/skin68/leona_skin68_hair_tx_cm.tex",
                 "addressU": 2,
@@ -62992,6 +62855,11 @@
                 "texturePath": "assets/characters/leona/skins/skin64/leona_skin64_hair_base_mask_test_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Pattern_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -63066,6 +62934,11 @@
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
+                "TextureName": "Inner_Fresnel_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "DeformNoise",
                 "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -63098,7 +62971,7 @@
         ],
         "paramValues": [
             {
-                "name": "Fresnel_pow",
+                "name": "Fresnel_As_Mask_Power",
                 "value": [
                     0.05000000074505806,
                     0.0,
@@ -63108,7 +62981,7 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "Fresnel_Intensity",
+                "name": "Fresnel_As_Mask_Intensity",
                 "value": [
                     1.0,
                     0.0,
@@ -63231,46 +63104,6 @@
                 "name": "Ribbon_SegmentCount",
                 "value": [
                     5.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "modelHeight",
-                "value": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMin",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "rimOffset",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMax",
-                "value": [
-                    1.0,
                     0.0,
                     0.0,
                     0.0
@@ -63858,21 +63691,31 @@
             {
                 "name": "USE_INNER_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
-                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "name": "PATTERN_TWO_MASK_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "PATTERN_ONE_MASK_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "on": false,
+                "Group": "Pattern",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "PATTERN_ONE_ADDITIVE_MASK",
                 "on": false,
+                "Group": "Pattern",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
@@ -63891,14 +63734,6 @@
                 "name": "USE_VERTEX_ANIMATION_TO_SIMULATE_RIBBON",
                 "on": false,
                 "Group": "Vertex_Animation",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_RIM",
                 "__type": "StaticMaterialSwitchDef"
             },
             {

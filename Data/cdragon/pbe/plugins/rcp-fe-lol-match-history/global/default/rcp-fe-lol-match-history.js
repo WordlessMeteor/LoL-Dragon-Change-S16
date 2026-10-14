@@ -1738,7 +1738,6 @@
                 platformConfig: n.Ember.computed.alias("mapsAndGameData.api.platformConfig"),
                 matchHistory: n.Ember.computed.alias("mapsAndGameData.api.matchHistory"),
                 blockedPlayers: n.Ember.computed.alias("mapsAndGameData.blockedPlayers"),
-                friends: n.Ember.computed.alias("mapsAndGameData.friends"),
                 additionalInfo: n.Ember.computed.alias("model.additionalInfo"),
                 isThirdPersonView: n.Ember.computed.alias("model.isThirdPersonView"),
                 maps: n.Ember.computed.alias("model.maps"),
@@ -2482,8 +2481,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "Kz3/VUhe",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\match-details-root-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\match-details-root-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\match-details-root-component\\\\index.js\\" "],["text","\\n"],["append",["helper",["component"],[["get",["matchDetailsNavComponent"]]],[["selectedSectionIndex","displaySections","handleSectionSelected"],[["get",["selectedSectionIndex"]],["get",["displaySections"]],["helper",["action"],[["get",[null]],"handleSectionSelected"],null]]]],false],["text","\\n"],["block",["if"],[["get",["isLoading"]]],null,2,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["layer-header"],null,[["gameData","additionalInfo","currentParticipant","platformConfig","isThirdPersonView","maps","queues","gameModeMutators","potatoModeSetting","localPuuid","friends"],[["get",["gameData"]],["get",["additionalInfo"]],["get",["currentParticipant"]],["get",["platformConfig"]],["get",["isThirdPersonView"]],["get",["maps"]],["get",["queues"]],["get",["gameModeMutators"]],["get",["potatoModeSetting"]],["get",["localPuuid"]],["get",["friends"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["hideHeader"]]],null,0],["text","  "],["append",["helper",["component"],[["get",["sectionName"]]],[["isTransitioning","champions","gameData","eogGameMode","gameTimeline","currentParticipant","augments","champions","championsByAlias","items","runes","runesStyles","spells","localPuuid"],[["get",["isTransitioning"]],["get",["champions"]],["get",["gameData"]],["get",["model","eogGameMode"]],["get",["gameTimeline"]],["get",["currentParticipant"]],["get",["augments"]],["get",["champions"]],["get",["championsByAlias"]],["get",["items"]],["get",["runes"]],["get",["runesStyles"]],["get",["spells"]],["get",["localPuuid"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","match-details-loading-icon-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-details-loading-icon"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "JRGLzs5s",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\match-details-root-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\match-details-root-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\match-details-root-component\\\\index.js\\" "],["text","\\n"],["append",["helper",["component"],[["get",["matchDetailsNavComponent"]]],[["selectedSectionIndex","displaySections","handleSectionSelected"],[["get",["selectedSectionIndex"]],["get",["displaySections"]],["helper",["action"],[["get",[null]],"handleSectionSelected"],null]]]],false],["text","\\n"],["block",["if"],[["get",["isLoading"]]],null,2,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["layer-header"],null,[["gameData","additionalInfo","currentParticipant","platformConfig","isThirdPersonView","maps","queues","gameModeMutators","potatoModeSetting"],[["get",["gameData"]],["get",["additionalInfo"]],["get",["currentParticipant"]],["get",["platformConfig"]],["get",["isThirdPersonView"]],["get",["maps"]],["get",["queues"]],["get",["gameModeMutators"]],["get",["potatoModeSetting"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["hideHeader"]]],null,0],["text","  "],["append",["helper",["component"],[["get",["sectionName"]]],[["isTransitioning","champions","gameData","eogGameMode","gameTimeline","currentParticipant","augments","champions","championsByAlias","items","runes","runesStyles","spells","localPuuid"],[["get",["isTransitioning"]],["get",["champions"]],["get",["gameData"]],["get",["model","eogGameMode"]],["get",["gameTimeline"]],["get",["currentParticipant"]],["get",["augments"]],["get",["champions"]],["get",["championsByAlias"]],["get",["items"]],["get",["runes"]],["get",["runesStyles"]],["get",["spells"]],["get",["localPuuid"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","match-details-loading-icon-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-details-loading-icon"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -2514,10 +2513,6 @@
                 s = a(10);
             a(84);
             var l = a(21);
-
-            function o(e) {
-                return e?.puuid || e?.player?.puuid
-            }
             e.exports = n.Ember.Component.extend({
                 layout: a(85),
                 classNames: ["match-details-layer-header"],
@@ -2560,8 +2555,6 @@
                     return this.get("animationDisabled") ? this.get("currentParticipant.win") ? n.Lodash.get(e, "assets.icon-victory") : n.Lodash.get(e, "assets.icon-defeat") : this.get("currentParticipant.win") ? n.Lodash.get(e, "assets.icon-victory-video") : n.Lodash.get(e, "assets.icon-defeat-video")
                 })),
                 isThirdPersonView: !1,
-                localPuuid: null,
-                friends: null,
                 thirdPersonAccessibleGameQueues: n.Ember.computed.readOnly("platformConfig.Replays.ThirdPersonAccessibleGameQueues"),
                 whitelistedQueueIds: n.Ember.computed("thirdPersonAccessibleGameQueues", (function() {
                     return n.Ember.A((this.get("thirdPersonAccessibleGameQueues") || "").split(",").map((function(e) {
@@ -2569,25 +2562,9 @@
                     })))
                 })),
                 replayButton: null,
-                isLocalPlayerInMatch: n.Ember.computed("gameData.participants.[]", "localPuuid", (function() {
-                    const e = this.get("gameData.participants") || [],
-                        t = this.get("localPuuid");
-                    return !(0 === e.length || !t) && e.some((e => o(e) === t))
-                })),
-                isFriendInMatch: n.Ember.computed("gameData.participants.[]", "friends.[]", (function() {
-                    const e = this.get("gameData.participants") || [],
-                        t = this.get("friends") || [];
-                    if (0 === e.length || 0 === t.length) return !1;
-                    const a = new Set(t.map((e => e.puuid)).filter(Boolean));
-                    return e.some((e => a.has(o(e))))
-                })),
-                isReplayRestricted: n.Ember.computed("isLocalPlayerInMatch", (function() {
-                    if (!n.Replays.isReplaysRestrictionEnabled()) return !1;
-                    return !this.get("isLocalPlayerInMatch")
-                })),
-                shouldShowReplayButton: n.Ember.computed("gameData", "isThirdPersonView", "whitelistedQueueIds", "isReplayRestricted", (function() {
+                shouldShowReplayButton: n.Ember.computed("gameData", "isThirdPersonView", "whitelistedQueueIds", (function() {
                     const e = this.get("gameData");
-                    return !(!e || !n.Replays.isGeneralReplaysEnabled()) && (!this.get("isReplayRestricted") && (!(this.get("isThirdPersonView") && !this.get("whitelistedQueueIds").includes(e.queueId)) || (n.logger.trace("Queue id for this game is not whitelisted, not adding replay button"), !1)))
+                    return !(!e || !n.Replays.isGeneralReplaysEnabled()) && (!(this.get("isThirdPersonView") && !this.get("whitelistedQueueIds").includes(e.queueId)) || (n.logger.trace("Queue id for this game is not whitelisted, not adding replay button"), !1))
                 })),
                 onDidRender: n.Ember.on("didRender", (function() {
                     this._addReplayButton()

@@ -90186,8 +90186,14 @@
                     "mFormulaParts": [
                         {
                             "mStat": 1,
+                            "mStatFormula": 2,
                             "mDataValue": "ArmorPercent",
                             "__type": "StatByNamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStartValue": 50.0,
+                            "mEndValue": 125.0,
+                            "__type": "ByCharLevelInterpolationCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -139575,6 +139581,7 @@
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
+            "mIsDisabledWhileDead": false,
             "castRange": [
                 25000.0,
                 25000.0,
@@ -139671,6 +139678,7 @@
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
+            "mIsDisabledWhileDead": false,
             "castRange": [
                 25000.0,
                 25000.0,
@@ -139778,6 +139786,19 @@
                         425.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TicksPerSecond",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -139828,7 +139849,7 @@
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
-                            "mNumber": 0.20000000298023224,
+                            "mNumber": 0.4000000059604645,
                             "__type": "NumberCalculationPart"
                         }
                     ],
@@ -472535,6 +472556,10 @@
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "Temp_Mesh",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "primitive": {
                     "mMesh": {
                         "mSimpleMeshName": "ASSETS/Augments/Particles/Kiwi_Augment_KingMe_Crown.scb",
@@ -612707,8 +612732,8 @@
         "DescriptionTra": "Kiwi_GoH_PentakillAug_Generic_Description",
         "AugmentTooltipTra": "Kiwi_GoH_PentakillAug_Generic_Tooltip",
         "RootSpell": "{149b92ec}",
-        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.tex",
-        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.tex",
+        "AugmentLargeIconPath": "{545598f858b42c9d}",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/pentakill_small.tex",
         "rarity": 1,
         "{ed593c9c}": true,
         "AugmentPlatformId": 3171,
@@ -612730,8 +612755,8 @@
         "DescriptionTra": "Kiwi_GoH_PentakillAug_Generic_Description",
         "AugmentTooltipTra": "Kiwi_GoH_PentakillAug_Generic_Tooltip",
         "RootSpell": "{2a47034e}",
-        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.tex",
-        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.tex",
+        "AugmentLargeIconPath": "{545598f858b42c9d}",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/pentakill_small.tex",
         "rarity": 1,
         "{ed593c9c}": true,
         "AugmentPlatformId": 3173,
@@ -612753,8 +612778,8 @@
         "DescriptionTra": "Kiwi_GoH_PentakillAug_Generic_Description",
         "AugmentTooltipTra": "GoH_PentakillAug_Display_Tooltip",
         "RootSpell": "{bcfab39c}",
-        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.tex",
-        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.tex",
+        "AugmentLargeIconPath": "{545598f858b42c9d}",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/pentakill_small.tex",
         "rarity": 1,
         "AugmentPlatformId": 3176,
         "__type": "AugmentData"
@@ -612765,8 +612790,8 @@
         "DescriptionTra": "Kiwi_GoH_PentakillAug_Generic_Description",
         "AugmentTooltipTra": "Kiwi_GoH_PentakillAug_Generic_Tooltip",
         "RootSpell": "{96a4b62c}",
-        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.tex",
-        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.tex",
+        "AugmentLargeIconPath": "{545598f858b42c9d}",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/pentakill_small.tex",
         "rarity": 1,
         "{ed593c9c}": true,
         "AugmentPlatformId": 3172,
@@ -612788,8 +612813,8 @@
         "DescriptionTra": "Kiwi_GoH_PentakillAug_Generic_Description",
         "AugmentTooltipTra": "Kiwi_GoH_PentakillAug_Generic_Tooltip",
         "RootSpell": "{a31cbb8c}",
-        "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.tex",
-        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.tex",
+        "AugmentLargeIconPath": "{545598f858b42c9d}",
+        "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/pentakill_small.tex",
         "rarity": 1,
         "{ed593c9c}": true,
         "AugmentPlatformId": 3170,

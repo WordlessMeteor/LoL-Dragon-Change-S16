@@ -103,13 +103,13 @@
                 {
                     "name": "WLowHealthHealBonus",
                     "values": [
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -197,6 +197,14 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                },
+                "{049d8bc1}": {
+                    "mMultiplier": {
+                        "mDataValue": "WLowHealthHealBonus",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "{fc3ca7f8}",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "Spell2",
@@ -2215,19 +2223,6 @@
                         2.0
                     ],
                     "__type": "SpellDataValue"
-                },
-                {
-                    "name": "PassiveCooldown",
-                    "values": [
-                        225.0,
-                        225.0,
-                        225.0,
-                        225.0,
-                        225.0,
-                        225.0,
-                        225.0
-                    ],
-                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -2261,6 +2256,32 @@
                             "DataValue": "DecayRate",
                             "AbilityResource": 10,
                             "__type": "{2b25a73a}"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "PassiveCooldown": {
+                    "mFormulaParts": [
+                        {
+                            "mLevel1Value": 225.0,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 6,
+                                    "mAdditionalBonusAtThisLevel": -25.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 11,
+                                    "mAdditionalBonusAtThisLevel": -25.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 16,
+                                    "mAdditionalBonusAtThisLevel": -25.0,
+                                    "__type": "Breakpoint"
+                                }
+                            ],
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"

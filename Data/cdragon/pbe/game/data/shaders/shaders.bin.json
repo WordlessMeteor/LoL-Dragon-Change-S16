@@ -1206,76 +1206,8 @@
         "__type": "CustomShaderDef"
     },
     "Shaders/SkinnedMesh/Aspect": {
-        "ShadingModel": "{baebc346}",
+        "ShadingModel": "{14b3e471}",
         "parameters": [
-            {
-                "name": "albedoNewMin",
-                "data": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "albedoNewMin",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "albedoNewMax",
-                "data": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "albedoNewMax",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "rimOffset",
-                "data": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "rimOffset",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "modelHeight",
-                "data": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "modelHeight",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
             {
                 "name": "Ribbon_V_Remap",
                 "data": [
@@ -1911,7 +1843,7 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
-                "name": "Fresnel_Intensity",
+                "name": "Fresnel_As_Mask_Intensity",
                 "data": [
                     1.0,
                     0.0,
@@ -1920,7 +1852,7 @@
                 ],
                 "logicalParameters": [
                     {
-                        "name": "Fresnel_Intensity",
+                        "name": "Fresnel_As_Mask_Intensity",
                         "fields": 1,
                         "__type": "ShaderLogicalParameter"
                     }
@@ -1928,7 +1860,7 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
-                "name": "Fresnel_pow",
+                "name": "Fresnel_As_Mask_Power",
                 "data": [
                     2.0,
                     0.0,
@@ -1937,7 +1869,7 @@
                 ],
                 "logicalParameters": [
                     {
-                        "name": "Fresnel_pow",
+                        "name": "Fresnel_As_Mask_Power",
                         "fields": 1,
                         "__type": "ShaderLogicalParameter"
                     }
@@ -2483,20 +2415,6 @@
         ],
         "staticSwitches": [
             {
-                "name": "USE_RIM",
-                "onByDefault": true,
-                "__type": "ShaderStaticSwitch"
-            },
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "onByDefault": true,
-                "__type": "ShaderStaticSwitch"
-            },
-            {
-                "name": "USE_THIN_FILM",
-                "__type": "ShaderStaticSwitch"
-            },
-            {
                 "name": "USE_VERTEX_ANIMATION_BASED_ON_UV_AND_TEXTURE",
                 "__type": "ShaderStaticSwitch"
             },
@@ -2536,6 +2454,10 @@
             {
                 "name": "USE_PATTERN_ONE",
                 "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "PATTERN_TWO_MASK_FRESNEL",
                 "__type": "ShaderStaticSwitch"
             },
             {
@@ -2654,7 +2576,7 @@
                 "__type": "ShaderTexture"
             },
             {
-                "name": "Fresnel_Mask",
+                "name": "Pattern_Mask",
                 "defaultTexturePath": "assets/shared/materials/black.tex",
                 "__type": "ShaderTexture"
             },
@@ -2681,6 +2603,11 @@
             },
             {
                 "name": "Fresnel_Color_Texture",
+                "defaultTexturePath": "assets/shared/materials/black.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Fresnel_Mask",
                 "defaultTexturePath": "assets/shared/materials/black.tex",
                 "__type": "ShaderTexture"
             },

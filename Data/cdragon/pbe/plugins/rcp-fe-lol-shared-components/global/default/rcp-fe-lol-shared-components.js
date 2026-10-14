@@ -3444,14 +3444,12 @@
                 };
             var i = new class {
                 constructor() {
-                    this._isGeneralReplaysEnabled = !1, this._isPostgameReplaysEnabled = !1, this._isReplaysRestrictionEnabled = !1
+                    this._isGeneralReplaysEnabled = !1, this._isPostgameReplaysEnabled = !1
                 }
                 async initReplays() {
                     const e = (0, r.dataBinding)("/lol-replays", r.socket),
                         t = r.dataBinding.bindTo(r.socket);
-                    this._registerReplayButtonFactory(e, t), this._registerReplayButtonFactoryForEndOfGame(e, t), t.observe("/lol-client-config/v3/client-config/lol.client_settings.replays.restriction.enabled", (e => {
-                        this._isReplaysRestrictionEnabled = !0 === e
-                    }));
+                    this._registerReplayButtonFactory(e, t), this._registerReplayButtonFactoryForEndOfGame(e, t);
                     const n = await t.get("/lol-directx-upgrade/needs-hardware-upgrade"),
                         a = await t.get("/lol-mac-graphics-upgrade/needs-hardware-upgrade");
                     n || a || e.addObserver("/v1/configuration", (e => {
@@ -3461,7 +3459,6 @@
                     return this._publicApi = {
                         isGeneralReplaysEnabled: () => this._isGeneralReplaysEnabled,
                         isPostgameReplaysEnabled: () => this._isPostgameReplaysEnabled,
-                        isReplaysRestrictionEnabled: () => this._isReplaysRestrictionEnabled,
                         createReplayButton: e => i(s.default.COMPONENT_TYPE_MATCH_HISTORY, e),
                         createReplayButtonForEndOfGame: e => i(s.default.COMPONENT_TYPE_END_OF_GAME, e)
                     }, this._publicApi
