@@ -95591,17 +95591,51 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
-                "name": "ShoreFoamRippleDistortionTiling",
+                "name": "ShoreFoamUVDistTile",
                 "data": [
-                    0.5,
-                    0.0,
+                    1.0,
+                    1.0,
                     0.0,
                     0.0
                 ],
                 "logicalParameters": [
                     {
-                        "name": "ShoreFoamRippleDistortionTiling",
-                        "fields": 1,
+                        "name": "ShoreFoamUVDistTile",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ShoreFoamUVDistPanner",
+                "data": [
+                    0.07000000029802322,
+                    0.07000000029802322,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ShoreFoamUVDistPanner",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ShoreFoamUVDistStrength",
+                "data": [
+                    0.05000000074505806,
+                    0.05000000074505806,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ShoreFoamUVDistStrength",
+                        "fields": 3,
                         "__type": "ShaderLogicalParameter"
                     }
                 ],
@@ -95850,40 +95884,6 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
-                "name": "FoamCut",
-                "data": [
-                    2.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "FoamCut",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "FoamColor",
-                "data": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "FoamColor",
-                        "fields": 15,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
                 "name": "ShoreFoamRippleCount",
                 "data": [
                     0.20000000298023224,
@@ -95918,6 +95918,23 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "ShoreFoamRippleDistortionTiling",
+                "data": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ShoreFoamRippleDistortionTiling",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "ShoreFoamRippleSpeed",
                 "data": [
                     0.20000000298023224,
@@ -95935,57 +95952,6 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
-                "name": "ShoreFoamUVDistTile",
-                "data": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "ShoreFoamUVDistTile",
-                        "fields": 3,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "ShoreFoamUVDistPanner",
-                "data": [
-                    0.07000000029802322,
-                    0.07000000029802322,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "ShoreFoamUVDistPanner",
-                        "fields": 3,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "ShoreFoamUVDistStrength",
-                "data": [
-                    0.05000000074505806,
-                    0.05000000074505806,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "ShoreFoamUVDistStrength",
-                        "fields": 3,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
                 "name": "ShoreFoamColor",
                 "data": [
                     0.43552300333976746,
@@ -95996,6 +95962,40 @@
                 "logicalParameters": [
                     {
                         "name": "ShoreFoamColor",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "FoamCut",
+                "data": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "FoamCut",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "FoamColor",
+                "data": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "FoamColor",
                         "fields": 15,
                         "__type": "ShaderLogicalParameter"
                     }

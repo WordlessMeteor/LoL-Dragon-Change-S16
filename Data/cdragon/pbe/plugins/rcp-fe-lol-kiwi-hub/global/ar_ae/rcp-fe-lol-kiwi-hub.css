@@ -899,7 +899,7 @@
     background-image: url(/fe/lol-kiwi-hub/images/Main_Progress_Track_BG.png);
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 105% 100%;
     bottom: -52px;
     height: 100%;
     position: absolute;
@@ -935,10 +935,10 @@
 .main-progress-track-milestones {
     bottom: -26px;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     position: relative;
-    right: -9px;
-    width: 955px
+    right: -95px;
+    width: 805px
 }
 
 .kiwi-hub-main-progress-track-milestone-tooltip {
@@ -949,16 +949,17 @@
     align-items: center;
     border-radius: 100%;
     display: flex;
+    flex-shrink: 0;
     height: 40px;
     justify-content: center;
-    margin-left: 154px;
     position: relative;
     width: 40px
 }
 
 .main-progress-track-milestone-reward-icon {
     background-image: url(/fe/lol-kiwi-hub/images/MainProgressMilestone_Default.png);
-    background-size: cover;
+    background-size: 100% 100%;
+    flex-shrink: 0;
     height: 100%;
     width: 100%
 }
@@ -1015,7 +1016,7 @@
     display: flex;
     height: 110px;
     justify-content: space-around;
-    width: 235px
+    width: 300px
 }
 
 .kiwi-hub-main-progress-track-milestone-tooltip-reward-details {

@@ -1,5 +1,5 @@
 {
-    "{75e146f7}": {
+    "{8eedb9ac}": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -7,7 +7,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 0.75,
+                    "constantValue": 0.6000000238418579,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
@@ -20,10 +20,10 @@
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
+                        0.3137255012989044,
+                        0.14509804546833038,
                         1.0,
-                        0.917647123336792,
-                        0.003921568859368563,
-                        1.0
+                        0.4392157196998596
                     ],
                     "__type": "ValueColor"
                 },
@@ -31,15 +31,15 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.25,
-                            0.5
+                            0.5,
+                            0.75
                         ],
                         "values": [
                             [
                                 1.0,
                                 1.0,
                                 1.0,
-                                1.0
+                                0.0
                             ],
                             [
                                 1.0,
@@ -60,6 +60,7 @@
                 },
                 "pass": -3,
                 "alphaRef": 0,
+                "isUniformScale": 1,
                 "birthScale0": {
                     "constantValue": [
                         70.0,
@@ -72,49 +73,31 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.084103062748909,
-                            0.19902582466602325,
-                            0.29271793365478516,
-                            0.42167893052101135,
-                            0.75
+                            0.799027681350708,
+                            1.0
                         ],
                         "values": [
                             [
-                                0.0,
+                                0.9350000023841858,
                                 0.0,
                                 0.0
                             ],
                             [
-                                0.40062686800956726,
-                                0.3949781656265259,
-                                0.567695677280426
-                            ],
-                            [
-                                1.158951997756958,
-                                1.399999976158142,
-                                1.350000023841858
-                            ],
-                            [
-                                1.0611354112625122,
-                                1.06656014919281,
-                                1.277062177658081
-                            ],
-                            [
-                                0.9301824569702148,
-                                0.8135371208190918,
-                                1.2061660289764404
+                                0.9912663698196411,
+                                0.0,
+                                0.0
                             ],
                             [
                                 1.0,
-                                1.0,
-                                1.0
+                                0.0,
+                                0.0
                             ]
                         ],
                         "__type": "VfxAnimatedVector3fVariableData"
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Loadouts/SummonerEmotes/Events/Mayhem/5207_True_Damage_Poro_VFX.tex",
+                "texture": "ASSETS/Loadouts/SummonerEmotes/Events/TrueDamage/52072_True_Damage_Poro_Glow_Fix_DO_NOT_TRANSLATE_VFX.tex",
                 "uvMode": 2,
                 "__type": "VfxEmitterDefinitionData"
             },
@@ -124,7 +107,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 0.75,
+                    "constantValue": 0.6000000238418579,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
@@ -139,19 +122,19 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.4000000059604645,
+                            0.5,
                             1.0
                         ],
                         "values": [
                             [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
+                                0.043136999011039734,
+                                0.1411760002374649,
+                                0.48627498745918274,
+                                0.0
                             ],
                             [
-                                1.0,
-                                1.0,
+                                0.1450980007648468,
+                                0.48627498745918274,
                                 1.0,
                                 1.0
                             ],
@@ -167,7 +150,29 @@
                     "__type": "ValueColor"
                 },
                 "pass": -4,
-                "alphaRef": 0,
+                "alphaErosionDefinition": {
+                    "erosionDriveCurve": {
+                        "dynamics": {
+                            "times": [
+                                0.0,
+                                1.0
+                            ],
+                            "values": [
+                                1.0,
+                                0.0
+                            ],
+                            "__type": "VfxAnimatedFloatVariableData"
+                        },
+                        "__type": "ValueFloat"
+                    },
+                    "erosionFeatherIn": 0.4000000059604645,
+                    "erosionFeatherOut": 0.4000000059604645,
+                    "erosionSliceWidth": 1.399999976158142,
+                    "erosionMapName": "ASSETS/Shared/Particles/Emotes/Templates/EM_Template_Erode_AngerConfused_02.tex",
+                    "erosionMapAddressMode": 0,
+                    "__type": "VfxAlphaErosionDefinitionData"
+                },
+                "isUniformScale": 1,
                 "birthScale0": {
                     "constantValue": [
                         70.0,
@@ -180,65 +185,79 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.084103062748909,
-                            0.19902582466602325,
-                            0.29271793365478516,
-                            0.42167893052101135,
-                            0.75
+                            0.799027681350708,
+                            1.0
                         ],
                         "values": [
                             [
-                                0.0,
+                                0.9350000023841858,
                                 0.0,
                                 0.0
                             ],
                             [
-                                0.40062686800956726,
-                                0.3949781656265259,
-                                0.567695677280426
-                            ],
-                            [
-                                1.158951997756958,
-                                1.399999976158142,
-                                1.350000023841858
-                            ],
-                            [
-                                1.0611354112625122,
-                                1.06656014919281,
-                                1.277062177658081
-                            ],
-                            [
-                                0.9301824569702148,
-                                0.8135371208190918,
-                                1.2061660289764404
+                                0.9912663698196411,
+                                0.0,
+                                0.0
                             ],
                             [
                                 1.0,
-                                1.0,
-                                1.0
+                                0.0,
+                                0.0
                             ]
                         ],
                         "__type": "VfxAnimatedVector3fVariableData"
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Loadouts/SummonerEmotes/Events/Mayhem/5207_True_Damage_Poro_VFX.tex",
-                "uvMode": 2,
+                "texture": "ASSETS/Loadouts/SummonerEmotes/Events/TrueDamage/52072_True_Damage_Poro_Glow_Fix_DO_NOT_TRANSLATE_VFX.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
-                "timeBeforeFirstEmission": 0.75,
+                "timeBeforeFirstEmission": 0.6000000238418579,
                 "rate": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 1.25,
+                    "constantValue": 1.399999976158142,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.5,
                 "isSingleParticle": 1,
                 "emitterName": "Mid",
+                "velocity": {
+                    "constantValue": [
+                        0.0,
+                        -13.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.15976619720458984,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                -7.249895095825195,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                -13.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -283,29 +302,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                1.100000023841858,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Loadouts/SummonerEmotes/Events/Mayhem/5207_True_Damage_Poro_VFX.tex",
+                "texture": "ASSETS/Loadouts/SummonerEmotes/Events/TrueDamage/52072_True_Damage_Poro_Glow_Fix_DO_NOT_TRANSLATE_VFX.tex",
                 "uvMode": 2,
                 "__type": "VfxEmitterDefinitionData"
             },
@@ -316,7 +313,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 0.30000001192092896,
+                    "constantValue": 0.5,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 3.0,
@@ -325,35 +322,29 @@
                 "velocity": {
                     "constantValue": [
                         0.0,
-                        1.0,
+                        -13.0,
                         0.0
                     ],
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.20000000298023224,
-                            0.44999998807907104,
-                            0.699999988079071
+                            0.4929508864879608,
+                            1.0
                         ],
                         "values": [
                             [
                                 0.0,
-                                0.0,
+                                -13.0,
                                 0.0
                             ],
                             [
                                 0.0,
-                                -200.0,
+                                -3.51965069770813,
                                 0.0
                             ],
                             [
                                 0.0,
-                                700.0,
-                                0.0
-                            ],
-                            [
-                                0.0,
-                                -850.0,
+                                -0.0,
                                 0.0
                             ]
                         ],
@@ -365,48 +356,19 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "SpawnShape": {
-                    "emitOffset": {
-                        "constantValue": [
-                            0.0,
-                            1.0,
-                            0.0
-                        ],
-                        "dynamics": {
-                            "times": [
-                                0.0,
-                                0.5,
-                                1.0
-                            ],
-                            "values": [
-                                [
-                                    0.0,
-                                    0.0,
-                                    0.0
-                                ],
-                                [
-                                    0.0,
-                                    10.0,
-                                    0.0
-                                ],
-                                [
-                                    0.0,
-                                    0.0,
-                                    0.0
-                                ]
-                            ],
-                            "__type": "VfxAnimatedVector3fVariableData"
-                        },
-                        "__type": "ValueVector3"
-                    },
-                    "__type": "VfxShapeLegacy"
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -13.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
                 },
                 "blendMode": 1,
                 "Color": {
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.699999988079071,
                             1.0
                         ],
                         "values": [
@@ -417,16 +379,10 @@
                                 1.0
                             ],
                             [
-                                1.0,
-                                1.0,
-                                1.0,
+                                0.015685999765992165,
+                                0.4000000059604645,
+                                0.807843029499054,
                                 1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                -0.0
                             ]
                         ],
                         "__type": "VfxAnimatedColorVariableData"
@@ -434,60 +390,28 @@
                     "__type": "ValueColor"
                 },
                 "pass": -4,
-                "alphaRef": 0,
-                "isUniformScale": 1,
-                "isRotationEnabled": 1,
-                "rotation0": {
-                    "constantValue": [
-                        1.0,
-                        0.0,
-                        0.0
-                    ],
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.0955175906419754,
-                            0.19172078371047974,
-                            0.379504531621933,
-                            0.6843319535255432,
-                            1.0
-                        ],
-                        "values": [
-                            [
+                "alphaErosionDefinition": {
+                    "erosionDriveCurve": {
+                        "dynamics": {
+                            "times": [
                                 0.0,
-                                0.0,
-                                0.0
+                                1.0
                             ],
-                            [
-                                -3.004387855529785,
+                            "values": [
                                 0.0,
-                                0.0
+                                1.0
                             ],
-                            [
-                                -9.405426979064941,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                -0.9066449999809265,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                35.40352249145508,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                200.0,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
+                            "__type": "VfxAnimatedFloatVariableData"
+                        },
+                        "__type": "ValueFloat"
                     },
-                    "__type": "IntegratedValueVector3"
+                    "erosionFeatherIn": 0.30000001192092896,
+                    "erosionFeatherOut": 0.30000001192092896,
+                    "erosionMapName": "ASSETS/Shared/Particles/Emotes/Templates/EM_Template_Erode_AngerConfused_03.tex",
+                    "erosionMapAddressMode": 0,
+                    "__type": "VfxAlphaErosionDefinitionData"
                 },
+                "isUniformScale": 1,
                 "birthScale0": {
                     "constantValue": [
                         70.0,
@@ -496,42 +420,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.25,
-                            0.5,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.100000023841858,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.1100000143051147,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                1.149999976158142,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                0.0,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Loadouts/SummonerEmotes/Events/Mayhem/5207_True_Damage_Poro_VFX.tex",
-                "uvMode": 2,
+                "texture": "ASSETS/Loadouts/SummonerEmotes/Events/TrueDamage/52072_True_Damage_Poro_Glow_Fix_DO_NOT_TRANSLATE_VFX.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -548,7 +437,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effect": "Loadouts/SummonerEmotes/Particles/Templates/EM_Template_HappyExcited_child_01",
+                            "effect": "Loadouts/SummonerEmotes/Particles/Templates/EM_Template_SadBored_child_01",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -661,18 +550,50 @@
                 "__type": "VfxEmitterDefinitionData"
             },
             {
-                "timeBeforeFirstEmission": 0.31700000166893005,
                 "rate": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 2.0,
+                    "constantValue": 2.0999999046325684,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 2.0,
+                "lifetime": 2.0999999046325684,
                 "isSingleParticle": 1,
                 "emitterName": "MidGlow",
+                "velocity": {
+                    "constantValue": [
+                        0.0,
+                        -13.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.2849999964237213,
+                            0.3919999897480011,
+                            0.9520000219345093
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                -7.249895095825195,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                -13.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -682,10 +603,10 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.11999999731779099,
-                            0.5,
-                            0.8500000238418579,
-                            0.8999999761581421
+                            0.20000000298023224,
+                            0.30000001192092896,
+                            0.949999988079071,
+                            1.0
                         ],
                         "values": [
                             [
@@ -695,21 +616,21 @@
                                 0.0
                             ],
                             [
-                                0.9215686321258545,
-                                0.9882352948188782,
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
                                 1.0,
                                 1.0
                             ],
                             [
-                                0.8313725590705872,
                                 1.0,
-                                0.8470588326454163,
-                                1.0
-                            ],
-                            [
                                 1.0,
-                                0.9647058844566345,
-                                0.9960784316062927,
+                                1.0,
                                 1.0
                             ],
                             [
@@ -723,8 +644,9 @@
                     },
                     "__type": "ValueColor"
                 },
-                "pass": -5,
+                "pass": -10,
                 "alphaRef": 0,
+                "isUniformScale": 1,
                 "isRotationEnabled": 1,
                 "rotation0": {
                     "constantValue": [
@@ -756,8 +678,8 @@
                 "birthScale0": {
                     "constantValue": [
                         70.0,
-                        70.0,
-                        70.0
+                        5.0,
+                        5.0
                     ],
                     "__type": "ValueVector3"
                 },
@@ -765,28 +687,22 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.12300000339746475,
-                            0.8399999737739563,
-                            0.8999999761581421
+                            0.2280000001192093,
+                            0.2849999964237213
                         ],
                         "values": [
                             [
-                                0.9300000071525574,
-                                0.8140000104904175,
-                                1.2059999704360962
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.090000033378601,
-                                1.090000033378601,
-                                1.090000033378601
-                            ],
-                            [
+                                0.9350000023841858,
                                 0.0,
+                                0.0
+                            ],
+                            [
+                                0.9909999966621399,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
                                 0.0,
                                 0.0
                             ]
@@ -795,14 +711,13 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Loadouts/SummonerEmotes/Events/Mayhem/5207_True_Damage_Poro_Glow.tex",
+                "texture": "ASSETS/Loadouts/SummonerEmotes/Events/TrueDamage/52072_True_Damage_Poro_Glow_Fix_DO_NOT_TRANSLATE_Glow.tex",
                 "uvMode": 2,
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
-        "particleName": "EM_True_Damage_Poro",
-        "particlePath": "Loadouts/SummonerEmotes/Particles/EM_True_Damage_Poro",
-        "soundOnCreateDefault": "Play_sfx_Emotes_EW_Amazed_01",
+        "particleName": "EM_True_Damage_Poro_Glow_Fix_DO_NOT_TRANSLATE",
+        "particlePath": "Loadouts/SummonerEmotes/Particles/EM_True_Damage_Poro_Glow_Fix_DO_NOT_TRANSLATE",
         "flags": 197,
         "transform": [
             [
@@ -831,10 +746,10 @@
             ]
         ],
         "drawingLayer": 1,
-        "objectPath": "{75e146f7}",
+        "objectPath": "{8eedb9ac}",
         "__type": "VfxSystemDefinitionData"
     },
     "__linked": [
-        "Loadouts/SummonerEmotes.3d87c17c.bin"
+        "Loadouts/SummonerEmotes.89962b1e.bin"
     ]
 }

@@ -20,10 +20,10 @@
                         s = this;
                     return Object.keys(e).forEach((function(a) {
                         const o = e[a],
-                            n = s._getValue(a, o);
-                        n && n.then ? (n.then((function(e) {
+                            r = s._getValue(a, o);
+                        r && r.then ? (r.then((function(e) {
                             e || console.warn("The promise for the key " + a + " resolved with a falsy value: ", e), s._addValue(a, e)
-                        })), t.push(n)) : s._addValue(a, n)
+                        })), t.push(r)) : s._addValue(a, r)
                     })), Promise.all(t)
                 },
                 _addValue: function(e, t) {
@@ -103,10 +103,10 @@
                         ...a.RewardTrackerEmberComponents,
                         KiwiHubService: s(50)
                     }), a.ComponentFactory.create(o.APP_NAME));
-                    const n = e && e.targetDivId;
-                    if (n) {
-                        const e = document.getElementById(n);
-                        if (!e) throw this.application.onRemove && this.application.onRemove(), this.application = null, new Error(`Unable to find Kiwi Hub target element: ${n}`);
+                    const r = e && e.targetDivId;
+                    if (r) {
+                        const e = document.getElementById(r);
+                        if (!e) throw this.application.onRemove && this.application.onRemove(), this.application = null, new Error(`Unable to find Kiwi Hub target element: ${r}`);
                         e.appendChild(this.application.domNode)
                     } else this._usesScreenRoot = !0, this._screenRoot.bump(), this._screenRoot.getElement().appendChild(this.application.domNode)
                 }
@@ -319,8 +319,8 @@
         }, (e, t, s) => {
             "use strict";
             var a, o = s(1),
-                n = s(3),
-                r = (a = s(14)) && a.__esModule ? a : {
+                r = s(3),
+                n = (a = s(14)) && a.__esModule ? a : {
                     default: a
                 };
             s(15);
@@ -338,7 +338,7 @@
                     const e = this.get("dialogueKeyToCharacterDisplayDataMap")[this.get("dialogueKey")];
                     return e ? e.iconPath : ""
                 })),
-                isCompleted: o.Ember.computed.equal("dialogueDisplayData.status", n.KIWI_HUB_STATUSES.COMPLETED),
+                isCompleted: o.Ember.computed.equal("dialogueDisplayData.status", r.KIWI_HUB_STATUSES.COMPLETED),
                 settingsKey: o.Ember.computed("groupIndex", "dialogueKey", (function() {
                     return `Group${this.get("groupIndex")}${this.get("dialogueKey")}`
                 })),
@@ -364,12 +364,12 @@
                         displayObjective: s,
                         displayObjectiveMissionIndex: a + 1,
                         totalMissions: e.missionsData.length,
-                        status: e.missionsData[a].status === t ? n.KIWI_HUB_STATUSES.COMPLETED : n.KIWI_HUB_STATUSES.IN_PROGRESS
+                        status: e.missionsData[a].status === t ? r.KIWI_HUB_STATUSES.COMPLETED : r.KIWI_HUB_STATUSES.IN_PROGRESS
                     }
                 })),
                 actions: {
                     onMouseEnter() {
-                        this.get("changeDialogue")(this.get("dialogueKey"), this.get("dialogueDisplayData")), this.get("kiwiHubService").changeSettingValue(this.get("settingsKey"), !0), r.default.playSound("sfx-ui", "/fe/lol-static-assets/sounds/sfx-uikit-button-generic-hover.ogg")
+                        this.get("changeDialogue")(this.get("dialogueKey"), this.get("dialogueDisplayData")), this.get("kiwiHubService").changeSettingValue(this.get("settingsKey"), !0), n.default.playSound("sfx-ui", "/fe/lol-static-assets/sounds/sfx-uikit-button-generic-hover.ogg")
                     },
                     onMouseLeave() {
                         this.get("changeDialogue")()
@@ -439,7 +439,7 @@
         }, (e, t, s) => {
             "use strict";
             var a, o = s(1),
-                n = (a = s(14)) && a.__esModule ? a : {
+                r = (a = s(14)) && a.__esModule ? a : {
                     default: a
                 };
             s(21);
@@ -456,7 +456,7 @@
                 didUpdateAttrs() {
                     const e = this.get("isViewedPage"),
                         t = this._cachedIsViewedPage;
-                    e !== t && (e && !t && n.default.playSound("sfx-ui", "/fe/lol-static-assets/sounds/sfx-uikit-button-text-click.ogg"), this._cachedIsViewedPage = e)
+                    e !== t && (e && !t && r.default.playSound("sfx-ui", "/fe/lol-static-assets/sounds/sfx-uikit-button-text-click.ogg"), this._cachedIsViewedPage = e)
                 },
                 groupProgressionData: o.Ember.computed("kiwiHubService.progressTrackIdToProgressionDataMap", "group", (function() {
                     const e = this.get("group");
@@ -481,7 +481,7 @@
                 })),
                 actions: {
                     navigateToGroup: function() {
-                        n.default.playSound("sfx-ui", "/fe/lol-kiwi-hub/audio/sfx-uikit-button-arrowfwd-click.ogg"), this.get("navigateToGroupIndex")(this.get("groupIndex"))
+                        r.default.playSound("sfx-ui", "/fe/lol-kiwi-hub/audio/sfx-uikit-button-arrowfwd-click.ogg"), this.get("navigateToGroupIndex")(this.get("groupIndex"))
                     }
                 }
             })
@@ -559,7 +559,7 @@
             "use strict";
             var a = s(1);
             s(27);
-            var o, n = (o = s(14)) && o.__esModule ? o : {
+            var o, r = (o = s(14)) && o.__esModule ? o : {
                 default: o
             };
             e.exports = a.Ember.Component.extend({
@@ -582,9 +582,9 @@
                         s = e.counterValue,
                         a = t[0].progressRequired,
                         o = t[t.length - 1].progressRequired,
-                        n = s >= a && s < o ? .43 : 0,
-                        r = (e.counterValue - a + n) / (o - a) * 500;
-                    return "height: " + Math.max(0, r) + "px"
+                        r = s >= a && s < o ? .43 : 0,
+                        n = (e.counterValue - a + r) / (o - a) * 500;
+                    return "height: " + Math.max(0, n) + "px"
                 })),
                 rewardTrackProgress: a.Ember.computed("groupProgressionData", "groupProgressionData.counterValue", (function() {
                     return {
@@ -595,7 +595,7 @@
                     onMilestoneClicked() {
                         const e = this.get("kiwiHubService"),
                             t = this.get("groupProgressionData");
-                        e.claimProgressionRewards(t) && (n.default.playSound("sfx-ui", "/fe/lol-static-assets/sounds/sfx-uikit-button-replay-click.ogg"), e.showCompletionVignetteIfApplicable(this.get("group"), t))
+                        e.claimProgressionRewards(t) && (r.default.playSound("sfx-ui", "/fe/lol-static-assets/sounds/sfx-uikit-button-replay-click.ogg"), e.showCompletionVignetteIfApplicable(this.get("group"), t))
                     },
                     changeDialogue(e, t) {
                         this.get("changeDialogue")(e, t)
@@ -615,8 +615,8 @@
         }, (e, t, s) => {
             "use strict";
             var a, o = s(1),
-                n = s(3),
-                r = (a = s(14)) && a.__esModule ? a : {
+                r = s(3),
+                n = (a = s(14)) && a.__esModule ? a : {
                     default: a
                 };
             s(30);
@@ -630,8 +630,8 @@
                 changeDialogue: null,
                 rewardTrackProgress: null,
                 reward: o.Ember.computed.alias("milestone.reward"),
-                isClaimable: o.Ember.computed.equal("milestone.milestoneStatus", n.KIWI_HUB_STATUSES.CLAIMABLE),
-                isCompleted: o.Ember.computed.equal("milestone.milestoneStatus", n.KIWI_HUB_STATUSES.COMPLETED),
+                isClaimable: o.Ember.computed.equal("milestone.milestoneStatus", r.KIWI_HUB_STATUSES.CLAIMABLE),
+                isCompleted: o.Ember.computed.equal("milestone.milestoneStatus", r.KIWI_HUB_STATUSES.COMPLETED),
                 rewardTrackItem: o.Ember.computed("reward", "isCompleted", "isClaimable", (function() {
                     const e = {
                         ...this.get("reward")
@@ -656,7 +656,7 @@
                 actions: {
                     onMouseEnter() {
                         const e = this.get("dialogueDisplayData");
-                        this.get("changeDialogue")(this.get("dialogueKey"), e), r.default.playSound("sfx-ui", "/fe/lol-static-assets/sounds/sfx-uikit-grid-hover.ogg")
+                        this.get("changeDialogue")(this.get("dialogueKey"), e), n.default.playSound("sfx-ui", "/fe/lol-static-assets/sounds/sfx-uikit-grid-hover.ogg")
                     },
                     onMouseLeave() {
                         this.get("changeDialogue")()
@@ -683,12 +683,14 @@
                 classNames: ["kiwi-lobby-widget"],
                 kiwiHubService: a.Ember.inject.service("kiwiHub"),
                 currentXP: a.Ember.computed.alias("kiwiHubService.mainProgressTrackCurrentXP"),
-                finalMilestoneTotalXPRequired: a.Ember.computed.alias("kiwiHubService.mainProgressTrackFinalMilestone.reward.progressRequired"),
-                requiredXPString: a.Ember.computed("kiwiHubService.mainProgressTrackFinalMilestone", (function() {
-                    return this.get("kiwiHubService").getRequiredXPString(this.get("kiwiHubService.mainProgressTrackFinalMilestone"))
+                totalXPRequired: a.Ember.computed.alias("kiwiHubService.mainProgressTrackCurrentMilestone.reward.progressRequired"),
+                requiredXPString: a.Ember.computed("kiwiHubService.mainProgressTrackCurrentMilestone", (function() {
+                    return this.get("kiwiHubService").getRequiredXPString(this.get("kiwiHubService.mainProgressTrackCurrentMilestone"))
                 })),
-                progressBarPercent: a.Ember.computed("currentXP", "finalMilestoneTotalXPRequired", (function() {
-                    return 100 * Math.min(this.get("currentXP") / this.get("finalMilestoneTotalXPRequired"), 1)
+                progressBarPercent: a.Ember.computed("currentXP", "totalXPRequired", (function() {
+                    const e = this.get("currentXP"),
+                        t = this.get("totalXPRequired");
+                    return e && t ? 100 * Math.min(e / t, 1) : 0
                 })),
                 actions: {
                     navigateToKiwiHub() {
@@ -711,7 +713,7 @@
         }, (e, t, s) => {
             "use strict";
             var a, o = s(1),
-                n = (a = s(14)) && a.__esModule ? a : {
+                r = (a = s(14)) && a.__esModule ? a : {
                     default: a
                 };
             s(36);
@@ -728,12 +730,12 @@
                         a = s.reward.progressRequired;
                     if (t >= a) return "width: 110%";
                     const o = e.milestones.indexOf(s),
-                        n = o >= 1 ? e.milestones[o - 1].reward.progressRequired : 0;
-                    return "width: " + 100 / e.milestones.length * (o + (t - n) / (a - n)) + "%"
+                        r = o >= 1 ? e.milestones[o - 1].reward.progressRequired : 0;
+                    return "width: " + 100 / e.milestones.length * (o + (t - r) / (a - r)) + "%"
                 })),
                 actions: {
                     onMilestoneClicked() {
-                        this.get("kiwiHubService").claimProgressionRewards(this.get("mainProgressTrackProgressionData")) && n.default.playSound("sfx-ui", "/fe/lol-static-assets/sounds/sfx-uikit-button-replay-click.ogg")
+                        this.get("kiwiHubService").claimProgressionRewards(this.get("mainProgressTrackProgressionData")) && r.default.playSound("sfx-ui", "/fe/lol-static-assets/sounds/sfx-uikit-button-replay-click.ogg")
                     }
                 }
             })
@@ -750,8 +752,8 @@
         }, (e, t, s) => {
             "use strict";
             var a, o = s(1),
-                n = s(3),
-                r = (a = s(14)) && a.__esModule ? a : {
+                r = s(3),
+                n = (a = s(14)) && a.__esModule ? a : {
                     default: a
                 };
             s(39);
@@ -771,8 +773,8 @@
                     });
                     return t
                 })),
-                isClaimable: o.Ember.computed.equal("milestone.milestoneStatus", n.KIWI_HUB_STATUSES.CLAIMABLE),
-                isCompleted: o.Ember.computed.equal("milestone.milestoneStatus", n.KIWI_HUB_STATUSES.COMPLETED),
+                isClaimable: o.Ember.computed.equal("milestone.milestoneStatus", r.KIWI_HUB_STATUSES.CLAIMABLE),
+                isCompleted: o.Ember.computed.equal("milestone.milestoneStatus", r.KIWI_HUB_STATUSES.COMPLETED),
                 milestoneRankInfo: o.Ember.computed("kiwiHubService.mainProgressTrackRanks", "milestone.reward.threshold", (function() {
                     const e = parseInt(this.get("milestone.reward.threshold"));
                     return this.get("kiwiHubService.mainProgressTrackRanks")[e]
@@ -793,7 +795,7 @@
                 },
                 actions: {
                     onMouseEnter() {
-                        r.default.playSound("sfx-ui", "/fe/lol-static-assets/sounds/sfx-uikit-grid-hover.ogg")
+                        n.default.playSound("sfx-ui", "/fe/lol-static-assets/sounds/sfx-uikit-grid-hover.ogg")
                     }
                 }
             })
@@ -810,11 +812,11 @@
         }, (e, t, s) => {
             "use strict";
             var a, o = s(1),
-                n = (a = s(14)) && a.__esModule ? a : {
+                r = (a = s(14)) && a.__esModule ? a : {
                     default: a
                 };
             s(42);
-            const r = "lastSeenRankOnKiwiHub";
+            const n = "lastSeenRankOnKiwiHub";
             e.exports = o.Ember.Component.extend({
                 classNames: ["main-progress-rank-tracker"],
                 classNameBindings: ["showsInGroupPagesOnly:shows-in-group-pages-only", "isHidden:hidden"],
@@ -829,27 +831,27 @@
                         t = this.get("displayedMainProgressTrackRank"),
                         s = this.get("lastSeenRankOnKiwiHub");
                     if (!t) {
-                        if (!s) return this.set("displayedMainProgressTrackRank", e), void this.get("kiwiHubService").changeSettingValue(r, e);
+                        if (!s) return this.set("displayedMainProgressTrackRank", e), void this.get("kiwiHubService").changeSettingValue(n, e);
                         if (e === s) return void this.set("displayedMainProgressTrackRank", e);
                         this.set("displayedMainProgressTrackRank", s)
                     }
                     if (e !== s) {
-                        this.element.querySelector(".main-progress-rank-tracker-rank-up-video").play(), n.default.playSound("sfx-ui", "/fe/lol-kiwi-hub/audio/sfx-k3-superstar-rank-up.ogg");
+                        this.element.querySelector(".main-progress-rank-tracker-rank-up-video").play(), r.default.playSound("sfx-ui", "/fe/lol-kiwi-hub/audio/sfx-k3-superstar-rank-up.ogg");
                         const t = e.length > 5 ? 1e3 : 930;
                         window.setTimeout((() => {
                             this.set("displayedMainProgressTrackRank", e)
-                        }), t), this.get("kiwiHubService").changeSettingValue(r, e)
+                        }), t), this.get("kiwiHubService").changeSettingValue(n, e)
                     }
                 },
                 lastSeenRankOnKiwiHubSettingEmberObject: o.Ember.computed("kiwiHubService", (function() {
-                    return this.get("kiwiHubService").getSettingEmberObject(r)
+                    return this.get("kiwiHubService").getSettingEmberObject(n)
                 })),
                 lastSeenRankOnKiwiHub: o.Ember.computed.alias("lastSeenRankOnKiwiHubSettingEmberObject.value"),
                 requiredXPString: o.Ember.computed("kiwiHubService.mainProgressTrackCurrentMilestone", (function() {
                     return this.get("kiwiHubService").getRequiredXPString(this.get("kiwiHubService.mainProgressTrackCurrentMilestone"))
                 })),
                 click() {
-                    this.get("navigateToGroupIndex")(0), n.default.playSound("sfx-ui", "/fe/lol-static-assets/sounds/sfx-uikit-button-pageup-click.ogg")
+                    this.get("navigateToGroupIndex")(0), r.default.playSound("sfx-ui", "/fe/lol-static-assets/sounds/sfx-uikit-button-pageup-click.ogg")
                 }
             })
         }, (e, t, s) => {
@@ -886,8 +888,8 @@
         }, (e, t, s) => {
             "use strict";
             var a, o = s(1),
-                n = s(3),
-                r = (a = s(14)) && a.__esModule ? a : {
+                r = s(3),
+                n = (a = s(14)) && a.__esModule ? a : {
                     default: a
                 };
             s(48);
@@ -906,7 +908,7 @@
                         this.element.querySelector(".summary-page-group-unlock-video").play(), this._lastShowGroupUnlockTime = e;
                         if (this.get("kiwiHubService").isMostRecentUnlockedAndUnviewedGroup(this.get("group"))) {
                             const e = `/fe/lol-kiwi-hub/audio/sfx-k3-band-unlock-group${this.get("group.groupIndex")}.ogg`;
-                            r.default.playSound("sfx-ui", e)
+                            n.default.playSound("sfx-ui", e)
                         }
                     }
                 },
@@ -917,8 +919,8 @@
                 groupTier: o.Ember.computed("groupProgressionData", "groupProgressionData.counterValue", (function() {
                     return this.get("kiwiHubService").getGroupTier(this.get("groupProgressionData"))
                 })),
-                isGoldTier: o.Ember.computed.equal("groupTier", n.KIWI_HUB_TIERS.GOLD),
-                isPlatinumTier: o.Ember.computed.equal("groupTier", n.KIWI_HUB_TIERS.PLATINUM),
+                isGoldTier: o.Ember.computed.equal("groupTier", r.KIWI_HUB_TIERS.GOLD),
+                isPlatinumTier: o.Ember.computed.equal("groupTier", r.KIWI_HUB_TIERS.PLATINUM),
                 doesGroupHaveClaimableRewards: o.Ember.computed.alias("groupProgressionData.doesGroupHaveClaimableRewards"),
                 isLocked: o.Ember.computed("group", "groupProgressionData.hasUnlockedPrerequisiteBoon", (function() {
                     return this.get("kiwiHubService").isGroupLocked(this.get("group"))
@@ -932,11 +934,11 @@
                     return this.get("group.prerequisiteBoon") && !this.get("isLocked") && !this.get("hasViewedGroupPage") && this.get("kiwiHubService.kiwiHubSettingsReady")
                 })),
                 click() {
-                    this.get("navigateToGroupIndex")(this.get("group.groupIndex")), r.default.playSound("sfx-ui", "/fe/lol-static-assets/sounds/sfx-uikit-button-gold-click.ogg")
+                    this.get("navigateToGroupIndex")(this.get("group.groupIndex")), n.default.playSound("sfx-ui", "/fe/lol-static-assets/sounds/sfx-uikit-button-gold-click.ogg")
                 },
                 actions: {
                     onMouseEnter() {
-                        r.default.playSound("sfx-ui", "/fe/lol-static-assets/sounds/sfx-uikit-button-generic-hover.ogg")
+                        n.default.playSound("sfx-ui", "/fe/lol-static-assets/sounds/sfx-uikit-button-generic-hover.ogg")
                     }
                 }
             })
@@ -954,13 +956,13 @@
             "use strict";
             var a = s(1),
                 o = s(3);
-            const n = (0, a.emberDataBinding)({
+            const r = (0, a.emberDataBinding)({
                     Ember: a.Ember,
                     websocket: a.socket,
                     logPrefix: "kiwi-hub-service"
                 }),
-                r = "/lol-settings/v2/account/LCUPreferences/lol-kiwi-hub";
-            e.exports = a.Ember.Service.extend(n, {
+                n = "/lol-settings/v2/account/LCUPreferences/lol-kiwi-hub";
+            e.exports = a.Ember.Service.extend(r, {
                 progressTrackIdToProgressionDataMap: null,
                 missionIdToMissionDataMap: null,
                 rewardGroupIdToGrantMap: null,
@@ -982,16 +984,16 @@
                         const s = t[0].modesObjectiveGroupList.ModesObjectiveGroups;
                         this._initGroups(s);
                         const o = t[0].progressTrack.id,
-                            n = [o];
-                        for (const e of s) n.push(e.displayData.progressTrack.id);
+                            r = [o];
+                        for (const e of s) r.push(e.displayData.progressTrack.id);
                         this.set("progressTrackIdToProgressionDataMap", a.Ember.Object.create());
-                        for (const e of n) this._initProgressionData(e);
-                        this.set("mainProgressTrackRanks", t[0].mainProgressMilestoneRanks), this.set("mainProgressTrackId", o), this.set("progressTrackIds", n)
+                        for (const e of r) this._initProgressionData(e);
+                        this.set("mainProgressTrackRanks", t[0].mainProgressMilestoneRanks), this.set("mainProgressTrackId", o), this.set("progressTrackIds", r)
                     }))
                 },
                 initObservedData() {
                     this.set("accountSettings", a.Ember.Object.create()), this.db.observe("/lol-settings/v2/ready", this, (e => {
-                        this.db.observe(r, this, (e => {
+                        this.db.observe(n, this, (e => {
                             if (e && e.data)
                                 for (const t of Object.keys(e.data)) {
                                     const s = e.data[t],
@@ -1026,10 +1028,6 @@
                     const e = this.get("mainProgressTrackProgressionData.milestones");
                     return e && 0 !== e.length ? e.find((e => e.milestoneStatus === o.KIWI_HUB_STATUSES.IN_PROGRESS)) || e[e.length - 1] : null
                 })),
-                mainProgressTrackFinalMilestone: a.Ember.computed("mainProgressTrackProgressionData.milestones", (function() {
-                    const e = this.get("mainProgressTrackProgressionData.milestones");
-                    return e && 0 !== e.length ? e[e.length - 1] : null
-                })),
                 mainProgressTrackRank: a.Ember.computed("mainProgressTrackRanks", "mainProgressTrackCurrentMilestone", (function() {
                     const e = this.get("mainProgressTrackCurrentMilestone");
                     if (!e) return "";
@@ -1041,7 +1039,7 @@
                 mainProgressTrackCurrentXP: a.Ember.computed.alias("mainProgressTrackProgressionData.counterValue"),
                 changeSettingValue(e, t) {
                     const s = this.getSettingEmberObject(e);
-                    s.get("value") !== t && (s.set("value", t), this.db.patch(r, {
+                    s.get("value") !== t && (s.set("value", t), this.db.patch(n, {
                         schemaVersion: 1,
                         data: {
                             [e]: t
@@ -1149,16 +1147,16 @@
                         s = this.get(`progressTrackIdToProgressionDataMap.${e}.counterValue`) || 0;
                     if (!t) return;
                     const a = [];
-                    let n = !1;
+                    let r = !1;
                     for (const e of t) {
                         const t = this._getGroupMilestoneStatus(e, s);
-                        t === o.KIWI_HUB_STATUSES.CLAIMABLE && (n = !0), t !== o.KIWI_HUB_STATUSES.CLAIMABLE && t !== o.KIWI_HUB_STATUSES.COMPLETED || this._unlockGroupsForReward(e);
+                        t === o.KIWI_HUB_STATUSES.CLAIMABLE && (r = !0), t !== o.KIWI_HUB_STATUSES.CLAIMABLE && t !== o.KIWI_HUB_STATUSES.COMPLETED || this._unlockGroupsForReward(e);
                         e.rewardOptions[0] && e.rewardOptions[0].thumbIconPath && a.push({
                             reward: e,
                             milestoneStatus: t
                         })
                     }
-                    this.get(`progressTrackIdToProgressionDataMap.${e}`).set("milestones", a), this.get(`progressTrackIdToProgressionDataMap.${e}`).set("doesGroupHaveClaimableRewards", n), this._checkToUpdateDoesKiwiHubHaveClaimableRewards()
+                    this.get(`progressTrackIdToProgressionDataMap.${e}`).set("milestones", a), this.get(`progressTrackIdToProgressionDataMap.${e}`).set("doesGroupHaveClaimableRewards", r), this._checkToUpdateDoesKiwiHubHaveClaimableRewards()
                 },
                 _updateAllProgressionData() {
                     const e = this.get("progressTrackIdToProgressionDataMap");
@@ -1202,22 +1200,22 @@
                     this.set("missionIdToMissionDataMap", a.Ember.Object.create());
                     const s = [];
                     let o = 1;
-                    for (const n of e) {
-                        n.prerequisiteBoon && (t[n.prerequisiteBoon.id] = n.displayData.progressTrack.id);
+                    for (const r of e) {
+                        r.prerequisiteBoon && (t[r.prerequisiteBoon.id] = r.displayData.progressTrack.id);
                         const e = [];
-                        let r = 1;
-                        for (const t of n.ModesObjectiveList) {
+                        let n = 1;
+                        for (const t of r.ModesObjectiveList) {
                             const s = {
                                 ...t,
                                 missionsData: a.Ember.A(this._initAndReturnObjectiveMissionsData(t)),
-                                objectiveIndex: r
+                                objectiveIndex: n
                             };
-                            e.push(s), ++r
+                            e.push(s), ++n
                         }
                         const i = {
-                            ...n,
+                            ...r,
                             ModesObjectiveList: e,
-                            dialogueKeyToCharacterDisplayDataMap: this._createDialogueKeyToCharacterDisplayDataMap(n),
+                            dialogueKeyToCharacterDisplayDataMap: this._createDialogueKeyToCharacterDisplayDataMap(r),
                             groupIndex: o
                         };
                         ++o, s.push(i)
@@ -1279,10 +1277,10 @@
     function s(a) {
         var o = t[a];
         if (void 0 !== o) return o.exports;
-        var n = t[a] = {
+        var r = t[a] = {
             exports: {}
         };
-        return e[a](n, n.exports, s), n.exports
+        return e[a](r, r.exports, s), r.exports
     }
     s.r = e => {
         "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
@@ -1297,8 +1295,8 @@
         };
         const a = "rcp-fe-lol-kiwi-hub",
             o = window.testsSandboxDoc || document.currentScript.ownerDocument;
-        const n = window.getPluginAnnounceEventName(a);
-        o.addEventListener(n, (function(e) {
+        const r = window.getPluginAnnounceEventName(a);
+        o.addEventListener(r, (function(e) {
             (0, e.registrationHandler)((e => t.default.init(e, {
                 Audio: e => e.get("rcp-fe-audio"),
                 ComponentFactory: e => e.get("rcp-fe-common-libs").getComponentFactory(),

@@ -169,6 +169,9 @@
                 setQueueRegionOverride(e = null) {
                     0
                 }
+                getQueueRegionInfo() {
+                    0
+                }
                 async showCreateCustomGame(e) {
                     this._ensureSelectedExists(), this._selected.setProperties({
                         queueId: null,
@@ -1288,7 +1291,7 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.getServerTimeZone = void 0;
+            }), t.getServerTimeZone = t.SERVER_TIMEZONE = void 0;
             const n = {
                 NA1: "America/Chicago",
                 LA2: "America/Santiago",
@@ -1306,6 +1309,7 @@
                 KR: "Asia/Seoul",
                 JP1: "Asia/Tokyo"
             };
+            t.SERVER_TIMEZONE = n;
             t.getServerTimeZone = e => n[e] || n.NA1
         }, (e, t, n) => {
             "use strict";

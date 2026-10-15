@@ -281,8 +281,47 @@
                         {
                             "mStat": 2,
                             "mSubpart": {
-                                "mNumber": 0.800000011920929,
-                                "__type": "NumberCalculationPart"
+                                "mSubparts": [
+                                    {
+                                        "mLevel1Value": 0.6000000238418579,
+                                        "mBreakpoints": [
+                                            {
+                                                "mLevel": 7,
+                                                "mAdditionalBonusAtThisLevel": 0.10000000149011612,
+                                                "__type": "Breakpoint"
+                                            },
+                                            {
+                                                "mLevel": 13,
+                                                "mAdditionalBonusAtThisLevel": 0.10000000149011612,
+                                                "__type": "Breakpoint"
+                                            }
+                                        ],
+                                        "__type": "ByCharLevelBreakpointsCalculationPart"
+                                    },
+                                    {
+                                        "mPart1": {
+                                            "mStat": 8,
+                                            "mDataValue": "CriticalStrikeScaling",
+                                            "__type": "StatByNamedDataValueCalculationPart"
+                                        },
+                                        "mPart2": {
+                                            "mSubparts": [
+                                                {
+                                                    "mStat": 9,
+                                                    "mCoefficient": 1.0,
+                                                    "__type": "StatByCoefficientCalculationPart"
+                                                },
+                                                {
+                                                    "mNumber": -1.0,
+                                                    "__type": "NumberCalculationPart"
+                                                }
+                                            ],
+                                            "__type": "SumOfSubPartsCalculationPart"
+                                        },
+                                        "__type": "ProductOfSubPartsCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
                             },
                             "__type": "StatBySubPartCalculationPart"
                         }
@@ -309,12 +348,12 @@
                                             "mBreakpoints": [
                                                 {
                                                     "mLevel": 7,
-                                                    "mAdditionalBonusAtThisLevel": 0.20000000298023224,
+                                                    "mAdditionalBonusAtThisLevel": 0.10000000149011612,
                                                     "__type": "Breakpoint"
                                                 },
                                                 {
                                                     "mLevel": 13,
-                                                    "mAdditionalBonusAtThisLevel": 0.20000000298023224,
+                                                    "mAdditionalBonusAtThisLevel": 0.10000000149011612,
                                                     "__type": "Breakpoint"
                                                 }
                                             ],
@@ -354,7 +393,7 @@
                     "mFormulaParts": [
                         {
                             "mStat": 9,
-                            "mCoefficient": 1.0,
+                            "mCoefficient": 0.800000011920929,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -2323,13 +2362,13 @@
                 {
                     "name": "BaseDamage",
                     "values": [
-                        10.0,
+                        5.0,
                         50.0,
-                        90.0,
-                        130.0,
-                        170.0,
-                        210.0,
-                        250.0
+                        95.0,
+                        140.0,
+                        185.0,
+                        230.0,
+                        275.0
                     ],
                     "__type": "SpellDataValue"
                 },
