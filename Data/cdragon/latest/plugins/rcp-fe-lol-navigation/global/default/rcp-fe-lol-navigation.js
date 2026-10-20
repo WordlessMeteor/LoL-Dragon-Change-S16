@@ -15524,7 +15524,7 @@
             }
         }, (e, t, n) => {
             "use strict";
-            e.exports = n.p + "music-ac-home-td-worlds.ogg"
+            e.exports = n.p + "music-kda.ogg"
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {

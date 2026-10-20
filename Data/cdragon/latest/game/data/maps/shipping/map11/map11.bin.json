@@ -157,7 +157,7 @@
             "SelectRandomVisibilityFlagForMap": true,
             "__type": "MapVisibilityFlagDefinitions"
         },
-        "{31af8e97}": {
+        "SpawnableUnits": {
             "turrets": "{1f5a44c8}",
             "{d8240083}": "{a5773026}",
             "MINIONS": "{7934e6dc}"
@@ -5904,7 +5904,7 @@
                     },
                     {
                         "{d851ffa3}": "f5eb3dc0-50d4-4932-849b-2aa194e6a1c0",
-                        "{5a4ef4e7}": {
+                        "CampIdentifier": {
                             "PathHash": "{7faa12bd}",
                             "__type": "{5b4f4df6}"
                         },
@@ -21743,7 +21743,7 @@
                         "{d851ffa3}": "7128f00b-7bc8-4ae6-b6ee-8c715708b1fb",
                         "Condition": {
                             "Value1": {
-                                "Var": "{45a8bc04}",
+                                "Var": "UnitName",
                                 "__type": "ScriptTableGet"
                             },
                             "Value2": {
@@ -84686,11 +84686,11 @@
         "__type": "{60e2ec74}"
     },
     "{1615bec6}": {
-        "{07aa36d0}": "{3a78f287}",
+        "DefaultCameraSettings": "Globals/DynamicCameraSettings",
         "AdditionalSettings": {
             "{8123e14e}": "{1d9ea6ed}"
         },
-        "__type": "{85bf79cf}"
+        "__type": "DynamicCameraConfig"
     },
     "{1f94f4b2}": {
         "LoadScreenTipConfiguration": "{d5b1a6ea}",
@@ -555771,19 +555771,19 @@
     },
     "{03a70897}": {
         "CampName": "Dragon Crab",
-        "__type": "{3f04641e}"
+        "__type": "NeutralCampIdentifier"
     },
     "{1bc07fa4}": {
         "CampName": "Baron Crab",
-        "__type": "{3f04641e}"
+        "__type": "NeutralCampIdentifier"
     },
     "{1d30f232}": {
         "CampName": "Order Blue",
-        "__type": "{3f04641e}"
+        "__type": "NeutralCampIdentifier"
     },
     "{254af814}": {
         "CampName": "Order Wraiths",
-        "__type": "{3f04641e}"
+        "__type": "NeutralCampIdentifier"
     },
     "{7faa12bd}": {
         "CampName": "Dragon",
@@ -555827,7 +555827,7 @@
                 "__type": "{db26669a}"
             }
         ],
-        "__type": "{3f04641e}"
+        "__type": "NeutralCampIdentifier"
     },
     "{25e3143b}": {
         "{02e104d7}": [
@@ -555843,7 +555843,7 @@
     },
     "{26868b34}": {
         "CampName": "Chaos Wraiths",
-        "__type": "{3f04641e}"
+        "__type": "NeutralCampIdentifier"
     },
     "{31dea4ea}": {
         "CampName": "Atakhan",
@@ -555861,59 +555861,59 @@
                 "__type": "{db26669a}"
             }
         ],
-        "__type": "{3f04641e}"
+        "__type": "NeutralCampIdentifier"
     },
     "{33ac7588}": {
         "CampName": "Horde",
-        "__type": "{3f04641e}"
+        "__type": "NeutralCampIdentifier"
     },
     "{62f15c2c}": {
         "CampName": "Chaos Small Golems",
-        "__type": "{3f04641e}"
+        "__type": "NeutralCampIdentifier"
     },
     "{6aa7fc76}": {
         "CampName": "Baron",
-        "__type": "{3f04641e}"
+        "__type": "NeutralCampIdentifier"
     },
     "{8baae683}": {
         "CampName": "SRU_RiftHerald",
-        "__type": "{3f04641e}"
+        "__type": "NeutralCampIdentifier"
     },
     "{a023664b}": {
         "CampName": "Order Red",
-        "__type": "{3f04641e}"
+        "__type": "NeutralCampIdentifier"
     },
     "{b2b16d8e}": {
         "CampName": "Chaos Wolves",
-        "__type": "{3f04641e}"
+        "__type": "NeutralCampIdentifier"
     },
     "{bbebe48c}": {
         "CampName": "ElderDragon",
-        "__type": "{3f04641e}"
+        "__type": "NeutralCampIdentifier"
     },
     "{da39a59f}": {
         "CampName": "Chaos OwlBear",
-        "__type": "{3f04641e}"
+        "__type": "NeutralCampIdentifier"
     },
     "{dfaf7d32}": {
         "CampName": "Chaos Blue",
-        "__type": "{3f04641e}"
+        "__type": "NeutralCampIdentifier"
     },
     "{ecc1be77}": {
         "CampName": "Order OwlBear",
-        "__type": "{3f04641e}"
+        "__type": "NeutralCampIdentifier"
     },
     "{eddb26de}": {
         "CampName": "Order Wolves",
-        "__type": "{3f04641e}"
+        "__type": "NeutralCampIdentifier"
     },
     "{f15e2553}": {
         "CampName": "Chaos Red",
-        "__type": "{3f04641e}"
+        "__type": "NeutralCampIdentifier"
     },
     "{fefc5e9c}": {
         "CampName": "Order Small Golems",
-        "__type": "{3f04641e}"
+        "__type": "NeutralCampIdentifier"
     },
     "{063f0a8c}": {
         "name": "{73d40978}",
@@ -807640,23 +807640,23 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{0bdce375}": {
+    "Globals/DesignerEvents/HideCharacterEnd": {
         "name": "HideCharacterEnd",
         "__type": "DesignerEvent"
     },
-    "{7adf8b48}": {
+    "Globals/DesignerEvents/PolymorphEnd": {
         "name": "PolymorphEnd",
         "__type": "DesignerEvent"
     },
-    "{8b9505dc}": {
+    "Globals/DesignerEvents/NotifyTargetableTurretInitialCreation": {
         "name": "NotifyTargetableTurretInitialCreation",
         "__type": "DesignerEvent"
     },
-    "{9122248c}": {
+    "Globals/DesignerEvents/HideCharacterStart": {
         "name": "HideCharacterStart",
         "__type": "DesignerEvent"
     },
-    "{9ffd62a1}": {
+    "Globals/DesignerEvents/UpdateTargetability": {
         "name": "UpdateTargetability",
         "EventParameters": {
             "IsTargetable": {
@@ -807666,7 +807666,7 @@
         },
         "__type": "DesignerEvent"
     },
-    "{e097a779}": {
+    "Globals/DesignerEvents/PolymorphStart": {
         "name": "PolymorphStart",
         "__type": "DesignerEvent"
     },
@@ -807696,7 +807696,7 @@
         "{f9995077}": true,
         "{61366c38}": true,
         "{288baac2}": false,
-        "__type": "{c565e640}"
+        "__type": "DynamicCameraSettings"
     },
     "{3a3bdb24}": {
         "mExpandedMutator": "Event_MSI_2026",
@@ -807759,7 +807759,7 @@
         "mExpandedMutator": "PICKURF",
         "__type": "GameMutatorExpansions"
     },
-    "{3a78f287}": {
+    "Globals/DynamicCameraSettings": {
         "{5f4ed4a5}": 55.0,
         "{e538859e}": 0.23999999463558197,
         "{dd7d7c58}": true,
@@ -807792,7 +807792,7 @@
         "{d4521cf1}": true,
         "{61366c38}": true,
         "{288baac2}": false,
-        "__type": "{c565e640}"
+        "__type": "DynamicCameraSettings"
     },
     "Loadouts/SummonerTrophies/Particles/Plinths/Plinths_Chaos_Vertical": {
         "complexEmitterDefinitionData": [
