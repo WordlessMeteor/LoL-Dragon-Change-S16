@@ -470,14 +470,14 @@
     "spells": [
         {
             "spellKey": "q",
-            "name": "Radiant Volley",
+            "name": "Radiant Barrage",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Mel/HUD/Icons2D/Mel_Q.png",
             "abilityVideoPath": "champion-abilities/0800/ability_0800_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Mel ยิงโปรเจกไทล์จำนวนมากที่จะระเบิดรอบ ๆ บริเวณเป้าหมาย สร้างความเสียหายซ้ำให้กับศัตรูที่อยู่ในพื้นที่",
-            "dynamicDescription": "Mel ปลดปล่อยโปรเจกไทล์ @ExplosionCount@ ลูกที่จะระเบิดรอบ ๆ บริเวณเป้าหมาย<br><br>การระเบิดครั้งแรกจะสร้าง<magicDamage>ความเสียหายเวท @InitialExplosionDamage@ หน่วย</magicDamage> และการระเบิดครั้งต่อ ๆ ไปจะสร้าง<magicDamage>ความเสียหายเวท @TotalExplosionDamage@ หน่วย</magicDamage> เพิ่มความเสียหายเวททั้งหมดได้มากสุด <magicDamage>@AllDamageHit@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
+            "description": "Mel ปล่อยฝนโปรเจกไทล์ออกไปเพื่อสร้างความเสียหายเวท ซึ่งการโจมตีแชมเปี้ยนศัตรูจะช่วยลดคูลดาวน์ของสกิลนี้",
+            "dynamicDescription": "Mel ปลดปล่อยโปรเจกไทล์ @Count@ ลูกที่จะระเบิดรอบ ๆ พื้นที่เป้าหมาย เมื่อโจมตีโดนศัตรูครั้งแรก จะสร้าง<magicDamage>ความเสียหายเวท @InitialDamage@ หน่วย</magicDamage> และการโจมตีครั้งถัด ๆ ไปจะสร้าง<magicDamage>ความเสียหายเวท @SubsequentDamage@ หน่วย</magicDamage>ในแต่ละครั้ง สูงสุด <magicDamage>@TotalDamage@ หน่วย</magicDamage><br><br>หากฝนโปรเจกไทล์โดนแชมเปี้ยนศัตรูอย่างน้อยหนึ่งครั้ง คูลดาวน์ของสกิลนี้จะลดลง @CDRefundChampHit@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -487,12 +487,12 @@
                 950.0
             ],
             "costCoefficients": [
+                60.0,
+                65.0,
                 70.0,
                 75.0,
                 80.0,
-                85.0,
-                90.0,
-                90.0
+                85.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -500,7 +500,7 @@
                 8.0,
                 7.0,
                 6.0,
-                6.0
+                5.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -626,31 +626,31 @@
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Mel กางบาเรียรอบตัวเธอที่สามารถสะท้อนโปรเจกไทล์ของศัตรูกลับไปยังผู้ที่โจมตีได้ ป้องกันการได้รับความเสียหายจากแหล่งดังกล่าว และได้รับความเร็วเคลื่อนที่",
-            "dynamicDescription": "Mel กางบาเรียรอบตัวเธอที่สามารถสะท้อนโปรเจกไทล์ของศัตรูกลับไปยังแชมเปี้ยนศัตรูได้ ได้รับ<shield>โล่ป้องกัน @ShieldAmount@ หน่วย</shield> เป็นเวลา @Duration@ วินาที และได้รับ<speed>ความเร็วเคลื่อนที่ @MoveSpeed*100@% ที่จะค่อย ๆ ลดลง</speed>ในระยะเวลา @MoveSpeedDuration@ วินาที<br><br>โปรเจกไทล์ที่สะท้อนกลับไปจะสร้าง<magicDamage>ความเสียหายเวท @DamagePercent@ จากความเสียหายดั้งเดิมของมัน</magicDamage>@SpellModifierDescriptionAppend@",
+            "description": "Mel ปลดปล่อยคลื่นสะท้อนที่จะทำลายโปรเจกไทล์ของศัตรูที่เข้าปะทะ พร้อมโต้กลับด้วยกระสุนเวทมนตร์<br><br>คลื่นสะท้อนยังมอบโล่ป้องกันและเพิ่มความเร็วเคลื่อนที่ให้กับ Mel และเพื่อนร่วมทีมของเธอด้วย",
+            "dynamicDescription": "Mel ปลดปล่อยคลื่นสะท้อนที่จะทำลายโปรเจกไทล์ของศัตรูที่เข้าปะทะ พร้อมโต้กลับด้วย<magicDamage>ความเสียหายเวท @InitialDamage@ หน่วย</magicDamage> การสะท้อนใส่ศัตรูตัวเดิมครั้งถัด ๆ ไปจะสร้าง<magicDamage>ความเสียหายเวท @SubsequentDamage@ หน่วย</magicDamage>แทน<br><br>คลื่นสะท้อนยังมอบ<shield>โล่ป้องกัน @TotalShield@ หน่วย</shield> และ<speed>ความเร็วเคลื่อนที่ @TotalMS@ หน่วย</speed>เป็นเวลา @BuffDuration@ วินาทีให้กับ Mel และเพื่อนร่วมทีมของเธอด้วย@SpellModifierDescriptionAppend@",
             "range": [
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0
             ],
             "costCoefficients": [
-                80.0,
-                60.0,
-                40.0,
-                20.0,
+                100.0,
+                75.0,
+                50.0,
+                25.0,
                 0.0,
                 0.0
             ],
             "cooldownCoefficients": [
-                38.0,
-                35.0,
-                33.0,
-                29.0,
-                26.0,
-                26.0
+                30.0,
+                28.5,
+                27.0,
+                25.5,
+                24.0,
+                22.5
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -777,7 +777,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Mel ยิงลูกแก้วเรืองแสงออกไปเพื่อตรึงศัตรูที่อยู่ในจุดศูนย์กลาง พร้อมทั้งสร้างความเสียหายต่อเนื่องและสโลว์ศัตรูบริเวณรอบ ๆ สกิล",
-            "dynamicDescription": "Mel ยิงลูกแก้วเรืองแสงออกไปเพื่อ<status>ตรึง</status>ศัตรูที่อยู่ในจุดศูนย์กลาง เป็นเวลา @RootDuration@ วินาที และสร้าง<magicDamage>ความเสียหายเวท @Damage@ หน่วย</magicDamage><br><br>ลูกแก้วจะสร้างพื้นที่เหนี่ยวรั้งบริเวณรอบนอกที่จะ<status>สโลว์</status>ศัตรู @AreaSlowAmount*100@% และสร้าง<magicDamage>ความเสียหายเวท @AreaDamagePerSecond@ หน่วยต่อวินาที</magicDamage>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel ยิงลูกแก้วเรืองแสงออกไปเพื่อ<status>ตรึง</status>ศัตรูที่อยู่ในจุดศูนย์กลางเป็นเวลา @RootDurationMin@ ถึง @RootDurationMax@ วินาที (ขึ้นอยู่กับระยะที่สกิลเดินทาง) และสร้าง<magicDamage>ความเสียหายเวท @Damage@ หน่วย</magicDamage><br><br>ลูกแก้วจะสร้างพื้นที่เหนี่ยวรั้งบริเวณรอบนอกที่จะ<status>สโลว์</status>ศัตรู @AreaSlowAmount*100@% และสร้าง<magicDamage>ความเสียหายเวท @AreaDamagePerSecond@ หน่วยต่อวินาที</magicDamage>@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -787,11 +787,11 @@
                 1000.0
             ],
             "costCoefficients": [
+                40.0,
                 50.0,
                 60.0,
                 70.0,
                 80.0,
-                90.0,
                 90.0
             ],
             "cooldownCoefficients": [
@@ -946,11 +946,11 @@
             ],
             "cooldownCoefficients": [
                 120.0,
-                100.0,
-                80.0,
-                80.0,
-                80.0,
-                60.0
+                90.0,
+                60.0,
+                30.0,
+                15.0,
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

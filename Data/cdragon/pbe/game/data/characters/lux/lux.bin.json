@@ -1732,6 +1732,7 @@
             "Characters/Lux/Spells/LuxLightStrikeKugelAbility/LuxESlow",
             "Characters/Lux/Spells/LuxLightStrikeKugelAbility/LuxLightstrikeToggle"
         ],
+        "mLifetimeManuallyManaged": true,
         "mName": "LuxLightStrikeKugelAbility",
         "AbilityTraits": 256,
         "__type": "AbilityObject"
@@ -2504,7 +2505,8 @@
         "mRootSpell": "Characters/Lux/Spells/LuxRAbility/LuxR",
         "mChildSpells": [
             "Characters/Lux/Spells/LuxRAbility/LuxR",
-            "Characters/Lux/Spells/LuxRAbility/LuxRVfxMis"
+            "Characters/Lux/Spells/LuxRAbility/LuxRVfxMis",
+            "{d6b38b8a}"
         ],
         "mLifetimeManuallyManaged": true,
         "mName": "LuxRAbility",
@@ -3040,6 +3042,135 @@
         },
         "__type": "SpellObject"
     },
+    "{d6b38b8a}": {
+        "ObjectName": "LuxRMis",
+        "objectPath": "{d6b38b8a}",
+        "mScriptName": "LuxRMis",
+        "mSpell": {
+            "flags": 4194304,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "LuxMaliceCannon",
+            "mSpellTags": [
+                "Trait_Ultimate"
+            ],
+            "mEffectAmount": [
+                {
+                    "value": [
+                        200.0,
+                        350.0,
+                        500.0,
+                        650.0,
+                        0.0,
+                        0.0,
+                        150.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds",
+                ""
+            ],
+            "spellCastTime": 1.0,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                60.0,
+                60.0,
+                60.0,
+                60.0,
+                10.0,
+                10.0,
+                10.0
+            ],
+            "Cooldown": {
+                "values": [
+                    60.0,
+                    60.0,
+                    60.0,
+                    60.0,
+                    10.0,
+                    10.0,
+                    10.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                3500.0,
+                3500.0,
+                3500.0,
+                3500.0,
+                3500.0,
+                3500.0,
+                3500.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    3500.0,
+                    3500.0,
+                    3500.0,
+                    3500.0,
+                    3500.0,
+                    3500.0,
+                    3500.0
+                ],
+                "{0a3e0478}": 3500.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 80.0,
+            "missileSpeed": 3000.0,
+            "mLineWidth": 250.0,
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Direction"
+            },
+            "mClientData": {
+                "mUseTooltipFromAnotherSpell": "Characters/Lux/Spells/LuxRAbility/LuxR",
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
     "Characters/Lux/Spells/LuxRunCycleManager": {
         "ObjectName": "LuxRunCycleManager",
         "objectPath": "Characters/Lux/Spells/LuxRunCycleManager",
@@ -3164,135 +3295,6 @@
             "mShowChannelBar": false,
             "mTargetingTypeData": {
                 "__type": "Self"
-            },
-            "__type": "SpellDataResource"
-        },
-        "__type": "SpellObject"
-    },
-    "Characters/Lux/Spells/LuxRMis": {
-        "ObjectName": "LuxRMis",
-        "objectPath": "Characters/Lux/Spells/LuxRMis",
-        "mScriptName": "LuxRMis",
-        "mSpell": {
-            "flags": 4194304,
-            "mAffectsTypeFlags": 6154,
-            "mAlternateName": "LuxMaliceCannon",
-            "mSpellTags": [
-                "Trait_Ultimate"
-            ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        200.0,
-                        350.0,
-                        500.0,
-                        650.0,
-                        0.0,
-                        0.0,
-                        150.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
-            "mAnimationName": "Spell4",
-            "mImgIconName": [
-                "ASSETS/Characters/Lux/HUD/Icons2D/LuxFinaleFunkeln.dds",
-                ""
-            ],
-            "spellCastTime": 1.0,
-            "spellTotalTime": 1.0,
-            "cooldownTime": [
-                60.0,
-                60.0,
-                60.0,
-                60.0,
-                10.0,
-                10.0,
-                10.0
-            ],
-            "Cooldown": {
-                "values": [
-                    60.0,
-                    60.0,
-                    60.0,
-                    60.0,
-                    10.0,
-                    10.0,
-                    10.0
-                ],
-                "__type": "{0a0eddc9}"
-            },
-            "mCantCancelWhileWindingUp": true,
-            "useAnimatorFramerate": true,
-            "castRange": [
-                3500.0,
-                3500.0,
-                3500.0,
-                3500.0,
-                3500.0,
-                3500.0,
-                3500.0
-            ],
-            "castRangeValues": {
-                "values": [
-                    3500.0,
-                    3500.0,
-                    3500.0,
-                    3500.0,
-                    3500.0,
-                    3500.0,
-                    3500.0
-                ],
-                "{0a3e0478}": 3500.0,
-                "__type": "{0a0eddc9}"
-            },
-            "castRadius": [
-                299.29998779296875,
-                299.29998779296875,
-                299.29998779296875,
-                299.29998779296875,
-                299.29998779296875,
-                299.29998779296875,
-                299.29998779296875
-            ],
-            "castConeDistance": 100.0,
-            "castFrame": 80.0,
-            "missileSpeed": 3000.0,
-            "mLineWidth": 250.0,
-            "selectionPriority": 1,
-            "mTargetingTypeData": {
-                "__type": "Direction"
-            },
-            "mClientData": {
-                "mUseTooltipFromAnotherSpell": "Characters/Lux/Spells/LuxRAbility/LuxR",
-                "__type": "SpellDataResourceClient"
             },
             "__type": "SpellDataResource"
         },
@@ -4360,7 +4362,7 @@
         "extraSpellsList": [
             "Characters/Lux/Spells/LuxLightStrikeKugelAbility/LuxLightstrikeToggle",
             "Characters/Lux/Spells/LuxLightBindingAbility/LuxLightBindingMis",
-            "Characters/Lux/Spells/LuxRMis",
+            "{d6b38b8a}",
             "Characters/Lux/Spells/LuxPrismaticWaveAbility/LuxPrismaticWaveMissile",
             "Characters/Lux/Spells/LuxLightBindingAbility/LuxLightBindingDummy",
             "Characters/Lux/Spells/LuxRAbility/LuxRVfxMis",

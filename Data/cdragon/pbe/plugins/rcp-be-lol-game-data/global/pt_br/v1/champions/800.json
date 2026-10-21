@@ -470,14 +470,14 @@
     "spells": [
         {
             "spellKey": "q",
-            "name": "Rajada Radiante",
+            "name": "Barragem Radiante",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Mel/HUD/Icons2D/Mel_Q.png",
             "abilityVideoPath": "champion-abilities/0800/ability_0800_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_Q1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Mel dispara uma saraivada de projéteis que explodem ao redor de um local-alvo, causando dano repetidamente aos inimigos dentro da área.",
-            "dynamicDescription": "Mel dispara uma saraivada de @ExplosionCount@ projéteis que explodem na área ao redor de um local-alvo.<br><br>O primeiro acerto da explosão causa <magicDamage>@InitialExplosionDamage@ de Dano Mágico</magicDamage> e cada explosão subsequente causa <magicDamage>@TotalExplosionDamage@ de Dano Mágico</magicDamage>, somando até <magicDamage>@AllDamageHit@ de Dano Mágico</magicDamage> no total.@SpellModifierDescriptionAppend@",
+            "description": "Mel dispara uma rajada de projéteis que causam Dano Mágico. Atingir um Campeão inimigo reduzirá o Tempo de Recarga desta Habilidade.",
+            "dynamicDescription": "Mel dispara uma barragem de @Count@ projéteis que explodem no local-alvo. Na primeira vez que um inimigo é atingido, ele sofre <magicDamage>@InitialDamage@ de Dano Mágico</magicDamage>. Acertos subsequentes causam <magicDamage>@SubsequentDamage@ de Dano Mágico</magicDamage> cada, até um máximo de <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>.<br><br>Se a rajada atingir um Campeão inimigo pelo menos uma vez, o Tempo de Recarga desta Habilidade é reduzido em @CDRefundChampHit@s.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -487,12 +487,12 @@
                 950.0
             ],
             "costCoefficients": [
+                60.0,
+                65.0,
                 70.0,
                 75.0,
                 80.0,
-                85.0,
-                90.0,
-                90.0
+                85.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -500,7 +500,7 @@
                 8.0,
                 7.0,
                 6.0,
-                6.0
+                5.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -626,31 +626,31 @@
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_W1.jpg",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Mel envolve-se em uma barreira que reflete projéteis inimigos de volta para o atacante, evita sofrer dano e concede Velocidade de Movimento.",
-            "dynamicDescription": "Mel forma ao redor de si uma barreira que reflete projéteis de Campeões inimigos, recebendo <shield>@ShieldAmount@ Escudos</shield> por @Duration@s e <speed>@MoveSpeed*100@% de Velocidade de Movimento decrescente</speed> por @MoveSpeedDuration@s.<br><br>Projéteis refletidos causam <magicDamage>@DamagePercent@ do dano original como Dano Mágico</magicDamage>.@SpellModifierDescriptionAppend@",
+            "description": "Mel dispara uma nova de refração que destrói projéteis inimigos com os quais colide, retaliando com mísseis mágicos.<br><br>A nova também concede Escudo e Velocidade de Movimento a Mel e seus aliados.",
+            "dynamicDescription": "Mel dispara uma nova de refração que destrói projéteis inimigos com os quais colide, retaliando com <magicDamage>@InitialDamage@ de Dano Mágico</magicDamage>. Retaliações subsequentes contra o mesmo inimigo causam <magicDamage>@SubsequentDamage@ de Dano Mágico</magicDamage>.<br><br>A nova também concede <shield>@TotalShield@ de Escudo</shield> e <speed>@TotalMS@ de Velocidade de Movimento</speed> por @BuffDuration@s a Mel e seus aliados.@SpellModifierDescriptionAppend@",
             "range": [
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0
             ],
             "costCoefficients": [
-                80.0,
-                60.0,
-                40.0,
-                20.0,
+                100.0,
+                75.0,
+                50.0,
+                25.0,
                 0.0,
                 0.0
             ],
             "cooldownCoefficients": [
-                38.0,
-                35.0,
-                33.0,
-                29.0,
-                26.0,
-                26.0
+                30.0,
+                28.5,
+                27.0,
+                25.5,
+                24.0,
+                22.5
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -777,7 +777,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Mel dispara um orbe radiante à frente, enraizando quem for pego no centro e causando Lentidão e dano ao longo do tempo aos inimigos na área ao redor.",
-            "dynamicDescription": "Mel dispara um orbe radiante, <status>Enraizando</status> inimigos pegos no centro por @RootDuration@s e causando <magicDamage>@Damage@ de Dano Mágico</magicDamage>.<br><br>O orbe cria uma área hostil ao redor, causando @AreaSlowAmount*100@% de <status>Lentidão</status> aos inimigos e <magicDamage>@AreaDamagePerSecond@ de Dano Mágico por segundo</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel dispara um orbe radiante, <status>Enraizando</status> inimigos pegos no centro por @RootDurationMin@ - @RootDurationMax@s (com base na distância percorrida) e causando <magicDamage>@Damage@ de Dano Mágico</magicDamage>.<br><br>O orbe cria uma área hostil ao redor, causando @AreaSlowAmount*100@% de <status>Lentidão</status> e <magicDamage>@AreaDamagePerSecond@ de Dano Mágico por segundo</magicDamage> aos inimigos.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -787,11 +787,11 @@
                 1000.0
             ],
             "costCoefficients": [
+                40.0,
                 50.0,
                 60.0,
                 70.0,
                 80.0,
-                90.0,
                 90.0
             ],
             "cooldownCoefficients": [
@@ -946,11 +946,11 @@
             ],
             "cooldownCoefficients": [
                 120.0,
-                100.0,
-                80.0,
-                80.0,
-                80.0,
-                60.0
+                90.0,
+                60.0,
+                30.0,
+                15.0,
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

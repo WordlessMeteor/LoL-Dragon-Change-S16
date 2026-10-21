@@ -3,9 +3,27 @@
         "championSkinName": "Jade_QuinnValorSkin02",
         "skinAudioProperties": {
             "tagEventList": [
+                "Quinn",
                 "QuinnSkin02",
                 "Jade_QuinnValorSkin02"
             ],
+            "bankUnits": [
+                {
+                    "name": "MODE_Jade_QuinnValor_SFX",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Shared/MODE_Jade_QuinnValor_SFX_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Shared/MODE_Jade_QuinnValor_SFX_events.bnk"
+                    ],
+                    "events": [
+                        "Play_sfx_QuinnValor_QuinnValorBasicAttack_OnCast",
+                        "Play_sfx_QuinnValor_QuinnValorBasicAttack_cast_return",
+                        "Play_sfx_QuinnValor_QuinnValorCritAttack_OnCast",
+                        "Play_sfx_QuinnValor_QuinnValorCritAttack_cast_return"
+                    ],
+                    "__type": "BankUnit"
+                }
+            ],
+            "PlaysVo": false,
             "__type": "SkinAudioProperties"
         },
         "skinAnimationProperties": {
@@ -44,6 +62,22 @@
         "iconCircle": "assets/characters/quinn/hud/quinnvalor_circle.tex",
         "iconSquare": "assets/characters/quinn/hud/quinnvalor_square.tex",
         "mResourceResolver": "Characters/Jade_QuinnValor/Skins/Skin2/Resources",
+        "PersistentEffectConditions": [
+            {
+                "OwnerCondition": {
+                    "Spell": "Characters/Jade_Quinn/Spells/Jade_QuinnEAbility/Jade_QuinnE",
+                    "{149271dd}": false,
+                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "effectKey": "QuinnValor_E_Dash",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            }
+        ],
         "objectPath": "Characters/Jade_QuinnValor/Skins/Skin2",
         "__type": "SkinCharacterDataProperties"
     },
@@ -72,14 +106,14 @@
             "Quinn_R2_tar": "Characters/Quinn/Skins/Skin2/Particles/Quinn_Skin02_R2_tar",
             "Quinn_Recall": "Characters/Quinn/Skins/Skin2/Particles/Quinn_Skin02_Recall",
             "Quinn_Respawn": "Characters/Quinn/Skins/Skin2/Particles/Quinn_Skin02_Respawn",
-            "Quinn_R_Cas": "Characters/Quinn/Skins/Skin2/Particles/Quinn_Skin02_R_Cas",
+            "Quinn_R_Cas": "Characters/Jade_Quinn/Skins/Skin2/Particles/Jade_Quinn_Skin02_R_Cas",
             "Quinn_R_Cas_Finale_Mis_Child": "Characters/Quinn/Skins/Skin2/Particles/Quinn_Skin02_R_Cas_Finale_Mis_Child",
             "Quinn_R_Cas_Finale_Tar_Child": "Characters/Quinn/Skins/Skin2/Particles/Quinn_Skin02_R_Cas_Finale_Tar_Child",
             "Quinn_R_Cas_Finale": "Characters/Quinn/Skins/Skin2/Particles/Quinn_Skin02_R_Cas_Finale",
             "Quinn_R_Channel_child_valor": "Characters/Quinn/Skins/Skin2/Particles/Quinn_Skin02_R_Channel_child_valor",
             "Quinn_R_channel_beam_child": "Characters/Quinn/Skins/Skin0/Particles/Quinn_Base_R_channel_beam_child",
             "Quinn_R_channel": "Characters/Quinn/Skins/Skin2/Particles/Quinn_Skin02_R_channel",
-            "Quinn_R_End": "Characters/Quinn/Skins/Skin0/Particles/Quinn_Base_R_End",
+            "Quinn_R_End": "Characters/Jade_Quinn/Skins/Skin2/Particles/Jade_Quinn_Skin02_R_Valor_End_01",
             "Quinn_R_finale_cas_02": "Characters/Quinn/Skins/Skin0/Particles/Quinn_Base_R_finale_cas_02",
             "Quinn_R_tar_01": "Characters/Quinn/Skins/Skin0/Particles/Quinn_Base_R_tar_01",
             "Quinn_valor_Emote_joke_vo_sound": "Characters/Quinn/Skins/Skin0/Particles/Quinn_Base_valor_Emote_joke_vo_sound",
@@ -101,8 +135,8 @@
             "QuinnValor_Emote_idle_run_in_sound": "Characters/Quinn/Skins/Skin0/Particles/QuinnValor_Base_Emote_idle_run_in_sound",
             "QuinnValor_Emote_idle_sound": "Characters/Quinn/Skins/Skin0/Particles/QuinnValor_Base_Emote_idle_sound",
             "Quinn_BA_crit_tar": "Characters/Quinn/Skins/Skin2/Particles/Quinn_Skin02_BA_crit_tar",
-            "Quinn_R_BirdTrail_L": "Characters/Quinn/Skins/Skin2/Particles/Quinn_Skin02_R_BirdTrail_L",
-            "Quinn_R_BirdTrail_R": "Characters/Quinn/Skins/Skin2/Particles/Quinn_Skin02_R_BirdTrail_R",
+            "Quinn_R_BirdTrail_L": "Characters/Jade_Quinn/Skins/Skin2/Particles/Jade_Quinn_Skin02_R_BirdTrail_L",
+            "Quinn_R_BirdTrail_R": "Characters/Jade_Quinn/Skins/Skin2/Particles/Jade_Quinn_Skin02_R_BirdTrail_R",
             "Quinn_Q_Valor_Child": "Characters/Quinn/Skins/Skin2/Particles/Quinn_Skin02_Q_Valor_Child",
             "Quinn_Recall_BirdTrail_child": "Characters/Quinn/Skins/Skin2/Particles/Quinn_Skin02_Recal_BirdTrail_child",
             "Quinn_W_Arrow_Child": "Characters/Quinn/Skins/Skin0/Particles/Quinn_Base_W_Arrow_Child",

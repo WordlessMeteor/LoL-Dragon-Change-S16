@@ -470,14 +470,14 @@
     "spells": [
         {
             "spellKey": "q",
-            "name": "Świetlista Salwa",
+            "name": "Świetlista Nawała",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Mel/HUD/Icons2D/Mel_Q.png",
             "abilityVideoPath": "champion-abilities/0800/ability_0800_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_Q1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Mel wystrzeliwuje serię pocisków, które wybuchają w lokalizacji wroga, zadając wielokrotne obrażenia wrogom znajdującym się w tym obszarze.",
-            "dynamicDescription": "Mel uwalnia serię @ExplosionCount@ pocisków, które wybuchają na obszarze dookoła wybranego miejsca.<br><br>Pierwsza eksplozja zadaje <magicDamage>@InitialExplosionDamage@ pkt. obrażeń magicznych</magicDamage>, a każda kolejna — <magicDamage>@TotalExplosionDamage@ pkt. obrażeń magicznych</magicDamage>, łącznie zadając <magicDamage>@AllDamageHit@ pkt. obrażeń magicznych</magicDamage>.@SpellModifierDescriptionAppend@",
+            "description": "Mel uwalnia salwę pocisków, które zadają obrażenia magiczne. Trafienie wrogiego bohatera skraca czas odnowienia tej umiejętności.",
+            "dynamicDescription": "Mel uwalnia salwę @Count@ pocisków, które wybuchają w wybranym miejscu. Przy pierwszym trafieniu wróg otrzymuje <magicDamage>@InitialDamage@ pkt. obrażeń magicznych</magicDamage>, a każde kolejne trafienie zadaje <magicDamage>@SubsequentDamage@ pkt. obrażeń magicznych</magicDamage>, do maksymalnie <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>.<br><br>Jeśli salwa trafi wrogiego bohatera co najmniej raz, czas odnowienia tej umiejętności zostanie skrócony o @CDRefundChampHit@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -487,12 +487,12 @@
                 950.0
             ],
             "costCoefficients": [
+                60.0,
+                65.0,
                 70.0,
                 75.0,
                 80.0,
-                85.0,
-                90.0,
-                90.0
+                85.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -500,7 +500,7 @@
                 8.0,
                 7.0,
                 6.0,
-                6.0
+                5.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -626,31 +626,31 @@
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_W1.jpg",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Mel tworzy wokół siebie barierę, która odbija wrogie pociski w kierunku przeciwników, chroni przed obrażeniami i zapewnia jej prędkość ruchu.",
-            "dynamicDescription": "Mel tworzy wokół siebie barierę, która odbija pociski wrogich bohaterów, osłania się <shield>tarczą o wytrzymałości @ShieldAmount@ pkt.</shield> na @Duration@ sek. i zyskuje <speed>@MoveSpeed*100@% zanikającej prędkości ruchu</speed> na @MoveSpeedDuration@ sek.<br><br>Odbite pociski zadają <magicDamage>@DamagePercent@ obrażeń wyjściowych jako obrażenia magiczne</magicDamage>.@SpellModifierDescriptionAppend@",
+            "description": "Mel uwalnia nowę refrakcyjną, niszczącą wrogie pociski, z którymi się zderzy, i kontratakuje magicznymi pociskami.<br><br>Nowa zapewnia też tarczę i prędkość ruchu Mel oraz jej sojusznikom.",
+            "dynamicDescription": "Mel uwalnia nowę refrakcyjną, niszczącą wrogie pociski, z którymi się zderzy, zadając w odwecie <magicDamage>@InitialDamage@ pkt. obrażeń magicznych</magicDamage>. Kolejne kontry przeciwko temu samemu wrogowi zadają zamiast tego <magicDamage>@SubsequentDamage@ pkt. obrażeń magicznych</magicDamage>.<br><br>Nowa zapewnia też tarczę o wytrzymałości <shield>@TotalShield@ pkt.</shield> i <speed>@TotalMS@ jedn. prędkości ruchu</speed> na @BuffDuration@ sek. Mel oraz jej sojusznikom.@SpellModifierDescriptionAppend@",
             "range": [
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0
             ],
             "costCoefficients": [
-                80.0,
-                60.0,
-                40.0,
-                20.0,
+                100.0,
+                75.0,
+                50.0,
+                25.0,
                 0.0,
                 0.0
             ],
             "cooldownCoefficients": [
-                38.0,
-                35.0,
-                33.0,
-                29.0,
-                26.0,
-                26.0
+                30.0,
+                28.5,
+                27.0,
+                25.5,
+                24.0,
+                22.5
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -777,7 +777,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Mel wystrzeliwuje świetlistą kulę naprzód. Jednostki w jej centrum zostają unieruchomione, a wrogowie w otaczającym kulę obszarze są spowolnieni i otrzymują obrażenia w czasie.",
-            "dynamicDescription": "Mel wystrzeliwuje świetlistą kulę, <status>unieruchamiając</status> wrogów w jej centrum na @RootDuration@ sek. i zadając im <magicDamage>@Damage@ pkt. obrażeń magicznych</magicDamage>.<br><br>Dookoła kuli powstaje nieprzyjazny obszar, który <status>spowalnia</status> wrogów o @AreaSlowAmount*100@% i zadaje <magicDamage>@AreaDamagePerSecond@ pkt. obrażeń magicznych na sekundę</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel wystrzeliwuje świetlistą kulę, <status>unieruchamiając</status> wrogów w jej centrum na @RootDurationMin@-@RootDurationMax@ sek. (zależnie od przebytego dystansu) i zadając im <magicDamage>@Damage@ pkt. obrażeń magicznych</magicDamage>.<br><br>Dookoła kuli powstaje nieprzyjazny obszar, który <status>spowalnia</status> wrogów o @AreaSlowAmount*100@% i zadaje <magicDamage>@AreaDamagePerSecond@ pkt. obrażeń magicznych na sekundę</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -787,11 +787,11 @@
                 1000.0
             ],
             "costCoefficients": [
+                40.0,
                 50.0,
                 60.0,
                 70.0,
                 80.0,
-                90.0,
                 90.0
             ],
             "cooldownCoefficients": [
@@ -946,11 +946,11 @@
             ],
             "cooldownCoefficients": [
                 120.0,
-                100.0,
-                80.0,
-                80.0,
-                80.0,
-                60.0
+                90.0,
+                60.0,
+                30.0,
+                15.0,
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

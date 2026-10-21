@@ -470,14 +470,14 @@
     "spells": [
         {
             "spellKey": "q",
-            "name": "Ragyogó sortűz",
+            "name": "Sugárzó sortűz",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Mel/HUD/Icons2D/Mel_Q.png",
             "abilityVideoPath": "champion-abilities/0800/ability_0800_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Mel lövedékeket lő ki, amelyek felrobbannak a célterület körül, és sorozatos sebzést okoznak a területen belül tartózkodó ellenfeleknek.",
-            "dynamicDescription": "Mel @ExplosionCount@ lövedéket bocsát ki, amelyek felrobbannak a célterület körül.<br><br>Az első találatot érő robbanás <magicDamage>@InitialExplosionDamage@ varázssebzést</magicDamage>, a további robbanások pedig <magicDamage>@TotalExplosionDamage@ varázssebzést</magicDamage> okoznak, ami összesen <magicDamage>@AllDamageHit@ varázssebzést</magicDamage> jelent.@SpellModifierDescriptionAppend@",
+            "description": "Mel lövedékek sortüzét zúdítja az ellenfélre, ami varázssebzést okoz. Ha eltalál egy ellenséges hőst, csökken a képesség töltési ideje.",
+            "dynamicDescription": "Mel @Count@ lövedéket lő ki, amelyek a célterületen felrobbannak. Amikor először eltalál egy ellenfelet, <magicDamage>@InitialDamage@ varázssebzést</magicDamage> okoz neki, a további találatok pedig egyenként <magicDamage>@SubsequentDamage@ varázssebzést</magicDamage> okoznak, összesen legfeljebb <magicDamage>@TotalDamage@ varázssebzésig</magicDamage>.<br><br>Ha a sortűz legalább egyszer eltalál egy ellenséges hőst, a képesség töltési ideje @CDRefundChampHit@ másodperccel csökken.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -487,12 +487,12 @@
                 950.0
             ],
             "costCoefficients": [
+                60.0,
+                65.0,
                 70.0,
                 75.0,
                 80.0,
-                85.0,
-                90.0,
-                90.0
+                85.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -500,7 +500,7 @@
                 8.0,
                 7.0,
                 6.0,
-                6.0
+                5.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -626,31 +626,31 @@
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Mel pajzsot von maga köré, amely visszaveri az ellenséges lövedékeket a támadóra, és megakadályozza, hogy Mel sebzést szenvedjen el, valamint mozgási sebességet biztosít neki.",
-            "dynamicDescription": "Mel pajzsot von maga köré, amely visszaveri az ellenséges hősök lövedékeit, és @Duration@ másodpercre <shield>@ShieldAmount@ erejű pajzsot</shield>, valamint @MoveSpeedDuration@ másodpercre <speed>@MoveSpeed*100@% fokozatosan csökkenő mozgási sebességet</speed> kap.<br><br>A visszavert lövedékek <magicDamage>az eredeti sebzés @DamagePercent@-ával egyenlő varázssebzést</magicDamage> okoznak.@SpellModifierDescriptionAppend@",
+            "description": "Mel egy fénytörő nóvát bocsát ki, amely megsemmisíti az útjába kerülő ellenséges lövedékeket, és varázslövedékekkel vág vissza.<br><br>A nóva pajzsot és mozgási sebességet biztosít Melnek és a szövetségeseinek.",
+            "dynamicDescription": "Mel egy fénytörő nóvát bocsát ki, amely megsemmisíti az útjába kerülő ellenséges lövedékeket, és <magicDamage>@InitialDamage@ varázssebzést</magicDamage> okoz. Az ugyanazon ellenfél elleni további válaszcsapások ehelyett <magicDamage>@SubsequentDamage@ varázssebzést</magicDamage> okoznak.<br><br>A nóva ezenkívül @BuffDuration@ másodpercre <shield>@TotalShield@ pajzsot</shield> és <speed>@TotalMS@ mozgási sebességet</speed> is biztosít Melnek és a szövetségeseinek.@SpellModifierDescriptionAppend@",
             "range": [
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0
             ],
             "costCoefficients": [
-                80.0,
-                60.0,
-                40.0,
-                20.0,
+                100.0,
+                75.0,
+                50.0,
+                25.0,
                 0.0,
                 0.0
             ],
             "cooldownCoefficients": [
-                38.0,
-                35.0,
-                33.0,
-                29.0,
-                26.0,
-                26.0
+                30.0,
+                28.5,
+                27.0,
+                25.5,
+                24.0,
+                22.5
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -777,7 +777,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Mel ragyogó gömböt lő ki, amely mozgásképtelenné teszi a középpontban lévő, és lelassítja a közeli ellenfeleket, valamint folyamatos sebzést okoz.",
-            "dynamicDescription": "Mel ragyogó gömböt lő ki, amely @RootDuration@ másodpercig <status>mozgásképtelenné</status> teszi a középpontjában lévő ellenfeleket, és <magicDamage>@Damage@ varázssebzést</magicDamage> okoz.<br><br>A gömböt övező terület is veszélyes: @AreaSlowAmount*100@%-kal <status>lelassítja</status> az ellenfeleket, és <magicDamage>másodpercenként @AreaDamagePerSecond@ varázssebzést</magicDamage> okoz.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel ragyogó gömböt lő ki, amely (a megtett távolságtól függően) @RootDurationMin@–@RootDurationMax@ másodpercig <status>földbe gyökerezteti</status> a középpontjában lévő ellenfeleket, és <magicDamage>@Damage@ varázssebzést</magicDamage> okoz.<br><br>A gömböt övező terület is veszélyes: @AreaSlowAmount*100@%-kal <status>lelassítja</status> az ellenfeleket, és <magicDamage>másodpercenként @AreaDamagePerSecond@ varázssebzést</magicDamage> okoz.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -787,11 +787,11 @@
                 1000.0
             ],
             "costCoefficients": [
+                40.0,
                 50.0,
                 60.0,
                 70.0,
                 80.0,
-                90.0,
                 90.0
             ],
             "cooldownCoefficients": [
@@ -946,11 +946,11 @@
             ],
             "cooldownCoefficients": [
                 120.0,
-                100.0,
-                80.0,
-                80.0,
-                80.0,
-                60.0
+                90.0,
+                60.0,
+                30.0,
+                15.0,
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

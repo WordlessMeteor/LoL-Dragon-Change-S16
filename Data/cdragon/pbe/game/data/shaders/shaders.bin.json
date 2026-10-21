@@ -1206,8 +1206,76 @@
         "__type": "CustomShaderDef"
     },
     "Shaders/SkinnedMesh/Aspect": {
-        "ShadingModel": "{14b3e471}",
+        "ShadingModel": "{baebc346}",
         "parameters": [
+            {
+                "name": "albedoNewMin",
+                "data": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "albedoNewMin",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "albedoNewMax",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "albedoNewMax",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "rimOffset",
+                "data": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "rimOffset",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "modelHeight",
+                "data": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "modelHeight",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
             {
                 "name": "Ribbon_V_Remap",
                 "data": [
@@ -2415,6 +2483,20 @@
         ],
         "staticSwitches": [
             {
+                "name": "USE_RIM",
+                "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "USE_THIN_FILM",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
                 "name": "USE_VERTEX_ANIMATION_BASED_ON_UV_AND_TEXTURE",
                 "__type": "ShaderStaticSwitch"
             },
@@ -2576,7 +2658,7 @@
                 "__type": "ShaderTexture"
             },
             {
-                "name": "Pattern_Mask",
+                "name": "Lightness_Adjustment_Texture",
                 "defaultTexturePath": "assets/shared/materials/black.tex",
                 "__type": "ShaderTexture"
             },
@@ -2638,11 +2720,6 @@
                 "name": "Holographic_Shape",
                 "defaultTexturePath": "assets/shared/materials/black.tex",
                 "samplerName": "Wrap_No_Mip",
-                "__type": "ShaderTexture"
-            },
-            {
-                "name": "Lightness_Adjustment_Texture",
-                "defaultTexturePath": "assets/shared/materials/black.tex",
                 "__type": "ShaderTexture"
             },
             {
@@ -71118,6 +71195,10 @@
             },
             {
                 "name": "DIFFUSEHOLD_USING_BCHANNEL",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "ONLY_PATTERN_ALPHA",
                 "__type": "ShaderStaticSwitch"
             },
             {

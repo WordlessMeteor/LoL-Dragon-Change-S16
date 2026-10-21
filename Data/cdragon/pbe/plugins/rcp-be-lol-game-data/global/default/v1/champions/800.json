@@ -470,14 +470,14 @@
     "spells": [
         {
             "spellKey": "q",
-            "name": "Radiant Volley",
+            "name": "Radiant Barrage",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Mel/HUD/Icons2D/Mel_Q.png",
             "abilityVideoPath": "champion-abilities/0800/ability_0800_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Mel fires a barrage of projectiles that explode around a target location, dealing damage repeatedly to enemies within the area.",
-            "dynamicDescription": "Mel unleashes a barrage of @ExplosionCount@ projectiles that explode in the area around a target location.<br><br>The first explosion hit deals <magicDamage>@InitialExplosionDamage@ magic damage</magicDamage> and each subsequent explosion deals <magicDamage>@TotalExplosionDamage@ magic damage</magicDamage>, adding up to <magicDamage>@AllDamageHit@ magic damage</magicDamage> total.@SpellModifierDescriptionAppend@",
+            "description": "Mel unleashes a volley of projectiles that deal magic damage. Hitting an enemy champion reduces this ability's cooldown.",
+            "dynamicDescription": "Mel unleashes a barrage of @Count@ missiles that explode at the target location. The first time an enemy is struck, they take <magicDamage>@InitialDamage@ magic damage</magicDamage>, with subsequent hits dealing <magicDamage>@SubsequentDamage@ magic damage</magicDamage> each, for a maximum of <magicDamage>@TotalDamage@ magic damage</magicDamage>.<br><br>If the volley hits an enemy champion at least once, this ability's cooldown is reduced by @CDRefundChampHit@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -487,12 +487,12 @@
                 950.0
             ],
             "costCoefficients": [
+                60.0,
+                65.0,
                 70.0,
                 75.0,
                 80.0,
-                85.0,
-                90.0,
-                90.0
+                85.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -500,7 +500,7 @@
                 8.0,
                 7.0,
                 6.0,
-                6.0
+                5.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -626,31 +626,31 @@
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Mel forms a barrier around herself that reflects enemy projectiles back at the attacker, prevents her from taking damage, and grants her movement speed.",
-            "dynamicDescription": "Mel forms a barrier around herself that reflects projectiles from enemy champions, gaining <shield>@ShieldAmount@ Shields</shield> for @Duration@ seconds and <speed>@MoveSpeed*100@% decaying Move Speed</speed> for @MoveSpeedDuration@ seconds.<br><br>Reflected projectiles deal <magicDamage>@DamagePercent@ original damage as magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
+            "description": "Mel unleashes a refraction nova that destroys enemy projectiles it collides with, retaliating with magic missiles.<br><br>The nova also shields and grants move speed to Mel and her allies.",
+            "dynamicDescription": "Mel unleashes a refraction nova that destroys enemy projectiles it collides with, retaliating for <magicDamage>@InitialDamage@ magic damage</magicDamage>. Subsequent retaliations against the same enemy deal <magicDamage>@SubsequentDamage@ magic damage</magicDamage> instead.<br><br>The nova also grants <shield>@TotalShield@ Shield</shield> and <speed>@TotalMS@ Move Speed</speed> for @BuffDuration@s to Mel and her allies.@SpellModifierDescriptionAppend@",
             "range": [
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0
             ],
             "costCoefficients": [
-                80.0,
-                60.0,
-                40.0,
-                20.0,
+                100.0,
+                75.0,
+                50.0,
+                25.0,
                 0.0,
                 0.0
             ],
             "cooldownCoefficients": [
-                38.0,
-                35.0,
-                33.0,
-                29.0,
-                26.0,
-                26.0
+                30.0,
+                28.5,
+                27.0,
+                25.5,
+                24.0,
+                22.5
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -777,7 +777,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Mel fires a radiant orb forward, rooting those at its center while the area around it slows enemies and deals damage over time.",
-            "dynamicDescription": "Mel fires a radiating orb, <status>Rooting</status> enemies at its center for @RootDuration@ seconds and dealing <magicDamage>@Damage@ magic damage</magicDamage>.<br><br>The orb builds up a hostile area around it that <status>Slows</status> enemies by @AreaSlowAmount*100@% and deals <magicDamage>@AreaDamagePerSecond@ magic damage per second</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel fires a radiating orb, <status>Rooting</status> enemies at its center for @RootDurationMin@ to @RootDurationMax@ seconds (based on distance travelled) and dealing <magicDamage>@Damage@ magic damage</magicDamage>.<br><br>The orb builds up a hostile area around it that <status>Slows</status> enemies by @AreaSlowAmount*100@% and deals <magicDamage>@AreaDamagePerSecond@ magic damage per second</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -787,11 +787,11 @@
                 1000.0
             ],
             "costCoefficients": [
+                40.0,
                 50.0,
                 60.0,
                 70.0,
                 80.0,
-                90.0,
                 90.0
             ],
             "cooldownCoefficients": [
@@ -946,11 +946,11 @@
             ],
             "cooldownCoefficients": [
                 120.0,
-                100.0,
-                80.0,
-                80.0,
-                80.0,
-                60.0
+                90.0,
+                60.0,
+                30.0,
+                15.0,
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

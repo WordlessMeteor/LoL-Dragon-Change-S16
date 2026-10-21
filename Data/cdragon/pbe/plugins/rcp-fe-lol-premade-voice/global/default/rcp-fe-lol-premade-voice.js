@@ -424,7 +424,7 @@
                         body: "parties_comm_panel_team_voice_compliance_agreement_not_accepted_body"
                     }
                 };
-            class j extends r.default {
+            class L extends r.default {
                 templateMarkup() {
                     return n(45)
                 }
@@ -1081,9 +1081,9 @@
                     n && (t ? n.classList.add("disabled") : n.classList.remove("disabled"))
                 }
             }
-            j.tagName = "lol-parties-comm-panel";
-            var L = j;
-            t.default = L
+            L.tagName = "lol-parties-comm-panel";
+            var j = L;
+            t.default = j
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1756,8 +1756,8 @@
                 M = n(79),
                 V = n(80),
                 N = n(81),
-                j = n(82),
-                L = n(83),
+                L = n(82),
+                j = n(83),
                 z = n(84),
                 R = n(85),
                 U = n(86),
@@ -1796,8 +1796,8 @@
                 ye = a(M),
                 xe = a(V),
                 Ee = a(N),
-                Ce = a(j),
-                ke = a(L),
+                Ce = a(L),
+                ke = a(j),
                 Be = a(z),
                 we = a(R),
                 $e = a(U),
@@ -2066,7 +2066,7 @@
                         minimizePanel: this._hidePanel.bind(this),
                         keyDown: this._handleKeyDown.bind(this),
                         keyUp: this._handleKeyUp.bind(this)
-                    }, this._voiceDisabled = null, this._buttonDisabled = !1, this._disabledAfterLogin = !1, this._isInCustomGame = !1, this._tooltip = null, this._firstExperienceContextualNotification = null, this._teamVoiceEATNotification = null, this._teamVoiceEATSeen = null, this._teamVoiceEATShown = !1, this._premadeVoiceAvailability = null, this._teamVoiceAvailability = null, this._isInGame = !1, this._parentNode = null, this._pttKey = null, this._pttTeamKey = null, this._pttActive = !1, this._connectionState = null, this._teamConnectionState = null, this._teamVoicePluginEnabled = !1, this._teamVoiceRestricted = !1, this._previousParticipantCount = 0, this._previousTeamSessionActive = !1, this._lockOutMemberJoinSound = !1, this._memberJoinTimeout = null;
+                    }, this._voiceDisabled = null, this._buttonDisabled = !1, this._disabledAfterLogin = !1, this._isInCustomGame = !1, this._tooltip = null, this._firstExperienceContextualNotification = null, this._teamVoiceEATNotification = null, this._teamVoiceEATSeen = null, this._teamVoiceEATShown = !1, this._premadeVoiceAvailability = null, this._teamVoiceAvailability = null, this._isInGame = !1, this._parentNode = null, this._pttKey = null, this._pttTeamKey = null, this._pttActive = !1, this._selfMuted = !1, this._connectionState = null, this._teamConnectionState = null, this._teamVoicePluginEnabled = !1, this._teamVoiceRestricted = !1, this._previousParticipantCount = 0, this._previousTeamSessionActive = !1, this._lockOutMemberJoinSound = !1, this._memberJoinTimeout = null;
                     const e = r.Audio.getChannel(i.SOUND_CHANNEL);
                     this._teamPttClickSound = e.createSound(a.default), this._teamPttReleaseSound = e.createSound(o.default), this._teamPttDeniedSound = e.createSound(l.default), this._partyPttClickSound = e.createSound(s.default), this._partyPttReleaseSound = e.createSound(c.default), this._partyPttDeniedSound = e.createSound(p.default), this._joinSound = e.createSound(d.default), this._leaveSound = e.createSound(h.default), this._partyChannelConnectSound = e.createSound(m.default), this._partyChannelDisconnectSound = e.createSound(u.default), this._teamChannelConnectSound = e.createSound(g.default), this._teamChannelDisconnectSound = e.createSound(A.default), this._elements = {
                         voiceButton: ".lol-premade-voice-button"
@@ -2145,7 +2145,7 @@
                     this._isInLobby = !!t, this._isInCustomGame = t && e.gameConfig.isCustom, this._isInPremade = n && !e.gameConfig.isCustom, this._checkIfFirstExperience(), this._checkIfTooltipNeeded(), this._checkIfTeamVoiceEATNeeded()
                 }
                 _initDataBinding() {
-                    this.lobbyDataListener = this.lobbyUpdated.bind(this), y.default.observe("lobby", this.lobbyDataListener), y.default.lobby().then(this.lobbyDataListener), this.availabilityDataListener = this.availabilityUpdated.bind(this), _.default.observe("availability", this.availabilityDataListener), _.default.availability().then(this.availabilityDataListener), this.teamVoiceAvailabilityListener = this.teamVoiceAvailabilityUpdated.bind(this), v.default.observe("availability", this.teamVoiceAvailabilityListener), v.default.availability().then(this.teamVoiceAvailabilityListener), this._voiceFirstExperienceListener = this._voiceFirstExperienceUpdated.bind(this), _.default.observe("firstExperience", this._voiceFirstExperienceListener), _.default.firstExperience().then(this._voiceFirstExperienceListener), this.gameflowSessionListener = this.gameflowSessionUpdated.bind(this), f.default.observe("session", this.gameflowSessionListener), f.default.session().then(this.gameflowSessionListener), this.settingsDataListener = this.settingsUpdated.bind(this), _.default.observe("settings", this.settingsDataListener), _.default.settings().then(this.settingsDataListener), this.participantsDataListener = this.participantsUpdated.bind(this), _.default.observe("participants", this.participantsDataListener), _.default.participants().then(this.participantsDataListener), this.teamVoiceSessionListener = this.teamVoiceSessionUpdated.bind(this), v.default.observe("session", this.teamVoiceSessionListener), v.default.session().then(this.teamVoiceSessionListener), this.teamVoicePluginEnabledListener = this.teamVoiceEnabledUpdated.bind(this), b.default.observe("teamVoicePluginEnabled", this.teamVoicePluginEnabledListener), b.default.teamVoicePluginEnabled().then(this.teamVoicePluginEnabledListener)
+                    this.lobbyDataListener = this.lobbyUpdated.bind(this), y.default.observe("lobby", this.lobbyDataListener), y.default.lobby().then(this.lobbyDataListener), this.availabilityDataListener = this.availabilityUpdated.bind(this), _.default.observe("availability", this.availabilityDataListener), _.default.availability().then(this.availabilityDataListener), this.teamVoiceAvailabilityListener = this.teamVoiceAvailabilityUpdated.bind(this), v.default.observe("availability", this.teamVoiceAvailabilityListener), v.default.availability().then(this.teamVoiceAvailabilityListener), this._voiceFirstExperienceListener = this._voiceFirstExperienceUpdated.bind(this), _.default.observe("firstExperience", this._voiceFirstExperienceListener), _.default.firstExperience().then(this._voiceFirstExperienceListener), this.gameflowSessionListener = this.gameflowSessionUpdated.bind(this), f.default.observe("session", this.gameflowSessionListener), f.default.session().then(this.gameflowSessionListener), this.settingsDataListener = this.settingsUpdated.bind(this), _.default.observe("settings", this.settingsDataListener), _.default.settings().then(this.settingsDataListener), this.participantsDataListener = this.participantsUpdated.bind(this), _.default.observe("participants", this.participantsDataListener), _.default.participants().then(this.participantsDataListener), this.teamVoiceSessionListener = this.teamVoiceSessionUpdated.bind(this), v.default.observe("session", this.teamVoiceSessionListener), v.default.session().then(this.teamVoiceSessionListener), this.teamVoicePluginEnabledListener = this.teamVoiceEnabledUpdated.bind(this), b.default.observe("teamVoicePluginEnabled", this.teamVoicePluginEnabledListener), b.default.teamVoicePluginEnabled().then(this.teamVoicePluginEnabledListener), x.default.onReset((() => this._resetTeamVoiceEAT()))
                 }
                 gameflowSessionUpdated(e) {
                     if (!e || !e.phase) return;
@@ -2228,10 +2228,13 @@
                     this._firstExperienceContextualNotification && r.ContextualNotificationManager.remove(this._firstExperienceContextualNotification)
                 }
                 settingsUpdated(e) {
-                    e && (this._pttKey = e.pttKey ? e.pttKey.split("],[")[0].replace(/^\[|\]$/g, "") : e.pttKey, this._pttTeamKey = e.pushToTalkTeamKey ? e.pushToTalkTeamKey.split("],[")[0].replace(/^\[|\]$/g, "") : e.pushToTalkTeamKey, this._pttActive = e.pttActive)
+                    e && (this._pttKey = e.pttKey ? e.pttKey.split("],[")[0].replace(/^\[|\]$/g, "") : e.pttKey, this._pttTeamKey = e.pushToTalkTeamKey ? e.pushToTalkTeamKey.split("],[")[0].replace(/^\[|\]$/g, "") : e.pushToTalkTeamKey, this._pttActive = e.pttActive, this._selfMuted = !!e.localMicMuted)
                 }
                 teamVoiceEnabledUpdated(e) {
                     this._teamVoicePluginEnabled = e, this._updateCombinedAvailability(), this._checkIfTeamVoiceEATNeeded()
+                }
+                _resetTeamVoiceEAT() {
+                    this._dismissTeamVoiceEAT(), this._teamVoiceEATSeen = null, this._teamVoiceEATShown = !1, this._checkIfTeamVoiceEATNeeded()
                 }
                 _canShowTeamVoiceEAT() {
                     return !this._teamVoiceEATShown && this._teamVoicePluginEnabled && this._isInLobby && this.parentNode
@@ -2308,10 +2311,10 @@
                     this._teamConnectionState = n, this._previousTeamSessionActive = t, r && this._updateCombinedAvailability(!0)
                 }
                 _handleKeyDown(e) {
-                    this._teamVoicePluginEnabled && !T(e) && (this._pttTeamKey && e.key === this._pttTeamKey && !e.repeat && (this._teamConnectionState !== B.VOICE_CONNECTED_STATE || this._teamVoiceRestricted ? E.default.play(this._teamPttDeniedSound) : (this._teamPttReleaseSound.stop(), E.default.play(this._teamPttClickSound))), this._pttKey && this._pttActive && e.key === this._pttKey && !e.repeat && (this._connectionState === B.VOICE_CONNECTED_STATE ? (this._partyPttReleaseSound.stop(), E.default.play(this._partyPttClickSound)) : E.default.play(this._partyPttDeniedSound)))
+                    this._teamVoicePluginEnabled && !T(e) && (this._pttTeamKey && e.key === this._pttTeamKey && !e.repeat && (this._teamConnectionState !== B.VOICE_CONNECTED_STATE || this._teamVoiceRestricted || this._selfMuted ? E.default.play(this._teamPttDeniedSound) : (this._teamPttReleaseSound.stop(), E.default.play(this._teamPttClickSound))), this._pttKey && this._pttActive && e.key === this._pttKey && !e.repeat && (this._connectionState !== B.VOICE_CONNECTED_STATE || this._selfMuted ? E.default.play(this._partyPttDeniedSound) : (this._partyPttReleaseSound.stop(), E.default.play(this._partyPttClickSound))))
                 }
                 _handleKeyUp(e) {
-                    this._teamVoicePluginEnabled && !T(e) && (this._pttTeamKey && this._teamConnectionState === B.VOICE_CONNECTED_STATE && !this._teamVoiceRestricted && e.key === this._pttTeamKey && (this._teamPttClickSound.stop(), E.default.play(this._teamPttReleaseSound)), this._pttKey && this._connectionState === B.VOICE_CONNECTED_STATE && this._pttActive && e.key === this._pttKey && (this._partyPttClickSound.stop(), E.default.play(this._partyPttReleaseSound)))
+                    this._teamVoicePluginEnabled && !T(e) && (!this._pttTeamKey || this._teamConnectionState !== B.VOICE_CONNECTED_STATE || this._teamVoiceRestricted || this._selfMuted || e.key !== this._pttTeamKey || (this._teamPttClickSound.stop(), E.default.play(this._teamPttReleaseSound)), this._pttKey && this._connectionState === B.VOICE_CONNECTED_STATE && this._pttActive && !this._selfMuted && e.key === this._pttKey && (this._partyPttClickSound.stop(), E.default.play(this._partyPttReleaseSound)))
                 }
                 _playJoinSound() {
                     E.default.play(this._joinSound)
@@ -2414,107 +2417,173 @@
                 d = ["GameEvents", "HUDEvents", "ShopEvents"],
                 h = "teamVoiceKeybindingMigrationVersion";
             t.MIGRATION_VERSION_KEY = h;
-            const m = (e, t) => t.legacy === o.UNBOUND ? (0, o.isUnbound)(e) : (0, o.normalizeKeybinding)((0, o.primaryKeybinding)(e)) === t.legacy,
-                u = (e, t) => {
-                    const n = (0, o.splitKeybindings)(e);
-                    return n[0] = t, n.join(",")
-                },
-                g = (e, t) => {
-                    const n = (0, o.normalizeKeybinding)(t);
-                    return (0, o.isUnbound)(t) ? [] : d.flatMap((t => Object.entries(e && e[t] || {}).flatMap((([e, r]) => (0, o.splitKeybindings)(r).filter((e => (0, o.normalizeKeybinding)(e) === n)).map((() => `${t}.${e}`))))))
-                },
-                A = (e, t) => e && e[t.section] && e[t.section][t.key] || "",
-                _ = (e, t) => e && e[t.field] || "",
-                v = (e, t) => e && e.GameEvents && e.GameEvents[t.gameKey] || "",
+            const m = [o.PARTY_PTT_CHAIN, o.TEAM_PTT_CHAIN],
+                u = (e, t) => r.logger.trace(`team-voice-keybinding-service -- ${e}`, t),
+                g = e => Object.keys(e).length > 0,
+                A = e => e ? JSON.parse(JSON.stringify(e)) : e,
+                _ = e => Boolean(e && e.data && 1 === e.data[h]),
+                v = (e, t) => t.legacy === o.UNBOUND ? (0, o.isUnbound)(e) : (0, o.normalizeKeybinding)((0, o.primaryKeybinding)(e)) === t.legacy,
                 b = e => (0, o.splitKeybindings)(e).some((e => !(0, o.isUnbound)(e))),
-                f = (e, t, n, r) => {
-                    const i = t[n - 1].next,
-                        a = g(e, i),
-                        l = t[n];
-                    if (!l) return 0 === a.length;
-                    if (!((e, t) => e.every((e => e === t)))(a, l.path)) return !1;
-                    const s = A(e, l);
-                    if (!m(s, l)) return 0 === a.length;
-                    const c = u(s, l.next);
-                    return !(g({
-                        [l.section]: {
-                            [l.key]: c
-                        }
-                    }, i).length > 0) && (!(l.next !== o.UNBOUND && !f(e, t, n + 1, r)) && (r.push(l), !0))
-                },
+                f = (e, t) => [t, ...(0, o.splitKeybindings)(e).slice(1)].join(","),
                 y = (e, t) => {
+                    if ((0, o.isUnbound)(t)) return [];
+                    const n = (0, o.normalizeKeybinding)(t);
+                    return d.flatMap((t => Object.entries(e && e[t] || {}).flatMap((([e, r]) => (0, o.splitKeybindings)(r).filter((e => (0, o.normalizeKeybinding)(e) === n)).map((() => `${t}.${e}`))))))
+                },
+                x = (e, t) => e && e[t.section] && e[t.section][t.key] || "",
+                E = (e, t) => e && e[t.field] || "",
+                C = (e, t) => e && e.GameEvents && e.GameEvents[t.gameKey] || "",
+                k = ({
+                    inputSettings: e,
+                    voiceSettings: t
+                }, n) => n.field ? E(t, n) : x(e, n),
+                B = (e, t) => {
+                    if (!t.field) return x(e.inputSettings, t);
+                    const n = E(e.voiceSettings, t),
+                        r = C(e.inputSettings, t);
+                    return v(n, t) && b(r) ? r : n
+                },
+                w = (e, t, n) => {
+                    const r = t[n - 1].id,
+                        i = t[n - 1].next,
+                        a = y(e, i),
+                        l = t[n];
+                    if (!l) return a.length > 0 ? (u("chain end destination owned", {
+                        claimant: r,
+                        destination: i,
+                        owners: a
+                    }), null) : [];
+                    if (!a.every((e => e === l.path))) return u("destination owned by another action", {
+                        claimant: r,
+                        destination: i,
+                        owners: a,
+                        expected: l.path
+                    }), null;
+                    const s = x(e, l);
+                    if (!v(s, l)) return a.length > 0 ? (u("displaced action not at legacy default", {
+                        claimant: r,
+                        action: l.id,
+                        currentBinding: s,
+                        destination: i
+                    }), null) : [];
+                    const c = f(s, l.next);
+                    if (y({
+                            [l.section]: {
+                                [l.key]: c
+                            }
+                        }, i).length > 0) return u("replacement still holds destination", {
+                        claimant: r,
+                        action: l.id,
+                        replacement: c,
+                        destination: i
+                    }), null;
+                    const p = l.next === o.UNBOUND ? [] : w(e, t, n + 1);
+                    return p && p.concat(l)
+                },
+                $ = (e, t) => {
                     const n = {},
                         r = {},
-                        i = {},
-                        a = [o.PARTY_PTT_CHAIN, o.TEAM_PTT_CHAIN];
-                    a.forEach((([n]) => {
-                        const a = _(t, n),
-                            o = v(e, n);
-                        m(a, n) && b(o) ? r[n.field] = o : m(a, n) || b(o) || (i[n.gameKey] = a)
+                        i = {};
+                    m.forEach((([n]) => {
+                        const a = E(t, n),
+                            o = C(e, n),
+                            l = v(a, n);
+                        l && b(o) ? r[n.field] = o : l || b(o) || (i[n.gameKey] = a)
                     }));
-                    const l = a.flatMap((n => ((e, t, n) => {
-                        const [r] = n, i = [];
-                        return !m(_(t, r), r) || b(v(e, r)) ? [] : f(e, n, 1, i) ? i.concat(r) : []
-                    })(e, t, n)));
-                    return l.concat(l.flatMap((t => ((e, t) => {
-                        const n = t.follower;
-                        return n && m(A(e, n), n) && 0 === g(e, n.next).length ? [n] : []
-                    })(e, t)))).forEach((a => {
+                    const a = m.flatMap((n => ((e, t, n) => {
+                            const [r] = n, i = E(t, r), a = C(e, r);
+                            if (!v(i, r) || b(a)) return u("chain skipped, PTT already customized", {
+                                chain: r.id,
+                                accountBinding: i,
+                                gameBinding: a
+                            }), [];
+                            const o = w(e, n, 1);
+                            if (!o) return u("chain skipped, destination unavailable", {
+                                chain: r.id
+                            }), [];
+                            const l = o.concat(r);
+                            return u("chain planned", {
+                                chain: r.id,
+                                moves: l.map((({
+                                    id: e
+                                }) => e))
+                            }), l
+                        })(e, t, n))),
+                        o = a.flatMap((t => ((e, {
+                            follower: t
+                        }) => {
+                            if (!t) return [];
+                            const n = x(e, t);
+                            if (!v(n, t)) return u("follower skipped, not at legacy default", {
+                                follower: t.id,
+                                currentBinding: n
+                            }), [];
+                            const r = y(e, t.next);
+                            return r.length > 0 ? (u("follower skipped, destination owned", {
+                                follower: t.id,
+                                destination: t.next,
+                                owners: r
+                            }), []) : [t]
+                        })(e, t)));
+                    return a.concat(o).forEach((a => {
                         if (a.field) {
-                            const e = u(_(t, a), a.next);
+                            const e = f(E(t, a), a.next);
                             return r[a.field] = e, void(i[a.gameKey] = e)
                         }
-                        n[a.section] = n[a.section] || {}, n[a.section][a.key] = u(A(e, a), a.next)
+                        n[a.section] = Object.assign({}, n[a.section], {
+                            [a.key]: f(x(e, a), a.next)
+                        })
                     })), {
                         inputUpdates: n,
                         voiceUpdates: r,
-                        gameVoiceUpdates: Object.keys(i).length > 0 ? {
+                        gameVoiceUpdates: g(i) ? {
                             GameEvents: i
                         } : {}
                     }
                 };
-            t.buildMigrationPlan = y;
-            const x = ({
+            t.buildMigrationPlan = $;
+            const S = ({
                 inputUpdates: e,
                 voiceUpdates: t,
                 gameVoiceUpdates: n = {}
-            }) => Object.keys(e).length > 0 || Object.keys(t).length > 0 || Object.keys(n).length > 0;
-            t.planHasUpdates = x;
-            const E = e => e ? JSON.parse(JSON.stringify(e)) : e,
-                C = (e, {
-                    inputUpdates: t,
-                    voiceUpdates: n
-                }) => e.field ? n[e.field] : (t[e.section] || {})[e.key],
-                k = (e, t) => Boolean(C(e, t)),
-                B = (e, t, n) => o.KEYBIND_DEFINITIONS.map((r => {
-                    const i = e => r.field ? ((e, t) => {
-                            const n = _(e.voiceSettings, t),
-                                r = v(e.inputSettings, t);
-                            return m(n, t) && b(r) ? r : n
-                        })(e, r) : A(e.inputSettings, r),
-                        a = C(r, n),
-                        l = k(r, n) && (0, o.normalizeKeybinding)((0, o.primaryKeybinding)(a)) !== (0, o.normalizeKeybinding)((0, o.primaryKeybinding)(i(e)));
-                    return {
-                        id: r.id,
-                        moved: l,
-                        from: l ? (0, o.primaryKeybinding)(i(e)) : null,
-                        to: (0, o.primaryKeybinding)(k(r, n) ? a : i(t))
-                    }
-                }));
-            t.buildKeybindRows = B;
-            const w = e => o.KEYBIND_DEFINITIONS.map((t => ({
+            }) => g(e) || g(t) || g(n);
+            t.planHasUpdates = S;
+            const T = (e, t, n) => o.KEYBIND_DEFINITIONS.map((r => {
+                const i = ((e, {
+                        inputUpdates: t,
+                        voiceUpdates: n
+                    }) => e.field ? n[e.field] : (t[e.section] || {})[e.key])(r, n),
+                    a = (0, o.primaryKeybinding)(B(e, r)),
+                    l = Boolean(i) && (0, o.normalizeKeybinding)((0, o.primaryKeybinding)(i)) !== (0, o.normalizeKeybinding)(a);
+                return {
+                    id: r.id,
+                    moved: l,
+                    from: l ? a : null,
+                    to: (0, o.primaryKeybinding)(i || B(t, r))
+                }
+            }));
+            t.buildKeybindRows = T;
+            const P = e => o.KEYBIND_DEFINITIONS.map((t => ({
                 id: t.id,
-                to: (0, o.primaryKeybinding)(t.field ? _(e.voiceSettings, t) : A(e.inputSettings, t))
+                to: (0, o.primaryKeybinding)(k(e, t))
             })));
-            t.buildCurrentKeybindRows = w;
-            const $ = (e, t) => {
+            t.buildCurrentKeybindRows = P;
+            const O = (e, t) => {
                 const n = new Map(t.map((e => [e.id, e.to])));
                 return e.every((e => (0, o.normalizeKeybinding)(e.to) === (0, o.normalizeKeybinding)(n.get(e.id))))
             };
-            t.keybindRowsMatch = $;
-            class S {
+            t.keybindRowsMatch = O;
+            class D {
                 constructor() {
-                    this._gameBinding = (0, r.dataBinding)("/lol-game-settings", r.default.getProvider().getSocket()), this._gameReadyPromise = null, this._migrationPromise = null
+                    this._gameBinding = (0, r.dataBinding)("/lol-game-settings", r.default.getProvider().getSocket()), this._gameReadyPromise = null, this._migrationPromise = null, this._migrated = !1, this._resetCallbacks = [], a.default.observe("navigationPreferences", (e => this._navigationPreferencesUpdated(e)))
+                }
+                onReset(e) {
+                    this._resetCallbacks.push(e)
+                }
+                _navigationPreferencesUpdated(e) {
+                    const t = _(e),
+                        n = this._migrated && !t;
+                    this._migrated = t, n && (u("migration reset, re-evaluating"), this._migrationPromise = null, this._resetCallbacks.forEach((e => e())))
                 }
                 _gameReady() {
                     return this._gameReadyPromise || (this._gameReadyPromise = new Promise((e => {
@@ -2526,15 +2595,17 @@
                 }
                 async _readCurrent() {
                     await this._gameReady();
-                    const [e, t] = await Promise.all([a.default.accountVoiceSettings(), this._gameBinding.get(c)]);
+                    const [e, t] = await Promise.all([a.default.accountVoiceSettings(), this._gameBinding.get(c, {
+                        skipCache: !0
+                    })]);
                     return {
-                        voiceSettings: E(e && e.data),
-                        inputSettings: E(t) || {}
+                        voiceSettings: A(e && e.data),
+                        inputSettings: A(t) || {}
                     }
                 }
                 async isOutcomeCurrent(e) {
                     const t = await this._readCurrent();
-                    return $(e, w(t))
+                    return O(e, P(t))
                 }
                 async _gameClientRunning() {
                     try {
@@ -2544,34 +2615,67 @@
                         return !1
                     }
                 }
+                async _isMigrated() {
+                    return this._migrated = _(await a.default.navigationPreferences()), this._migrated
+                }
+                async _applyPlan({
+                    inputUpdates: e,
+                    voiceUpdates: t,
+                    gameVoiceUpdates: n
+                }) {
+                    g(e) && await this._gameBinding.patch(c, e), g(t) && await a.default.patchAccountVoiceSettings(t), g(n) && await this._gameBinding.patch(c, n), await a.default.patchNavigationPreferences({
+                        [h]: 1
+                    }), this._migrated = !0
+                }
                 evaluate() {
                     return this._migrationPromise || (this._migrationPromise = this._evaluate()), this._migrationPromise
                 }
                 async _evaluate() {
                     const e = {
-                            migrated: !1,
-                            rows: []
-                        },
-                        t = await a.default.navigationPreferences();
-                    if (t && t.data && 1 === t.data[h]) return e;
-                    if (await this._gameClientRunning()) return e;
-                    const n = await this._readCurrent();
-                    if (!n.voiceSettings) return r.logger.warning("team-voice-keybinding-service -- account voice settings unavailable, deferring migration"), e;
-                    const i = y(n.inputSettings, n.voiceSettings);
-                    if (!x(i)) return e;
-                    Object.keys(i.inputUpdates).length > 0 && await this._gameBinding.patch(c, i.inputUpdates), Object.keys(i.voiceUpdates).length > 0 && await a.default.patchAccountVoiceSettings(i.voiceUpdates), Object.keys(i.gameVoiceUpdates).length > 0 && await this._gameBinding.patch(c, i.gameVoiceUpdates), await a.default.patchNavigationPreferences({
-                        [h]: 1
+                        migrated: !1,
+                        rows: []
+                    };
+                    if (await this._isMigrated()) return u("already migrated"), e;
+                    if (await this._gameClientRunning()) return u("game client running, deferring migration"), e;
+                    const t = await this._readCurrent();
+                    if (!t.voiceSettings) return r.logger.warning("team-voice-keybinding-service -- account voice settings unavailable, deferring migration"), e;
+                    var n;
+                    u("bindings before migration", {
+                        bindings: P(n = t),
+                        gamePtt: o.KEYBIND_DEFINITIONS.filter((({
+                            gameKey: e
+                        }) => e)).map((e => ({
+                            id: e.id,
+                            binding: C(n.inputSettings, e)
+                        }))),
+                        owners: o.KEYBIND_DEFINITIONS.filter((({
+                            next: e
+                        }) => e !== o.UNBOUND)).map((({
+                            id: e,
+                            next: t
+                        }) => ({
+                            id: e,
+                            destination: t,
+                            owners: y(n.inputSettings, t)
+                        })))
                     });
-                    const o = await this._readCurrent();
-                    return {
+                    const i = $(t.inputSettings, t.voiceSettings);
+                    if (u("migration plan", i), !S(i)) return e;
+                    await this._applyPlan(i);
+                    const a = await this._readCurrent(),
+                        l = T(t, a, i);
+                    return u("migration applied", {
+                        after: P(a),
+                        rows: l
+                    }), {
                         migrated: !0,
-                        rows: B(n, o, i)
+                        rows: l
                     }
                 }
             }
-            t.TeamVoiceKeybindingService = S;
-            var T = new S;
-            t.default = T
+            t.TeamVoiceKeybindingService = D;
+            var I = new D;
+            t.default = I
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {

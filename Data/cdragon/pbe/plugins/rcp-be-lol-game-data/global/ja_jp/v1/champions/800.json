@@ -470,14 +470,14 @@
     "spells": [
         {
             "spellKey": "q",
-            "name": "輝きの連撃",
+            "name": "輝きの斉射",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Mel/HUD/Icons2D/Mel_Q.png",
             "abilityVideoPath": "champion-abilities/0800/ability_0800_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_Q1.jpg",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "指定地点に向かって複数の飛翔物を連続で発射する。飛翔物は爆発して範囲内の敵に繰り返しダメージを与える。",
-            "dynamicDescription": "指定地点に向かって@ExplosionCount@発の飛翔物を連続で発射する。飛翔物は指定地点の周囲に爆発を引き起こす。<br><br>最初の爆発の命中時に<magicDamage>@InitialExplosionDamage@の魔法ダメージ</magicDamage>を与え、その後の爆発はそれぞれ<magicDamage>@TotalExplosionDamage@の魔法ダメージ</magicDamage>、最大で合計<magicDamage>@AllDamageHit@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "description": "魔法ダメージを与える複数の飛翔物を一斉に発射する。敵チャンピオンに命中すると、このスキルのクールダウンが短縮される。",
+            "dynamicDescription": "@Count@発の飛翔物を連続で発射し、指定地点で爆発させる。敵への最初の命中時には<magicDamage>@InitialDamage@の魔法ダメージ</magicDamage>を与え、その後の命中時にはそれぞれ<magicDamage>@SubsequentDamage@の魔法ダメージ</magicDamage>を与える(最大<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>)。<br><br>この飛翔物が敵チャンピオンに1回でも命中していると、このスキルのクールダウンが@CDRefundChampHit@秒短縮される。@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -487,12 +487,12 @@
                 950.0
             ],
             "costCoefficients": [
+                60.0,
+                65.0,
                 70.0,
                 75.0,
                 80.0,
-                85.0,
-                90.0,
-                90.0
+                85.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -500,7 +500,7 @@
                 8.0,
                 7.0,
                 6.0,
-                6.0
+                5.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -627,30 +627,30 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "自身の周囲にバリアを形成する。このバリアは敵の発射物をその敵に向けて反射し、自身が受けるダメージを防ぎ、自身の移動速度を増加させる。",
-            "dynamicDescription": "自身の周囲にバリアを形成する。このバリアは敵チャンピオンの発射物を反射し、耐久値<shield>@ShieldAmount@のシールド</shield>を@Duration@秒間獲得する。また、自身の<speed>移動速度を@MoveSpeed*100@%</speed>増加させる。この移動速度は@MoveSpeedDuration@秒かけて元に戻る。<br><br>反射された発射物は<magicDamage>元のダメージの@DamagePercent@を魔法ダメージ</magicDamage>として与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "屈折のノヴァを解き放つ。ノヴァは衝突した敵の飛翔物を破壊し、反撃して<magicDamage>@InitialDamage@の魔法ダメージ</magicDamage>を与える。同じ敵に対する2回目以降の反撃は、代わりに<magicDamage>@SubsequentDamage@の魔法ダメージ</magicDamage>を与える。<br><br>このノヴァは@BuffDuration@秒間、自身と味方に<shield>耐久値@TotalShield@のシールド</shield>と<speed>@TotalMS@の増加移動速度</speed>を付与する。@SpellModifierDescriptionAppend@",
             "range": [
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0
             ],
             "costCoefficients": [
-                80.0,
-                60.0,
-                40.0,
-                20.0,
+                100.0,
+                75.0,
+                50.0,
+                25.0,
                 0.0,
                 0.0
             ],
             "cooldownCoefficients": [
-                38.0,
-                35.0,
-                33.0,
-                29.0,
-                26.0,
-                26.0
+                30.0,
+                28.5,
+                27.0,
+                25.5,
+                24.0,
+                22.5
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -777,7 +777,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "前方に輝くオーブを発射し、中心にいた敵にはスネア効果を与え、周囲にいた敵にはスロウ効果と継続ダメージを与える。",
-            "dynamicDescription": "輝くオーブを発射し、中心にいた敵には@RootDuration@秒間、<status>スネア効果</status>を与え、<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与える。<br><br>オーブは周囲に敵対的範囲を作り出し、敵に@AreaSlowAmount*100@%の<status>スロウ効果</status>を与えて、<magicDamage>毎秒@AreaDamagePerSecond@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "輝くオーブを発射し、中心にいた敵には@RootDurationMin@ - @RootDurationMax@秒間(オーブの飛距離に応じて)、<status>スネア効果</status>を与え、<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与える。<br><br>オーブは周囲に危険なエリアを形成し、範囲内の敵に@AreaSlowAmount*100@%の<status>スロウ効果</status>と<magicDamage>毎秒@AreaDamagePerSecond@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -787,11 +787,11 @@
                 1000.0
             ],
             "costCoefficients": [
+                40.0,
                 50.0,
                 60.0,
                 70.0,
                 80.0,
-                90.0,
                 90.0
             ],
             "cooldownCoefficients": [
@@ -946,11 +946,11 @@
             ],
             "cooldownCoefficients": [
                 120.0,
-                100.0,
-                80.0,
-                80.0,
-                80.0,
-                60.0
+                90.0,
+                60.0,
+                30.0,
+                15.0,
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

@@ -470,14 +470,14 @@
     "spells": [
         {
             "spellKey": "q",
-            "name": "Лучезарный залп",
+            "name": "Лучезарный обстрел",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Mel/HUD/Icons2D/Mel_Q.png",
             "abilityVideoPath": "champion-abilities/0800/ability_0800_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_Q1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Мэл выпускает несколько снарядов, которые взрываются в выбранном месте, нанося урон врагам в области поражения.",
-            "dynamicDescription": "Мэл выпускает залп из @ExplosionCount@ снарядов, которые взрываются в выбранном месте.<br><br>Первый взрыв наносит <magicDamage>@InitialExplosionDamage@ ед. магического урона</magicDamage>, а каждый последующий взрыв наносит <magicDamage>@TotalExplosionDamage@ ед. магического урона</magicDamage> (до <magicDamage>@AllDamageHit@ ед. магического урона</magicDamage> суммарно).@SpellModifierDescriptionAppend@",
+            "description": "Мэл выпускает залп снарядов, наносящих маг. урон. Поражая ими враж. чемпиона, сокращает перезарядку этого умения.",
+            "dynamicDescription": "Мэл выпускает залп из @Count@ снарядов, взрывающихся в указанной области. При 1-м попадании по врагу тот получает <magicDamage>@InitialDamage@ ед. маг. урона</magicDamage>. Каждое последующее попадание наносит <magicDamage>@SubsequentDamage@ ед. маг. урона</magicDamage> (макс. <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>).<br><br>Если залп поражает враж. чемпиона хотя бы 1 р., перезарядка этого умения сокращается на @CDRefundChampHit@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -487,12 +487,12 @@
                 950.0
             ],
             "costCoefficients": [
+                60.0,
+                65.0,
                 70.0,
                 75.0,
                 80.0,
-                85.0,
-                90.0,
-                90.0
+                85.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -500,7 +500,7 @@
                 8.0,
                 7.0,
                 6.0,
-                6.0
+                5.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -626,31 +626,31 @@
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_W1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Мэл создает вокруг себя барьер, который отражает вражеские снаряды обратно в атакующих и предотвращает получение урона. Кроме того, у Мэл увеличивается скорость передвижения.",
-            "dynamicDescription": "Мэл создает вокруг себя барьер, который отражает снаряды, выпускаемые вражескими чемпионами, обратно в атакующих. Кроме того, Мэл получает <shield>щит прочностью @ShieldAmount@</shield> на @Duration@ сек., а ее <speed>скорость передвижения</speed> увеличивается на <speed>@MoveSpeed*100@%</speed> на @MoveSpeedDuration@ сек. (ускорение постепенно ослабевает).<br><br>Отраженные снаряды наносят <magicDamage>магический урон в размере @DamagePercent@ от изначального</magicDamage>.@SpellModifierDescriptionAppend@",
+            "description": "Мэл выпускает искрящийся снаряд, уничтожающий враж. снаряды, с которыми сталкивается, и выпускающий волшебные заряды в ответ.<br><br>Снаряд также накладывает щиты на Мэл и ее союзников и дает им скорость передвижения.",
+            "dynamicDescription": "Мэл выпускает искрящийся снаряд, уничтожающий враж. снаряды, с которыми сталкивается, и выпускающий в ответ лучи, наносящие <magicDamage>@InitialDamage@ ед. маг. урона</magicDamage>. Последующие попадания лучами наносят <magicDamage>@SubsequentDamage@ ед. маг. урона</magicDamage>.<br><br>Снаряд также накладывает <shield>щит прочностью @TotalShield@</shield> на Мэл и ее союзников и дает им <speed>@TotalMS@ скорости передвижения</speed> на @BuffDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0
             ],
             "costCoefficients": [
-                80.0,
-                60.0,
-                40.0,
-                20.0,
+                100.0,
+                75.0,
+                50.0,
+                25.0,
                 0.0,
                 0.0
             ],
             "cooldownCoefficients": [
-                38.0,
-                35.0,
-                33.0,
-                29.0,
-                26.0,
-                26.0
+                30.0,
+                28.5,
+                27.0,
+                25.5,
+                24.0,
+                22.5
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -777,7 +777,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Мэл выпускает сферу света, наносящую периодический урон. Враги в центре сферы обездвиживаются, а по краям – замедляются.",
-            "dynamicDescription": "Мэл выпускает сферу света, которая <status>обездвиживает</status> врагов в центре на @RootDuration@ сек. и наносит им <magicDamage>@Damage@ магического урона</magicDamage>.<br><br>Враги, попавшие в область вокруг сферы, <status>замедляются</status> на @AreaSlowAmount*100@% и получают <magicDamage>@AreaDamagePerSecond@ магического урона в секунду</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Мэл выпускает сферу света, <status>обездвиживающую</status> врагов в центре на @RootDurationMin@–@RootDurationMax@ сек. (зависит от преодоленного расстояния) и наносящую им <magicDamage>@Damage@ ед. маг. урона</magicDamage>.<br><br>Враги, попавшие в область вокруг сферы, <status>замедляются</status> на @AreaSlowAmount*100@% и получают <magicDamage>@AreaDamagePerSecond@ ед. маг. урона в секунду</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -787,11 +787,11 @@
                 1000.0
             ],
             "costCoefficients": [
+                40.0,
                 50.0,
                 60.0,
                 70.0,
                 80.0,
-                90.0,
                 90.0
             ],
             "cooldownCoefficients": [
@@ -946,11 +946,11 @@
             ],
             "cooldownCoefficients": [
                 120.0,
-                100.0,
-                80.0,
-                80.0,
-                80.0,
-                60.0
+                90.0,
+                60.0,
+                30.0,
+                15.0,
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

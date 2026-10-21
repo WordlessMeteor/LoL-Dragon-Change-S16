@@ -426,8 +426,14 @@
         "mRootSpell": "Characters/Mel/Spells/MelWAbility/MelW",
         "mChildSpells": [
             "Characters/Mel/Spells/MelWAbility/MelW",
-            "Characters/Mel/Spells/MelWAbility/MelWReflect"
+            "{55ba8d50}",
+            "{58ba9209}",
+            "{57ba9076}",
+            "{5aba952f}",
+            "{59ba939c}",
+            "{c233979c}"
         ],
+        "mLifetimeManuallyManaged": true,
         "mName": "MelWAbility",
         "AbilityTraits": 32,
         "__type": "AbilityObject"
@@ -444,27 +450,620 @@
         "mScriptName": "MelWReflectUltVO",
         "__type": "SpellObject"
     },
-    "Characters/Mel/Spells/MelWAbility/MelWReflect": {
-        "ObjectName": "MelWReflect",
-        "objectPath": "Characters/Mel/Spells/MelWAbility/MelWReflect",
-        "mScriptName": "MelWReflect",
+    "{55ba8d50}": {
+        "ObjectName": "MelWRetaliationMis1",
+        "objectPath": "{55ba8d50}",
+        "mScriptName": "MelWRetaliationMis1",
         "mSpell": {
-            "mImgIconName": [
-                "ASSETS/Characters/Mel/HUD/Icons2D/Mel_W.dds"
+            "flags": 4194308,
+            "mAffectsTypeFlags": 6154,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    9.0,
+                    8.0,
+                    0.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "canCastWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "mDoesntBreakChannels": true,
+            "mIsDisabledWhileDead": false,
+            "mSpellRevealsChampion": false,
+            "bHaveHitEffect": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mStartBoneName": "L_Buffbone_Engine",
+                    "mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+                    "mSplineInfo": {
+                        "mControlPoint1": [
+                            -1.3557544946670532,
+                            -0.4999999403953552,
+                            -0.4433155655860901
+                        ],
+                        "mControlPoint2": [
+                            -1.4760602712631226,
+                            -0.9999998211860657,
+                            -0.49012306332588196
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "mSpeed": 3000.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "heightSolver": {
+                    "mAmplitude": 50.0,
+                    "mNumberOfPeriods": 0.699999988079071,
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 14.800000190734863,
+            "mMissileEffectKey": "{05e2ff25}",
+            "mLineWidth": 120.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "{4c2e1edd}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_Buffbone_Glb_Center_Loc",
+            "SpellEventToAudioEventSuffix": {
+                "13": "Play_sfx_Mel_MelPassiveBonusMissileLeft_OnHit",
+                "15": "Play_sfx_Mel_MelQ_missilecast"
+            },
             "__type": "SpellDataResource"
         },
-        "mBuff": {
-            "mTooltipData": {
-                "mObjectName": "MelWReflect",
-                "mFormat": "{b34f999a}",
-                "mLocKeys": {
-                    "keyName": "Buff_MelWReflect_Name",
-                    "keyTooltip": "Buff_MelWReflect_Tooltip"
-                },
-                "__type": "TooltipInstanceBuff"
+        "__type": "SpellObject"
+    },
+    "{57ba9076}": {
+        "ObjectName": "MelWRetaliationMis3",
+        "objectPath": "{57ba9076}",
+        "mScriptName": "MelWRetaliationMis3",
+        "mSpell": {
+            "flags": 4194308,
+            "mAffectsTypeFlags": 6154,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    9.0,
+                    8.0,
+                    0.0
+                ],
+                "__type": "{0a0eddc9}"
             },
-            "__type": "BuffData"
+            "canCastWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "mDoesntBreakChannels": true,
+            "mIsDisabledWhileDead": false,
+            "mSpellRevealsChampion": false,
+            "bHaveHitEffect": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 25.0,
+                    "mStartBoneName": "L_Buffbone_Engine",
+                    "mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+                    "mSplineInfo": {
+                        "mControlPoint1": [
+                            1.431783676147461,
+                            0.0,
+                            -0.545691967010498
+                        ],
+                        "mControlPoint2": [
+                            0.999220609664917,
+                            0.0,
+                            1.162152647972107
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "mSpeed": 3000.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "heightSolver": {
+                    "mAmplitude": -60.0,
+                    "mNumberOfPeriods": 0.30000001192092896,
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 14.800000190734863,
+            "mMissileEffectKey": "{05e2ff25}",
+            "mLineWidth": 120.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "{4c2e1edd}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_Buffbone_Glb_Center_Loc",
+            "SpellEventToAudioEventSuffix": {
+                "13": "Play_sfx_Mel_MelPassiveBonusMissileLeft_OnHit",
+                "15": "Play_sfx_Mel_MelQ_missilecast"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{58ba9209}": {
+        "ObjectName": "MelWRetaliationMis2",
+        "objectPath": "{58ba9209}",
+        "mScriptName": "MelWRetaliationMis2",
+        "mSpell": {
+            "flags": 4194308,
+            "mAffectsTypeFlags": 6154,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    9.0,
+                    8.0,
+                    0.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "canCastWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "mDoesntBreakChannels": true,
+            "mIsDisabledWhileDead": false,
+            "mSpellRevealsChampion": false,
+            "bHaveHitEffect": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 25.0,
+                    "mStartBoneName": "L_Buffbone_Engine",
+                    "mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+                    "mSplineInfo": {
+                        "mControlPoint1": [
+                            -1.5615525245666504,
+                            0.0,
+                            -0.5629945397377014
+                        ],
+                        "mControlPoint2": [
+                            -1.13383948802948,
+                            0.0,
+                            1.1535013914108276
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "mSpeed": 3000.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "heightSolver": {
+                    "mAmplitude": -60.0,
+                    "mNumberOfPeriods": 0.30000001192092896,
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 14.800000190734863,
+            "mMissileEffectKey": "{05e2ff25}",
+            "mLineWidth": 120.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "{4c2e1edd}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_Buffbone_Glb_Center_Loc",
+            "SpellEventToAudioEventSuffix": {
+                "13": "Play_sfx_Mel_MelPassiveBonusMissileLeft_OnHit",
+                "15": "Play_sfx_Mel_MelQ_missilecast"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{59ba939c}": {
+        "ObjectName": "MelWRetaliationMis5",
+        "objectPath": "{59ba939c}",
+        "mScriptName": "MelWRetaliationMis5",
+        "mSpell": {
+            "flags": 4194308,
+            "mAffectsTypeFlags": 6154,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    9.0,
+                    8.0,
+                    0.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "canCastWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "mDoesntBreakChannels": true,
+            "mIsDisabledWhileDead": false,
+            "mSpellRevealsChampion": false,
+            "bHaveHitEffect": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mStartBoneName": "R_Buffbone_Engine",
+                    "mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+                    "mSplineInfo": {
+                        "mControlPoint1": [
+                            -1.1285324096679688,
+                            0.0,
+                            0.9125064611434937
+                        ],
+                        "mControlPoint2": [
+                            -0.8931986093521118,
+                            0.0,
+                            1.8486614227294922
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "mSpeed": 3000.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "heightSolver": {
+                    "mAmplitude": 50.0,
+                    "mNumberOfPeriods": 0.699999988079071,
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 14.800000190734863,
+            "mMissileEffectKey": "{05e2ff25}",
+            "mLineWidth": 120.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "{4c2e1edd}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_Buffbone_Glb_Center_Loc",
+            "SpellEventToAudioEventSuffix": {
+                "13": "Play_sfx_Mel_MelPassiveBonusMissileLeft_OnHit",
+                "15": "Play_sfx_Mel_MelQ_missilecast"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{5aba952f}": {
+        "ObjectName": "MelWRetaliationMis4",
+        "objectPath": "{5aba952f}",
+        "mScriptName": "MelWRetaliationMis4",
+        "mSpell": {
+            "flags": 4194308,
+            "mAffectsTypeFlags": 6154,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    9.0,
+                    8.0,
+                    0.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "canCastWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "mDoesntBreakChannels": true,
+            "mIsDisabledWhileDead": false,
+            "mSpellRevealsChampion": false,
+            "bHaveHitEffect": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mStartBoneName": "R_Buffbone_Engine",
+                    "mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+                    "mSplineInfo": {
+                        "mControlPoint1": [
+                            1.2782902717590332,
+                            0.0,
+                            0.14232318103313446
+                        ],
+                        "mControlPoint2": [
+                            1.395957112312317,
+                            0.0,
+                            0.4366588592529297
+                        ],
+                        "__type": "HermiteSplineInfo"
+                    },
+                    "mSpeed": 3000.0,
+                    "__type": "FixedSpeedSplineMovement"
+                },
+                "heightSolver": {
+                    "mAmplitude": 50.0,
+                    "mNumberOfPeriods": 0.699999988079071,
+                    "__type": "SinusoidalHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 14.800000190734863,
+            "mMissileEffectKey": "{05e2ff25}",
+            "mLineWidth": 120.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "{4c2e1edd}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_Buffbone_Glb_Center_Loc",
+            "SpellEventToAudioEventSuffix": {
+                "13": "Play_sfx_Mel_MelPassiveBonusMissileLeft_OnHit",
+                "15": "Play_sfx_Mel_MelQ_missilecast"
+            },
+            "__type": "SpellDataResource"
         },
         "__type": "SpellObject"
     },
@@ -473,8 +1072,7 @@
         "objectPath": "Characters/Mel/Spells/MelWAbility/MelW",
         "mScriptName": "MelW",
         "mSpell": {
-            "flags": 36,
-            "mAffectsTypeFlags": 8193,
+            "flags": 4,
             "mExcludedUnitTags": {
                 "mObjectTagList": [
                     "{c87e0da5}"
@@ -482,9 +1080,9 @@
                 "__type": "ObjectTags"
             },
             "mSpellTags": [
-                "Trait_Shield",
                 "Trait_ProjectileDestruction",
-                "Trait_Immune"
+                "PositiveEffect_Boon",
+                "Trait_Shield"
             ],
             "DataValues": [
                 {
@@ -501,80 +1099,80 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "ShieldRadius",
+                    "name": "BuffDuration",
                     "values": [
-                        175.0,
-                        175.0,
-                        175.0,
-                        175.0,
-                        175.0,
-                        175.0,
-                        175.0
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "BaseDamagePercent",
+                    "name": "Radius",
                     "values": [
-                        0.3499999940395355,
-                        0.4000000059604645,
-                        0.44999998807907104,
-                        0.5,
-                        0.550000011920929,
-                        0.6000000238418579,
-                        0.6499999761581421
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "MoveSpeed",
+                    "name": "BaseShield",
                     "values": [
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "PhysDamageMod",
-                    "values": [
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "BaseShieldAmount",
-                    "values": [
+                        20.0,
                         50.0,
                         80.0,
                         110.0,
                         140.0,
                         170.0,
-                        200.0,
-                        230.0
+                        200.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "MoveSpeedDuration",
+                    "name": "BaseDamageInitial",
                     "values": [
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75
+                        30.0,
+                        35.0,
+                        40.0,
+                        45.0,
+                        50.0,
+                        55.0,
+                        60.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamageSubsequent",
+                    "values": [
+                        0.0,
+                        5.0,
+                        10.0,
+                        15.0,
+                        20.0,
+                        25.0,
+                        30.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxRetaliation",
+                    "values": [
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -618,40 +1216,67 @@
                 }
             },
             "mSpellCalculations": {
-                "DamagePercent": {
+                "TotalShield": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "BaseDamagePercent",
+                            "mDataValue": "BaseShield",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.0005000000237487257,
+                            "mCoefficient": 0.5,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TotalMS": {
+                    "mFormulaParts": [
+                        {
+                            "mStartValue": 0.10000000149011612,
+                            "mEndValue": 0.30000001192092896,
+                            "__type": "ByCharLevelInterpolationCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.00039999998989515007,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
                     "mDisplayAsPercent": true,
                     "__type": "GameCalculation"
                 },
-                "ShieldAmount": {
+                "InitialDamage": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "BaseShieldAmount",
+                            "mDataValue": "{d29d0667}",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.699999988079071,
+                            "mCoefficient": 0.10000000149011612,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{1baafc99}": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "{9f5ea20c}",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.05000000074505806,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
                 }
             },
-            "mAnimationName": "Spell2",
+            "mAnimationName": "Spell2_Idle",
             "mImgIconName": [
                 "ASSETS/Characters/Mel/HUD/Icons2D/Mel_W.dds"
             ],
-            "spellCastTime": 0.25,
-            "spellTotalTime": 1.0,
+            "spellCastTime": 0.0,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 38.0,
                 38.0,
@@ -663,21 +1288,19 @@
             ],
             "Cooldown": {
                 "values": [
-                    38.0,
-                    38.0,
-                    35.0,
-                    33.0,
-                    29.0,
-                    26.0,
-                    26.0
+                    31.5,
+                    30.0,
+                    28.5,
+                    27.0,
+                    25.5,
+                    24.0,
+                    22.5
                 ],
                 "__type": "{0a0eddc9}"
             },
             "canCastOrQueueWhileCasting": true,
-            "mProjectTargetToCastRange": true,
             "mSpellRevealsChampion": false,
             "castRangeUseBoundingBoxes": true,
-            "mCanMoveWhileChanneling": true,
             "mDoNotNeedToFaceTarget": true,
             "mIgnoreRangeCheck": true,
             "castRange": [
@@ -689,19 +1312,6 @@
                 250.0,
                 250.0
             ],
-            "castRangeValues": {
-                "values": [
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0
-                ],
-                "{0a3e0478}": 250.0,
-                "__type": "{0a0eddc9}"
-            },
             "mFloatVarsDecimals": [
                 0,
                 2,
@@ -730,10 +1340,10 @@
             ],
             "manaValues": {
                 "values": [
-                    80.0,
-                    60.0,
-                    40.0,
-                    20.0,
+                    100.0,
+                    75.0,
+                    50.0,
+                    25.0,
                     0.0,
                     0.0
                 ],
@@ -750,25 +1360,13 @@
                     "mLocKeys": {
                         "keyName": "Spell_MelW_Name",
                         "keyTooltip": "Spell_MelW_Tooltip",
-                        "keyTooltipExtendedBelowLine": "Spell_MelW_TooltipBelowLine",
-                        "keySummary": "Spell_MelW_Summary"
+                        "keySummary": "Spell_MelW_Summary",
+                        "keyTooltipExtendedBelowLine": "Spell_MelW_TooltipBelowLine"
                     },
                     "mLists": {
                         "LevelUp": {
                             "levelCount": 5,
                             "Elements": [
-                                {
-                                    "type": "BaseDamagePercent",
-                                    "multiplier": 100.0,
-                                    "nameOverride": "Spell_MelW_ReflectedDamage",
-                                    "Style": 1,
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "BaseShieldAmount",
-                                    "nameOverride": "Spell_ListType_Shield",
-                                    "__type": "TooltipInstanceListElement"
-                                },
                                 {
                                     "type": "Cooldown",
                                     "nameOverride": "Spell_ListType_Cooldown",
@@ -778,6 +1376,21 @@
                                     "type": "Cost",
                                     "nameOverride": "Spell_ListType_ManaCost",
                                     "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseShield",
+                                    "nameOverride": "Spell_ListType_ShieldAmount",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseDamageInitial",
+                                    "nameOverride": "Spell_ListType_InitialDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseDamageSubsequent",
+                                    "nameOverride": "Spell_ListType_SubsequentDamage",
+                                    "__type": "TooltipInstanceListElement"
                                 }
                             ],
                             "__type": "TooltipInstanceList"
@@ -785,6 +1398,28 @@
                     },
                     "__type": "TooltipInstanceSpell"
                 },
+                "mTargeterDefinitions": [
+                    {
+                        "constraintRange": {
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "overrideRadius": {
+                            "mPerLevelValues": [
+                                460.0,
+                                460.0,
+                                460.0,
+                                460.0,
+                                460.0,
+                                460.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "textureRadiusOverrideName": "assets/spells/textures/aoe_gold.tex",
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
                 "__type": "SpellDataResourceClient"
             },
             "__type": "SpellDataResource"
@@ -809,7 +1444,7 @@
                     "__type": "{b09016f6}"
                 },
                 {
-                    "EffectTag": 131072,
+                    "EffectTag": 524288,
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
@@ -827,49 +1462,118 @@
                     "{e38f54f7}": 1,
                     "{0717e686}": false,
                     "__type": "{150d1b92}"
-                },
-                {
-                    "{e38f54f7}": 4,
-                    "__type": "{150d1b92}"
-                },
-                {
-                    "{e38f54f7}": 256,
-                    "__type": "{150d1b92}"
-                },
-                {
-                    "{e38f54f7}": 1024,
-                    "__type": "{150d1b92}"
-                },
-                {
-                    "{e38f54f7}": 64,
-                    "__type": "{150d1b92}"
-                },
-                {
-                    "{e38f54f7}": 8,
-                    "__type": "{150d1b92}"
-                },
-                {
-                    "{e38f54f7}": 2,
-                    "__type": "{150d1b92}"
-                },
-                {
-                    "{e38f54f7}": 512,
-                    "__type": "{150d1b92}"
-                },
-                {
-                    "{e38f54f7}": 4096,
-                    "__type": "{150d1b92}"
-                },
-                {
-                    "{e38f54f7}": 128,
-                    "__type": "{150d1b92}"
-                },
-                {
-                    "{e38f54f7}": 2048,
-                    "__type": "{150d1b92}"
                 }
             ],
             "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{c233979c}": {
+        "ObjectName": "MelWAbsorbMis",
+        "objectPath": "{c233979c}",
+        "mScriptName": "MelWAbsorbMis",
+        "mSpell": {
+            "flags": 4194436,
+            "mAffectsTypeFlags": 1029,
+            "mAffectsStatusFlags": 32,
+            "mAnimationName": "",
+            "cooldownTime": [
+                0.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    9.0,
+                    8.0,
+                    0.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "canCastWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "mDoesntBreakChannels": true,
+            "mIsDisabledWhileDead": false,
+            "mSpellRevealsChampion": false,
+            "bHaveHitEffect": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mStartBoneName": "L_Buffbone_Engine",
+                    "mTargetBoneName": "C_Buffbone_Glb_Center_Loc",
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 14.800000190734863,
+            "mMissileEffectKey": "{05e2ff25}",
+            "mLineWidth": 120.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "{4c2e1edd}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_Buffbone_Glb_Center_Loc",
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "__type": "SpellDataResource"
         },
         "__type": "SpellObject"
     },
@@ -986,7 +1690,7 @@
         "mScriptName": "MelPassiveBonusMissileLeft",
         "mSpell": {
             "flags": 4,
-            "mAffectsTypeFlags": 6794,
+            "mAffectsTypeFlags": 6826,
             "mAnimationName": "",
             "mImgIconName": [
                 "ASSETS/Characters/Mel/HUD/Icons2D/Mel_Passive.dds"
@@ -1126,7 +1830,7 @@
         "mScriptName": "MelPassiveBonusMissileRight",
         "mSpell": {
             "flags": 4,
-            "mAffectsTypeFlags": 6794,
+            "mAffectsTypeFlags": 6826,
             "mAnimationName": "",
             "mImgIconName": [
                 "ASSETS/Characters/Mel/HUD/Icons2D/Mel_Passive.dds"
@@ -1344,7 +2048,7 @@
                 "PassiveBonusMissileDamage": {
                     "mFormulaParts": [
                         {
-                            "mStartValue": 8.0,
+                            "mStartValue": 4.0,
                             "mEndValue": 30.0,
                             "__type": "ByCharLevelInterpolationCalculationPart"
                         },
@@ -1491,19 +2195,6 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "MinionMod",
-                    "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "BaseUltStackDamage",
                     "values": [
                         1.0,
@@ -1539,6 +2230,19 @@
                         0.8999999761581421,
                         0.8999999761581421,
                         0.8999999761581421
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "FlatMinionMod",
+                    "values": [
+                        0.550000011920929,
+                        0.550000011920929,
+                        0.550000011920929,
+                        0.550000011920929,
+                        0.550000011920929,
+                        0.550000011920929,
+                        0.550000011920929
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1615,35 +2319,6 @@
                         }
                     ],
                     "__type": "GameCalculation"
-                },
-                "MinionModTooltip": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
-                    "tooltipOnly": true,
-                    "mFormulaParts": [
-                        {
-                            "mSubparts": [
-                                {
-                                    "mNumber": 1.0,
-                                    "__type": "NumberCalculationPart"
-                                },
-                                {
-                                    "mPart1": {
-                                        "mNumber": -1.0,
-                                        "__type": "NumberCalculationPart"
-                                    },
-                                    "mPart2": {
-                                        "mDataValue": "MinionMod",
-                                        "__type": "NamedDataValueCalculationPart"
-                                    },
-                                    "__type": "ProductOfSubPartsCalculationPart"
-                                }
-                            ],
-                            "__type": "SumOfSubPartsCalculationPart"
-                        }
-                    ],
-                    "mDisplayAsPercent": true,
-                    "__type": "GameCalculation"
                 }
             },
             "mAnimationName": "Spell4",
@@ -1664,13 +2339,13 @@
             ],
             "Cooldown": {
                 "values": [
+                    150.0,
                     120.0,
-                    120.0,
-                    100.0,
-                    80.0,
-                    80.0,
-                    80.0,
-                    60.0
+                    90.0,
+                    60.0,
+                    30.0,
+                    15.0,
+                    10.0
                 ],
                 "__type": "{0a0eddc9}"
             },
@@ -1813,31 +2488,11 @@
                 {
                     "{e38f54f7}": 8,
                     "__type": "{150d1b92}"
-                },
-                {
-                    "{e38f54f7}": 4096,
-                    "{0717e686}": false,
-                    "__type": "{150d1b92}"
-                },
-                {
-                    "{e38f54f7}": 2048,
-                    "{0717e686}": false,
-                    "__type": "{150d1b92}"
                 }
             ],
             "__type": "BotsSpellData"
         },
         "__type": "SpellObject"
-    },
-    "Characters/Mel/Spells/MelEAbility": {
-        "mRootSpell": "Characters/Mel/Spells/MelEAbility/MelE",
-        "mChildSpells": [
-            "Characters/Mel/Spells/MelEAbility/MelE",
-            "Characters/Mel/Spells/MelEAbility/MelESlow"
-        ],
-        "mName": "MelEAbility",
-        "AbilityTraits": 2306,
-        "__type": "AbilityObject"
     },
     "Characters/Mel/Spells/MelQAbility": {
         "mRootSpell": "Characters/Mel/Spells/MelQAbility/MelQ",
@@ -1858,6 +2513,12 @@
         "mName": "MelQAbility",
         "AbilityTraits": 258,
         "__type": "AbilityObject"
+    },
+    "{22374325}": {
+        "ObjectName": "MelQShared",
+        "objectPath": "{22374325}",
+        "mScriptName": "MelQShared",
+        "__type": "SpellObject"
     },
     "Characters/Mel/Spells/MelQAbility/MelQMissile10": {
         "ObjectName": "MelQMissile10",
@@ -1944,7 +2605,7 @@
                         "mUseMissilePositionAsOrigin": true,
                         "__type": "HermiteSplineInfo"
                     },
-                    "mSpeed": 3800.0,
+                    "mSpeed": 3200.0,
                     "__type": "FixedSpeedSplineMovement"
                 },
                 "visibilityComponent": {
@@ -1974,6 +2635,7 @@
             "mTargetingTypeData": {
                 "__type": "Location"
             },
+            "mDimensionBehavior": 2,
             "mClientData": {
                 "mTargeterDefinitions": [
                     {
@@ -2082,7 +2744,7 @@
                         ],
                         "__type": "HermiteSplineInfo"
                     },
-                    "mSpeed": 3800.0,
+                    "mSpeed": 3200.0,
                     "__type": "FixedSpeedSplineMovement"
                 },
                 "visibilityComponent": {
@@ -2112,6 +2774,7 @@
             "mTargetingTypeData": {
                 "__type": "Location"
             },
+            "mDimensionBehavior": 2,
             "mClientData": {
                 "mTargeterDefinitions": [
                     {
@@ -2220,7 +2883,7 @@
                         ],
                         "__type": "HermiteSplineInfo"
                     },
-                    "mSpeed": 3800.0,
+                    "mSpeed": 3200.0,
                     "__type": "FixedSpeedSplineMovement"
                 },
                 "visibilityComponent": {
@@ -2250,6 +2913,7 @@
             "mTargetingTypeData": {
                 "__type": "Location"
             },
+            "mDimensionBehavior": 2,
             "mClientData": {
                 "mTargeterDefinitions": [
                     {
@@ -2358,7 +3022,7 @@
                         ],
                         "__type": "HermiteSplineInfo"
                     },
-                    "mSpeed": 3800.0,
+                    "mSpeed": 3200.0,
                     "__type": "FixedSpeedSplineMovement"
                 },
                 "visibilityComponent": {
@@ -2388,6 +3052,7 @@
             "mTargetingTypeData": {
                 "__type": "Location"
             },
+            "mDimensionBehavior": 2,
             "mClientData": {
                 "mTargeterDefinitions": [
                     {
@@ -2496,7 +3161,7 @@
                         ],
                         "__type": "HermiteSplineInfo"
                     },
-                    "mSpeed": 3800.0,
+                    "mSpeed": 3200.0,
                     "__type": "FixedSpeedSplineMovement"
                 },
                 "visibilityComponent": {
@@ -2526,6 +3191,7 @@
             "mTargetingTypeData": {
                 "__type": "Location"
             },
+            "mDimensionBehavior": 2,
             "mClientData": {
                 "mTargeterDefinitions": [
                     {
@@ -2634,7 +3300,7 @@
                         ],
                         "__type": "HermiteSplineInfo"
                     },
-                    "mSpeed": 3800.0,
+                    "mSpeed": 3200.0,
                     "__type": "FixedSpeedSplineMovement"
                 },
                 "visibilityComponent": {
@@ -2664,6 +3330,7 @@
             "mTargetingTypeData": {
                 "__type": "Location"
             },
+            "mDimensionBehavior": 2,
             "mClientData": {
                 "mTargeterDefinitions": [
                     {
@@ -2772,7 +3439,7 @@
                         ],
                         "__type": "HermiteSplineInfo"
                     },
-                    "mSpeed": 3800.0,
+                    "mSpeed": 3200.0,
                     "__type": "FixedSpeedSplineMovement"
                 },
                 "visibilityComponent": {
@@ -2802,6 +3469,7 @@
             "mTargetingTypeData": {
                 "__type": "Location"
             },
+            "mDimensionBehavior": 2,
             "mClientData": {
                 "mTargeterDefinitions": [
                     {
@@ -2910,7 +3578,7 @@
                         ],
                         "__type": "HermiteSplineInfo"
                     },
-                    "mSpeed": 3800.0,
+                    "mSpeed": 3200.0,
                     "__type": "FixedSpeedSplineMovement"
                 },
                 "visibilityComponent": {
@@ -2940,6 +3608,7 @@
             "mTargetingTypeData": {
                 "__type": "Location"
             },
+            "mDimensionBehavior": 2,
             "mClientData": {
                 "mTargeterDefinitions": [
                     {
@@ -3048,7 +3717,7 @@
                         ],
                         "__type": "HermiteSplineInfo"
                     },
-                    "mSpeed": 3800.0,
+                    "mSpeed": 3200.0,
                     "__type": "FixedSpeedSplineMovement"
                 },
                 "visibilityComponent": {
@@ -3078,6 +3747,7 @@
             "mTargetingTypeData": {
                 "__type": "Location"
             },
+            "mDimensionBehavior": 2,
             "mClientData": {
                 "mTargeterDefinitions": [
                     {
@@ -3186,7 +3856,7 @@
                         ],
                         "__type": "HermiteSplineInfo"
                     },
-                    "mSpeed": 3800.0,
+                    "mSpeed": 3200.0,
                     "__type": "FixedSpeedSplineMovement"
                 },
                 "visibilityComponent": {
@@ -3216,6 +3886,7 @@
             "mTargetingTypeData": {
                 "__type": "Location"
             },
+            "mDimensionBehavior": 2,
             "mClientData": {
                 "mTargeterDefinitions": [
                     {
@@ -3324,7 +3995,7 @@
                         ],
                         "__type": "HermiteSplineInfo"
                     },
-                    "mSpeed": 3800.0,
+                    "mSpeed": 3200.0,
                     "__type": "FixedSpeedSplineMovement"
                 },
                 "visibilityComponent": {
@@ -3381,20 +4052,7 @@
             ],
             "DataValues": [
                 {
-                    "name": "ExplosionDamage",
-                    "values": [
-                        3.0,
-                        5.0,
-                        7.0,
-                        9.0,
-                        11.0,
-                        13.0,
-                        15.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "ExplosionCount",
+                    "name": "Count",
                     "values": [
                         5.0,
                         6.0,
@@ -3407,20 +4065,59 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "Spread",
+                    "name": "BaseDamageInitial",
                     "values": [
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "ExplosionRadius",
+                    "name": "BaseDamageSubsequent",
+                    "values": [
+                        0.0,
+                        5.0,
+                        10.0,
+                        15.0,
+                        20.0,
+                        25.0,
+                        30.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatioInitial",
+                    "values": [
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatioSubsuquent",
+                    "values": [
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Radius",
                     "values": [
                         200.0,
                         200.0,
@@ -3433,11 +4130,7 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "FirstExplosionDelay",
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "ChannelDuration",
+                    "name": "PostCastTime",
                     "values": [
                         0.5,
                         0.5,
@@ -3448,64 +4141,42 @@
                         0.5
                     ],
                     "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MinionMod",
-                    "values": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "InitialDamage",
-                    "values": [
-                        35.0,
-                        60.0,
-                        85.0,
-                        110.0,
-                        135.0,
-                        160.0,
-                        185.0
-                    ],
-                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
-                "TotalExplosionDamage": {
+                "InitialDamage": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "ExplosionDamage",
+                            "mDataValue": "{d29d0667}",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.05000000074505806,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "APRatioInitial",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
                 },
-                "AllDamageHit": {
-                    "tooltipOnly": true,
+                "TotalDamage": {
                     "mFormulaParts": [
                         {
-                            "mSpellCalculationKey": "InitialExplosionDamage",
-                            "__type": "{f3cbe7b2}"
+                            "mSubparts": [
+                                {
+                                    "mDataValue": "{d29d0667}",
+                                    "__type": "NamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mDataValue": "APRatioInitial",
+                                    "__type": "StatByNamedDataValueCalculationPart"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
                         },
                         {
                             "mPart1": {
-                                "mSpellCalculationKey": "TotalExplosionDamage",
-                                "__type": "{f3cbe7b2}"
-                            },
-                            "mPart2": {
                                 "mSubparts": [
                                     {
-                                        "mDataValue": "ExplosionCount",
+                                        "mDataValue": "COUNT",
                                         "__type": "NamedDataValueCalculationPart"
                                     },
                                     {
@@ -3515,49 +4186,44 @@
                                 ],
                                 "__type": "SumOfSubPartsCalculationPart"
                             },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mDataValue": "{9f5ea20c}",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    {
+                                        "mDataValue": "{709efe92}",
+                                        "__type": "StatByNamedDataValueCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
                             "__type": "ProductOfSubPartsCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
                 },
-                "MonsterModTooltip": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
-                    "tooltipOnly": true,
+                "{b7b202ec}": {
                     "mFormulaParts": [
                         {
-                            "mSubparts": [
-                                {
-                                    "mNumber": 1.0,
-                                    "__type": "NumberCalculationPart"
-                                },
-                                {
-                                    "mPart1": {
-                                        "mNumber": -1.0,
-                                        "__type": "NumberCalculationPart"
-                                    },
-                                    "mPart2": {
-                                        "mDataValue": "MinionMod",
-                                        "__type": "NamedDataValueCalculationPart"
-                                    },
-                                    "__type": "ProductOfSubPartsCalculationPart"
-                                }
-                            ],
-                            "__type": "SumOfSubPartsCalculationPart"
+                            "mStartValue": 0.5,
+                            "mEndValue": 1.0,
+                            "__type": "ByCharLevelInterpolationCalculationPart"
                         }
                     ],
-                    "mDisplayAsPercent": true,
+                    "mPrecision": 2,
                     "__type": "GameCalculation"
                 },
-                "InitialExplosionDamage": {
+                "{1baafc99}": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "InitialDamage",
+                            "mDataValue": "{9f5ea20c}",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.550000011920929,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "{709efe92}",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -3581,16 +4247,25 @@
             ],
             "Cooldown": {
                 "values": [
-                    10.0,
+                    11.0,
                     10.0,
                     9.0,
                     8.0,
                     7.0,
                     6.0,
-                    6.0
+                    5.0
                 ],
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "{22374325}",
+                    "mWhenToAddSpell": 0,
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mCantCancelWhileWindingUp": true,
             "mCantCancelWhileChanneling": true,
             "mChannelIsInterruptedByAttacking": false,
@@ -3631,6 +4306,24 @@
                 140.0,
                 140.0
             ],
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
             "mana": [
                 70.0,
                 75.0,
@@ -3641,18 +4334,19 @@
             ],
             "manaValues": {
                 "values": [
+                    60.0,
+                    65.0,
                     70.0,
                     75.0,
                     80.0,
-                    85.0,
-                    90.0,
-                    90.0
+                    85.0
                 ],
                 "__type": "{630af303}"
             },
             "mTargetingTypeData": {
-                "__type": "Area"
+                "__type": "LocationClamped"
             },
+            "mSpellCooldownOrSealedQueueThreshold": 0.75,
             "mCastingBreaksStealth": true,
             "mClientData": {
                 "mTooltipData": {
@@ -3661,26 +4355,20 @@
                     "mLocKeys": {
                         "keyName": "Spell_MelQ_Name",
                         "keySummary": "Spell_MelQ_Summary",
-                        "keyTooltip": "Spell_MelQ_Tooltip",
-                        "keyTooltipExtendedBelowLine": "Spell_MelQ_TooltipBelowLine"
+                        "keyTooltip": "Spell_MelQ_Tooltip"
                     },
                     "mLists": {
                         "LevelUp": {
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "InitialDamage",
-                                    "nameOverride": "Spell_ListType_InitialDamage",
+                                    "type": "BaseDamageSubsequent",
+                                    "nameOverride": "Spell_ListType_SubsequentDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "ExplosionDamage",
-                                    "nameOverride": "Spell_ListType_ExplosionDamage",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "ExplosionCount",
-                                    "nameOverride": "Spell_ListType_ExplosionCount",
+                                    "type": "Count",
+                                    "nameOverride": "Spell_ListType_MissileCount",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -3690,7 +4378,6 @@
                                 },
                                 {
                                     "type": "Cost",
-                                    "nameOverride": "Spell_ListType_ManaCost",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -3707,62 +4394,16 @@
                     {
                         "centerLocator": {
                             "basePosition": 3,
-                            "orientationType": 3,
                             "__type": "DrawablePositionLocator"
-                        },
-                        "textureOrientation": 3,
-                        "constraintRange": {
-                            "mPerLevelValues": [
-                                900.0,
-                                900.0,
-                                900.0,
-                                900.0,
-                                900.0,
-                                900.0
-                            ],
-                            "__type": "FloatPerSpellLevel"
                         },
                         "overrideRadius": {
                             "mPerLevelValues": [
-                                225.0,
-                                225.0,
-                                225.0,
-                                225.0,
-                                225.0,
-                                225.0
-                            ],
-                            "mValueType": 1,
-                            "__type": "FloatPerSpellLevel"
-                        },
-                        "textureRadiusOverrideName": "assets/spells/textures/aoe_leona_outer_gold.tex",
-                        "__type": "TargeterDefinitionAoe"
-                    },
-                    {
-                        "centerLocator": {
-                            "basePosition": 3,
-                            "orientationType": 3,
-                            "__type": "DrawablePositionLocator"
-                        },
-                        "textureOrientation": 3,
-                        "constraintRange": {
-                            "mPerLevelValues": [
-                                900.0,
-                                900.0,
-                                900.0,
-                                900.0,
-                                900.0,
-                                900.0
-                            ],
-                            "__type": "FloatPerSpellLevel"
-                        },
-                        "overrideRadius": {
-                            "mPerLevelValues": [
-                                180.0,
-                                180.0,
-                                180.0,
-                                180.0,
-                                180.0,
-                                180.0
+                                200.0,
+                                200.0,
+                                200.0,
+                                200.0,
+                                200.0,
+                                200.0
                             ],
                             "mValueType": 1,
                             "__type": "FloatPerSpellLevel"
@@ -3780,7 +4421,7 @@
             "{6d548702}": {
                 "mFormulaParts": [
                     {
-                        "mSpellCalculationKey": "AllDamageHit",
+                        "mSpellCalculationKey": "TotalDamage",
                         "__type": "{f3cbe7b2}"
                     }
                 ],
@@ -3789,6 +4430,16 @@
             "__type": "BotsSpellData"
         },
         "__type": "SpellObject"
+    },
+    "Characters/Mel/Spells/MelEAbility": {
+        "mRootSpell": "Characters/Mel/Spells/MelEAbility/MelE",
+        "mChildSpells": [
+            "Characters/Mel/Spells/MelEAbility/MelE",
+            "Characters/Mel/Spells/MelEAbility/MelESlow"
+        ],
+        "mName": "MelEAbility",
+        "AbilityTraits": 2306,
+        "__type": "AbilityObject"
     },
     "Characters/Mel/Spells/MelEAbility/MelERoot": {
         "ObjectName": "MelERoot",
@@ -3829,15 +4480,28 @@
             ],
             "DataValues": [
                 {
-                    "name": "RootDuration",
+                    "name": "RootDurationMin",
                     "values": [
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5
+                        0.75,
+                        0.800000011920929,
+                        0.8500000238418579,
+                        0.8999999761581421,
+                        0.949999988079071,
+                        1.0,
+                        1.0499999523162842
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RootDurationMax",
+                    "values": [
+                        1.4500000476837158,
+                        1.600000023841858,
+                        1.75,
+                        1.899999976158142,
+                        2.049999952316284,
+                        2.200000047683716,
+                        2.3499999046325684
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -3883,13 +4547,13 @@
                 {
                     "name": "AreaSlowAmount",
                     "values": [
+                        0.15000000596046448,
+                        0.20000000298023224,
+                        0.25,
                         0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896
+                        0.3499999940395355,
+                        0.4000000059604645,
+                        0.44999998807907104
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -4129,11 +4793,11 @@
             ],
             "manaValues": {
                 "values": [
+                    40.0,
                     50.0,
                     60.0,
                     70.0,
                     80.0,
-                    90.0,
                     90.0
                 ],
                 "__type": "{630af303}"
@@ -4174,6 +4838,18 @@
                                 {
                                     "type": "Cost",
                                     "nameOverride": "Spell_ListType_ManaCost",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "AreaSlowAmount",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_Slow",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "RootDurationMax",
+                                    "nameOverride": "Spell_ListType_RootDurationMax",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -4263,7 +4939,7 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mDataValue": "RootDuration",
+                                "mDataValue": "{94b98931}",
                                 "__type": "NamedDataValueCalculationPart"
                             }
                         ],
@@ -4289,10 +4965,6 @@
                 {
                     "{e38f54f7}": 8,
                     "{0717e686}": false,
-                    "__type": "{150d1b92}"
-                },
-                {
-                    "{e38f54f7}": 8,
                     "__type": "{150d1b92}"
                 }
             ],
@@ -4870,11 +5542,11 @@
     "Characters/Mel/CharacterRecords/Root": {
         "mCharacterName": "Mel",
         "baseHPModifiable": {
-            "baseValue": 630.0,
+            "baseValue": 590.0,
             "__type": "ModifiableFloat"
         },
         "hpPerLevelModifiable": {
-            "baseValue": 99.0,
+            "baseValue": 107.0,
             "__type": "ModifiableFloat"
         },
         "baseStaticHPRegenModifiable": {
@@ -4888,11 +5560,11 @@
         "primaryAbilityResource": {
             "arType": 0,
             "{726ee5cd}": {
-                "baseValue": 480.0,
+                "baseValue": 455.0,
                 "__type": "ModifiableFloat"
             },
             "{6216bf7b}": {
-                "baseValue": 28.0,
+                "baseValue": 38.0,
                 "__type": "ModifiableFloat"
             },
             "{c4ab3550}": {
@@ -4905,8 +5577,12 @@
             },
             "__type": "AbilityResourceSlotInfo"
         },
+        "secondaryAbilityResource": {
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
         "baseDamageModifiable": {
-            "baseValue": 54.0,
+            "baseValue": 52.0,
             "__type": "ModifiableFloat"
         },
         "damagePerLevelModifiable": {
@@ -4918,7 +5594,7 @@
             "__type": "ModifiableFloat"
         },
         "armorPerLevelModifiable": {
-            "baseValue": 5.199999809265137,
+            "baseValue": 5.400000095367432,
             "__type": "ModifiableFloat"
         },
         "baseMR": {
@@ -4947,13 +5623,14 @@
             "__type": "ModifiableFloat"
         },
         "attackSpeedPerLevelModifiable": {
-            "baseValue": 2.5,
+            "baseValue": 2.75,
             "__type": "ModifiableFloat"
         },
         "mAdaptiveForceToAbilityPowerWeight": 1.0,
         "acquisitionRange": 625.0,
         "basicAttack": {
             "mAttackDelayCastOffsetPercent": -0.14399999380111694,
+            "mAttackName": "MelBasicAttack",
             "__type": "AttackSlotData"
         },
         "critAttacks": [

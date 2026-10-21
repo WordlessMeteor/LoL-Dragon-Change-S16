@@ -105,19 +105,6 @@
             "Spell3": {
                 "mFlags": 2,
                 "mTrackDataName": "Default",
-                "mEventDataMap": {
-                    "{16dbb5cf}": {
-                        "mName": "{16dbb5cf}",
-                        "mEffectKey": "QuinnValor_E_Dash",
-                        "mParticleEventDataPairList": [
-                            {
-                                "__type": "ParticleEventDataPair"
-                            }
-                        ],
-                        "mIsLoop": false,
-                        "__type": "ParticleEventData"
-                    }
-                },
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "assets/characters/quinnvalor/skins/base/animations/quinnvalor_spell3_dash.anm",
                     "__type": "AnimationResourceData"
@@ -127,17 +114,30 @@
             "Spell4": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
-                    "{58a3ebb9}": {
-                        "mName": "{58a3ebb9}",
-                        "mEffectName": "doesnotexist.troy",
+                    "{58556d53}": {
+                        "mName": "{58556d53}",
+                        "mStartFrame": 40.0,
+                        "mEffectKey": "Quinn_R_BirdTrail_R",
                         "mParticleEventDataPairList": [
                             {
-                                "mBoneName": "Root",
+                                "mBoneName": "R_FeatherPrime2",
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
                         "mIsLoop": false,
-                        "mIsKillEvent": false,
+                        "__type": "ParticleEventData"
+                    },
+                    "{76559c8d}": {
+                        "mName": "{76559c8d}",
+                        "mStartFrame": 40.0,
+                        "mEffectKey": "Quinn_R_BirdTrail_L",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "L_FeatherPrime2",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
                         "__type": "ParticleEventData"
                     }
                 },
@@ -275,29 +275,28 @@
             "Spell4_In": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
-                    "{58a3ebb9}": {
-                        "mName": "{58a3ebb9}",
-                        "mEffectName": "doesnotexist.troy",
+                    "{58556d53}": {
+                        "mName": "{58556d53}",
+                        "mEffectKey": "Quinn_R_BirdTrail_R",
                         "mParticleEventDataPairList": [
                             {
-                                "mBoneName": "Root",
+                                "mBoneName": "R_FeatherPrime2",
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
                         "mIsLoop": false,
-                        "mIsKillEvent": false,
                         "__type": "ParticleEventData"
                     },
-                    "{5b8f26e3}": {
-                        "mName": "{5b8f26e3}",
-                        "mEffectName": "doesnotexist.troy",
+                    "{76559c8d}": {
+                        "mName": "{76559c8d}",
+                        "mEffectKey": "Quinn_R_BirdTrail_L",
                         "mParticleEventDataPairList": [
                             {
+                                "mBoneName": "L_FeatherPrime2",
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
                         "mIsLoop": false,
-                        "mIsKillEvent": false,
                         "__type": "ParticleEventData"
                     }
                 },

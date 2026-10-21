@@ -479,14 +479,14 @@
     "spells": [
         {
             "spellKey": "q",
-            "name": "耀光齐射",
+            "name": "耀光弹幕",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Mel/HUD/Icons2D/Mel_Q.png",
             "abilityVideoPath": "champion-abilities/0800/ability_0800_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "梅尔发射一连串耀光飞弹，飞弹会在目标位置周围爆炸，对范围内的敌人造成多段伤害。",
-            "dynamicDescription": "梅尔释放一道由@ExplosionCount@个耀光飞弹组成的弹幕，飞弹会在目标位置周围爆炸。<br><br>命中的第一次爆炸造成<magicDamage>@InitialExplosionDamage@魔法伤害</magicDamage>并且每次后续爆炸造成<magicDamage>@TotalExplosionDamage@魔法伤害</magicDamage>，至多增加至<magicDamage>@AllDamageHit@魔法伤害</magicDamage>总和。@SpellModifierDescriptionAppend@",
+            "description": "梅尔发射一阵弹幕，造成魔法伤害。命中敌方英雄会缩减该技能的冷却时间。",
+            "dynamicDescription": "梅尔发射由@Count@颗飞弹组成的弹幕，飞弹在到达目标位置后爆炸。敌人首次被命中时，会受到<magicDamage>@InitialDamage@魔法伤害</magicDamage>，后续每次命中造成<magicDamage>@SubsequentDamage@魔法伤害</magicDamage>，最多造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。<br><br>如果弹幕至少命中一名敌方英雄，则该技能的冷却时间缩减@CDRefundChampHit@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -496,12 +496,12 @@
                 950.0
             ],
             "costCoefficients": [
+                60.0,
+                65.0,
                 70.0,
                 75.0,
                 80.0,
-                85.0,
-                90.0,
-                90.0
+                85.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -509,7 +509,7 @@
                 8.0,
                 7.0,
                 6.0,
-                6.0
+                5.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -636,30 +636,30 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "梅尔生成一道屏障围绕自身，这道屏障会将敌方弹体反弹给攻击者，使她免受伤害，并为她提供移动速度。",
-            "dynamicDescription": "梅尔生成一道屏障围绕自身，这道屏障会将敌方英雄弹体反弹给攻击者，使她免受伤害，并获得持续@Duration@秒的<shield>@ShieldAmount@护盾值</shield>和在@MoveSpeedDuration@秒里<speed>持续衰减的@MoveSpeed*100@%移动速度</speed>。<br><br>被反弹的弹体会造成<magicDamage>@DamagePercent@原伤害值的魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "梅尔发射一颗折射新星，摧毁碰到的敌方投射物，并发动造成<magicDamage>@InitialDamage@魔法伤害</magicDamage>的反击。对同一敌人的后续反击改为造成<magicDamage>@SubsequentDamage@魔法伤害</magicDamage>。<br><br>新星还会为梅尔及其队友提供持续@BuffDuration@秒的<shield>@TotalShield@护盾</shield>和<speed>@TotalMS@移动速度</speed>。@SpellModifierDescriptionAppend@",
             "range": [
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0
             ],
             "costCoefficients": [
-                80.0,
-                60.0,
-                40.0,
-                20.0,
+                100.0,
+                75.0,
+                50.0,
+                25.0,
                 0.0,
                 0.0
             ],
             "cooldownCoefficients": [
-                38.0,
-                35.0,
-                33.0,
-                29.0,
-                26.0,
-                26.0
+                30.0,
+                28.5,
+                27.0,
+                25.5,
+                24.0,
+                22.5
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -786,7 +786,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "梅尔发射一颗阳炎法球，禁锢中心区域的敌人并减速周围区域的敌人并造成持续伤害。",
-            "dynamicDescription": "梅尔发射一颗阳炎法球，<status>禁锢</status>中心区域的敌人@RootDuration@秒并造成<magicDamage>@Damage@魔法伤害</magicDamage>。<br><br>法球会在其周围逐渐形成一个妨害区域，这个区域会对敌人们造成@AreaSlowAmount*100@%<status>减速</status>以及<magicDamage>每秒@AreaDamagePerSecond@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "梅尔发射一颗光辉法球，将球心的敌人<status>禁锢</status>@RootDurationMin@至@RootDurationMax@秒(基于飞行距离)，并造成<magicDamage>@Damage@魔法伤害</magicDamage>。<br><br>法球周围会生成攻击区域，使敌人<status>减速</status>@AreaSlowAmount*100@%并<magicDamage>每秒造成@AreaDamagePerSecond@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -796,11 +796,11 @@
                 1000.0
             ],
             "costCoefficients": [
+                40.0,
                 50.0,
                 60.0,
                 70.0,
                 80.0,
-                90.0,
                 90.0
             ],
             "cooldownCoefficients": [
@@ -955,11 +955,11 @@
             ],
             "cooldownCoefficients": [
                 120.0,
-                100.0,
-                80.0,
-                80.0,
-                80.0,
-                60.0
+                90.0,
+                60.0,
+                30.0,
+                15.0,
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

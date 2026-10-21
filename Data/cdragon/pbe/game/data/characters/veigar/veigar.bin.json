@@ -9,210 +9,6 @@
         },
         "__type": "SpellObject"
     },
-    "Characters/Veigar/Spells/VeigarBalefulStrikeMis": {
-        "ObjectName": "VeigarBalefulStrikeMis",
-        "objectPath": "Characters/Veigar/Spells/VeigarBalefulStrikeMis",
-        "mScriptName": "VeigarBalefulStrikeMis",
-        "mSpell": {
-            "flags": 4,
-            "mAffectsTypeFlags": 6154,
-            "mAlternateName": "EzrealMysticShotMissile",
-            "mEffectAmount": [
-                {
-                    "value": [
-                        30.0,
-                        70.0,
-                        110.0,
-                        150.0,
-                        190.0,
-                        230.0,
-                        270.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.0,
-                        1.0,
-                        2.0,
-                        3.0,
-                        4.0,
-                        5.0,
-                        6.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
-            "mCoefficient": 0.6000000238418579,
-            "mAnimationName": "Spell1",
-            "mImgIconName": [
-                "ASSETS/Characters/Veigar/HUD/Icons2D/VeigarBalefulStrike.dds"
-            ],
-            "mCastTime": 0.25099998712539673,
-            "spellCastTime": 0.25,
-            "spellTotalTime": 1.0,
-            "cooldownTime": [
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "Cooldown": {
-                "values": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "{0a3e0478}": 0.0,
-                "__type": "{0a0eddc9}"
-            },
-            "mCantCancelWhileWindingUp": true,
-            "useAnimatorFramerate": true,
-            "bHaveHitEffect": true,
-            "castRange": [
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0,
-                1050.0
-            ],
-            "castRangeValues": {
-                "values": [
-                    1050.0,
-                    1050.0,
-                    1050.0,
-                    1050.0,
-                    1050.0,
-                    1050.0,
-                    1050.0
-                ],
-                "{0a3e0478}": 1050.0,
-                "__type": "{0a0eddc9}"
-            },
-            "castRangeDisplayOverride": [
-                925.0,
-                925.0,
-                925.0,
-                925.0,
-                925.0,
-                925.0,
-                925.0
-            ],
-            "castRadius": [
-                100.0,
-                100.0,
-                100.0,
-                100.0,
-                100.0,
-                100.0,
-                100.0
-            ],
-            "castConeDistance": 100.0,
-            "mMissileSpec": {
-                "mMissileWidth": 70.0,
-                "movementComponent": {
-                    "mUseHeightOffsetAtEnd": true,
-                    "mTracksTarget": false,
-                    "mOffsetInitialTargetHeight": 100.0,
-                    "mStartBoneName": "neck",
-                    "mProjectTargetToCastRange": true,
-                    "mSpeed": 2200.0,
-                    "__type": "FixedSpeedMovement"
-                },
-                "heightSolver": {
-                    "__type": "BlendedLinearHeightSolver"
-                },
-                "verticalFacing": {
-                    "__type": "VerticalFacingFaceTarget"
-                },
-                "behaviors": [
-                    {
-                        "__type": "CastOnHit"
-                    },
-                    {
-                        "__type": "DestroyOnMovementComplete"
-                    }
-                ],
-                "__type": "MissileSpecification"
-            },
-            "mCastType": 3,
-            "castFrame": 7.53000020980835,
-            "missileSpeed": 2200.0,
-            "mMissileEffectKey": "Veigar_Q_mis",
-            "mLineWidth": 70.0,
-            "mHitEffectKey": "Veigar_Q_tar",
-            "mAfterEffectKey": "Veigar_Q_tar",
-            "selectionPriority": 2,
-            "mTargetingTypeData": {
-                "__type": "Location"
-            },
-            "mClientData": {
-                "mTargeterDefinitions": [
-                    {
-                        "hideWithLineIndicator": true,
-                        "useCasterBoundingBox": false,
-                        "__type": "TargeterDefinitionRange"
-                    },
-                    {
-                        "endLocator": {
-                            "basePosition": 3,
-                            "__type": "DrawablePositionLocator"
-                        },
-                        "lineStopsAtEndPosition": false,
-                        "lineWidth": {
-                            "mPerLevelValues": [
-                                70.0,
-                                70.0,
-                                70.0,
-                                70.0,
-                                70.0,
-                                70.0
-                            ],
-                            "mValueType": 2,
-                            "__type": "FloatPerSpellLevel"
-                        },
-                        "__type": "TargeterDefinitionLine"
-                    }
-                ],
-                "__type": "SpellDataResourceClient"
-            },
-            "__type": "SpellDataResource"
-        },
-        "__type": "SpellObject"
-    },
     "Characters/Veigar/Spells/VeigarRAbility": {
         "mRootSpell": "Characters/Veigar/Spells/VeigarRAbility/VeigarR",
         "mChildSpells": [
@@ -255,7 +51,7 @@
         "mRootSpell": "Characters/Veigar/Spells/VeigarBalefulStrikeAbility/VeigarBalefulStrike",
         "mChildSpells": [
             "Characters/Veigar/Spells/VeigarBalefulStrikeAbility/VeigarBalefulStrike",
-            "Characters/Veigar/Spells/VeigarBalefulStrikeMis"
+            "{5723d947}"
         ],
         "mName": "VeigarBalefulStrikeAbility",
         "__type": "AbilityObject"
@@ -628,6 +424,210 @@
                 }
             ],
             "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{5723d947}": {
+        "ObjectName": "VeigarBalefulStrikeMis",
+        "objectPath": "{5723d947}",
+        "mScriptName": "VeigarBalefulStrikeMis",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "EzrealMysticShotMissile",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        30.0,
+                        70.0,
+                        110.0,
+                        150.0,
+                        190.0,
+                        230.0,
+                        270.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.0,
+                        1.0,
+                        2.0,
+                        3.0,
+                        4.0,
+                        5.0,
+                        6.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.6000000238418579,
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/Characters/Veigar/HUD/Icons2D/VeigarBalefulStrike.dds"
+            ],
+            "mCastTime": 0.25099998712539673,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    1050.0,
+                    1050.0,
+                    1050.0,
+                    1050.0,
+                    1050.0,
+                    1050.0,
+                    1050.0
+                ],
+                "{0a3e0478}": 1050.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                925.0,
+                925.0,
+                925.0,
+                925.0,
+                925.0,
+                925.0,
+                925.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 70.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "neck",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 2200.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 7.53000020980835,
+            "missileSpeed": 2200.0,
+            "mMissileEffectKey": "Veigar_Q_mis",
+            "mLineWidth": 70.0,
+            "mHitEffectKey": "Veigar_Q_tar",
+            "mAfterEffectKey": "Veigar_Q_tar",
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": false,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                70.0,
+                                70.0,
+                                70.0,
+                                70.0,
+                                70.0,
+                                70.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
         },
         "__type": "SpellObject"
     },
@@ -2530,7 +2530,7 @@
             "BaseSpell"
         ],
         "extraSpellsList": [
-            "Characters/Veigar/Spells/VeigarBalefulStrikeMis",
+            "{5723d947}",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",

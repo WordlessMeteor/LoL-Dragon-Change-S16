@@ -10,7 +10,7 @@
             "{09225213}": "{31c93f7b}",
             "__type": "{32e94b82}"
         },
-        "{e771d590}": "{6aaee3dc}",
+        "{e771d590}": "{26148272}",
         "{319dbade}": [
             "{4d32f1eb}",
             "{97752a22}",
@@ -19,11 +19,7 @@
         ],
         "__type": "{45381060}"
     },
-    "{5d44b217}": {
-        "FilepathHash": "clientstates/gameplay/ux/lol/kiwi/kiwigohkdatracker/uibase",
-        "__type": "UiPropertyLoadable"
-    },
-    "{ccf6b237}": {
+    "{0c6d71b4}": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -109,14 +105,12 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "falloffTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultFalloff.tex",
-                "particleColorTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultColorOverlifetime_01.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
-                        0.22000457346439362,
-                        0.6899977326393127,
                         1.0,
+                        0.36000609397888184,
+                        0.45000380277633667,
                         1.0
                     ],
                     "__type": "ValueColor"
@@ -156,6 +150,47 @@
                 "alphaRef": 0,
                 "miscRenderFlags": 1,
                 "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        360.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                360.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
                 "birthScale0": {
                     "constantValue": [
                         20.0,
@@ -226,7 +261,12 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/Ashe_Skin84_prestige_speark.tex",
+                "texture": "ASSETS/Characters/Evelynn/Skins/Skin65/Particles/Yone_Skin55_Taunt_Flecks.tex",
+                "numFrames": 4,
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -273,15 +313,13 @@
                     ],
                     "__type": "VfxShapeBox"
                 },
-                "falloffTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultFalloff.tex",
-                "particleColorTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultColorOverlifetime_01.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
-                        0.6200045943260193,
-                        0.08999770879745483,
                         1.0,
-                        0.4800030589103699
+                        0.22000457346439362,
+                        0.22999924421310425,
+                        0.7499961853027344
                     ],
                     "__type": "ValueColor"
                 },
@@ -400,7 +438,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/3026_Items_ball32_02.tex",
+                "texture": "ASSETS/Maps/Particles/Kiwi/3026_Items_ball32_02.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -492,15 +530,13 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "falloffTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultFalloff.tex",
-                "particleColorTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultColorOverlifetime_01.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
-                        0.4899977147579193,
-                        0.5600060820579529,
                         1.0,
-                        0.6000000238418579
+                        0.4588235318660736,
+                        0.9921568632125854,
+                        0.4000000059604645
                     ],
                     "__type": "ValueColor"
                 },
@@ -539,9 +575,9 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/Reroll_Button_Gold_2_01.tex",
+                "texture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/Reroll_Button_Gold_2.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/UX/Kiwi/Augments/AugmentSelection/Akshan_Skin10_colorGrad_02.tex",
+                    "textureMult": "ASSETS/Maps/Particles/Kiwi/Akshan_Skin10_colorGrad_02.tex",
                     "UvRotationMult": {
                         "constantValue": 45.0,
                         "__type": "ValueFloat"
@@ -648,14 +684,12 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "falloffTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultFalloff.tex",
-                "particleColorTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultColorOverlifetime_01.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
-                        0.22000457346439362,
-                        0.6899977326393127,
                         1.0,
+                        0.36000609397888184,
+                        0.45000380277633667,
                         1.0
                     ],
                     "__type": "ValueColor"
@@ -695,6 +729,47 @@
                 "alphaRef": 0,
                 "miscRenderFlags": 1,
                 "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        360.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                360.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
                 "birthScale0": {
                     "constantValue": [
                         20.0,
@@ -765,7 +840,12 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/Ashe_Skin84_prestige_speark.tex",
+                "texture": "ASSETS/Characters/Evelynn/Skins/Skin65/Particles/Yone_Skin55_Taunt_Flecks.tex",
+                "numFrames": 4,
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -852,14 +932,12 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "falloffTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultFalloff.tex",
-                "particleColorTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultColorOverlifetime_01.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
-                        0.22000457346439362,
-                        0.6899977326393127,
                         1.0,
+                        0.36000609397888184,
+                        0.45000380277633667,
                         1.0
                     ],
                     "__type": "ValueColor"
@@ -899,6 +977,47 @@
                 "alphaRef": 0,
                 "miscRenderFlags": 1,
                 "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        360.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                360.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
                 "birthScale0": {
                     "constantValue": [
                         20.0,
@@ -969,7 +1088,12 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/Ashe_Skin84_prestige_speark.tex",
+                "texture": "ASSETS/Characters/Evelynn/Skins/Skin65/Particles/Yone_Skin55_Taunt_Flecks.tex",
+                "numFrames": 4,
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -1056,14 +1180,12 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "falloffTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultFalloff.tex",
-                "particleColorTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultColorOverlifetime_01.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
-                        0.22000457346439362,
-                        0.6899977326393127,
                         1.0,
+                        0.36000609397888184,
+                        0.45000380277633667,
                         1.0
                     ],
                     "__type": "ValueColor"
@@ -1103,6 +1225,47 @@
                 "alphaRef": 0,
                 "miscRenderFlags": 1,
                 "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        360.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                360.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
                 "birthScale0": {
                     "constantValue": [
                         20.0,
@@ -1173,7 +1336,12 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/Ashe_Skin84_prestige_speark.tex",
+                "texture": "ASSETS/Characters/Evelynn/Skins/Skin65/Particles/Yone_Skin55_Taunt_Flecks.tex",
+                "numFrames": 4,
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -1265,14 +1433,12 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "falloffTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultFalloff.tex",
-                "particleColorTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultColorOverlifetime_01.tex",
-                "blendMode": 4,
+                "blendMode": 1,
                 "birthColor": {
                     "constantValue": [
-                        0.3803921639919281,
-                        0.3803921639919281,
                         1.0,
+                        0.13725490868091583,
+                        0.250980406999588,
                         1.0
                     ],
                     "__type": "ValueColor"
@@ -1315,7 +1481,6 @@
                     },
                     "__type": "ValueColor"
                 },
-                "pass": 95,
                 "alphaRef": 0,
                 "miscRenderFlags": 1,
                 "birthScale0": {
@@ -1366,12 +1531,219 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/Ahri_Skin15_Glow_1.tex",
+                "texture": "ASSETS/Maps/Particles/Kiwi/Ahri_Skin15_Glow_1.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
                 "rate": {
-                    "constantValue": 150.0,
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "CAST_Rect",
+                "disabled": true,
+                "SpawnShape": {
+                    "emitOffset": {
+                        "dynamics": {
+                            "probabilityTables": [
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                }
+                            ],
+                            "times": [
+                                0.0
+                            ],
+                            "values": [
+                                [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector3fVariableData"
+                        },
+                        "__type": "ValueVector3"
+                    },
+                    "emitRotationAngles": [
+                        {
+                            "__type": "ValueFloat"
+                        },
+                        {
+                            "__type": "ValueFloat"
+                        }
+                    ],
+                    "emitRotationAxes": [
+                        [
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    "__type": "VfxShapeLegacy"
+                },
+                "EmitterPosition": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.6000000238418579,
+                        0.5647059082984924,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10000000149011612,
+                            0.25,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.2699931263923645
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 95,
+                "alphaRef": 0,
+                "miscRenderFlags": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        309.0,
+                        93.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.0603715181350708,
+                            0.16512073576450348,
+                            0.40402477979660034,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.3351351022720337,
+                                1.3351351022720337,
+                                1.3351351022720337
+                            ],
+                            [
+                                1.5067567825317383,
+                                1.5067567825317383,
+                                1.5067567825317383
+                            ],
+                            [
+                                1.5729730129241943,
+                                1.5729730129241943,
+                                1.5729730129241943
+                            ],
+                            [
+                                1.600000023841858,
+                                1.600000023841858,
+                                1.600000023841858
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/Reroll_Button_Gold_1.tex",
+                "textureMult": {
+                    "textureMult": "ASSETS/Maps/Particles/Kiwi/Akshan_Skin10_colorGrad_02.tex",
+                    "UvRotationMult": {
+                        "constantValue": 45.0,
+                        "__type": "ValueFloat"
+                    },
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            0.10000000149011612,
+                            0.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 750.0,
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
@@ -1427,18 +1799,16 @@
                 },
                 "SpawnShape": {
                     "flags": 1,
-                    "radius": 300.0,
+                    "radius": 250.0,
                     "__type": "VfxShapeSphere"
                 },
-                "falloffTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultFalloff.tex",
-                "particleColorTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultColorOverlifetime_01.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
-                        0.4627451002597809,
-                        0.3529411852359772,
                         1.0,
-                        0.501960813999176
+                        0.3799954354763031,
+                        0.4599984884262085,
+                        1.0
                     ],
                     "__type": "ValueColor"
                 },
@@ -1477,6 +1847,7 @@
                 "alphaRef": 0,
                 "miscRenderFlags": 1,
                 "isUniformScale": 1,
+                "isRandomStartFrame": 1,
                 "birthScale0": {
                     "constantValue": [
                         10.0,
@@ -1547,7 +1918,12 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/Ashe_Skin84_prestige_speark.tex",
+                "texture": "ASSETS/Characters/Evelynn/Skins/Skin65/Particles/Yone_Skin55_Taunt_Flecks.tex",
+                "numFrames": 4,
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -1639,14 +2015,12 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "falloffTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultFalloff.tex",
-                "particleColorTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultColorOverlifetime_01.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
-                        0.5100023150444031,
-                        0.7300068736076355,
                         1.0,
+                        0.5137255191802979,
+                        0.7254902124404907,
                         1.0
                     ],
                     "__type": "ValueColor"
@@ -1686,9 +2060,9 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/Reroll_Button_Gold_2_01.tex",
+                "texture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/Reroll_Button_Gold_2.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/UX/Kiwi/Augments/AugmentSelection/Akshan_Base_Gradient01.tex",
+                    "textureMult": "ASSETS/Maps/Particles/Kiwi/Akshan_Base_Gradient01.tex",
                     "UvRotationMult": {
                         "constantValue": 75.0,
                         "__type": "ValueFloat"
@@ -1813,14 +2187,12 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "falloffTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultFalloff.tex",
-                "particleColorTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultColorOverlifetime_01.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
-                        0.4599984884262085,
-                        0.4899977147579193,
                         1.0,
+                        0.6399939060211182,
+                        0.6399939060211182,
                         1.0
                     ],
                     "__type": "ValueColor"
@@ -1930,7 +2302,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/Ashe_Skin84_prestige_speark.tex",
+                "texture": "ASSETS/Maps/Particles/Kiwi/Ashe_Skin84_prestige_speark.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -2006,14 +2378,12 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "falloffTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultFalloff.tex",
-                "particleColorTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultColorOverlifetime_01.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
-                        0.4599984884262085,
-                        0.4899977147579193,
                         1.0,
+                        0.6399939060211182,
+                        0.6399939060211182,
                         1.0
                     ],
                     "__type": "ValueColor"
@@ -2123,7 +2493,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/Ashe_Skin84_prestige_speark.tex",
+                "texture": "ASSETS/Maps/Particles/Kiwi/Ashe_Skin84_prestige_speark.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -2199,14 +2569,12 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "falloffTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultFalloff.tex",
-                "particleColorTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultColorOverlifetime_01.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
-                        0.4599984884262085,
-                        0.4899977147579193,
                         1.0,
+                        0.6399939060211182,
+                        0.6399939060211182,
                         1.0
                     ],
                     "__type": "ValueColor"
@@ -2316,7 +2684,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/Ashe_Skin84_prestige_speark.tex",
+                "texture": "ASSETS/Maps/Particles/Kiwi/Ashe_Skin84_prestige_speark.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -2392,14 +2760,12 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "falloffTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultFalloff.tex",
-                "particleColorTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultColorOverlifetime_01.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
-                        0.4599984884262085,
-                        0.4899977147579193,
                         1.0,
+                        0.6399939060211182,
+                        0.6399939060211182,
                         1.0
                     ],
                     "__type": "ValueColor"
@@ -2509,7 +2875,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/Ashe_Skin84_prestige_speark.tex",
+                "texture": "ASSETS/Maps/Particles/Kiwi/Ashe_Skin84_prestige_speark.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -2550,7 +2916,7 @@
                 "worldAcceleration": {
                     "constantValue": [
                         0.0,
-                        5.0,
+                        20.0,
                         0.0
                     ],
                     "dynamics": {
@@ -2560,7 +2926,7 @@
                         "values": [
                             [
                                 0.0,
-                                5.0,
+                                20.0,
                                 0.0
                             ]
                         ],
@@ -2570,18 +2936,16 @@
                 },
                 "SpawnShape": {
                     "flags": 1,
-                    "radius": 300.0,
+                    "radius": 250.0,
                     "__type": "VfxShapeSphere"
                 },
-                "falloffTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultFalloff.tex",
-                "particleColorTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultColorOverlifetime_01.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
-                        0.4599984884262085,
-                        0.3499961793422699,
                         1.0,
-                        0.7799954414367676
+                        0.36000609397888184,
+                        0.8500038385391235,
+                        1.0
                     ],
                     "__type": "ValueColor"
                 },
@@ -2616,7 +2980,7 @@
                     },
                     "__type": "ValueColor"
                 },
-                "pass": 500,
+                "pass": 1,
                 "alphaRef": 0,
                 "miscRenderFlags": 1,
                 "isUniformScale": 1,
@@ -2691,7 +3055,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/Ahri_Skin28_Z_BokehSmear03.tex",
+                "texture": "ASSETS/Maps/Particles/Kiwi/Ahri_Skin28_Z_BokehSmear03.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -2788,14 +3152,12 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "falloffTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultFalloff.tex",
-                "particleColorTexture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/DefaultColorOverlifetime_01.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
-                        0.4941176474094391,
-                        0.5607843399047852,
                         1.0,
+                        0.45490196347236633,
+                        0.6627451181411743,
                         0.4000000059604645
                     ],
                     "__type": "ValueColor"
@@ -2870,9 +3232,9 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/Reroll_Button_Gold_2_01.tex",
+                "texture": "ASSETS/UX/Kiwi/Augments/AugmentSelection/Reroll_Button_Gold_2.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/UX/Kiwi/Augments/AugmentSelection/Akshan_Skin10_colorGrad_02.tex",
+                    "textureMult": "ASSETS/Maps/Particles/Kiwi/Akshan_Skin10_colorGrad_02.tex",
                     "UvRotationMult": {
                         "constantValue": 45.0,
                         "__type": "ValueFloat"
@@ -2894,16 +3256,265 @@
                     "__type": "VfxTextureMultDefinitionData"
                 },
                 "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 150.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.800000011920929,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            1.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 2.0,
+                "lifetime": 0.15000000596046448,
+                "emitterName": "CAST_SParklies2",
+                "importance": 3,
+                "worldAcceleration": {
+                    "constantValue": [
+                        0.0,
+                        100.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                100.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "SpawnShape": {
+                    "flags": 1,
+                    "radius": 250.0,
+                    "__type": "VfxShapeSphere"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.999969482421875,
+                        0.13640040159225464,
+                        0.30406653881073,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30945026874542236,
+                            0.48598769307136536,
+                            0.6739004850387573,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.8941176533699036
+                            ],
+                            [
+                                0.7297322154045105,
+                                0.16977187991142273,
+                                0.1887235790491104,
+                                0.5857843160629272
+                            ],
+                            [
+                                0.330006867647171,
+                                0.05999847501516342,
+                                0.02999923750758171,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 6,
+                "colorLookUpTypeY": 3,
+                "alphaRef": 15,
+                "alphaErosionDefinition": {
+                    "erosionDriveCurve": {
+                        "dynamics": {
+                            "times": [
+                                0.10000000149011612,
+                                1.0
+                            ],
+                            "values": [
+                                0.0,
+                                1.0
+                            ],
+                            "__type": "VfxAnimatedFloatVariableData"
+                        },
+                        "__type": "ValueFloat"
+                    },
+                    "erosionFeatherIn": 0.30000001192092896,
+                    "erosionFeatherOut": 0.30000001192092896,
+                    "erosionMapName": "ASSETS/Characters/Evelynn/Skins/Skin65/Particles/Smolder_R_FireNoise_2x2_Dissolve.tex",
+                    "erosionMapChannelMixer": {
+                        "constantValue": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "__type": "ValueColor"
+                    },
+                    "__type": "VfxAlphaErosionDefinitionData"
+                },
+                "{cb13aff1}": -100.0,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "TextureFlipV": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        90.0,
+                        1.0,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.800000011920929,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.4000000059604645,
+                                    1.0,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                90.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.75,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.8999999761581421,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Evelynn/Skins/Skin65/Particles/Smolder_R_FireNoise_2x2_BW.tex",
+                "numFrames": 3,
+                "paletteDefinition": {
+                    "paletteTexture": "ASSETS/Characters/Evelynn/Skins/Skin65/Particles/Smolder_Base_ColorGradient.tex",
+                    "PaletteTextureAddressMode": 2,
+                    "paletteSelector": {
+                        "constantValue": [
+                            12.0,
+                            0.0,
+                            0.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "paletteCount": 16,
+                    "__type": "VfxPaletteDefinitionData"
+                },
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
             }
         ],
-        "particleName": "Kiwi_S3_GoH_KDA_UI_CardCollectionCompletion",
-        "particlePath": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHKDATracker/Particles/Kiwi_S3_GoH_KDA_UI_CardCollectionCompletion",
+        "particleName": "Kiwi_S3_GoH_KDA3_UI_CardCollectionCompletion",
+        "particlePath": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHKDATracker/Particles/Kiwi_S3_GoH_KDA3_UI_CardCollectionCompletion",
         "soundOnCreateDefault": "Play_sfx_Kiwi_Gameplay_HUD_Augment_refresh_Golden_click_vfx",
         "{9836cd87}": 7,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
-        "objectPath": "{ccf6b237}",
+        "objectPath": "{0c6d71b4}",
         "__type": "VfxSystemDefinitionData"
+    },
+    "{5d44b217}": {
+        "FilepathHash": "clientstates/gameplay/ux/lol/kiwi/kiwigohkdatracker/uibase",
+        "__type": "UiPropertyLoadable"
     },
     "__linked": []
 }

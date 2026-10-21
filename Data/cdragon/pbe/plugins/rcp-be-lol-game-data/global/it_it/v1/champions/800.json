@@ -470,14 +470,14 @@
     "spells": [
         {
             "spellKey": "q",
-            "name": "Raffica radiosa",
+            "name": "Sbarramento radioso",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Mel/HUD/Icons2D/Mel_Q.png",
             "abilityVideoPath": "champion-abilities/0800/ability_0800_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Mel spara una raffica di proiettili che esplodono attorno a un punto bersaglio, infliggendo danni ripetuti ai nemici nell'area.",
-            "dynamicDescription": "Mel spara una raffica di @ExplosionCount@ proiettili che esplodono attorno a un punto bersaglio.<br><br>La prima esplosione a segno infligge <magicDamage>@InitialExplosionDamage@ danni magici</magicDamage> e ogni esplosione successiva infligge <magicDamage>@TotalExplosionDamage@ danni magici</magicDamage>, che si sommano in un totale di <magicDamage>@AllDamageHit@ danni magici</magicDamage>.@SpellModifierDescriptionAppend@",
+            "description": "Mel scatena una raffica di proiettili che infligge danni magici. Colpire un campione nemico riduce il tempo di ricarica di questa abilità.",
+            "dynamicDescription": "Mel scatena una raffica di @Count@ missili che esplodono nel punto bersaglio. La prima volta che un nemico viene colpito, subisce <magicDamage>@InitialDamage@ danni magici</magicDamage>, mentre i colpi successivi infliggono <magicDamage>@SubsequentDamage@ danni magici</magicDamage> ciascuno, fino a un massimo di <magicDamage>@TotalDamage@ danni magici</magicDamage>.<br><br>Se la raffica colpisce almeno una volta un campione nemico, il tempo di ricarica di questa abilità si riduce di @CDRefundChampHit@ secondo/i.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -487,12 +487,12 @@
                 950.0
             ],
             "costCoefficients": [
+                60.0,
+                65.0,
                 70.0,
                 75.0,
                 80.0,
-                85.0,
-                90.0,
-                90.0
+                85.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -500,7 +500,7 @@
                 8.0,
                 7.0,
                 6.0,
-                6.0
+                5.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -626,31 +626,31 @@
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Mel forma una barriera attorno a sé che riflette i proiettili nemici verso chi li ha scagliati, prevenendo i danni e conferendole velocità di movimento.",
-            "dynamicDescription": "Mel forma una barriera attorno a sé che riflette i proiettili nemici verso chi li ha scagliati, ottenendo uno <shield>scudo da @ShieldAmount@</shield> per @Duration@ secondo/i e <speed>@MoveSpeed*100@% velocità di movimento decrescente</speed> per @MoveSpeedDuration@ secondo/i.<br><br>I proiettili riflessi infliggono un <magicDamage>@DamagePercent@ dei danni originali come danni magici</magicDamage>.@SpellModifierDescriptionAppend@",
+            "description": "Mel scatena un'esplosione di rifrazione che distrugge i proiettili nemici con cui entra in contatto, rispondendo con dardi magici.<br><br>L'esplosione fornisce anche uno scudo e aumenta la velocità di movimento di Mel e dei suoi alleati.",
+            "dynamicDescription": "Mel scatena un'esplosione di rifrazione che distrugge i proiettili nemici con cui entra in contatto, rispondendo con <magicDamage>@InitialDamage@ danni magici</magicDamage>. Le scariche successive contro lo stesso nemico infliggono invece <magicDamage>@SubsequentDamage@ danni magici</magicDamage>.<br><br>L'esplosione fornisce anche <shield>@TotalShield@ di scudo</shield> e <speed>@TotalMS@ velocità di movimento</speed> per @BuffDuration@ secondo/i a Mel e ai suoi alleati.@SpellModifierDescriptionAppend@",
             "range": [
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0
             ],
             "costCoefficients": [
-                80.0,
-                60.0,
-                40.0,
-                20.0,
+                100.0,
+                75.0,
+                50.0,
+                25.0,
                 0.0,
                 0.0
             ],
             "cooldownCoefficients": [
-                38.0,
-                35.0,
-                33.0,
-                29.0,
-                26.0,
-                26.0
+                30.0,
+                28.5,
+                27.0,
+                25.5,
+                24.0,
+                22.5
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -777,7 +777,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Mel lancia una sfera radiosa che infligge danni nel tempo e rallenta i nemici nelle vicinanze, trattenendo quelli al suo interno.",
-            "dynamicDescription": "Mel lancia una sfera radiosa, <status>trattenendo</status> i nemici al suo interno per @RootDuration@ secondi e infliggendo <magicDamage>@Damage@ danni magici</magicDamage>.<br><br>La sfera genera attorno a sé un'area avversa che <status>rallenta</status> i nemici di un @AreaSlowAmount*100@% e infligge <magicDamage>@AreaDamagePerSecond@ danni magici al secondo</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel lancia una sfera radiosa, <status>trattenendo</status> i nemici al suo interno per una durata da @RootDurationMin@ a @RootDurationMax@ secondi (in base alla distanza percorsa) e infliggendo <magicDamage>@Damage@ danni magici</magicDamage>.<br><br>La sfera genera attorno a sé un'area avversa che <status>rallenta</status> i nemici di un @AreaSlowAmount*100@% e infligge <magicDamage>@AreaDamagePerSecond@ danni magici al secondo</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -787,11 +787,11 @@
                 1000.0
             ],
             "costCoefficients": [
+                40.0,
                 50.0,
                 60.0,
                 70.0,
                 80.0,
-                90.0,
                 90.0
             ],
             "cooldownCoefficients": [
@@ -946,11 +946,11 @@
             ],
             "cooldownCoefficients": [
                 120.0,
-                100.0,
-                80.0,
-                80.0,
-                80.0,
-                60.0
+                90.0,
+                60.0,
+                30.0,
+                15.0,
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

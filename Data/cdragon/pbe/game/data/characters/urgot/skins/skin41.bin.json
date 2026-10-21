@@ -31685,11 +31685,6 @@
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
-                "TextureName": "Pattern_Mask",
-                "texturePath": "assets/shared/materials/black.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
                 "TextureName": "Pattern_01",
                 "texturePath": "{2b5c185c2485e667}",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -31798,6 +31793,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Fresnel_As_Mask_Power",
                 "value": [
@@ -32468,6 +32503,19 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_THIN_FILM",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_INNER_FRESNEL",
                 "on": false,

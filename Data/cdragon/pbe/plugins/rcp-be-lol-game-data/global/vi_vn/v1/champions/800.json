@@ -470,14 +470,14 @@
     "spells": [
         {
             "spellKey": "q",
-            "name": "Chùm Sáng Hội Tụ",
+            "name": "Quang Xạ Rực Rỡ",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Mel/HUD/Icons2D/Mel_Q.png",
             "abilityVideoPath": "champion-abilities/0800/ability_0800_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Mel bắn ra hàng loạt tia năng lượng phát nổ xung quanh một vị trí chỉ định, liên tục gây sát thương lên các kẻ địch trong khu vực này.",
-            "dynamicDescription": "Mel bắn ra một loạt @ExplosionCount@ tia năng lượng phát nổ xung quanh một vị trí chỉ định.<br><br>Vụ nổ đầu tiên trúng đòn gây <magicDamage>@InitialExplosionDamage@ sát thương phép</magicDamage> và mỗi vụ nổ tiếp thep sẽ gây <magicDamage>@TotalExplosionDamage@ sát thương phép</magicDamage>, tổng cộng tối đa <magicDamage>@AllDamageHit@ sát thương phép</magicDamage>.@SpellModifierDescriptionAppend@",
+            "description": "Mel bắn ra một loạt đạn gây sát thương phép. Đánh trúng tướng địch sẽ giảm hồi chiêu của kỹ năng này.",
+            "dynamicDescription": "Mel bắn ra một loạt @Count@ tia đạn, phát nổ tại vị trí chỉ định. Lần đầu trúng tia đạn, kẻ địch chịu <magicDamage>@InitialDamage@ sát thương phép</magicDamage>, các lần trúng tiếp theo gây <magicDamage>@SubsequentDamage@ sát thương phép</magicDamage> mỗi lần, tối đa <magicDamage>@TotalDamage@ sát thương phép</magicDamage>.<br><br>Nếu loạt tia đạn đánh trúng một tướng địch ít nhất một lần, hồi chiêu của kỹ năng này sẽ giảm @CDRefundChampHit@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -487,12 +487,12 @@
                 950.0
             ],
             "costCoefficients": [
+                60.0,
+                65.0,
                 70.0,
                 75.0,
                 80.0,
-                85.0,
-                90.0,
-                90.0
+                85.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -500,7 +500,7 @@
                 8.0,
                 7.0,
                 6.0,
-                6.0
+                5.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -626,31 +626,31 @@
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Mel tạo một rào chắn xung quanh bản thân giúp phản lại đường đạn phe địch về phía kẻ tấn công, ngăn cô nhận sát thương, đồng thời cho cô thêm tốc độ di chuyển.",
-            "dynamicDescription": "Mel tạo một rào chắn xung quanh bản thân giúp phản lại đường đạn từ tướng địch, nhận <shield>@ShieldAmount@ Lá Chắn</shield> trong @Duration@ giây và cho cô thêm <speed>@MoveSpeed*100@% Tốc Độ Di Chuyển giảm dần</speed> trong @MoveSpeedDuration@ giây.<br><br>Các đường đạn bị phản lại sẽ gây <magicDamage>@DamagePercent@ sát thương gốc dưới dạng sát thương phép</magicDamage>.@SpellModifierDescriptionAppend@",
+            "description": "Mel phóng ra một làn sóng khúc xạ, phá hủy các đường đạn của kẻ địch va phải và phản công lại bằng tia năng lượng ma thuật.<br><br>Làn sóng đồng thời tạo lá chắn và tăng tốc độ di chuyển cho Mel và đồng minh của cô.",
+            "dynamicDescription": "Mel phóng ra một làn sóng khúc xạ, phá hủy các đường đạn của kẻ địch va phải và phản công lại, gây <magicDamage>@InitialDamage@ sát thương phép</magicDamage>. Các đòn phản công tiếp theo lên cùng một kẻ địch sẽ gây <magicDamage>@SubsequentDamage@ sát thương phép</magicDamage>.<br><br>Làn sóng đồng thời ban <shield>@TotalShield@ Lá Chắn</shield> và <speed>@TotalMS@ Tốc Độ Di Chuyển</speed> trong @BuffDuration@ giây cho Mel và đồng minh của cô.@SpellModifierDescriptionAppend@",
             "range": [
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0
             ],
             "costCoefficients": [
-                80.0,
-                60.0,
-                40.0,
-                20.0,
+                100.0,
+                75.0,
+                50.0,
+                25.0,
                 0.0,
                 0.0
             ],
             "cooldownCoefficients": [
-                38.0,
-                35.0,
-                33.0,
-                29.0,
-                26.0,
-                26.0
+                30.0,
+                28.5,
+                27.0,
+                25.5,
+                24.0,
+                22.5
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -777,7 +777,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Mel bắn một quả cầu rực sáng về phía trước, trói chân những kẻ ở chính giữa, đồng thời làm chậm và gây sát thương theo thời gian lên kẻ địch xung quanh nó.",
-            "dynamicDescription": "Mel bắn một quả cầu rực sáng, <status>Trói Chân</status> những kẻ ở chính giữa trong @RootDuration@ giây và gây <magicDamage>@Damage@ sát thương phép</magicDamage>.<br><br>Quả cầu sẽ giải phóng năng lượng thù địch ra xung quanh, <status>Làm Chậm</status> kẻ địch @AreaSlowAmount*100@% và gây <magicDamage>@AreaDamagePerSecond@ sát thương phép mỗi giây</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel bắn một quả cầu rực sáng, <status>Trói Chân</status> kẻ địch ở chính giữa trong @RootDurationMin@ đến @RootDurationMax@ giây (dựa trên khoảng cách bay) và gây <magicDamage>@Damage@ sát thương phép</magicDamage>.<br><br>Quả cầu sẽ giải phóng năng lượng thù địch ra xung quanh, <status>Làm Chậm</status> kẻ địch đi @AreaSlowAmount*100@% và gây <magicDamage>@AreaDamagePerSecond@ sát thương phép mỗi giây</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -787,11 +787,11 @@
                 1000.0
             ],
             "costCoefficients": [
+                40.0,
                 50.0,
                 60.0,
                 70.0,
                 80.0,
-                90.0,
                 90.0
             ],
             "cooldownCoefficients": [
@@ -946,11 +946,11 @@
             ],
             "cooldownCoefficients": [
                 120.0,
-                100.0,
-                80.0,
-                80.0,
-                80.0,
-                60.0
+                90.0,
+                60.0,
+                30.0,
+                15.0,
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

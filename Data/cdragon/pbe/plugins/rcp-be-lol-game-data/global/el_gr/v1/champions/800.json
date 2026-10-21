@@ -476,8 +476,8 @@
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Η Μελ εκτοξεύει μια ομοβροντία βλημάτων που εκρήγνυνται γύρω από μια στοχευόμενη τοποθεσία και προκαλούν επαναλαμβανόμενη ζημιά στους εχθρούς μέσα σε αυτήν την περιοχή.",
-            "dynamicDescription": "Η Μελ εκτοξεύει μια ομοβροντία @ExplosionCount@ βλημάτων που εκρήγνυνται γύρω από μια στοχευόμενη τοποθεσία.<br><br>Το χτύπημα της πρώτης έκρηξης προκαλεί <magicDamage>@InitialExplosionDamage@ Μαγική Ζημιά</magicDamage> και κάθε επόμενη έκρηξη προκαλεί <magicDamage>@TotalExplosionDamage@ Μαγική Ζημιά</magicDamage>, η οποία έχει ανώτατο όριο <magicDamage>@AllDamageHit@ Μαγική Ζημιά</magicDamage>.@SpellModifierDescriptionAppend@",
+            "description": "Η Μελ εξαπολύει μια ομοβροντία από βλήματα που προκαλούν Μαγική Ζημιά. Όταν χτυπάτε έναν αντίπαλο ήρωα, μειώνεται ο χρόνος επαναφόρτισης αυτής της ικανότητας.",
+            "dynamicDescription": "Η Μελ εξαπολύει ένα μπαράζ από @Count@ πυραύλους που εκρήγνυνται στην τοποθεσία-στόχο. Την πρώτη φορά που χτυπάτε έναν εχθρό, υφίσταται <magicDamage>@InitialDamage@ Μαγική Ζημιά</magicDamage>, ενώ τα επόμενα χτυπήματα προκαλούν <magicDamage>@SubsequentDamage@ Μαγική Ζημιά</magicDamage> το καθένα, για μέγιστη <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage>.<br><br>Αν η ομοβροντία χτυπήσει έναν αντίπαλο Ήρωα τουλάχιστον μία φορά, ο χρόνος επαναφόρτισης αυτής της ικανότητας μειώνεται κατά @CDRefundChampHit@ δευτερόλεπτα.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -487,12 +487,12 @@
                 950.0
             ],
             "costCoefficients": [
+                60.0,
+                65.0,
                 70.0,
                 75.0,
                 80.0,
-                85.0,
-                90.0,
-                90.0
+                85.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -500,7 +500,7 @@
                 8.0,
                 7.0,
                 6.0,
-                6.0
+                5.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -626,31 +626,31 @@
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Η Μελ δημιουργεί ένα φράγμα γύρω της που αντανακλά τα εχθρικά βλήματα πίσω στον επιτιθέμενο, αποτρέπει την εισερχόμενη ζημιά και αποκτά Ταχύτητα Κίνησης.",
-            "dynamicDescription": "Η Μελ δημιουργεί ένα φράγμα γύρω της που αντανακλά τα βλήματα των εχθρικών Ηρώων, αποκτά <shield>@ShieldAmount@ Ασπίδες</shield> για @Duration@ δευτ. και <speed>@MoveSpeed*100@% Ταχύτητα Κίνησης που χάνεται</speed> για @MoveSpeedDuration@ δευτ.<br><br>Τα βλήματα που αποκρούστηκαν προκαλούν <magicDamage>@DamagePercent@ αρχική ζημιά ως Μαγική Ζημιά</magicDamage>.@SpellModifierDescriptionAppend@",
+            "description": "Η Μελ εξαπολύει μια νόβα διάθλασης που καταστρέφει τα εχθρικά βλήματα με τα οποία συγκρούεται, ανταποδίδοντας τα πυρά με μαγικά βλήματα.<br><br>Η νόβα παρέχει επίσης ασπίδα και ταχύτητα κίνησης στη Μελ και τους συμμάχους της.",
+            "dynamicDescription": "Η Μελ εξαπολύει μια νόβα διάθλασης που καταστρέφει τα εχθρικά βλήματα με τα οποία συγκρούεται, προκαλώντας <magicDamage>@InitialDamage@ Μαγική Ζημιά</magicDamage> ως αντίποινα. Τα επόμενα αντίποινα εναντίον του ίδιου εχθρού προκαλούν <magicDamage>@SubsequentDamage@ Μαγική Ζημιά</magicDamage> .<br><br>Η νόβα παρέχει επίσης <shield>@TotalShield@ Ασπίδα</shield> και <speed>@TotalMS@ Ταχύτητα Κίνησης</speed> για @BuffDuration@δευτ. στη Μελ και τους συμμάχους της.@SpellModifierDescriptionAppend@",
             "range": [
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0
             ],
             "costCoefficients": [
-                80.0,
-                60.0,
-                40.0,
-                20.0,
+                100.0,
+                75.0,
+                50.0,
+                25.0,
                 0.0,
                 0.0
             ],
             "cooldownCoefficients": [
-                38.0,
-                35.0,
-                33.0,
-                29.0,
-                26.0,
-                26.0
+                30.0,
+                28.5,
+                27.0,
+                25.5,
+                24.0,
+                22.5
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -777,7 +777,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Μελ εκτοξεύει προς τα εμπρός μια λαμπερή σφαίρα, ριζώντας τους εχθρούς στο κέντρο της, ενώ η γύρω περιοχή επιβραδύνει τους εχθρούς και προκαλεί ζημιά σε βάθος χρόνου.",
-            "dynamicDescription": "Η Μελ ρίχνει μια λαμπερή σφαίρα, η οποία <status>Ριζώνει</status> τους εχθρούς στο κέντρο της για @RootDuration@ δευτ. και προκαλεί <magicDamage>@Damage@ Μαγική Ζημιά</magicDamage>.<br><br>Η σφαίρα δημιουργεί μια εχθρική περιοχή γύρω της που <status>Επιβραδύνει</status> τους εχθρούς κατά @AreaSlowAmount*100@% και προκαλεί <magicDamage>@AreaDamagePerSecond@ Μαγική Ζημιά ανά δευτερόλεπτο</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Η Μελ ρίχνει μια λαμπερή σφαίρα, η οποία <status>Ριζώνει</status> τους εχθρούς στο κέντρο της για @RootDurationMin@ έως @RootDurationMax@ δευτ. (ανάλογα με την απόσταση που διένυσε) και προκαλεί <magicDamage>@Damage@ Μαγική Ζημιά</magicDamage>.<br><br>Η σφαίρα δημιουργεί μια εχθρική περιοχή γύρω της που <status>Επιβραδύνει</status> τους εχθρούς κατά @AreaSlowAmount*100@% και προκαλεί <magicDamage>@AreaDamagePerSecond@ Μαγική Ζημιά ανά δευτερόλεπτο</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -787,11 +787,11 @@
                 1000.0
             ],
             "costCoefficients": [
+                40.0,
                 50.0,
                 60.0,
                 70.0,
                 80.0,
-                90.0,
                 90.0
             ],
             "cooldownCoefficients": [
@@ -946,11 +946,11 @@
             ],
             "cooldownCoefficients": [
                 120.0,
-                100.0,
-                80.0,
-                80.0,
-                80.0,
-                60.0
+                90.0,
+                60.0,
+                30.0,
+                15.0,
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

@@ -470,14 +470,14 @@
     "spells": [
         {
             "spellKey": "q",
-            "name": "Radiant Volley",
+            "name": "Radiant Barrage",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Mel/HUD/Icons2D/Mel_Q.png",
             "abilityVideoPath": "champion-abilities/0800/ability_0800_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Mel menembakkan rentetan proyektil yang meledak di sekitar lokasi target, menghasilkan damage berulang kali pada musuh di area itu.",
-            "dynamicDescription": "Mel melepaskan rentetan @ExplosionCount@ proyektil yang meledak di area sekitar lokasi target.<br><br>Ledakan pertama memberikan <magicDamage>@InitialExplosionDamage@ magic damage</magicDamage>, dan setiap ledakan berikutnya memberikan <magicDamage>@TotalExplosionDamage@ magic damage</magicDamage>, dengan total hingga <magicDamage>@AllDamageHit@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
+            "description": "Mel melontarkan serangkaian proyektil yang menghasilkan magic damage. Mengenai champion musuh akan mengurangi cooldown ability ini.",
+            "dynamicDescription": "Mel melepaskan rentetan @Count@ misil yang meledak di lokasi target. Pertama kali musuh terkena serangan, mereka menerima <magicDamage>@InitialDamage@ magic damage</magicDamage>, lalu setiap serangan berikutnya menghasilkan masing-masing <magicDamage>@SubsequentDamage@ magic damage</magicDamage>, hingga maksimum <magicDamage>@TotalDamage@ magic damage</magicDamage>.<br><br>Jika serangan beruntun mengenai champion musuh setidaknya sekali, cooldown ability ini akan berkurang sebesar @CDRefundChampHit@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -487,12 +487,12 @@
                 950.0
             ],
             "costCoefficients": [
+                60.0,
+                65.0,
                 70.0,
                 75.0,
                 80.0,
-                85.0,
-                90.0,
-                90.0
+                85.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -500,7 +500,7 @@
                 8.0,
                 7.0,
                 6.0,
-                6.0
+                5.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -626,31 +626,31 @@
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_W1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Mel membentuk barrier di sekitarnya yang memantulkan proyektil musuh ke arah penyerang, mencegahnya menerima damage, dan memberinya movement speed.",
-            "dynamicDescription": "Mel membentuk penghalang di sekeliling dirinya yang memantulkan proyektil dari champion musuh, mendapatkan <shield>@ShieldAmount@ Shield</shield> selama @Duration@ detik dan <speed>@MoveSpeed*100@% Move Speed yang berkurang seiring waktu</speed> selama @MoveSpeedDuration@ detik.<br><br>Proyektil yang dipantulkan menghasilkan <magicDamage>@DamagePercent@ damage awal sebagai magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
+            "description": "Mel melepaskan refraction nova yang menghancurkan proyektil musuh saat bersentuhan dengannya, lalu membalas dengan magic missile.<br><br>Nova ini juga memberikan shield dan move speed kepada Mel dan sekutunya.",
+            "dynamicDescription": "Mel melepaskan refraction nova yang menghancurkan proyektil musuh saat bersentuhan dengannya, sekaligus memberikan serangan balasan berupa <magicDamage>@InitialDamage@ magic damage</magicDamage>. Serangan balasan susulan terhadap musuh yang sama menghasilkan <magicDamage>@SubsequentDamage@ magic damage</magicDamage> sebagai gantinya.<br><br>Nova ini juga memberikan <shield>@TotalShield@ Shield</shield> dan <speed>@TotalMS@ Move Speed</speed> selama @BuffDuration@ detik kepada Mel dan sekutunya.@SpellModifierDescriptionAppend@",
             "range": [
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0
             ],
             "costCoefficients": [
-                80.0,
-                60.0,
-                40.0,
-                20.0,
+                100.0,
+                75.0,
+                50.0,
+                25.0,
                 0.0,
                 0.0
             ],
             "cooldownCoefficients": [
-                38.0,
-                35.0,
-                33.0,
-                29.0,
-                26.0,
-                26.0
+                30.0,
+                28.5,
+                27.0,
+                25.5,
+                24.0,
+                22.5
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -777,7 +777,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Mel menembakkan orb pijar ke depan, menerapkan root pada mereka yang berada di pusatnya. Sementara itu, area di sekitarnya menerapkan slow pada musuh dan menghasilkan damage berkelanjutan.",
-            "dynamicDescription": "Mel menembakkan orb bercahaya, menerapkan <status>Root</status> pada musuh yang berada di pusatnya selama @RootDuration@ detik dan menghasilkan <magicDamage>@Damage@ magic damage</magicDamage>.<br><br>Orb ini menciptakan area berbahaya di sekitarnya yang menerapkan <status>Slow</status> pada musuh sebesar @AreaSlowAmount*100@% dan menghasilkan <magicDamage>@AreaDamagePerSecond@ magic damage per detik</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel menembakkan orb bercahaya, menerapkan <status>Root</status> pada musuh yang berada di pusatnya selama @RootDurationMin@ hingga @RootDurationMax@ detik (berdasarkan jarak yang sudah ditempuh) dan menghasilkan <magicDamage>@Damage@ magic damage</magicDamage>.<br><br>Orb ini menciptakan area berbahaya di sekitarnya yang menerapkan <status>Slow</status> pada musuh sebesar @AreaSlowAmount*100@% dan menghasilkan <magicDamage>@AreaDamagePerSecond@ magic damage per detik</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -787,11 +787,11 @@
                 1000.0
             ],
             "costCoefficients": [
+                40.0,
                 50.0,
                 60.0,
                 70.0,
                 80.0,
-                90.0,
                 90.0
             ],
             "cooldownCoefficients": [
@@ -946,11 +946,11 @@
             ],
             "cooldownCoefficients": [
                 120.0,
-                100.0,
-                80.0,
-                80.0,
-                80.0,
-                60.0
+                90.0,
+                60.0,
+                30.0,
+                15.0,
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

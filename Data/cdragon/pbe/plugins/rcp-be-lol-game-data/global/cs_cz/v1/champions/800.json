@@ -476,8 +476,8 @@
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_Q1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Mel vystřelí salvu projektilů, které vybuchnou kolem cílového místa a nepřátelům v oblasti opakovaně způsobí poškození.",
-            "dynamicDescription": "Mel vystřelí salvu @ExplosionCount@ projektilů, které vybuchnou v oblasti kolem cílové pozice.<br><br>Zásah prvním výbuchem způsobí <magicDamage>@InitialExplosionDamage@ bodů magického poškození</magicDamage> a všechny následující výbuchy způsobují <magicDamage>@TotalExplosionDamage@ bodů magického poškození</magicDamage>, celkově tak lze způsobit až <magicDamage>@AllDamageHit@ bodů magického poškození</magicDamage>.@SpellModifierDescriptionAppend@",
+            "description": "Mel vypustí salvu projektilů, které způsobí magické poškození. Zásah nepřátelského šampiona zkracuje přebíjecí dobu této schopnosti.",
+            "dynamicDescription": "Mel vypustí salvu @Count@ projektilů, které explodují v cílovém místě. Při prvním zásahu utrpí nepřítel <magicDamage>@InitialDamage@ bodů magického poškození</magicDamage>. Každý následný zásah způsobí <magicDamage>@SubsequentDamage@ bodů magického poškození</magicDamage>, a to až do maximální výše <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>.<br><br>Pokud salva alespoň jednou zasáhne nepřátelského šampiona, přebíjecí doba této schopnosti se zkrátí o @CDRefundChampHit@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -487,12 +487,12 @@
                 950.0
             ],
             "costCoefficients": [
+                60.0,
+                65.0,
                 70.0,
                 75.0,
                 80.0,
-                85.0,
-                90.0,
-                90.0
+                85.0
             ],
             "cooldownCoefficients": [
                 10.0,
@@ -500,7 +500,7 @@
                 8.0,
                 7.0,
                 6.0,
-                6.0
+                5.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -626,31 +626,31 @@
             "abilityVideoImagePath": "champion-abilities/0800/ability_0800_W1.jpg",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Mel kolem sebe vytvoří bariéru, která odráží nepřátelské projektily zpět na útočníka a zabraňuje jí utrpět poškození, sama navíc získá bonus k rychlosti pohybu.",
-            "dynamicDescription": "Mel kolem sebe vytvoří bariéru, která odráží projektily vystřelené nepřátelskými šampiony, a získá na @Duration@&nbsp;sek. <shield>štít o síle @ShieldAmount@ bodů</shield> a <speed>@MoveSpeed*100@% bonus k rychlosti pohybu</speed>, jenž během @MoveSpeedDuration@&nbsp;sek. postupně odeznívá.<br><br>Odražené projektily způsobují <magicDamage>magické poškození ve výši @DamagePercent@ původního poškození</magicDamage>.@SpellModifierDescriptionAppend@",
+            "description": "Mel vypustí refrakční novu, která zničí nepřátelské projektily, s nimiž se srazí, a oplatí útok magickými střelami.<br><br>Nova rovněž poskytne Mel a jejím spojencům štít a zvýší jim rychlost pohybu.",
+            "dynamicDescription": "Mel vypustí refrakční novu, která ničí nepřátelské projektily, s nimiž se srazí, a v odvetě způsobí <magicDamage>@InitialDamage@ bodů magického poškození</magicDamage>. Následné odvety proti stejnému nepříteli způsobí <magicDamage>@SubsequentDamage@ bodů magického poškození</magicDamage>.<br><br>Nova také Mel a jejím spojencům poskytne <shield>štít o síle @TotalShield@ bodů</shield> a zvýší jim <speed>rychlost pohybu o @TotalMS@</speed>, a to na @BuffDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0,
-                250.0
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0
             ],
             "costCoefficients": [
-                80.0,
-                60.0,
-                40.0,
-                20.0,
+                100.0,
+                75.0,
+                50.0,
+                25.0,
                 0.0,
                 0.0
             ],
             "cooldownCoefficients": [
-                38.0,
-                35.0,
-                33.0,
-                29.0,
-                26.0,
-                26.0
+                30.0,
+                28.5,
+                27.0,
+                25.5,
+                24.0,
+                22.5
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -777,7 +777,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Mel před sebe vystřelí zářivou kouli, která znehybní nepřátele ve svém středu, okolní jednotky zpomalí a způsobí postupné poškození.",
-            "dynamicDescription": "Mel vystřelí zářivou kouli, která na @RootDuration@&nbsp;sek. <status>znehybní</status> nepřátele ve svém středu a způsobí jim <magicDamage>@Damage@ bodů magického poškození</magicDamage>.<br><br>Koule kolem sebe vytvoří nehostinnou oblast, která <status>zpomaluje</status> nepřátele o @AreaSlowAmount*100@&nbsp;% a způsobuje jim <magicDamage>@AreaDamagePerSecond@ bodů magického poškození za sekundu</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Mel vystřelí zářivou kouli, která <status>znehybní</status> nepřátele ve svém středu na @RootDurationMin@ až @RootDurationMax@ sek. (v závislosti na uražené vzdálenosti) a způsobí jim <magicDamage>@Damage@ bodů magického poškození</magicDamage>.<br><br>Koule kolem sebe vytvoří nehostinnou oblast, která <status>zpomaluje</status> nepřátele o @AreaSlowAmount*100@ % a způsobuje jim <magicDamage>@AreaDamagePerSecond@ bodů magického poškození za sekundu</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -787,11 +787,11 @@
                 1000.0
             ],
             "costCoefficients": [
+                40.0,
                 50.0,
                 60.0,
                 70.0,
                 80.0,
-                90.0,
                 90.0
             ],
             "cooldownCoefficients": [
@@ -946,11 +946,11 @@
             ],
             "cooldownCoefficients": [
                 120.0,
-                100.0,
-                80.0,
-                80.0,
-                80.0,
-                60.0
+                90.0,
+                60.0,
+                30.0,
+                15.0,
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

@@ -1350,65 +1350,6 @@
                 "Trait_Ranged_Zone",
                 "Trait_AoE"
             ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        30.0,
-                        60.0,
-                        90.0,
-                        120.0,
-                        150.0,
-                        180.0,
-                        210.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        70.0,
-                        70.0,
-                        70.0,
-                        70.0,
-                        70.0,
-                        70.0,
-                        70.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BaseDamage",
@@ -1426,32 +1367,19 @@
                 {
                     "name": "ReducedDamagePercent",
                     "values": [
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MinimumDamagePercent",
-                    "values": [
-                        70.0,
-                        70.0,
-                        70.0,
-                        70.0,
-                        70.0,
-                        70.0,
-                        70.0
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071
                     ],
                     "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
-                "TotalDamageTooltip": {
+                "TotalDamage": {
                     "mFormulaParts": [
                         {
                             "mDataValue": "BaseDamage",
@@ -1464,24 +1392,16 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "MinimumDamageTooltip": {
+                "ReducedDamage": {
                     "mMultiplier": {
-                        "mPart1": {
-                            "mNumber": 0.009999999776482582,
-                            "__type": "NumberCalculationPart"
-                        },
-                        "mPart2": {
-                            "mDataValue": "MinimumDamagePercent",
-                            "__type": "NamedDataValueCalculationPart"
-                        },
-                        "__type": "ProductOfSubPartsCalculationPart"
+                        "mDataValue": "{744f889d}",
+                        "__type": "NamedDataValueCalculationPart"
                     },
                     "mSimpleTooltipCalculationDisplay": 6,
-                    "mModifiedGameCalculation": "TotalDamageTooltip",
+                    "mModifiedGameCalculation": "TotalDamage",
                     "__type": "GameCalculationModified"
                 }
             },
-            "mCoefficient": 0.550000011920929,
             "mAnimationName": "Spell1",
             "mImgIconName": [
                 "ASSETS/Characters/Orianna/HUD/Icons2D/OriannaQ.dds"
@@ -1692,7 +1612,7 @@
             "{6d548702}": {
                 "mFormulaParts": [
                     {
-                        "mSpellCalculationKey": "TotalDamageTooltip",
+                        "mSpellCalculationKey": "TotalDamage",
                         "__type": "{f3cbe7b2}"
                     }
                 ],
