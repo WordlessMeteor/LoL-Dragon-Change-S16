@@ -12267,7 +12267,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.png",
-        "tooltip_text": "Cada @CastsToGainXP@ lanzamientos, el Guardián del Tiempo almacena <TFTBonus>@XPPerCast@</TFTBonus> de XP. Si tiene suficiente XP almacenada para que subas de nivel, te transfiere la cantidad que&nbsp;necesites. <br><br>Si eres nivel 10, obtiene un <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;de Amplificación de daño.<br><br><rules>XP almacenada: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventER><br><br>En el Tesoro de Pachonc, la cantidad de lanzamientos necesarios para obtener XP aumenta a @CastsToGainXPCT@ hasta la fase 3-5.</ShowIfCustom.Set=TFTSetEventER>",
+        "tooltip_text": "Cada @CastsToGainXP@ lanzamientos, el Guardián del Tiempo almacena <TFTBonus>@XPPerCast@</TFTBonus> de XP. Si tiene suficiente XP almacenada para que subas de nivel, te transfiere la cantidad que&nbsp;necesites. <br><br>Si eres nivel 10, obtiene un <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;de Amplificación de Daño.<br><br><rules>XP almacenada: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -13783,7 +13783,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.png",
-        "tooltip_text": "Cada seg, las unidades shurimanas obtienen un @ASPerSecond*100@% de Velocidad de Ataque y recuperan @HealthRestorePerSecond@ de Vida. Además, al inicio del combate, obtienen efectos adicionales.<ShowIfCustom.Set=TFTSetEventER><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>Prismático: Desbloquea a Nasus, Renekton y Xerath. Después, despliega a 4 campeones de Shurima</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventER><br><br><row>(@MinUnits@) @BonusHealth*100@% de Vida Máxima.</row><br><row>(@MinUnits@) @ArmorMR@ de Armadura y Resistencia Mágica.</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>Cada @GodhoodCadence@ seg, una unidad shurimana asciende al rango de DIVINIDAD. </ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventER><ShowIf.TFT16_Shurima_NoPrismatic>Solo está disponible tras desbloquear a Nasus, Renekton y Xerath.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventER></row>",
+        "tooltip_text": "Cada segundo, las unidades shurimanas obtienen un @ASPerSecond*100@% de Velocidad de Ataque y restauran @HealthRestorePerSecond@ de Vida. Al inicio del combate, obtienen efectos adicionales.<br><br><row>(@MinUnits@) @BonusHealth*100@% de Vida Máxima</row><br><row>(@MinUnits@) @ArmorMR@ de Armadura y Resistencia Mágica</row><br><row>(@MinUnits@) Una unidad shurimana asciende al rango de DIVINIDAD cada @GodhoodCadence@ seg.</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -14587,7 +14587,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.png",
-        "tooltip_text": "Puede aparecer un Amuleto Ascendente en la tienda tras cada combate. Estos son efectos poderosos que se pueden comprar con oro.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>En el Tesoro de Pachonc, los amuletos Hallazgo Aciago y Seguidores Leales no pueden aparecer hasta que alcances el nivel 7.</ShowIfCustom.Set=TFTSetEventCT>",
+        "tooltip_text": "Puede aparecer un Amuleto Ascendente en la tienda tras cada combate. Estos son efectos poderosos que se pueden comprar con oro.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -18035,7 +18035,7 @@
                     },
                     {
                         "name": "StatMultiplier",
-                        "value": 0.6
+                        "value": 0.5
                     }
                 ],
                 "min_units": 6,
@@ -18510,7 +18510,7 @@
                     },
                     {
                         "name": "Heal",
-                        "value": 2.5
+                        "value": 3.0
                     }
                 ],
                 "min_units": 2,
@@ -18526,7 +18526,7 @@
                     },
                     {
                         "name": "Heal",
-                        "value": 4.0
+                        "value": 5.0
                     }
                 ],
                 "min_units": 4,
@@ -18826,11 +18826,11 @@
                 "constants": [
                     {
                         "name": "AbilityPower",
-                        "value": 0.1
+                        "value": 0.12
                     },
                     {
                         "name": "AttackSpeed",
-                        "value": 0.12
+                        "value": 0.1
                     }
                 ],
                 "min_units": 3,
@@ -18842,11 +18842,11 @@
                 "constants": [
                     {
                         "name": "AbilityPower",
-                        "value": 0.14
+                        "value": 0.16
                     },
                     {
                         "name": "AttackSpeed",
-                        "value": 0.16
+                        "value": 0.14
                     }
                 ],
                 "min_units": 4,
@@ -18858,11 +18858,11 @@
                 "constants": [
                     {
                         "name": "AbilityPower",
-                        "value": 0.18
+                        "value": 0.2
                     },
                     {
                         "name": "AttackSpeed",
-                        "value": 0.2
+                        "value": 0.18
                     }
                 ],
                 "min_units": 5,
@@ -18965,7 +18965,7 @@
                 "constants": [
                     {
                         "name": "ASPerAttack",
-                        "value": 0.08
+                        "value": 0.07
                     }
                 ],
                 "min_units": 4,
@@ -18977,7 +18977,7 @@
                 "constants": [
                     {
                         "name": "ASPerAttack",
-                        "value": 0.12
+                        "value": 0.1
                     }
                 ],
                 "min_units": 5,
@@ -19127,7 +19127,7 @@
                     },
                     {
                         "name": "NumThreeStarThreshold3",
-                        "value": 7.0
+                        "value": 8.0
                     },
                     {
                         "name": "PercentIncreasePer3Star",
@@ -19274,11 +19274,11 @@
                 "constants": [
                     {
                         "name": "AttackSpeedIncrease",
-                        "value": 0.45
+                        "value": 0.55
                     },
                     {
                         "name": "HealthIncrease",
-                        "value": 0.45
+                        "value": 0.55
                     },
                     {
                         "name": "TeamwideRatio",
@@ -19445,7 +19445,7 @@
                     },
                     {
                         "name": "Durability",
-                        "value": 0.07
+                        "value": 0.05
                     }
                 ]
             }
@@ -19515,7 +19515,7 @@
                 "constants": [
                     {
                         "name": "PercentHeal",
-                        "value": 0.08
+                        "value": 0.07
                     }
                 ],
                 "min_units": 2,
@@ -19552,7 +19552,7 @@
                 "constants": [
                     {
                         "name": "JuggernautDurability",
-                        "value": 0.33
+                        "value": 0.3
                     },
                     {
                         "name": "TeamDurability",

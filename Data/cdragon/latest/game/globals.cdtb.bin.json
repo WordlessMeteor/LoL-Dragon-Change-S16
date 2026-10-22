@@ -9078,6 +9078,15 @@
         "name": "ShenWBlockVFX",
         "__type": "DesignerEvent"
     },
+    "Globals/DesignerEvents/Kiwi_CollectibleVFXCheck": {
+        "name": "Kiwi_CollectibleVFXCheck",
+        "EventParameters": {
+            "ShouldRevealVFX": {
+                "__type": "{ec8e071a}"
+            }
+        },
+        "__type": "DesignerEvent"
+    },
     "Globals/DesignerEvents/EnergizedAttackHitChain": {
         "name": "EnergizedAttackHitChain",
         "__type": "DesignerEvent"
@@ -18612,6 +18621,10 @@
         ],
         "__type": "GameMutatorExpansions"
     },
+    "{0911ae91}": {
+        "mExpandedMutator": "KiwiDisableGoH",
+        "__type": "GameMutatorExpansions"
+    },
     "{096ee9d5}": {
         "mExpandedMutator": "TFT_Set9_Stage2_EndOfSet",
         "mMutators": [
@@ -19009,6 +19022,42 @@
         ],
         "__type": "GameMutatorExpansions"
     },
+    "{29ce7047}": {
+        "mExpandedMutator": "KiwiS3_GoH_CafeCuties",
+        "__type": "GameMutatorExpansions"
+    },
+    "{2f8f843e}": {
+        "mExpandedMutator": "KiwiS3_GoH_Heartsteel",
+        "__type": "GameMutatorExpansions"
+    },
+    "{47f01f43}": {
+        "mExpandedMutator": "KiwiS3_GoH_Pentakill",
+        "__type": "GameMutatorExpansions"
+    },
+    "{6a86dd74}": {
+        "mExpandedMutator": "KiwiS3_GoH_CommandLine",
+        "__type": "GameMutatorExpansions"
+    },
+    "{833abdbc}": {
+        "mExpandedMutator": "KiwiS3_GoH_Worlds",
+        "__type": "GameMutatorExpansions"
+    },
+    "{89722100}": {
+        "mExpandedMutator": "KiwiS3_GoH_Bees",
+        "__type": "GameMutatorExpansions"
+    },
+    "{a8c7f134}": {
+        "mExpandedMutator": "KiwiS3_GoH_TrueDamage",
+        "__type": "GameMutatorExpansions"
+    },
+    "{c58e832d}": {
+        "mExpandedMutator": "KiwiS3_GoH_Disco",
+        "__type": "GameMutatorExpansions"
+    },
+    "{d71c596d}": {
+        "mExpandedMutator": "KiwiS3_GoH_KDA",
+        "__type": "GameMutatorExpansions"
+    },
     "{2a5c5b96}": {
         "mExpandedMutator": "TFT_Cosmetics_Asset_Viewer",
         "mMutators": [
@@ -19028,6 +19077,15 @@
         "mMutators": [
             "MapSkin_SRU_MSI",
             "MapObjectESportTeamCustomization(1)"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
+    "{2b0d0db1}": {
+        "mExpandedMutator": "TFT_Set18_Halloween_CT",
+        "mMutators": [
+            "TFTSetOverride(TFTSetEventER)",
+            "AudioFeature(TFTSet16)",
+            "TFT_RolesRevamped(1)"
         ],
         "__type": "GameMutatorExpansions"
     },
@@ -19535,6 +19593,13 @@
         ],
         "__type": "GameMutatorExpansions"
     },
+    "{5075e099}": {
+        "mExpandedMutator": "Kiwi_S3_2026",
+        "mMutators": [
+            "MapID(12)?AudioFeature(Kiwi_26_S3)"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
     "{50c4ae17}": {
         "mExpandedMutator": "Ruby",
         "mMutators": [
@@ -19830,7 +19895,11 @@
             "ARAMCompanionMutator",
             "LevelScriptFile(DeprecateLua_HA.lua)",
             "MinionInitialTimeToSpawn(50)",
-            "AramBoonLoadout(1)"
+            "AramBoonLoadout(1)",
+            "MapID(12)?Mode(KIWI)?AudioFeature(DefaultKiwi)",
+            "EsportsNamePrefixes(1)",
+            "Kiwi_S3_2026(1)",
+            "Kiwi_S3_2026_Tricode(1)"
         ],
         "__type": "GameMutatorExpansions"
     },
@@ -20238,6 +20307,14 @@
         "mExpandedMutator": "MapSkin_TFT_CarouselEvent5YR",
         "mMutators": [
             "MapID(22)?MapSkinName(CarouselEvent5YR)"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
+    "{890374d2}": {
+        "mExpandedMutator": "Kiwi_S3_2026_Tricode",
+        "mMutators": [
+            "EsportsNamePrefixes(1)",
+            "Kiwi_S3_2026_BandPrefix(1)"
         ],
         "__type": "GameMutatorExpansions"
     },
@@ -20790,12 +20867,13 @@
             "MapID(12)?LoadingScreenBackground(ASSETS/UX/LoadingScreen/ARAMBilgewater.HA_Bilgewater.png)",
             "MapID(12)?MapSkinName(Bilgewater)",
             "MapID(12)?ButchersBridge",
-            "MapID(12)?AudioFeature(Bilgewater)",
             "MapID(12)?AnnouncerVoice(Male1)",
             "MapID(12)?ShowCustomAnnouncerOption(1)",
             "MapID(12)?CustomAnnouncerMessage(game_message_Male1AnnouncerEnabled)",
             "MapID(12)?NewARAMItems",
-            "MapID(12)?BilgewaterARAMBanner"
+            "MapID(12)?BilgewaterARAMBanner",
+            "MapID(12)?AudioFeature(Bilgewater)",
+            "MapID(12)?Mode(KIWI)?AudioFeature(BilgewaterKiwi)"
         ],
         "__type": "GameMutatorExpansions"
     },
@@ -21027,6 +21105,14 @@
         "mMutators": [
             "MapID(11)?MapSkinName(ULTBOOK)",
             "MapID(11)?AudioFeature(UltBook)"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
+    "{d9b3312a}": {
+        "mExpandedMutator": "AudioPlayground",
+        "mMutators": [
+            "MapID(0)?MapSkinName(AudioPlayground)",
+            "CLASSIC"
         ],
         "__type": "GameMutatorExpansions"
     },
@@ -21300,11 +21386,12 @@
         "mExpandedMutator": "MapSkin_Map12_Bloom",
         "mMutators": [
             "MapID(12)?MapSkinName(Bloom)",
-            "MapID(12)?AudioFeature(Bloom)",
             "MapID(12)?MinionSkins(BloomMinions)",
             "MapID(12)?LoadingScreenBackground(ASSETS/UX/LoadingScreen/ARAMBloom.Bloom_Modes_Layer.png)",
             "MapID(12)?FOWTexture(MapSkin_Map12_Bloom)",
-            "MapID(12)?BloomARAMBanner"
+            "MapID(12)?BloomARAMBanner",
+            "MapID(12)?AudioFeature(Bloom)",
+            "MapID(12)?Mode(KIWI)?AudioFeature(BloomKiwi)"
         ],
         "__type": "GameMutatorExpansions"
     },
@@ -22360,7 +22447,7 @@
             "Special_LaneMinionIgnores",
             "Special_AzirW",
             "Special_AzirR",
-            "Special_CorkiBomb",
+            "Monster_Small",
             "Special_YorickW",
             "Special_MonsterIgnores",
             "Special_EpicMonsterIgnores",
@@ -22475,7 +22562,8 @@
             "{c5403caf}",
             "{caa9fdb6}",
             "{6f97c5a7}",
-            "{015cd209}"
+            "{015cd209}",
+            "{c77fed42}"
         ],
         "__type": "UnitObjectTagsSettings"
     },
@@ -23575,6 +23663,7 @@
             "{18999027}",
             "{eec24eaf}",
             "{4476a513}",
+            "{1766ec5a}",
             "{9a270666}",
             "{232429d3}",
             "{304f7fb5}",
@@ -23591,7 +23680,8 @@
             "{c087bac9}",
             "{7adb50f4}",
             "{459c09ea}",
-            "{e6aee944}"
+            "{e6aee944}",
+            "{8acafffa}"
         ],
         "ZombieList": [
             "{756016fb}",
@@ -23602,7 +23692,8 @@
             "{ee148ab2}",
             "{df0cf05b}",
             "{e86cd143}",
-            "{5cb2c12b}"
+            "{5cb2c12b}",
+            "{62f34daa}"
         ],
         "__type": "DeathEventPriority"
     },
@@ -23620,7 +23711,6 @@
             "{30ba7188}": true,
             "{0aa0fcb5}": true,
             "{791348b4}": false,
-            "{01243f0b}": true,
             "{1db16466}": true,
             "{5b41032a}": true,
             "{03eebe0a}": false,
@@ -23635,12 +23725,9 @@
             "{e2213221}": false,
             "{2094dd6e}": true,
             "{da5b6e04}": true,
-            "{724bed8c}": true,
-            "KeybindingsInputPorting": true,
             "{4ed93bd7}": true,
             "{2da5d839}": true,
             "{067b280d}": true,
-            "{54bd35c6}": false,
             "{80e296cb}": true,
             "{ba3537aa}": true,
             "{909e7d40}": false,

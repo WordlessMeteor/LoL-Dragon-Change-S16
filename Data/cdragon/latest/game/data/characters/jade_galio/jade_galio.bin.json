@@ -1023,17 +1023,17 @@
         },
         "__type": "SpellObject"
     },
-    "{e98a6ca8}": {
-        "mRootSpell": "{4de7b0f9}",
+    "Characters/Jade_Galio/Spells/Jade_GalioPassiveAbility": {
+        "mRootSpell": "Characters/Jade_Galio/Spells/Jade_GalioPassiveAbility/Jade_GalioPassive",
         "mChildSpells": [
-            "{4de7b0f9}"
+            "Characters/Jade_Galio/Spells/Jade_GalioPassiveAbility/Jade_GalioPassive"
         ],
         "mName": "Jade_GalioPassiveAbility",
         "__type": "AbilityObject"
     },
-    "{4de7b0f9}": {
+    "Characters/Jade_Galio/Spells/Jade_GalioPassiveAbility/Jade_GalioPassive": {
         "ObjectName": "Jade_GalioPassive",
-        "objectPath": "{4de7b0f9}",
+        "objectPath": "Characters/Jade_Galio/Spells/Jade_GalioPassiveAbility/Jade_GalioPassive",
         "mScriptName": "Jade_GalioPassive",
         "mSpell": {
             "DataValues": [
@@ -1115,15 +1115,15 @@
         "mRootSpell": "Characters/Jade_Galio/Spells/Jade_GalioEAbility/Jade_GalioE",
         "mChildSpells": [
             "Characters/Jade_Galio/Spells/Jade_GalioEAbility/Jade_GalioE",
-            "{89aa48b5}",
-            "{ddeb52e6}"
+            "Characters/Jade_Galio/Spells/Jade_GalioEAbility/Jade_GalioE_Haste",
+            "Characters/Jade_Galio/Spells/Jade_GalioEAbility/Jade_GalioE_Missile"
         ],
         "mName": "Jade_GalioEAbility",
         "__type": "AbilityObject"
     },
-    "{5da51069}": {
+    "Characters/Jade_Galio/Spells/Jade_GalioBasicAttack": {
         "ObjectName": "Jade_GalioBasicAttack",
-        "objectPath": "{5da51069}",
+        "objectPath": "Characters/Jade_Galio/Spells/Jade_GalioBasicAttack",
         "mScriptName": "Jade_GalioBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 512,
@@ -1794,9 +1794,9 @@
         },
         "__type": "SpellObject"
     },
-    "{89aa48b5}": {
+    "Characters/Jade_Galio/Spells/Jade_GalioEAbility/Jade_GalioE_Haste": {
         "ObjectName": "Jade_GalioE_Haste",
-        "objectPath": "{89aa48b5}",
+        "objectPath": "Characters/Jade_Galio/Spells/Jade_GalioEAbility/Jade_GalioE_Haste",
         "mScriptName": "Jade_GalioE_Haste",
         "mSpell": {
             "mAffectsTypeFlags": 1029,
@@ -2069,9 +2069,9 @@
         },
         "__type": "SpellObject"
     },
-    "{ddeb52e6}": {
+    "Characters/Jade_Galio/Spells/Jade_GalioEAbility/Jade_GalioE_Missile": {
         "ObjectName": "Jade_GalioE_Missile",
-        "objectPath": "{ddeb52e6}",
+        "objectPath": "Characters/Jade_Galio/Spells/Jade_GalioEAbility/Jade_GalioE_Missile",
         "mScriptName": "Jade_GalioE_Missile",
         "mSpell": {
             "flags": 4,
@@ -2191,9 +2191,9 @@
         },
         "__type": "SpellObject"
     },
-    "{97898102}": {
+    "Characters/Jade_Galio/Spells/Jade_GalioAttackSequencer": {
         "ObjectName": "Jade_GalioAttackSequencer",
-        "objectPath": "{97898102}",
+        "objectPath": "Characters/Jade_Galio/Spells/Jade_GalioAttackSequencer",
         "mScriptName": "Jade_GalioAttackSequencer",
         "mSpell": {
             "mAffectsTypeFlags": 8143,
@@ -2434,7 +2434,7 @@
         ],
         "mAbilities": [
             "Characters/Jade_Galio/Spells/Jade_GalioEAbility",
-            "{e98a6ca8}",
+            "Characters/Jade_Galio/Spells/Jade_GalioPassiveAbility",
             "Characters/Jade_Galio/Spells/Jade_GalioQAbility",
             "Characters/Jade_Galio/Spells/Jade_GalioRAbility",
             "Characters/Jade_Galio/Spells/Jade_GalioWAbility"
@@ -2448,6 +2448,7 @@
         "weaponMaterials": [
             "Jade_GalioBasicAttack"
         ],
+        "outlineBBoxExpansion": 40.0,
         "selectionHeight": 180.0,
         "selectionRadius": 125.0,
         "pathfindingCollisionRadius": 50.0,
@@ -2514,10 +2515,10 @@
             "Melee"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Resolve",
-        "mCharacterPassiveSpell": "{4de7b0f9}",
+        "mCharacterPassiveSpell": "Characters/Jade_Galio/Spells/Jade_GalioPassiveAbility/Jade_GalioPassive",
         "mCharacterPassiveBuffs": [
             {
-                "mParentPassiveBuff": "{97898102}",
+                "mParentPassiveBuff": "Characters/Jade_Galio/Spells/Jade_GalioAttackSequencer",
                 "__type": "CharacterPassiveData"
             }
         ],
@@ -2534,7 +2535,7 @@
                         "mRuleName": "Basic",
                         "mConditions": [
                             {
-                                "mSpell": "{5da51069}",
+                                "mSpell": "Characters/Jade_Galio/Spells/Jade_GalioBasicAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -3962,7 +3963,7 @@
                         "mRuleName": "Basic",
                         "mConditions": [
                             {
-                                "mSpell": "{5da51069}",
+                                "mSpell": "Characters/Jade_Galio/Spells/Jade_GalioBasicAttack",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],

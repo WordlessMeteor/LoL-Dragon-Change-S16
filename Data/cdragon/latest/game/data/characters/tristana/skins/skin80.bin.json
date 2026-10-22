@@ -6,9 +6,9 @@
         "metaDataTags": "faction:bandlecity,race:yordle,gender:female,skinline:risenlegends",
         "skinUpgradeData": {
             "mGearSkinUpgrades": [
-                "{7d315057}",
-                "{7e3151ea}",
-                "{7f31537d}"
+                "Characters/Tristana/Skins/Skin80/Gear/Form1",
+                "Characters/Tristana/Skins/Skin80/Gear/Form2",
+                "Characters/Tristana/Skins/Skin80/Gear/Form3"
             ],
             "SkinAugmentCategories": {
                 "BasicAugments": [
@@ -17,7 +17,7 @@
                             "{dbc0097a}",
                             "{fee6a290}"
                         ],
-                        "__type": "{e1555e0a}"
+                        "__type": "BasicSkinAugmentGroup"
                     }
                 ],
                 "BorderAugments": [
@@ -25,13 +25,13 @@
                         "AugmentGroup": [
                             "{8bc40065}"
                         ],
-                        "__type": "{4a70b12c}"
+                        "__type": "BorderSkinAugmentGroup"
                     },
                     {
                         "AugmentGroup": [
                             "{592f4726}"
                         ],
-                        "__type": "{4a70b12c}"
+                        "__type": "BorderSkinAugmentGroup"
                     }
                 ],
                 "__type": "SkinAugmentCategories"
@@ -578,7 +578,7 @@
         },
         "mEmblems": [
             {
-                "mEmblemData": "{2aadeab9}",
+                "mEmblemData": "Emblems/84",
                 "__type": "SkinEmblem"
             }
         ],
@@ -363070,9 +363070,9 @@
         "__type": "{3443461e}"
     },
     "{7c26f5b5}": {
-        "{6bfb316f}": "Caps Emote Keybind",
+        "LogicalName": "Caps Emote Keybind",
         "name": "{33cf9810}",
-        "{82d6dcb0}": [
+        "Keybinds": [
             {
                 "{f248d989}": "{c2cf0849}",
                 "{bcd3fffb}": 5,
@@ -363097,12 +363097,12 @@
     },
     "{c2cf0849}": {
         "name": "{7e03cf3e}",
-        "{8c61159d}": [
+        "SourcesList": [
             {
                 "KeySequence": "[Ctrl][CapsLock]",
-                "{371f336e}": {
-                    "{6bfb316f}": "EmoteCustom",
-                    "{5ed62070}": "{2ff25356}",
+                "BindInfo": {
+                    "LogicalName": "EmoteCustom",
+                    "GroupInfo": "{2ff25356}",
                     "__type": "{c749aa30}"
                 },
                 "__type": "KeyInputSourceBool"
@@ -363255,7 +363255,7 @@
                     "Tristana_Skin80_SpecialFinisher_Tower"
                 ],
                 "ResourceResolver": {
-                    "{fcea40c4}": false,
+                    "IsOwner": false,
                     "ResourceResolver": "Characters/Tristana/Skins/Skin80/Resources",
                     "__type": "{20194a16}"
                 },
@@ -363281,7 +363281,7 @@
                     "Tristana_Skin80_SpecialFinisher_Tower_Signature"
                 ],
                 "ResourceResolver": {
-                    "{fcea40c4}": false,
+                    "IsOwner": false,
                     "ResourceResolver": "Characters/Tristana/Skins/Skin80/Resources",
                     "__type": "{20194a16}"
                 },
@@ -363547,7 +363547,7 @@
         },
         "__type": "ResourceResolver"
     },
-    "{7d315057}": {
+    "Characters/Tristana/Skins/Skin80/Gear/Form1": {
         "mGearData": {
             "mVFXResourceResolver": {
                 "resourceMap": {
@@ -363610,7 +363610,7 @@
         },
         "__type": "GearSkinUpgrade"
     },
-    "{7e3151ea}": {
+    "Characters/Tristana/Skins/Skin80/Gear/Form2": {
         "mGearData": {
             "mVFXResourceResolver": {
                 "resourceMap": {
@@ -363686,7 +363686,7 @@
         },
         "__type": "GearSkinUpgrade"
     },
-    "{7f31537d}": {
+    "Characters/Tristana/Skins/Skin80/Gear/Form3": {
         "mGearData": {
             "mVFXResourceResolver": {
                 "resourceMap": {

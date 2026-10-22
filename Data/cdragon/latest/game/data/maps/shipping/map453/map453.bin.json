@@ -19863,6 +19863,186 @@
         },
         "__type": "BuffScript"
     },
+    "{633129c0}": {
+        "ScriptName": "Jade_Mordekaiser_NumeroUno",
+        "path": "{633129c0}",
+        "sequences": {
+            "{69523460}": {
+                "blocks": [
+                    null,
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{8186aeaf}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "2bfa7d26-dec2-4584-97f8-d5ef2c77c987",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{129cc3b3}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "Table": {
+                                    "__type": "InstanceVars"
+                                },
+                                "Var": "{b4d8e527}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{72b0d61f}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{544da740}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{9207d854}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "7311fef9-d9ea-4a1c-84a2-00e728b0c041",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{27936b43}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Operation": 1,
+                            "Value2": null,
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{7eef4747}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "BuffScript"
+    },
+    "{cb677fcb}": {
+        "ScriptName": "Jade_MordeUnoEgg_Buff",
+        "path": "{cb677fcb}",
+        "sequences": {
+            "{72b0d61f}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{69523460}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "f3726afc-c99b-4aa4-805b-e4cac83c3f1e",
+                        "Src": {
+                            "value": true,
+                            "__type": "BoolGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "InstanceVars"
+                            },
+                            "Var": "TimeOut",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{71b38c83}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "78f377ae-d096-446c-b3fa-eadc4826d2ad",
+                        "Condition": {
+                            "Value1": {
+                                "Table": {
+                                    "__type": "InstanceVars"
+                                },
+                                "Var": "{97f68388}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": true,
+                                "__type": "BoolGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{544da740}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "functions": {
+            "{3c4dcb66}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "e291749b-0e34-4d4d-9fe8-1445e2dc38b1",
+                        "Src": {
+                            "__type": "BoolGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "InstanceVars"
+                            },
+                            "Var": "TimeOut",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    }
+                ],
+                "FunctionDef": {
+                    "__type": "{eca2da9a}"
+                },
+                "__type": "ScriptFunction"
+            }
+        },
+        "__type": "BuffScript"
+    },
     "{0c01cd6c}": {
         "CampName": "Camp_Chaos_Wolves",
         "__type": "NeutralCampIdentifier"
@@ -22740,6 +22920,7 @@
             "__type": "MinimapBackgroundConfig"
         },
         "mNavigationMesh": "ASSETS/Maps/NavGrid/Map453/AIPath.aimesh_ngrid",
+        "mWorldParticlesINI": "ASSETS/Maps/Deprecated/Map453/Particles_Jade.ini",
         "mColorizationPostEffect": {
             "mMultipliersRGB": [
                 1.100000023841858,
@@ -22830,6 +23011,8 @@
             "Jade_Ceremony_Barrier_Order_Dissolve": "Maps/ModeSpecificData/JADE/Particles/Jade_Ceremony_Barrier_Order_Dissolve",
             "Jade_Ceremony_Barrier_Order_noRecolor": "Maps/ModeSpecificData/JADE/Particles/Jade_Ceremony_Barrier_Order_noRecolor",
             "Jade_Ceremony_Barrier_Order_Dissolve_noRecolor": "Maps/ModeSpecificData/JADE/Particles/Jade_Ceremony_Barrier_Order_Dissolve_noRecolor",
+            "{dfdba4f7}": "{423eec40}",
+            "{544bd797}": "{fcd8e209}",
             "{e79698b5}": "Maps/Shipping/Map453/Particles/Jade_Pings_Retreat",
             "{c80a963d}": "Maps/Shipping/Map453/Particles/Jade_Pings_Push",
             "{bd0a84ec}": "Maps/Shipping/Map453/Particles/Jade_Pings_OMW",
@@ -23066,7 +23249,11 @@
             "{a8009f85}",
             "{8cdcd387}",
             "{0bda2162}",
-            "{2a53c386}"
+            "{2a53c386}",
+            "{93744a16}",
+            "{7f3f1185}",
+            "{e8ae00fa}",
+            "{69dc7521}"
         ],
         "__type": "GameModeChampionList"
     },
@@ -27681,10 +27868,10 @@
                     "ASSETS/Sounds/Wwise2016/SFX/Shared/MISC_Event_SFX_audio.wpk"
                 ],
                 "events": [
-                    "Play_mus_map11_arc2vi_spawn",
                     "Play_mus_map11_demaciavice2019_spawn",
                     "Play_mus_map11_hope24_spawn",
                     "Play_mus_map11_KDA2020_spawn",
+                    "Play_mus_map11_matcha_spawn",
                     "Play_mus_map11_SN2022_spawn",
                     "Play_mus_map11_starguardian2017_spawn",
                     "Play_mus_map11_starguardian2019_spawn",
@@ -27692,6 +27879,7 @@
                     "Play_mus_map11_starguardian_spawn",
                     "Play_mus_map11_teemo_spawn",
                     "Play_mus_map11_Tournaments_spawn",
+                    "Play_mus_map11_TrueDamage2026_spawn",
                     "Play_mus_map11_WMC2022_spawn",
                     "Play_mus_map11_Worlds2020_spawn",
                     "Play_mus_map11_XP12021_spawn",
@@ -28446,8 +28634,7 @@
     },
     "{db1e35d6}": {
         "mItems": [
-            "Items/2055",
-            "Items/4641"
+            "Items/2055"
         ],
         "__type": "GameModeItemList"
     },
@@ -41844,14 +42031,6 @@
                 "SpawnShape": {
                     "__type": "VfxShapeLegacy"
                 },
-                "EmitterPosition": {
-                    "constantValue": [
-                        0.0,
-                        100.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
                 "blendMode": 1,
                 "colorLookUpTypeY": 3,
                 "birthRotation0": {
@@ -41899,14 +42078,6 @@
                         "__type": "ValueVector3"
                     },
                     "__type": "VfxShapeLegacy"
-                },
-                "EmitterPosition": {
-                    "constantValue": [
-                        0.0,
-                        100.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
                 },
                 "meshRenderFlags": 0,
                 "isUniformScale": 1,
@@ -42208,14 +42379,6 @@
                     ],
                     "__type": "VfxShapeLegacy"
                 },
-                "EmitterPosition": {
-                    "constantValue": [
-                        0.0,
-                        95.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
                 "particleColorTexture": "ASSETS/Maps/Particles/Jade/color-smoke32_07.tex",
                 "meshRenderFlags": 0,
                 "isUniformScale": 1,
@@ -42362,14 +42525,6 @@
                 "SpawnShape": {
                     "__type": "VfxShapeLegacy"
                 },
-                "EmitterPosition": {
-                    "constantValue": [
-                        0.0,
-                        100.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
                 },
@@ -42447,14 +42602,6 @@
                 },
                 "SpawnShape": {
                     "__type": "VfxShapeLegacy"
-                },
-                "EmitterPosition": {
-                    "constantValue": [
-                        0.0,
-                        100.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
                 },
                 "particleColorTexture": "ASSETS/Maps/Particles/Jade/alpha_07.tex",
                 "meshRenderFlags": 0,
@@ -89825,6 +89972,187 @@
         "particleName": "Teleport_Arrival_Jade_Enemy",
         "particlePath": "Shared/Particles/Teleport_Arrival_Jade_Enemy",
         "objectPath": "Shared/Particles/Teleport_Arrival_Jade_Enemy",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{423eec40}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 100.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 100.0,
+                "lifetime": 100.0,
+                "isSingleParticle": 1,
+                "emitterLinger": 100.0,
+                "emitterName": "placeholder",
+                "importance": 3,
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
+                },
+                "particleColorTexture": "ASSETS/Shared/Particles/Jade/color-hold.tex",
+                "meshRenderFlags": 0,
+                "isUniformScale": 1,
+                "texture": "ASSETS/Shared/Particles/Jade/missing_instant.tex",
+                "materialOverrideDefinitions": [
+                    {
+                        "priority": 1600,
+                        "baseTexture": "{2de7711ebd1764ad}",
+                        "__type": "VfxMaterialOverrideDefinitionData"
+                    }
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 3.0,
+                "lifetime": 0.10000000149011612,
+                "emitterName": "Avatar",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "alphaRef": 1,
+                "disableBackfaceCull": true,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        1.0099999904632568,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Mordekaiser/Skins/Base/Particles/ghost_overlay_01.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        0.009999999776482582,
+                        0.009999999776482582
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "mordekeiser_cotg_skin",
+        "particlePath": "Shared/Particles/Jade/mordekeiser_cotg_skin",
+        "flags": 140,
+        "objectPath": "{423eec40}",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{fcd8e209}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 3.0,
+                "lifetime": 0.10000000149011612,
+                "emitterName": "Avatar",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "alphaRef": 0,
+                "disableBackfaceCull": true,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        1.0099999904632568,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Yorick/Skins/Base/Particles/SRU_JungleBuff_Baron_MeleeMin_AvatarOverlayLowvis.tex",
+                "numFrames": 4,
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        0.009999999776482582,
+                        0.009999999776482582
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "birthUVOffset": {
+                    "constantValue": [
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 100.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 100.0,
+                "lifetime": 100.0,
+                "isSingleParticle": 1,
+                "emitterLinger": 100.0,
+                "emitterName": "placeholder",
+                "importance": 3,
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
+                },
+                "particleColorTexture": "ASSETS/Shared/Particles/Jade/color-hold.tex",
+                "meshRenderFlags": 0,
+                "isUniformScale": 1,
+                "texture": "ASSETS/Shared/Particles/Jade/missing_instant.tex",
+                "materialOverrideDefinitions": [
+                    {
+                        "priority": 1600,
+                        "baseTexture": "{2de7711ebd1764ad}",
+                        "__type": "VfxMaterialOverrideDefinitionData"
+                    }
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Yorick_ult_skin",
+        "particlePath": "Shared/Particles/Jade/Yorick_ult_skin",
+        "flags": 140,
+        "objectPath": "{fcd8e209}",
         "__type": "VfxSystemDefinitionData"
     },
     "Shared/Particles/Jade_temp_Summoner_Fortify_shield_tar": {

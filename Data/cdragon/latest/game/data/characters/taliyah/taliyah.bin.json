@@ -222,26 +222,26 @@
                 {
                     "name": "BaseDamage",
                     "values": [
-                        15.0,
-                        60.0,
-                        105.0,
-                        150.0,
-                        195.0,
-                        240.0,
-                        285.0
+                        25.0,
+                        70.0,
+                        115.0,
+                        160.0,
+                        205.0,
+                        250.0,
+                        295.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "BaseDetonationDamage",
                     "values": [
-                        10.0,
-                        25.0,
-                        40.0,
-                        55.0,
-                        70.0,
-                        85.0,
-                        100.0
+                        15.0,
+                        30.0,
+                        45.0,
+                        60.0,
+                        75.0,
+                        90.0,
+                        105.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -372,7 +372,7 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.6000000238418579,
+                            "mCoefficient": 0.699999988079071,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -1452,6 +1452,14 @@
                 ],
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Taliyah/Spells/TaliyahQAbility/TaliyahQWorkedGroundManager",
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mCantCancelWhileWindingUp": true,
             "useAnimatorFramerate": true,
             "castRange": [
@@ -2991,6 +2999,14 @@
                 ],
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Taliyah/Spells/TaliyahRAbility/TaliyahRPassiveCDManager",
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "canCastOrQueueWhileCasting": true,
             "mCantCancelWhileWindingUp": true,
             "mCantCancelWhileChanneling": true,

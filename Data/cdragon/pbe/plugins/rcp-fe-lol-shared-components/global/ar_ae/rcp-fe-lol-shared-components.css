@@ -16902,6 +16902,7 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
 .shoppefront-help-modal-content-block-wrapper .help-modal-title,
 .shoppefront-help-modal-content-block-wrapper .help-modal-topic,
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-title,
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-quantity-count,
 .shoppefront-tomacco-purchase-modal-header .shoppefront-tomacco-purchase-modal-subtitle,
 .shoppefront-tomacco-purchase-modal-header .shoppefront-tomacco-purchase-modal-title,
 .shoppefront-tomacco-stage-button .skin-stage-button .skin-stage-button-text {
@@ -16910,6 +16911,7 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
 
 .shoppefont-confirm-toast .context .body,
 .shoppefont-confirm-toast .context .title,
+.shoppefront-catalog-item .catalog-badge,
 .shoppefront-catalog-item .catalog-details-container .catalog-name,
 .shoppefront-catalog-item .catalog-price,
 .shoppefront-catalog-item .error-text,
@@ -16924,8 +16926,11 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
 .shoppefront-no-search-results,
 .shoppefront-purchase-modal-footer,
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content,
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-description a,
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-kr-disclaimer-checkbox .purchase-confirmation-link,
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-kr-disclaimer-checkbox .shoppefront-purchase-modal-kr-disclaimer-label,
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-footer-text,
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-quantity-bound,
 .shoppefront-tomacco-purchase-modal-footer .shoppefront-purchase-modal-kr-disclaimer-checkbox .purchase-confirmation-link,
 .shoppefront-tomacco-purchase-modal-footer .shoppefront-purchase-modal-kr-disclaimer-checkbox .shoppefront-purchase-modal-kr-disclaimer-label,
 .shoppefront-tomacco-purchase-modal-footer .shoppefront-tomacco-purchase-modal-new-balance,
@@ -16935,6 +16940,7 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
 
 .shoppefont-confirm-toast .context .body,
 .shoppefont-confirm-toast .context .title,
+.shoppefront-catalog-item .catalog-badge,
 .shoppefront-catalog-item .catalog-details-container .catalog-name,
 .shoppefront-catalog-item .catalog-price,
 .shoppefront-catalog-item .error-text,
@@ -16956,6 +16962,7 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
 .shoppefront-no-search-results,
 .shoppefront-purchase-modal-footer,
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content,
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-description a,
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-kr-disclaimer-checkbox .purchase-confirmation-link,
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-kr-disclaimer-checkbox .shoppefront-purchase-modal-kr-disclaimer-label,
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-title,
@@ -17146,6 +17153,7 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
 }
 
 .shoppefont-confirm-toast .context .body,
+.shoppefront-catalog-item .catalog-badge,
 .shoppefront-catalog-item .catalog-price,
 .shoppefront-catalog-item .error-text,
 .shoppefront-catalog-item .owned-text,
@@ -17163,6 +17171,7 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
 }
 
 .shoppefont-confirm-toast .context .body:lang(ja-jp),
+.shoppefront-catalog-item .catalog-badge:lang(ja-jp),
 .shoppefront-catalog-item .catalog-price:lang(ja-jp),
 .shoppefront-catalog-item .error-text:lang(ja-jp),
 .shoppefront-catalog-item .owned-text:lang(ja-jp),
@@ -17175,6 +17184,7 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
 }
 
 .shoppefont-confirm-toast .context .body:lang(ar-ae),
+.shoppefront-catalog-item .catalog-badge:lang(ar-ae),
 .shoppefront-catalog-item .catalog-price:lang(ar-ae),
 .shoppefront-catalog-item .error-text:lang(ar-ae),
 .shoppefront-catalog-item .owned-text:lang(ar-ae),
@@ -17211,6 +17221,7 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     letter-spacing: 0
 }
 
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-description a,
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-kr-disclaimer-checkbox .purchase-confirmation-link,
 .shoppefront-tomacco-purchase-modal-footer .shoppefront-purchase-modal-kr-disclaimer-checkbox .purchase-confirmation-link {
     font-size: 12px;
@@ -17220,22 +17231,27 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     -webkit-font-smoothing: subpixel-antialiased
 }
 
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-description a:lang(ja-jp),
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-kr-disclaimer-checkbox .purchase-confirmation-link:lang(ja-jp),
 .shoppefront-tomacco-purchase-modal-footer .shoppefront-purchase-modal-kr-disclaimer-checkbox .purchase-confirmation-link:lang(ja-jp) {
     font-size: 13px
 }
 
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-description a:lang(ar-ae),
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-kr-disclaimer-checkbox .purchase-confirmation-link:lang(ar-ae),
 .shoppefront-tomacco-purchase-modal-footer .shoppefront-purchase-modal-kr-disclaimer-checkbox .purchase-confirmation-link:lang(ar-ae) {
     letter-spacing: 0
 }
 
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-description a,
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-kr-disclaimer-checkbox .purchase-confirmation-link,
 .shoppefront-tomacco-purchase-modal-footer .shoppefront-purchase-modal-kr-disclaimer-checkbox .purchase-confirmation-link {
     color: #0596aa;
     text-decoration: none
 }
 
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-description a.hover,
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-description a:hover,
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-kr-disclaimer-checkbox .purchase-confirmation-link.hover,
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-kr-disclaimer-checkbox .purchase-confirmation-link:hover,
 .shoppefront-tomacco-purchase-modal-footer .shoppefront-purchase-modal-kr-disclaimer-checkbox .purchase-confirmation-link.hover,
@@ -17243,6 +17259,7 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     color: #cdfafa
 }
 
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-description a:after,
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-kr-disclaimer-checkbox .purchase-confirmation-link:after,
 .shoppefront-tomacco-purchase-modal-footer .shoppefront-purchase-modal-kr-disclaimer-checkbox .purchase-confirmation-link:after {
     background-color: #0596aa;
@@ -17256,12 +17273,14 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     width: 9px
 }
 
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-description a:lang(ar-ae):after,
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-kr-disclaimer-checkbox .purchase-confirmation-link:lang(ar-ae):after,
 .shoppefront-tomacco-purchase-modal-footer .shoppefront-purchase-modal-kr-disclaimer-checkbox .purchase-confirmation-link:lang(ar-ae):after {
     margin: 0 5px 0 0;
     transform: scaleX(-1)
 }
 
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-description a:hover:after,
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-kr-disclaimer-checkbox .purchase-confirmation-link:hover:after,
 .shoppefront-tomacco-purchase-modal-footer .shoppefront-purchase-modal-kr-disclaimer-checkbox .purchase-confirmation-link:hover:after {
     background-color: #cdfafa
@@ -17440,10 +17459,39 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     pointer-events: none
 }
 
-.shoppefront-catalog-item .shared-reset-timer-component {
+.shoppefront-catalog-item .catalog-status-container {
+    align-items: flex-start;
+    display: flex;
+    gap: 8px;
+    left: 8px;
+    pointer-events: none;
     position: absolute;
     right: 4px;
     top: 5px
+}
+
+.shoppefront-catalog-item .catalog-badge {
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-weight: 700;
+    margin-top: 3px;
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    padding: 4px 8px;
+    text-align: left;
+    text-transform: uppercase
+}
+
+.shoppefront-catalog-item .catalog-badge.highlight {
+    background: #ffc400;
+    box-shadow: 0 0 6px rgba(255, 196, 0, .6);
+    color: #000
+}
+
+.shoppefront-catalog-item .shared-reset-timer-component {
+    flex-shrink: 0;
+    margin-left: auto
 }
 
 .shoppefront-catalog-item .shared-reset-timer-component .reset-timer {
@@ -17920,7 +17968,32 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
 }
 
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content {
-    margin: 0 18px 25px
+    margin: 0 18px 12px
+}
+
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-description {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 8px 48px
+}
+
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-description em {
+    font-style: italic
+}
+
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-description p {
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0
+}
+
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-description p+p {
+    margin-top: 8px
+}
+
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-description a {
+    font-size: inherit;
+    font-weight: inherit
 }
 
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-classic-exclusive-disclaimer {
@@ -17951,6 +18024,69 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
 
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-error-text {
     color: #ff2345
+}
+
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-footer-text {
+    color: #cdbe91;
+    font-size: 14px;
+    font-style: italic;
+    letter-spacing: .03em;
+    line-height: 24px;
+    margin: 4px 56px 0;
+    text-align: center
+}
+
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-footer-text strong {
+    font-weight: 700
+}
+
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-quantity-controls {
+    margin: 12px 36px
+}
+
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-quantity-controls:lang(ar-ae) {
+    direction: ltr
+}
+
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-quantity-slider {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 14px
+}
+
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-quantity-slider .multi-purchase-uikit-slider {
+    width: 400px
+}
+
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-quantity-bound {
+    color: #ccc4b3;
+    font-size: 12px;
+    font-weight: 550;
+    letter-spacing: .05em;
+    line-height: 16px;
+    margin-top: 7px
+}
+
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-quantity-incrementer {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-quantity-incrementer-module {
+    align-items: center;
+    border: 1px solid #3c3c41;
+    border-radius: 25px;
+    display: flex;
+    padding: 3px
+}
+
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-quantity-count {
+    color: #cdbe91;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 15px
 }
 
 .shoppefront-purchase-modal-splash-header {

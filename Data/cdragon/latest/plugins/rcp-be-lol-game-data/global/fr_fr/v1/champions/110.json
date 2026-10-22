@@ -1583,7 +1583,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Varus effectue un tir puissant dont les dégâts et la portée augmentent avec la durée de la charge.",
-            "dynamicDescription": "<attention>Début de la charge :</attention> Varus prépare sa prochaine flèche, ce qui le <status>ralentit</status> de @MoveSpeedMod*-100@%. Après @MaxChannelDuration@ sec, si Varus n'a pas tiré, il annule cette compétence et récupère @ManaRefund*100@% du coût en mana.<br><br><attention>Relâchement :</attention> Varus relâche la flèche, infligeant entre <physicalDamage>@TotalDamageMinTooltip@ pts de dégâts physiques</physicalDamage>, réduits de @FalloffPercent*100@% par ennemi touché (minimum @MinDamagePercent*100@%). Les dégâts de la flèche et du déclenchement des effets <keywordMajor>Meurtrissure</keywordMajor> sont augmentés d'un maximum de @MaxChargeAmp*100@% avec le temps de charge (max : <physicalDamage>@TotalDamageMax@</physicalDamage>).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<attention>Début de la charge :</attention> Varus prépare sa prochaine flèche, ce qui le <status>ralentit</status> de @MoveSpeedMod*-100@%. Après @MaxChannelDuration@ sec, si Varus n'a pas tiré, il annule cette compétence et récupère @ManaRefund*100@% du coût en mana.<br><br><attention>Relâchement :</attention> Varus relâche la flèche, infligeant entre <physicalDamage>@TotalDamageMin@ pts de dégâts physiques</physicalDamage>, réduits de @FalloffPercent*100@% par ennemi touché (minimum @MinDamagePercent*100@%). Les dégâts de la flèche et du déclenchement des effets <keywordMajor>Meurtrissure</keywordMajor> sont augmentés d'un maximum de @MaxChannelAmp*100@% avec le temps de charge (max : <physicalDamage>@TotalDamageMax@ pts de dégâts physiques</physicalDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -1609,8 +1609,8 @@
                 11.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
-                "coefficient2": 1.5
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
@@ -1632,49 +1632,49 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    0.15,
-                    0.15,
-                    0.15,
-                    0.15,
-                    0.15,
-                    0.15,
-                    0.15
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0,
-                    4.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    -0.2,
-                    -0.2,
-                    -0.2,
-                    -0.2,
-                    -0.2,
-                    -0.2,
-                    -0.2
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -1686,13 +1686,13 @@
                     0.0
                 ],
                 "Effect9Amount": [
-                    0.33,
-                    0.33,
-                    0.33,
-                    0.33,
-                    0.33,
-                    0.33,
-                    0.33
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect10Amount": [
                     0.0,
@@ -1773,40 +1773,40 @@
                     0.0
                 ],
                 "Effect2Amount": [
-                    0.025,
-                    0.03,
-                    0.035,
-                    0.04,
-                    0.045,
-                    0.05,
-                    0.055
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
                     0.0,

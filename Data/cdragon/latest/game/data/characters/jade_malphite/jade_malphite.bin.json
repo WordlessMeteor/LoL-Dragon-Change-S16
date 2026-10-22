@@ -1157,6 +1157,14 @@
                 "{0a3e0478}": 14.0,
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Jade_Malphite/Spells/Jade_MalphiteObduracyAbility/Jade_MalphiteCleave",
+                    "mRemoveWhenOnCooldown": false,
+                    "mRemoveWithSpell": false,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mCantCancelWhileWindingUp": true,
             "mCantCancelWhileWindingUpTargetingChampion": true,
             "castRadius": [
@@ -1577,10 +1585,6 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Cost",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
                                     "type": "BaseDamage",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_ListType_Damage",
@@ -1588,7 +1592,12 @@
                                 },
                                 {
                                     "type": "SpeedSteal",
+                                    "nameOverride": "Spell_ListType_MovementSpeed",
                                     "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],

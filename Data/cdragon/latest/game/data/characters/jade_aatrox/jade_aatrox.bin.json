@@ -103,13 +103,13 @@
                 {
                     "name": "WLowHealthHealBonus",
                     "values": [
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -197,6 +197,14 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                },
+                "{049d8bc1}": {
+                    "mMultiplier": {
+                        "mDataValue": "WLowHealthHealBonus",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "{fc3ca7f8}",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "Spell2",
@@ -2215,19 +2223,6 @@
                         2.0
                     ],
                     "__type": "SpellDataValue"
-                },
-                {
-                    "name": "PassiveCooldown",
-                    "values": [
-                        225.0,
-                        225.0,
-                        225.0,
-                        225.0,
-                        225.0,
-                        225.0,
-                        225.0
-                    ],
-                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -2261,6 +2256,32 @@
                             "DataValue": "DecayRate",
                             "AbilityResource": 10,
                             "__type": "{2b25a73a}"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "PassiveCooldown": {
+                    "mFormulaParts": [
+                        {
+                            "mLevel1Value": 225.0,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 6,
+                                    "mAdditionalBonusAtThisLevel": -25.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 11,
+                                    "mAdditionalBonusAtThisLevel": -25.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 16,
+                                    "mAdditionalBonusAtThisLevel": -25.0,
+                                    "__type": "Breakpoint"
+                                }
+                            ],
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -2854,8 +2875,8 @@
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
-                "12": "Play_sfx_Aatrox_AatroxRAttack2_OnCast",
-                "13": "Play_sfx_Aatrox_AatroxRAttack2_OnHit"
+                "12": "Play_sfx_Aatrox_AatroxBasicAttack_OnCast",
+                "13": "Play_sfx_Aatrox_AatroxBasicAttack_OnHit"
             },
             "__type": "SpellDataResource"
         },
@@ -2896,8 +2917,8 @@
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
-                "12": "Play_sfx_Aatrox_AatroxRAttack1_OnCast",
-                "13": "Play_sfx_Aatrox_AatroxRAttack1_OnHit"
+                "12": "Play_sfx_Aatrox_AatroxBasicAttack_OnCast",
+                "13": "Play_sfx_Aatrox_AatroxBasicAttack_OnHit"
             },
             "__type": "SpellDataResource"
         },
@@ -4965,6 +4986,7 @@
         "passiveSpell": "Jade_AatroxPassive",
         "passive1IconName": "assets/characters/jade_aatrox/hud/icons2d/jade_aatrox_passive.dds",
         "name": "Character_Jade_Aatrox_Name",
+        "outlineBBoxExpansion": 100.0,
         "selectionHeight": 180.0,
         "selectionRadius": 135.0,
         "pathfindingCollisionRadius": 35.0,

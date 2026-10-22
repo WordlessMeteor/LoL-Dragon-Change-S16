@@ -7,7 +7,7 @@
             "__type": "CatalogEntry"
         },
         "mDescriptionTraKey": "Jade_Portrait_Description_Tryndamere_Feeney",
-        "{55bb9b57}": 25,
+        "PortraitId": 25,
         "{ff3c9ff8}": "{e79c1e24}",
         "image": {
             "image": "assets/characters/jade_tryndamere/skins/base/jade_tryndamereloadscreen_feeney.tex",
@@ -23,7 +23,7 @@
             "__type": "CatalogEntry"
         },
         "mDescriptionTraKey": "Jade_Portrait_Description_Tryndamere_LoR_01",
-        "{55bb9b57}": 24,
+        "PortraitId": 24,
         "{ff3c9ff8}": "{e15eb251}",
         "image": {
             "image": "assets/characters/jade_tryndamere/skins/base/jade_tryndamereloadscreen_lor_01.tex",
@@ -331,6 +331,14 @@
                 "{0a3e0478}": 9.0,
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Jade_Tryndamere/Spells/Jade_TryndamereEAbility/Jade_TryndamereE",
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mCantCancelWhileWindingUp": true,
             "cantCastWhileRooted": true,
             "mProjectTargetToCastRange": true,
@@ -689,7 +697,7 @@
         },
         "__type": "SpellObject"
     },
-    "{5e3d26be}": {
+    "Characters/Jade_Tryndamere/Spells/Jade_TryndamerePassiveAbility": {
         "mRootSpell": "Characters/Jade_Tryndamere/Spells/Jade_TryndamerePassiveAbility/Jade_TryndamerePassive",
         "mChildSpells": [
             "Characters/Jade_Tryndamere/Spells/Jade_TryndamerePassiveAbility/Jade_TryndamerePassive"
@@ -893,8 +901,8 @@
                     "mExpandedTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "{137cf12a}": "HealPerFury",
-                            "{01ba2bd1}": 4,
+                            "DataValue": "HealPerFury",
+                            "AbilityResource": 4,
                             "__type": "{2b25a73a}"
                         },
                         {
@@ -931,6 +939,14 @@
                 "{0a3e0478}": 15.5,
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Jade_Tryndamere/Spells/Jade_TryndamereQAbility/Jade_TryndamereQ",
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mCantCancelWhileWindingUp": true,
             "bHaveHitEffect": true,
             "castRadius": [
@@ -1859,7 +1875,7 @@
         ],
         "mAbilities": [
             "Characters/Jade_Tryndamere/Spells/Jade_TryndamereEAbility",
-            "{5e3d26be}",
+            "Characters/Jade_Tryndamere/Spells/Jade_TryndamerePassiveAbility",
             "Characters/Jade_Tryndamere/Spells/Jade_TryndamereQAbility",
             "Characters/Jade_Tryndamere/Spells/Jade_TryndamereWAbility",
             "Characters/Jade_Tryndamere/Spells/Jade_TryndamereUndyingRageAbility"
@@ -1872,6 +1888,7 @@
         "weaponMaterials": [
             "Jade_TryndamereBasicAttack"
         ],
+        "outlineBBoxExpansion": 75.0,
         "selectionHeight": 180.0,
         "selectionRadius": 135.0,
         "pathfindingCollisionRadius": 35.0,

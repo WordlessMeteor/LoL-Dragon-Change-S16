@@ -1,5 +1,5 @@
 {
-    "{6e7f352c}": {
+    "Characters/Jade_Olaf/Spells/Jade_OlafPassiveAbility": {
         "mRootSpell": "Characters/Jade_Olaf/Spells/Jade_OlafPassiveAbility/Jade_OlafPassive",
         "mChildSpells": [
             "Characters/Jade_Olaf/Spells/Jade_OlafPassiveAbility/Jade_OlafPassive"
@@ -1469,7 +1469,7 @@
             ],
             "mSpellCalculations": {
                 "TotalDamage": {
-                    "{72c5c2a8}": 2,
+                    "DamageType": 2,
                     "mFormulaParts": [
                         {
                             "mDataValue": "BaseDamage",
@@ -1797,6 +1797,15 @@
                 "{0a3e0478}": 100.0,
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Jade_Olaf/Spells/Jade_OlafRAbility/Jade_OlafRPassiveBuff",
+                    "mRemoveWhenOnCooldown": false,
+                    "mRemoveWithSpell": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "cannotBeSuppressed": true,
             "canCastWhileDisabled": true,
             "mCantCancelWhileWindingUp": true,
@@ -2387,7 +2396,7 @@
             "Characters/Jade_Olaf/Spells/Jade_OlafWAbility",
             "Characters/Jade_Olaf/Spells/Jade_OlafEAbility",
             "Characters/Jade_Olaf/Spells/Jade_OlafRAbility",
-            "{6e7f352c}"
+            "Characters/Jade_Olaf/Spells/Jade_OlafPassiveAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_Olaf",
         "passiveLuaName": "Jade_OlafBerzerkerRage",

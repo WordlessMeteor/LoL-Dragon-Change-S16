@@ -1380,12 +1380,12 @@
                     "name": "BaseDamage",
                     "values": [
                         -50.0,
-                        175.0,
-                        400.0,
-                        625.0,
-                        850.0,
-                        1075.0,
-                        1300.0
+                        150.0,
+                        350.0,
+                        550.0,
+                        750.0,
+                        950.0,
+                        1150.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2078,6 +2078,31 @@
                     "__type": "GameCalculation"
                 }
             },
+            "{66185ec4}": {
+                "cherry": {
+                    "Calculations": {
+                        "InitialDamage": {
+                            "mFormulaParts": [
+                                {
+                                    "mCoefficient": 0.75,
+                                    "__type": "StatByCoefficientCalculationPart"
+                                },
+                                {
+                                    "mStat": 2,
+                                    "mCoefficient": 0.8999999761581421,
+                                    "__type": "StatByCoefficientCalculationPart"
+                                },
+                                {
+                                    "mDataValue": "E1Damage",
+                                    "__type": "NamedDataValueCalculationPart"
+                                }
+                            ],
+                            "__type": "GameCalculation"
+                        }
+                    },
+                    "__type": "{4acf67d2}"
+                }
+            },
             "mCoefficient": 1.0,
             "mAnimationName": "Spell3",
             "mImgIconName": [
@@ -2241,6 +2266,11 @@
                     "PersistentVfxs": [
                         {
                             "effectKey": "{3aadd5f1}",
+                            "__type": "PersistentVfxData"
+                        },
+                        {
+                            "boneName": "C_BUFFBONE_GLB_HEAD_LOC",
+                            "effectKey": "{94044649}",
                             "__type": "PersistentVfxData"
                         }
                     ],
@@ -2813,11 +2843,11 @@
                             "values": [
                                 80.0,
                                 80.0,
-                                140.0,
-                                200.0,
-                                260.0,
-                                320.0,
-                                380.0
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0
                             ],
                             "__type": "SpellDataValue"
                         }
@@ -2876,15 +2906,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    7.0,
-                    7.0,
-                    7.0,
-                    7.0,
-                    7.0,
-                    7.0,
-                    7.0
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0
                 ],
-                "{0a3e0478}": 7.0,
+                "{0a3e0478}": 8.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,

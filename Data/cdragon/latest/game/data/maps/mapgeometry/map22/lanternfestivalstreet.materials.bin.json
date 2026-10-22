@@ -5832,7 +5832,7 @@
         "objectPath": "Maps/Particles/TFT/LunarRevel/DragonLanternFestivalStreet/DragonLanternFestivalStreet_Night_Skybox",
         "__type": "VfxSystemDefinitionData"
     },
-    "{263d3356}": {
+    "Maps/MapGeometry/Map22/Chunks/LanternFestivalStreet/Lighting_LanternFestivalStreet": {
         "items": {
             "{df557fbe}": {
                 "transform": [
@@ -5883,7 +5883,7 @@
         },
         "__type": "MapPlaceableContainer"
     },
-    "{28a8d37b}": {
+    "Maps/MapGeometry/Map22/Chunks/LanternFestivalStreet/MapBehaviors_LanternFestivalStreet": {
         "items": {
             "{760f18d4}": {
                 "transform": [
@@ -6641,10 +6641,10 @@
         },
         "__type": "MapPlaceableContainer"
     },
-    "{3eda87ce}": {
+    "Maps/MapGeometry/Map22/Chunks/LanternFestivalStreet/VFX_LanternFestivalStreet": {
         "__type": "MapPlaceableContainer"
     },
-    "{45e5d42c}": {
+    "Maps/MapGeometry/Map22/Chunks/LanternFestivalStreet/Audio_LanternFestivalStreet": {
         "items": {
             "{782d562d}": {
                 "transform": [
@@ -6711,7 +6711,7 @@
         },
         "__type": "MapPlaceableContainer"
     },
-    "{57b393bc}": {
+    "Maps/MapGeometry/Map22/Chunks/LanternFestivalStreet/Skybox_LanternFestivalStreet": {
         "items": {
             "{9bf29b53}": {
                 "transform": [
@@ -6749,7 +6749,7 @@
         },
         "__type": "MapPlaceableContainer"
     },
-    "{6dfb98b4}": {
+    "Maps/MapGeometry/Map22/Chunks/LanternFestivalStreet/LightingVolume_LanternFestivalStreet": {
         "items": {
             "{dd2b6b09}": {
                 "transform": [
@@ -6834,7 +6834,7 @@
         },
         "__type": "MapPlaceableContainer"
     },
-    "{8c7f5334}": {
+    "Maps/MapGeometry/Map22/Chunks/LanternFestivalStreet/Design_LanternFestivalStreet": {
         "items": {
             "{f7e857de}": {
                 "transform": [
@@ -7856,7 +7856,7 @@
         },
         "__type": "MapPlaceableContainer"
     },
-    "{c3d7c8f3}": {
+    "Maps/MapGeometry/Map22/Chunks/LanternFestivalStreet/Art_LanternFestivalStreet": {
         "items": {
             "{d8ac9c6f}": null,
             "{d521cb3d}": null,
@@ -7866,7 +7866,7 @@
         },
         "__type": "MapPlaceableContainer"
     },
-    "{f2b32ff3}": {
+    "Maps/MapGeometry/Map22/Chunks/LanternFestivalStreet/AnimProps_LanternFestivalStreet": {
         "items": {
             "{fac7d1df}": {
                 "transform": [
@@ -8017,15 +8017,15 @@
         ],
         "MeshCombineRadius": 5000.0,
         "chunks": {
-            "{5720b256}": "{f2b32ff3}",
-            "{d7c4ab92}": "{c3d7c8f3}",
-            "{111e22cd}": "{45e5d42c}",
-            "{e0869107}": "{8c7f5334}",
-            "{c2c709d3}": "{6dfb98b4}",
-            "{b7fe6bfd}": "{263d3356}",
-            "{79cc94f4}": "{28a8d37b}",
-            "{708a62d3}": "{57b393bc}",
-            "{0215ab17}": "{3eda87ce}"
+            "AnimProps_LanternFestivalStreet": "Maps/MapGeometry/Map22/Chunks/LanternFestivalStreet/AnimProps_LanternFestivalStreet",
+            "Art_LanternFestivalStreet": "Maps/MapGeometry/Map22/Chunks/LanternFestivalStreet/Art_LanternFestivalStreet",
+            "Audio_LanternFestivalStreet": "Maps/MapGeometry/Map22/Chunks/LanternFestivalStreet/Audio_LanternFestivalStreet",
+            "Design_LanternFestivalStreet": "Maps/MapGeometry/Map22/Chunks/LanternFestivalStreet/Design_LanternFestivalStreet",
+            "LightingVolume_LanternFestivalStreet": "Maps/MapGeometry/Map22/Chunks/LanternFestivalStreet/LightingVolume_LanternFestivalStreet",
+            "Lighting_LanternFestivalStreet": "Maps/MapGeometry/Map22/Chunks/LanternFestivalStreet/Lighting_LanternFestivalStreet",
+            "MapBehaviors_LanternFestivalStreet": "Maps/MapGeometry/Map22/Chunks/LanternFestivalStreet/MapBehaviors_LanternFestivalStreet",
+            "Skybox_LanternFestivalStreet": "Maps/MapGeometry/Map22/Chunks/LanternFestivalStreet/Skybox_LanternFestivalStreet",
+            "VFX_LanternFestivalStreet": "Maps/MapGeometry/Map22/Chunks/LanternFestivalStreet/VFX_LanternFestivalStreet"
         },
         "__type": "MapContainer"
     },
@@ -8353,20 +8353,20 @@
         "RegionGroups": [
             {
                 "groupName": "Music",
-                "__type": "{2bfb084c}"
+                "__type": "NavGridRegionGroupDefinition"
             },
             {
                 "groupName": "Vfx",
-                "{ec01928c}": true,
-                "__type": "{2bfb084c}"
+                "IsGameplayGroup": true,
+                "__type": "NavGridRegionGroupDefinition"
             },
             {
                 "groupName": "Ambiance",
-                "__type": "{2bfb084c}"
+                "__type": "NavGridRegionGroupDefinition"
             },
             {
                 "groupName": "GameplayArea",
-                "{ec01928c}": true,
+                "IsGameplayGroup": true,
                 "tags": [
                     {
                         "name": "Ground",
@@ -8376,7 +8376,7 @@
                             255,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Liquid",
@@ -8386,7 +8386,7 @@
                             0,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Foliage",
@@ -8396,7 +8396,7 @@
                             30,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Stone",
@@ -8406,7 +8406,7 @@
                             255,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Metal",
@@ -8416,7 +8416,7 @@
                             114,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Ice",
@@ -8426,7 +8426,7 @@
                             0,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Fire",
@@ -8436,7 +8436,7 @@
                             255,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Air",
@@ -8446,7 +8446,7 @@
                             160,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Magic",
@@ -8456,7 +8456,7 @@
                             255,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Custom10",
@@ -8466,7 +8466,7 @@
                             127,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Custom11",
@@ -8476,7 +8476,7 @@
                             255,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Custom12",
@@ -8486,7 +8486,7 @@
                             192,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Custom13",
@@ -8496,11 +8496,11 @@
                             255,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Custom14",
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Custom15",
@@ -8510,7 +8510,7 @@
                             0,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Custom16",
@@ -8520,10 +8520,10 @@
                             0,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     }
                 ],
-                "__type": "{2bfb084c}"
+                "__type": "NavGridRegionGroupDefinition"
             }
         ],
         "__type": "NavGridConfig"
@@ -8538,12 +8538,12 @@
                     0,
                     255
                 ],
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "Wall",
                 "flags": 2,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{54acfa09}",
@@ -8554,7 +8554,7 @@
                     255
                 ],
                 "flags": 66,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "Grass",
@@ -8565,7 +8565,7 @@
                     255
                 ],
                 "flags": 1,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{74036ad3}",
@@ -8576,7 +8576,7 @@
                     255
                 ],
                 "flags": 256,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{5e70f23d}",
@@ -8587,7 +8587,7 @@
                     255
                 ],
                 "flags": 4,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{0643baee}",
@@ -8598,7 +8598,7 @@
                     255
                 ],
                 "flags": 514,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{b0a72c1e}",
@@ -8609,7 +8609,7 @@
                     255
                 ],
                 "flags": 1088,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{9f421ace}",
@@ -8620,7 +8620,7 @@
                     255
                 ],
                 "flags": 2112,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{d4db86a6}",
@@ -8631,7 +8631,7 @@
                     255
                 ],
                 "flags": 1025,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{8e825d26}",
@@ -8642,7 +8642,7 @@
                     255
                 ],
                 "flags": 2049,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{6114e217}",
@@ -8653,7 +8653,7 @@
                     255
                 ],
                 "flags": 5184,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{9db5a967}",
@@ -8664,7 +8664,7 @@
                     255
                 ],
                 "flags": 6208,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{c7066f0d}",
@@ -8675,7 +8675,7 @@
                     255
                 ],
                 "flags": 3,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             }
         ],
         "__type": "NavGridTerrainConfig"

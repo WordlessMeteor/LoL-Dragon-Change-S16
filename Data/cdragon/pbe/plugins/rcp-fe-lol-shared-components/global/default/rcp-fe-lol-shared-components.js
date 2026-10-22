@@ -490,10 +490,10 @@
                     a.getApi_SharedChallengesConstants = () => n(679).default, a.getApi_SharedChallengesComponents = () => n(680).default, a.getApi_SharedDiscordPopupComponents = () => n(687).getDiscordComponents(A), a.getApi_SharedChallengesApps = () => x, a.getApi_SharedRankedComponents = () => n(688).default;
                     const k = new(0, n(704).default);
                     a.getApi_SharedReportModalApps = () => k;
-                    const T = new(0, n(713).default);
-                    a.getApi_SharedPlayerBehaviorApps = () => T, a.getShoppefrontComponents = () => n(771).default;
-                    const C = (0, n(820).default)();
-                    a.getApi_Payments = () => C, a.getApi_SharedChampionMasteryComponents = () => n(830).default, a.getApi_SharedChampionMasteryConstants = () => n(851).default, a.getApi_SfxUiAudioManager = () => n(863).default
+                    const C = new(0, n(713).default);
+                    a.getApi_SharedPlayerBehaviorApps = () => C, a.getShoppefrontComponents = () => n(771).default;
+                    const T = (0, n(821).default)();
+                    a.getApi_Payments = () => T, a.getApi_SharedChampionMasteryComponents = () => n(831).default, a.getApi_SharedChampionMasteryConstants = () => n(852).default, a.getApi_SfxUiAudioManager = () => n(864).default
                 },
                 privateApi: r,
                 publicApi: a
@@ -5921,11 +5921,11 @@
                 A = s(d),
                 x = s(u),
                 k = s(m),
-                T = s(p),
-                C = s(h),
+                C = s(p),
+                T = s(h),
                 w = s(g),
                 S = s(f);
-            _.push([e.id, ':host {\n  --jade-regalia-emblem-salt-i: url("/fe/lol-jade/images/ranked/salt-i.png");\n  --jade-regalia-emblem-salt-ii: url("/fe/lol-jade/images/ranked/salt-ii.png");\n  --jade-regalia-emblem-salt-iii: url("/fe/lol-jade/images/ranked/salt-iii.png");\n  --jade-regalia-emblem-salt-iv: url("/fe/lol-jade/images/ranked/salt-iv.png");\n  --jade-regalia-emblem-wood-i: url("/fe/lol-jade/images/ranked/wood-i.png");\n  --jade-regalia-emblem-wood-ii: url("/fe/lol-jade/images/ranked/wood-ii.png");\n  --jade-regalia-emblem-wood-iii: url("/fe/lol-jade/images/ranked/wood-iii.png");\n  --jade-regalia-emblem-wood-iv: url("/fe/lol-jade/images/ranked/wood-iv.png");\n  --jade-regalia-emblem-silver-i: url("/fe/lol-jade/images/ranked/silver-i.png");\n  --jade-regalia-emblem-silver-ii: url("/fe/lol-jade/images/ranked/silver-ii.png");\n  --jade-regalia-emblem-silver-iii: url("/fe/lol-jade/images/ranked/silver-iii.png");\n  --jade-regalia-emblem-silver-iv: url("/fe/lol-jade/images/ranked/silver-iv.png");\n  --jade-regalia-emblem-gold-i: url("/fe/lol-jade/images/ranked/gold-i.png");\n  --jade-regalia-emblem-gold-ii: url("/fe/lol-jade/images/ranked/gold-ii.png");\n  --jade-regalia-emblem-gold-iii: url("/fe/lol-jade/images/ranked/gold-iii.png");\n  --jade-regalia-emblem-gold-iv: url("/fe/lol-jade/images/ranked/gold-iv.png");\n  --jade-regalia-emblem-platinum-i: url("/fe/lol-jade/images/ranked/platinum-i.png");\n  --jade-regalia-emblem-platinum-ii: url("/fe/lol-jade/images/ranked/platinum-ii.png");\n  --jade-regalia-emblem-platinum-iii: url("/fe/lol-jade/images/ranked/platinum-iii.png");\n  --jade-regalia-emblem-platinum-iv: url("/fe/lol-jade/images/ranked/platinum-iv.png");\n  --jade-regalia-emblem-diamond-i: url("/fe/lol-jade/images/ranked/diamond-i.png");\n  --jade-regalia-emblem-diamond-ii: url("/fe/lol-jade/images/ranked/diamond-ii.png");\n  --jade-regalia-emblem-diamond-iii: url("/fe/lol-jade/images/ranked/diamond-iii.png");\n  --jade-regalia-emblem-diamond-iv: url("/fe/lol-jade/images/ranked/diamond-iv.png");\n  --jade-regalia-emblem-legend-i: url("/fe/lol-jade/images/ranked/legend-i.png");\n  --regalia-emblem-unranked: url(' + b + ");\n  --regalia-emblem-iron: url(" + y + ");\n  --regalia-emblem-bronze: url(" + v + ");\n  --regalia-emblem-silver: url(" + E + ");\n  --regalia-emblem-gold: url(" + A + ");\n  --regalia-emblem-platinum: url(" + x + ");\n  --regalia-emblem-emerald: url(" + k + ");\n  --regalia-emblem-diamond: url(" + T + ");\n  --regalia-emblem-master: url(" + C + ");\n  --regalia-emblem-grandmaster: url(" + w + ");\n  --regalia-emblem-challenger: url(" + S + ');\n}\n:host .regalia-emblem-container {\n  display: flex;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  align-items: center;\n  justify-content: center;\n}\n:host .regalia-emblem-container .regalia-emblem {\n  width: 100%;\n  height: 100%;\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="unranked"] {\n  background-image: var(--regalia-emblem-unranked);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="iron"] {\n  background-image: var(--regalia-emblem-iron);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="bronze"] {\n  background-image: var(--regalia-emblem-bronze);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="silver"] {\n  background-image: var(--regalia-emblem-silver);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="gold"] {\n  background-image: var(--regalia-emblem-gold);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="platinum"] {\n  background-image: var(--regalia-emblem-platinum);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="emerald"] {\n  background-image: var(--regalia-emblem-emerald);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="diamond"] {\n  background-image: var(--regalia-emblem-diamond);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="master"] {\n  background-image: var(--regalia-emblem-master);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="grandmaster"] {\n  background-image: var(--regalia-emblem-grandmaster);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="challenger"] {\n  background-image: var(--regalia-emblem-challenger);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="unranked"] {\n  background-image: var(--regalia-emblem-unranked);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="salt"][ranked-division="i"] {\n  background-image: var(--jade-regalia-emblem-salt-i);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="salt"][ranked-division="ii"] {\n  background-image: var(--jade-regalia-emblem-salt-ii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="salt"][ranked-division="iii"] {\n  background-image: var(--jade-regalia-emblem-salt-iii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="salt"][ranked-division="iv"] {\n  background-image: var(--jade-regalia-emblem-salt-iv);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="wood"][ranked-division="i"] {\n  background-image: var(--jade-regalia-emblem-wood-i);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="wood"][ranked-division="ii"] {\n  background-image: var(--jade-regalia-emblem-wood-ii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="wood"][ranked-division="iii"] {\n  background-image: var(--jade-regalia-emblem-wood-iii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="wood"][ranked-division="iv"] {\n  background-image: var(--jade-regalia-emblem-wood-iv);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="silver"][ranked-division="i"] {\n  background-image: var(--jade-regalia-emblem-silver-i);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="silver"][ranked-division="ii"] {\n  background-image: var(--jade-regalia-emblem-silver-ii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="silver"][ranked-division="iii"] {\n  background-image: var(--jade-regalia-emblem-silver-iii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="silver"][ranked-division="iv"] {\n  background-image: var(--jade-regalia-emblem-silver-iv);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="gold"][ranked-division="i"] {\n  background-image: var(--jade-regalia-emblem-gold-i);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="gold"][ranked-division="ii"] {\n  background-image: var(--jade-regalia-emblem-gold-ii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="gold"][ranked-division="iii"] {\n  background-image: var(--jade-regalia-emblem-gold-iii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="gold"][ranked-division="iv"] {\n  background-image: var(--jade-regalia-emblem-gold-iv);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="platinum"][ranked-division="i"] {\n  background-image: var(--jade-regalia-emblem-platinum-i);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="platinum"][ranked-division="ii"] {\n  background-image: var(--jade-regalia-emblem-platinum-ii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="platinum"][ranked-division="iii"] {\n  background-image: var(--jade-regalia-emblem-platinum-iii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="platinum"][ranked-division="iv"] {\n  background-image: var(--jade-regalia-emblem-platinum-iv);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="diamond"][ranked-division="i"] {\n  background-image: var(--jade-regalia-emblem-diamond-i);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="diamond"][ranked-division="ii"] {\n  background-image: var(--jade-regalia-emblem-diamond-ii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="diamond"][ranked-division="iii"] {\n  background-image: var(--jade-regalia-emblem-diamond-iii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="diamond"][ranked-division="iv"] {\n  background-image: var(--jade-regalia-emblem-diamond-iv);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="legend"] {\n  background-image: var(--jade-regalia-emblem-legend-i);\n}\n', "", {
+            _.push([e.id, ':host {\n  --jade-regalia-emblem-salt-i: url("/fe/lol-jade/images/ranked/salt-i.png");\n  --jade-regalia-emblem-salt-ii: url("/fe/lol-jade/images/ranked/salt-ii.png");\n  --jade-regalia-emblem-salt-iii: url("/fe/lol-jade/images/ranked/salt-iii.png");\n  --jade-regalia-emblem-salt-iv: url("/fe/lol-jade/images/ranked/salt-iv.png");\n  --jade-regalia-emblem-wood-i: url("/fe/lol-jade/images/ranked/wood-i.png");\n  --jade-regalia-emblem-wood-ii: url("/fe/lol-jade/images/ranked/wood-ii.png");\n  --jade-regalia-emblem-wood-iii: url("/fe/lol-jade/images/ranked/wood-iii.png");\n  --jade-regalia-emblem-wood-iv: url("/fe/lol-jade/images/ranked/wood-iv.png");\n  --jade-regalia-emblem-silver-i: url("/fe/lol-jade/images/ranked/silver-i.png");\n  --jade-regalia-emblem-silver-ii: url("/fe/lol-jade/images/ranked/silver-ii.png");\n  --jade-regalia-emblem-silver-iii: url("/fe/lol-jade/images/ranked/silver-iii.png");\n  --jade-regalia-emblem-silver-iv: url("/fe/lol-jade/images/ranked/silver-iv.png");\n  --jade-regalia-emblem-gold-i: url("/fe/lol-jade/images/ranked/gold-i.png");\n  --jade-regalia-emblem-gold-ii: url("/fe/lol-jade/images/ranked/gold-ii.png");\n  --jade-regalia-emblem-gold-iii: url("/fe/lol-jade/images/ranked/gold-iii.png");\n  --jade-regalia-emblem-gold-iv: url("/fe/lol-jade/images/ranked/gold-iv.png");\n  --jade-regalia-emblem-platinum-i: url("/fe/lol-jade/images/ranked/platinum-i.png");\n  --jade-regalia-emblem-platinum-ii: url("/fe/lol-jade/images/ranked/platinum-ii.png");\n  --jade-regalia-emblem-platinum-iii: url("/fe/lol-jade/images/ranked/platinum-iii.png");\n  --jade-regalia-emblem-platinum-iv: url("/fe/lol-jade/images/ranked/platinum-iv.png");\n  --jade-regalia-emblem-diamond-i: url("/fe/lol-jade/images/ranked/diamond-i.png");\n  --jade-regalia-emblem-diamond-ii: url("/fe/lol-jade/images/ranked/diamond-ii.png");\n  --jade-regalia-emblem-diamond-iii: url("/fe/lol-jade/images/ranked/diamond-iii.png");\n  --jade-regalia-emblem-diamond-iv: url("/fe/lol-jade/images/ranked/diamond-iv.png");\n  --jade-regalia-emblem-legend-i: url("/fe/lol-jade/images/ranked/legend-i.png");\n  --regalia-emblem-unranked: url(' + b + ");\n  --regalia-emblem-iron: url(" + y + ");\n  --regalia-emblem-bronze: url(" + v + ");\n  --regalia-emblem-silver: url(" + E + ");\n  --regalia-emblem-gold: url(" + A + ");\n  --regalia-emblem-platinum: url(" + x + ");\n  --regalia-emblem-emerald: url(" + k + ");\n  --regalia-emblem-diamond: url(" + C + ");\n  --regalia-emblem-master: url(" + T + ");\n  --regalia-emblem-grandmaster: url(" + w + ");\n  --regalia-emblem-challenger: url(" + S + ');\n}\n:host .regalia-emblem-container {\n  display: flex;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  align-items: center;\n  justify-content: center;\n}\n:host .regalia-emblem-container .regalia-emblem {\n  width: 100%;\n  height: 100%;\n  background-size: contain;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="unranked"] {\n  background-image: var(--regalia-emblem-unranked);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="iron"] {\n  background-image: var(--regalia-emblem-iron);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="bronze"] {\n  background-image: var(--regalia-emblem-bronze);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="silver"] {\n  background-image: var(--regalia-emblem-silver);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="gold"] {\n  background-image: var(--regalia-emblem-gold);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="platinum"] {\n  background-image: var(--regalia-emblem-platinum);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="emerald"] {\n  background-image: var(--regalia-emblem-emerald);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="diamond"] {\n  background-image: var(--regalia-emblem-diamond);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="master"] {\n  background-image: var(--regalia-emblem-master);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="grandmaster"] {\n  background-image: var(--regalia-emblem-grandmaster);\n}\n:host .regalia-emblem-container .regalia-emblem[ranked-tier="challenger"] {\n  background-image: var(--regalia-emblem-challenger);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="unranked"] {\n  background-image: var(--regalia-emblem-unranked);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="salt"][ranked-division="i"] {\n  background-image: var(--jade-regalia-emblem-salt-i);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="salt"][ranked-division="ii"] {\n  background-image: var(--jade-regalia-emblem-salt-ii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="salt"][ranked-division="iii"] {\n  background-image: var(--jade-regalia-emblem-salt-iii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="salt"][ranked-division="iv"] {\n  background-image: var(--jade-regalia-emblem-salt-iv);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="wood"][ranked-division="i"] {\n  background-image: var(--jade-regalia-emblem-wood-i);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="wood"][ranked-division="ii"] {\n  background-image: var(--jade-regalia-emblem-wood-ii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="wood"][ranked-division="iii"] {\n  background-image: var(--jade-regalia-emblem-wood-iii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="wood"][ranked-division="iv"] {\n  background-image: var(--jade-regalia-emblem-wood-iv);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="silver"][ranked-division="i"] {\n  background-image: var(--jade-regalia-emblem-silver-i);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="silver"][ranked-division="ii"] {\n  background-image: var(--jade-regalia-emblem-silver-ii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="silver"][ranked-division="iii"] {\n  background-image: var(--jade-regalia-emblem-silver-iii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="silver"][ranked-division="iv"] {\n  background-image: var(--jade-regalia-emblem-silver-iv);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="gold"][ranked-division="i"] {\n  background-image: var(--jade-regalia-emblem-gold-i);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="gold"][ranked-division="ii"] {\n  background-image: var(--jade-regalia-emblem-gold-ii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="gold"][ranked-division="iii"] {\n  background-image: var(--jade-regalia-emblem-gold-iii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="gold"][ranked-division="iv"] {\n  background-image: var(--jade-regalia-emblem-gold-iv);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="platinum"][ranked-division="i"] {\n  background-image: var(--jade-regalia-emblem-platinum-i);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="platinum"][ranked-division="ii"] {\n  background-image: var(--jade-regalia-emblem-platinum-ii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="platinum"][ranked-division="iii"] {\n  background-image: var(--jade-regalia-emblem-platinum-iii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="platinum"][ranked-division="iv"] {\n  background-image: var(--jade-regalia-emblem-platinum-iv);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="diamond"][ranked-division="i"] {\n  background-image: var(--jade-regalia-emblem-diamond-i);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="diamond"][ranked-division="ii"] {\n  background-image: var(--jade-regalia-emblem-diamond-ii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="diamond"][ranked-division="iii"] {\n  background-image: var(--jade-regalia-emblem-diamond-iii);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="diamond"][ranked-division="iv"] {\n  background-image: var(--jade-regalia-emblem-diamond-iv);\n}\n:host .regalia-emblem-container .regalia-emblem[queue-type="JADE_RANKED_SOLO_5x5"][ranked-tier="legend"] {\n  background-image: var(--jade-regalia-emblem-legend-i);\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-shared-components/src/lib/regalia/addon/elements/emblem-element/component-style.styl"],
                 names: [],
@@ -8773,9 +8773,9 @@
                 parseDigits: () => x.default,
                 parseIncompletePhoneNumber: () => A.default,
                 parseNumber: () => w,
-                parsePhoneNumber: () => T,
+                parsePhoneNumber: () => C,
                 parsePhoneNumberCharacter: () => A.parsePhoneNumberCharacter,
-                parsePhoneNumberFromString: () => C,
+                parsePhoneNumberFromString: () => T,
                 parseRFC3966: () => Y,
                 searchNumbers: () => U,
                 searchPhoneNumbers: () => $,
@@ -8804,12 +8804,12 @@
                 x = n(209),
                 k = n(210);
 
-            function T() {
+            function C() {
                 var e = Array.prototype.slice.call(arguments);
                 return e.push(a), r.default.apply(this, e)
             }
 
-            function C() {
+            function T() {
                 var e = Array.prototype.slice.call(arguments);
                 return e.push(a), s.default.apply(this, e)
             }
@@ -9532,7 +9532,7 @@
                     b = _.country,
                     x = _.national_number,
                     k = _.countryCallingCode,
-                    T = _.carrierCode;
+                    C = _.carrierCode;
                 if (!n.selectedCountry()) {
                     if (t.v2) throw new s.default("INVALID_COUNTRY");
                     return {}
@@ -9546,14 +9546,14 @@
                     return {}
                 }
                 if (t.v2) {
-                    var C = new h.default(k, x, n.metadata);
-                    return b && (C.country = b), T && (C.carrierCode = T), f && (C.ext = f), C
+                    var T = new h.default(k, x, n.metadata);
+                    return b && (T.country = b), C && (T.carrierCode = C), f && (T.ext = f), T
                 }
                 var w = !(!b || !(0, r.matchesEntirely)(x, n.nationalNumberPattern()));
                 return t.extended ? {
                     country: b,
                     countryCallingCode: k,
-                    carrierCode: T,
+                    carrierCode: C,
                     valid: w,
                     possible: !!w || !0 === t.extended && n.possibleLengths() && (0, u.is_possible_number)(x, void 0 !== k, n),
                     phone: x,
@@ -10686,7 +10686,7 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                default: () => C
+                default: () => T
             });
             var a = n(216),
                 r = n(215),
@@ -10726,8 +10726,8 @@
                 A = o.pNd + (0, i.limit)(1, y),
                 x = "(?:" + u.LEAD_CLASS + E + ")" + _ + A + "(?:" + E + A + ")" + v + "(?:" + s.EXTN_PATTERNS_FOR_MATCHING + ")?",
                 k = new RegExp("[^" + o._pN + o._pL + "#]+$"),
-                T = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
-            const C = function() {
+                C = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
+            const T = function() {
                 function e() {
                     var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
                         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -10737,7 +10737,7 @@
                         }(this, e), this.state = "NOT_READY", this.searchIndex = 0, !(n = h({}, n, {
                             defaultCountry: n.defaultCountry && (0, m.isSupportedCountry)(n.defaultCountry, a) ? n.defaultCountry : void 0,
                             leniency: n.leniency || n.extended ? "POSSIBLE" : "VALID",
-                            maxTries: n.maxTries || T
+                            maxTries: n.maxTries || C
                         })).leniency) throw new TypeError("`Leniency` not supplied");
                     if (n.maxTries < 0) throw new TypeError("`maxTries` not supplied");
                     if (this.text = t, this.options = n, this.metadata = a, this.leniency = l.default[n.leniency], !this.leniency) throw new TypeError("Unknown leniency: " + n.leniency + ".");
@@ -10995,7 +10995,7 @@
                 count_occurences: () => k,
                 cut_stripping_dangling_braces: () => A,
                 default: () => v,
-                repeat: () => T,
+                repeat: () => C,
                 strip_dangling_braces: () => E
             });
             var a = n(206),
@@ -11017,7 +11017,7 @@
                         return n && e(t.prototype, n), a && e(t, a), t
                     }
                 }();
-            var m = T("9", 15),
+            var m = C("9", 15),
                 p = "x",
                 h = new RegExp(p),
                 g = function() {
@@ -11212,7 +11212,7 @@
                     value: function(e) {
                         if (!(e.pattern().indexOf("|") >= 0)) {
                             var t = this.getTemplateForNumberFormatPattern(e);
-                            if (t) return this.partially_populated_template = t, this.isInternational() ? this.template = p + T(p, this.countryCallingCode.length) + " " + t : this.template = t.replace(/\d/g, p), this.template
+                            if (t) return this.partially_populated_template = t, this.isInternational() ? this.template = p + C(p, this.countryCallingCode.length) + " " + t : this.template = t.replace(/\d/g, p), this.template
                         }
                     }
                 }, {
@@ -11343,7 +11343,7 @@
                 return n
             }
 
-            function T(e, t) {
+            function C(e, t) {
                 if (t < 1) return "";
                 for (var n = ""; t > 1;) 1 & t && (n += e), t >>= 1, e += e;
                 return n + e
@@ -12715,8 +12715,8 @@
                 A = K(n(427)),
                 x = K(n(430)),
                 k = K(n(434)),
-                T = K(n(437)),
-                C = K(n(443)),
+                C = K(n(437)),
+                T = K(n(443)),
                 w = K(n(447)),
                 S = K(n(450)),
                 I = K(n(453)),
@@ -12766,8 +12766,8 @@
                 PerkPageTooltipComponent: A.default,
                 PlayerRestrictionInfoComponent: x.default,
                 PlayerNameComponent: k.default,
-                PlayerNameInputApi: T.default,
-                PostgameReportModal: C.default,
+                PlayerNameInputApi: C.default,
+                PostgameReportModal: T.default,
                 RemainingTimeTextComponent: w.default,
                 RenderTelemetrySenderComponent: S.default,
                 ResetTimerComponent: I.default,
@@ -14871,7 +14871,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = function(e, t, n, N, M) {
-                (0, a.addAudioListeners)(e.allRegions, t, N), (0, r.addClientDataListener)(e.allRegions, t, n), (0, s.addEventHubListeners)(e.allRegions, t, n), (0, i.addEventShopListeners)(e.allRegions, t, n), (0, o.addFoundationListeners)(e.allRegions, t, n), (0, l.addGameDataListeners)(e.allRegions, t, n), (0, c.addGameflowListener)(e.allRegions, t, n), (0, d.addHubRoutingListener)(e.allRegions, t, M), (0, u.addHubSettingsListeners)(e.allRegions, t, n), (0, m.addLolSettingsListeners)(e.allRegions, t, n), (0, p.addMarketingPreferencesListeners)(e.allRegions, t, n), (0, h.addMissionsListeners)(e.allRegions, t, n), (0, g.addProgressionListeners)(e.allRegions, t, n), (0, f.addRewardsListeners)(e.allRegions, t, n), (0, _.addOpenFullPageModalListener)(e.allRegions, t, n, N), (0, b.addOpenPAWListener)(e.allRegions, t, n), (0, y.addOpenStoreListener)(e.allRegions, t), (0, v.addOpenUiListeners)(e.allRegions, t), (0, E.addPubHubConfigListener)(e.allRegions, t, n), (0, A.addQueuesListeners)(e.allRegions, t, n), (0, x.addSessionDataListener)(e.allRegions, t, n), (0, k.addTastesListeners)(e.allRegions, t, n), (0, T.addTFTPassListeners)(e.allRegions, t, n), (0, C.addTFTTrovesListeners)(e.allRegions, t, n), (0, w.addTokenListeners)(e.allRegions, t, n), (0, S.addSeasonListeners)(e.allRegions, t, n), (0, I.addActivityCenterListeners)(e.allRegions, t, n), (0, R.addMetagamesListeners)(e.allRegions, t, n), (0, L.addLaunchTFTListeners)(e.allRegions, t, n), (0, P.addDemaciaListener)(e.allRegions, t)
+                (0, a.addAudioListeners)(e.allRegions, t, N), (0, r.addClientDataListener)(e.allRegions, t, n), (0, s.addEventHubListeners)(e.allRegions, t, n), (0, i.addEventShopListeners)(e.allRegions, t, n), (0, o.addFoundationListeners)(e.allRegions, t, n), (0, l.addGameDataListeners)(e.allRegions, t, n), (0, c.addGameflowListener)(e.allRegions, t, n), (0, d.addHubRoutingListener)(e.allRegions, t, M), (0, u.addHubSettingsListeners)(e.allRegions, t, n), (0, m.addLolSettingsListeners)(e.allRegions, t, n), (0, p.addMarketingPreferencesListeners)(e.allRegions, t, n), (0, h.addMissionsListeners)(e.allRegions, t, n), (0, g.addProgressionListeners)(e.allRegions, t, n), (0, f.addRewardsListeners)(e.allRegions, t, n), (0, _.addOpenFullPageModalListener)(e.allRegions, t, n, N), (0, b.addOpenPAWListener)(e.allRegions, t, n), (0, y.addOpenStoreListener)(e.allRegions, t), (0, v.addOpenUiListeners)(e.allRegions, t), (0, E.addPubHubConfigListener)(e.allRegions, t, n), (0, A.addQueuesListeners)(e.allRegions, t, n), (0, x.addSessionDataListener)(e.allRegions, t, n), (0, k.addTastesListeners)(e.allRegions, t, n), (0, C.addTFTPassListeners)(e.allRegions, t, n), (0, T.addTFTTrovesListeners)(e.allRegions, t, n), (0, w.addTokenListeners)(e.allRegions, t, n), (0, S.addSeasonListeners)(e.allRegions, t, n), (0, I.addActivityCenterListeners)(e.allRegions, t, n), (0, R.addMetagamesListeners)(e.allRegions, t, n), (0, L.addLaunchTFTListeners)(e.allRegions, t, n), (0, P.addDemaciaListener)(e.allRegions, t)
             };
             var a = n(388),
                 r = n(389),
@@ -14895,8 +14895,8 @@
                 A = n(410),
                 x = n(411),
                 k = n(412),
-                T = n(413),
-                C = n(414),
+                C = n(413),
+                T = n(414),
                 w = n(415),
                 S = n(416),
                 I = n(417),
@@ -24204,7 +24204,7 @@
                 if (e.percentile < t.percentile) return 1;
                 if (e.percentile > t.percentile) return -1;
                 return u(e, t)
-            }, t.compareByRarityAsc = h, t.compareBySource = c, t.compareByTimeAcquired = p, t.compareByTitleChallengeCompletion = v, t.compareByTitleChallengeId = E, t.compareByTitleName = f, t.compareByTitleOwned = A, t.compareByTitleRarityAsc = k, t.compareByTitleTimeAcquired = y, t.getCurrentTitleChallengeCompletionPercent = T, t.sortChallenges = function(e, t) {
+            }, t.compareByRarityAsc = h, t.compareBySource = c, t.compareByTimeAcquired = p, t.compareByTitleChallengeCompletion = v, t.compareByTitleChallengeId = E, t.compareByTitleName = f, t.compareByTitleOwned = A, t.compareByTitleRarityAsc = k, t.compareByTitleTimeAcquired = y, t.getCurrentTitleChallengeCompletionPercent = C, t.sortChallenges = function(e, t) {
                 if (!t || !e) return e;
                 switch (t) {
                     case a.CHALLENGE_SORT_TYPES.RARITY:
@@ -24320,8 +24320,8 @@
             }
 
             function v(e, t) {
-                const n = T(e),
-                    a = T(t);
+                const n = C(e),
+                    a = C(t);
                 return n < a ? 1 : n > a ? -1 : E(e, t)
             }
 
@@ -24334,21 +24334,21 @@
             }
 
             function x(e, t) {
-                return e.titleAcquisitionType !== t.titleAcquisitionType ? a.TITLES_SORT_PRIORITY_BY_TITLE_TYPE[e.titleAcquisitionType] - a.TITLES_SORT_PRIORITY_BY_TITLE_TYPE[t.titleAcquisitionType] : C(e) && C(t) ? k(e, t) : w(e) && w(t) ? _(e, t) : f(e, t)
+                return e.titleAcquisitionType !== t.titleAcquisitionType ? a.TITLES_SORT_PRIORITY_BY_TITLE_TYPE[e.titleAcquisitionType] - a.TITLES_SORT_PRIORITY_BY_TITLE_TYPE[t.titleAcquisitionType] : T(e) && T(t) ? k(e, t) : w(e) && w(t) ? _(e, t) : f(e, t)
             }
 
             function k(e, t) {
                 return !e.challengeData || e.challengeData && !e.challengeData.percentile ? 1 : !t.challengeData || t.challengeData && !t.challengeData.percentile || e.challengeData.percentile < t.challengeData.percentile ? -1 : e.challengeData.percentile > t.challengeData.percentile ? 1 : b(e, t)
             }
 
-            function T(e) {
+            function C(e) {
                 if (!e.challengeData) return 0;
                 const t = Math.max(e.challengeData.currentValue - e.challengeData.currentThreshold, 0),
                     n = Math.max(e.challengeData.nextThreshold - e.challengeData.currentThreshold, 0);
                 return n ? t / n : 0
             }
 
-            function C(e) {
+            function T(e) {
                 return e.titleAcquisitionType === s.PLAYER_TITLE_FILTER_TYPES.CHALLENGES
             }
 
@@ -27646,42 +27646,43 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = S(n(772)),
-                r = S(n(776)),
-                s = S(n(778)),
-                i = S(n(780)),
-                o = S(n(783)),
-                l = S(n(785)),
-                c = S(n(787)),
-                d = S(n(789)),
-                u = S(n(792)),
-                m = S(n(794)),
-                p = S(n(796)),
-                h = S(n(798)),
-                g = S(n(800)),
-                f = S(n(802)),
-                _ = S(n(804)),
-                b = S(n(806)),
-                y = S(n(810)),
-                v = S(n(811)),
-                E = S(n(813)),
-                A = S(n(814)),
-                x = S(n(815)),
-                k = S(n(816)),
-                T = S(n(817)),
-                C = n(774),
-                w = n(775);
+            var a = I(n(772)),
+                r = I(n(776)),
+                s = I(n(778)),
+                i = I(n(780)),
+                o = I(n(783)),
+                l = I(n(785)),
+                c = I(n(787)),
+                d = I(n(789)),
+                u = I(n(792)),
+                m = I(n(794)),
+                p = I(n(796)),
+                h = I(n(798)),
+                g = I(n(800)),
+                f = I(n(802)),
+                _ = I(n(803)),
+                b = I(n(805)),
+                y = I(n(807)),
+                v = I(n(811)),
+                E = I(n(812)),
+                A = I(n(814)),
+                x = I(n(815)),
+                k = I(n(816)),
+                C = I(n(817)),
+                T = I(n(818)),
+                w = n(774),
+                S = n(775);
 
-            function S(e) {
+            function I(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(819);
-            var I = {
-                INVENTORY_TYPE_IDS: C.INVENTORY_TYPE_IDS,
-                CATEGORIES: w.CATEGORIES,
-                STORES: w.STORES,
+            n(820);
+            var R = {
+                INVENTORY_TYPE_IDS: w.INVENTORY_TYPE_IDS,
+                CATEGORIES: S.CATEGORIES,
+                STORES: S.STORES,
                 CatalogItemComponent: i.default,
                 CatalogItemTooltipComponent: o.default,
                 CatalogCategoryComponent: s.default,
@@ -27692,21 +27693,22 @@
                 CategoriesSidebarItemComponent: c.default,
                 CurrencyCounterComponent: d.default,
                 SearchBarComponent: m.default,
-                HelpModalComponent: _.default,
+                HelpModalComponent: b.default,
                 ShoppefrontHeaderComponent: p.default,
                 PurchaseModalComponent: h.default,
                 PurchaseModalPaymentOptionsComponent: g.default,
-                PurchaseModalPrerequisitesComponent: f.default,
-                ShoppefrontLootService: y.default,
-                ShoppefrontCatalogItemEnricherService: v.default,
-                GameDataMapperService: E.default,
-                ShoppefrontAudioService: b.default,
-                ShoppefrontLolInventoryService: A.default,
-                ShoppefrontService: x.default,
-                ShoppefrontUxSettingsService: k.default,
+                MultiPurchasePaymentOptionsComponent: f.default,
+                PurchaseModalPrerequisitesComponent: _.default,
+                ShoppefrontLootService: v.default,
+                ShoppefrontCatalogItemEnricherService: E.default,
+                GameDataMapperService: A.default,
+                ShoppefrontAudioService: y.default,
+                ShoppefrontLolInventoryService: x.default,
+                ShoppefrontService: k.default,
+                ShoppefrontUxSettingsService: C.default,
                 ConfirmToastService: T.default
             };
-            t.default = I
+            t.default = R
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -27922,6 +27924,7 @@
                     CATEGORY_SCROLL: "category_scroll",
                     ITEM_CLICK: "item_click",
                     ITEM_PURCHASE: "item_purchase",
+                    ITEM_IMPRESSION: "item_impression",
                     SEARCH_BAR_TEXT: "search_bar_text",
                     PAGE_OPEN: "shoppefront_page_open"
                 }
@@ -28313,6 +28316,9 @@
                     return this.get("isMissingParentSkin") && !this.get("isMissingRequiredChampion") && !this.get("doesNotHaveEnoughCurrency")
                 })),
                 itemTileSizeClass: r.Ember.computed.alias("catalogItem.overrideTileSize"),
+                badge: r.Ember.computed("catalogItem.displayMetadata.shoppefront.badge", (function() {
+                    return null
+                })),
                 hasReachedVelocityLimit: r.Ember.computed("catalogItem", "shoppefrontService.purchaseLimitsMap", (function() {
                     const e = this.get("catalogItem").purchaseLimits[0]?.ruleId;
                     return 0 === this.get("shoppefrontService.purchaseLimitsMap")[e]?.availableTokens
@@ -28362,6 +28368,15 @@
                 videoTooltipEnabled: r.Ember.computed("videoEnabled", "itemTileSizeClass", (function() {
                     return this.get("videoEnabled") && "large-square" !== this.get("itemTileSizeClass")
                 })),
+                didInsertElement() {
+                    this._super(...arguments), r.Ember.run.scheduleOnce("afterRender", this, this._setupImpressionObserver)
+                },
+                _paymentsDetailsObserver: r.Ember.observer("paymentsDetails.[]", (function() {
+                    r.Ember.run.scheduleOnce("afterRender", this, this._setupImpressionObserver)
+                })),
+                willDestroyElement() {
+                    this._super(...arguments), this.impressionObserver && (this.impressionObserver.disconnect(), this.impressionObserver = null)
+                },
                 sendTelemetryEvent() {
                     const e = {
                         eventName: o.TELEMETRY_EVENTS.eventName.ITEM_CLICK,
@@ -28370,9 +28385,40 @@
                         storeId: this.get("catalogItem.storeId"),
                         contentId: this.get("catalogItem").purchaseUnits[0]?.fulfillment.itemId,
                         itemName: this.get("catalogItem").purchaseUnits[0]?.fulfillment.name,
-                        inventoryTypeId: this.get("inventoryTypeId")
+                        inventoryTypeId: this.get("catalogItem.inventoryTypeId")
                     };
                     r.Telemetry.sendCustomData(o.TELEMETRY_EVENTS.TABLE_NAME, e), r.datadogRum.proxy.addAction(`${o.TELEMETRY_EVENTS.TABLE_NAME}-${o.TELEMETRY_EVENTS.eventName.ITEM_CLICK}`, e)
+                },
+                sendImpressionTelemetry() {
+                    const e = this.get("shoppefrontService"),
+                        t = this.get("catalogItem.id");
+                    if (e.get("sentImpressionItems").has(t)) return;
+                    const n = {
+                        eventName: o.TELEMETRY_EVENTS.eventName.ITEM_IMPRESSION,
+                        eventType: o.TELEMETRY_EVENTS.eventType.PAGE_SCROLL,
+                        shoppefrontId: e.get("shoppefrontId"),
+                        storeId: this.get("catalogItem.storeId"),
+                        contentId: this.get("catalogItem").purchaseUnits[0]?.fulfillment.itemId,
+                        itemName: this.get("catalogItem").purchaseUnits[0]?.fulfillment.name,
+                        inventoryTypeId: this.get("catalogItem.inventoryTypeId")
+                    };
+                    r.Telemetry.sendCustomData(o.TELEMETRY_EVENTS.TABLE_NAME, n), e.get("sentImpressionItems").add(t)
+                },
+                _setupImpressionObserver() {
+                    if (this.isDestroyed || this.isDestroying || this.impressionObserver) return;
+                    const e = this.get("catalogItem.id"),
+                        t = document.querySelector(`.shoppefront-catalog-item[data-telemetry-item-id="${e}"]`);
+                    if (t) {
+                        const e = {
+                            root: document.querySelector(".shoppefront-scrollable"),
+                            threshold: .9
+                        };
+                        this.impressionObserver = new IntersectionObserver((e => {
+                            e.forEach((e => {
+                                e.isIntersecting && e.intersectionRatio >= .9 && this.sendImpressionTelemetry()
+                            }))
+                        }), e), this.impressionObserver.observe(t)
+                    }
                 },
                 actions: {
                     handleMouseEnter: function(e) {
@@ -28437,16 +28483,18 @@
                         of n)
                         for (const n of a?.purchaseUnits?.[0]?.paymentOptions ?? []) {
                             const i = n.payments?.[0],
-                                o = t ? 0 : i?.finalDelta ?? 0,
-                                l = {
+                                o = a.quantity ?? 1,
+                                l = t ? 0 : (i?.finalDelta ?? 0) * o,
+                                c = {
                                     ...r,
-                                    [i?.name]: (r[i?.name] ?? 0) + o
+                                    [i?.name]: (r[i?.name] ?? 0) + l
                                 };
                             e.push({
-                                currencyIdToTotal: l,
+                                currencyIdToTotal: c,
                                 subPurchaseRequests: [...s, {
                                     catalogEntryId: a.id,
-                                    paymentOptions: [n.key]
+                                    paymentOptions: [n.key],
+                                    quantity: (a.purchaseUnits[0].fulfillment?.delta ?? 1) * o
                                 }]
                             })
                         }
@@ -28476,8 +28524,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "2yFXV/7I",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\shoppefront\\\\addon\\\\templates\\\\catalog-item.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["block",["if"],[["get",["paymentsDetails"]]],null,15]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["catalog-item-tooltip"],null,[["videoPath"],[["get",["catalogItem","videoPath"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["targetAnchorX","targetAnchorY","tooltipAnchorX","tooltipAnchorY"],["left","top","right","center"]],0]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","owned-label-container"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","owned-checkmark"],["static-attr","src","/fe/lol-static-assets/checkmark-gold2.svg"],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","owned-text"],["flush-element"],["append",["unknown",["notPurchasableMessage"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","span",[]],["static-attr","class","catalog-price"],["flush-element"],["open-element","img",[]],["static-attr","class","currency-icon"],["dynamic-attr","src",["concat",[["unknown",["paymentDetail","imagePath"]]]]],["flush-element"],["close-element"],["append",["unknown",["paymentDetail","catalogPrice"]],false],["close-element"],["text","\\n"]],"locals":["paymentDetail"]},{"statements":[["text","          "],["open-element","span",[]],["static-attr","class","error-text"],["flush-element"],["append",["unknown",["errorText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["errorText"]]],null,4],["text","        "],["open-element","div",[]],["static-attr","class","catalog-price-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["paymentsDetails"]]],null,3],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["static-attr","src","/fe/lol-static-assets/images/icons/chroma-icon.png"],["static-attr","class","chroma-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showUnits","showSeconds","digits","separator","timerText","showContainer"],[["get",["endDate"]],true,true,false,1," ","{{remainingTime}}",true]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["static-attr","class","shared-reset-timer-component"],["flush-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","reset-timer"],["flush-element"],["text","\\n            "],["append",["unknown",["refreshingNowText"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["refreshingNow"]]],null,8,7]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["dynamic-attr","class",["concat",["catalog-image ",["unknown",["catalogItem","catalogImageTypeClass"]]]]],["dynamic-attr","src",["concat",[["unknown",["imagePath"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","uikit-video",[]],["dynamic-attr","class",["concat",["catalog-video ",["helper",["if"],[["get",["isHovered"]],"visible","hidden"],null]]]],["dynamic-attr","src",["concat",[["unknown",["catalogItem","videoPath"]]]]],["static-attr","loop",""],["static-attr","preload",""],["static-attr","muted","true"],["flush-element"],["close-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["catalog-image ",["unknown",["catalogItem","catalogImageTypeClass"]]," ",["helper",["if"],[["get",["isHovered"]],"hidden","visible"],null]]]],["dynamic-attr","src",["concat",[["unknown",["imagePath"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isInTileVideo"]]],null,11,10]],"locals":[]},{"statements":[["text","        "],["append",["helper",["tomacco-token"],null,[["p1","p2"],[["get",["catalogItem","itemId"]],["get",["tomacco"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["helper",["riot-future"],null,null]],null,13]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["shoppefront-catalog-item ",["unknown",["itemOwnedClass"]]," ",["unknown",["itemTileSizeClass"]]]]],["static-attr","data-dd-action-name","button.shoppefront.item.click"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"handleMouseEnter"],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],"handleMouseLeave"],null],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"click"],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["catalogItem","isTomacco"]]],null,14,12],["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["catalog-vignette ",["unknown",["itemOwnedClass"]]]]],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["showRefreshTimer"]]],null,9],["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["catalog-details-container ",["helper",["if"],[["get",["errorText"]],"contains-error-message"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["catalogItem","isChroma"]]],null,6],["text","      "],["open-element","span",[]],["static-attr","class","catalog-name"],["flush-element"],["append",["unknown",["catalogItem","traTitle"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isPurchasable"]]],null,5,2],["text","    "],["close-element"],["text","\\n"],["block",["if"],[["get",["videoTooltipEnabled"]]],null,1],["text","  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "KGfwsZhC",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\shoppefront\\\\addon\\\\templates\\\\catalog-item.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["block",["if"],[["get",["paymentsDetails"]]],null,16]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["catalog-item-tooltip"],null,[["videoPath"],[["get",["catalogItem","videoPath"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["targetAnchorX","targetAnchorY","tooltipAnchorX","tooltipAnchorY"],["left","top","right","center"]],0]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","owned-label-container"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","owned-checkmark"],["static-attr","src","/fe/lol-static-assets/checkmark-gold2.svg"],["flush-element"],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","owned-text"],["flush-element"],["append",["unknown",["notPurchasableMessage"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","span",[]],["static-attr","class","catalog-price"],["flush-element"],["open-element","img",[]],["static-attr","class","currency-icon"],["dynamic-attr","src",["concat",[["unknown",["paymentDetail","imagePath"]]]]],["flush-element"],["close-element"],["append",["unknown",["paymentDetail","catalogPrice"]],false],["close-element"],["text","\\n"]],"locals":["paymentDetail"]},{"statements":[["text","          "],["open-element","span",[]],["static-attr","class","error-text"],["flush-element"],["append",["unknown",["errorText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["errorText"]]],null,4],["text","        "],["open-element","div",[]],["static-attr","class","catalog-price-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["paymentsDetails"]]],null,3],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["static-attr","src","/fe/lol-static-assets/images/icons/chroma-icon.png"],["static-attr","class","chroma-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showUnits","showSeconds","digits","separator","timerText","showContainer"],[["get",["endDate"]],true,true,false,1," ","{{remainingTime}}",true]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","span",[]],["static-attr","class","shared-reset-timer-component"],["flush-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","reset-timer"],["flush-element"],["text","\\n              "],["append",["unknown",["refreshingNowText"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["refreshingNow"]]],null,8,7]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["dynamic-attr","class",["concat",["catalog-badge ",["unknown",["badge","style"]]]]],["flush-element"],["append",["unknown",["badge","text"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["dynamic-attr","class",["concat",["catalog-image ",["unknown",["catalogItem","catalogImageTypeClass"]]]]],["dynamic-attr","src",["concat",[["unknown",["imagePath"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","uikit-video",[]],["dynamic-attr","class",["concat",["catalog-video ",["helper",["if"],[["get",["isHovered"]],"visible","hidden"],null]]]],["dynamic-attr","src",["concat",[["unknown",["catalogItem","videoPath"]]]]],["static-attr","loop",""],["static-attr","preload",""],["static-attr","muted","true"],["flush-element"],["close-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["catalog-image ",["unknown",["catalogItem","catalogImageTypeClass"]]," ",["helper",["if"],[["get",["isHovered"]],"hidden","visible"],null]]]],["dynamic-attr","src",["concat",[["unknown",["imagePath"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isInTileVideo"]]],null,12,11]],"locals":[]},{"statements":[["text","        "],["append",["helper",["tomacco-token"],null,[["p1","p2"],[["get",["catalogItem","itemId"]],["get",["tomacco"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["helper",["riot-future"],null,null]],null,14]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["shoppefront-catalog-item ",["unknown",["itemOwnedClass"]]," ",["unknown",["itemTileSizeClass"]]]]],["dynamic-attr","data-telemetry-item-id",["concat",[["unknown",["catalogItem","id"]]]]],["static-attr","data-dd-action-name","button.shoppefront.item.click"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"handleMouseEnter"],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],"handleMouseLeave"],null],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"click"],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["catalogItem","isTomacco"]]],null,15,13],["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["catalog-vignette ",["unknown",["itemOwnedClass"]]]]],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","catalog-status-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["badge"]]],null,10],["block",["if"],[["get",["showRefreshTimer"]]],null,9],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["catalog-details-container ",["helper",["if"],[["get",["errorText"]],"contains-error-message"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["catalogItem","isChroma"]]],null,6],["text","      "],["open-element","span",[]],["static-attr","class","catalog-name"],["flush-element"],["append",["unknown",["catalogItem","traTitle"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isPurchasable"]]],null,5,2],["text","    "],["close-element"],["text","\\n"],["block",["if"],[["get",["videoTooltipEnabled"]]],null,1],["text","  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -28762,10 +28810,11 @@
                 s = (a = n(799)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(774);
-            const o = r.dataBinding.bindTo(r.socket),
-                l = [i.INVENTORY_TYPE_IDS.SUMMONER_ICON, i.INVENTORY_TYPE_IDS.WARD_SKIN, i.INVENTORY_TYPE_IDS.EMOTE, i.INVENTORY_TYPE_IDS.EVENT_PASS, i.INVENTORY_TYPE_IDS.REGALIA_BANNER];
-            var c = r.Ember.Component.extend({
+                i = n(774),
+                o = n(781);
+            const l = r.dataBinding.bindTo(r.socket),
+                c = [i.INVENTORY_TYPE_IDS.SUMMONER_ICON, i.INVENTORY_TYPE_IDS.WARD_SKIN, i.INVENTORY_TYPE_IDS.EMOTE, i.INVENTORY_TYPE_IDS.EVENT_PASS, i.INVENTORY_TYPE_IDS.REGALIA_BANNER];
+            var d = r.Ember.Component.extend({
                 classNames: ["shoppefront-purchase-modal"],
                 shoppefrontService: r.Ember.inject.service("shoppefront"),
                 confirmToastService: r.Ember.inject.service("confirmToast"),
@@ -28782,22 +28831,48 @@
                 shoppefrontId: r.Ember.computed.alias("modalItem.shoppefrontId"),
                 showDisclaimer: r.Ember.computed.and("modalItem.showDisclaimer", "isPurchaseModalItemActive"),
                 walletBalance: r.Ember.computed.alias("modalItem.walletBalance"),
-                paymentOptions: r.Ember.computed.alias("modalItem.paymentOptions"),
                 prerequisites: r.Ember.computed.alias("modalItem.prerequisites"),
+                selectedPurchaseCount: 1,
+                multiPurchaseConfig: r.Ember.computed.alias("modalItem.item.displayMetadata.shoppefront.multiPurchase"),
+                isMultiPurchaseEnabled: r.Ember.computed("multiPurchaseConfig.enabled", "multiPurchaseConfig.maxQuantity", (function() {
+                    const e = this.get("multiPurchaseConfig");
+                    return !0 === e?.enabled && Number.isSafeInteger(e.maxQuantity) && e.maxQuantity > 1
+                })),
+                purchaseCount: r.Ember.computed("selectedPurchaseCount", "isMultiPurchaseEnabled", "maxPurchaseCount", (function() {
+                    return this.get("isMultiPurchaseEnabled") ? Math.max(1, Math.min(this.get("selectedPurchaseCount"), this.get("maxPurchaseCount"))) : 1
+                })),
+                remainingPurchaseAllowance: r.Ember.computed("item.purchaseLimits", "shoppefrontService.purchaseLimitsMap", (function() {
+                    const e = this.get("shoppefrontService.purchaseLimitsMap") || {};
+                    return (this.get("item.purchaseLimits") || []).reduce(((t, {
+                        ruleId: n
+                    }) => {
+                        const a = e[n]?.availableTokens;
+                        return Number.isFinite(a) ? Math.min(t, Math.max(0, Math.floor(a))) : t
+                    }), 1 / 0)
+                })),
+                maxPurchaseCount: r.Ember.computed("isMultiPurchaseEnabled", "multiPurchaseConfig.maxQuantity", "remainingPurchaseAllowance", (function() {
+                    return this.get("isMultiPurchaseEnabled") ? Math.min(this.get("multiPurchaseConfig.maxQuantity"), this.get("remainingPurchaseAllowance")) : 1
+                })),
+                hasReachedPurchaseLimit: r.Ember.computed("remainingPurchaseAllowance", (function() {
+                    return 0 === this.get("remainingPurchaseAllowance")
+                })),
+                hidePurchaseOptions: r.Ember.computed("isPurchasable", "hasReachedPurchaseLimit", (function() {
+                    return this.get("isPurchasable") && this.get("hasReachedPurchaseLimit")
+                })),
                 modalTitle: r.Ember.computed.alias("modalItem.modalTitle"),
                 modalUnlockedText: r.Ember.computed("modalTitle", (function() {
                     return this.get("tra").formatString("shoppefront_modal_purchase_unlocked", {
                         itemDescription: this.get("modalTitle")
                     })
                 })),
-                modalAcceptDisabled: r.Ember.computed("catalogItemErrorText", "isPurchasing", "isPurchasable", "isChromaDisclaimerChecked", "isPurchaseModalItemActive", "notAcceptedPurchaseDisclaimer", (function() {
-                    return !!(!this.get("isPurchaseModalItemActive") || this.get("isPurchasing") || this.get("catalogItemErrorText") && this.get("isPurchasable") && !this.get("isChromaDisclaimerChecked") || this.get("notAcceptedPurchaseDisclaimer"))
+                modalAcceptDisabled: r.Ember.computed("catalogItemErrorText", "isPurchasing", "isPurchasable", "isChromaDisclaimerChecked", "isPurchaseModalItemActive", "notAcceptedPurchaseDisclaimer", "hasReachedPurchaseLimit", (function() {
+                    return !!(!this.get("isPurchaseModalItemActive") || this.get("isPurchasing") || this.get("catalogItemErrorText") && this.get("isPurchasable") && !this.get("isChromaDisclaimerChecked") || this.get("notAcceptedPurchaseDisclaimer") || this.get("hasReachedPurchaseLimit"))
                 })),
-                modalErrorText: r.Ember.computed("catalogItemErrorText", "isPurchasing", "isPurchasable", "purchaseErrorText", "showDisclaimer", (function() {
+                modalErrorText: r.Ember.computed("catalogItemErrorText", "isPurchasing", "isPurchasable", "purchaseErrorText", "showDisclaimer", "isCurrencyBalanceInsufficient", "hasReachedPurchaseLimit", (function() {
                     const e = this.get("purchaseErrorText"),
                         t = this.get("catalogItemErrorText"),
                         n = this.get("showDisclaimer");
-                    return e || (!n && t && this.get("isPurchasable") && !this.get("isPurchasing") ? t : void 0)
+                    return e || (!n && t && this.get("isPurchasable") && !this.get("isPurchasing") ? t : this.get("isPurchasable") && !this.get("isPurchasing") && !this.get("hasReachedPurchaseLimit") && this.get("isCurrencyBalanceInsufficient") ? this.get("tra.shoppefront_error_not_enough_currency") : void 0)
                 })),
                 chromaDisclaimer: r.Ember.computed("modalItem.modalTitle", (function() {
                     return this.get("tra").get("shoppefront_purchase_modal_chroma_disclaimer")
@@ -28816,7 +28891,7 @@
                         t = this.get("shoppefrontId");
                     if (!e || !e.inventoryTypeId || e.isTransfer || "LOL_TRANSFER_SHOP" === t) return null;
                     const n = e.inventoryTypeId;
-                    if (l.includes(n)) return null;
+                    if (c.includes(n)) return null;
                     const a = e.tags || [],
                         r = this.get("tra");
                     return a.includes("jade_exclusive") ? r.get("cat_paw_jade_exclusive_flavor_text") : a.includes("jade_compatible") || "JADE_SHOP" === t ? null : r.get("cat_paw_jade_not_available_on_classic_flavor_text")
@@ -28831,18 +28906,49 @@
                         confirmationLink: `<a class="purchase-confirmation-link" href="${e}" target="_blank" onclick="event.stopPropagation()">${t}</a>`
                     }))
                 })),
+                shouldDisplaySlider: r.Ember.computed.gt("maxPurchaseCount", 1),
+                quantityControlsDisabled: r.Ember.computed("isPurchasing", "maxPurchaseCount", (function() {
+                    return this.get("isPurchasing") || this.get("maxPurchaseCount") < 1
+                })),
+                isDecrementDisabled: r.Ember.computed("quantityControlsDisabled", "purchaseCount", (function() {
+                    return this.get("quantityControlsDisabled") || this.get("purchaseCount") <= 1
+                })),
+                isIncrementDisabled: r.Ember.computed("quantityControlsDisabled", "purchaseCount", "maxPurchaseCount", (function() {
+                    return this.get("quantityControlsDisabled") || this.get("purchaseCount") >= this.get("maxPurchaseCount")
+                })),
+                paymentOptions: r.Ember.computed("modalItem.paymentOptions", "isMultiPurchaseEnabled", "item", "prerequisites", "purchaseCount", (function() {
+                    return this.get("isMultiPurchaseEnabled") ? (0, o.getPaymentOptions)([{
+                        ...this.get("item"),
+                        quantity: this.get("purchaseCount")
+                    }, ...this.get("prerequisites") || []], !1) : this.get("modalItem.paymentOptions")
+                })),
+                paymentOptionsWithBalances: r.Ember.computed("paymentOptions", "walletBalance", (function() {
+                    return (this.get("paymentOptions") || []).map((e => ({
+                        ...e,
+                        currencyIdToRemainingBalance: Object.fromEntries(Object.entries(e.currencyIdToTotal).map((([e, t]) => [e, (this.get(`walletBalance.${e}`) ?? 0) - t])))
+                    })))
+                })),
+                isCurrencyBalanceInsufficient: r.Ember.computed("isMultiPurchaseEnabled", "paymentOptionsWithBalances", (function() {
+                    const e = this.get("paymentOptionsWithBalances");
+                    return e?.length > 0 && e.every((({
+                        currencyIdToRemainingBalance: e
+                    }) => Object.values(e).some((e => e < 0))))
+                })),
                 init() {
                     this._super(...arguments), this._initRegionData()
                 },
                 _initRegionData() {
-                    o.get("/riotclient/region-locale").then((e => {
+                    l.get("/riotclient/region-locale").then((e => {
                         this.set("region", e?.region)
-                    })), o.get("/system/v1/builds").then((e => {
+                    })), l.get("/system/v1/builds").then((e => {
                         this.set("patchline", e?.patchline)
                     }))
                 },
                 didInsertElement() {
                     this._super(...arguments), r.Ember.run.next(this, this._setupVideo)
+                },
+                _setPurchaseCount(e) {
+                    !this.get("quantityControlsDisabled") && this.get("isPurchasable") && (this.get("isMultiPurchaseEnabled") ? isFinite(e) && this.set("selectedPurchaseCount", Math.max(1, Math.min(Math.floor(e), this.get("maxPurchaseCount")))) : this.set("selectedPurchaseCount", 1))
                 },
                 willDestroyElement() {
                     this._super(...arguments), this._teardownVideo()
@@ -28912,12 +29018,21 @@
                         if (e?.modalAcceptDisabled) return;
                         const t = e.subPurchaseRequests.map((e => ({
                             ...e,
-                            quantity: this.get("item.purchaseUnits")?.[0]?.fulfillment?.delta,
+                            quantity: e.quantity ?? this.get("item.purchaseUnits")?.[0]?.fulfillment?.delta,
                             storeId: this.get("item.storeId")
                         })));
                         return this.purchaseCatalogItem({
                             purchaseItems: t
                         })
+                    },
+                    updatePurchaseCount(e) {
+                        this._setPurchaseCount(e.value)
+                    },
+                    decrementPurchaseCount() {
+                        this._setPurchaseCount(this.get("purchaseCount") - 1)
+                    },
+                    incrementPurchaseCount() {
+                        this._setPurchaseCount(this.get("purchaseCount") + 1)
                     },
                     enablePurchaseButton(e) {
                         this.set("isChromaDisclaimerChecked", e)
@@ -28927,12 +29042,12 @@
                     }
                 }
             });
-            t.default = c
+            t.default = d
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "ROwXyHhZ",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\shoppefront\\\\addon\\\\templates\\\\purchase-modal.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["block",["dialog-modal"],null,[["onClose"],[["helper",["action"],[["get",[null]],"handleModalClose"],null]]],13]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["unknown",["modalUnlockedText"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-error-text"],["flush-element"],["text","\\n            "],["append",["unknown",["modalErrorText"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","name","purchaseDisclaimer"],["static-attr","class","shoppefront-purchase-modal-kr-disclaimer-checkbox"],["flush-element"],["text","\\n              "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","purchaseDisclaimer"],["dynamic-attr","checked",["unknown",["isPurchaseDisclaimerChecked"]],null],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"togglePurchaseDisclaimerCheckbox"],null],null],["flush-element"],["close-element"],["text","\\n              "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","purchaseDisclaimer"],["static-attr","class","shoppefront-purchase-modal-kr-disclaimer-label"],["flush-element"],["text","\\n                "],["append",["unknown",["purchaseDisclaimerText"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","shopefront-purchase-modal-checkbox"],["flush-element"],["text","\\n              "],["open-element","input",[]],["static-attr","id","chroma-disclaimer-acknowledgement"],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"enablePurchaseButton"],[["value"],["target.checked"]]],null],["flush-element"],["close-element"],["text","\\n              "],["open-element","label",[]],["static-attr","for","chroma-disclaimer-acknowledgement"],["static-attr","slot","label"],["flush-element"],["append",["unknown",["chromaDisclaimer"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["purchase-modal-prerequisites"],null,[["prerequisites"],[["get",["prerequisites"]]]]],false],["text","\\n          "],["append",["unknown",["digital-goods-disclaimer"]],false],["text","\\n"],["block",["if"],[["get",["showDisclaimer"]]],null,3],["block",["if"],[["get",["shouldDisplayPurchaseDisclaimerCheckbox"]]],null,2]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-map-availability"],["flush-element"],["append",["unknown",["mapAvailability"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-title"],["flush-element"],["text","\\n            "],["append",["unknown",["modalTitle"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-tile-header"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","shoppefront-purchase-modal-header-img"],["dynamic-attr","src",["concat",[["unknown",["tilePath"]]]]],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["block",["if"],[["get",["tilePath"]]],null,7]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-splash-header"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","shoppefront-purchase-modal-header-img"],["dynamic-attr","src",["concat",[["unknown",["splashPath"]]]]],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-splash-vignette"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-title"],["flush-element"],["text","\\n            "],["append",["unknown",["modalTitle"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["splashPath"]]],null,9,8]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-video-header"],["flush-element"],["text","\\n          "],["open-element","video",[]],["static-attr","class","shoppefront-purchase-modal-header-video"],["static-attr","preload","none"],["static-attr","draggable","false"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-tos"],["flush-element"],["text","\\n        "],["append",["unknown",["termsAndConditions"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","shoppefront-purchase-modal-wrapper"],["static-attr","type","dialog-xlarge"],["flush-element"],["text","\\n    "],["append",["unknown",["classicExclusiveBadge"]],false],["text","\\n"],["block",["if"],[["get",["termsAndConditions"]]],null,12],["text","\\n    "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-main"],["flush-element"],["text","\\n"],["block",["if"],[["get",["videoPath"]]],null,11,10],["text","\\n      "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-content"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["splashPath"]]],null,6],["text","\\n"],["block",["if"],[["get",["mapAvailability"]]],null,5],["block",["if"],[["get",["isPurchasable"]]],null,4],["text","\\n"],["block",["if"],[["get",["modalErrorText"]]],null,1],["text","\\n"],["block",["unless"],[["get",["isPurchasable"]]],null,0],["text","      "],["close-element"],["text","\\n\\n      "],["append",["helper",["purchase-modal-payment-options"],null,[["isPurchasable","payments","modalAcceptDisabled","handleModalAccept","handleModalClose","walletBalance"],[["get",["isPurchasable"]],["get",["paymentOptions"]],["get",["modalAcceptDisabled"]],["helper",["action"],[["get",[null]],"handleModalAccept"],null],["helper",["action"],[["get",[null]],"handleModalClose"],null],["get",["walletBalance"]]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "3RXmvzCA",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\shoppefront\\\\addon\\\\templates\\\\purchase-modal.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["block",["dialog-modal"],null,[["onClose"],[["helper",["action"],[["get",[null]],"handleModalClose"],null]]],22]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["purchase-modal-payment-options"],null,[["isPurchasable","payments","modalAcceptDisabled","handleModalAccept","handleModalClose","walletBalance"],[["get",["isPurchasable"]],["get",["paymentOptions"]],["get",["modalAcceptDisabled"]],["helper",["action"],[["get",[null]],"handleModalAccept"],null],["helper",["action"],[["get",[null]],"handleModalClose"],null],["get",["walletBalance"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["multi-purchase-payment-options"],null,[["isPurchasable","payments","modalAcceptDisabled","handleModalAccept","handleModalClose"],[["get",["isPurchasable"]],["get",["paymentOptionsWithBalances"]],["get",["modalAcceptDisabled"]],["helper",["action"],[["get",[null]],"handleModalAccept"],null],["helper",["action"],[["get",[null]],"handleModalClose"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isMultiPurchaseEnabled"]]],null,1,0]],"locals":[]},{"statements":[["text","          "],["append",["unknown",["modalUnlockedText"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-footer-text"],["flush-element"],["append",["helper",["sanitize"],[["get",["footerText"]]],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["footerText"]]],null,4]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-error-text"],["flush-element"],["text","\\n            "],["append",["unknown",["modalErrorText"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","name","purchaseDisclaimer"],["static-attr","class","shoppefront-purchase-modal-kr-disclaimer-checkbox"],["flush-element"],["text","\\n              "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","purchaseDisclaimer"],["dynamic-attr","checked",["unknown",["isPurchaseDisclaimerChecked"]],null],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"togglePurchaseDisclaimerCheckbox"],null],null],["flush-element"],["close-element"],["text","\\n              "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","purchaseDisclaimer"],["static-attr","class","shoppefront-purchase-modal-kr-disclaimer-label"],["flush-element"],["text","\\n                "],["append",["unknown",["purchaseDisclaimerText"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","shopefront-purchase-modal-checkbox"],["flush-element"],["text","\\n              "],["open-element","input",[]],["static-attr","id","chroma-disclaimer-acknowledgement"],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"enablePurchaseButton"],[["value"],["target.checked"]]],null],["flush-element"],["close-element"],["text","\\n              "],["open-element","label",[]],["static-attr","for","chroma-disclaimer-acknowledgement"],["static-attr","slot","label"],["flush-element"],["append",["unknown",["chromaDisclaimer"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-quantity-slider"],["flush-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","shoppefront-purchase-quantity-bound"],["flush-element"],["text","1"],["close-element"],["text","\\n                    "],["open-element","lol-uikit-slider",[]],["static-attr","class","multi-purchase-uikit-slider"],["static-attr","for","shoppefront-purchase-quantity"],["static-attr","step","1"],["static-attr","min","1"],["dynamic-attr","max",["unknown",["maxPurchaseCount"]],null],["dynamic-attr","value",["unknown",["purchaseCount"]],null],["static-attr","clickSet","true"],["dynamic-attr","disabled",["helper",["if"],[["get",["quantityControlsDisabled"]],"true",null],null],null],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"updatePurchaseCount"],null],null],["flush-element"],["close-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","shoppefront-purchase-quantity-bound"],["flush-element"],["append",["unknown",["maxPurchaseCount"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-quantity-controls"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldDisplaySlider"]]],null,9],["text","                "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-quantity-incrementer"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-quantity-incrementer-module"],["flush-element"],["text","\\n                    "],["open-element","lol-uikit-close-button",[]],["static-attr","bubbles","false"],["static-attr","button-type","remove"],["dynamic-attr","disabled",["helper",["if"],[["get",["isDecrementDisabled"]],"true",null],null],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"decrementPurchaseCount"],null],null],["flush-element"],["close-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","shoppefront-purchase-quantity-count"],["flush-element"],["append",["unknown",["purchaseCount"]],false],["close-element"],["text","\\n                    "],["open-element","lol-uikit-close-button",[]],["static-attr","bubbles","false"],["static-attr","button-type","add"],["dynamic-attr","disabled",["helper",["if"],[["get",["isIncrementDisabled"]],"true",null],null],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"incrementPurchaseCount"],null],null],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["maxPurchaseCount"]]],null,10]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-description"],["flush-element"],["append",["helper",["sanitize"],[["get",["descriptionText"]]],null],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["descriptionText"]]],null,12],["text","          "],["append",["helper",["purchase-modal-prerequisites"],null,[["prerequisites"],[["get",["prerequisites"]]]]],false],["text","\\n          "],["append",["unknown",["digital-goods-disclaimer"]],false],["text","\\n"],["block",["if"],[["get",["isMultiPurchaseEnabled"]]],null,11],["block",["if"],[["get",["showDisclaimer"]]],null,8],["block",["if"],[["get",["shouldDisplayPurchaseDisclaimerCheckbox"]]],null,7]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-map-availability"],["flush-element"],["append",["unknown",["mapAvailability"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-title"],["flush-element"],["text","\\n            "],["append",["unknown",["modalTitle"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-tile-header"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","shoppefront-purchase-modal-header-img"],["dynamic-attr","src",["concat",[["unknown",["tilePath"]]]]],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["block",["if"],[["get",["tilePath"]]],null,16]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-splash-header"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","shoppefront-purchase-modal-header-img"],["dynamic-attr","src",["concat",[["unknown",["splashPath"]]]]],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-splash-vignette"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-title"],["flush-element"],["text","\\n            "],["append",["unknown",["modalTitle"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["splashPath"]]],null,18,17]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-video-header"],["flush-element"],["text","\\n          "],["open-element","video",[]],["static-attr","class","shoppefront-purchase-modal-header-video"],["static-attr","preload","none"],["static-attr","draggable","false"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-tos"],["flush-element"],["text","\\n        "],["append",["unknown",["termsAndConditions"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","shoppefront-purchase-modal-wrapper"],["static-attr","type","dialog-xlarge"],["flush-element"],["text","\\n    "],["append",["unknown",["classicExclusiveBadge"]],false],["text","\\n"],["block",["if"],[["get",["termsAndConditions"]]],null,21],["text","\\n    "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-main"],["flush-element"],["text","\\n"],["block",["if"],[["get",["videoPath"]]],null,20,19],["text","\\n      "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-content"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["splashPath"]]],null,15],["text","\\n"],["block",["if"],[["get",["mapAvailability"]]],null,14],["block",["if"],[["get",["isPurchasable"]]],null,13],["text","\\n"],["block",["if"],[["get",["modalErrorText"]]],null,6],["text","\\n"],["block",["if"],[["get",["isPurchasable"]]],null,5],["text","\\n"],["block",["unless"],[["get",["isPurchasable"]]],null,3],["text","      "],["close-element"],["text","\\n\\n"],["block",["unless"],[["get",["hidePurchaseOptions"]]],null,2],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -28999,8 +29114,60 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
+                s = (a = n(801)) && a.__esModule ? a : {
+                    default: a
+                };
+            var i = r.Ember.Component.extend({
+                classNames: ["purchase-modal-payment-options"],
+                layout: s.default,
+                gameDataMapperService: r.Ember.inject.service("game-data-mapper"),
+                handleModalAccept: null,
+                isPurchasable: null,
+                paymentOptions: r.Ember.computed("payments", "modalAcceptDisabled", (function() {
+                    const e = this.get("payments") || [],
+                        t = this.get("modalAcceptDisabled");
+                    return e.map((({
+                        currencyIdToTotal: e,
+                        currencyIdToRemainingBalance: n,
+                        subPurchaseRequests: a
+                    }) => {
+                        const r = Object.entries(e).map((([e, t]) => {
+                                const a = n[e];
+                                return {
+                                    availableBalance: a,
+                                    hideBalance: a < 0,
+                                    iconPath: this.get(`gameDataMapperService.currenciesByName.${e}.iconPath`),
+                                    total: t
+                                }
+                            })),
+                            s = r.some((e => e.hideBalance));
+                        return {
+                            currencies: r,
+                            hideBalances: s,
+                            modalAcceptDisabled: t || s,
+                            subPurchaseRequests: a,
+                            currencyIdToTotal: e
+                        }
+                    }))
+                })),
+                actions: {
+                    handlePurchaseOptionClick(e) {
+                        this.get("handleModalAccept")(e)
+                    },
+                    handleModalClose() {
+                        this.get("handleModalClose")()
+                    }
+                }
+            });
+            t.default = i
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var a, r = n(1),
                 s = n(774),
-                i = (a = n(803)) && a.__esModule ? a : {
+                i = (a = n(804)) && a.__esModule ? a : {
                     default: a
                 };
             var o = r.Ember.Component.extend({
@@ -29034,7 +29201,7 @@
             }), t.default = void 0;
             var a, r = n(1),
                 s = n(775),
-                i = (a = n(805)) && a.__esModule ? a : {
+                i = (a = n(806)) && a.__esModule ? a : {
                     default: a
                 },
                 o = n(774);
@@ -29112,9 +29279,9 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                r = o(n(807)),
-                s = o(n(808)),
-                i = o(n(809));
+                r = o(n(808)),
+                s = o(n(809)),
+                i = o(n(810));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -29175,7 +29342,7 @@
             }), t.default = void 0;
             var a = n(1),
                 r = n(774),
-                s = n(812),
+                s = n(813),
                 i = a.Ember.Service.extend({
                     lootService: a.Ember.inject.service("shoppefront-loot"),
                     shoppefrontService: a.Ember.inject.service("shoppefront"),
@@ -29476,8 +29643,9 @@
                 activeStorePathRegistered: "",
                 customizations: new Map,
                 purchaseLimitsMap: {},
+                sentImpressionItems: null,
                 init() {
-                    this._super(...arguments), this.db = a.dataBinding.bindTo(a.socket), this.addPurchaseLimitsObserver()
+                    this._super(...arguments), this.set("sentImpressionItems", new Set), this.db = a.dataBinding.bindTo(a.socket), this.addPurchaseLimitsObserver()
                 },
                 willDestroy() {
                     this._super(...arguments), this.updateLastViewed(), this.db.unobserve(this.get("activeStorePathRegistered"), this)
@@ -29573,7 +29741,7 @@
                 },
                 async loadStores(e) {
                     if (!e) return;
-                    this.set("shoppefrontId", e);
+                    this.set("shoppefrontId", e), this.get("sentImpressionItems").clear();
                     const t = `${r.SHOPPEFRONT_PATHS.GET_ACTIVE_STORES_PATH}/${e}`;
                     if (this.get("activeStorePathRegistered") !== t) {
                         const e = this.get("activeStorePathRegistered");
@@ -29696,7 +29864,7 @@
                     ContextualNotificationManager: a.UIKit.getContextualNotificationManager(),
                     displayConfirmationToast: function(e, t) {
                         if (!e || !t) return;
-                        const r = n(818)({
+                        const r = n(819)({
                                 titleLoc: e,
                                 bodyLoc: this.get("tra").get("shoppefront_confirm_toast_body"),
                                 borderType: "permanent",
@@ -29774,10 +29942,10 @@
                 return new r.default(t, e)
             };
             var a = n(1);
-            n(821);
-            var r = o(n(822)),
-                s = o(n(823)),
-                i = o(n(829));
+            n(822);
+            var r = o(n(823)),
+                s = o(n(824)),
+                i = o(n(830));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -29844,11 +30012,11 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                r = c(n(824)),
-                s = c(n(825)),
-                i = c(n(826)),
-                o = n(827),
-                l = c(n(828));
+                r = c(n(825)),
+                s = c(n(826)),
+                i = c(n(827)),
+                o = n(828),
+                l = c(n(829));
 
             function c(e) {
                 return e && e.__esModule ? e : {
@@ -30223,12 +30391,12 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = c(n(831)),
-                r = c(n(846)),
-                s = c(n(849)),
-                i = c(n(853)),
-                o = c(n(856)),
-                l = c(n(860));
+            var a = c(n(832)),
+                r = c(n(847)),
+                s = c(n(850)),
+                i = c(n(854)),
+                o = c(n(857)),
+                l = c(n(861));
 
             function c(e) {
                 return e && e.__esModule ? e : {
@@ -30247,11 +30415,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(832);
-            var r = n(833);
+            n(833);
+            var r = n(834);
             e.exports = a.Ember.Component.extend({
                 classNames: ["mastery-grade-display"],
-                layout: n(845),
+                layout: n(846),
                 milestoneProgressMap: {},
                 gradeDisplaySize: r.GRADE_BOX_SIZE.LARGE,
                 isGradeListCentered: !1,
@@ -30366,19 +30534,19 @@
             };
             t.MASTERY_REWARD_TYPES = c;
             const d = {
-                [c.HEXTECH_CHEST]: n(834),
-                [c.MARK]: n(835),
-                [c.AURORA]: n(836),
-                [c.MASTERY_LEVEL]: n(837),
-                [c.TITLE]: n(838)
+                [c.HEXTECH_CHEST]: n(835),
+                [c.MARK]: n(836),
+                [c.AURORA]: n(837),
+                [c.MASTERY_LEVEL]: n(838),
+                [c.TITLE]: n(839)
             };
             t.REWARD_TO_ASSET_PATH = d;
             const u = {
-                [c.HEXTECH_CHEST]: n(839),
-                [c.MARK]: n(840),
-                [c.AURORA]: n(836),
-                [c.MASTERY_LEVEL]: n(837),
-                [c.TITLE]: n(838)
+                [c.HEXTECH_CHEST]: n(840),
+                [c.MARK]: n(841),
+                [c.AURORA]: n(837),
+                [c.MASTERY_LEVEL]: n(838),
+                [c.TITLE]: n(839)
             };
             t.TOOLTIP_REWARD_TO_ASSET_PATH = u;
             const m = 3,
@@ -30443,10 +30611,10 @@
                     10: 3
                 },
                 b = {
-                    0: n(841),
-                    1: n(842),
-                    2: n(843),
-                    3: n(844)
+                    0: n(842),
+                    1: n(843),
+                    2: n(844),
+                    3: n(845)
                 };
             t.MASTERY_SEASON_NAME = "ACTS"
         }, (e, t, n) => {
@@ -30492,11 +30660,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(847);
-            var r = n(833);
+            n(848);
+            var r = n(834);
             e.exports = a.Ember.Component.extend({
                 classNames: ["mastery-tooltip-component"],
-                layout: n(848),
+                layout: n(849),
                 championMasteryUpdateNotification: {},
                 customRewards: [],
                 hideTitle: !1,
@@ -30586,14 +30754,14 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(850);
-            var r, s = n(833),
-                i = (r = n(851)) && r.__esModule ? r : {
+            n(851);
+            var r, s = n(834),
+                i = (r = n(852)) && r.__esModule ? r : {
                     default: r
                 };
             e.exports = a.Ember.Component.extend({
                 classNames: ["milestone-tooltip-component"],
-                layout: n(852),
+                layout: n(853),
                 masteryRewardData: {},
                 milestoneProgressMap: {},
                 seasonMilestone: 0,
@@ -30692,7 +30860,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(833),
+            var a = n(834),
                 r = {
                     NUMBER_TO_ROMAN_NUMERAL: a.NUMBER_TO_ROMAN_NUMERAL,
                     MINIMUM_MASTERY_LEVEL: a.MINIMUM_MASTERY_LEVEL,
@@ -30720,11 +30888,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(854);
-            var r = n(833);
+            n(855);
+            var r = n(834);
             e.exports = a.Ember.Component.extend({
                 classNames: ["mastery-crest-component"],
-                layout: n(855),
+                layout: n(856),
                 masteryLevel: 0,
                 isAuroraEnabled: !1,
                 isAnimationsEnabled: !1,
@@ -30749,9 +30917,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(857);
-            var r, s = n(833),
-                i = (r = n(858)) && r.__esModule ? r : {
+            n(858);
+            var r, s = n(834),
+                i = (r = n(859)) && r.__esModule ? r : {
                     default: r
                 };
             const o = {
@@ -30772,7 +30940,7 @@
                 };
             e.exports = a.Ember.Component.extend({
                 classNames: ["lcm-celebration-vignette-component"],
-                layout: n(859),
+                layout: n(860),
                 animationsEnabled: !0,
                 animationStarted: !1,
                 audioObject: null,
@@ -30912,8 +31080,8 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1);
-            n(861);
-            var r, s = (r = n(851)) && r.__esModule ? r : {
+            n(862);
+            var r, s = (r = n(852)) && r.__esModule ? r : {
                 default: r
             };
             const i = a.Audio.getChannel("sfx-ui"),
@@ -30924,7 +31092,7 @@
             var u = a.Ember.Component.extend({
                 classNames: ["champion-sets-carousel"],
                 classNameBindings: ["isObjectivesView"],
-                layout: n(862),
+                layout: n(863),
                 isObjectivesView: !1,
                 isLeftArrowDisabled: !0,
                 isRightArrowDisabled: !0,

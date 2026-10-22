@@ -226,12 +226,12 @@
             "{f9c2333e}": {
                 "cherry": {
                     "value": [
-                        16.0,
-                        16.0,
+                        14.0,
                         14.0,
                         12.0,
                         10.0,
                         8.0,
+                        6.0,
                         6.0
                     ],
                     "__type": "SpellEffectAmount"
@@ -252,6 +252,32 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                }
+            },
+            "{66185ec4}": {
+                "cherry": {
+                    "Calculations": {
+                        "TotalDamage": {
+                            "mFormulaParts": [
+                                {
+                                    "mDataValue": "BaseDamage",
+                                    "__type": "NamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mStat": 2,
+                                    "mStatFormula": 2,
+                                    "mDataValue": "BonusADRatio",
+                                    "__type": "StatByNamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mCoefficient": 0.5,
+                                    "__type": "StatByCoefficientCalculationPart"
+                                }
+                            ],
+                            "__type": "GameCalculation"
+                        }
+                    },
+                    "__type": "{4acf67d2}"
                 }
             },
             "mAnimationName": "Spell3",
@@ -1547,74 +1573,6 @@
                 "__type": "ObjectTags"
             },
             "mAlternateName": "VarusW",
-            "mEffectAmount": [
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.02500000037252903,
-                        0.029999999329447746,
-                        0.03500000014901161,
-                        0.03999999910593033,
-                        0.04500000178813934,
-                        0.05000000074505806,
-                        0.054999999701976776
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        120.0,
-                        120.0,
-                        120.0,
-                        120.0,
-                        120.0,
-                        120.0,
-                        120.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "VarusWDebuffDuration",
@@ -1658,13 +1616,13 @@
                 {
                     "name": "BasePercentHPPerStack",
                     "values": [
+                        0.019999999552965164,
                         0.02500000037252903,
-                        0.030000001192092896,
+                        0.029999999329447746,
                         0.03500000014901161,
                         0.03999999910593033,
                         0.04500000178813934,
-                        0.05000000074505806,
-                        0.054999999701976776
+                        0.05000000074505806
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1684,78 +1642,78 @@
                 {
                     "name": "VarusWOnHitDamage",
                     "values": [
-                        -5.0,
+                        -2.0,
                         4.0,
-                        13.0,
+                        10.0,
+                        16.0,
                         22.0,
-                        31.0,
-                        40.0,
-                        49.0
+                        28.0,
+                        34.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "CDRPerBlightStack",
                     "values": [
-                        0.12999999523162842,
-                        0.12999999523162842,
-                        0.12999999523162842,
-                        0.12999999523162842,
-                        0.12999999523162842,
-                        0.12999999523162842,
-                        0.12999999523162842
+                        0.10999999940395355,
+                        0.10999999940395355,
+                        0.10999999940395355,
+                        0.10999999940395355,
+                        0.10999999940395355,
+                        0.10999999940395355,
+                        0.10999999940395355
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "VarusWMaxChargeHPDamage",
                     "values": [
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5
+                        1.7000000476837158,
+                        1.7000000476837158,
+                        1.7000000476837158,
+                        1.7000000476837158,
+                        1.7000000476837158,
+                        1.7000000476837158,
+                        1.7000000476837158
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "OnHitRatio",
                     "values": [
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "OnHitADRatio",
                     "values": [
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "WQHealthDamage",
                     "values": [
-                        0.03999999910593033,
+                        0.05000000074505806,
                         0.05999999865889549,
+                        0.07000000029802322,
                         0.07999999821186066,
+                        0.09000000357627869,
                         0.10000000149011612,
-                        0.11999999731779099,
-                        0.14000000059604645,
-                        0.1599999964237213
+                        0.10999999940395355
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1814,7 +1772,7 @@
                                     "__type": "NumberCalculationPart"
                                 },
                                 "mPart2": {
-                                    "mNumber": 0.013000000268220901,
+                                    "mNumber": 0.014000000432133675,
                                     "__type": "NumberCalculationPart"
                                 },
                                 "__type": "ProductOfSubPartsCalculationPart"
@@ -1916,6 +1874,14 @@
                 "{0a3e0478}": 40.0,
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Varus/Spells/VarusWAbility/VarusW",
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "canCastWhileDisabled": true,
             "mCantCancelWhileWindingUp": true,
             "mDoesntBreakChannels": true,
@@ -3394,142 +3360,43 @@
                 "Trait_Ranged_Piercing",
                 "Trait_AoE"
             ],
-            "mEffectAmount": [
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        -0.20000000298023224,
-                        -0.20000000298023224,
-                        -0.20000000298023224,
-                        -0.20000000298023224,
-                        -0.20000000298023224,
-                        -0.20000000298023224,
-                        -0.20000000298023224
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.33000001311302185,
-                        0.33000001311302185,
-                        0.33000001311302185,
-                        0.33000001311302185,
-                        0.33000001311302185,
-                        0.33000001311302185,
-                        0.33000001311302185
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
-                    "name": "BaseDamageMax",
+                    "name": "BaseDamageMin",
                     "values": [
-                        10.0,
-                        80.0,
-                        150.0,
-                        220.0,
-                        290.0,
-                        360.0,
-                        430.0
+                        5.0,
+                        50.0,
+                        95.0,
+                        140.0,
+                        185.0,
+                        230.0,
+                        275.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "ChargeMultiplierInverse",
+                    "name": "tADRatioMin",
                     "values": [
-                        0.666670024394989,
-                        0.666670024394989,
-                        0.666670024394989,
-                        0.666670024394989,
-                        0.666670024394989,
-                        0.666670024394989,
-                        0.666670024394989
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "tADRatioMax",
+                    "name": "MaxChannelAmp",
                     "values": [
-                        1.2000000476837158,
-                        1.2000000476837158,
-                        1.2000000476837158,
-                        1.2000000476837158,
-                        1.2000000476837158,
-                        1.2000000476837158,
-                        1.2000000476837158
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MaxChargeAmp",
-                    "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -3616,15 +3483,15 @@
                 "cherry": {
                     "SpellDataValues": [
                         {
-                            "name": "tADRatioMax",
+                            "name": "tADRatioMin",
                             "values": [
-                                1.5,
-                                1.5,
-                                1.5,
-                                1.5,
-                                1.5,
-                                1.5,
-                                1.5
+                                0.8999999761581421,
+                                0.8999999761581421,
+                                0.8999999761581421,
+                                0.8999999761581421,
+                                0.8999999761581421,
+                                0.8999999761581421,
+                                0.8999999761581421
                             ],
                             "__type": "SpellDataValue"
                         }
@@ -3634,15 +3501,15 @@
                 "Kiwi": {
                     "SpellDataValues": [
                         {
-                            "name": "tADRatioMax",
+                            "name": "tADRatioMin",
                             "values": [
-                                1.5,
-                                1.5,
-                                1.5,
-                                1.5,
-                                1.5,
-                                1.5,
-                                1.5
+                                0.8999999761581421,
+                                0.8999999761581421,
+                                0.8999999761581421,
+                                0.8999999761581421,
+                                0.8999999761581421,
+                                0.8999999761581421,
+                                0.8999999761581421
                             ],
                             "__type": "SpellDataValue"
                         }
@@ -3666,39 +3533,38 @@
             },
             "mSpellCalculations": {
                 "{b3ef3984}": {
-                    "mMultiplier": {
-                        "mDataValue": "ChargeMultiplierInverse",
-                        "__type": "NamedDataValueCalculationPart"
-                    },
-                    "mModifiedGameCalculation": "TotalDamageMax",
-                    "__type": "GameCalculationModified"
-                },
-                "TotalDamageMax": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "BaseDamageMax",
+                            "mDataValue": "BaseDamageMin",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mDataValue": "tADRatioMax",
+                            "mDataValue": "tADRatioMin",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
                 },
-                "TotalDamageMinTooltip": {
+                "TotalDamageMax": {
                     "mMultiplier": {
-                        "mDataValue": "ChargeMultiplierInverse",
-                        "__type": "NamedDataValueCalculationPart"
+                        "mSubparts": [
+                            {
+                                "mNumber": 1.0,
+                                "__type": "NumberCalculationPart"
+                            },
+                            {
+                                "mDataValue": "{0508ccce}",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "SumOfSubPartsCalculationPart"
                     },
-                    "mModifiedGameCalculation": "TotalDamageMax",
+                    "mModifiedGameCalculation": "{b3ef3984}",
                     "__type": "GameCalculationModified"
                 }
             },
-            "mCoefficient": 1.0,
-            "mCoefficient2": 1.5,
             "mAnimationName": "Spell1",
             "mAnimationWinddownName": "Spell1_Fire",
             "mImgIconName": [
@@ -3857,8 +3723,8 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "BaseDamageMax",
-                                    "nameOverride": "Spell_ListType_MaximumDamage",
+                                    "type": "BaseDamageMin",
+                                    "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -6800,6 +6666,15 @@
                 ],
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Varus/Spells/VarusRPassive",
+                    "mWhenToAddSpell": 0,
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mCantCancelWhileWindingUp": true,
             "mProjectTargetToCastRange": true,
             "alwaysSnapFacing": true,

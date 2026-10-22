@@ -26,7 +26,8 @@
             "Shaders/SharedData/ConstantBuffers/VFXDynamicPerParticleVS",
             "Shaders/SharedData/ConstantBuffers/VFXDynamicPerParticlePS",
             "Shaders/SharedData/ConstantBuffers/GameplayTexture",
-            "Shaders/SharedData/ConstantBuffers/EnvEffectorVertex"
+            "Shaders/SharedData/ConstantBuffers/EnvEffectorVertex",
+            "{66d4a0d3}"
         ],
         "textures": [
             {
@@ -193,9 +194,9 @@
                 "BindLocation": 0,
                 "DefaultValue": [
                     0.5,
+                    0.0,
                     0.5,
-                    0.5,
-                    0.0
+                    0.5
                 ],
                 "__type": "X3DSharedTextureDef"
             },
@@ -240,9 +241,9 @@
                 "name": "ENV_EFFECTOR_TEXTURE_PS",
                 "DefaultValue": [
                     0.5,
+                    0.0,
                     0.5,
-                    0.5,
-                    0.0
+                    0.5
                 ],
                 "__type": "X3DSharedTextureDef"
             },
@@ -322,6 +323,13 @@
             {
                 "name": "ParticleMeshInstanceInfo",
                 "BindLocation": 0,
+                "{a1d375b5}": 2,
+                "{52fc6665}": 14,
+                "StructureLink": "{6a4adf05}",
+                "__type": "{4bcf438a}"
+            },
+            {
+                "name": "ParticleMeshInstanceInfoPS",
                 "{a1d375b5}": 2,
                 "{52fc6665}": 14,
                 "StructureLink": "{6a4adf05}",
@@ -558,6 +566,16 @@
             {
                 "name": "ENV_QUALITY",
                 "type": 4,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "mCameraForward",
+                "type": 2,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "mCameraUp",
+                "type": 2,
                 "__type": "X3DSharedConstantDef"
             }
         ],
@@ -1238,6 +1256,17 @@
             {
                 "name": "INSTANCE_OFFSET",
                 "type": 4,
+                "{a1d375b5}": 2,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "INSTANCE_FACING_DATA",
+                "type": 4,
+                "{a1d375b5}": 2,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "INSTANCE_UV_PARALLAX_SCALE",
                 "{a1d375b5}": 2,
                 "__type": "X3DSharedConstantDef"
             }

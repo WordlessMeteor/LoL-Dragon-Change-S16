@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.20.1",
+    "version": "16.21.1",
     "data": {
         "Varus": {
             "id": "Varus",
@@ -550,15 +550,15 @@
                     "id": "VarusQ",
                     "name": "穿刺之箭",
                     "description": "韦鲁斯开始蓄力，随后进行一次远距离的强力射击，蓄力时间越长，伤害越高。",
-                    "tooltip": "<attention>开始蓄力：</attention>韦鲁斯为一次强力射击深深挽弓，自我<status>减速</status>{{ movespeedmod*-100 }}%。在{{ maxchannelduration }}秒后，如果未将箭射出去，则韦鲁斯会取消这个技能并返还其{{ manarefund*100 }}%法力消耗。<br /><br /><attention>释放：</attention>韦鲁斯将箭射出，造成<physicalDamage>{{ totaldamagemintooltip }}物理伤害</physicalDamage>，每命中一个敌人就会降低{{ falloffpercent*100 }}%(最低降至{{ mindamagepercent*100 }}%)。伤害和<keywordMajor>枯萎</keywordMajor>的引爆效果会基于蓄力时间至多提升至{{ maxchargeamp*100 }}%(最大值为<physicalDamage>{{ totaldamagemax }}</physicalDamage>) 。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<attention>开始蓄力：</attention>韦鲁斯为下一箭挽弓，自我<status>减速</status>{{ movespeedmod*-100 }}%。{{ maxchannelduration }}秒后，如果未将箭射出，则韦鲁斯取消该技能并返还其{{ manarefund*100 }}%法力消耗。<br /><br /><attention>释放：</attention>韦鲁斯将箭射出，造成<physicalDamage>{{ totaldamagemin }}物理伤害</physicalDamage>，每命中一个敌人，该伤害降低{{ falloffpercent*100 }}%(最低降至{{ mindamagepercent*100 }}%)。伤害和<keywordMajor>枯萎</keywordMajor>的引爆效果会基于蓄力时间至多提升{{ maxchannelamp*100 }}%(最高可达<physicalDamage>{{ totaldamagemax }}物理伤害</physicalDamage>)。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "最大伤害",
+                            "伤害",
                             "冷却时间",
                             "法力消耗"
                         ],
                         "effect": [
-                            "{{ basedamagemax }} -> {{ basedamagemaxNL }}",
+                            "{{ basedamagemin }} -> {{ basedamageminNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ basecost }} -> {{ basecostNL }}"
                         ]
@@ -598,39 +598,11 @@
                             0
                         ],
                         [
-                            0.15,
-                            0.15,
-                            0.15,
-                            0.15,
-                            0.15
-                        ],
-                        [
-                            0.5,
-                            0.5,
-                            0.5,
-                            0.5,
-                            0.5
-                        ],
-                        [
-                            4,
-                            4,
-                            4,
-                            4,
-                            4
-                        ],
-                        [
-                            3,
-                            3,
-                            3,
-                            3,
-                            3
-                        ],
-                        [
-                            -0.2,
-                            -0.2,
-                            -0.2,
-                            -0.2,
-                            -0.2
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -640,11 +612,39 @@
                             0
                         ],
                         [
-                            0.33,
-                            0.33,
-                            0.33,
-                            0.33,
-                            0.33
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -658,13 +658,13 @@
                         null,
                         "0",
                         "0",
-                        "0.15",
-                        "0.5",
-                        "4",
-                        "3",
-                        "-0.2",
                         "0",
-                        "0.33",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0"
                     ],
                     "vars": [],
@@ -734,32 +734,32 @@
                             0
                         ],
                         [
-                            0.03,
-                            0.035,
-                            0.04,
-                            0.045,
-                            0.05
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            6,
-                            6,
-                            6,
-                            6,
-                            6
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            3,
-                            3,
-                            3,
-                            3,
-                            3
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            120,
-                            120,
-                            120,
-                            120,
-                            120
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -800,10 +800,10 @@
                     "effectBurn": [
                         null,
                         "0",
-                        "0.03/0.035/0.04/0.045/0.05",
-                        "6",
-                        "3",
-                        "120",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",

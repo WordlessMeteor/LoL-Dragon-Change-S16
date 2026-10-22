@@ -527,6 +527,24 @@
                         }
                     ],
                     "__type": "SpellDataValueVector"
+                },
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "ADRatio",
+                            "values": [
+                                0.949999988079071,
+                                0.949999988079071,
+                                0.949999988079071,
+                                0.949999988079071,
+                                0.949999988079071,
+                                0.949999988079071,
+                                0.949999988079071
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
                 }
             },
             "mSpellCalculations": {
@@ -596,6 +614,20 @@
                 "{0a3e0478}": 1.0,
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Belveth/Spells/BelvethQAbility/BelvethQ",
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                },
+                {
+                    "mBuff": "Characters/Belveth/Spells/BelvethQAbility/BelvethQIconTracker",
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "cantCastWhileRooted": true,
             "useAnimatorFramerate": true,
             "mIgnoreRangeCheck": true,
@@ -1328,7 +1360,7 @@
                                 {
                                     "mStat": 2,
                                     "mStatFormula": 2,
-                                    "mCoefficient": 0.009999999776482582,
+                                    "mCoefficient": 0.004999999888241291,
                                     "__type": "StatByCoefficientCalculationPart"
                                 }
                             ],
@@ -1367,6 +1399,20 @@
                 "{0a3e0478}": 1.0,
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Belveth/Spells/BelvethRAbility/BelvethRListener",
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                },
+                {
+                    "mBuff": "Characters/Belveth/Spells/BelvethRAbility/BelvethRPassive",
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mCantCancelWhileWindingUp": true,
             "cantCastWhileRooted": true,
             "castRangeUseBoundingBoxes": true,
@@ -1963,6 +2009,14 @@
             },
             "mImgIconName": [
                 "ASSETS/Characters/Belveth/HUD/Icons2D/Belveth_Passive.dds"
+            ],
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Belveth/Spells/BelvethPassiveAbility/BelvethVsJaxQuestActivateCondition",
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
             ],
             "castRange": [
                 0.0,

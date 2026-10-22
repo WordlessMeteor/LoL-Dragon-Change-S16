@@ -2057,6 +2057,16 @@
                 ],
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Sion/Spells/SionWAbility/SionWPassive",
+                    "mRemoveWhenOnCooldown": false,
+                    "mRemoveWithSpell": false,
+                    "RemoveOnPushCharacterData": true,
+                    "RemoveOnPopCharacterData": true,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mCantCancelWhileWindingUp": true,
             "mDoesntBreakChannels": true,
             "castRange": [
@@ -4183,12 +4193,12 @@
                     "name": "MaxDamage",
                     "values": [
                         0.0,
-                        400.0,
-                        800.0,
-                        1200.0,
-                        1600.0,
-                        2000.0,
-                        2400.0
+                        450.0,
+                        900.0,
+                        1350.0,
+                        1800.0,
+                        2250.0,
+                        2700.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -4302,7 +4312,7 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 0.6000000238418579,
+                            "mCoefficient": 0.4000000059604645,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -4325,8 +4335,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.4000000059604645,
-            "mCoefficient2": 0.800000011920929,
             "mAnimationName": "Spell4_In",
             "mAnimationLoopName": "Spell4_Base",
             "mAnimationWinddownName": "Spell4_Leadout",
@@ -4420,6 +4428,10 @@
             "castFrame": 7.5,
             "missileSpeed": 1500.0,
             "mLineWidth": 100.0,
+            "AudioBankPaths": [
+                "ASSETS/Sounds/Wwise2016/SFX/Characters/Sion/Skins/Base/Sion_Base_GlobalUlt_SFX_audio.bnk",
+                "ASSETS/Sounds/Wwise2016/SFX/Characters/Sion/Skins/Base/Sion_Base_GlobalUlt_SFX_events.bnk"
+            ],
             "mFloatVarsDecimals": [
                 0,
                 0,
@@ -6883,7 +6895,7 @@
             "__type": "ModifiableFloat"
         },
         "hpPerLevelModifiable": {
-            "baseValue": 87.0,
+            "baseValue": 95.0,
             "__type": "ModifiableFloat"
         },
         "baseStaticHPRegenModifiable": {

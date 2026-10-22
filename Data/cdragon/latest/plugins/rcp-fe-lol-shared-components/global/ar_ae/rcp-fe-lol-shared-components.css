@@ -16898,6 +16898,7 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
 .shoppefront-categories-sidebar,
 .shoppefront-currency-counter-root,
 .shoppefront-currency-counter-root .shoppefront-currency-counter-text,
+.shoppefront-currency-counter-tooltip.has-title .shoppefront-currency-counter-tooltip-title,
 .shoppefront-help-modal-content-block-wrapper .help-modal-title,
 .shoppefront-help-modal-content-block-wrapper .help-modal-topic,
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-title,
@@ -16946,6 +16947,7 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
 .shoppefront-currency-counter-root,
 .shoppefront-currency-counter-root .shoppefront-currency-counter-text,
 .shoppefront-currency-counter-tooltip,
+.shoppefront-currency-counter-tooltip.has-title .shoppefront-currency-counter-tooltip-title,
 .shoppefront-help-modal-content-block-wrapper .help-description,
 .shoppefront-help-modal-content-block-wrapper .help-modal-text,
 .shoppefront-help-modal-content-block-wrapper .help-modal-title,
@@ -16973,6 +16975,7 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
 .shoppefront-catalog-wrapper .shoppefront-category-title,
 .shoppefront-categories-sidebar,
 .shoppefront-currency-counter-root,
+.shoppefront-currency-counter-tooltip.has-title .shoppefront-currency-counter-tooltip-title,
 .shoppefront-help-modal-content-block-wrapper .help-modal-title,
 .shoppefront-help-modal-content-block-wrapper .help-modal-topic,
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-title,
@@ -17000,6 +17003,12 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
 .shoppefront-currency-counter-root:lang(th-th),
 .shoppefront-currency-counter-root:lang(tr-tr),
 .shoppefront-currency-counter-root:lang(zh-tw),
+.shoppefront-currency-counter-tooltip.has-title .shoppefront-currency-counter-tooltip-title:lang(el-gr),
+.shoppefront-currency-counter-tooltip.has-title .shoppefront-currency-counter-tooltip-title:lang(ja-jp),
+.shoppefront-currency-counter-tooltip.has-title .shoppefront-currency-counter-tooltip-title:lang(ko-kr),
+.shoppefront-currency-counter-tooltip.has-title .shoppefront-currency-counter-tooltip-title:lang(th-th),
+.shoppefront-currency-counter-tooltip.has-title .shoppefront-currency-counter-tooltip-title:lang(tr-tr),
+.shoppefront-currency-counter-tooltip.has-title .shoppefront-currency-counter-tooltip-title:lang(zh-tw),
 .shoppefront-help-modal-content-block-wrapper .help-modal-title:lang(el-gr),
 .shoppefront-help-modal-content-block-wrapper .help-modal-title:lang(ja-jp),
 .shoppefront-help-modal-content-block-wrapper .help-modal-title:lang(ko-kr),
@@ -17088,6 +17097,7 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     letter-spacing: 0
 }
 
+.shoppefront-currency-counter-tooltip.has-title .shoppefront-currency-counter-tooltip-title,
 .shoppefront-tomacco-stage-button .skin-stage-button .skin-stage-button-text {
     color: #f0e6d2;
     font-size: 12px;
@@ -17096,10 +17106,12 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     line-height: 16px
 }
 
+.shoppefront-currency-counter-tooltip.has-title .shoppefront-currency-counter-tooltip-title:lang(ja-jp),
 .shoppefront-tomacco-stage-button .skin-stage-button .skin-stage-button-text:lang(ja-jp) {
     font-size: 13px
 }
 
+.shoppefront-currency-counter-tooltip.has-title .shoppefront-currency-counter-tooltip-title:lang(ar-ae),
 .shoppefront-tomacco-stage-button .skin-stage-button .skin-stage-button-text:lang(ar-ae) {
     letter-spacing: 0
 }
@@ -17654,6 +17666,24 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     padding-top: 10px;
     text-align: center;
     width: 250px
+}
+
+.shoppefront-currency-counter-tooltip.has-title {
+    height: auto;
+    padding-bottom: 10px
+}
+
+.shoppefront-currency-counter-tooltip.has-title .shoppefront-currency-counter-tooltip-title {
+    margin-bottom: 4px
+}
+
+.shoppefront-currency-counter-tooltip.has-title .shoppefront-currency-counter-tooltip-text {
+    white-space: pre-line
+}
+
+.shoppefront-currency-counter-tooltip .shoppefront-currency-counter-tooltip-subtitle {
+    font-weight: 900;
+    margin-bottom: 4px
 }
 
 .shoppefront-dialog-modal-backdrop {

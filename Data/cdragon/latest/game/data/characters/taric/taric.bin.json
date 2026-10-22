@@ -123,6 +123,15 @@
             "mImgIconName": [
                 "ASSETS/Characters/Taric/HUD/Icons2D/Taric_Passive.dds"
             ],
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Taric/Spells/TaricPassiveAbility/TaricPassive",
+                    "mWhenToAddSpell": 0,
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "PassiveSpellAffectedByCooldown": true,
             "castRange": [
                 0.0,
@@ -639,6 +648,20 @@
                 "{0a3e0478}": 15.0,
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Taric/Spells/TaricWAbility/TaricWShoulderManager",
+                    "mWhenToAddSpell": 0,
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                },
+                {
+                    "mBuff": "Characters/Taric/Spells/TaricWAbility/TaricWSelfBuff",
+                    "mRemoveWhenOnCooldown": false,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mCantCancelWhileWindingUp": true,
             "castRange": [
                 800.0,
@@ -1590,6 +1613,15 @@
                 "{0a3e0478}": 3.0,
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Taric/Spells/TaricQAbility/TaricQHandGlowManager",
+                    "mWhenToAddSpell": 0,
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mAmmoUsed": [
                 0,
                 0,
@@ -2214,7 +2246,8 @@
                     "mLocKeys": {
                         "keyName": "Spell_TaricE_Name",
                         "keySummary": "Spell_TaricE_Summary",
-                        "keyTooltip": "Spell_TaricE_Tooltip"
+                        "keyTooltip": "Spell_TaricE_Tooltip",
+                        "keyTooltipExtendedBelowLine": "Spell_TaricE_TooltipExtendedBelowLine"
                     },
                     "mLists": {
                         "LevelUp": {
@@ -2681,9 +2714,9 @@
                 ],
                 "mEarlyLevelOverrides": [
                     2,
-                    1,
                     0,
-                    2
+                    1,
+                    0
                 ],
                 "__type": "RecSpellRankUpInfo"
             },
@@ -2706,6 +2739,30 @@
             }
         ],
         "__type": "RecSpellRankUpInfoList"
+    },
+    "{57cff3dc}": {
+        "{81513105}": "{a0b28628}",
+        "{4c25998b}": [
+            "{f9fc4e98}"
+        ],
+        "__type": "{a0a7de59}"
+    },
+    "{a0b28628}": {
+        "mMapID": 11,
+        "mModeNameStringId": "CLASSIC",
+        "__type": "ItemRecommendationOverrideContext"
+    },
+    "{f9fc4e98}": {
+        "{3ff467f5}": [
+            {
+                "level": 2,
+                "__type": "{6c80e578}"
+            }
+        ],
+        "items": [
+            "Items/3070"
+        ],
+        "__type": "{6298fcab}"
     },
     "{c51bdd41}": {
         "mOverrides": [

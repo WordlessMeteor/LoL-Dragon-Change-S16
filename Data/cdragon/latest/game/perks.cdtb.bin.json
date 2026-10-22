@@ -107,8 +107,8 @@
                 "mSlotLabelKey": "perkstyle_Domination_SlotLabel2",
                 "mType": 3,
                 "mPerks": [
-                    "{4cd8582d}",
-                    "{d17f2259}",
+                    "Perks/Styles/Domination/SixthSense",
+                    "Perks/Styles/Domination/GrislyMementos",
                     "Perks/Styles/Domination/DeepWard"
                 ],
                 "__type": "PerkSlot"
@@ -12174,7 +12174,8 @@
         ],
         "mVFXResourceResolver": {
             "resourceMap": {
-                "Perks_Electrocute_AOE": "Perks/Styles/Domination/Electrocute/Particles/Perks_Electrocute_AOE"
+                "Perks_Electrocute_AOE": "Perks/Styles/Domination/Electrocute/Particles/Perks_Electrocute_AOE",
+                "{4b0f2c4b}": "{97344b03}"
             },
             "__type": "ResourceResolver"
         },
@@ -19023,7 +19024,7 @@
         },
         "__type": "Perk"
     },
-    "{4cd8582d}": {
+    "Perks/Styles/Domination/SixthSense": {
         "mPerkId": 8137,
         "mPerkName": "SixthSense",
         "mDisplayNameLocalizationKey": "perk_displayname_SixthSense",
@@ -19307,8 +19308,8 @@
                     "BonusDamage": {
                         "mFormulaParts": [
                             {
-                                "{0589a59c}": "BonusDamageMin",
-                                "{0b65bc23}": "BonusDamageMax",
+                                "StartDataValue": "BonusDamageMin",
+                                "EndDataValue": "BonusDamageMax",
                                 "__type": "{ee18a47b}"
                             },
                             {
@@ -29323,7 +29324,7 @@
         },
         "__type": "Perk"
     },
-    "{d17f2259}": {
+    "Perks/Styles/Domination/GrislyMementos": {
         "mPerkId": 8140,
         "mPerkName": "GrislyMementos",
         "mDisplayNameLocalizationKey": "perk_displayname_GrislyMementos",
@@ -29435,7 +29436,7 @@
             "__type": "DefaultSplashedPerkStyle"
         },
         "mDefaultPerksWhenSplashed": [
-            "{fcf87363}",
+            "Perks/Styles/Inspiration/CashBack",
             "Perks/Styles/Inspiration/CosmicInsight"
         ],
         "mDefaultStatModsPerSubStyle": [
@@ -29493,7 +29494,7 @@
                 "mPerks": [
                     "Perks/Styles/Inspiration/HextechFlashtraption",
                     "Perks/Styles/Inspiration/MagicalFootwear",
-                    "{fcf87363}"
+                    "Perks/Styles/Inspiration/CashBack"
                 ],
                 "__type": "PerkSlot"
             },
@@ -29513,7 +29514,7 @@
                 "mPerks": [
                     "Perks/Styles/Inspiration/CosmicInsight",
                     "Perks/Styles/Inspiration/ApproachVelocity",
-                    "{f781f833}"
+                    "Perks/Styles/Inspiration/JackOfAllTrades"
                 ],
                 "__type": "PerkSlot"
             }
@@ -55641,7 +55642,7 @@
                         },
                         "__type": "PerkEffectAmountPerMode"
                     },
-                    "{aecea60c}": {
+                    "RUBY_TRIAL_3": {
                         "mEffectAmountPerMode": {
                             "GiveBootsAtMinute": 6.0
                         },
@@ -57580,7 +57581,7 @@
         "mDefault": true,
         "__type": "Perk"
     },
-    "{f781f833}": {
+    "Perks/Styles/Inspiration/JackOfAllTrades": {
         "mPerkId": 8316,
         "mPerkName": "JackOfAllTrades",
         "mDisplayNameLocalizationKey": "perk_displayname_MinionDematerializer",
@@ -57631,7 +57632,7 @@
         },
         "__type": "Perk"
     },
-    "{fcf87363}": {
+    "Perks/Styles/Inspiration/CashBack": {
         "mPerkId": 8321,
         "mPerkName": "CashBack",
         "mDisplayNameLocalizationKey": "perk_displayname_FuturesMarket",
@@ -67391,7 +67392,7 @@
                     },
                     "{4e3f20aa}": {
                         "mSimpleTooltipCalculationDisplay": 4,
-                        "{72c5c2a8}": 0,
+                        "DamageType": 0,
                         "mFormulaParts": [
                             {
                                 "mDataValue": "BaseDamageRanged",
@@ -67407,7 +67408,7 @@
                     },
                     "{5fecac03}": {
                         "mSimpleTooltipCalculationDisplay": 4,
-                        "{72c5c2a8}": 0,
+                        "DamageType": 0,
                         "mFormulaParts": [
                             {
                                 "mDataValue": "BaseDamageMelee",
@@ -101660,7 +101661,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/flare-omnimax.tex",
+                "texture": "ASSETS/Shared/Particles/Flare-Omnimax.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -102172,7 +102173,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/flare-omnimax.tex",
+                "texture": "ASSETS/Shared/Particles/Flare-Omnimax.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -113464,7 +113465,7 @@
         ],
         "mDefaultSplash": {
             "mStyle": "Perks/Styles/Domination",
-            "mPerk1": "{d17f2259}",
+            "mPerk1": "Perks/Styles/Domination/GrislyMementos",
             "mPerk2": "Perks/Styles/Domination/RelentlessHunter",
             "__type": "DefaultSplashedPerkStyle"
         },
@@ -119354,7 +119355,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/flare-omnimax.tex",
+                "texture": "ASSETS/Shared/Particles/Flare-Omnimax.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -153790,7 +153791,7 @@
                         },
                         "__type": "PerkEffectAmountPerMode"
                     },
-                    "{aecea60c}": {
+                    "RUBY_TRIAL_3": {
                         "mEffectAmountPerMode": {
                             "UpdateAfterMinutes": 4.0
                         },
@@ -155468,7 +155469,7 @@
                 "mType": 3,
                 "mPerks": [
                     "Perks/Styles/Precision/LegendAlacrity",
-                    "{3ecd47e5}",
+                    "Perks/Styles/Precision/LegendHaste",
                     "Perks/Styles/Precision/LegendBloodline"
                 ],
                 "__type": "PerkSlot"
@@ -182152,7 +182153,7 @@
         "mMajorChangePatchVersion": "9.4",
         "__type": "Perk"
     },
-    "{3ecd47e5}": {
+    "Perks/Styles/Precision/LegendHaste": {
         "mPerkId": 9105,
         "mPerkName": "LegendHaste",
         "mDisplayNameLocalizationKey": "perk_displayname_9105",
@@ -187766,8 +187767,8 @@
         "mSlotLabelKey": "perk_rune_stat_groupname_defensive",
         "mType": 5,
         "mPerks": [
-            "{787ccb97}",
-            "{7a3bed68}",
+            "Perks/StatMods/Health",
+            "Perks/StatMods/Tenacity",
             "Perks/StatMods/HealthScaling"
         ],
         "__type": "PerkSlot"
@@ -187811,7 +187812,7 @@
         },
         "__type": "Perk"
     },
-    "{6af26ea8}": {
+    "Perks/StatMods/ResistScaling": {
         "mPerkId": 5012,
         "mPerkName": "ResistScaling",
         "mDisplayNameLocalizationKey": "perk_displayname_StatModResistScaling",
@@ -187874,7 +187875,7 @@
         },
         "__type": "Perk"
     },
-    "{787ccb97}": {
+    "Perks/StatMods/Health": {
         "mPerkId": 5011,
         "mPerkName": "Health",
         "mDisplayNameLocalizationKey": "perk_displayname_Health",
@@ -187894,7 +187895,7 @@
         },
         "__type": "Perk"
     },
-    "{7a3bed68}": {
+    "Perks/StatMods/Tenacity": {
         "mPerkId": 5013,
         "mPerkName": "Tenacity",
         "mDisplayNameLocalizationKey": "perk_displayname_Tenacity",

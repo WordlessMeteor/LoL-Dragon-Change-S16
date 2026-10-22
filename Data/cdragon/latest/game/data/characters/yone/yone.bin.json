@@ -1462,13 +1462,13 @@
                 {
                     "name": "ADRatio",
                     "values": [
-                        1.100000023841858,
-                        1.100000023841858,
-                        1.100000023841858,
-                        1.100000023841858,
-                        1.100000023841858,
-                        1.100000023841858,
-                        1.100000023841858
+                        1.0499999523162842,
+                        1.0499999523162842,
+                        1.0499999523162842,
+                        1.0499999523162842,
+                        1.0499999523162842,
+                        1.0499999523162842,
+                        1.0499999523162842
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2460,16 +2460,36 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "ADRatio",
+                            "values": [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "{f9c2333e}": {
                 "cherry": {
                     "value": [
-                        70.0,
-                        70.0,
+                        60.0,
                         60.0,
                         50.0,
-                        50.0,
-                        50.0,
-                        50.0
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
                     ],
                     "__type": "SpellEffectAmount"
                 }
@@ -4269,6 +4289,15 @@
                 "{0a3e0478}": 0.0,
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Yone/Spells/YonePassiveAbility/YonePassive",
+                    "mWhenToAddSpell": 0,
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "useAnimatorFramerate": true,
             "mUseAutoattackCastTimeData": {
                 "__type": "UseAutoattackCastTimeData"

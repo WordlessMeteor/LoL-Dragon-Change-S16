@@ -1072,6 +1072,138 @@
         },
         "__type": "SpellObject"
     },
+    "Characters/Jade_Karthus/Spells/Jade_KarthusDeathDefiedAbility": {
+        "mRootSpell": "Characters/Jade_Karthus/Spells/Jade_KarthusDeathDefiedAbility/Jade_KarthusDeathDefied",
+        "mChildSpells": [
+            "Characters/Jade_Karthus/Spells/Jade_KarthusDeathDefiedAbility/Jade_KarthusDeathDefied",
+            "Characters/Jade_Karthus/Spells/Jade_KarthusDeathDefiedAbility/Jade_KarthusDeathDefiedBuff"
+        ],
+        "mName": "Jade_KarthusDeathDefiedAbility",
+        "mType": 3,
+        "AbilityTraits": 64,
+        "__type": "AbilityObject"
+    },
+    "{5793ac55}": {
+        "ObjectName": "Jade_YorickRKarthusDeathDefied_FakeBuff",
+        "objectPath": "{5793ac55}",
+        "mScriptName": "Jade_YorickRKarthusDeathDefied_FakeBuff",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.dds"
+            ],
+            "SpellEventToAudioEventSuffix": {
+                "18": "Play_sfx_Karthus_KarthusDeathDefiedBuff_OnBuffActivate",
+                "19": "Play_sfx_Karthus_KarthusDeathDefiedBuff_OnBuffDeactivate",
+                "12": "Play_sfx_Karthus_KarthusDeathDefiedBuff_OnCast"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_YorickRKarthusDeathDefied_FakeBuff",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_KarthusPassive_Jade_Name",
+                    "keyTooltip": "Buff_KarthusPassive_Jade_Buff"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Karthus/Spells/Jade_KarthusDeathDefiedAbility/Jade_KarthusDeathDefiedBuff": {
+        "ObjectName": "Jade_KarthusDeathDefiedBuff",
+        "objectPath": "Characters/Jade_Karthus/Spells/Jade_KarthusDeathDefiedAbility/Jade_KarthusDeathDefiedBuff",
+        "mScriptName": "Jade_KarthusDeathDefiedBuff",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.dds"
+            ],
+            "SpellEventToAudioEventSuffix": {
+                "18": "Play_sfx_Karthus_KarthusDeathDefiedBuff_OnBuffActivate",
+                "19": "Play_sfx_Karthus_KarthusDeathDefiedBuff_OnBuffDeactivate",
+                "12": "Play_sfx_Karthus_KarthusDeathDefiedBuff_OnCast"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_KarthusDeathDefiedBuff",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_KarthusPassive_Jade_Name",
+                    "keyTooltip": "Buff_KarthusPassive_Jade_Buff"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Karthus/Spells/Jade_KarthusDeathDefiedAbility/Jade_KarthusDeathDefied": {
+        "ObjectName": "Jade_KarthusDeathDefied",
+        "objectPath": "Characters/Jade_Karthus/Spells/Jade_KarthusDeathDefiedAbility/Jade_KarthusDeathDefied",
+        "mScriptName": "Jade_KarthusDeathDefied",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "PassiveDuration",
+                    "values": [
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.dds"
+            ],
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_KarthusDeathDefied",
+                    "mFormat": "{476ec0b8}",
+                    "EnableExtendedTooltip": false,
+                    "mLocKeys": {
+                        "keyName": "Spell_KarthusPassive_Jade_Name",
+                        "keyTooltip": "Spell_KarthusPassive_Jade_Tooltip",
+                        "keySummary": "Spell_KarthusPassive_Jade_Summary"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
     "Characters/Jade_Karthus/Spells/Jade_KarthusWallOfPainAbility": {
         "mRootSpell": "Characters/Jade_Karthus/Spells/Jade_KarthusWallOfPainAbility/Jade_KarthusWallOfPain",
         "mChildSpells": [
@@ -2117,109 +2249,6 @@
                         "__type": "TargeterDefinitionRange"
                     }
                 ],
-                "__type": "SpellDataResourceClient"
-            },
-            "__type": "SpellDataResource"
-        },
-        "__type": "SpellObject"
-    },
-    "Characters/Jade_Karthus/Spells/Jade_KarthusDeathDefiedAbility": {
-        "mRootSpell": "Characters/Jade_Karthus/Spells/Jade_KarthusDeathDefiedAbility/Jade_KarthusDeathDefied",
-        "mChildSpells": [
-            "Characters/Jade_Karthus/Spells/Jade_KarthusDeathDefiedAbility/Jade_KarthusDeathDefied",
-            "Characters/Jade_Karthus/Spells/Jade_KarthusDeathDefiedAbility/Jade_KarthusDeathDefiedBuff"
-        ],
-        "mName": "Jade_KarthusDeathDefiedAbility",
-        "mType": 3,
-        "AbilityTraits": 64,
-        "__type": "AbilityObject"
-    },
-    "Characters/Jade_Karthus/Spells/Jade_KarthusDeathDefiedAbility/Jade_KarthusDeathDefiedBuff": {
-        "ObjectName": "Jade_KarthusDeathDefiedBuff",
-        "objectPath": "Characters/Jade_Karthus/Spells/Jade_KarthusDeathDefiedAbility/Jade_KarthusDeathDefiedBuff",
-        "mScriptName": "Jade_KarthusDeathDefiedBuff",
-        "mSpell": {
-            "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.dds"
-            ],
-            "SpellEventToAudioEventSuffix": {
-                "18": "Play_sfx_Karthus_KarthusDeathDefiedBuff_OnBuffActivate",
-                "19": "Play_sfx_Karthus_KarthusDeathDefiedBuff_OnBuffDeactivate",
-                "12": "Play_sfx_Karthus_KarthusDeathDefiedBuff_OnCast"
-            },
-            "__type": "SpellDataResource"
-        },
-        "mBuff": {
-            "mTooltipData": {
-                "mObjectName": "Jade_KarthusDeathDefiedBuff",
-                "mFormat": "{b34f999a}",
-                "mLocKeys": {
-                    "keyName": "Spell_KarthusPassive_Jade_Name",
-                    "keyTooltip": "Buff_KarthusPassive_Jade_Buff"
-                },
-                "__type": "TooltipInstanceBuff"
-            },
-            "__type": "BuffData"
-        },
-        "__type": "SpellObject"
-    },
-    "Characters/Jade_Karthus/Spells/Jade_KarthusDeathDefiedAbility/Jade_KarthusDeathDefied": {
-        "ObjectName": "Jade_KarthusDeathDefied",
-        "objectPath": "Characters/Jade_Karthus/Spells/Jade_KarthusDeathDefiedAbility/Jade_KarthusDeathDefied",
-        "mScriptName": "Jade_KarthusDeathDefied",
-        "mSpell": {
-            "DataValues": [
-                {
-                    "name": "PassiveDuration",
-                    "values": [
-                        7.0,
-                        7.0,
-                        7.0,
-                        7.0,
-                        7.0,
-                        7.0,
-                        7.0
-                    ],
-                    "__type": "SpellDataValue"
-                }
-            ],
-            "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.dds"
-            ],
-            "castRange": [
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "castRangeValues": {
-                "values": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "{0a3e0478}": 0.0,
-                "__type": "{0a0eddc9}"
-            },
-            "mClientData": {
-                "mTooltipData": {
-                    "mObjectName": "Jade_KarthusDeathDefied",
-                    "mFormat": "{476ec0b8}",
-                    "EnableExtendedTooltip": false,
-                    "mLocKeys": {
-                        "keyName": "Spell_KarthusPassive_Jade_Name",
-                        "keyTooltip": "Spell_KarthusPassive_Jade_Tooltip",
-                        "keySummary": "Spell_KarthusPassive_Jade_Summary"
-                    },
-                    "__type": "TooltipInstanceSpell"
-                },
                 "__type": "SpellDataResourceClient"
             },
             "__type": "SpellDataResource"

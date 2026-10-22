@@ -26586,41 +26586,6 @@
         },
         "__type": "SpellObject"
     },
-    "Items/Spells/550007Active": {
-        "ObjectName": "550007Active",
-        "objectPath": "Items/Spells/550007Active",
-        "mScriptName": "550007Active",
-        "mSpell": {
-            "flags": 36,
-            "cooldownTime": [
-                12.0,
-                12.0,
-                12.0,
-                12.0,
-                12.0,
-                12.0,
-                12.0
-            ],
-            "Cooldown": {
-                "values": [
-                    12.0,
-                    12.0,
-                    12.0,
-                    12.0,
-                    12.0,
-                    12.0,
-                    12.0
-                ],
-                "{0a3e0478}": 12.0,
-                "__type": "{0a0eddc9}"
-            },
-            "mTargetingTypeData": {
-                "__type": "Self"
-            },
-            "__type": "SpellDataResource"
-        },
-        "__type": "SpellObject"
-    },
     "Items/Spells/TrinketSweeperLvl2": {
         "ObjectName": "TrinketSweeperLvl2",
         "objectPath": "Items/Spells/TrinketSweeperLvl2",
@@ -42667,6 +42632,17 @@
         "inventoryIconToOverlay": "assets/items/itemmodifiers/goldcornersoverlay.tex",
         "__type": "ItemModifier"
     },
+    "{3660034d}": {
+        "mItemModifierID": "{e20f00f4}",
+        "mModifiedGroup": "Items/ItemGroups/Default",
+        "inventoryIconToOverlay": "assets/items/itemmodifiers/bordertreatmentmythic.tex",
+        "mDynamicTooltipToAppend": "UpgradeStaffOfFlowingWaterAugmentItemUpgradeModifier",
+        "mDisplayNameToPrepend": "UpgradeStaffOfFlowingWaterAugmentItemUpgradeModifierName",
+        "{20b65c83}": "TFTRarity5",
+        "mClickableToEnable": true,
+        "mSpellNameToReplace": "Augment_Upgrade_StaffOfFlowingWater_NamiR",
+        "__type": "ItemModifier"
+    },
     "{37fd7df2}": {
         "mItemModifierID": "{b9d61ed9}",
         "mModifiedItem": "Items/1001",
@@ -42927,12 +42903,29 @@
         "mModifierIsInheritedByOwnedParentItems": true,
         "__type": "ItemModifier"
     },
+    "{7d4d70eb}": {
+        "mItemModifierID": "{eb797918}",
+        "mModifiedGroup": "Items/ItemGroups/Default",
+        "inventoryIconToOverlay": "assets/items/itemmodifiers/bordertreatmentmythic.tex",
+        "mDynamicTooltipToAppend": "perk_long_desc_UpgradeJakShoAugmentItemUpgradeModifier",
+        "mDisplayNameToPrepend": "perk_displayname_UpgradeJakShoAugmentItemUpgradeModifier",
+        "{20b65c83}": "TFTRarity5",
+        "__type": "ItemModifier"
+    },
     "{80ff5b48}": {
         "mItemModifierID": "{cb93c3cd}",
         "mModifiedGroup": "Items/ItemGroups/PrismaticItems",
         "mDeltaGoldCost": -1500.0,
         "mVisualPriority": 1,
         "inventoryIconToOverlay": "assets/items/itemmodifiers/bordertreatmentprismatic.tex",
+        "__type": "ItemModifier"
+    },
+    "{84545e45}": {
+        "mItemModifierID": "{ac90c57e}",
+        "mModifiedGroup": "Items/ItemGroups/Default",
+        "inventoryIconToOverlay": "assets/items/itemmodifiers/strawberry_weapon_evolve_border.tex",
+        "mDynamicTooltipToAppend": "Kiwi_Augment_WeaponOfDestiny_ItemModifier_Tooltip",
+        "mDisplayNameToPrepend": "Kiwi_Augment_WeaponOfDestiny_ItemModifier_Name",
         "__type": "ItemModifier"
     },
     "{8620ca16}": {
@@ -43008,6 +43001,15 @@
         "mDeltaGoldCost": 50.0,
         "mDeltaMaxStacks": 1000,
         "inventoryIconToOverlay": "assets/items/itemmodifiers/goldcornersoverlay.tex",
+        "__type": "ItemModifier"
+    },
+    "{c0a46fc4}": {
+        "mItemModifierID": "{2962c773}",
+        "mModifiedGroup": "Items/ItemGroups/Default",
+        "inventoryIconToOverlay": "assets/items/itemmodifiers/bordertreatmentmythic.tex",
+        "mDynamicTooltipToAppend": "UpgradeStormsurgeAugmentItemUpgradeModifier",
+        "mDisplayNameToPrepend": "UpgradeCollectorAugmentItemUpgradeModifierName",
+        "{20b65c83}": "TFTRarity5",
         "__type": "ItemModifier"
     },
     "Items/ItemModifiers/UpgradeSunderedSky_AugmentItemUpgradeModifier": {
@@ -199270,6 +199272,28 @@
                     }
                 ],
                 "__type": "GameCalculation"
+            },
+            "{d6e1c2e4}": {
+                "mExpandedTooltipCalculationDisplay": 5,
+                "tooltipOnly": true,
+                "mFormulaParts": [
+                    {
+                        "mDataValue": "{f938ce68}",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    {
+                        "mPart1": {
+                            "mDataValue": "Breakpoint1",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        "mPart2": {
+                            "mNumber": -1.0,
+                            "__type": "NumberCalculationPart"
+                        },
+                        "__type": "ProductOfSubPartsCalculationPart"
+                    }
+                ],
+                "__type": "GameCalculation"
             }
         },
         "sellBackModifier": 0.0,
@@ -199881,7 +199905,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/flare-omnimax.tex",
+                "texture": "ASSETS/Shared/Particles/Flare-Omnimax.tex",
                 "numFrames": 4,
                 "__type": "VfxEmitterDefinitionData"
             },
@@ -318951,7 +318975,7 @@
             },
             {
                 "mName": "PickupHealthGain",
-                "mValue": 0.03999999910593033,
+                "mValue": 0.20000000298023224,
                 "__type": "ItemDataValue"
             },
             {
@@ -419038,8 +419062,7 @@
             "resourceMap": {
                 "Item2052_PoroSnax_Throw": "Items/2052/Particles/Item2052_PoroSnax_Throw",
                 "2052_Item2052_PoroCoin_Missile": "Items/2052/Particles/2052_Item2052_PoroCoin_Missile",
-                "2052_Missile_Hamburger": "Items/2052/Particles/2052_Missile_Hamburger",
-                "2052_Missile_RainbowCandy": "Items/2052/Particles/2052_Missile_RainbowCandy"
+                "2052_Missile_Hamburger": "Items/2052/Particles/2052_Missile_Hamburger"
             },
             "__type": "ResourceResolver"
         },
@@ -423244,6 +423267,1432 @@
         "particlePath": "Items/2052/Particles/Item2052_PoroSnax_Throw",
         "flags": 199,
         "objectPath": "Items/2052/Particles/Item2052_PoroSnax_Throw",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{a48c3070}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 60.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.4000000059604645,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.4000000059604645,
+                "lifetime": 2.0,
+                "emitterName": "TrailAdd",
+                "primitive": {
+                    "mTrail": {
+                        "mMode": 1,
+                        "mCutoff": 3000.0,
+                        "mBirthTilingSize": {
+                            "constantValue": [
+                                250.0,
+                                0.0,
+                                0.0
+                            ],
+                            "__type": "ValueVector3"
+                        },
+                        "mSmoothingMode": 1,
+                        "__type": "VfxTrailDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveCameraTrail"
+                },
+                "falloffTexture": "ASSETS/Items/2052/Particles/DefaultFalloff.tex",
+                "particleColorTexture": "ASSETS/Items/2052/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.4099946618080139
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10000000149011612,
+                            0.800000011920929,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.4099946618080139
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.4099946618080139
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            0.30000001192092896,
+                            0.6000000238418579,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.6392157077789307,
+                                0.5647059082984924,
+                                0.0
+                            ],
+                            [
+                                0.800000011920929,
+                                0.49803921580314636,
+                                0.3764705955982208,
+                                0.3686274588108063
+                            ],
+                            [
+                                1.0,
+                                0.5568627715110779,
+                                0.2980392277240753,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                0.37254902720451355,
+                                0.18039216101169586,
+                                0.21960784494876862
+                            ],
+                            [
+                                1.0,
+                                0.15294118225574493,
+                                0.15294118225574493,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 1,
+                "alphaRef": 0,
+                "miscRenderFlags": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        45.0,
+                        50.0,
+                        50.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                2.0,
+                                1.5,
+                                1.5
+                            ],
+                            [
+                                1.25,
+                                1.7999999523162842,
+                                1.7999999523162842
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Items/2052/Particles/Base_FirePillar_01.tex",
+                "emitterUvScrollRate": [
+                    1.0,
+                    0.0
+                ],
+                "textureMult": {
+                    "textureMult": "ASSETS/Items/2052/Particles/15.tex",
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 60.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.6499999761581421,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.4000000059604645,
+                "lifetime": 2.0,
+                "emitterName": "TrailAdd1",
+                "primitive": {
+                    "mTrail": {
+                        "mMode": 1,
+                        "mCutoff": 3000.0,
+                        "mBirthTilingSize": {
+                            "constantValue": [
+                                200.0,
+                                0.0,
+                                0.0
+                            ],
+                            "__type": "ValueVector3"
+                        },
+                        "mSmoothingMode": 1,
+                        "__type": "VfxTrailDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveCameraTrail"
+                },
+                "falloffTexture": "ASSETS/Items/2052/Particles/DefaultFalloff.tex",
+                "particleColorTexture": "ASSETS/Items/2052/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 4,
+                "birthColor": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10000000149011612,
+                            0.800000011920929,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10000000149011612,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 1,
+                "alphaRef": 0,
+                "miscRenderFlags": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        50.0,
+                        50.0,
+                        50.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.7999999523162842,
+                                1.5,
+                                1.5
+                            ],
+                            [
+                                0.5,
+                                1.7999999523162842,
+                                1.7999999523162842
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Items/2052/Particles/3026_Items_Trail_06_01.tex",
+                "emitterUvScrollRate": [
+                    1.0,
+                    0.0
+                ],
+                "textureMult": {
+                    "textureMult": "ASSETS/Items/2052/Particles/15.tex",
+                    "uvScaleMult": {
+                        "constantValue": [
+                            0.5,
+                            1.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Basic",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "falloffTexture": "ASSETS/Items/2052/Particles/DefaultFalloff.tex",
+                "particleColorTexture": "ASSETS/Items/2052/Particles/15.tex",
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.6599984765052795
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 99,
+                "colorLookUpTypeY": 1,
+                "alphaRef": 0,
+                "{cb13aff1}": -75.0,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "isRotationEnabled": 1,
+                "rotation0": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.625,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                20.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        75.0,
+                        50.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Items/2052/Particles/3026_Items_ball32_02.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Basic1",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "falloffTexture": "ASSETS/Items/2052/Particles/DefaultFalloff.tex",
+                "particleColorTexture": "ASSETS/Items/2052/Particles/15.tex",
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.22745098173618317,
+                        0.5333333611488342,
+                        0.5686274766921997,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": -9,
+                "colorLookUpTypeY": 1,
+                "alphaRef": 0,
+                "isUniformScale": 1,
+                "isRotationEnabled": 1,
+                "isGroundLayer": 1,
+                "rotation0": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.625,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                20.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        120.0,
+                        50.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Items/2052/Particles/3026_Items_ball32_02.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 45.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.3499999940395355,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.30000001192092896,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            0.3499999940395355
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.5,
+                "lifetime": 0.75,
+                "emitterName": "SnowSparkle",
+                "birthVelocity": {
+                    "constantValue": [
+                        0.0,
+                        500.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                500.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                -50.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "worldAcceleration": {
+                    "constantValue": [
+                        0.0,
+                        -50.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -50.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "SpawnShape": {
+                    "flags": 1,
+                    "radius": 75.0,
+                    "__type": "VfxShapeSphere"
+                },
+                "falloffTexture": "ASSETS/Items/2052/Particles/DefaultFalloff.tex",
+                "particleColorTexture": "ASSETS/Items/2052/Particles/15.tex",
+                "colorLookUpTypeY": 3,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        50.0,
+                        20.0,
+                        60.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.800000011920929
+                                ],
+                                "keyValues": [
+                                    0.4000000059604645,
+                                    1.2000000476837158
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                50.0,
+                                20.0,
+                                60.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            0.5,
+                            0.6000000238418579,
+                            0.699999988079071,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.399999976158142,
+                                1.399999976158142,
+                                1.399999976158142
+                            ],
+                            [
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Items/2052/Particles/Ashe_Freljord_Sparkle.tex",
+                "numFrames": 4,
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "discoball",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Items/2052/Particles/Lissandra_Skin34_Discosphere_01_01.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "falloffTexture": "ASSETS/Items/2052/Particles/DefaultFalloff.tex",
+                "particleColorTexture": "ASSETS/Items/2052/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 1,
+                "Color": {
+                    "constantValue": [
+                        0.3000076413154602,
+                        0.14999619126319885,
+                        0.5300068855285645,
+                        0.9000076055526733
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 50,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        360.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        0.0,
+                        30.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        4.800000190734863,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            0.699999988079071,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.5,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.5,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Items/2052/Particles/3161color-hold.tex",
+                "uvScale": {
+                    "constantValue": [
+                        3.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "discoball1",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Items/2052/Particles/Lissandra_Skin34_Discosphere_01_01.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "falloffTexture": "ASSETS/Items/2052/Particles/DefaultFalloff.tex",
+                "particleColorTexture": "ASSETS/Items/2052/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.29019609093666077,
+                        0.45490196347236633,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 55,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        300.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        0.0,
+                        40.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        4.800000190734863,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            0.699999988079071,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.5,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.5,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Items/2052/Particles/3161color-hold.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        -0.30000001192092896,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "uvScale": {
+                    "constantValue": [
+                        3.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Items/2052/Particles/Lissandra_Skin34_AlphaSlice_bubbles_02_01.tex",
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            -0.20000000298023224,
+                            0.30000001192092896
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "discoball2",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Items/2052/Particles/Lissandra_Skin34_Discosphere_02_01.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "falloffTexture": "ASSETS/Items/2052/Particles/DefaultFalloff.tex",
+                "particleColorTexture": "ASSETS/Items/2052/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.7019608020782471,
+                        0.003921568859368563,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 60,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        360.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        0.0,
+                        40.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        4.800000190734863,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            0.699999988079071,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.5,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.5,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Items/2052/Particles/3161color-hold.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        -0.30000001192092896,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "uvScale": {
+                    "constantValue": [
+                        3.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Items/2052/Particles/Lissandra_Skin34_AlphaSlice_bubbles_02_01.tex",
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            -0.6000000238418579,
+                            -0.6000000238418579
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "discoball3",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Items/2052/Particles/Lissandra_Skin34_Discosphere_01_01.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "falloffTexture": "ASSETS/Items/2052/Particles/DefaultFalloff.tex",
+                "particleColorTexture": "ASSETS/Items/2052/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.0,
+                        0.5137255191802979,
+                        0.9921568632125854,
+                        0.8627451062202454
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 53,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        360.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        0.0,
+                        40.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        4.800000190734863,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            0.699999988079071,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.5,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.5,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Items/2052/Particles/3161color-hold.tex",
+                "uvScale": {
+                    "constantValue": [
+                        3.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Items/2052/Particles/Lissandra_Skin34_AlphaSlice_bubbles_02_01.tex",
+                    "uvScaleMult": {
+                        "constantValue": [
+                            0.5,
+                            0.5
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            -0.20000000298023224,
+                            0.30000001192092896
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "RedSun",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "falloffTexture": "ASSETS/Items/2052/Particles/DefaultFalloff.tex",
+                "particleColorTexture": "ASSETS/Items/2052/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 1,
+                "Color": {
+                    "constantValue": [
+                        0.46666666865348816,
+                        1.0,
+                        0.9647058844566345,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.30000001192092896,
+                            0.5
+                        ],
+                        "values": [
+                            [
+                                0.46666666865348816,
+                                1.0,
+                                0.9647058844566345,
+                                1.0
+                            ],
+                            [
+                                0.46666666865348816,
+                                1.0,
+                                0.9647058844566345,
+                                0.45000380277633667
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 100,
+                "alphaErosionDefinition": {
+                    "erosionDriveCurve": {
+                        "dynamics": {
+                            "times": [
+                                0.10000000149011612,
+                                1.0
+                            ],
+                            "values": [
+                                0.0,
+                                1.0
+                            ],
+                            "__type": "VfxAnimatedFloatVariableData"
+                        },
+                        "__type": "ValueFloat"
+                    },
+                    "erosionMapName": "ASSETS/Items/2052/Particles/Lissandra_Skin34_E_RingPopErosion_01.tex",
+                    "erosionMapChannelMixer": {
+                        "constantValue": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "__type": "ValueColor"
+                    },
+                    "__type": "VfxAlphaErosionDefinitionData"
+                },
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        65.0,
+                        5.0,
+                        7.300000190734863
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            0.699999988079071,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.5,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.5,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Items/2052/Particles/Lissandra_Skin34_BA_Dot_01.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "RedSun1",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "falloffTexture": "ASSETS/Items/2052/Particles/DefaultFalloff.tex",
+                "particleColorTexture": "ASSETS/Items/2052/Particles/DefaultColorOverlifetime.tex",
+                "blendMode": 1,
+                "Color": {
+                    "constantValue": [
+                        1.0,
+                        0.34117648005485535,
+                        0.8588235378265381,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.6000000238418579,
+                            0.800000011920929,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.34117648005485535,
+                                0.8588235378265381,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.34117648005485535,
+                                0.8588235378265381,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                0.34117648005485535,
+                                0.8588235378265381,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                0.34117648005485535,
+                                0.8588235378265381,
+                                0.36000609397888184
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 90,
+                "alphaErosionDefinition": {
+                    "erosionDriveCurve": {
+                        "dynamics": {
+                            "times": [
+                                0.0,
+                                0.20000000298023224,
+                                1.0
+                            ],
+                            "values": [
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            "__type": "VfxAnimatedFloatVariableData"
+                        },
+                        "__type": "ValueFloat"
+                    },
+                    "erosionMapName": "ASSETS/Items/2052/Particles/Lissandra_Skin34_E_RingPopErosion_01.tex",
+                    "erosionMapChannelMixer": {
+                        "constantValue": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "__type": "ValueColor"
+                    },
+                    "__type": "VfxAlphaErosionDefinitionData"
+                },
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        70.0,
+                        5.0,
+                        7.300000190734863
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            0.699999988079071,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.5,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.5,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Items/2052/Particles/Lissandra_Skin34_BA_Dot_01.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "visibilityRadius": 4000.0,
+        "particleName": "2052_Missile_DiscoBall",
+        "particlePath": "Items/2052/Particles/2052_Missile_DiscoBall",
+        "flags": 199,
+        "objectPath": "{a48c3070}",
         "__type": "VfxSystemDefinitionData"
     },
     "Items/2052/Particles/2052_Item2052_PoroCoin_Missile": {
@@ -478796,7 +480245,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/flare-omnimax.tex",
+                "texture": "ASSETS/Shared/Particles/Flare-Omnimax.tex",
                 "numFrames": 4,
                 "__type": "VfxEmitterDefinitionData"
             },
@@ -499262,7 +500711,7 @@
             },
             {
                 "mName": "MaxDistance",
-                "mValue": 600.0,
+                "mValue": 900.0,
                 "__type": "ItemDataValue"
             },
             {
@@ -499552,6 +501001,28 @@
                         "mLevel1Value": 8.0,
                         "mInitialBonusPerLevel": 0.6000000238418579,
                         "__type": "ByCharLevelBreakpointsCalculationPart"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{d6e1c2e4}": {
+                "mExpandedTooltipCalculationDisplay": 5,
+                "tooltipOnly": true,
+                "mFormulaParts": [
+                    {
+                        "mDataValue": "{f938ce68}",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    {
+                        "mPart1": {
+                            "mDataValue": "Breakpoint1",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        "mPart2": {
+                            "mNumber": -1.0,
+                            "__type": "NumberCalculationPart"
+                        },
+                        "__type": "ProductOfSubPartsCalculationPart"
                     }
                 ],
                 "__type": "GameCalculation"
@@ -555938,7 +557409,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/flare-omnimax.tex",
+                "texture": "ASSETS/Shared/Particles/Flare-Omnimax.tex",
                 "numFrames": 4,
                 "__type": "VfxEmitterDefinitionData"
             },
@@ -556064,7 +557535,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/flare-omnimax.tex",
+                "texture": "ASSETS/Shared/Particles/Flare-Omnimax.tex",
                 "numFrames": 4,
                 "__type": "VfxEmitterDefinitionData"
             },
@@ -566356,18 +567827,28 @@
                 "__type": "ItemDataValue"
             },
             {
-                "mName": "ADPerStatue",
-                "mValue": 3.0,
-                "__type": "ItemDataValue"
-            },
-            {
                 "mName": "BuffDuration",
                 "mValue": 90.0,
                 "__type": "ItemDataValue"
             },
             {
-                "mName": "BaseADBonus",
-                "mValue": 12.0,
+                "mName": "BaseADBonusMelee",
+                "mValue": 15.0,
+                "__type": "ItemDataValue"
+            },
+            {
+                "mName": "BaseADRangedMult",
+                "mValue": 0.6669999957084656,
+                "__type": "ItemDataValue"
+            },
+            {
+                "mName": "ADPerStatueMelee",
+                "mValue": 3.0,
+                "__type": "ItemDataValue"
+            },
+            {
+                "mName": "ADPerStatueRangedMult",
+                "mValue": 0.6669999957084656,
                 "__type": "ItemDataValue"
             }
         ],
@@ -566375,18 +567856,28 @@
             "ARAM": {
                 "DataValues": [
                     {
-                        "mName": "ADPerStatue",
-                        "mValue": 1.0,
-                        "__type": "ItemDataValue"
-                    },
-                    {
-                        "mName": "BaseADBonus",
-                        "mValue": 10.0,
-                        "__type": "ItemDataValue"
-                    },
-                    {
                         "mName": "BuffDuration",
                         "mValue": 45.0,
+                        "__type": "ItemDataValue"
+                    },
+                    {
+                        "mName": "BaseADBonusMelee",
+                        "mValue": 15.0,
+                        "__type": "ItemDataValue"
+                    },
+                    {
+                        "mName": "BaseADRangedMult",
+                        "mValue": 0.6669999957084656,
+                        "__type": "ItemDataValue"
+                    },
+                    {
+                        "mName": "ADPerStatueMelee",
+                        "mValue": 2.0,
+                        "__type": "ItemDataValue"
+                    },
+                    {
+                        "mName": "ADPerStatueRangedMult",
+                        "mValue": 0.5,
                         "__type": "ItemDataValue"
                     }
                 ],
@@ -566395,18 +567886,28 @@
             "URF": {
                 "DataValues": [
                     {
-                        "mName": "ADPerStatue",
+                        "mName": "BuffDuration",
+                        "mValue": 45.0,
+                        "__type": "ItemDataValue"
+                    },
+                    {
+                        "mName": "ADPerStatueMelee",
                         "mValue": 1.0,
                         "__type": "ItemDataValue"
                     },
                     {
-                        "mName": "BaseADBonus",
-                        "mValue": 10.0,
+                        "mName": "ADPerStatueRangedMult",
+                        "mValue": 1.0,
                         "__type": "ItemDataValue"
                     },
                     {
-                        "mName": "BuffDuration",
-                        "mValue": 45.0,
+                        "mName": "BaseADBonusMelee",
+                        "mValue": 15.0,
+                        "__type": "ItemDataValue"
+                    },
+                    {
+                        "mName": "BaseADRangedMult",
+                        "mValue": 0.6669999957084656,
                         "__type": "ItemDataValue"
                     }
                 ],
@@ -566415,13 +567916,18 @@
             "{a110bc47}": {
                 "DataValues": [
                     {
-                        "mName": "ADPerStatue",
+                        "mName": "BuffDuration",
+                        "mValue": 45.0,
+                        "__type": "ItemDataValue"
+                    },
+                    {
+                        "mName": "ADPerStatueMelee",
                         "mValue": 1.0,
                         "__type": "ItemDataValue"
                     },
                     {
-                        "mName": "BuffDuration",
-                        "mValue": 45.0,
+                        "mName": "ADPerStatueRangedMult",
+                        "mValue": 1.0,
                         "__type": "ItemDataValue"
                     }
                 ],
@@ -566438,6 +567944,32 @@
                     }
                 ],
                 "__type": "GameCalculation"
+            },
+            "BaseADBonus": {
+                "mFormulaParts": [
+                    {
+                        "mDataValue": "{6c8d1758}",
+                        "__type": "NamedDataValueCalculationPart"
+                    }
+                ],
+                "mRangedMultiplier": {
+                    "mDataValue": "{4270a530}",
+                    "__type": "NamedDataValueCalculationPart"
+                },
+                "__type": "{e9a3c91d}"
+            },
+            "{619bce2f}": {
+                "mFormulaParts": [
+                    {
+                        "mDataValue": "{e7b48421}",
+                        "__type": "NamedDataValueCalculationPart"
+                    }
+                ],
+                "mRangedMultiplier": {
+                    "mDataValue": "{4325747e}",
+                    "__type": "NamedDataValueCalculationPart"
+                },
+                "__type": "{e9a3c91d}"
             }
         },
         "mAbilityHasteMod": 10.0,
@@ -655438,7 +656970,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/flare-omnimax.tex",
+                "texture": "ASSETS/Shared/Particles/Flare-Omnimax.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -669886,7 +671418,7 @@
         "mDataValues": [
             {
                 "mName": "LethalityAmount",
-                "mValue": 22.0,
+                "mValue": 18.0,
                 "__type": "ItemDataValue"
             },
             {
@@ -669901,7 +671433,7 @@
             },
             {
                 "mName": "BuffDuration",
-                "mValue": 90.0,
+                "mValue": 25000.0,
                 "__type": "ItemDataValue"
             },
             {
@@ -669942,7 +671474,7 @@
             "AbilityDamageCalc": {
                 "mFormulaParts": [
                     {
-                        "mNumber": 50.0,
+                        "mNumber": 40.0,
                         "__type": "NumberCalculationPart"
                     },
                     {
@@ -669960,7 +671492,7 @@
         },
         "mAbilityHasteMod": 15.0,
         "mFlatPhysicalDamageMod": 55.0,
-        "PhysicalLethality": 22.0,
+        "PhysicalLethality": 18.0,
         "mCategories": [
             "Damage",
             "ArmorPenetration",
@@ -709594,6 +711126,28 @@
                     }
                 ],
                 "__type": "GameCalculation"
+            },
+            "{d6e1c2e4}": {
+                "mExpandedTooltipCalculationDisplay": 5,
+                "tooltipOnly": true,
+                "mFormulaParts": [
+                    {
+                        "mDataValue": "{f938ce68}",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    {
+                        "mPart1": {
+                            "mDataValue": "Breakpoint1",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        "mPart2": {
+                            "mNumber": -1.0,
+                            "__type": "NumberCalculationPart"
+                        },
+                        "__type": "ProductOfSubPartsCalculationPart"
+                    }
+                ],
+                "__type": "GameCalculation"
             }
         },
         "sellBackModifier": 0.0,
@@ -709659,109 +711213,6 @@
             "__type": "ResourceResolver"
         },
         "__type": "ItemData"
-    },
-    "Items/550002": {
-        "spellName": "550002Active",
-        "mDisplayName": "Item_550002_Name",
-        "itemID": 550002,
-        "maxStack": 1,
-        "mItemGroups": [
-            "{cf4e3da9}"
-        ],
-        "itemVOGroup": "Elixir",
-        "consumed": true,
-        "usableInStore": true,
-        "consumeOnAcquire": true,
-        "clickable": true,
-        "clearUndoHistory": 0,
-        "mCanBeSold": true,
-        "epicness": 8,
-        "SecondaryEpicness": 7,
-        "sellBackModifier": 0.0,
-        "mCategories": [
-            "Health",
-            "SpellBlock",
-            "HealthRegen",
-            "Armor",
-            "Damage",
-            "CriticalStrike",
-            "AttackSpeed",
-            "LifeSteal",
-            "SpellDamage",
-            "Mana",
-            "ManaRegen",
-            "Consumable",
-            "Aura",
-            "Vision",
-            "Trinket",
-            "Stealth",
-            "Active",
-            "GoldPer",
-            "CooldownReduction",
-            "Slow",
-            "SpellVamp",
-            "OnHit",
-            "Boots",
-            "NonbootsMovement",
-            "Tenacity",
-            "MagicPenetration",
-            "ArmorPenetration",
-            "Lane",
-            "Jungle",
-            "Bilgewater",
-            "MagicResist",
-            "AbilityHaste"
-        ],
-        "mItemDataAvailability": {
-            "mInStore": true,
-            "__type": "ItemDataAvailability"
-        },
-        "mItemAttributes": [
-            1,
-            2,
-            4,
-            8,
-            16,
-            32
-        ],
-        "LastMajorChangeMajorPatchVersion": 13,
-        "LastMajorChangeMinorPatchVersion": 16,
-        "mItemDataClient": {
-            "mTooltipData": {
-                "mObjectName": "550002",
-                "mFormat": "{bc6521c8}",
-                "mLocKeys": {
-                    "keyName": "Item_550002_Name",
-                    "keyTooltip": "Item_550001_Tooltip"
-                },
-                "mLists": {
-                    "Stats": {
-                        "__type": "TooltipInstanceList"
-                    }
-                },
-                "__type": "TooltipInstanceItem"
-            },
-            "mDescription": "GeneratedTip_Item_550002_Description",
-            "mDynamicTooltip": "GeneratedTip_Item_550002_TooltipInventory",
-            "mShopTooltip": "GeneratedTip_Item_550002_TooltipShop",
-            "inventoryIcon": "assets/items/icons2d/kiwi/kiwi_550002.tex",
-            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/Kiwi/Kiwi_550002_Small.png",
-            "InventoryIconLarge": "ASSETS/Items/Icons2D/AutoAtlas/LargeIcons/Kiwi/Kiwi_550002_Large.png",
-            "epicness": 7,
-            "__type": "ItemDataClient"
-        },
-        "__type": "ItemData"
-    },
-    "{1d5d2f3f}": {
-        "ObjectName": "550002Active",
-        "objectPath": "{1d5d2f3f}",
-        "mScriptName": "550002Active",
-        "mSpell": {
-            "mAffectsStatusFlags": 8,
-            "mIsDisabledWhileDead": false,
-            "__type": "SpellDataResource"
-        },
-        "__type": "SpellObject"
     },
     "Items/3078": {
         "mDisplayName": "Item_3078_Name",
@@ -772035,12 +773486,12 @@
             },
             {
                 "mName": "NumberOfEnhancedAttacks",
-                "mValue": 2.0,
+                "mValue": 3.0,
                 "__type": "ItemDataValue"
             },
             {
                 "mName": "CDRPerAttack",
-                "mValue": 0.5,
+                "mValue": 0.30000001192092896,
                 "__type": "ItemDataValue"
             }
         ],
@@ -894322,7 +895773,7 @@
         "mDataValues": [
             {
                 "mName": "APPerManaRegen",
-                "mValue": 10.0,
+                "mValue": 15.0,
                 "__type": "ItemDataValue"
             },
             {
@@ -907249,7 +908700,7 @@
             "Items/ItemGroups/Boots",
             "{aba63cd2}"
         ],
-        "price": 700,
+        "price": 800,
         "mCanBeSold": true,
         "epicness": 4,
         "recipeItemLinks": [
@@ -984971,108 +986422,6 @@
         "objectPath": "Items/3087/Particles/3087_Statikk_Shiv_Ready_Self",
         "__type": "VfxSystemDefinitionData"
     },
-    "Items/550001": {
-        "spellName": "550001Active",
-        "mDisplayName": "Item_550001_Name",
-        "itemID": 550001,
-        "maxStack": 1,
-        "mItemGroups": [
-            "{cf4e3da9}"
-        ],
-        "itemVOGroup": "Elixir",
-        "consumed": true,
-        "consumeOnAcquire": true,
-        "clickable": true,
-        "clearUndoHistory": 0,
-        "mCanBeSold": true,
-        "epicness": 8,
-        "SecondaryEpicness": 7,
-        "sellBackModifier": 0.0,
-        "mCategories": [
-            "Health",
-            "SpellBlock",
-            "HealthRegen",
-            "Armor",
-            "Damage",
-            "CriticalStrike",
-            "AttackSpeed",
-            "LifeSteal",
-            "SpellDamage",
-            "Mana",
-            "ManaRegen",
-            "Consumable",
-            "Aura",
-            "Vision",
-            "Trinket",
-            "Stealth",
-            "Active",
-            "GoldPer",
-            "CooldownReduction",
-            "Slow",
-            "SpellVamp",
-            "OnHit",
-            "Boots",
-            "NonbootsMovement",
-            "Tenacity",
-            "MagicPenetration",
-            "ArmorPenetration",
-            "Lane",
-            "Jungle",
-            "Bilgewater",
-            "MagicResist",
-            "AbilityHaste"
-        ],
-        "mItemDataAvailability": {
-            "mInStore": true,
-            "__type": "ItemDataAvailability"
-        },
-        "mItemAttributes": [
-            1,
-            2,
-            4,
-            8,
-            16,
-            32
-        ],
-        "LastMajorChangeMajorPatchVersion": 13,
-        "LastMajorChangeMinorPatchVersion": 16,
-        "mItemDataClient": {
-            "mTooltipData": {
-                "mObjectName": "550001",
-                "mFormat": "{bc6521c8}",
-                "mLocKeys": {
-                    "keyName": "Item_550001_Name",
-                    "keyTooltip": "Item_550001_Tooltip"
-                },
-                "mLists": {
-                    "Stats": {
-                        "__type": "TooltipInstanceList"
-                    }
-                },
-                "__type": "TooltipInstanceItem"
-            },
-            "mDescription": "GeneratedTip_Item_550001_Description",
-            "mDynamicTooltip": "GeneratedTip_Item_550001_TooltipInventory",
-            "mShopTooltip": "GeneratedTip_Item_550001_TooltipShop",
-            "inventoryIcon": "assets/items/icons2d/kiwi/kiwi_550001.tex",
-            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/Kiwi/Kiwi_550001_Small.png",
-            "InventoryIconLarge": "ASSETS/Items/Icons2D/AutoAtlas/LargeIcons/Kiwi/Kiwi_550001_Large.png",
-            "epicness": 7,
-            "__type": "ItemDataClient"
-        },
-        "__type": "ItemData"
-    },
-    "{3164ac35}": {
-        "ObjectName": "550001Active",
-        "objectPath": "{3164ac35}",
-        "mScriptName": "550001Active",
-        "mSpell": {
-            "mAffectsStatusFlags": 8,
-            "mIsDisabledWhileDead": false,
-            "__type": "SpellDataResource"
-        },
-        "__type": "SpellObject"
-    },
     "Items/220006": {
         "spellName": "220006Active",
         "mDisplayName": "Item_220006_Name",
@@ -1012748,16 +1014097,18 @@
             "mDescription": "GeneratedTip_Item_220013_Description",
             "mDynamicTooltip": "GeneratedTip_Item_220013_TooltipInventory",
             "mShopTooltip": "GeneratedTip_Item_220013_TooltipShop",
-            "inventoryIcon": "assets/items/icons2d/2052_poro_snack_rainbowcandy.dds",
-            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/2052_Poro_Snack_RainbowCandy.png",
-            "InventoryIconLarge": "ASSETS/Items/Icons2D/AutoAtlas/LargeIcons/2052_Poro_Snack_RainbowCandy.png",
+            "inventoryIcon": "{2927719d1ed6f3e2}",
+            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/2052_Poro_Snack_DiscoBall.png",
+            "InventoryIconLarge": "ASSETS/Items/Icons2D/AutoAtlas/LargeIcons/2052_Poro_Snack_DiscoBall.png",
             "epicness": 0,
             "__type": "ItemDataClient"
         },
         "mVFXResourceResolver": {
             "resourceMap": {
                 "Item2052_PoroSnax_Throw": "Items/2052/Particles/Item2052_PoroSnax_Throw",
-                "2052_Item2052_PoroCoin_Missile": "Items/2052/Particles/2052_Item2052_PoroCoin_Missile"
+                "2052_Item2052_PoroCoin_Missile": "Items/2052/Particles/2052_Item2052_PoroCoin_Missile",
+                "2052_Missile_RainbowCandy": "Items/2052/Particles/2052_Missile_RainbowCandy",
+                "{2609b43e}": "{a48c3070}"
             },
             "__type": "ResourceResolver"
         },
@@ -1052526,10 +1053877,10 @@
             },
             {
                 "mName": "CDR",
+                "mValue": -0.10000000149011612,
                 "__type": "ItemDataValue"
             }
         ],
-        "mPercentCooldownMod": -0.10000000149011612,
         "mFlatPhysicalDamageMod": 25.0,
         "mCategories": [
             "Damage",
@@ -1108656,109 +1110007,6 @@
         "objectPath": "Items/773037/Particles/773037_Aura_Buf",
         "__type": "VfxSystemDefinitionData"
     },
-    "Items/550004": {
-        "spellName": "550004Active",
-        "mDisplayName": "Item_550004_Name",
-        "itemID": 550004,
-        "maxStack": 1,
-        "mItemGroups": [
-            "{cf4e3da9}"
-        ],
-        "itemVOGroup": "Elixir",
-        "consumed": true,
-        "usableInStore": true,
-        "consumeOnAcquire": true,
-        "clickable": true,
-        "clearUndoHistory": 0,
-        "mCanBeSold": true,
-        "epicness": 8,
-        "SecondaryEpicness": 7,
-        "sellBackModifier": 0.0,
-        "mCategories": [
-            "Health",
-            "SpellBlock",
-            "HealthRegen",
-            "Armor",
-            "Damage",
-            "CriticalStrike",
-            "AttackSpeed",
-            "LifeSteal",
-            "SpellDamage",
-            "Mana",
-            "ManaRegen",
-            "Consumable",
-            "Aura",
-            "Vision",
-            "Trinket",
-            "Stealth",
-            "Active",
-            "GoldPer",
-            "CooldownReduction",
-            "Slow",
-            "SpellVamp",
-            "OnHit",
-            "Boots",
-            "NonbootsMovement",
-            "Tenacity",
-            "MagicPenetration",
-            "ArmorPenetration",
-            "Lane",
-            "Jungle",
-            "Bilgewater",
-            "MagicResist",
-            "AbilityHaste"
-        ],
-        "mItemDataAvailability": {
-            "mInStore": true,
-            "__type": "ItemDataAvailability"
-        },
-        "mItemAttributes": [
-            1,
-            2,
-            4,
-            8,
-            16,
-            32
-        ],
-        "LastMajorChangeMajorPatchVersion": 13,
-        "LastMajorChangeMinorPatchVersion": 16,
-        "mItemDataClient": {
-            "mTooltipData": {
-                "mObjectName": "550004",
-                "mFormat": "{bc6521c8}",
-                "mLocKeys": {
-                    "keyName": "Item_550004_Name",
-                    "keyTooltip": "Item_550001_Tooltip"
-                },
-                "mLists": {
-                    "Stats": {
-                        "__type": "TooltipInstanceList"
-                    }
-                },
-                "__type": "TooltipInstanceItem"
-            },
-            "mDescription": "GeneratedTip_Item_550004_Description",
-            "mDynamicTooltip": "GeneratedTip_Item_550004_TooltipInventory",
-            "mShopTooltip": "GeneratedTip_Item_550004_TooltipShop",
-            "inventoryIcon": "assets/items/icons2d/kiwi/kiwi_550004.tex",
-            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/Kiwi/Kiwi_550004_Small.png",
-            "InventoryIconLarge": "ASSETS/Items/Icons2D/AutoAtlas/LargeIcons/Kiwi/Kiwi_550004_Large.png",
-            "epicness": 7,
-            "__type": "ItemDataClient"
-        },
-        "__type": "ItemData"
-    },
-    "{4c44fbb7}": {
-        "ObjectName": "550004Active",
-        "objectPath": "{4c44fbb7}",
-        "mScriptName": "550004Active",
-        "mSpell": {
-            "mAffectsStatusFlags": 8,
-            "mIsDisabledWhileDead": false,
-            "__type": "SpellDataResource"
-        },
-        "__type": "SpellObject"
-    },
     "Items/3072": {
         "spellName": "BloodthirsterDummySpell",
         "mDisplayName": "Item_3072_Name",
@@ -1122593,110 +1123841,6 @@
             "__type": "ItemDataClient"
         },
         "__type": "ItemData"
-    },
-    "Items/550005": {
-        "spellName": "550005Active",
-        "mDisplayName": "Item_550005_Name",
-        "itemID": 550005,
-        "maxStack": 1,
-        "mItemGroups": [
-            "{cf4e3da9}"
-        ],
-        "itemVOGroup": "Elixir",
-        "consumed": true,
-        "usableInStore": true,
-        "consumeOnAcquire": true,
-        "clickable": true,
-        "clearUndoHistory": 0,
-        "mCanBeSold": true,
-        "epicness": 8,
-        "SecondaryEpicness": 7,
-        "sellBackModifier": 0.0,
-        "mCategories": [
-            "Health",
-            "SpellBlock",
-            "HealthRegen",
-            "Armor",
-            "Damage",
-            "CriticalStrike",
-            "AttackSpeed",
-            "LifeSteal",
-            "SpellDamage",
-            "Mana",
-            "ManaRegen",
-            "Consumable",
-            "Aura",
-            "Vision",
-            "Trinket",
-            "Stealth",
-            "Active",
-            "GoldPer",
-            "CooldownReduction",
-            "Slow",
-            "SpellVamp",
-            "OnHit",
-            "Boots",
-            "NonbootsMovement",
-            "Tenacity",
-            "MagicPenetration",
-            "ArmorPenetration",
-            "Lane",
-            "Jungle",
-            "Bilgewater",
-            "MagicResist",
-            "AbilityHaste"
-        ],
-        "mItemDataAvailability": {
-            "mInStore": true,
-            "__type": "ItemDataAvailability"
-        },
-        "mItemAttributes": [
-            1,
-            2,
-            4,
-            8,
-            16,
-            32
-        ],
-        "ShopOrderPriority": 5,
-        "LastMajorChangeMajorPatchVersion": 13,
-        "LastMajorChangeMinorPatchVersion": 16,
-        "mItemDataClient": {
-            "mTooltipData": {
-                "mObjectName": "550005",
-                "mFormat": "{bc6521c8}",
-                "mLocKeys": {
-                    "keyName": "Item_550005_Name",
-                    "keyTooltip": "Item_550001_Tooltip"
-                },
-                "mLists": {
-                    "Stats": {
-                        "__type": "TooltipInstanceList"
-                    }
-                },
-                "__type": "TooltipInstanceItem"
-            },
-            "mDescription": "GeneratedTip_Item_550005_Description",
-            "mDynamicTooltip": "GeneratedTip_Item_550005_TooltipInventory",
-            "mShopTooltip": "GeneratedTip_Item_550005_TooltipShop",
-            "inventoryIcon": "assets/items/icons2d/kiwi/kiwi_550005.tex",
-            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/Kiwi/Kiwi_550005_Small.png",
-            "InventoryIconLarge": "ASSETS/Items/Icons2D/AutoAtlas/LargeIcons/Kiwi/Kiwi_550005_Large.png",
-            "epicness": 7,
-            "__type": "ItemDataClient"
-        },
-        "__type": "ItemData"
-    },
-    "{570a5835}": {
-        "ObjectName": "550005Active",
-        "objectPath": "{570a5835}",
-        "mScriptName": "550005Active",
-        "mSpell": {
-            "mAffectsStatusFlags": 8,
-            "mIsDisabledWhileDead": false,
-            "__type": "SpellDataResource"
-        },
-        "__type": "SpellObject"
     },
     "Items/9184": {
         "mDisplayName": "Item_9184_Name",
@@ -1156628,7 +1157772,7 @@
         "mDataValues": [
             {
                 "mName": "APPerManaRegen",
-                "mValue": 10.0,
+                "mValue": 15.0,
                 "__type": "ItemDataValue"
             },
             {
@@ -1252355,18 +1253499,28 @@
                 "__type": "ItemDataValue"
             },
             {
-                "mName": "ADPerStatue",
-                "mValue": 2.0,
-                "__type": "ItemDataValue"
-            },
-            {
                 "mName": "BuffDuration",
                 "mValue": 90.0,
                 "__type": "ItemDataValue"
             },
             {
-                "mName": "BaseADBonus",
+                "mName": "BaseADBonusMelee",
                 "mValue": 15.0,
+                "__type": "ItemDataValue"
+            },
+            {
+                "mName": "BaseADRangedMult",
+                "mValue": 1.0,
+                "__type": "ItemDataValue"
+            },
+            {
+                "mName": "ADPerStatueMelee",
+                "mValue": 2.0,
+                "__type": "ItemDataValue"
+            },
+            {
+                "mName": "ADPerStatueRangedMult",
+                "mValue": 1.0,
                 "__type": "ItemDataValue"
             }
         ],
@@ -1252380,6 +1253534,32 @@
                     }
                 ],
                 "__type": "GameCalculation"
+            },
+            "BaseADBonus": {
+                "mFormulaParts": [
+                    {
+                        "mDataValue": "{6c8d1758}",
+                        "__type": "NamedDataValueCalculationPart"
+                    }
+                ],
+                "mRangedMultiplier": {
+                    "mDataValue": "{4270a530}",
+                    "__type": "NamedDataValueCalculationPart"
+                },
+                "__type": "{e9a3c91d}"
+            },
+            "{619bce2f}": {
+                "mFormulaParts": [
+                    {
+                        "mDataValue": "{e7b48421}",
+                        "__type": "NamedDataValueCalculationPart"
+                    }
+                ],
+                "mRangedMultiplier": {
+                    "mDataValue": "{4325747e}",
+                    "__type": "NamedDataValueCalculationPart"
+                },
+                "__type": "{e9a3c91d}"
             }
         },
         "mAbilityHasteMod": 10.0,
@@ -1296750,8 +1297930,6 @@
             "mDynamicTooltip": "GeneratedTip_Item_773064_TooltipInventory",
             "mShopTooltip": "GeneratedTip_Item_773064_TooltipShop",
             "inventoryIcon": "assets/items/icons2d/124_gladiators_pride.tex",
-            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/4401_Tank_T3_ForceOfNature.png",
-            "InventoryIconLarge": "ASSETS/Items/Icons2D/AutoAtlas/LargeIcons/4401_Tank_T3_ForceOfNature.png",
             "epicness": 5,
             "__type": "ItemDataClient"
         },
@@ -1301716,7 +1302894,7 @@
         "mDataValues": [
             {
                 "mName": "HPToADPercentage",
-                "mValue": 0.014999999664723873,
+                "mValue": 0.019999999552965164,
                 "__type": "ItemDataValue"
             }
         ],
@@ -1301733,7 +1302911,7 @@
             }
         },
         "mFlatArmorMod": 45.0,
-        "mFlatCritChanceMod": 0.15000000596046448,
+        "mFlatCritChanceMod": 0.18000000715255737,
         "mCategories": [
             "Armor",
             "Damage",
@@ -1328359,110 +1329537,6 @@
         },
         "__type": "ItemData"
     },
-    "Items/550006": {
-        "spellName": "550006Active",
-        "mDisplayName": "Item_550006_Name",
-        "itemID": 550006,
-        "maxStack": 1,
-        "mItemGroups": [
-            "{cf4e3da9}"
-        ],
-        "itemVOGroup": "Elixir",
-        "consumed": true,
-        "usableInStore": true,
-        "consumeOnAcquire": true,
-        "clickable": true,
-        "clearUndoHistory": 0,
-        "mCanBeSold": true,
-        "epicness": 8,
-        "SecondaryEpicness": 7,
-        "sellBackModifier": 0.0,
-        "mCategories": [
-            "Health",
-            "SpellBlock",
-            "HealthRegen",
-            "Armor",
-            "Damage",
-            "CriticalStrike",
-            "AttackSpeed",
-            "LifeSteal",
-            "SpellDamage",
-            "Mana",
-            "ManaRegen",
-            "Consumable",
-            "Aura",
-            "Vision",
-            "Trinket",
-            "Stealth",
-            "Active",
-            "GoldPer",
-            "CooldownReduction",
-            "Slow",
-            "SpellVamp",
-            "OnHit",
-            "Boots",
-            "NonbootsMovement",
-            "Tenacity",
-            "MagicPenetration",
-            "ArmorPenetration",
-            "Lane",
-            "Jungle",
-            "Bilgewater",
-            "MagicResist",
-            "AbilityHaste"
-        ],
-        "mItemDataAvailability": {
-            "mInStore": true,
-            "__type": "ItemDataAvailability"
-        },
-        "mItemAttributes": [
-            1,
-            2,
-            4,
-            8,
-            16,
-            32
-        ],
-        "ShopOrderPriority": 4,
-        "LastMajorChangeMajorPatchVersion": 13,
-        "LastMajorChangeMinorPatchVersion": 16,
-        "mItemDataClient": {
-            "mTooltipData": {
-                "mObjectName": "550006",
-                "mFormat": "{bc6521c8}",
-                "mLocKeys": {
-                    "keyName": "Item_550006_Name",
-                    "keyTooltip": "Item_550001_Tooltip"
-                },
-                "mLists": {
-                    "Stats": {
-                        "__type": "TooltipInstanceList"
-                    }
-                },
-                "__type": "TooltipInstanceItem"
-            },
-            "mDescription": "GeneratedTip_Item_550006_Description",
-            "mDynamicTooltip": "GeneratedTip_Item_550006_TooltipInventory",
-            "mShopTooltip": "GeneratedTip_Item_550006_TooltipShop",
-            "inventoryIcon": "assets/items/icons2d/kiwi/kiwi_550006.tex",
-            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/Kiwi/Kiwi_550006_Small.png",
-            "InventoryIconLarge": "ASSETS/Items/Icons2D/AutoAtlas/LargeIcons/Kiwi/Kiwi_550006_Large.png",
-            "epicness": 7,
-            "__type": "ItemDataClient"
-        },
-        "__type": "ItemData"
-    },
-    "{a1907de7}": {
-        "ObjectName": "550006Active",
-        "objectPath": "{a1907de7}",
-        "mScriptName": "550006Active",
-        "mSpell": {
-            "mAffectsStatusFlags": 8,
-            "mIsDisabledWhileDead": false,
-            "__type": "SpellDataResource"
-        },
-        "__type": "SpellObject"
-    },
     "Items/1004": {
         "mDisplayName": "Item_1004_Name",
         "itemID": 1004,
@@ -1335448,109 +1336522,6 @@
         },
         "__type": "ItemData"
     },
-    "Items/550003": {
-        "spellName": "550003Active",
-        "mDisplayName": "Item_550003_Name",
-        "itemID": 550003,
-        "maxStack": 1,
-        "mItemGroups": [
-            "{cf4e3da9}"
-        ],
-        "itemVOGroup": "Elixir",
-        "consumed": true,
-        "usableInStore": true,
-        "consumeOnAcquire": true,
-        "clickable": true,
-        "clearUndoHistory": 0,
-        "mCanBeSold": true,
-        "epicness": 8,
-        "SecondaryEpicness": 7,
-        "sellBackModifier": 0.0,
-        "mCategories": [
-            "Health",
-            "SpellBlock",
-            "HealthRegen",
-            "Armor",
-            "Damage",
-            "CriticalStrike",
-            "AttackSpeed",
-            "LifeSteal",
-            "SpellDamage",
-            "Mana",
-            "ManaRegen",
-            "Consumable",
-            "Aura",
-            "Vision",
-            "Trinket",
-            "Stealth",
-            "Active",
-            "GoldPer",
-            "CooldownReduction",
-            "Slow",
-            "SpellVamp",
-            "OnHit",
-            "Boots",
-            "NonbootsMovement",
-            "Tenacity",
-            "MagicPenetration",
-            "ArmorPenetration",
-            "Lane",
-            "Jungle",
-            "Bilgewater",
-            "MagicResist",
-            "AbilityHaste"
-        ],
-        "mItemDataAvailability": {
-            "mInStore": true,
-            "__type": "ItemDataAvailability"
-        },
-        "mItemAttributes": [
-            1,
-            2,
-            4,
-            8,
-            16,
-            32
-        ],
-        "LastMajorChangeMajorPatchVersion": 13,
-        "LastMajorChangeMinorPatchVersion": 16,
-        "mItemDataClient": {
-            "mTooltipData": {
-                "mObjectName": "550003",
-                "mFormat": "{bc6521c8}",
-                "mLocKeys": {
-                    "keyName": "Item_550003_Name",
-                    "keyTooltip": "Item_550001_Tooltip"
-                },
-                "mLists": {
-                    "Stats": {
-                        "__type": "TooltipInstanceList"
-                    }
-                },
-                "__type": "TooltipInstanceItem"
-            },
-            "mDescription": "GeneratedTip_Item_550003_Description",
-            "mDynamicTooltip": "GeneratedTip_Item_550003_TooltipInventory",
-            "mShopTooltip": "GeneratedTip_Item_550003_TooltipShop",
-            "inventoryIcon": "assets/items/icons2d/kiwi/kiwi_550003.tex",
-            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/Kiwi/Kiwi_550003_Small.png",
-            "InventoryIconLarge": "ASSETS/Items/Icons2D/AutoAtlas/LargeIcons/Kiwi/Kiwi_550003_Large.png",
-            "epicness": 7,
-            "__type": "ItemDataClient"
-        },
-        "__type": "ItemData"
-    },
-    "{aaac7039}": {
-        "ObjectName": "550003Active",
-        "objectPath": "{aaac7039}",
-        "mScriptName": "550003Active",
-        "mSpell": {
-            "mAffectsStatusFlags": 8,
-            "mIsDisabledWhileDead": false,
-            "__type": "SpellDataResource"
-        },
-        "__type": "SpellObject"
-    },
     "Items/773160": {
         "spellName": "ItemGhostWardWriggles_Jade",
         "mDisplayName": "game_item_displayname_3160",
@@ -1336362,22 +1337333,22 @@
         "mDataValues": [
             {
                 "mName": "MovementSpeedDuration",
-                "mValue": 1.5,
+                "mValue": 1.0,
                 "__type": "ItemDataValue"
             },
             {
                 "mName": "PercentMovespeedGain",
-                "mValue": 0.4000000059604645,
+                "mValue": 0.6000000238418579,
                 "__type": "ItemDataValue"
             },
             {
                 "mName": "TimerDuration",
-                "mValue": 10.0,
+                "mValue": 8.0,
                 "__type": "ItemDataValue"
             },
             {
                 "mName": "Cooldown",
-                "mValue": 10.0,
+                "mValue": 8.0,
                 "__type": "ItemDataValue"
             },
             {
@@ -1336845,7 +1337816,7 @@
         "mDataValues": [
             {
                 "mName": "APPerManaRegen",
-                "mValue": 10.0,
+                "mValue": 15.0,
                 "__type": "ItemDataValue"
             },
             {
@@ -1367854,16 +1368825,6 @@
                 "__type": "ItemDataValue"
             },
             {
-                "mName": "ADPerStatueMelee",
-                "mValue": 2.0,
-                "__type": "ItemDataValue"
-            },
-            {
-                "mName": "ADPerStatueRange",
-                "mValue": 1.0,
-                "__type": "ItemDataValue"
-            },
-            {
                 "mName": "BuffDurationMelee",
                 "mValue": 90.0,
                 "__type": "ItemDataValue"
@@ -1367879,8 +1368840,18 @@
                 "__type": "ItemDataValue"
             },
             {
-                "mName": "BaseADBonusRange",
-                "mValue": 10.0,
+                "mName": "BaseADRangedMult",
+                "mValue": 0.6669999957084656,
+                "__type": "ItemDataValue"
+            },
+            {
+                "mName": "ADPerStatueMelee",
+                "mValue": 2.0,
+                "__type": "ItemDataValue"
+            },
+            {
+                "mName": "ADPerStatueRangedMult",
+                "mValue": 0.5,
                 "__type": "ItemDataValue"
             }
         ],
@@ -1367894,21 +1368865,35 @@
                     }
                 ],
                 "__type": "GameCalculation"
+            },
+            "BaseADSplit": {
+                "mFormulaParts": [
+                    {
+                        "mDataValue": "{6c8d1758}",
+                        "__type": "NamedDataValueCalculationPart"
+                    }
+                ],
+                "mRangedMultiplier": {
+                    "mDataValue": "{4270a530}",
+                    "__type": "NamedDataValueCalculationPart"
+                },
+                "__type": "{e9a3c91d}"
+            },
+            "BonusADPerStatueSplit": {
+                "mFormulaParts": [
+                    {
+                        "mDataValue": "{e7b48421}",
+                        "__type": "NamedDataValueCalculationPart"
+                    }
+                ],
+                "mRangedMultiplier": {
+                    "mDataValue": "{4325747e}",
+                    "__type": "NamedDataValueCalculationPart"
+                },
+                "__type": "{e9a3c91d}"
             }
         },
         "StringCalculations": {
-            "BaseADSplit": {
-                "MeleeResult": "@BaseADBonusMelee@",
-                "RangedResult": "@BaseADBonusRange@",
-                "DefaultResult": "@BaseADBonusMelee@",
-                "__type": "{4750ceb6}"
-            },
-            "BonusADPerStatueSplit": {
-                "MeleeResult": "@ADPerStatueMelee@",
-                "RangedResult": "@ADPerStatueRange@",
-                "DefaultResult": "@ADPerStatueMelee@",
-                "__type": "{4750ceb6}"
-            },
             "BuffDurationSplit": {
                 "MeleeResult": "@BuffDurationMelee@",
                 "RangedResult": "@BuffDurationRange@",
@@ -1368644,98 +1369629,6 @@
             "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/3085_Marksman_T3_Runaans.png",
             "InventoryIconLarge": "ASSETS/Items/Icons2D/AutoAtlas/LargeIcons/3085_Marksman_T3_Runaans.png",
             "epicness": 5,
-            "__type": "ItemDataClient"
-        },
-        "__type": "ItemData"
-    },
-    "Items/550007": {
-        "spellName": "550007Active",
-        "mDisplayName": "Item_550007_Name",
-        "itemID": 550007,
-        "maxStack": 5,
-        "mItemGroups": [
-            "Items/ItemGroups/Kiwi_Apricot_PartyFavor"
-        ],
-        "price": 10,
-        "consumed": true,
-        "clickable": true,
-        "mItemCalloutPlayer": true,
-        "clearUndoHistory": 0,
-        "mCanBeSold": true,
-        "epicness": 8,
-        "SecondaryEpicness": 7,
-        "sellBackModifier": 0.0,
-        "mCategories": [
-            "Health",
-            "SpellBlock",
-            "HealthRegen",
-            "Armor",
-            "Damage",
-            "CriticalStrike",
-            "AttackSpeed",
-            "LifeSteal",
-            "SpellDamage",
-            "Mana",
-            "ManaRegen",
-            "Consumable",
-            "Aura",
-            "Vision",
-            "Trinket",
-            "Stealth",
-            "Active",
-            "GoldPer",
-            "CooldownReduction",
-            "Slow",
-            "SpellVamp",
-            "OnHit",
-            "Boots",
-            "NonbootsMovement",
-            "Tenacity",
-            "MagicPenetration",
-            "ArmorPenetration",
-            "Lane",
-            "Jungle",
-            "Bilgewater",
-            "MagicResist",
-            "AbilityHaste"
-        ],
-        "mItemDataAvailability": {
-            "mInStore": true,
-            "__type": "ItemDataAvailability"
-        },
-        "mItemAttributes": [
-            1,
-            2,
-            4,
-            8,
-            16,
-            32
-        ],
-        "ShopOrderPriority": 5,
-        "LastMajorChangeMajorPatchVersion": 13,
-        "LastMajorChangeMinorPatchVersion": 16,
-        "mItemDataClient": {
-            "mTooltipData": {
-                "mObjectName": "550007",
-                "mFormat": "{bc6521c8}",
-                "mLocKeys": {
-                    "keyName": "Item_550007_Name",
-                    "keyTooltip": "Item_550007_Tooltip"
-                },
-                "mLists": {
-                    "Stats": {
-                        "__type": "TooltipInstanceList"
-                    }
-                },
-                "__type": "TooltipInstanceItem"
-            },
-            "mDescription": "GeneratedTip_Item_550007_Description",
-            "mDynamicTooltip": "GeneratedTip_Item_550007_TooltipInventory",
-            "mShopTooltip": "GeneratedTip_Item_550007_TooltipShop",
-            "inventoryIcon": "assets/items/icons2d/kiwi/kiwi_550007.tex",
-            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/Kiwi/Kiwi_550007_Small.png",
-            "InventoryIconLarge": "ASSETS/Items/Icons2D/AutoAtlas/LargeIcons/Kiwi/Kiwi_550007_Large.png",
-            "epicness": 7,
             "__type": "ItemDataClient"
         },
         "__type": "ItemData"
@@ -1385519,7 +1386412,7 @@
         "mDataValues": [
             {
                 "mName": "DashCDPerHit",
-                "mValue": 0.20000000298023224,
+                "mValue": 0.15000000596046448,
                 "__type": "ItemDataValue"
             },
             {

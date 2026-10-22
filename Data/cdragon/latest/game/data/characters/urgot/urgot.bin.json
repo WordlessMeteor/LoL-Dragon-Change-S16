@@ -736,6 +736,19 @@
                                 17.0
                             ],
                             "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "OnHitDamageReduction",
+                            "values": [
+                                0.75,
+                                0.75,
+                                0.75,
+                                0.75,
+                                0.75,
+                                0.75,
+                                0.75
+                            ],
+                            "__type": "SpellDataValue"
                         }
                     ],
                     "__type": "SpellDataValueVector"
@@ -803,6 +816,15 @@
             },
             "mChargeUpdateInterval": 0.25,
             "mCancelChargeOnRecastTime": 1.5,
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Urgot/Spells/UrgotWOnHitManager",
+                    "mRemoveWhenOnCooldown": false,
+                    "mRemoveWithSpell": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mCantCancelWhileWindingUp": true,
             "mDoesntBreakChannels": true,
             "mSpellRevealsChampion": false,
@@ -2372,7 +2394,8 @@
                 "Trait_ImmobilizingCCAbility",
                 "Trait_DamageAbility",
                 "Trait_RecastOrReplaceSpell",
-                "Trait_AoE"
+                "Trait_AoE",
+                "Trait_UltimateReactivation"
             ],
             "DataValues": [
                 {
@@ -2538,6 +2561,14 @@
                 ],
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Urgot/Spells/UrgotRSpellPassive",
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mCantCancelWhileWindingUp": true,
             "mSpellRevealsChampion": false,
             "mShowChannelBar": false,
@@ -2823,6 +2854,14 @@
                 "{0a3e0478}": 5.0,
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Urgot/Spells/UrgotRSpellPassive",
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "cannotBeSuppressed": true,
             "canCastWhileDisabled": true,
             "canCastOrQueueWhileCasting": true,

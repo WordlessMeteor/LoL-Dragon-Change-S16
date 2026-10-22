@@ -15539,11 +15539,6 @@
         "name": "Characters/Zoe/Skins/Skin43/Materials/Aspect_inst_body",
         "samplerValues": [
             {
-                "TextureName": "Inner_Fresnel_Mask",
-                "texturePath": "assets/shared/materials/black.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "assets/characters/zoe/skins/skin43/zoe_skin43_tx_cm.tex",
                 "addressV": 1,
@@ -15553,6 +15548,11 @@
                 "TextureName": "Mask_Texture",
                 "texturePath": "assets/characters/zoe/skins/skin43/zoe_skin43_body_screen_tx_cm.tex",
                 "addressV": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Pattern_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -15628,6 +15628,11 @@
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
+                "TextureName": "Inner_Fresnel_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "DeformNoise",
                 "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -15660,7 +15665,7 @@
         ],
         "paramValues": [
             {
-                "name": "Fresnel_pow",
+                "name": "Fresnel_As_Mask_Power",
                 "value": [
                     0.05000000074505806,
                     0.0,
@@ -15670,7 +15675,7 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "Fresnel_Intensity",
+                "name": "Fresnel_As_Mask_Intensity",
                 "value": [
                     1.0,
                     0.0,
@@ -15793,46 +15798,6 @@
                 "name": "Ribbon_SegmentCount",
                 "value": [
                     5.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "modelHeight",
-                "value": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMin",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "rimOffset",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMax",
-                "value": [
-                    1.0,
                     0.0,
                     0.0,
                     0.0
@@ -16420,21 +16385,31 @@
             {
                 "name": "USE_INNER_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
-                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "name": "PATTERN_TWO_MASK_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "PATTERN_ONE_MASK_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "on": false,
+                "Group": "Pattern",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "PATTERN_ONE_ADDITIVE_MASK",
                 "on": false,
+                "Group": "Pattern",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
@@ -16453,14 +16428,6 @@
                 "name": "USE_VERTEX_ANIMATION_TO_SIMULATE_RIBBON",
                 "on": false,
                 "Group": "Vertex_Animation",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_RIM",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
@@ -16962,11 +16929,6 @@
         "name": "Characters/Zoe/Skins/Skin43/Materials/Aspect_inst",
         "samplerValues": [
             {
-                "TextureName": "Inner_Fresnel_Mask",
-                "texturePath": "assets/shared/materials/black.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "assets/characters/zoe/skins/skin43/zoe_skin43_hair_tx_cm.tex",
                 "addressU": 2,
@@ -16978,6 +16940,11 @@
                 "texturePath": "assets/characters/zoe/skins/skin43/zoe_skin43_hair_mask_03_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Pattern_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -17053,6 +17020,11 @@
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
+                "TextureName": "Inner_Fresnel_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "DeformNoise",
                 "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -17085,7 +17057,7 @@
         ],
         "paramValues": [
             {
-                "name": "Fresnel_pow",
+                "name": "Fresnel_As_Mask_Power",
                 "value": [
                     0.05000000074505806,
                     0.0,
@@ -17095,7 +17067,7 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "Fresnel_Intensity",
+                "name": "Fresnel_As_Mask_Intensity",
                 "value": [
                     1.0,
                     0.0,
@@ -17218,46 +17190,6 @@
                 "name": "Ribbon_SegmentCount",
                 "value": [
                     5.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "modelHeight",
-                "value": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMin",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "rimOffset",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMax",
-                "value": [
-                    1.0,
                     0.0,
                     0.0,
                     0.0
@@ -17839,21 +17771,31 @@
             {
                 "name": "USE_INNER_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
-                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "name": "PATTERN_TWO_MASK_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "PATTERN_ONE_MASK_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "on": false,
+                "Group": "Pattern",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "PATTERN_ONE_ADDITIVE_MASK",
                 "on": false,
+                "Group": "Pattern",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
@@ -17872,14 +17814,6 @@
                 "name": "USE_VERTEX_ANIMATION_TO_SIMULATE_RIBBON",
                 "on": false,
                 "Group": "Vertex_Animation",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_RIM",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
@@ -18138,11 +18072,6 @@
         "name": "Characters/Zoe/Skins/Skin43/Materials/Aspect_Card_inst",
         "samplerValues": [
             {
-                "TextureName": "Inner_Fresnel_Mask",
-                "texturePath": "assets/shared/materials/black.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
                 "TextureName": "Diffuse_Texture",
                 "texturePath": "assets/characters/zoe/skins/skin43/zoe_skin43_hair3_tx_cm.tex",
                 "addressU": 2,
@@ -18154,6 +18083,11 @@
                 "texturePath": "assets/characters/zoe/skins/skin43/zoe_skin43_haircard_mask_03_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Pattern_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -18228,6 +18162,11 @@
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
+                "TextureName": "Inner_Fresnel_Mask",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "DeformNoise",
                 "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -18260,7 +18199,7 @@
         ],
         "paramValues": [
             {
-                "name": "Fresnel_pow",
+                "name": "Fresnel_As_Mask_Power",
                 "value": [
                     0.05000000074505806,
                     0.0,
@@ -18270,7 +18209,7 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "Fresnel_Intensity",
+                "name": "Fresnel_As_Mask_Intensity",
                 "value": [
                     1.0,
                     0.0,
@@ -18393,46 +18332,6 @@
                 "name": "Ribbon_SegmentCount",
                 "value": [
                     5.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "modelHeight",
-                "value": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMin",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "rimOffset",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMax",
-                "value": [
-                    1.0,
                     0.0,
                     0.0,
                     0.0
@@ -18990,21 +18889,31 @@
             {
                 "name": "USE_INNER_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
-                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "name": "PATTERN_TWO_MASK_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "PATTERN_ONE_MASK_FRESNEL",
                 "on": false,
+                "Group": "Fresnel",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "PATTERN_TWO_ADDITIVE_MASK",
+                "on": false,
+                "Group": "Pattern",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "PATTERN_ONE_ADDITIVE_MASK",
                 "on": false,
+                "Group": "Pattern",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
@@ -19023,14 +18932,6 @@
                 "name": "USE_VERTEX_ANIMATION_TO_SIMULATE_RIBBON",
                 "on": false,
                 "Group": "Vertex_Animation",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_RIM",
                 "__type": "StaticMaterialSwitchDef"
             },
             {

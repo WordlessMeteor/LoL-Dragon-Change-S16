@@ -589,6 +589,14 @@
                 "{0a3e0478}": 14.0,
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Teemo/Spells/TeemoWAbility/TeemoWPassive",
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "bIsToggleSpell": true,
             "castRange": [
                 20.0,
@@ -1912,6 +1920,39 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "TickBonusADRatio",
+                            "values": [
+                                0.05000000074505806,
+                                0.05000000074505806,
+                                0.05000000074505806,
+                                0.05000000074505806,
+                                0.05000000074505806,
+                                0.05000000074505806,
+                                0.05000000074505806
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "ImpactBonusADRatio",
+                            "values": [
+                                0.10000000149011612,
+                                0.10000000149011612,
+                                0.10000000149011612,
+                                0.10000000149011612,
+                                0.10000000149011612,
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "TickCalculatedDamage": {
                     "mFormulaParts": [
@@ -2016,6 +2057,20 @@
                 "{0a3e0478}": 0.0,
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Teemo/Spells/TeemoEAbility/TeemoE",
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                },
+                {
+                    "mBuff": "Characters/Teemo/Spells/TeemoEAbility/TeemoEShared",
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mCantCancelWhileWindingUp": true,
             "mCantCancelWhileChanneling": true,
             "bHaveHitEffect": true,

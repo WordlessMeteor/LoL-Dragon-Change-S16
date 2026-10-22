@@ -232,7 +232,7 @@
             ],
             "mSpellCalculations": {
                 "TotalDamage": {
-                    "{72c5c2a8}": 1,
+                    "DamageType": 1,
                     "mFormulaParts": [
                         {
                             "mDataValue": "BaseDamage",
@@ -1454,6 +1454,15 @@
                 "{0a3e0478}": 1.5,
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Jade_Evelynn/Spells/Jade_EvelynnQAbility/Jade_EvelynnQ",
+                    "mRemoveWhenOnCooldown": false,
+                    "mRemoveWithSpell": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mAmmoCountHiddenInUI": true,
             "mCantCancelWhileWindingUp": true,
             "mCantCancelWhileWindingUpTargetingChampion": true,
@@ -1645,7 +1654,7 @@
         "mScriptName": "Jade_EvelynnFunctionModule",
         "__type": "SpellObject"
     },
-    "{9a2ee918}": {
+    "Characters/Jade_Evelynn/Spells/Jade_EvelynnPassiveAbility": {
         "mRootSpell": "Characters/Jade_Evelynn/Spells/Jade_EvelynnPassiveAbility/Jade_EvelynnPassive",
         "mChildSpells": [
             "Characters/Jade_Evelynn/Spells/Jade_EvelynnPassiveAbility/Jade_EvelynnPassive",
@@ -1779,7 +1788,7 @@
                     },
                     "mFormulaParts": [
                         {
-                            "{137cf12a}": "ManaRegenRatio",
+                            "DataValue": "ManaRegenRatio",
                             "__type": "{2b25a73a}"
                         }
                     ],
@@ -2309,7 +2318,7 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{9a2ee918}",
+            "Characters/Jade_Evelynn/Spells/Jade_EvelynnPassiveAbility",
             "Characters/Jade_Evelynn/Spells/Jade_EvelynnQAbility",
             "Characters/Jade_Evelynn/Spells/Jade_EvelynnWAbility",
             "Characters/Jade_Evelynn/Spells/Jade_EvelynnEAbility",
@@ -2778,7 +2787,7 @@
             "__type": "CatalogEntry"
         },
         "mDescriptionTraKey": "Jade_Portrait_Description_Evelynn_Feeney",
-        "{55bb9b57}": 20,
+        "PortraitId": 20,
         "{ff3c9ff8}": "{e79c1e24}",
         "image": {
             "image": "assets/characters/jade_evelynn/skins/base/jade_evelynnloadscreen_feeney.tex",
@@ -2794,7 +2803,7 @@
             "__type": "CatalogEntry"
         },
         "mDescriptionTraKey": "Jade_Portrait_Description_Evelynn_LoR_01",
-        "{55bb9b57}": 6,
+        "PortraitId": 6,
         "{ff3c9ff8}": "{e15eb251}",
         "image": {
             "image": "assets/characters/jade_evelynn/skins/base/jade_evelynnloadscreen_lor_01.tex",

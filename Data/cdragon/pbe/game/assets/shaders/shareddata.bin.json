@@ -27,7 +27,8 @@
             "Shaders/SharedData/ConstantBuffers/VFXDynamicPerParticlePS",
             "Shaders/SharedData/ConstantBuffers/GameplayTexture",
             "Shaders/SharedData/ConstantBuffers/EnvEffectorVertex",
-            "{66d4a0d3}"
+            "{66d4a0d3}",
+            "{88c09f02}"
         ],
         "textures": [
             {
@@ -284,6 +285,17 @@
             {
                 "name": "GAMEPLAY_TEXTURE_VS",
                 "BindLocation": 0,
+                "__type": "X3DSharedTextureDef"
+            },
+            {
+                "name": "PROJECTED_DECAL_RECEIVER_DEPTH",
+                "{ec5a120e}": 1,
+                "DefaultValue": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
                 "__type": "X3DSharedTextureDef"
             }
         ],
@@ -960,6 +972,34 @@
             },
             {
                 "name": "DECAL_PROJECTION_Y_RANGE",
+                "type": 3,
+                "__type": "X3DSharedConstantDef"
+            }
+        ],
+        "__type": "X3DSharedConstantBufferDef"
+    },
+    "{88c09f02}": {
+        "name": "ParticleDecalPS",
+        "type": 1,
+        "frequency": 2,
+        "constants": [
+            {
+                "name": "DECAL_WORLD_TO_UV_MATRIX",
+                "type": 9,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "DECAL_PROJECTION_Y_RANGE",
+                "type": 3,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "PROJECTED_DECAL_INV_VIEW_PROJECTION",
+                "type": 9,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "FOG_OF_WAR_PARAMS",
                 "type": 3,
                 "__type": "X3DSharedConstantDef"
             }

@@ -1,8 +1,8 @@
 {
-    "{9e62aff9}": {
-        "mRootSpell": "{0c682e05}",
+    "Characters/Jade_Swain/Spells/Jade_SwainRAbility": {
+        "mRootSpell": "Characters/Jade_Swain/Spells/Jade_SwainRAbility/Jade_SwainR",
         "mChildSpells": [
-            "{0c682e05}",
+            "Characters/Jade_Swain/Spells/Jade_SwainRAbility/Jade_SwainR",
             "{1a159e8b}",
             "{322013f9}",
             "{f9790c30}"
@@ -10,9 +10,9 @@
         "mName": "Jade_SwainRAbility",
         "__type": "AbilityObject"
     },
-    "{0c682e05}": {
+    "Characters/Jade_Swain/Spells/Jade_SwainRAbility/Jade_SwainR": {
         "ObjectName": "Jade_SwainR",
-        "objectPath": "{0c682e05}",
+        "objectPath": "Characters/Jade_Swain/Spells/Jade_SwainRAbility/Jade_SwainR",
         "mScriptName": "Jade_SwainR",
         "mSpell": {
             "flags": 4,
@@ -427,8 +427,14 @@
             ],
             "mMissileSpec": {
                 "movementComponent": {
-                    "mSpeed": 1000.0,
+                    "mTargetHeightAugment": 100.0,
+                    "mTargetBoneName": "C_Buffbone_Glb_Chest_Loc",
+                    "mUseGroundHeightAtTarget": false,
+                    "mSpeed": 900.0,
                     "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
                 },
                 "behaviors": [
                     {
@@ -441,7 +447,7 @@
                 "__type": "MissileSpecification"
             },
             "mCastType": 1,
-            "mMissileEffectKey": "{97077922}",
+            "mMissileEffectKey": "Jade_Swain_Legacy311_swain_ult_mis",
             "mFloatVarsDecimals": [
                 0,
                 0,
@@ -648,8 +654,14 @@
             ],
             "mMissileSpec": {
                 "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mTargetBoneName": "C_Buffbone_Glb_Chest_Loc",
+                    "mUseGroundHeightAtTarget": false,
                     "mSpeed": 1000.0,
                     "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
                 },
                 "behaviors": [
                     {
@@ -662,7 +674,7 @@
                 "__type": "MissileSpecification"
             },
             "mCastType": 1,
-            "mMissileEffectKey": "{ea724955}",
+            "mMissileEffectKey": "Jade_Swain_Legacy311_swain_ult_mis_return",
             "mFloatVarsDecimals": [
                 0,
                 0,
@@ -862,7 +874,7 @@
                 600.0,
                 600.0
             ],
-            "mMissileEffectKey": "{ea724955}",
+            "mMissileEffectKey": "Jade_Swain_Legacy311_swain_ult_mis_return",
             "mFloatVarsDecimals": [
                 0,
                 0,
@@ -984,10 +996,10 @@
         },
         "__type": "SpellObject"
     },
-    "{3a97e20c}": {
-        "mRootSpell": "{c1c705fb}",
+    "Characters/Jade_Swain/Spells/Jade_SwainWAbility": {
+        "mRootSpell": "Characters/Jade_Swain/Spells/Jade_SwainWAbility/Jade_SwainW",
         "mChildSpells": [
-            "{c1c705fb}",
+            "Characters/Jade_Swain/Spells/Jade_SwainWAbility/Jade_SwainW",
             "{658e69bc}"
         ],
         "mName": "Jade_SwainWAbility",
@@ -1082,18 +1094,18 @@
         },
         "__type": "SpellObject"
     },
-    "{5c4b79e2}": {
-        "mRootSpell": "{46b28273}",
+    "Characters/Jade_Swain/Spells/Jade_SwainQAbility": {
+        "mRootSpell": "Characters/Jade_Swain/Spells/Jade_SwainQAbility/Jade_SwainQ",
         "mChildSpells": [
-            "{46b28273}",
+            "Characters/Jade_Swain/Spells/Jade_SwainQAbility/Jade_SwainQ",
             "{f4ac87be}"
         ],
         "mName": "Jade_SwainQAbility",
         "__type": "AbilityObject"
     },
-    "{46b28273}": {
+    "Characters/Jade_Swain/Spells/Jade_SwainQAbility/Jade_SwainQ": {
         "ObjectName": "Jade_SwainQ",
-        "objectPath": "{46b28273}",
+        "objectPath": "Characters/Jade_Swain/Spells/Jade_SwainQAbility/Jade_SwainQ",
         "mScriptName": "Jade_SwainQ",
         "mSpell": {
             "flags": 4,
@@ -1485,7 +1497,7 @@
             "mSpellCooldownOrSealedQueueThreshold": 0.30000001192092896,
             "mCastingBreaksStealth": true,
             "mClientData": {
-                "mUseTooltipFromAnotherSpell": "{46b28273}",
+                "mUseTooltipFromAnotherSpell": "Characters/Jade_Swain/Spells/Jade_SwainQAbility/Jade_SwainQ",
                 "mTargeterDefinitions": [
                     {
                         "overrideBaseRange": {
@@ -1562,9 +1574,9 @@
         },
         "__type": "SpellObject"
     },
-    "{c1c705fb}": {
+    "Characters/Jade_Swain/Spells/Jade_SwainWAbility/Jade_SwainW": {
         "ObjectName": "Jade_SwainW",
-        "objectPath": "{c1c705fb}",
+        "objectPath": "Characters/Jade_Swain/Spells/Jade_SwainWAbility/Jade_SwainW",
         "mScriptName": "Jade_SwainW",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1828,9 +1840,9 @@
         },
         "__type": "SpellObject"
     },
-    "{8ce4daad}": {
+    "Characters/Jade_Swain/Spells/Jade_SwainCritAttack": {
         "ObjectName": "Jade_SwainCritAttack",
-        "objectPath": "{8ce4daad}",
+        "objectPath": "Characters/Jade_Swain/Spells/Jade_SwainCritAttack",
         "mScriptName": "Jade_SwainCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -1907,17 +1919,17 @@
         },
         "__type": "SpellObject"
     },
-    "{d9d25fbe}": {
-        "mRootSpell": "{8fd5c253}",
+    "Characters/Jade_Swain/Spells/Jade_SwainEAbility": {
+        "mRootSpell": "Characters/Jade_Swain/Spells/Jade_SwainEAbility/Jade_SwainE",
         "mChildSpells": [
-            "{8fd5c253}"
+            "Characters/Jade_Swain/Spells/Jade_SwainEAbility/Jade_SwainE"
         ],
         "mName": "Jade_SwainEAbility",
         "__type": "AbilityObject"
     },
-    "{8fd5c253}": {
+    "Characters/Jade_Swain/Spells/Jade_SwainEAbility/Jade_SwainE": {
         "ObjectName": "Jade_SwainE",
-        "objectPath": "{8fd5c253}",
+        "objectPath": "Characters/Jade_Swain/Spells/Jade_SwainEAbility/Jade_SwainE",
         "mScriptName": "Jade_SwainE",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1930,11 +1942,11 @@
                     "name": "DoTDamage",
                     "values": [
                         35.0,
-                        80.0,
-                        124.0,
-                        176.0,
-                        228.0,
-                        280.0,
+                        75.0,
+                        115.0,
+                        155.0,
+                        195.0,
+                        235.0,
                         275.0
                     ],
                     "__type": "SpellDataValue"
@@ -2031,10 +2043,10 @@
             "castConeDistance": 0.0,
             "mMissileSpec": {
                 "movementComponent": {
-                    "mStartBoneName": "R_Buffbone_Glb_Hand_Loc",
+                    "mStartBoneName": "BUFFBONE_CSTM_WEAPON_1",
                     "mTargetBoneName": "C_Buffbone_Glb_Chest_Loc",
                     "mUseGroundHeightAtTarget": false,
-                    "mSpeed": 1000.0,
+                    "mSpeed": 1400.0,
                     "__type": "FixedSpeedMovement"
                 },
                 "heightSolver": {
@@ -2055,8 +2067,7 @@
             },
             "mCastType": 1,
             "castFrame": 7.5,
-            "missileSpeed": 1000.0,
-            "mMissileEffectKey": "{5f126058}",
+            "mMissileEffectKey": "Jade_Swain_Legacy311_swain_torment_mis",
             "mLineWidth": 85.0,
             "bHaveHitBone": true,
             "mHitBoneName": "head",
@@ -2345,9 +2356,9 @@
         },
         "__type": "SpellObject"
     },
-    "{ff5be8ad}": {
+    "Characters/Jade_Swain/Spells/Jade_SwainBasicAttack": {
         "ObjectName": "Jade_SwainBasicAttack",
-        "objectPath": "{ff5be8ad}",
+        "objectPath": "Characters/Jade_Swain/Spells/Jade_SwainBasicAttack",
         "mScriptName": "Jade_SwainBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -2536,7 +2547,7 @@
         ],
         "__type": "RecSpellRankUpInfoList"
     },
-    "{506196e1}": {
+    "Characters/Jade_Swain/CAC/Jade_Swain_Base": {
         "mCooldown": 15.0,
         "mSituations": {
             "MoveOrder2D": {
@@ -5155,7 +5166,7 @@
                         "mRuleName": "Basic 1",
                         "mConditions": [
                             {
-                                "mSpell": "{ff5be8ad}",
+                                "mSpell": "Characters/Jade_Swain/Spells/Jade_SwainBasicAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -5207,7 +5218,7 @@
                         "mRuleName": "Q",
                         "mConditions": [
                             {
-                                "mSpell": "{46b28273}",
+                                "mSpell": "Characters/Jade_Swain/Spells/Jade_SwainQAbility/Jade_SwainQ",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -5233,7 +5244,7 @@
                         "mRuleName": "W",
                         "mConditions": [
                             {
-                                "mSpell": "{c1c705fb}",
+                                "mSpell": "Characters/Jade_Swain/Spells/Jade_SwainWAbility/Jade_SwainW",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -5259,7 +5270,7 @@
                         "mRuleName": "E",
                         "mConditions": [
                             {
-                                "mSpell": "{8fd5c253}",
+                                "mSpell": "Characters/Jade_Swain/Spells/Jade_SwainEAbility/Jade_SwainE",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -5322,7 +5333,7 @@
                         "mRuleName": "R End",
                         "mConditions": [
                             {
-                                "SpellBuff": "{0c682e05}",
+                                "SpellBuff": "Characters/Jade_Swain/Spells/Jade_SwainRAbility/Jade_SwainR",
                                 "__type": "ContextualConditionSpellBuffName"
                             }
                         ],
@@ -5369,7 +5380,7 @@
         "mObjectPath": "Characters/Jade_Swain/CAC/Jade_Swain_Base",
         "__type": "ContextualActionData"
     },
-    "{9dca53be}": {
+    "Characters/Jade_Swain/CharacterRecords/Root": {
         "mCharacterName": "Jade_Swain",
         "baseHPModifiable": {
             "baseValue": 463.0,
@@ -5471,10 +5482,10 @@
             "Jade_SwainRAbility/Jade_SwainR"
         ],
         "spells": [
-            "{46b28273}",
-            "{c1c705fb}",
-            "{8fd5c253}",
-            "{0c682e05}"
+            "Characters/Jade_Swain/Spells/Jade_SwainQAbility/Jade_SwainQ",
+            "Characters/Jade_Swain/Spells/Jade_SwainWAbility/Jade_SwainW",
+            "Characters/Jade_Swain/Spells/Jade_SwainEAbility/Jade_SwainE",
+            "Characters/Jade_Swain/Spells/Jade_SwainRAbility/Jade_SwainR"
         ],
         "extraSpells": [
             "Jade_SwainPDummyCast",
@@ -5513,11 +5524,11 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{d9d25fbe}",
+            "Characters/Jade_Swain/Spells/Jade_SwainEAbility",
             "{e940ed34}",
-            "{5c4b79e2}",
-            "{9e62aff9}",
-            "{3a97e20c}"
+            "Characters/Jade_Swain/Spells/Jade_SwainQAbility",
+            "Characters/Jade_Swain/Spells/Jade_SwainRAbility",
+            "Characters/Jade_Swain/Spells/Jade_SwainWAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_Swain",
         "passiveLuaName": "",
@@ -5600,7 +5611,7 @@
         "Script": "{21dfc687}",
         "__type": "CharacterRecord"
     },
-    "{b9686108}": {
+    "Characters/Jade_Swain/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "__linked": []

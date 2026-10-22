@@ -161,13 +161,13 @@
                         {
                             "name": "MiniHasteDuration",
                             "values": [
-                                4.0,
-                                4.0,
-                                4.0,
-                                4.0,
-                                4.0,
-                                4.0,
-                                4.0
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0
                             ],
                             "__type": "SpellDataValue"
                         },
@@ -559,6 +559,26 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "RHyperMovementSpeedPercent",
+                            "values": [
+                                40.0,
+                                80.0,
+                                120.0,
+                                160.0,
+                                200.0,
+                                240.0,
+                                280.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "{f9c2333e}": {
                 "cherry": {
                     "value": [
@@ -608,6 +628,32 @@
                     "tooltipOnly": true,
                     "mModifiedGameCalculation": "Damage",
                     "__type": "GameCalculationModified"
+                }
+            },
+            "{66185ec4}": {
+                "cherry": {
+                    "Calculations": {
+                        "Damage": {
+                            "mFormulaParts": [
+                                {
+                                    "mCoefficient": 1.5,
+                                    "__type": "StatByCoefficientCalculationPart"
+                                },
+                                {
+                                    "mStat": 2,
+                                    "mStatFormula": 2,
+                                    "mCoefficient": 0.5,
+                                    "__type": "StatByCoefficientCalculationPart"
+                                },
+                                {
+                                    "mDataValue": "RBaseDamage",
+                                    "__type": "NamedDataValueCalculationPart"
+                                }
+                            ],
+                            "__type": "GameCalculation"
+                        }
+                    },
+                    "__type": "{4acf67d2}"
                 }
             },
             "mCoefficient": 0.20000000298023224,

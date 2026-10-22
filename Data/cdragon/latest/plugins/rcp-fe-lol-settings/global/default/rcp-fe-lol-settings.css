@@ -1493,12 +1493,33 @@ lol-uikit-scrollable>.lol-settings-general-section-title:nth-of-type(n+2) {
     min-width: 0
 }
 
+.lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-preview-halo {
+    flex: 0 0 32px;
+    height: 32px;
+    margin-top: 8px;
+    position: relative;
+    transition: box-shadow .15s ease-in-out
+}
+
+.lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-preview-halo:before {
+    box-shadow: 0 0 0 2px #4bb44b;
+    content: "";
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity .15s ease-in-out;
+    width: 100%
+}
+
+.lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-preview-halo.speaking:before {
+    opacity: 1
+}
+
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-preview {
     --flat-button-width: 32px;
     --flat-button-height: 32px;
-    --flat-button-min-height: 32px;
-    flex: 0 0 32px;
-    margin-top: 8px
+    --flat-button-min-height: 32px
 }
 
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-preview span {
@@ -1508,10 +1529,6 @@ lol-uikit-scrollable>.lol-settings-general-section-title:nth-of-type(n+2) {
     -webkit-mask: url(/fe/lol-settings/voice-skin-preview.svg) no-repeat center;
     -webkit-mask-size: 20px 20px;
     width: 20px
-}
-
-.lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-preview[aria-pressed=true] span {
-    background-color: #010a13
 }
 
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-preview[disabled] span {

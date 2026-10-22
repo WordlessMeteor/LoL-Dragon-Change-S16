@@ -525,13 +525,13 @@
                 },
                 "cherry": {
                     "value": [
-                        130.0,
-                        130.0,
                         100.0,
-                        90.0,
-                        90.0,
-                        90.0,
-                        90.0
+                        100.0,
+                        80.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0
                     ],
                     "__type": "SpellEffectAmount"
                 }
@@ -599,6 +599,13 @@
                 ],
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Shared/Spells/GangplankRUpgradeTracker",
+                    "mRemoveWhenOnCooldown": false,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mCantCancelWhileWindingUp": true,
             "mSpellRevealsChampion": false,
             "mUseMinimapTargeting": true,
@@ -1072,13 +1079,13 @@
                 },
                 "cherry": {
                     "value": [
-                        130.0,
-                        130.0,
                         100.0,
-                        90.0,
-                        90.0,
-                        90.0,
-                        90.0
+                        100.0,
+                        80.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0
                     ],
                     "__type": "SpellEffectAmount"
                 }
@@ -1146,6 +1153,13 @@
                 ],
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Shared/Spells/GangplankRUpgradeTracker",
+                    "mRemoveWhenOnCooldown": false,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mCantCancelWhileWindingUp": true,
             "mSpellRevealsChampion": false,
             "mUseMinimapTargeting": true,
@@ -1786,6 +1800,15 @@
                 "{0a3e0478}": 4.5,
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Gangplank/Spells/GangplankQWrapperAbility/GangplankQWrapper",
+                    "mWhenToAddSpell": 0,
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mDoesNotConsumeCooldown": true,
             "castRange": [
                 625.0,
@@ -2788,6 +2811,21 @@
                 "{0a3e0478}": 0.0,
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Gangplank/Spells/GangplankEAbility/GangplankE",
+                    "mWhenToAddSpell": 0,
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                },
+                {
+                    "mBuff": "Characters/Gangplank/Spells/GangplankEAbility/GangplankESpellPassive",
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mMaxAmmo": [
                 3,
                 3,
@@ -3148,6 +3186,20 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        20.0,
+                        18.0,
+                        16.0,
+                        14.0,
+                        12.0,
+                        10.0,
+                        0.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
             "mSpellCalculations": {
                 "BaseHealth": {
                     "tooltipOnly": true,
@@ -3162,6 +3214,26 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                }
+            },
+            "{66185ec4}": {
+                "cherry": {
+                    "Calculations": {
+                        "BaseHealth": {
+                            "mFormulaParts": [
+                                {
+                                    "mDataValue": "BaseHeal",
+                                    "__type": "NamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mCoefficient": 1.350000023841858,
+                                    "__type": "StatByCoefficientCalculationPart"
+                                }
+                            ],
+                            "__type": "GameCalculation"
+                        }
+                    },
+                    "__type": "{4acf67d2}"
                 }
             },
             "mCoefficient": 0.8999999761581421,

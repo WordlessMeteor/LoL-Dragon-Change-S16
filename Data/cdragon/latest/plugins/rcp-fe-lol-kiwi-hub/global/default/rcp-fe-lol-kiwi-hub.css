@@ -1,0 +1,1280 @@
+.kiwi-hub-root .kiwi-hub-scroll-indicator {
+    font-family: var(--font-display)
+}
+
+.kiwi-hub-root {
+    display: flex;
+    flex-direction: column;
+    height: var(--group-page-height);
+    margin-top: 82px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    width: 100%
+}
+
+.kiwi-hub-root::-webkit-scrollbar {
+    display: none
+}
+
+.kiwi-hub-root .kiwi-hub-navigation-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 273px;
+    left: 22px;
+    pointer-events: none;
+    position: fixed;
+    top: 295px;
+    width: 32px
+}
+
+.kiwi-hub-root .kiwi-hub-navigation {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 217px;
+    justify-content: space-between;
+    pointer-events: none;
+    position: relative
+}
+
+.kiwi-hub-root .kiwi-hub-navigation:before {
+    background-color: #5b5a56;
+    bottom: 16px;
+    content: "";
+    left: 15px;
+    position: absolute;
+    top: 16px;
+    width: 2px
+}
+
+.kiwi-hub-root .kiwi-hub-scroll-indicator {
+    align-items: center;
+    color: #a09b8c;
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .08em;
+    line-height: 8px;
+    margin-top: 12px
+}
+
+.kiwi-hub-root .kiwi-hub-scroll-indicator-mouse {
+    border: 1px solid #5b5a56;
+    border-radius: 15px;
+    box-sizing: border-box;
+    height: 26px;
+    margin-bottom: 5px;
+    position: relative;
+    width: 16px
+}
+
+.kiwi-hub-root .kiwi-hub-scroll-indicator-mouse:after {
+    background-color: #5b5a56;
+    content: "";
+    height: 5px;
+    left: 6px;
+    position: absolute;
+    top: 3px;
+    width: 2px
+}
+
+.group-dialogue-screen {
+    font-family: var(--font-body);
+    font-size: 16px;
+    height: 100%;
+    position: absolute;
+    width: 100%
+}
+
+.group-dialogue-screen-panels {
+    background-size: cover;
+    height: 512px;
+    left: 32px;
+    position: absolute;
+    top: 60px;
+    width: 512px
+}
+
+.group-dialogue-screen-main-panel {
+    height: 200px;
+    left: 13%;
+    position: absolute;
+    top: 26%;
+    width: 300px
+}
+
+.group-dialogue-screen-sub-panel {
+    height: 200px;
+    left: 24%;
+    position: absolute;
+    top: 58%;
+    width: 300px
+}
+
+.group-dialogue-screen-panel-title {
+    color: #c8aa6e;
+    font-weight: 550;
+    text-transform: uppercase
+}
+
+.group-dialogue-screen-panel-details {
+    display: flex
+}
+
+.group-dialogue-screen-panel-descriptions {
+    display: flex;
+    flex-direction: column;
+    max-height: 100px;
+    max-width: 80%;
+    overflow: hidden
+}
+
+.group-dialogue-screen-panel-reward-icon-container {
+    align-items: center;
+    background-color: #000;
+    border-image: linear-gradient(180deg, #c8aa6e, #785a28);
+    border-image-slice: 1;
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    flex-shrink: 0;
+    height: 90px;
+    justify-content: center;
+    margin-top: 2%;
+    width: 90px
+}
+
+.group-dialogue-screen-panel-reward-icon-spacer {
+    flex-shrink: 0;
+    height: 100%;
+    width: 3%
+}
+
+.group-dialogue-screen-panel-reward-icon {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 80%;
+    width: 80%
+}
+
+.group-dialogue-screen-panel-reward-header {
+    color: #f0e6d2;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 550;
+    text-transform: uppercase
+}
+
+.group-dialogue-screen-panel-reward-subheader {
+    color: #cdbe91;
+    font-size: 16px;
+    font-weight: 550;
+    text-transform: uppercase
+}
+
+.group-dialogue-screen-panel-text-large {
+    color: #a09b8c;
+    font-size: 20px;
+    margin-top: 2%
+}
+
+.group-dialogue-screen-panel-text {
+    color: #a09b8c;
+    font-size: 16px;
+    margin-top: 2%
+}
+
+.group-dialogue-screen-dialogue-bubble {
+    background-size: cover;
+    border-radius: 100%;
+    height: 256px;
+    position: absolute;
+    right: 25%;
+    top: 10%;
+    width: 256px
+}
+
+.group-dialogue-screen-name {
+    color: #f0e6d2;
+    font-size: 20px;
+    font-weight: 550;
+    margin-left: 18%;
+    margin-top: 30%;
+    text-transform: uppercase
+}
+
+.group-dialogue-screen-dialogue {
+    color: #cdbe91;
+    margin-left: 18%;
+    margin-top: 2%;
+    width: 60%
+}
+
+.group-dialogue-screen-dialogue-character {
+    background-size: cover;
+    bottom: 0;
+    height: 75%;
+    position: absolute;
+    right: 0;
+    width: 50%
+}
+
+.group-emblem .group-emblem-objectives-counter-outline .group-emblem-objectives-counter {
+    font-family: var(--font-body)
+}
+
+.group-emblem {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.group-emblem .group-emblem-background {
+    align-items: center;
+    background-image: url(/fe/lol-kiwi-hub/images/Vinyl_Black_Default.png);
+    background-size: cover;
+    display: flex;
+    flex-shrink: 0;
+    height: 144px;
+    justify-content: center;
+    position: relative;
+    width: 144px
+}
+
+.group-emblem .group-emblem-background:hover {
+    background-image: url(/fe/lol-kiwi-hub/images/Vinyl_Black_Hover.png)
+}
+
+.group-emblem .group-emblem-background:hover .group-emblem-icon {
+    filter: brightness(150%)
+}
+
+.group-emblem .group-emblem-background .group-emblem-icon {
+    background-position: 50%;
+    background-size: 105% 105%;
+    border-radius: 50%;
+    height: 62%;
+    width: 62%
+}
+
+.group-emblem .group-emblem-background .group-emblem-radial-progress {
+    height: calc(100% - 4px);
+    left: 2px;
+    pointer-events: none;
+    position: absolute;
+    top: 2px;
+    width: calc(100% - 4px)
+}
+
+.group-emblem .group-emblem-background .group-emblem-radial {
+    border: 4px solid transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%
+}
+
+.group-emblem .group-emblem-background .group-emblem-radial-bottom {
+    border-color: #1e2328
+}
+
+.group-emblem .group-emblem-background .group-emblem-radial-middle {
+    border-color: #0acbe6
+}
+
+.group-emblem .group-emblem-objectives-counter-outline {
+    align-content: center;
+    background: #a09b8c;
+    clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+    display: flex;
+    flex-wrap: wrap;
+    height: 17px;
+    justify-content: center;
+    position: relative;
+    top: -10px;
+    width: 50px
+}
+
+.group-emblem .group-emblem-objectives-counter-outline .group-emblem-objectives-counter {
+    align-content: center;
+    background: #010a13;
+    clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+    color: #a09b8c;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    font-weight: 500;
+    height: 15px;
+    justify-content: center;
+    width: 47px
+}
+
+.group-emblem.gold-tier .group-emblem-background {
+    background-image: url(/fe/lol-kiwi-hub/images/Vinyl_Gold_Default.png)
+}
+
+.group-emblem.gold-tier:hover .group-emblem-background {
+    background-image: url(/fe/lol-kiwi-hub/images/Vinyl_Gold_Hover.png)
+}
+
+.group-emblem.platinum-tier {
+    margin-top: -17px
+}
+
+.group-emblem.platinum-tier .group-emblem-background {
+    background-image: url(/fe/lol-kiwi-hub/images/Vinyl_Platinum_Default.png)
+}
+
+.group-emblem.platinum-tier:hover .group-emblem-background {
+    background-image: url(/fe/lol-kiwi-hub/images/Vinyl_Platinum_Hover.png)
+}
+
+.group-objective-multiple-count {
+    font-family: var(--font-body)
+}
+
+.group-objective-card-border {
+    align-items: center;
+    background: linear-gradient(#c8aa6e, #785a28);
+    border-radius: 100%;
+    display: flex;
+    height: 62px;
+    justify-content: center;
+    position: relative;
+    width: 62px
+}
+
+.group-objective-card-border:hover {
+    background: linear-gradient(#cdbe91, #c8aa6e)
+}
+
+.group-objective-card-border:hover .group-objective-icon {
+    filter: brightness(150%);
+    height: 58px;
+    width: 58px
+}
+
+.group-objective-card-border:hover .group-objective-multiple-icon {
+    background-image: url(/fe/lol-kiwi-hub/images/Multiple_Icon_Hover.png)
+}
+
+.group-objective-icon {
+    background-position: 50%;
+    background-size: 62px 62px;
+    border-radius: 100%;
+    height: 60px;
+    position: relative;
+    width: 60px
+}
+
+.group-objective-completed {
+    background-color: rgba(0, 0, 0, .65);
+    background-image: url(/fe/lol-kiwi-hub/images/Checkmark_Icon.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 30px 24px;
+    border-radius: 100%;
+    height: 100%;
+    position: absolute;
+    width: 100%
+}
+
+.group-objective-multiple-icon {
+    background-image: url(/fe/lol-kiwi-hub/images/Multiple_Icon.png);
+    background-size: 100% 100%;
+    height: 32px;
+    position: absolute;
+    right: -10%;
+    top: -10%;
+    width: 32px
+}
+
+.group-objective-multiple-count {
+    color: #000;
+    font-size: 10px;
+    font-weight: 900;
+    position: absolute;
+    right: 11px;
+    top: 8.5px
+}
+
+.group-objective-hoverable {
+    left: -15px;
+    position: absolute;
+    top: -15px
+}
+
+.group-objective-reward .group-objective-reward-text {
+    font-family: var(--font-display)
+}
+
+.group-objective-reward {
+    align-items: center;
+    background-color: #010a13;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    justify-content: center;
+    outline: 1px solid #a27c31;
+    width: 50px
+}
+
+.group-objective-reward .group-objective-reward-icon {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly
+}
+
+.group-objective-reward .group-objective-reward-text {
+    color: #a27c31;
+    font-size: 10px;
+    font-weight: 900;
+    position: relative;
+    top: -3px
+}
+
+.group-navigation-button-wrapper {
+    height: 32px;
+    position: relative;
+    width: 32px;
+    z-index: 1
+}
+
+.group-navigation-button-wrapper .group-navigation-button {
+    background-image: url(/fe/lol-kiwi-hub/images/ScrollNav_Empty.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    cursor: pointer;
+    height: 32px;
+    pointer-events: auto;
+    width: 32px
+}
+
+.group-navigation-button-wrapper.has-claimable-rewards .group-navigation-button {
+    background-image: url(/fe/lol-kiwi-hub/images/ScrollNav_Gift.png)
+}
+
+.group-navigation-button-wrapper.is-viewed-page .group-navigation-button {
+    background-image: url(/fe/lol-kiwi-hub/images/ScrollNav_Selected.png)
+}
+
+.group-page .group-header,
+.group-page .group-objective-header {
+    font-family: var(--font-display)
+}
+
+.group-page .group-objective-description {
+    font-family: var(--font-body)
+}
+
+.group-page {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-shrink: 0;
+    height: var(--group-page-height);
+    position: relative;
+    scroll-snap-align: start;
+    width: 100%
+}
+
+.group-page .group-header {
+    bottom: 10%;
+    display: flex;
+    flex-direction: row-reverse;
+    font-weight: 800;
+    justify-content: flex-end;
+    left: 6%;
+    letter-spacing: .05em;
+    position: absolute;
+    text-transform: uppercase;
+    width: 50%
+}
+
+.group-page .group-header .group-info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 20px;
+    width: 400px
+}
+
+.group-page .group-header .group-info .group-titles {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 82px;
+    justify-content: center;
+    left: -20px;
+    letter-spacing: .08em;
+    padding-left: 30px;
+    position: relative;
+    width: 500px
+}
+
+.group-page .group-header .group-info .group-titles .group-title {
+    color: #f0e6d2;
+    font-size: 30px
+}
+
+.group-page .group-header .group-info .group-titles .group-subtitle {
+    color: #cdbe91;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative
+}
+
+.group-page .group-objectives-container {
+    align-items: center;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%)
+}
+
+.group-page .group-objective-cards {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    justify-content: space-evenly;
+    width: 380px
+}
+
+.group-page .group-objective-header {
+    color: #cdbe91;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: .07em;
+    margin-bottom: 8px;
+    margin-top: 6px
+}
+
+.group-page .group-objective-description {
+    color: #a09b8c;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .07em
+}
+
+.group-progress-track {
+    display: flex;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: 10%
+}
+
+.group-progress-track .reward-progress-bar {
+    background-color: #3c3c41;
+    border: 1px solid #1e2328;
+    left: 50%;
+    overflow-y: clip;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px
+}
+
+.group-progress-track .reward-progress-bar .reward-progress-bar-fill {
+    background: linear-gradient(0deg, #005a82, #0a96aa 95%, #b2d9db);
+    bottom: 0;
+    position: absolute;
+    top: auto;
+    width: 100%
+}
+
+.group-progress-track .reward-progress-bar .reward-progress-bar-fill-animation {
+    left: -98px;
+    position: relative;
+    top: 33px;
+    transform: rotate(-90deg)
+}
+
+.group-progress-track .reward-progress-milestones {
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin-left: 1px;
+    position: relative
+}
+
+.group-progress-track-milestone-click-to-claim-text {
+    font-family: var(--font-body)
+}
+
+.group-progress-track-milestone {
+    align-items: center;
+    cursor: none;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    position: relative
+}
+
+.group-progress-track-milestone .reward-option-image-mask {
+    align-items: center;
+    display: flex;
+    height: 62px;
+    justify-content: center;
+    width: 62px
+}
+
+.group-progress-track-milestone .reward-tracker-reward-item {
+    height: 100px;
+    padding: 0
+}
+
+.group-progress-track-milestone .reward-option-image {
+    height: 58px;
+    width: 58px
+}
+
+.group-progress-track-milestone .reward-option-hover-area {
+    bottom: -30px;
+    height: 120px
+}
+
+.group-progress-track-milestone .reward-item-selected-mask {
+    display: none;
+    visibility: hidden
+}
+
+.group-progress-track-milestone .reward-level {
+    margin-top: -15px;
+    pointer-events: none
+}
+
+.group-progress-track-milestone .reward-level-text {
+    min-width: 43px;
+    width: 43px
+}
+
+.group-progress-track-milestone .reward-level-text.completed {
+    color: #f0e6d2
+}
+
+.group-progress-track-milestone .reward-level-text.selected {
+    background-color: #010a13;
+    border-color: #0a323c;
+    color: #f0e6d2
+}
+
+.group-progress-track-milestone .reward-level-text.unselected {
+    background-color: #010a13;
+    border-color: #fabe0a;
+    color: #f0e6d2
+}
+
+.group-progress-track-milestone .reward-level-text.future {
+    background-color: #010a13;
+    border-color: #3c3c41
+}
+
+.group-progress-track-milestone .reward-level-text-border {
+    width: 43px
+}
+
+.group-progress-track-milestone .reward-level-text-border.selected {
+    background-color: #0a323c
+}
+
+.group-progress-track-milestone .reward-level-text-border.unselected {
+    background-color: #fabe0a
+}
+
+.group-progress-track-milestone .reward-level-text-border.future {
+    background-color: #3c3c41
+}
+
+.group-progress-track-milestone .reward-tracker-reward-item:hover .reward-level-text.completed {
+    color: #f0e6d2
+}
+
+.group-progress-track-milestone .reward-tracker-reward-item:hover .reward-level-text.selected {
+    background-color: #010a13;
+    border-color: #0a1428;
+    color: #a09b8c
+}
+
+.group-progress-track-milestone .reward-tracker-reward-item:hover .reward-level-text.unselected {
+    background-color: #010a13;
+    border-color: #c8aa6e;
+    color: #f0e6d2
+}
+
+.group-progress-track-milestone .reward-tracker-reward-item:hover .reward-level-text.future {
+    background-color: #010a13;
+    border-color: #a09b8c
+}
+
+.group-progress-track-milestone .reward-tracker-reward-item:hover .reward-level-text-border.selected {
+    background-color: #0a1428
+}
+
+.group-progress-track-milestone .reward-tracker-reward-item:hover .reward-level-text-border.unselected {
+    background-color: #c8aa6e
+}
+
+.group-progress-track-milestone .reward-tracker-reward-item:hover .reward-level-text-border.future {
+    background-color: #a09b8c
+}
+
+.group-progress-track-milestone-claimable-glow {
+    left: -98px;
+    pointer-events: none;
+    position: absolute;
+    top: -62.5px
+}
+
+.group-progress-track-milestone-click-to-claim-text {
+    color: #cdbe91;
+    display: none;
+    font-weight: 700;
+    letter-spacing: .07em;
+    min-width: 200px;
+    position: absolute;
+    text-align: right;
+    top: 50%;
+    transform: translate(-150px, -50%)
+}
+
+.group-progress-track-milestone:hover .group-progress-track-milestone-claimable-glow {
+    filter: brightness(1.5)
+}
+
+.group-progress-track-milestone:hover.is-claimable {
+    cursor: pointer
+}
+
+.group-progress-track-milestone:hover.is-claimable .group-progress-track-milestone-click-to-claim-text {
+    display: block
+}
+
+.kiwi-lobby-widget {
+    font-family: var(--font-display)
+}
+
+.kiwi-lobby-widget-xp-display {
+    font-family: var(--font-body)
+}
+
+.kiwi-lobby-widget {
+    align-items: center;
+    background-image: url(/fe/lol-kiwi-hub/images/Lobby_Widget_BG.png);
+    background-size: 100% 110%;
+    color: #c8aa6e;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    font-weight: 700;
+    height: 100%;
+    justify-content: center;
+    pointer-events: none;
+    text-transform: uppercase;
+    width: 100%
+}
+
+.kiwi-lobby-widget-progress-bar {
+    height: 28px;
+    margin-bottom: -22px;
+    margin-top: 2px;
+    position: relative;
+    width: 95%
+}
+
+.kiwi-lobby-widget-progress-bar-image {
+    background-image: url(/fe/lol-kiwi-hub/images/ProgressBar_Empty.png);
+    background-size: 100% 100%;
+    height: 4px;
+    position: absolute;
+    width: 258px
+}
+
+.kiwi-lobby-widget-progress-bar-image.fill {
+    background-image: url(/fe/lol-kiwi-hub/images/ProgressBar_Complete.png)
+}
+
+.kiwi-lobby-widget-reward {
+    background-image: url(/fe/lol-kiwi-hub/images/MainProgressMilestone_Default.png);
+    background-size: 100% 100%;
+    height: 32px;
+    position: absolute;
+    right: -5px;
+    top: -12px;
+    width: 32px
+}
+
+.kiwi-lobby-widget-progress-bar-mask {
+    overflow-x: clip;
+    position: relative
+}
+
+.kiwi-lobby-widget-rank-info {
+    display: flex;
+    flex-direction: column
+}
+
+.kiwi-lobby-widget-progress-details {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    width: 95%
+}
+
+.kiwi-lobby-widget-superstar-title {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .12em
+}
+
+.kiwi-lobby-widget-milestone-rank {
+    color: #cdbe91;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: .05em;
+    margin-top: -4px
+}
+
+.kiwi-lobby-widget-xp-display {
+    align-items: center;
+    color: #a09b8c;
+    display: flex;
+    font-weight: 500;
+    justify-content: center;
+    margin-top: 6px
+}
+
+.kiwi-lobby-widget-xp-icon {
+    background-image: url(/fe/lol-kiwi-hub/images/Superstar_Rank.png);
+    background-size: 100% 100%;
+    height: 26px;
+    margin-top: -2px;
+    width: 26px
+}
+
+.kiwi-lobby-widget-xp {
+    color: #c8aa6e;
+    font-weight: 900;
+    margin-left: 8px;
+    margin-right: 4px
+}
+
+.kiwi-lobby-widget-button-container {
+    pointer-events: auto;
+    width: 60%
+}
+
+.main-progress-track {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 130px;
+    justify-content: end;
+    margin-bottom: 20px;
+    width: 100%
+}
+
+.main-progress-track-bars {
+    align-self: flex-start;
+    height: 130px;
+    position: relative;
+    width: 100%
+}
+
+.main-progress-track-bars-background {
+    background-image: url(/fe/lol-kiwi-hub/images/Main_Progress_Track_BG.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 105% 100%;
+    bottom: -52px;
+    height: 100%;
+    position: absolute;
+    width: 100%
+}
+
+.main-progress-track-bars-fill {
+    height: 100%;
+    overflow-x: clip;
+    position: absolute
+}
+
+.main-progress-track-bars-fill-video {
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.main-progress-track-bars-bottom {
+    background-image: url(/fe/lol-kiwi-hub/images/ProgressBar_Empty.png);
+    background-size: 100% 100%;
+    bottom: -48px;
+    height: 4px;
+    position: absolute;
+    width: 100%
+}
+
+.main-progress-track-bars-bottom.fill {
+    background-image: url(/fe/lol-kiwi-hub/images/ProgressBar_Complete.png);
+    width: 954px
+}
+
+.main-progress-track-milestones {
+    bottom: -26px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    right: -95px;
+    width: 805px
+}
+
+.kiwi-hub-main-progress-track-milestone-tooltip {
+    font-family: var(--font-body)
+}
+
+.main-progress-track-milestone {
+    align-items: center;
+    border-radius: 100%;
+    display: flex;
+    flex-shrink: 0;
+    height: 40px;
+    justify-content: center;
+    position: relative;
+    width: 40px
+}
+
+.main-progress-track-milestone-reward-icon {
+    background-image: url(/fe/lol-kiwi-hub/images/MainProgressMilestone_Default.png);
+    background-size: 100% 100%;
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%
+}
+
+.main-progress-track-milestone-reward-icon.is-claimable {
+    background-image: url(/fe/lol-kiwi-hub/images/MainProgressMilestone_DefaultClaimable.png);
+    cursor: pointer
+}
+
+.main-progress-track-milestone-reward-icon.is-completed {
+    background-image: url(/fe/lol-kiwi-hub/images/MainProgressMilestone_DefaultCompleted.png)
+}
+
+.main-progress-track-milestone-reward-icon:hover {
+    background-image: url(/fe/lol-kiwi-hub/images/MainProgressMilestone_DefaultHover.png)
+}
+
+.main-progress-track-milestone-reward-icon:hover.is-claimable {
+    background-image: url(/fe/lol-kiwi-hub/images/MainProgressMilestone_DefaultClaimableHover.png)
+}
+
+.main-progress-track-milestone-reward-icon:hover.is-completed {
+    background-image: url(/fe/lol-kiwi-hub/images/MainProgressMilestone_DefaultCompletedHover.png)
+}
+
+.main-progress-track-milestone-gift-icon-glow-container {
+    margin-left: -20px;
+    margin-top: -20px
+}
+
+.kiwi-hub-main-progress-track-milestone-tooltip {
+    align-items: center;
+    background-color: #010a13;
+    color: #cdbe91;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    justify-content: center;
+    padding-top: 9px;
+    width: 300px
+}
+
+.kiwi-hub-main-progress-track-milestone-tooltip-divider {
+    background-color: #1e2328;
+    height: 1px;
+    width: 95%
+}
+
+.kiwi-hub-main-progress-track-milestone-tooltip-reward-background {
+    align-items: center;
+    background-image: url(/fe/lol-kiwi-hub/images/MainProgressMilestoneRewardTooltipBackground.png);
+    background-position: 50%;
+    background-size: 344px 170px;
+    display: flex;
+    height: 110px;
+    justify-content: space-around;
+    width: 300px
+}
+
+.kiwi-hub-main-progress-track-milestone-tooltip-reward-details {
+    align-items: center;
+    color: #5b5a56;
+    display: flex;
+    font-size: 14px;
+    justify-content: flex-start;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    width: 100%
+}
+
+.kiwi-hub-main-progress-track-milestone-tooltip-reward-icon {
+    height: 70px;
+    width: 70px
+}
+
+.kiwi-hub-main-progress-track-milestone-tooltip-reward-type-icon {
+    height: 20px;
+    margin-left: 12px;
+    margin-right: 6px;
+    width: 20px
+}
+
+.kiwi-hub-main-progress-track-milestone-tooltip-claimed {
+    color: #cdfafa;
+    font-size: 12px;
+    margin-bottom: 6px
+}
+
+.kiwi-hub-main-progress-track-milestone-tooltip-progress-required,
+.kiwi-hub-main-progress-track-milestone-tooltip-superstar-status {
+    color: #f0e6d2;
+    font-size: 12px;
+    margin-bottom: 6px
+}
+
+.kiwi-hub-main-progress-track-milestone-tooltip-progress-required.in-progress {
+    font-weight: 700
+}
+
+.kiwi-hub-main-progress-track-milestone-tooltip-description {
+    color: #a09b8c;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 10px 12px
+}
+
+.main-progress-rank-tracker .main-progress-rank-tracker-info,
+.main-progress-rank-tracker-xp-info-title {
+    font-family: var(--font-display)
+}
+
+.main-progress-rank-tracker .main-progress-rank-tracker-info .main-progress-rank-tracker-xp-display,
+.main-progress-rank-tracker-xp-info-text {
+    font-family: var(--font-body)
+}
+
+.main-progress-rank-tracker {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    left: 0;
+    position: absolute;
+    top: 140px
+}
+
+.main-progress-rank-tracker .main-progress-rank-tracker-info {
+    display: flex;
+    flex-direction: column;
+    font-weight: 800;
+    margin-left: 64px;
+    text-transform: uppercase
+}
+
+.main-progress-rank-tracker .main-progress-rank-tracker-info .main-progress-rank-tracker-description {
+    color: #f0e6d2;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .1em
+}
+
+.main-progress-rank-tracker .main-progress-rank-tracker-info .main-progress-rank-tracker-rank {
+    color: #c8aa6e;
+    font-size: 30px;
+    letter-spacing: .05em;
+    margin-top: -4px
+}
+
+.main-progress-rank-tracker .main-progress-rank-tracker-info .main-progress-rank-tracker-xp-display {
+    align-items: center;
+    display: flex;
+    font-size: 22px
+}
+
+.main-progress-rank-tracker .main-progress-rank-tracker-info .main-progress-rank-tracker-xp-display .main-progress-rank-tracker-xp-counter-icon {
+    background-image: url(/fe/lol-kiwi-hub/images/Superstar_Rank.png);
+    background-position: 50%;
+    background-size: cover;
+    height: 32px;
+    width: 32px
+}
+
+.main-progress-rank-tracker .main-progress-rank-tracker-info .main-progress-rank-tracker-xp-display .main-progress-rank-tracker-xp {
+    color: #c89b3c;
+    font-weight: 900;
+    margin-left: 10px;
+    margin-right: 6px
+}
+
+.main-progress-rank-tracker .main-progress-rank-tracker-info .main-progress-rank-tracker-xp-display .main-progress-rank-tracker-xp-required {
+    color: #a09b8c;
+    font-weight: 700
+}
+
+.main-progress-rank-tracker-rank-up-video-container {
+    pointer-events: none;
+    position: absolute;
+    top: -57px
+}
+
+.main-progress-rank-tracker-xp-info-icon {
+    background-image: url(/fe/lol-kiwi-hub/images/Info_Icon.png);
+    background-size: 100% 100%;
+    height: 20px;
+    margin-left: 10px;
+    width: 20px
+}
+
+.main-progress-rank-tracker-xp-info-tooltip {
+    color: #f0e6d2;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+    width: 200px
+}
+
+.main-progress-rank-tracker-xp-info-title {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .07em;
+    margin-bottom: 5px
+}
+
+.main-progress-rank-tracker-xp-info-text {
+    color: #a09b8c;
+    font-size: 14px;
+    line-height: 18px
+}
+
+.summary-page {
+    align-items: center;
+    background-image: url(/fe/lol-kiwi-hub/images/Summary_Page_BG.png);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    height: 640px;
+    justify-content: flex-end;
+    padding: 0 36px 50px 64px;
+    scroll-snap-align: start;
+    width: 100%
+}
+
+.summary-page .summary-page-groups {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 36px;
+    position: relative;
+    width: 100%
+}
+
+.summary-page-group-name {
+    font-family: var(--font-display)
+}
+
+.summary-page-group {
+    height: 295px;
+    position: relative;
+    width: 180px
+}
+
+.summary-page-group-wrapper {
+    align-items: center;
+    background-position: 50%;
+    border: 4px solid;
+    border-image: linear-gradient(180deg, #010a13, #000);
+    border-image-slice: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: relative
+}
+
+.summary-page-group.gold-tier .summary-page-group-wrapper {
+    border-image: linear-gradient(180deg, #785a28, #463714);
+    border-image-slice: 1
+}
+
+.summary-page-group.platinum-tier .summary-page-group-wrapper {
+    border-image: linear-gradient(180deg, #43727e, #30424a);
+    border-image-slice: 1
+}
+
+.summary-page-group-spacer {
+    height: 25px
+}
+
+.summary-page-group-name {
+    color: #f0e6d2;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase
+}
+
+.summary-page-group-gift-icon {
+    background-image: url(/fe/lol-kiwi-hub/images/Summary_Page_Gift_Icon.png);
+    background-position: 50%;
+    height: 32px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 32px
+}
+
+.summary-page-group-gift-icon-glow-container {
+    margin-left: -25px;
+    margin-top: -30px
+}
+
+.summary-page-group-locked-overlay {
+    align-items: center;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    height: 101%;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.summary-page-group-locked-icon {
+    background-image: url(/fe/lol-kiwi-hub/images/Lock_Icon.png);
+    background-size: cover;
+    height: 36px;
+    margin-top: -30%;
+    width: 36px
+}
+
+.summary-page-group-video-container {
+    left: -22px;
+    pointer-events: none;
+    position: absolute;
+    top: -20px
+}
+
+/*# sourceMappingURL=rcp-fe-lol-kiwi-hub.css.map*/

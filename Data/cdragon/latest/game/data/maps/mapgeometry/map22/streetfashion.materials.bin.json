@@ -67766,7 +67766,7 @@
         "objectPath": "Maps/Particles/TFT/Shared/TFT_Clickable_Indicator",
         "__type": "VfxSystemDefinitionData"
     },
-    "{10222647}": {
+    "Maps/MapGeometry/Map22/Chunks/StreetFashion/MapBehaviors_StreetFashion": {
         "items": {
             "{760f18d4}": {
                 "transform": [
@@ -68172,14 +68172,14 @@
                         "__type": "MapActionPlaySoundAtLocation"
                     },
                     {
-                        "{7c626308}": "TFT_BoardLevel",
-                        "{ec134322}": "TFT_BoardLevel_1T2",
+                        "SwitchGroup": "TFT_BoardLevel",
+                        "SwitchState": "TFT_BoardLevel_1T2",
                         "__type": "{31306588}"
                     },
                     {
                         "startTime": 4.0,
-                        "{7c626308}": "TFT_BoardLevel",
-                        "{ec134322}": "TFT_BoardLevel_2",
+                        "SwitchGroup": "TFT_BoardLevel",
+                        "SwitchState": "TFT_BoardLevel_2",
                         "__type": "{31306588}"
                     }
                 ],
@@ -68824,7 +68824,7 @@
         },
         "__type": "MapPlaceableContainer"
     },
-    "{1bd94e03}": {
+    "Maps/MapGeometry/Map22/Chunks/StreetFashion/Art_StreetFashion": {
         "items": {
             "{4a0b0c67}": null,
             "{d617e5e1}": null,
@@ -68867,7 +68867,7 @@
         },
         "__type": "MapPlaceableContainer"
     },
-    "{38f1e8de}": {
+    "Maps/MapGeometry/Map22/Chunks/StreetFashion/VFX_StreetFashion": {
         "items": {
             "{dc9af51e}": {
                 "transform": [
@@ -69348,7 +69348,7 @@
         },
         "__type": "MapPlaceableContainer"
     },
-    "{8178810a}": {
+    "Maps/MapGeometry/Map22/Chunks/StreetFashion/Design_Base": {
         "items": {
             "{f7e857de}": {
                 "transform": [
@@ -70380,7 +70380,7 @@
         },
         "__type": "MapPlaceableContainer"
     },
-    "{913f0066}": {
+    "Maps/MapGeometry/Map22/Chunks/StreetFashion/Lighting_StreetFashion": {
         "__type": "MapPlaceableContainer"
     },
     "{b05ef028}": {
@@ -70833,7 +70833,7 @@
         },
         "__type": "MapPlaceableContainer"
     },
-    "{bafa0058}": {
+    "Maps/MapGeometry/Map22/Chunks/StreetFashion/Audio_StreetFashion": {
         "items": {
             "{72858e70}": {
                 "transform": [
@@ -70902,7 +70902,7 @@
         },
         "__type": "MapPlaceableContainer"
     },
-    "{bfd7879f}": {
+    "Maps/MapGeometry/Map22/Chunks/StreetFashion/AnimProps_StreetFashion": {
         "items": {
             "{fac7d1df}": {
                 "transform": [
@@ -71488,10 +71488,10 @@
         },
         "__type": "MapPlaceableContainer"
     },
-    "{f8e957f0}": {
+    "Maps/MapGeometry/Map22/Chunks/StreetFashion/Skybox_StreetFashion": {
         "__type": "MapPlaceableContainer"
     },
-    "{fb80acac}": {
+    "Maps/MapGeometry/Map22/Chunks/StreetFashion/LightingVolume_StreetFashion": {
         "items": {
             "{dd2b6b09}": {
                 "transform": [
@@ -71758,16 +71758,16 @@
         "lowestWalkableHeight": -100.0,
         "MeshCombineRadius": 5000.0,
         "chunks": {
-            "{019eda48}": "{bfd7879f}",
-            "{ecad62dc}": "{1bd94e03}",
-            "{b343521b}": "{bafa0058}",
-            "Design_Base": "{8178810a}",
-            "{f31521cb}": "{913f0066}",
-            "{4b3fc866}": "{10222647}",
-            "{10cf8969}": "{f8e957f0}",
+            "AnimProps_StreetFashion": "Maps/MapGeometry/Map22/Chunks/StreetFashion/AnimProps_StreetFashion",
+            "Art_StreetFashion": "Maps/MapGeometry/Map22/Chunks/StreetFashion/Art_StreetFashion",
+            "Audio_StreetFashion": "Maps/MapGeometry/Map22/Chunks/StreetFashion/Audio_StreetFashion",
+            "Design_Base": "Maps/MapGeometry/Map22/Chunks/StreetFashion/Design_Base",
+            "Lighting_StreetFashion": "Maps/MapGeometry/Map22/Chunks/StreetFashion/Lighting_StreetFashion",
+            "MapBehaviors_StreetFashion": "Maps/MapGeometry/Map22/Chunks/StreetFashion/MapBehaviors_StreetFashion",
+            "Skybox_StreetFashion": "Maps/MapGeometry/Map22/Chunks/StreetFashion/Skybox_StreetFashion",
             "{a74536eb}": "{b2395d34}",
-            "{4fe5b3b5}": "{38f1e8de}",
-            "{bada5069}": "{fb80acac}",
+            "VFX_StreetFashion": "Maps/MapGeometry/Map22/Chunks/StreetFashion/VFX_StreetFashion",
+            "LightingVolume_StreetFashion": "Maps/MapGeometry/Map22/Chunks/StreetFashion/LightingVolume_StreetFashion",
             "{02f25f31}": "{3d8471fc}",
             "{50e7d683}": "{b05ef028}",
             "{49a7a667}": "{5dde8956}"
@@ -71900,20 +71900,20 @@
         "RegionGroups": [
             {
                 "groupName": "Music",
-                "__type": "{2bfb084c}"
+                "__type": "NavGridRegionGroupDefinition"
             },
             {
                 "groupName": "Vfx",
-                "{ec01928c}": true,
-                "__type": "{2bfb084c}"
+                "IsGameplayGroup": true,
+                "__type": "NavGridRegionGroupDefinition"
             },
             {
                 "groupName": "Ambiance",
-                "__type": "{2bfb084c}"
+                "__type": "NavGridRegionGroupDefinition"
             },
             {
                 "groupName": "GameplayArea",
-                "{ec01928c}": true,
+                "IsGameplayGroup": true,
                 "tags": [
                     {
                         "name": "Ground",
@@ -71923,7 +71923,7 @@
                             255,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Liquid",
@@ -71933,7 +71933,7 @@
                             0,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Foliage",
@@ -71943,7 +71943,7 @@
                             30,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Stone",
@@ -71953,7 +71953,7 @@
                             255,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Metal",
@@ -71963,7 +71963,7 @@
                             114,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Ice",
@@ -71973,7 +71973,7 @@
                             0,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Fire",
@@ -71983,7 +71983,7 @@
                             255,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Air",
@@ -71993,7 +71993,7 @@
                             160,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Magic",
@@ -72003,7 +72003,7 @@
                             255,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Custom10",
@@ -72013,7 +72013,7 @@
                             127,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Custom11",
@@ -72023,7 +72023,7 @@
                             255,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Custom12",
@@ -72033,7 +72033,7 @@
                             192,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Custom13",
@@ -72043,11 +72043,11 @@
                             255,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Custom14",
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Custom15",
@@ -72057,7 +72057,7 @@
                             0,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     },
                     {
                         "name": "Custom16",
@@ -72067,10 +72067,10 @@
                             0,
                             255
                         ],
-                        "__type": "{f6f4bb5f}"
+                        "__type": "NavGridRegionTagDefinition"
                     }
                 ],
-                "__type": "{2bfb084c}"
+                "__type": "NavGridRegionGroupDefinition"
             }
         ],
         "__type": "NavGridConfig"
@@ -72085,12 +72085,12 @@
                     0,
                     255
                 ],
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "Wall",
                 "flags": 2,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{54acfa09}",
@@ -72101,7 +72101,7 @@
                     255
                 ],
                 "flags": 66,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "Grass",
@@ -72112,7 +72112,7 @@
                     255
                 ],
                 "flags": 1,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{74036ad3}",
@@ -72123,7 +72123,7 @@
                     255
                 ],
                 "flags": 256,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{5e70f23d}",
@@ -72134,7 +72134,7 @@
                     255
                 ],
                 "flags": 4,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{0643baee}",
@@ -72145,7 +72145,7 @@
                     255
                 ],
                 "flags": 514,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{b0a72c1e}",
@@ -72156,7 +72156,7 @@
                     255
                 ],
                 "flags": 1088,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{9f421ace}",
@@ -72167,7 +72167,7 @@
                     255
                 ],
                 "flags": 2112,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{d4db86a6}",
@@ -72178,7 +72178,7 @@
                     255
                 ],
                 "flags": 1025,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{8e825d26}",
@@ -72189,7 +72189,7 @@
                     255
                 ],
                 "flags": 2049,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{6114e217}",
@@ -72200,7 +72200,7 @@
                     255
                 ],
                 "flags": 5184,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{9db5a967}",
@@ -72211,7 +72211,7 @@
                     255
                 ],
                 "flags": 6208,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             },
             {
                 "name": "{c7066f0d}",
@@ -72222,7 +72222,7 @@
                     255
                 ],
                 "flags": 3,
-                "__type": "{d82714cc}"
+                "__type": "NavGridTerrainTagDefinition"
             }
         ],
         "__type": "NavGridTerrainConfig"

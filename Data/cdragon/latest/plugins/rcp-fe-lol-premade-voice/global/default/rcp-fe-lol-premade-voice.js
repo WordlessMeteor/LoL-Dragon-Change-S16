@@ -3056,7 +3056,22 @@
                     return super.getComponentFolderPath(), "mic-test-button"
                 }
                 _clickHandler() {
-                    this._inVoiceChannel || (this._testIsRunning ? a.default.stopMicTest() : a.default.startMicTest())
+                    this._inVoiceChannel || (this._testIsRunning ? a.default.stopMicTest() : a.default.checkMicrophonePermissions().then((e => {
+                        e ? a.default.startMicTest() : this._showMicrophonePermissionsModal()
+                    })))
+                }
+                _showMicrophonePermissionsModal() {
+                    const e = r.tra.get("voice_microphone_permissions_modal_header"),
+                        t = r.tra.get("voice_microphone_permissions_modal_body"),
+                        n = {
+                            type: "DialogAlert",
+                            data: {
+                                contents: r.TemplateHelper.contentBlockDialog(e, t, "dialog-small", "voice-microphone-permissions-alert"),
+                                okText: r.tra.get("voice_microphone_permissions_modal_confirm")
+                            },
+                            show: !0
+                        };
+                    r.ModalManager.add(n)
                 }
                 _handleVoiceTest(e) {
                     const t = e.isLoopbackEnabled !== this._testIsRunning;
@@ -3162,8 +3177,9 @@
                     }
                     if (n && (n.style.display = "none"), !e) return void(t.style.display = "none");
                     t.style.display = "";
-                    const i = e.charAt(0).toUpperCase() + e.slice(1);
-                    this.addInnerHtml(i, this._selectors.key)
+                    const i = e.replace(/^Button\s+(\d+)$/i, "MB$1"),
+                        a = i.charAt(0).toUpperCase() + i.slice(1);
+                    this.addInnerHtml(a, this._selectors.key)
                 }
             }
             a.tagName = "lol-parties-key-bind-indicator";

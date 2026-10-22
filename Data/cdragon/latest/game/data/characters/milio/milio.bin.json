@@ -751,20 +751,6 @@
                     "__type": "SpellDataValue"
                 }
             ],
-            "{f9c2333e}": {
-                "cherry": {
-                    "value": [
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                }
-            },
             "mSpellCalculations": {
                 "Damage": {
                     "mFormulaParts": [
@@ -792,6 +778,26 @@
                     ],
                     "mDisplayAsPercent": true,
                     "__type": "GameCalculation"
+                }
+            },
+            "{66185ec4}": {
+                "cherry": {
+                    "Calculations": {
+                        "Damage": {
+                            "mFormulaParts": [
+                                {
+                                    "mDataValue": "FallDamage",
+                                    "__type": "NamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mCoefficient": 2.0,
+                                    "__type": "StatByCoefficientCalculationPart"
+                                }
+                            ],
+                            "__type": "GameCalculation"
+                        }
+                    },
+                    "__type": "{4acf67d2}"
                 }
             },
             "mAnimationName": "Spell1",
@@ -1620,6 +1626,18 @@
                         100.0,
                         100.0,
                         100.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                "cherry": {
+                    "value": [
+                        180.0,
+                        180.0,
+                        150.0,
+                        130.0,
+                        130.0,
+                        130.0,
+                        130.0
                     ],
                     "__type": "SpellEffectAmount"
                 }

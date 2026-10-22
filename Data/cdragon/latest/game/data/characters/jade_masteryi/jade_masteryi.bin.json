@@ -21,15 +21,15 @@
         "mRootSpell": "Characters/Jade_MasterYi/Spells/Jade_MasterYiAlphaStrikeAbility/Jade_MasterYiAlphaStrike",
         "mChildSpells": [
             "Characters/Jade_MasterYi/Spells/Jade_MasterYiAlphaStrikeAbility/Jade_MasterYiAlphaStrike",
-            "{e7b05216}",
-            "{0a658535}"
+            "Characters/Jade_MasterYi/Spells/Jade_MasterYiAlphaStrikeAbility/Jade_MasterYiAlphaStrikeTeleport",
+            "Characters/Jade_MasterYi/Spells/Jade_MasterYiAlphaStrikeAbility/Jade_MasterYiAlphaStrikeBounce"
         ],
         "mName": "Jade_MasterYiAlphaStrikeAbility",
         "__type": "AbilityObject"
     },
-    "{0a658535}": {
+    "Characters/Jade_MasterYi/Spells/Jade_MasterYiAlphaStrikeAbility/Jade_MasterYiAlphaStrikeBounce": {
         "ObjectName": "Jade_MasterYiAlphaStrikeBounce",
-        "objectPath": "{0a658535}",
+        "objectPath": "Characters/Jade_MasterYi/Spells/Jade_MasterYiAlphaStrikeAbility/Jade_MasterYiAlphaStrikeBounce",
         "mScriptName": "Jade_MasterYiAlphaStrikeBounce",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -568,9 +568,9 @@
         },
         "__type": "SpellObject"
     },
-    "{e7b05216}": {
+    "Characters/Jade_MasterYi/Spells/Jade_MasterYiAlphaStrikeAbility/Jade_MasterYiAlphaStrikeTeleport": {
         "ObjectName": "Jade_MasterYiAlphaStrikeTeleport",
-        "objectPath": "{e7b05216}",
+        "objectPath": "Characters/Jade_MasterYi/Spells/Jade_MasterYiAlphaStrikeAbility/Jade_MasterYiAlphaStrikeTeleport",
         "mScriptName": "Jade_MasterYiAlphaStrikeTeleport",
         "mSpell": {
             "mAffectsTypeFlags": 15567,
@@ -1016,16 +1016,16 @@
         "mRootSpell": "Characters/Jade_MasterYi/Spells/Jade_MasterYiWujuStyleAbility/Jade_MasterYiWujuStyle",
         "mChildSpells": [
             "Characters/Jade_MasterYi/Spells/Jade_MasterYiWujuStyleAbility/Jade_MasterYiWujuStyle",
-            "{b68c4310}",
-            "{3531a899}",
-            "{60c0292c}"
+            "Characters/Jade_MasterYi/Spells/Jade_MasterYiWujuStyleAbility/Jade_MasterYiWujuStyleSuperChargedVisual",
+            "Characters/Jade_MasterYi/Spells/Jade_MasterYiWujuStyleAbility/Jade_MasterYiWujuStyleVisual",
+            "Characters/Jade_MasterYi/Spells/Jade_MasterYiWujuStyleAbility/Jade_MasterYiWujuStyleSuperCharged"
         ],
         "mName": "Jade_MasterYiWujuStyleAbility",
         "__type": "AbilityObject"
     },
-    "{3531a899}": {
+    "Characters/Jade_MasterYi/Spells/Jade_MasterYiWujuStyleAbility/Jade_MasterYiWujuStyleVisual": {
         "ObjectName": "Jade_MasterYiWujuStyleVisual",
-        "objectPath": "{3531a899}",
+        "objectPath": "Characters/Jade_MasterYi/Spells/Jade_MasterYiWujuStyleAbility/Jade_MasterYiWujuStyleVisual",
         "mScriptName": "Jade_MasterYiWujuStyleVisual",
         "mSpell": {
             "mImgIconName": [
@@ -1047,9 +1047,9 @@
         },
         "__type": "SpellObject"
     },
-    "{60c0292c}": {
+    "Characters/Jade_MasterYi/Spells/Jade_MasterYiWujuStyleAbility/Jade_MasterYiWujuStyleSuperCharged": {
         "ObjectName": "Jade_MasterYiWujuStyleSuperCharged",
-        "objectPath": "{60c0292c}",
+        "objectPath": "Characters/Jade_MasterYi/Spells/Jade_MasterYiWujuStyleAbility/Jade_MasterYiWujuStyleSuperCharged",
         "mScriptName": "Jade_MasterYiWujuStyleSuperCharged",
         "mSpell": {
             "mImgIconName": [
@@ -1288,9 +1288,9 @@
         },
         "__type": "SpellObject"
     },
-    "{b68c4310}": {
+    "Characters/Jade_MasterYi/Spells/Jade_MasterYiWujuStyleAbility/Jade_MasterYiWujuStyleSuperChargedVisual": {
         "ObjectName": "Jade_MasterYiWujuStyleSuperChargedVisual",
-        "objectPath": "{b68c4310}",
+        "objectPath": "Characters/Jade_MasterYi/Spells/Jade_MasterYiWujuStyleAbility/Jade_MasterYiWujuStyleSuperChargedVisual",
         "mScriptName": "Jade_MasterYiWujuStyleSuperChargedVisual",
         "mSpell": {
             "mImgIconName": [
@@ -1478,6 +1478,15 @@
             ],
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/MasterYi_DoubleStrike.dds"
+            ],
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Jade_MasterYi/Spells/Jade_MasterYiPassiveAbility/Jade_MasterYiPassive",
+                    "mWhenToAddSpell": 0,
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
             ],
             "castRange": [
                 0.0,
@@ -1977,6 +1986,15 @@
         "mScriptName": "Jade_MasterYiProAsHeck",
         "mSpell": {
             "ImgIconPath": "assets/ux/jade/s3icons/samesized/masteryi_highlander.tex",
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Jade_MasterYi/Spells/Jade_MasterYiProAsHeck",
+                    "mWhenToAddSpell": 0,
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "castRange": [
                 0.0,
                 0.0,
@@ -3577,8 +3595,8 @@
         ],
         "extraSpellsList": [
             "Characters/Jade_MasterYi/Spells/Jade_MasterYiPassiveAbility/Jade_MasterYiDoubleStrike",
-            "{e7b05216}",
-            "{0a658535}",
+            "Characters/Jade_MasterYi/Spells/Jade_MasterYiAlphaStrikeAbility/Jade_MasterYiAlphaStrikeTeleport",
+            "Characters/Jade_MasterYi/Spells/Jade_MasterYiAlphaStrikeAbility/Jade_MasterYiAlphaStrikeBounce",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",

@@ -866,7 +866,7 @@
         },
         "__type": "SpellObject"
     },
-    "{3ef89ff2}": {
+    "Characters/Jade_Pantheon/Spells/Jade_PantheonPassiveAbility": {
         "mRootSpell": "Characters/Jade_Pantheon/Spells/Jade_PantheonPassiveAbility/Jade_PantheonPassive",
         "mChildSpells": [
             "Characters/Jade_Pantheon/Spells/Jade_PantheonPassiveAbility/Jade_PantheonPassive"
@@ -1070,6 +1070,15 @@
                 ],
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "Characters/Jade_Pantheon/Spells/Jade_PantheonEAbility/Jade_PantheonECritPassive",
+                    "mRemoveWhenOnCooldown": false,
+                    "mRemoveWithSpell": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mCantCancelWhileWindingUp": true,
             "useAnimatorFramerate": true,
             "bHaveHitEffect": true,
@@ -3301,7 +3310,7 @@
         ],
         "mAbilities": [
             "Characters/Jade_Pantheon/Spells/Jade_PantheonEAbility",
-            "{3ef89ff2}",
+            "Characters/Jade_Pantheon/Spells/Jade_PantheonPassiveAbility",
             "Characters/Jade_Pantheon/Spells/Jade_PantheonQAbility",
             "Characters/Jade_Pantheon/Spells/Jade_PantheonRAbility",
             "Characters/Jade_Pantheon/Spells/Jade_PantheonWAbility"
@@ -3317,6 +3326,7 @@
             "None",
             "Jade_PantheonBasicAttack2"
         ],
+        "outlineBBoxExpansion": 40.0,
         "selectionHeight": 175.0,
         "selectionRadius": 125.0,
         "pathfindingCollisionRadius": 35.0,

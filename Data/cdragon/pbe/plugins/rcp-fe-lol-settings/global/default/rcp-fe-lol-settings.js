@@ -3244,7 +3244,19 @@
                         dataType: i
                     }
                 },
-                m = [{
+                m = {
+                    slider: {
+                        propertyName: "PlayerVoiceVolume",
+                        dataSection: s,
+                        dataType: o
+                    },
+                    checkbox: {
+                        propertyName: "PlayerVoiceMute",
+                        dataSection: s,
+                        dataType: i
+                    }
+                },
+                u = [{
                     slider: {
                         propertyName: "MusicVolume",
                         dataSection: s,
@@ -3322,32 +3334,33 @@
                         dataType: i
                     }
                 }],
-                u = {
+                d = {
                     propertyName: "EnableAudio",
                     dataSection: a,
                     reverse: !0,
                     dataType: i,
                     defaultValue: !0
                 },
-                d = {
+                p = {
                     propertyName: "ThemeMusic",
                     dataSection: a,
                     dataType: c,
                     defaultValue: 0
                 };
-            var p = l.Ember.Component.extend({
+            var g = l.Ember.Component.extend({
                 classNames: ["lol-settings-game-sound-content-component"],
                 persistenceService: l.Ember.inject.service("persistence"),
+                voiceService: l.Ember.inject.service("voice"),
                 init() {
-                    this._super(...arguments), this._registerSliderAndCheckbox(r), l.lodash.forEach(m, (e => {
+                    this._super(...arguments), this._registerSliderAndCheckbox(r), this._registerSliderAndCheckbox(m), l.lodash.forEach(u, (e => {
                         l.logger.trace("register property " + e.slider.propertyName), this._registerSliderAndCheckbox(e)
-                    })), this._registerComputedProperty(u), this.get("handleComponentInitialized") && this.get("handleComponentInitialized")(this)
+                    })), this._registerComputedProperty(d), this.get("handleComponentInitialized") && this.get("handleComponentInitialized")(this)
                 },
                 resetToDefault() {
                     const e = {};
-                    this._resetSlider(r.slider, e), this._resetCheckbox(r.checkbox, e), m.forEach((t => {
+                    this._resetSlider(r.slider, e), this._resetCheckbox(r.checkbox, e), this._resetSlider(m.slider, e), this._resetCheckbox(m.checkbox, e), u.forEach((t => {
                         this._resetSlider(t.slider, e), this._resetCheckbox(t.checkbox, e)
-                    })), this._resetCheckbox(u, e), this._resetDropdown(d, e), this._saveGameSettings(e)
+                    })), this._resetCheckbox(d, e), this._resetDropdown(p, e), this._saveGameSettings(e)
                 },
                 _resetSlider(e, t) {
                     const {
@@ -3395,15 +3408,43 @@
                     })))
                 },
                 _bindEventListeners: l.Ember.on("didInsertElement", (function() {
-                    this._bindMasterVolumeSliderAndCheckboxListeners(r), l.lodash.forEach(m, (e => {
+                    this._bindMasterVolumeSliderAndCheckboxListeners(r), this._bindPlayerVoiceVolumeSliderAndCheckboxListeners(m), l.lodash.forEach(u, (e => {
                         this._bindSubVolumeSliderAndCheckboxListeners(e)
-                    })), this._bindDisableAllAudioCheckboxListener(u), this._bindSRThemeMusicDropdown(d)
+                    })), this._bindDisableAllAudioCheckboxListener(d), this._bindSRThemeMusicDropdown(p)
                 })),
                 _bindMasterVolumeSliderAndCheckboxListeners(e) {
                     this._bindSliderListener(e), this._bindMasterVolumeCheckboxListener(e.checkbox)
                 },
                 _bindSubVolumeSliderAndCheckboxListeners(e) {
                     this._bindSliderListener(e), this._bindSubVolumeCheckboxListener(e.checkbox)
+                },
+                _bindPlayerVoiceVolumeSliderAndCheckboxListeners(e) {
+                    const t = e.slider,
+                        n = e.checkbox,
+                        s = t.propertyName,
+                        a = n.propertyName,
+                        o = this._getCurrentValueKey(s),
+                        i = this._getCurrentValueKey(a),
+                        c = this.$(`lol-uikit-slider[for='${s}']`)[0],
+                        r = this.$(`input[name='${a}']`)[0],
+                        m = this.$(`label[for='${a}'] > span`)[0];
+                    this.addObserver(i, this, (() => {
+                        this.get(i) ? c.setAttribute("disabled", "") : c.removeAttribute("disabled")
+                    })), this.addObserver(a, this, (() => {
+                        r.checked = this.get(a), l.logger.trace(`update ${a} value to ${this.get(a)} by property update.`)
+                    })), c.addEventListener("change", (e => {
+                        void 0 !== e.value && (this.set(o, e.value), this.get(i) || this.get("voiceService").setPlayerVolume(e.value))
+                    })), c.addEventListener("slideEnd", (e => {
+                        void 0 !== e.value && (this.set(o, e.value), this._saveProperty(t, e.value))
+                    })), m.addEventListener("click", (() => {
+                        r.checked = !r.checked;
+                        const {
+                            checked: e
+                        } = r;
+                        this.set(i, e);
+                        const t = this._getEffectivePlayerVoiceVolume(e, this.get(o));
+                        this.get("voiceService").setPlayerVolume(t), this._saveProperty(n, e)
+                    })), r.checked = this.get(a), this.get(i) && c.setAttribute("disabled", "")
                 },
                 _bindSliderListener(e) {
                     const t = e.slider.propertyName,
@@ -3433,7 +3474,7 @@
                         } = s;
                         l.logger.trace(`update ${t} value to ${a} by clicking.`), this.set(n, a);
                         const o = {};
-                        this._appendSaveData(o, e, a), m.forEach((e => {
+                        this._appendSaveData(o, e, a), u.forEach((e => {
                             const {
                                 propertyName: t
                             } = e.checkbox, n = this._getCurrentValueKey(t), l = this.$(`input[name='${t}']`)[0];
@@ -3487,7 +3528,7 @@
                         t = this._getCurrentValueKey(e),
                         n = this.$(`input[name='${e}']`)[0];
                     let s = !0;
-                    m.forEach((e => {
+                    u.forEach((e => {
                         this.$(`input[name='${e.checkbox.propertyName}']`)[0].checked || (s = !1)
                     })), (s && !n.checked || !s && n.checked) && (n.checked = !n.checked, this.set(t, n.checked), this._saveProperty(r.checkbox, n.checked), l.logger.trace(`Update overall volume to ${n.checked}, because should disable is ${s}`))
                 },
@@ -3503,6 +3544,7 @@
                 _appendSaveData(e, t, n) {
                     void 0 === e[t.dataSection] && (e[t.dataSection] = {}), e[t.dataSection][t.propertyName] = this._getSaveValue(n, t.dataType)
                 },
+                _getEffectivePlayerVoiceVolume: (e, t) => e ? 0 : t,
                 _getSaveValue: (e, t) => t === i ? e ? 1 : 0 : t === o ? e / 100 : t === c ? e : void l.logger.error(`Unknown data type ${t} with value ${e}`),
                 _getDisplayValue: (e, t) => t === i ? l.lodash.isBoolean(e) ? e : 0 !== e : t === o ? parseInt(100 * e) : void l.logger.error(`Unknown data type ${t} with value ${e}`),
                 _getGameSettingsKey: (e, t) => `gameSettings.${e}.${t}`,
@@ -3512,7 +3554,7 @@
                     this.get("persistenceService").saveGameSettings(e)
                 }
             });
-            t.default = p
+            t.default = g
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -5633,7 +5675,7 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.default = void 0, t.isVoiceFontHardwareUnsupported = v;
+            }), t.default = void 0, t.isVoiceFontHardwareUnsupported = T;
             var l = n(1);
             const s = "/lol-premade-voice",
                 a = s + "/v1/capturedevices",
@@ -5641,21 +5683,22 @@
                 i = s + "/v1/mic-test",
                 c = s + "/v1/participants",
                 r = s + "/v1/self/voiceFont",
-                m = s + "/v1/session",
-                u = "/lol-team-voice/v1/session",
-                d = "/lol-team-voice/v1/voice-fonts",
-                p = "/lol-team-voice/v1/voice-fonts/status",
-                g = "/lol-team-voice/v1/voice-fonts/hardware-supported",
-                _ = "/lol-settings/v2/account/LCUPreferences/lol-premade-voice",
-                h = "/lol-client-config/v3/client-config/lol.client_settings.team_voice.enabled",
-                E = "/lol-client-config/v3/client-config/lol.client_settings.voice_skins.enabled",
-                S = "/lol-parental-controls/v1/status",
-                f = l.dataBinding.bindTo(l.socket);
+                m = s + "/v1/self/playerVolume",
+                u = s + "/v1/session",
+                d = "/lol-team-voice/v1/session",
+                p = "/lol-team-voice/v1/voice-fonts",
+                g = "/lol-team-voice/v1/voice-fonts/status",
+                _ = "/lol-team-voice/v1/voice-fonts/hardware-supported",
+                h = "/lol-settings/v2/account/LCUPreferences/lol-premade-voice",
+                E = "/lol-client-config/v3/client-config/lol.client_settings.team_voice.enabled",
+                S = "/lol-client-config/v3/client-config/lol.client_settings.voice_skins.enabled",
+                f = "/lol-parental-controls/v1/status",
+                v = l.dataBinding.bindTo(l.socket);
 
-            function v(e) {
+            function T(e) {
                 return !1 === e
             }
-            var T = l.Ember.Service.extend({
+            var b = l.Ember.Service.extend({
                 captureDevices: void 0,
                 noiseSuppressionAlgorithm: void 0,
                 teamVoicePluginEnabled: !1,
@@ -5675,69 +5718,70 @@
                 teamVoiceSessionActive: !1,
                 voiceSessionActive: l.Ember.computed.or("partyVoiceSessionActive", "teamVoiceSessionActive"),
                 init() {
-                    this._super(...arguments), this.set("voiceFonts", []), f.observe(g, this, (e => {
+                    this._super(...arguments), this.set("voiceFonts", []), v.observe(_, this, (e => {
                         this.setProperties({
                             voiceFontHardwareSupportKnown: "boolean" == typeof e,
-                            voiceFontHardwareUnsupported: v(e)
+                            voiceFontHardwareUnsupported: T(e)
                         })
-                    })), f.observe(d, this, (e => {
+                    })), v.observe(p, this, (e => {
                         this.set("voiceFonts", Array.isArray(e) ? e : [])
-                    })), f.observe(p, this, (e => {
+                    })), v.observe(g, this, (e => {
                         this.set("voiceFontsStatus", e)
-                    })), f.observe(a, this, (function(e) {
+                    })), v.observe(a, this, (function(e) {
                         this.set("captureDevices", e)
-                    })), f.observe(o, this, (function(e) {
+                    })), v.observe(o, this, (function(e) {
                         this.setProperties({
                             noiseSuppressionAlgorithm: e.noiseSuppressionAlgorithm,
                             selectedVoiceFontId: e.voiceFontId || "",
                             pttActive: Boolean(e.pttActive),
                             localMicMuted: Boolean(e.localMicMuted)
                         })
-                    })), f.observe(i, this, (function(e) {
+                    })), v.observe(i, this, (function(e) {
                         this.setProperties({
                             voiceSkinPreviewActive: Boolean(e && e.isLoopbackEnabled),
                             voiceSkinPreviewMicEnergy: e && e.micEnergy || 0
                         })
-                    })), f.observe(c, this, (function(e) {
+                    })), v.observe(c, this, (function(e) {
                         this.set("partyVoiceSessionActive", Array.isArray(e) && e.length > 0)
-                    })), f.observe(u, this, (function(e) {
+                    })), v.observe(d, this, (function(e) {
                         this.set("teamVoiceSessionActive", Boolean(e && e.participants && e.participants.length))
-                    })), f.observe(_, this, (function(e) {
+                    })), v.observe(h, this, (function(e) {
                         const t = e && e.data || {},
                             n = t.voiceFontEnabledForParty ? "partyAndTeam" : t.voiceFontEnabledForTeam ? "team" : "noOne";
                         this.set("voiceFontAudience", n)
-                    })), f.observe(h, this, (function(e) {
+                    })), v.observe(E, this, (function(e) {
                         this.set("teamVoicePluginEnabled", e || !1)
-                    })), f.observe(E, this, (e => {
+                    })), v.observe(S, this, (e => {
                         this.set("voiceSkinsEnabled", Boolean(e))
-                    })), f.observe(S, this, (e => {
+                    })), v.observe(f, this, (e => {
                         this.set("isVoiceChatRestricted", e && e.enabled && e.isVoiceChatRestricted)
                     }))
                 },
-                setVoiceFont: e => f.put(r, e),
-                startVoiceSkinPreview: () => f.post(i),
-                stopVoiceSkinPreview: () => f.delete(i),
+                setVoiceFont: e => v.put(r, e),
+                setPlayerVolume: e => v.put(m, e),
+                startVoiceSkinPreview: () => v.post(i),
+                stopVoiceSkinPreview: () => v.delete(i),
                 refreshVoiceSkinPreview() {
-                    return f.get(i, {
+                    return v.get(i, {
                         skipCache: !0
                     }).then((e => {
                         this.set("voiceSkinPreviewActive", Boolean(e && e.isLoopbackEnabled))
                     }))
                 },
                 setVoiceFontEnabledForSessions(e, t) {
-                    const n = () => f.put(m, e),
-                        l = () => f.put(u, t);
+                    const n = () => v.put(u, e),
+                        l = () => v.put(d, t);
                     return e ? l().then(n) : n().then(l)
                 },
                 isPushToTalkAvailable(e) {
                     const t = e ? 1 : 0;
-                    return f.post(s + "/v1/push-to-talk/check-available", t)
+                    return v.post(s + "/v1/push-to-talk/check-available", t)
                 },
                 willDestroy() {
-                    this._super(...arguments), f.unobserve(a, this), f.unobserve(o, this), f.unobserve(i, this), f.unobserve(c, this), f.unobserve(u, this), f.unobserve(_, this), f.unobserve(h, this), f.unobserve(E, this), f.unobserve(S, this), f.unobserve(d, this), f.unobserve(p, this), f.unobserve(g, this)
+                    this._super(...arguments), v.unobserve(a, this), v.unobserve(o, this), v.unobserve(i, this), v.unobserve(c, this), v.unobserve(d, this), v.unobserve(h, this), v.unobserve(E, this), v.unobserve(S, this), v.unobserve(f, this), v.unobserve(p, this), v.unobserve(g, this), v.unobserve(_, this)
                 }
             });
-            t.default = T
+            t.default = b
         }, (e, t, n) => {
             const l = n(1).Ember;
             e.exports = l.HTMLBars.template({
@@ -5951,8 +5995,8 @@
         }, (e, t, n) => {
             const l = n(1).Ember;
             e.exports = l.HTMLBars.template({
-                id: "RNVEKn8y",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\game-sound-content.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\game-sound-content.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_MASTER_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["MasterVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","MasterVolume"],["dynamic-attr","value",["concat",[["unknown",["MasterVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","MasterMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","MasterMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_MUSIC_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["MusicVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","MusicVolume"],["dynamic-attr","value",["concat",[["unknown",["MusicVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","MusicMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","MusicMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_ANNOUNCER_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["AnnouncerVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","AnnouncerVolume"],["dynamic-attr","value",["concat",[["unknown",["AnnouncerVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","AnnouncerMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","AnnouncerMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_VOICE_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["VoiceVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","VoiceVolume"],["dynamic-attr","value",["concat",[["unknown",["VoiceVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","VoiceMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","VoiceMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_FX_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["SfxVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","SfxVolume"],["dynamic-attr","value",["concat",[["unknown",["SfxVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","SfxMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","SfxMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_NOTIFICATIONS_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["NotificationsVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","NotificationsVolume"],["dynamic-attr","value",["concat",[["unknown",["NotificationsVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","NotificationsMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","NotificationsMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_AMBIENCE_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["AmbienceVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","AmbienceVolume"],["dynamic-attr","value",["concat",[["unknown",["AmbienceVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","AmbienceMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","AmbienceMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_PINGS_VOLUME"]],false],["text",":\\n    "],["append",["unknown",["PingsVolumeCurrentValue"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","PingsVolume"],["dynamic-attr","value",["concat",[["unknown",["PingsVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n  "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","PingsMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","for","PingsMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-dropdown-item lol-settings-ingame-row"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-dropdown-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_SR_THEME_MUSIC_TITLE"]],false],["close-element"],["text","\\n  "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","lol-settings-ingame-dropdown"],["static-attr","id","ThemeMusic"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","value","0"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_SR_THEME_MUSIC_UPDATED"]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","value","1"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_SR_THEME_MUSIC_CLASSIC"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-checkbox lol-settings-ingame-row"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-video-checkbox"],["static-attr","name","EnableAudio"],["flush-element"],["text","\\n    "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","EnableAudio"],["flush-element"],["close-element"],["text","\\n    "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","name","EnableAudio"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_DISABLE_SOUND_LABEL"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","label",[]],["static-attr","class","lol-settings-ingame-sound-description-text"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_DISABLE_SOUND_DESC"]],false],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "XPiu4q1k",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\components\\\\game-sound-content.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\components\\\\game-sound-content.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-section"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-section-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_VOICE_CHAT_TITLE"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row lol-settings-ingame-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_PLAYER_VOICE_VOLUME"]],false],["text",":\\n      "],["append",["unknown",["PlayerVoiceVolumeCurrentValue"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","PlayerVoiceVolume"],["dynamic-attr","value",["concat",[["unknown",["PlayerVoiceVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","PlayerVoiceMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n    "],["open-element","label",[]],["static-attr","for","PlayerVoiceMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-section"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-section-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_GAME_AUDIO_TITLE"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_MASTER_VOLUME"]],false],["text",":\\n      "],["append",["unknown",["MasterVolumeCurrentValue"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","MasterVolume"],["dynamic-attr","value",["concat",[["unknown",["MasterVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","MasterMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n    "],["open-element","label",[]],["static-attr","for","MasterMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_MUSIC_VOLUME"]],false],["text",":\\n      "],["append",["unknown",["MusicVolumeCurrentValue"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","MusicVolume"],["dynamic-attr","value",["concat",[["unknown",["MusicVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","MusicMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n    "],["open-element","label",[]],["static-attr","for","MusicMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_ANNOUNCER_VOLUME"]],false],["text",":\\n      "],["append",["unknown",["AnnouncerVolumeCurrentValue"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","AnnouncerVolume"],["dynamic-attr","value",["concat",[["unknown",["AnnouncerVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","AnnouncerMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n    "],["open-element","label",[]],["static-attr","for","AnnouncerMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_VOICE_VOLUME"]],false],["text",":\\n      "],["append",["unknown",["VoiceVolumeCurrentValue"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","VoiceVolume"],["dynamic-attr","value",["concat",[["unknown",["VoiceVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","VoiceMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n    "],["open-element","label",[]],["static-attr","for","VoiceMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_FX_VOLUME"]],false],["text",":\\n      "],["append",["unknown",["SfxVolumeCurrentValue"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","SfxVolume"],["dynamic-attr","value",["concat",[["unknown",["SfxVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","SfxMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n    "],["open-element","label",[]],["static-attr","for","SfxMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_NOTIFICATIONS_VOLUME"]],false],["text",":\\n      "],["append",["unknown",["NotificationsVolumeCurrentValue"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","NotificationsVolume"],["dynamic-attr","value",["concat",[["unknown",["NotificationsVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","NotificationsMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n    "],["open-element","label",[]],["static-attr","for","NotificationsMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_AMBIENCE_VOLUME"]],false],["text",":\\n      "],["append",["unknown",["AmbienceVolumeCurrentValue"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","AmbienceVolume"],["dynamic-attr","value",["concat",[["unknown",["AmbienceVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","AmbienceMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n    "],["open-element","label",[]],["static-attr","for","AmbienceMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_PINGS_VOLUME"]],false],["text",":\\n      "],["append",["unknown",["PingsVolumeCurrentValue"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-slider",[]],["static-attr","class","lol-settings-ingame-sound-slider"],["static-attr","for","PingsVolume"],["dynamic-attr","value",["concat",[["unknown",["PingsVolume"]]]]],["static-attr","percentage",""],["flush-element"],["close-element"],["text","\\n    "],["open-element","input",[]],["static-attr","type","checkbox"],["static-attr","name","PingsMute"],["static-attr","class","lol-settings-ingame-sound-mutebutton"],["flush-element"],["close-element"],["text","\\n    "],["open-element","label",[]],["static-attr","for","PingsMute"],["flush-element"],["open-element","span",[]],["flush-element"],["close-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-dropdown-item lol-settings-ingame-row"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-dropdown-title"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_SR_THEME_MUSIC_TITLE"]],false],["close-element"],["text","\\n    "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","lol-settings-ingame-dropdown"],["static-attr","id","ThemeMusic"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","value","0"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_SR_THEME_MUSIC_UPDATED"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","value","1"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_SR_THEME_MUSIC_CLASSIC"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-settings-ingame-sound-checkbox lol-settings-ingame-row"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-checkbox lol-settings-video-checkbox"],["static-attr","name","EnableAudio"],["flush-element"],["text","\\n      "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","EnableAudio"],["flush-element"],["close-element"],["text","\\n      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","name","EnableAudio"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_DISABLE_SOUND_LABEL"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","label",[]],["static-attr","class","lol-settings-ingame-sound-description-text"],["flush-element"],["append",["unknown",["tra","LOL_SETTINGS_INGAME_SOUND_DISABLE_SOUND_DESC"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {

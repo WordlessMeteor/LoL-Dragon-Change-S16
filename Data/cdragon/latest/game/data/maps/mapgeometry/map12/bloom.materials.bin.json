@@ -15117,6 +15117,98 @@
         ],
         "__type": "StaticMaterialDef"
     },
+    "{372f8940}": {
+        "name": "{f7b4584d5faa7277}",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "{1590d84ec79f11e3}",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TintColor",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{38154ec9}": {
+        "name": "{59617351e3337d12}",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "GlowTexture",
+                "texturePath": "{e662a19904f88b33}",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Color_Mult",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Mult",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/Env_Glow",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "writeMask": 15,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
     "Maps/KitPieces/SRS/Bloom/Materials/Default/Bloom_Kit_Statue_A_MAT": {
         "name": "Maps/KitPieces/SRS/Bloom/Materials/Default/Bloom_Kit_Statue_A_MAT",
         "type": 0,
@@ -98402,6 +98494,349 @@
         "objectPath": "Maps/Shipping/Map12/Particles/Bloom/Bloom_Flying_Petal_Chaos",
         "__type": "VfxSystemDefinitionData"
     },
+    "{37f8063b}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "Spotlight",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        120.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveRay"
+                },
+                "falloffTexture": "ASSETS/Maps/Particles/Kiwi/DefaultFalloff_05.tex",
+                "particleColorTexture": "ASSETS/Maps/Particles/Kiwi/DefaultColorOverlifetime_01.tex",
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.8039215803146362,
+                        0.5647059082984924,
+                        1.0,
+                        0.4000000059604645
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 12,
+                "alphaRef": 0,
+                "softParticleParams": {
+                    "deltaIn": 50.0,
+                    "{3bf176bc}": 2,
+                    "__type": "VfxSoftParticleDefinitionData"
+                },
+                "particleIsLocalOrientation": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        400.0,
+                        600.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.05000000074505806,
+                            0.10000000149011612,
+                            0.15000000596046448,
+                            0.20000000298023224,
+                            0.30000001192092896,
+                            0.3499999940395355,
+                            0.4000000059604645,
+                            0.5,
+                            0.550000011920929,
+                            0.6000000238418579
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/Kiwi/Base_common_light_rays_01.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 4.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "Spotlight6",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "falloffTexture": "ASSETS/Maps/Particles/Kiwi/DefaultFalloff_05.tex",
+                "particleColorTexture": "ASSETS/Maps/Particles/Kiwi/DefaultColorOverlifetime_01.tex",
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.8235294222831726,
+                        0.6470588445663452,
+                        1.0,
+                        0.3490196168422699
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 99,
+                "alphaRef": 0,
+                "softParticleParams": {
+                    "deltaIn": 50.0,
+                    "{3bf176bc}": 2,
+                    "__type": "VfxSoftParticleDefinitionData"
+                },
+                "{cb13aff1}": -5.0,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        120.0,
+                        850.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.05000000074505806,
+                            0.10000000149011612,
+                            0.15000000596046448,
+                            0.20000000298023224,
+                            0.30000001192092896,
+                            0.3499999940395355,
+                            0.4000000059604645,
+                            0.5,
+                            0.550000011920929,
+                            0.6000000238418579
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/Kiwi/3026_Glow_Bright_01.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "visibilityRadius": 500.0,
+        "particleName": "Kiwi_S3_MapSpotlight_Bloom",
+        "particlePath": "Maps/Shipping/Map12/Particles/Kiwi/Kiwi_S3_MapSpotlight_Bloom",
+        "flags": 148,
+        "objectPath": "{37f8063b}",
+        "__type": "VfxSystemDefinitionData"
+    },
     "{13f33723}": {
         "CampName": "Chaos Outer Relic",
         "__type": "NeutralCampIdentifier"
@@ -103857,9 +104292,9 @@
                         0.0
                     ],
                     [
-                        1821.7451171875,
-                        -112.24072265625,
-                        4261.81982421875,
+                        1847.6207275390625,
+                        -250.51132202148438,
+                        -252.07823181152344,
                         1.0
                     ]
                 ],
@@ -104471,6 +104906,66 @@
                 ],
                 "name": "FeeneyPult_Loc2",
                 "__type": "MapLocator"
+            },
+            "{52a6a3c6}": {
+                "transform": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    [
+                        1564.68896484375,
+                        -191.31521606445312,
+                        1637.3568115234375,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_CymbalLine_Idicator1",
+                "__type": "MapLocator"
+            },
+            "{321e7e29}": {
+                "transform": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    [
+                        11185.0966796875,
+                        -191.31521606445312,
+                        10999.8017578125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_CymbalLine_Idicator2",
+                "__type": "MapLocator"
             }
         },
         "__type": "MapPlaceableContainer"
@@ -104751,6 +105246,580 @@
             "{cdcbd1be}": null,
             "{a07d40da}": null,
             "{d1caacf1}": null
+        },
+        "__type": "MapPlaceableContainer"
+    },
+    "{6c6d7cb9}": {
+        "items": {
+            "{832ab3e1}": {
+                "transform": [
+                    [
+                        -0.7558534145355225,
+                        6.607880465026028e-08,
+                        -0.6547408699989319,
+                        0.0
+                    ],
+                    [
+                        3.018351080186221e-08,
+                        1.0,
+                        6.607880465026028e-08,
+                        0.0
+                    ],
+                    [
+                        0.6547408699989319,
+                        3.018351080186221e-08,
+                        -0.7558534145355225,
+                        0.0
+                    ],
+                    [
+                        6801.7607421875,
+                        -193.85069274902344,
+                        6262.63623046875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapStage_Stage_PlayerPosition_Chaos1",
+                "__type": "MapLocator"
+            },
+            "{a8835138}": {
+                "transform": [
+                    [
+                        -0.7558534145355225,
+                        -6.607880465026028e-08,
+                        -0.6547408699989319,
+                        0.0
+                    ],
+                    [
+                        -3.018351080186221e-08,
+                        1.0,
+                        -6.607880465026028e-08,
+                        0.0
+                    ],
+                    [
+                        0.6547408699989319,
+                        -3.018351080186221e-08,
+                        -0.7558534145355225,
+                        0.0
+                    ],
+                    [
+                        6395.5908203125,
+                        -193.85145568847656,
+                        6067.66015625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapStage_Stage_PlayerPosition_Order1",
+                "__type": "MapLocator"
+            },
+            "{1a6d58c1}": {
+                "transform": [
+                    [
+                        -0.7558534145355225,
+                        -6.607880465026028e-08,
+                        -0.6547408699989319,
+                        0.0
+                    ],
+                    [
+                        -3.018351080186221e-08,
+                        1.0,
+                        -6.607880465026028e-08,
+                        0.0
+                    ],
+                    [
+                        0.6547408699989319,
+                        -3.018351080186221e-08,
+                        -0.7558534145355225,
+                        0.0
+                    ],
+                    [
+                        6609.513671875,
+                        -193.85133361816406,
+                        6073.31201171875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapStage_Stage_PlayerPosition_Order2",
+                "__type": "MapLocator"
+            },
+            "{444fefe4}": {
+                "transform": [
+                    [
+                        -0.7558534145355225,
+                        6.607880465026028e-08,
+                        -0.6547408699989319,
+                        0.0
+                    ],
+                    [
+                        3.018351080186221e-08,
+                        1.0,
+                        6.607880465026028e-08,
+                        0.0
+                    ],
+                    [
+                        0.6547408699989319,
+                        3.018351080186221e-08,
+                        -0.7558534145355225,
+                        0.0
+                    ],
+                    [
+                        6576.6416015625,
+                        -193.85133361816406,
+                        5857.28173828125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapStage_Stage_PlayerPosition_Order3",
+                "__type": "MapLocator"
+            },
+            "{c9bef614}": {
+                "transform": [
+                    [
+                        -0.7558534145355225,
+                        6.607880465026028e-08,
+                        -0.6547408699989319,
+                        0.0
+                    ],
+                    [
+                        3.018351080186221e-08,
+                        1.0,
+                        6.607880465026028e-08,
+                        0.0
+                    ],
+                    [
+                        0.6547408699989319,
+                        3.018351080186221e-08,
+                        -0.7558534145355225,
+                        0.0
+                    ],
+                    [
+                        6365.7890625,
+                        -193.85133361816406,
+                        5872.90625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapStage_Stage_PlayerPosition_Order4",
+                "__type": "MapLocator"
+            },
+            "{623aa9ac}": {
+                "transform": [
+                    [
+                        -0.7558534145355225,
+                        -6.607880465026028e-08,
+                        -0.6547408699989319,
+                        0.0
+                    ],
+                    [
+                        -3.018351080186221e-08,
+                        1.0,
+                        -6.607880465026028e-08,
+                        0.0
+                    ],
+                    [
+                        0.6547408699989319,
+                        -3.018351080186221e-08,
+                        -0.7558534145355225,
+                        0.0
+                    ],
+                    [
+                        7028.259765625,
+                        -193.85008239746094,
+                        6467.89306640625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapStage_Stage_PlayerPosition_Chaos2",
+                "__type": "MapLocator"
+            },
+            "{22131503}": {
+                "transform": [
+                    [
+                        -0.7558534145355225,
+                        6.607880465026028e-08,
+                        -0.6547408699989319,
+                        0.0
+                    ],
+                    [
+                        3.018351080186221e-08,
+                        1.0,
+                        6.607880465026028e-08,
+                        0.0
+                    ],
+                    [
+                        0.6547408699989319,
+                        3.018351080186221e-08,
+                        -0.7558534145355225,
+                        0.0
+                    ],
+                    [
+                        6541.38671875,
+                        -182.4217071533203,
+                        6378.1181640625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapStage_StageCenter",
+                "__type": "MapLocator"
+            },
+            "{59f15905}": {
+                "transform": [
+                    [
+                        -0.7558534145355225,
+                        6.607880465026028e-08,
+                        -0.6547408699989319,
+                        0.0
+                    ],
+                    [
+                        3.018351080186221e-08,
+                        1.0,
+                        6.607880465026028e-08,
+                        0.0
+                    ],
+                    [
+                        0.6547408699989319,
+                        3.018351080186221e-08,
+                        -0.7558534145355225,
+                        0.0
+                    ],
+                    [
+                        6839.65234375,
+                        -193.85011291503906,
+                        6476.72265625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapStage_Stage_PlayerPosition_Chaos3",
+                "__type": "MapLocator"
+            },
+            "{09efe9c3}": {
+                "transform": [
+                    [
+                        -0.7558534145355225,
+                        6.607880465026028e-08,
+                        -0.6547408699989319,
+                        0.0
+                    ],
+                    [
+                        3.018351080186221e-08,
+                        1.0,
+                        6.607880465026028e-08,
+                        0.0
+                    ],
+                    [
+                        0.6547408699989319,
+                        3.018351080186221e-08,
+                        -0.7558534145355225,
+                        0.0
+                    ],
+                    [
+                        6775.611328125,
+                        -193.85145568847656,
+                        5934.13916015625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapStage_Stage_PlayerPosition_Order5",
+                "__type": "MapLocator"
+            },
+            "{efaddf66}": {
+                "transform": [
+                    [
+                        -0.7558534145355225,
+                        -6.607880465026028e-08,
+                        -0.6547408699989319,
+                        0.0
+                    ],
+                    [
+                        -3.018351080186221e-08,
+                        1.0,
+                        -6.607880465026028e-08,
+                        0.0
+                    ],
+                    [
+                        0.6547408699989319,
+                        -3.018351080186221e-08,
+                        -0.7558534145355225,
+                        0.0
+                    ],
+                    [
+                        7007.1650390625,
+                        -193.85032653808594,
+                        6284.71533203125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapStage_Stage_PlayerPosition_Chaos4",
+                "__type": "MapLocator"
+            },
+            "{b5d86791}": {
+                "transform": [
+                    [
+                        0.7204421758651733,
+                        0.0,
+                        0.6935150027275085,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.6935150027275085,
+                        0.0,
+                        0.7204421758651733,
+                        0.0
+                    ],
+                    [
+                        7709.0625,
+                        -178.34071350097656,
+                        5248.5283203125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapStage_StageOrientation",
+                "__type": "MapLocator"
+            },
+            "{e5dd6e8e}": {
+                "transform": [
+                    [
+                        -0.7558534145355225,
+                        -6.607880465026028e-08,
+                        -0.6547408699989319,
+                        0.0
+                    ],
+                    [
+                        -3.018351080186221e-08,
+                        1.0,
+                        -6.607880465026028e-08,
+                        0.0
+                    ],
+                    [
+                        0.6547408699989319,
+                        -3.018351080186221e-08,
+                        -0.7558534145355225,
+                        0.0
+                    ],
+                    [
+                        6942.861328125,
+                        -193.85032653808594,
+                        6095.32958984375,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapStage_Stage_PlayerPosition_Chaos5",
+                "__type": "MapLocator"
+            },
+            "{bc3d0a5a}": {
+                "transform": [
+                    [
+                        -0.7558523416519165,
+                        0.0,
+                        -0.6547420620918274,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.6547420620918274,
+                        0.0,
+                        -0.7558523416519165,
+                        0.0
+                    ],
+                    [
+                        6462.8720703125,
+                        -193.8522186279297,
+                        6463.40771484375,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapStage_StageCenterCamera",
+                "__type": "MapLocator"
+            },
+            "{e35448e8}": null,
+            "{a6d8f56b}": null,
+            "{3f236181}": null,
+            "{fca55bba}": null,
+            "{283bec6a}": null,
+            "{81020cd3}": null,
+            "{7e18e0d2}": null,
+            "{6a1e4d1e}": null,
+            "{301f5765}": null,
+            "{a0334938}": null,
+            "{3239da67}": null,
+            "{85df671f}": null,
+            "{ec72b67c}": null,
+            "{a82d7bf4}": null,
+            "{058dd6ae}": null,
+            "{f65937c3}": null,
+            "{00a98270}": null,
+            "{0b4b3a03}": null,
+            "{26c09c4f}": null,
+            "{eb9f1c6f}": null,
+            "{9d68ec28}": null,
+            "{e139babc}": null,
+            "{591fa24c}": null,
+            "{664dbc1c}": null,
+            "{28c0969d}": null,
+            "{248572c0}": null,
+            "{096fe401}": null,
+            "{36b60981}": null,
+            "{a7a5e734}": null,
+            "{8d479467}": null,
+            "{ad4c52d7}": null,
+            "{b9d90c8f}": null,
+            "{41fbf0c3}": null,
+            "{745b1c04}": null,
+            "{5b88cffd}": null,
+            "{dc792e1a}": null,
+            "{a965f59c}": null,
+            "{48b73ff8}": null,
+            "{08744bbe}": null,
+            "{c7abf906}": null,
+            "{c1c5562f}": null,
+            "{334a8063}": null,
+            "{15df3375}": null,
+            "{385b9c96}": null,
+            "{1aa08986}": null,
+            "{1df835ec}": null,
+            "{d762d0e2}": null,
+            "{7933945f}": null,
+            "{09b13838}": null,
+            "{2acb7700}": null,
+            "{d1b3779a}": null,
+            "{683b490d}": null,
+            "{bf498ead}": null,
+            "{948db275}": null,
+            "{a3773f75}": null,
+            "{5a1e9af1}": {
+                "transform": [
+                    [
+                        -0.05516025424003601,
+                        0.9974318146705627,
+                        -0.04568377137184143,
+                        0.0
+                    ],
+                    [
+                        -0.686564564704895,
+                        -0.004668508656322956,
+                        0.7270538806915283,
+                        0.0
+                    ],
+                    [
+                        0.7249733805656433,
+                        0.07146932184696198,
+                        0.6850589513778687,
+                        0.0
+                    ],
+                    [
+                        3775.733642578125,
+                        307.5300598144531,
+                        5141.51904296875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapSpotlight1",
+                "system": "{37f8063b}",
+                "__type": "MapParticle"
+            },
+            "{be9b5a2a}": {
+                "transform": [
+                    [
+                        -0.05516025424003601,
+                        0.9974318742752075,
+                        -0.04568377137184143,
+                        0.0
+                    ],
+                    [
+                        -0.6797581315040588,
+                        -0.004000261891633272,
+                        0.733425498008728,
+                        0.0
+                    ],
+                    [
+                        0.7313591837882996,
+                        0.07150983065366745,
+                        0.6782329678535461,
+                        0.0
+                    ],
+                    [
+                        4257.64697265625,
+                        307.0668029785156,
+                        5620.615234375,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapSpotlight2",
+                "system": "{37f8063b}",
+                "__type": "MapParticle"
+            },
+            "{4c44ff1e}": {
+                "transform": [
+                    [
+                        -0.05516025424003601,
+                        0.9974318742752075,
+                        -0.04568377137184143,
+                        0.0
+                    ],
+                    [
+                        -0.6958460807800293,
+                        -0.005588711239397526,
+                        0.7181692719459534,
+                        0.0
+                    ],
+                    [
+                        0.7160695791244507,
+                        0.07140325009822845,
+                        0.6943671107292175,
+                        0.0
+                    ],
+                    [
+                        6973.85302734375,
+                        306.18701171875,
+                        8342.861328125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapSpotlight3",
+                "system": "{37f8063b}",
+                "__type": "MapParticle"
+            },
+            "{c9a2ee60}": {
+                "transform": [
+                    [
+                        -0.05516025424003601,
+                        0.9974319338798523,
+                        -0.04568377137184143,
+                        0.0
+                    ],
+                    [
+                        -0.6684998869895935,
+                        -0.0029067567083984613,
+                        0.7437067031860352,
+                        0.0
+                    ],
+                    [
+                        0.741663932800293,
+                        0.07156262546777725,
+                        0.6669431328773499,
+                        0.0
+                    ],
+                    [
+                        7461.24072265625,
+                        305.7645568847656,
+                        8823.3603515625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapSpotlight4",
+                "system": "{37f8063b}",
+                "__type": "MapParticle"
+            }
         },
         "__type": "MapPlaceableContainer"
     },
@@ -119495,6 +120564,2296 @@
         },
         "__type": "MapPlaceableContainer"
     },
+    "{f3f53d29}": {
+        "items": {
+            "{05c0cd88}": {
+                "transform": [
+                    [
+                        -0.7345682382583618,
+                        0.0,
+                        0.6785348057746887,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.6785348057746887,
+                        0.0,
+                        -0.7345682382583618,
+                        0.0
+                    ],
+                    [
+                        10298.4443359375,
+                        -168.1583251953125,
+                        10195.3408203125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_GoH_CafeCuties_BonusRelic_Chaos",
+                "__type": "MapLocator"
+            },
+            "{bd8589ee}": {
+                "transform": [
+                    [
+                        0.7191530466079712,
+                        0.0,
+                        -0.6948517560958862,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.6948517560958862,
+                        0.0,
+                        0.7191530466079712,
+                        0.0
+                    ],
+                    [
+                        2331.527587890625,
+                        -168.15704345703125,
+                        2433.793701171875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_GoH_CafeCuties_BonusRelic_Order",
+                "__type": "MapLocator"
+            },
+            "{cb7c97ad}": {
+                "transform": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    [
+                        5918.87451171875,
+                        -191.6688995361328,
+                        5216.33154296875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_GoH_CafeCuties_MainRelic_Order_Outer",
+                "__type": "MapLocator"
+            },
+            "{fa3c3b12}": {
+                "transform": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    [
+                        7559.0087890625,
+                        -191.66880798339844,
+                        6822.96484375,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_GoH_CafeCuties_MainRelic_Chaos_Outer",
+                "__type": "MapLocator"
+            },
+            "{9f9d82cd}": {
+                "transform": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    [
+                        4706.57470703125,
+                        -191.66908264160156,
+                        4033.462890625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_GoH_CafeCuties_MainRelic_Order_Inner",
+                "__type": "MapLocator"
+            },
+            "{ca7df929}": {
+                "transform": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    [
+                        8877.2890625,
+                        -191.66880798339844,
+                        7976.78662109375,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_GoH_CafeCuties_MainRelic_Chaos_Inner",
+                "__type": "MapLocator"
+            },
+            "{edf29fd1}": {
+                "transform": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    [
+                        6615.28662109375,
+                        -183.8318328857422,
+                        6113.11328125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_GoH_CafeCuties_HealthRelicLocators",
+                "__type": "MapGroup"
+            }
+        },
+        "__type": "MapPlaceableContainer"
+    },
+    "{fa0460e4}": {
+        "items": {
+            "{f8169457}": {
+                "transform": [
+                    [
+                        -0.8020361065864563,
+                        0.0,
+                        -0.5972756743431091,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.5972756743431091,
+                        0.0,
+                        -0.8020361065864563,
+                        0.0
+                    ],
+                    [
+                        6840.33642578125,
+                        -188.77099609375,
+                        8029.74462890625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_1",
+                "__type": "MapLocator"
+            },
+            "{2d35b04c}": {
+                "transform": [
+                    [
+                        0.9663345813751221,
+                        0.0,
+                        0.25728920102119446,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.25728920102119446,
+                        0.0,
+                        0.9663345813751221,
+                        0.0
+                    ],
+                    [
+                        2679.6396484375,
+                        -240.81756591796875,
+                        234.99551391601562,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_1",
+                "__type": "MapLocator"
+            },
+            "{7616bc8b}": {
+                "transform": [
+                    [
+                        -0.9654223918914795,
+                        0.0,
+                        -0.26069071888923645,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.26069071888923645,
+                        0.0,
+                        -0.9654223918914795,
+                        0.0
+                    ],
+                    [
+                        1775.552978515625,
+                        -400.16064453125,
+                        4155.5419921875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_2",
+                "__type": "MapLocator"
+            },
+            "{c69c1ed0}": {
+                "transform": [
+                    [
+                        0.8933109045028687,
+                        0.0,
+                        0.44943955540657043,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.44943955540657043,
+                        0.0,
+                        0.8933109045028687,
+                        0.0
+                    ],
+                    [
+                        10101.7001953125,
+                        -785.94287109375,
+                        7872.3427734375,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_3",
+                "__type": "MapLocator"
+            },
+            "{37d43759}": {
+                "transform": [
+                    [
+                        0.8343764543533325,
+                        0.0,
+                        0.5511952042579651,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.5511952042579651,
+                        0.0,
+                        0.8343764543533325,
+                        0.0
+                    ],
+                    [
+                        2877.0244140625,
+                        -905.3253784179688,
+                        205.93478393554688,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_2",
+                "__type": "MapLocator"
+            },
+            "{866931c0}": {
+                "transform": [
+                    [
+                        -0.948798418045044,
+                        0.0,
+                        0.31588229537010193,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.31588229537010193,
+                        0.0,
+                        -0.948798418045044,
+                        0.0
+                    ],
+                    [
+                        13738.466796875,
+                        -196.1278839111328,
+                        9175.9580078125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_3",
+                "__type": "MapLocator"
+            },
+            "{270a78c2}": {
+                "transform": [
+                    [
+                        -0.9669875502586365,
+                        0.0,
+                        0.2548240125179291,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.2548240125179291,
+                        0.0,
+                        -0.9669875502586365,
+                        0.0
+                    ],
+                    [
+                        13240.4716796875,
+                        96.55514526367188,
+                        10657.103515625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_90",
+                "__type": "MapLocator"
+            },
+            "{902e6c29}": {
+                "transform": [
+                    [
+                        0.8343764543533325,
+                        0.0,
+                        0.5511952042579651,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.5511952042579651,
+                        0.0,
+                        0.8343764543533325,
+                        0.0
+                    ],
+                    [
+                        3468.607421875,
+                        -911.9613647460938,
+                        677.8228149414062,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_4",
+                "__type": "MapLocator"
+            },
+            "{19160b29}": {
+                "transform": [
+                    [
+                        0.6459494829177856,
+                        0.0,
+                        0.7633802890777588,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.7633802890777588,
+                        0.0,
+                        0.6459494829177856,
+                        0.0
+                    ],
+                    [
+                        5292.13916015625,
+                        -597.220703125,
+                        3473.4189453125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_5",
+                "__type": "MapLocator"
+            },
+            "{5d8373f6}": {
+                "transform": [
+                    [
+                        -0.6355119943618774,
+                        0.0,
+                        -0.7720910310745239,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.7720910310745239,
+                        0.0,
+                        -0.6355119943618774,
+                        0.0
+                    ],
+                    [
+                        8258.4072265625,
+                        -616.3911743164062,
+                        14218.115234375,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_6",
+                "__type": "MapLocator"
+            },
+            "{8e0d6e6d}": {
+                "transform": [
+                    [
+                        -0.6153789758682251,
+                        0.0,
+                        0.7882314324378967,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.7882314324378967,
+                        0.0,
+                        -0.6153789758682251,
+                        0.0
+                    ],
+                    [
+                        12549.2119140625,
+                        -135.89974975585938,
+                        12371.8203125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Large_1",
+                "__type": "MapLocator"
+            },
+            "{9c728db2}": {
+                "transform": [
+                    [
+                        -0.9942792057991028,
+                        0.0,
+                        -0.10681331157684326,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.10681331157684326,
+                        0.0,
+                        -0.9942792057991028,
+                        0.0
+                    ],
+                    [
+                        11201.2548828125,
+                        -191.23480224609375,
+                        12712.0107421875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_7",
+                "__type": "MapLocator"
+            },
+            "{8498988d}": {
+                "transform": [
+                    [
+                        0.743238091468811,
+                        0.0,
+                        -0.6690270900726318,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.6690270900726318,
+                        0.0,
+                        0.743238091468811,
+                        0.0
+                    ],
+                    [
+                        613.74169921875,
+                        693.3964233398438,
+                        4307.0810546875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_5",
+                "__type": "MapLocator"
+            },
+            "{89abd83b}": {
+                "transform": [
+                    [
+                        -0.5765795111656189,
+                        0.0,
+                        -0.8170411586761475,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.8170411586761475,
+                        0.0,
+                        -0.5765795111656189,
+                        0.0
+                    ],
+                    [
+                        8413.625,
+                        89.9164047241211,
+                        10969.5478515625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_6",
+                "__type": "MapLocator"
+            },
+            "{3a978a23}": {
+                "transform": [
+                    [
+                        0.6512972116470337,
+                        0.0,
+                        -0.7588229179382324,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.7588229179382324,
+                        0.0,
+                        0.6512972116470337,
+                        0.0
+                    ],
+                    [
+                        677.00830078125,
+                        -206.23361206054688,
+                        2523.97998046875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_8",
+                "__type": "MapLocator"
+            },
+            "{67e4a28d}": {
+                "transform": [
+                    [
+                        0.7551565170288086,
+                        0.0,
+                        -0.6555446982383728,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.6555446982383728,
+                        0.0,
+                        0.7551565170288086,
+                        0.0
+                    ],
+                    [
+                        231.9647216796875,
+                        -199.63369750976562,
+                        336.8817138671875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_7",
+                "__type": "MapLocator"
+            },
+            "{adb0dc56}": {
+                "transform": [
+                    [
+                        -0.4697812795639038,
+                        0.0,
+                        -0.8827829360961914,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.8827829360961914,
+                        0.0,
+                        -0.4697812795639038,
+                        0.0
+                    ],
+                    [
+                        8388.2666015625,
+                        35.634925842285156,
+                        9979.4384765625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_9",
+                "__type": "MapLocator"
+            },
+            "{bcd07806}": {
+                "transform": [
+                    [
+                        -0.9995545744895935,
+                        0.0,
+                        -0.029845446348190308,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.029845446348190308,
+                        0.0,
+                        -0.9995545744895935,
+                        0.0
+                    ],
+                    [
+                        11208.6806640625,
+                        -1441.6658935546875,
+                        7959.72265625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_10",
+                "__type": "MapLocator"
+            },
+            "{06cd6699}": {
+                "transform": [
+                    [
+                        0.2760532796382904,
+                        0.0,
+                        0.9611424207687378,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.9611424207687378,
+                        0.0,
+                        0.2760532796382904,
+                        0.0
+                    ],
+                    [
+                        4541.22265625,
+                        -415.3117980957031,
+                        2611.013671875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_11",
+                "__type": "MapLocator"
+            },
+            "{e1855fe9}": {
+                "transform": [
+                    [
+                        -0.9482764005661011,
+                        0.0,
+                        -0.3174460232257843,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.3174460232257843,
+                        0.0,
+                        -0.9482764005661011,
+                        0.0
+                    ],
+                    [
+                        10945.0322265625,
+                        -542.52099609375,
+                        8678.5439453125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_12",
+                "__type": "MapLocator"
+            },
+            "{17ebdc7b}": {
+                "transform": [
+                    [
+                        0.9775818586349487,
+                        0.0,
+                        0.21055644750595093,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.21055644750595093,
+                        0.0,
+                        0.9775818586349487,
+                        0.0
+                    ],
+                    [
+                        2227.47021484375,
+                        -235.09695434570312,
+                        59.442901611328125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_13",
+                "__type": "MapLocator"
+            },
+            "{3563c416}": {
+                "transform": [
+                    [
+                        -0.7136178612709045,
+                        0.0,
+                        0.7005354762077332,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.7005354762077332,
+                        0.0,
+                        -0.7136178612709045,
+                        0.0
+                    ],
+                    [
+                        13034.9833984375,
+                        -1940.8775634765625,
+                        7335.61865234375,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_8",
+                "__type": "MapLocator"
+            },
+            "{de34ee06}": {
+                "transform": [
+                    [
+                        -0.7647761702537537,
+                        0.0,
+                        0.6442963480949402,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.6442963480949402,
+                        0.0,
+                        -0.7647761702537537,
+                        0.0
+                    ],
+                    [
+                        12150.5888671875,
+                        -137.49583435058594,
+                        12842.35546875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_14",
+                "__type": "MapLocator"
+            },
+            "{946fa80b}": {
+                "transform": [
+                    [
+                        -0.8563915491104126,
+                        0.0,
+                        0.5163271427154541,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.5163271427154541,
+                        0.0,
+                        -0.8563915491104126,
+                        0.0
+                    ],
+                    [
+                        13436.4013671875,
+                        -1925.1358642578125,
+                        7047.01953125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_9",
+                "__type": "MapLocator"
+            },
+            "{51fd4361}": {
+                "transform": [
+                    [
+                        0.46580541133880615,
+                        0.0,
+                        0.8848872780799866,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.8848872780799866,
+                        0.0,
+                        0.46580541133880615,
+                        0.0
+                    ],
+                    [
+                        12877.736328125,
+                        -141.6309051513672,
+                        10328.4404296875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_15",
+                "__type": "MapLocator"
+            },
+            "{182fe3bf}": {
+                "transform": [
+                    [
+                        -0.7162473201751709,
+                        0.0,
+                        -0.6978466510772705,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.6978466510772705,
+                        0.0,
+                        -0.7162473201751709,
+                        0.0
+                    ],
+                    [
+                        8207.01171875,
+                        50.081260681152344,
+                        9549.3583984375,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_10",
+                "__type": "MapLocator"
+            },
+            "{5d5ba37a}": {
+                "transform": [
+                    [
+                        -0.9753289818763733,
+                        0.0,
+                        -0.22075746953487396,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.22075746953487396,
+                        0.0,
+                        -0.9753289818763733,
+                        0.0
+                    ],
+                    [
+                        6403.0087890625,
+                        -62.52980041503906,
+                        7733.22509765625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_16",
+                "__type": "MapLocator"
+            },
+            "{7949c30b}": {
+                "transform": [
+                    [
+                        -0.6919097304344177,
+                        0.0,
+                        -0.7219840884208679,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.7219840884208679,
+                        0.0,
+                        -0.6919097304344177,
+                        0.0
+                    ],
+                    [
+                        4956.359375,
+                        -256.93719482421875,
+                        6144.7080078125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_11",
+                "__type": "MapLocator"
+            },
+            "{27008d75}": {
+                "transform": [
+                    [
+                        -0.7146599888801575,
+                        0.0,
+                        -0.6994721293449402,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.6994721293449402,
+                        0.0,
+                        -0.7146599888801575,
+                        0.0
+                    ],
+                    [
+                        3307.1611328125,
+                        -205.1254119873047,
+                        4619.51953125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_12",
+                "__type": "MapLocator"
+            },
+            "{f7c473ed}": {
+                "transform": [
+                    [
+                        -0.9235199689865112,
+                        0.0,
+                        -0.3835507035255432,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.3835507035255432,
+                        0.0,
+                        -0.9235199689865112,
+                        0.0
+                    ],
+                    [
+                        2527.08837890625,
+                        -125.98188781738281,
+                        4269.1806640625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_17",
+                "__type": "MapLocator"
+            },
+            "{2a45b89b}": {
+                "transform": [
+                    [
+                        -0.013823240995407104,
+                        0.0,
+                        0.9999046921730042,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.9999046921730042,
+                        0.0,
+                        -0.013823240995407104,
+                        0.0
+                    ],
+                    [
+                        13230.232421875,
+                        -199.0474853515625,
+                        9334.2177734375,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_18",
+                "__type": "MapLocator"
+            },
+            "{27dc6eaa}": {
+                "transform": [
+                    [
+                        -0.5693086385726929,
+                        0.0,
+                        -0.8221240043640137,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.8221240043640137,
+                        0.0,
+                        -0.5693086385726929,
+                        0.0
+                    ],
+                    [
+                        5160.33642578125,
+                        -159.40838623046875,
+                        6687.2373046875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_19",
+                "__type": "MapLocator"
+            },
+            "{20c3bef0}": {
+                "transform": [
+                    [
+                        -0.9965275526046753,
+                        0.0,
+                        -0.08326521515846252,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.08326521515846252,
+                        0.0,
+                        -0.9965275526046753,
+                        0.0
+                    ],
+                    [
+                        11626.3369140625,
+                        -191.29483032226562,
+                        12259.0341796875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_20",
+                "__type": "MapLocator"
+            },
+            "{1553cde3}": {
+                "transform": [
+                    [
+                        -0.7446765303611755,
+                        0.0,
+                        -0.6674255132675171,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.6674255132675171,
+                        0.0,
+                        -0.7446765303611755,
+                        0.0
+                    ],
+                    [
+                        6135.58837890625,
+                        -89.94026184082031,
+                        7617.66015625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_21",
+                "__type": "MapLocator"
+            },
+            "{24c1cc0f}": {
+                "transform": [
+                    [
+                        -0.7430867552757263,
+                        0.0,
+                        -0.669195294380188,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.669195294380188,
+                        0.0,
+                        -0.7430867552757263,
+                        0.0
+                    ],
+                    [
+                        8466.0869140625,
+                        219.43295288085938,
+                        11553.3779296875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_13",
+                "__type": "MapLocator"
+            },
+            "{7a1a75b2}": {
+                "transform": [
+                    [
+                        -0.9487273693084717,
+                        0.0,
+                        -0.3160957396030426,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.3160957396030426,
+                        0.0,
+                        -0.9487273693084717,
+                        0.0
+                    ],
+                    [
+                        5554.15283203125,
+                        103.0241928100586,
+                        7751.1943359375,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_22",
+                "__type": "MapLocator"
+            },
+            "{e7270423}": {
+                "transform": [
+                    [
+                        0.0982842668890953,
+                        0.0,
+                        0.995158314704895,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.995158314704895,
+                        0.0,
+                        0.0982842668890953,
+                        0.0
+                    ],
+                    [
+                        13969.18359375,
+                        -903.6103515625,
+                        7694.107421875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_92",
+                "__type": "MapLocator"
+            },
+            "{d5baacf8}": {
+                "transform": [
+                    [
+                        -0.5057477355003357,
+                        0.0,
+                        -0.86268150806427,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.86268150806427,
+                        0.0,
+                        -0.5057477355003357,
+                        0.0
+                    ],
+                    [
+                        11419.9833984375,
+                        -1439.1197509765625,
+                        8055.85205078125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_23",
+                "__type": "MapLocator"
+            },
+            "{dd7fc8b7}": {
+                "transform": [
+                    [
+                        -0.5568708181381226,
+                        0.0,
+                        -0.8305992484092712,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.8305992484092712,
+                        0.0,
+                        -0.5568708181381226,
+                        0.0
+                    ],
+                    [
+                        202.4869384765625,
+                        -104.45675659179688,
+                        2929.12353515625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_24",
+                "__type": "MapLocator"
+            },
+            "{75ca8d49}": {
+                "transform": [
+                    [
+                        -0.4446207284927368,
+                        0.0,
+                        -0.895719051361084,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.895719051361084,
+                        0.0,
+                        -0.4446207284927368,
+                        0.0
+                    ],
+                    [
+                        534.204833984375,
+                        -103.97740173339844,
+                        3028.3056640625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_15",
+                "__type": "MapLocator"
+            },
+            "{16c83540}": {
+                "transform": [
+                    [
+                        0.395049512386322,
+                        0.0,
+                        0.9186599850654602,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.9186599850654602,
+                        0.0,
+                        0.395049512386322,
+                        0.0
+                    ],
+                    [
+                        4333.0908203125,
+                        -205.4055633544922,
+                        2143.114990234375,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_16",
+                "__type": "MapLocator"
+            },
+            "{05958038}": {
+                "transform": [
+                    [
+                        0.5471185445785522,
+                        0.0,
+                        0.8370552062988281,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.8370552062988281,
+                        0.0,
+                        0.5471185445785522,
+                        0.0
+                    ],
+                    [
+                        3767.110107421875,
+                        -255.62796020507812,
+                        1549.7901611328125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_17",
+                "__type": "MapLocator"
+            },
+            "{8ea3ad67}": {
+                "transform": [
+                    [
+                        -0.9916192293167114,
+                        0.0,
+                        -0.12919598817825317,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.12919598817825317,
+                        0.0,
+                        -0.9916192293167114,
+                        0.0
+                    ],
+                    [
+                        10852.6640625,
+                        -199.73358154296875,
+                        11832.3818359375,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_25",
+                "__type": "MapLocator"
+            },
+            "{13fa1774}": {
+                "transform": [
+                    [
+                        -0.2303321659564972,
+                        0.0,
+                        0.9731122255325317,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.9731122255325317,
+                        0.0,
+                        -0.2303321659564972,
+                        0.0
+                    ],
+                    [
+                        12887.8564453125,
+                        -141.1825408935547,
+                        11476.2822265625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_26",
+                "__type": "MapLocator"
+            },
+            "{a7948c85}": {
+                "transform": [
+                    [
+                        -0.517010509967804,
+                        0.0,
+                        0.8559792637825012,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.8559792637825012,
+                        0.0,
+                        -0.517010509967804,
+                        0.0
+                    ],
+                    [
+                        12979.4638671875,
+                        -137.15911865234375,
+                        12042.689453125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_27",
+                "__type": "MapLocator"
+            },
+            "{23f2fecf}": {
+                "transform": [
+                    [
+                        0.5556535124778748,
+                        0.0,
+                        0.831413984298706,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.831413984298706,
+                        0.0,
+                        0.5556535124778748,
+                        0.0
+                    ],
+                    [
+                        13855.9775390625,
+                        -585.65673828125,
+                        10040.6787109375,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_28",
+                "__type": "MapLocator"
+            },
+            "{7aec1442}": {
+                "transform": [
+                    [
+                        0.5416350364685059,
+                        0.0,
+                        0.8406139612197876,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.8406139612197876,
+                        0.0,
+                        0.5416350364685059,
+                        0.0
+                    ],
+                    [
+                        9153.5712890625,
+                        -348.9383544921875,
+                        7614.50341796875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_29",
+                "__type": "MapLocator"
+            },
+            "{57337e62}": {
+                "transform": [
+                    [
+                        0.8335148096084595,
+                        0.0,
+                        0.552497386932373,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.552497386932373,
+                        0.0,
+                        0.8335148096084595,
+                        0.0
+                    ],
+                    [
+                        3758.760986328125,
+                        -392.53387451171875,
+                        1386.27734375,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_30",
+                "__type": "MapLocator"
+            },
+            "{952b5bc8}": {
+                "transform": [
+                    [
+                        0.7541946172714233,
+                        0.0,
+                        0.656650960445404,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.656650960445404,
+                        0.0,
+                        0.7541946172714233,
+                        0.0
+                    ],
+                    [
+                        5798.1123046875,
+                        -270.59619140625,
+                        4449.64892578125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_31",
+                "__type": "MapLocator"
+            },
+            "{570464e8}": {
+                "transform": [
+                    [
+                        -0.07027371972799301,
+                        0.0,
+                        -0.9975277781486511,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.9975277781486511,
+                        0.0,
+                        -0.07027371972799301,
+                        0.0
+                    ],
+                    [
+                        8373.5029296875,
+                        54.17955017089844,
+                        10268.673828125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_18",
+                "__type": "MapLocator"
+            },
+            "{ec1d5ae5}": {
+                "transform": [
+                    [
+                        -0.5975202322006226,
+                        0.0,
+                        -0.8018538951873779,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.8018538951873779,
+                        0.0,
+                        -0.5975202322006226,
+                        0.0
+                    ],
+                    [
+                        287.173095703125,
+                        -82.36076354980469,
+                        2615.255126953125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_19",
+                "__type": "MapLocator"
+            },
+            "{1b2031c6}": {
+                "transform": [
+                    [
+                        -0.9998309016227722,
+                        0.0,
+                        0.018394917249679565,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.018394917249679565,
+                        0.0,
+                        -0.9998309016227722,
+                        0.0
+                    ],
+                    [
+                        10207.0390625,
+                        -159.92971801757812,
+                        12850.943359375,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_91",
+                "__type": "MapLocator"
+            },
+            "{25e0cb6c}": {
+                "transform": [
+                    [
+                        -0.9029700756072998,
+                        0.0,
+                        -0.42970359325408936,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.42970359325408936,
+                        0.0,
+                        -0.9029700756072998,
+                        0.0
+                    ],
+                    [
+                        10046.427734375,
+                        -320.9634094238281,
+                        13720.109375,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_32",
+                "__type": "MapLocator"
+            },
+            "{a7cbcc2b}": {
+                "transform": [
+                    [
+                        -0.3417637050151825,
+                        0.0,
+                        -0.9397860765457153,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.9397860765457153,
+                        0.0,
+                        -0.3417637050151825,
+                        0.0
+                    ],
+                    [
+                        5080.73681640625,
+                        -234.81747436523438,
+                        6347.185546875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_33",
+                "__type": "MapLocator"
+            },
+            "{6856ea7d}": {
+                "transform": [
+                    [
+                        0.5865076780319214,
+                        0.0,
+                        0.8099437952041626,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.8099437952041626,
+                        0.0,
+                        0.5865076780319214,
+                        0.0
+                    ],
+                    [
+                        13009.7265625,
+                        -197.5265655517578,
+                        9720.03125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_34",
+                "__type": "MapLocator"
+            },
+            "{c86d9298}": {
+                "transform": [
+                    [
+                        0.8746387362480164,
+                        0.0,
+                        -0.4847756028175354,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.4847756028175354,
+                        0.0,
+                        0.8746387362480164,
+                        0.0
+                    ],
+                    [
+                        722.2886352539062,
+                        -220.8680877685547,
+                        3.3072509765625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_35",
+                "__type": "MapLocator"
+            },
+            "{215fa587}": {
+                "transform": [
+                    [
+                        0.7130423784255981,
+                        0.0,
+                        0.701120913028717,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.701120913028717,
+                        0.0,
+                        0.7130423784255981,
+                        0.0
+                    ],
+                    [
+                        9388.611328125,
+                        -227.31478881835938,
+                        7993.21630859375,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_21",
+                "__type": "MapLocator"
+            },
+            "{18d585c0}": {
+                "transform": [
+                    [
+                        0.6988178491592407,
+                        0.0,
+                        0.7152997255325317,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.7152997255325317,
+                        0.0,
+                        0.6988178491592407,
+                        0.0
+                    ],
+                    [
+                        7416.984375,
+                        -854.9866333007812,
+                        5368.4091796875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_22",
+                "__type": "MapLocator"
+            },
+            "{08f898bd}": {
+                "transform": [
+                    [
+                        0.6567696928977966,
+                        0.0,
+                        0.7540912628173828,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.7540912628173828,
+                        0.0,
+                        0.6567696928977966,
+                        0.0
+                    ],
+                    [
+                        5546.00146484375,
+                        -213.35177612304688,
+                        4213.60693359375,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_23",
+                "__type": "MapLocator"
+            },
+            "{79a0b676}": {
+                "transform": [
+                    [
+                        0.8446533679962158,
+                        0.0,
+                        0.5353133678436279,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.5353133678436279,
+                        0.0,
+                        0.8446533679962158,
+                        0.0
+                    ],
+                    [
+                        7748.98974609375,
+                        -203.682861328125,
+                        6455.2744140625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_24",
+                "__type": "MapLocator"
+            },
+            "{4f2b39ad}": {
+                "transform": [
+                    [
+                        0.6429539918899536,
+                        0.0,
+                        0.7659050822257996,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.7659050822257996,
+                        0.0,
+                        0.6429539918899536,
+                        0.0
+                    ],
+                    [
+                        12765.0634765625,
+                        -191.814697265625,
+                        10034.259765625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_36",
+                "__type": "MapLocator"
+            },
+            "{b9f73d97}": {
+                "transform": [
+                    [
+                        0.9458803534507751,
+                        0.0,
+                        0.32451602816581726,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.32451602816581726,
+                        0.0,
+                        0.9458803534507751,
+                        0.0
+                    ],
+                    [
+                        13259.3818359375,
+                        -926.27392578125,
+                        7645.1435546875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_25",
+                "__type": "MapLocator"
+            },
+            "{bea5ee63}": {
+                "transform": [
+                    [
+                        -0.031759560108184814,
+                        0.0,
+                        -0.9994956254959106,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.9994956254959106,
+                        0.0,
+                        -0.031759560108184814,
+                        0.0
+                    ],
+                    [
+                        -979.607666015625,
+                        -579.506591796875,
+                        2665.580078125,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_37",
+                "__type": "MapLocator"
+            },
+            "{8e0a4435}": {
+                "transform": [
+                    [
+                        0.7699846029281616,
+                        0.0,
+                        0.6380625367164612,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.6380625367164612,
+                        0.0,
+                        0.7699846029281616,
+                        0.0
+                    ],
+                    [
+                        6253.58984375,
+                        -498.826171875,
+                        4130.39697265625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_26",
+                "__type": "MapLocator"
+            },
+            "{0b7dc201}": {
+                "transform": [
+                    [
+                        -0.9223672151565552,
+                        0.0,
+                        -0.3863147497177124,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.3863147497177124,
+                        0.0,
+                        -0.9223672151565552,
+                        0.0
+                    ],
+                    [
+                        11744.2099609375,
+                        -193.0672607421875,
+                        12571.6259765625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_38",
+                "__type": "MapLocator"
+            },
+            "{2cd57ae2}": {
+                "transform": [
+                    [
+                        0.9496958255767822,
+                        0.0,
+                        -0.31317412853240967,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.31317412853240967,
+                        0.0,
+                        0.9496958255767822,
+                        0.0
+                    ],
+                    [
+                        1301.0938720703125,
+                        -235.65109252929688,
+                        -220.35037231445312,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Small_39",
+                "__type": "MapLocator"
+            },
+            "{a8adaeae}": {
+                "transform": [
+                    [
+                        0.6264411807060242,
+                        0.0,
+                        0.779468834400177,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.779468834400177,
+                        0.0,
+                        0.6264411807060242,
+                        0.0
+                    ],
+                    [
+                        3149.00927734375,
+                        -183.93243408203125,
+                        549.0783081054688,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_14",
+                "__type": "MapLocator"
+            },
+            "{938d66b0}": {
+                "transform": [
+                    [
+                        0.6375924944877625,
+                        0.0,
+                        0.7703740000724792,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.7703740000724792,
+                        0.0,
+                        0.6375924944877625,
+                        0.0
+                    ],
+                    [
+                        4749.25537109375,
+                        -189.48220825195312,
+                        3523.342529296875,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_20",
+                "__type": "MapLocator"
+            },
+            "{a28be278}": {
+                "transform": [
+                    [
+                        0.5693453550338745,
+                        0.0,
+                        0.8220984935760498,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        -0.8220984935760498,
+                        0.0,
+                        0.5693453550338745,
+                        0.0
+                    ],
+                    [
+                        6287.84326171875,
+                        -204.9508056640625,
+                        4869.93994140625,
+                        1.0
+                    ]
+                ],
+                "name": "Kiwi_S3_MapDecoration_Minions_4",
+                "__type": "MapLocator"
+            }
+        },
+        "__type": "MapPlaceableContainer"
+    },
     "{30b116fa}": {
         "name": "{96fc8374}",
         "__type": "{b5d9d3a0}"
@@ -119607,7 +122966,10 @@
             "Bloom_Props": "Maps/MapGeometry/Map12/Chunks/Bloom_Props",
             "{0975cbcc}": "{7252d418}",
             "{782c0e3b}": "{c92363a7}",
-            "{0fe6cc4e}": "{925da96e}"
+            "{0fe6cc4e}": "{925da96e}",
+            "{705a8228}": "{fa0460e4}",
+            "{01405d65}": "{6c6d7cb9}",
+            "{4655076d}": "{f3f53d29}"
         },
         "__type": "MapContainer"
     },
