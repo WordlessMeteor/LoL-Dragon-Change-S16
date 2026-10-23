@@ -4629,6 +4629,10 @@
                 "particleLinger": 0.20000000298023224,
                 "lifetime": 2.0,
                 "emitterName": "Ripple_Glow",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "SpawnShape": {
                     "emitOffset": [
                         0.0,
@@ -4727,7 +4731,6 @@
                 "colorLookUpTypeY": 3,
                 "disableBackfaceCull": true,
                 "miscRenderFlags": 1,
-                "particleIsLocalOrientation": 1,
                 "birthRotation0": {
                     "constantValue": [
                         0.0,
@@ -4768,6 +4771,7 @@
                     },
                     "__type": "ValueVector3"
                 },
+                "isLocalOrientation": 0,
                 "birthScale0": {
                     "constantValue": [
                         6.0,
@@ -4940,6 +4944,10 @@
                 "particleLinger": 0.20000000298023224,
                 "lifetime": 2.0,
                 "emitterName": "Ripple_Glow2",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "SpawnShape": {
                     "emitOffset": [
                         0.0,
@@ -5215,6 +5223,10 @@
                 "lifetime": 0.5400000214576721,
                 "isSingleParticle": 1,
                 "emitterName": "Ring_Glow",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "blendMode": 4,
                 "Color": {
                     "constantValue": [
@@ -5340,45 +5352,9 @@
                 "lifetime": 0.5400000214576721,
                 "isSingleParticle": 1,
                 "emitterName": "Ring_Glow1",
-                "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        -60.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
-                },
-                "EmitterPosition": {
-                    "dynamics": {
-                        "probabilityTables": [
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            }
-                        ],
-                        "times": [
-                            0.0
-                        ],
-                        "values": [
-                            [
-                                0.0,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "FlexShapeDefinition": {
-                    "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
-                    "scaleEmitOffsetByBoundObjectSize": 0.004999999888241291,
-                    "__type": "VfxFlexShapeDefinitionData"
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
                 },
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
@@ -5490,6 +5466,10 @@
                 "lifetime": 0.5400000214576721,
                 "isSingleParticle": 1,
                 "emitterName": "Distort_Ripples",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "particleColorTexture": "ASSETS/Particles/alpha_20.tex",
                 "blendMode": 1,
                 "Color": {
@@ -5613,6 +5593,10 @@
                 "lifetime": 0.5400000214576721,
                 "isSingleParticle": 1,
                 "emitterName": "Distort_Ripples1",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "particleColorTexture": "ASSETS/Particles/alpha_20.tex",
                 "blendMode": 1,
                 "Color": {
@@ -5735,6 +5719,10 @@
                 "lifetime": 0.5,
                 "isSingleParticle": 1,
                 "emitterName": "Background",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "FlexShapeDefinition": {
                     "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
                     "__type": "VfxFlexShapeDefinitionData"
@@ -5962,6 +5950,10 @@
                     ],
                     "__type": "ValueVector3"
                 },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "SpawnShape": {
                     "flags": 1,
                     "radius": 1.0,
@@ -6128,6 +6120,10 @@
                 "lifetime": 0.5,
                 "isSingleParticle": 1,
                 "emitterName": "Background1",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "FlexShapeDefinition": {
                     "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
                     "__type": "VfxFlexShapeDefinitionData"
@@ -8270,6 +8266,10 @@
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "Temp_Avatar",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
@@ -8457,6 +8457,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
+                "isLocalOrientation": 0,
                 "birthScale0": {
                     "constantValue": [
                         80.0,
@@ -8555,6 +8556,10 @@
                 "lifetime": 0.5400000214576721,
                 "isSingleParticle": 1,
                 "emitterName": "Distort_Ripples2",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "particleColorTexture": "ASSETS/Particles/alpha_20.tex",
                 "blendMode": 1,
                 "Color": {
@@ -8926,6 +8931,10 @@
                         "__type": "VfxAnimatedVector3fVariableData"
                     },
                     "__type": "IntegratedValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
                 },
                 "SpawnShape": {
                     "emitOffset": [

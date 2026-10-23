@@ -366,36 +366,52 @@
                 "OwnerCondition": {
                     "mDrivers": [
                         {
-                            "Spell": "Characters/Ahri/Spells/AhriIdleOrbVFXBuff",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
-                        },
-                        {
-                            "mDriver": {
-                                "mBoolDriver": {
-                                    "mAnimationNames": [
-                                        "Recall"
-                                    ],
-                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                            "mDrivers": [
+                                {
+                                    "Spell": "Characters/Ahri/Spells/AhriIdleOrbVFXBuff",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
                                 },
-                                "__type": "DelayedBoolMaterialDriver"
-                            },
-                            "__type": "NotMaterialDriver"
+                                {
+                                    "mDriver": {
+                                        "mBoolDriver": {
+                                            "mAnimationNames": [
+                                                "Recall"
+                                            ],
+                                            "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                        },
+                                        "__type": "DelayedBoolMaterialDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "mAnimationNames": [
+                                            "Dance",
+                                            "Dance_In",
+                                            "Dance_Loop",
+                                            "Recall_Winddown",
+                                            "Respawn"
+                                        ],
+                                        "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                }
+                            ],
+                            "__type": "AllTrueMaterialDriver"
                         },
                         {
-                            "mDriver": {
+                            "mBoolDriver": {
                                 "mAnimationNames": [
-                                    "Respawn",
                                     "Recall_Winddown",
-                                    "Dance",
-                                    "Dance_In",
-                                    "Dance_Loop"
+                                    "Respawn"
                                 ],
                                 "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                             },
-                            "__type": "NotMaterialDriver"
+                            "mDelayOn": 3.259999990463257,
+                            "__type": "DelayedBoolMaterialDriver"
                         }
                     ],
-                    "__type": "AllTrueMaterialDriver"
+                    "__type": "OneTrueMaterialDriver"
                 },
                 "PersistentVfxs": [
                     {

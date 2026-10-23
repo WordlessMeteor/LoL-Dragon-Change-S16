@@ -188,14 +188,15 @@
             ],
             "Cooldown": {
                 "values": [
+                    130.0,
                     120.0,
-                    120.0,
-                    115.0,
                     110.0,
-                    120.0,
-                    120.0,
-                    120.0
+                    100.0,
+                    90.0,
+                    80.0,
+                    70.0
                 ],
+                "{0a3e0478}": 130.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -797,13 +798,13 @@
                 {
                     "name": "MaxStacksTooltip",
                     "values": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1720,14 +1721,14 @@
             ],
             "manaValues": {
                 "values": [
+                    40.0,
+                    45.0,
                     50.0,
                     55.0,
                     60.0,
-                    65.0,
-                    70.0,
-                    75.0
+                    65.0
                 ],
-                "{0a3e0478}": 50.0,
+                "{0a3e0478}": 40.0,
                 "__type": "{630af303}"
             },
             "SpellEventToAudioEventSuffix": {
@@ -1807,7 +1808,11 @@
             "__type": "ModifiableFloat"
         },
         "hpPerLevelModifiable": {
-            "baseValue": 81.0,
+            "baseValue": 89.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.399999976158142,
             "__type": "ModifiableFloat"
         },
         "hpRegenPerLevelModifiable": {

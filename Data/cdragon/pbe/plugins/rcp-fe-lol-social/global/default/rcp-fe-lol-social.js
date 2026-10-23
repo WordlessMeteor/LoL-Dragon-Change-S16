@@ -14445,41 +14445,40 @@
                     ClashRosterPanelComponent: n(371).default,
                     ClashRosterPanelItemComponent: n(373).default,
                     DiscordBannerComponent: n(375).default,
-                    DiscordEatComponent: n(377).default,
-                    FriendFinderAddSummonerByNameComponent: n(378).default,
-                    FriendFinderButtonComponent: n(380).default,
-                    FriendFinderDiscordComponent: n(381).default,
-                    FriendFinderModalComponent: n(382).default,
-                    FriendFinderRecentlyPlayedComponent: n(381).default,
-                    FriendFinderRecentSummonerComponent: n(383).default,
-                    FriendFinderRequestedPlayerComponent: n(387).default,
-                    FriendFinderRequestedPlayersComponent: n(388).default,
-                    HovercardComponentComponent: n(389).default,
-                    HovercardContentComponent: n(392).default,
-                    HovercardShellComponent: n(397).default,
-                    IdentityAndPartiesComponent: n(400).default,
-                    SidebarMainComponent: n(401).default,
-                    SocialAvatarComponent: n(403).default,
-                    SocialButtonComponent: n(405).default,
-                    SocialFriendRequestComponent: n(406).default,
-                    SocialFriendRequestsComponent: n(409).default,
-                    SocialFriendRequestsModalComponent: n(411).default,
-                    SocialIdentityComponent: n(413).default,
-                    SocialMenuComponent: n(414).default,
-                    SocialMenuInputComponent: n(416).default,
-                    SocialMenuItemComponent: n(417).default,
-                    SocialPanelComponent: n(419).default,
-                    SocialRosterComponent: n(420).default,
-                    SocialRosterGroupComponent: n(422).default,
-                    SocialRosterGroupNameComponent: n(426).default,
-                    SocialRosterMemberComponent: n(428).default,
-                    SocialStatusWrapperComponent: n(430).default,
-                    SocialTextTooltipComponent: n(432).default,
-                    SocialTooltipComponent: n(433).default,
-                    TooltipMessageComponent: n(434).default,
-                    UikitRadioComponent: n(435).default,
-                    VersionBarComponent: n(436).default,
-                    VngAgeRatingComponent: n(437).default,
+                    FriendFinderAddSummonerByNameComponent: n(377).default,
+                    FriendFinderButtonComponent: n(379).default,
+                    FriendFinderDiscordComponent: n(380).default,
+                    FriendFinderModalComponent: n(381).default,
+                    FriendFinderRecentlyPlayedComponent: n(380).default,
+                    FriendFinderRecentSummonerComponent: n(382).default,
+                    FriendFinderRequestedPlayerComponent: n(386).default,
+                    FriendFinderRequestedPlayersComponent: n(387).default,
+                    HovercardComponentComponent: n(388).default,
+                    HovercardContentComponent: n(391).default,
+                    HovercardShellComponent: n(396).default,
+                    IdentityAndPartiesComponent: n(399).default,
+                    SidebarMainComponent: n(400).default,
+                    SocialAvatarComponent: n(402).default,
+                    SocialButtonComponent: n(404).default,
+                    SocialFriendRequestComponent: n(405).default,
+                    SocialFriendRequestsComponent: n(408).default,
+                    SocialFriendRequestsModalComponent: n(410).default,
+                    SocialIdentityComponent: n(412).default,
+                    SocialMenuComponent: n(413).default,
+                    SocialMenuInputComponent: n(415).default,
+                    SocialMenuItemComponent: n(416).default,
+                    SocialPanelComponent: n(418).default,
+                    SocialRosterComponent: n(419).default,
+                    SocialRosterGroupComponent: n(421).default,
+                    SocialRosterGroupNameComponent: n(425).default,
+                    SocialRosterMemberComponent: n(427).default,
+                    SocialStatusWrapperComponent: n(429).default,
+                    SocialTextTooltipComponent: n(431).default,
+                    SocialTooltipComponent: n(432).default,
+                    TooltipMessageComponent: n(433).default,
+                    UikitRadioComponent: n(434).default,
+                    VersionBarComponent: n(435).default,
+                    VngAgeRatingComponent: n(436).default,
                     DiscordBetaComponent: d,
                     DiscordButtonComponent: p,
                     DiscordPopupComponent: m,
@@ -14490,106 +14489,105 @@
                     PlayerNameComponent: a,
                     ...s.fetchPlayerNameInputAndDependencies(),
                     SharedNotificationsService: c,
-                    AnalyticsService: n(439).default,
-                    BanNotificationService: n(440).default,
-                    ChatErrorsService: n(441).default,
-                    ChatRestrictionService: n(442).default,
-                    ChatWindowSettingsService: n(443).default,
-                    ClashService: n(444).default,
-                    ClientConfigService: n(445).default,
-                    CodeOfConductService: n(446).default,
-                    ConversationsService: n(449).default,
-                    DiagnosticAssistantService: n(450).default,
-                    DiscordIntegrationService: n(451).default,
-                    DragStateService: n(452).default,
-                    EogService: n(453).default,
-                    FriendFinderService: n(454).default,
-                    FriendGroupsService: n(455).default,
-                    FriendHovercardsService: n(456).default,
-                    FriendRequestsService: n(457).default,
-                    FriendsService: n(458).default,
-                    GameDataService: n(459).default,
-                    GameflowService: n(460).default,
-                    GameInvitesService: n(461).default,
-                    GameQueuesService: n(462).default,
-                    GenericAssetsService: n(463).default,
-                    HoneyfruitService: n(464).default,
-                    LeaverBusterService: n(465).default,
-                    LobbyService: n(469).default,
-                    MapsService: n(470).default,
-                    MatchmakingService: n(471).default,
-                    NotificationsService: n(472).default,
-                    OpenPartiesService: n(473).default,
-                    PatcherService: n(474).default,
-                    PlatformConfigService: n(475).default,
-                    ProductsService: n(476).default,
-                    ProfileChampionInfoService: n(477).default,
-                    ProfilesService: n(478).default,
-                    ReformCardService: n(479).default,
-                    RemedyService: n(497).default,
-                    ReportedPlayersService: n(498).default,
-                    ReporterFeedbackMessagesService: n(499).default,
-                    ReporterFeedbackService: n(500).default,
-                    RequestCacheService: n(501).default,
-                    SettingsService: n(502).default,
-                    SocialButtonsService: n(503).default,
-                    SocialPlatformConfigService: n(504).default,
-                    SocialSessionService: n(505).default,
-                    SocialSettingsService: n(506).default,
-                    SpectatorService: n(507).default,
-                    StatusUpdatesService: n(508).default,
-                    StoreService: n(509).default,
-                    SummonerService: n(510).default,
-                    SystemService: n(511).default,
-                    UxSettingsService: n(512).default,
+                    AnalyticsService: n(438).default,
+                    BanNotificationService: n(439).default,
+                    ChatErrorsService: n(440).default,
+                    ChatRestrictionService: n(441).default,
+                    ChatWindowSettingsService: n(442).default,
+                    ClashService: n(443).default,
+                    ClientConfigService: n(444).default,
+                    CodeOfConductService: n(445).default,
+                    ConversationsService: n(448).default,
+                    DiagnosticAssistantService: n(449).default,
+                    DiscordIntegrationService: n(450).default,
+                    DragStateService: n(451).default,
+                    EogService: n(452).default,
+                    FriendFinderService: n(453).default,
+                    FriendGroupsService: n(454).default,
+                    FriendHovercardsService: n(455).default,
+                    FriendRequestsService: n(456).default,
+                    FriendsService: n(457).default,
+                    GameDataService: n(458).default,
+                    GameflowService: n(459).default,
+                    GameInvitesService: n(460).default,
+                    GameQueuesService: n(461).default,
+                    GenericAssetsService: n(462).default,
+                    HoneyfruitService: n(463).default,
+                    LeaverBusterService: n(464).default,
+                    LobbyService: n(468).default,
+                    MapsService: n(469).default,
+                    MatchmakingService: n(470).default,
+                    NotificationsService: n(471).default,
+                    OpenPartiesService: n(472).default,
+                    PatcherService: n(473).default,
+                    PlatformConfigService: n(474).default,
+                    ProductsService: n(475).default,
+                    ProfileChampionInfoService: n(476).default,
+                    ProfilesService: n(477).default,
+                    ReformCardService: n(478).default,
+                    RemedyService: n(496).default,
+                    ReportedPlayersService: n(497).default,
+                    ReporterFeedbackMessagesService: n(498).default,
+                    ReporterFeedbackService: n(499).default,
+                    RequestCacheService: n(500).default,
+                    SettingsService: n(501).default,
+                    SocialButtonsService: n(502).default,
+                    SocialPlatformConfigService: n(503).default,
+                    SocialSessionService: n(504).default,
+                    SocialSettingsService: n(505).default,
+                    SpectatorService: n(506).default,
+                    StatusUpdatesService: n(507).default,
+                    StoreService: n(508).default,
+                    SummonerService: n(509).default,
+                    SystemService: n(510).default,
+                    UxSettingsService: n(511).default,
                     MissionsService: g.MissionsService,
-                    SummonersJourneyService: n(513).default,
+                    SummonersJourneyService: n(512).default,
                     TEMPLATES: {
-                        application: n(515),
-                        index: n(516),
-                        "components/actions-bar": n(517),
-                        "components/actions-folder-input": n(518),
-                        "components/arrow-toggle": n(519),
-                        "components/availability-hitbox": n(520),
-                        "components/chat-toggle-button": n(521),
-                        "components/clash-roster-panel": n(522),
-                        "components/clash-roster-panel-item": n(523),
-                        "components/content-block-attention": n(524),
-                        "components/discord-banner": n(525),
-                        "components/discord-eat": n(526),
-                        "components/friend-finder-add-summoner-by-name": n(527),
-                        "components/friend-finder-button": n(528),
-                        "components/friend-finder-discord": n(529),
-                        "components/friend-finder-modal": n(530),
-                        "components/friend-finder-recent-summoner": n(531),
-                        "components/friend-finder-recently-played": n(532),
-                        "components/friend-finder-requested-player": n(533),
-                        "components/friend-finder-requested-players": n(534),
-                        "components/hovercard-name-alias-mode": n(535),
-                        "components/hovercard-name-summoner-mode": n(536),
-                        "components/identity-and-parties": n(537),
-                        "components/sidebar-main": n(538),
-                        "components/social-avatar": n(539),
-                        "components/social-button": n(540),
-                        "components/social-friend-request": n(541),
-                        "components/social-friend-requests-modal": n(542),
-                        "components/social-friend-requests": n(543),
-                        "components/social-identity": n(544),
-                        "components/social-menu-input": n(545),
-                        "components/social-menu-item": n(546),
-                        "components/social-menu": n(547),
-                        "components/social-panel": n(548),
-                        "components/social-roster-group-name": n(549),
-                        "components/social-roster-group": n(550),
-                        "components/social-roster-member": n(551),
-                        "components/social-roster": n(552),
-                        "components/social-status-wrapper": n(553),
-                        "components/social-text-tooltip": n(554),
-                        "components/social-tooltip": n(555),
-                        "components/tooltip-message": n(556),
-                        "components/uikit-radio": n(557),
-                        "components/version-bar": n(558),
-                        "components/vng-age-rating": n(559),
+                        application: n(514),
+                        index: n(515),
+                        "components/actions-bar": n(516),
+                        "components/actions-folder-input": n(517),
+                        "components/arrow-toggle": n(518),
+                        "components/availability-hitbox": n(519),
+                        "components/chat-toggle-button": n(520),
+                        "components/clash-roster-panel": n(521),
+                        "components/clash-roster-panel-item": n(522),
+                        "components/content-block-attention": n(523),
+                        "components/discord-banner": n(524),
+                        "components/friend-finder-add-summoner-by-name": n(525),
+                        "components/friend-finder-button": n(526),
+                        "components/friend-finder-discord": n(527),
+                        "components/friend-finder-modal": n(528),
+                        "components/friend-finder-recent-summoner": n(529),
+                        "components/friend-finder-recently-played": n(530),
+                        "components/friend-finder-requested-player": n(531),
+                        "components/friend-finder-requested-players": n(532),
+                        "components/hovercard-name-alias-mode": n(533),
+                        "components/hovercard-name-summoner-mode": n(534),
+                        "components/identity-and-parties": n(535),
+                        "components/sidebar-main": n(536),
+                        "components/social-avatar": n(537),
+                        "components/social-button": n(538),
+                        "components/social-friend-request": n(539),
+                        "components/social-friend-requests-modal": n(540),
+                        "components/social-friend-requests": n(541),
+                        "components/social-identity": n(542),
+                        "components/social-menu-input": n(543),
+                        "components/social-menu-item": n(544),
+                        "components/social-menu": n(545),
+                        "components/social-panel": n(546),
+                        "components/social-roster-group-name": n(547),
+                        "components/social-roster-group": n(548),
+                        "components/social-roster-member": n(549),
+                        "components/social-roster": n(550),
+                        "components/social-status-wrapper": n(551),
+                        "components/social-text-tooltip": n(552),
+                        "components/social-tooltip": n(553),
+                        "components/tooltip-message": n(554),
+                        "components/uikit-radio": n(555),
+                        "components/version-bar": n(556),
+                        "components/vng-age-rating": n(557),
                         "components/missions-button": g.MissionsButtonComponentTemplate
                     }
                 };
@@ -14600,11 +14598,11 @@
                     name: "RemedyReceived",
                     tra: r.traService,
                     ComponentFactory: r.ComponentFactory,
-                    RemediesReceivedComponent: n(560).default,
-                    RemedyRewardCardComponent: n(568).default,
+                    RemediesReceivedComponent: n(558).default,
+                    RemedyRewardCardComponent: n(566).default,
                     PlayerNameComponent: a,
                     ...s.fetchPlayerNameInputAndDependencies(),
-                    RemedyService: n(497).default
+                    RemedyService: n(496).default
                 }), r.emberApplicationFactory.setFactoryDefinition({
                     name: "HostageDetectedComponent",
                     tra: r.traService,
@@ -14612,14 +14610,14 @@
                     HostageDetectedComponent: n(359).HostageDetectedComponent,
                     PlayerNameComponent: a,
                     ...s.fetchPlayerNameInputAndDependencies(),
-                    RemedyService: n(497).default
+                    RemedyService: n(496).default
                 }), r.emberApplicationFactory.setFactoryDefinition({
                     name: "CredibilityBehaviorWarning",
                     tra: r.traService,
                     ComponentFactory: r.ComponentFactory,
-                    CredibilityBehaviorWarningComponent: n(571).default,
-                    CredibilityBehaviorWarningOptionComponent: n(575).default,
-                    RemedyService: n(497).default
+                    CredibilityBehaviorWarningComponent: n(569).default,
+                    CredibilityBehaviorWarningOptionComponent: n(573).default,
+                    RemedyService: n(496).default
                 })
             };
             var r = n(1);
@@ -15230,46 +15228,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = r.Ember.Component.extend({
-                    classNames: ["discord-eat"],
-                    isModalQueueEmpty: !0,
-                    showDiscordPopup: !1,
-                    clientConfigService: r.Ember.inject.service("client-config"),
-                    discordIntegrationService: r.Ember.inject.service("discord-integration"),
-                    isDiscordIntegrationBeta: r.Ember.computed.alias("clientConfigService.discordBetaIntegrationEnabled"),
-                    showEphemeralActionTooltip: r.Ember.computed("discordIntegrationService.shouldShowDiscordEat", "isModalQueueEmpty", (function() {
-                        return this.get("isModalQueueEmpty") && this.get("discordIntegrationService.shouldShowDiscordEat")
-                    })),
-                    eatTitle: r.Ember.computed("isDiscordIntegrationBeta", (function() {
-                        return this.get("isDiscordIntegrationBeta") ? r.tra.get("discord_beta_eat_title") : r.tra.get("discord_eat_title")
-                    })),
-                    eatDescription: r.Ember.computed("isDiscordIntegrationBeta", (function() {
-                        return this.get("isDiscordIntegrationBeta") ? r.tra.get("discord_beta_eat_description") : r.tra.get("discord_eat_description")
-                    })),
-                    didInsertElement() {
-                        this._super(...arguments), r.modalManager.addModalQueueObserver(this, this.checkModalQueueEmpty)
-                    },
-                    didDestroyElement() {
-                        this._super(...arguments), r.modalManager.removeModalQueueObserver(this.checkModalQueueEmpty)
-                    },
-                    checkModalQueueEmpty(e) {
-                        this.set("isModalQueueEmpty", e)
-                    },
-                    actions: {
-                        markToolTipRead: function() {
-                            const e = this.get("discordIntegrationService");
-                            this.get("isDiscordIntegrationBeta") ? e.markDiscordBetaEatSeen() : e.markDiscordLiveEatSeen(), this.set("showDiscordPopup", !0)
-                        }
-                    }
-                });
-            t.default = o
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r = n(1),
-                o = n(379);
+                o = n(378);
             const {
                 RunMixin: i
             } = r.EmberAddons.EmberLifeline, a = (e, t) => "string" == typeof e && "string" == typeof t && e.toUpperCase() === t.toUpperCase();
@@ -15592,10 +15551,10 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(384),
-                i = n(385),
-                a = n(386),
-                s = n(379),
+                o = n(383),
+                i = n(384),
+                a = n(385),
+                s = n(378),
                 l = n(247),
                 c = r.Ember.Component.extend({
                     classNames: ["lol-friend-finder-recent-summoner"],
@@ -15754,9 +15713,9 @@
                 i = (r = n(364)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(385),
-                s = n(386),
-                l = n(384),
+                a = n(384),
+                s = n(385),
+                l = n(383),
                 c = n(247);
             var d = o.Ember.Component.extend({
                 classNames: ["lol-friend-finder-requested-player"],
@@ -15848,7 +15807,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(390);
+                o = n(389);
             const {
                 RunMixin: i
             } = r.EmberAddons.EmberLifeline, a = "show-hovercard", s = "hide-hovercard", l = {
@@ -15872,7 +15831,7 @@
             let c = !1;
             var d = r.Ember.Component.extend(i, {
                 tagName: "template",
-                layout: n(391),
+                layout: n(390),
                 socialPlatformConfig: r.Ember.inject.service(),
                 puuid: null,
                 summonerId: null,
@@ -16024,9 +15983,9 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(393),
-                i = n(394),
-                a = n(395);
+                o = n(392),
+                i = n(393),
+                a = n(394);
             const s = "PRACTICE_GAME",
                 l = "NONE",
                 c = "PRACTICETOOL",
@@ -16037,7 +15996,7 @@
             var g = r.Ember.Component.extend({
                 clientConfig: r.Ember.inject.service("client-config"),
                 tagName: "",
-                layout: n(396),
+                layout: n(395),
                 loggedIn: null,
                 isKnown: null,
                 me: null,
@@ -16578,17 +16537,17 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = n(390),
-                a = n(393),
-                s = n(398),
-                l = n(395),
+                i = n(389),
+                a = n(392),
+                s = n(397),
+                l = n(394),
                 c = (r = n(364)) && r.__esModule ? r : {
                     default: r
                 };
             const d = /\W+/g;
             var p = o.Ember.Component.extend({
                 tagName: "",
-                layout: n(399),
+                layout: n(398),
                 friendHovercardsService: o.Ember.inject.service("friend-hovercards"),
                 profileChampionInfo: o.Ember.inject.service(),
                 socialPlatformConfig: o.Ember.inject.service(),
@@ -16806,7 +16765,7 @@
             }), t.default = void 0;
             var r = n(1);
             const o = n(154),
-                i = n(402),
+                i = n(401),
                 a = (0, r.emberDataBinding)({
                     Ember: r.Ember,
                     websocket: (0, r.getProvider)().getSocket(),
@@ -16902,11 +16861,11 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = n(395),
+                i = n(394),
                 a = (r = n(364)) && r.__esModule ? r : {
                     default: r
                 };
-            n(404);
+            n(403);
             var s = o.Ember.Component.extend({
                 avatarClassNames: "",
                 championId: null,
@@ -16995,14 +16954,14 @@
             var r = n(1),
                 o = n(246),
                 i = s(n(364)),
-                a = s(n(407));
+                a = s(n(406));
 
             function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(408);
+            n(407);
             var l = r.Ember.Component.extend({
                 classNames: ["lol-social-friend-request"],
                 closeModal: null,
@@ -17177,7 +17136,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(410);
+            n(409);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-friend-requests"],
                 alertNewFriendRequests: !1,
@@ -17247,7 +17206,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(412);
+            n(411);
             var o = r.Ember.Component.extend({
                 friendsService: r.Ember.inject.service("friends"),
                 friendRequestsService: r.Ember.inject.service("friendRequests"),
@@ -17446,7 +17405,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(415);
+            n(414);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-menu"],
                 keepOpenOnScroll: !1,
@@ -17547,7 +17506,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(418);
+            n(417);
             var o = r.Ember.Component.extend({
                 classNames: ["lol-social-menu-item"]
             });
@@ -17599,7 +17558,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(395),
+                o = n(394),
                 i = s(n(364)),
                 a = s(n(342));
 
@@ -17608,7 +17567,7 @@
                     default: e
                 }
             }
-            n(421);
+            n(420);
             const l = 28;
             var c = r.Ember.Component.extend(a.default, {
                 classNames: ["lol-social-roster", "social-ember-fade-in"],
@@ -17844,18 +17803,18 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(395),
+                o = n(394),
                 i = c(n(364)),
-                a = c(n(423)),
+                a = c(n(422)),
                 s = c(n(342)),
-                l = c(n(424));
+                l = c(n(423));
 
             function c(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(425);
+            n(424);
             var d = r.Ember.Component.extend(a.default, s.default, l.default, {
                 classNames: ["lol-social-roster-group"],
                 attributeBindings: ["draggable"],
@@ -18092,10 +18051,10 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(424)) && r.__esModule ? r : {
+                i = (r = n(423)) && r.__esModule ? r : {
                     default: r
                 };
-            n(427);
+            n(426);
             var a = o.Ember.Component.extend(i.default, {
                 classNames: ["lol-social-roster-group-name"],
                 group: null,
@@ -18175,20 +18134,20 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = p(n(424)),
-                i = n(395),
-                a = n(379),
+                o = p(n(423)),
+                i = n(394),
+                a = n(378),
                 s = p(n(364)),
                 l = n(246),
                 c = n(247),
-                d = p(n(423));
+                d = p(n(422));
 
             function p(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(429);
+            n(428);
             var u = r.Ember.Component.extend(d.default, o.default, {
                 classNames: ["lol-social-roster-member"],
                 classNameBindings: ["useMessagesMutedClass:muted", "showUnreadMessageCount:has-unread", "isOffline:offline"],
@@ -18850,8 +18809,8 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(395);
-            n(431);
+                o = n(394);
+            n(430);
             const i = "outOfGame",
                 a = "NONE";
             var s = r.Ember.Component.extend({
@@ -18962,7 +18921,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(395),
+                o = n(394),
                 i = r.Ember.Component.extend({
                     tagName: "template",
                     type: "top",
@@ -19207,7 +19166,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1);
-            n(438);
+            n(437);
             var o = r.Ember.Component.extend({
                 classNames: ["vng-age-rating"],
                 classNameBindings: ["isHidden:vng-age-rating-hidden"],
@@ -19402,7 +19361,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(424)) && r.__esModule ? r : {
+                i = (r = n(423)) && r.__esModule ? r : {
                     default: r
                 };
             const a = "ForcedShutdown",
@@ -19496,7 +19455,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(424)) && r.__esModule ? r : {
+                i = (r = n(423)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -19804,7 +19763,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(424)) && r.__esModule ? r : {
+                i = (r = n(423)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Service.extend(i.default, {
@@ -19816,7 +19775,7 @@
                         name: "CodeOfConduct",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        CodeOfConductComponent: n(447).default
+                        CodeOfConductComponent: n(446).default
                     })
                 },
                 handleCodeOfConductNotification: function(e) {
@@ -19845,7 +19804,7 @@
             const o = (0, r.getProvider)().get("rcp-fe-lol-uikit").getTemplateHelper();
             var i = r.Ember.Component.extend({
                 classNames: ["code-of-conduct"],
-                layout: n(448),
+                layout: n(447),
                 didInsertElement: function() {
                     this._super(...arguments), this.unlockRule(1)
                 },
@@ -20262,60 +20221,26 @@
             const o = "/lol-chat/v1/is-discord-integration-enabled",
                 i = "/lol-chat/v1/discord-link-status",
                 a = "/lol-settings/v2/account/LCUPreferences/lol-general",
-                s = "discord-beta-eat-seen",
-                l = "discord-live-eat-seen",
-                c = "/lol-client-config/v3/client-config/lol.client_settings.oogij.enabled",
-                d = "/lol-client-config/v3/client-config/lol.client_settings.discordIntegrationBeta.enabled";
-            var p = r.Ember.Service.extend({
-                isDiscordBetaEatSeen: !0,
-                isDiscordLiveEatSeen: !0,
+                s = "/lol-client-config/v3/client-config/lol.client_settings.oogij.enabled",
+                l = "/lol-client-config/v3/client-config/lol.client_settings.discordIntegrationBeta.enabled";
+            var c = r.Ember.Service.extend({
                 isEnabled: !1,
                 isLinkAvailable: !1,
                 isLinked: !1,
                 isOOGIJEnabled: !1,
-                isDiscordIntegrationBeta: !0,
                 hasClientConfigFetched: !1,
                 hasLinkStatusFetched: !1,
                 hasSettingsObserverFetched: !1,
                 hasDiscordEnabledFetched: !1,
                 clientConfigService: r.Ember.inject.service("client-config"),
                 hasObserversFetched: r.Ember.computed.and("hasClientConfigFetched", "hasLinkStatusFetched", "hasSettingsObserverFetched", "hasDiscordEnabledFetched"),
-                shouldShowDiscordEat: r.Ember.computed("isDiscordIntegrationBeta", "isDiscordLiveEatSeen", "isDiscordBetaEatSeen", "isEnabled", "isLinked", "hasObserversFetched", (function() {
-                    return !(!this.get("isEnabled") || this.get("isLinked") || !this.get("hasObserversFetched")) && (this.get("isDiscordIntegrationBeta") ? !this.get("isDiscordBetaEatSeen") : !this.get("isDiscordLiveEatSeen"))
-                })),
-                markDiscordBetaEatSeen: function() {
-                    this.set("isDiscordBetaEatSeen", !0);
-                    try {
-                        r.db.patch(a, {
-                            schemaVersion: 1,
-                            data: {
-                                [s]: !0
-                            }
-                        })
-                    } catch (e) {
-                        r.logger.error("Failed saving Discord Beta EAT seen", e)
-                    }
-                },
-                markDiscordLiveEatSeen: function() {
-                    this.set("isDiscordLiveEatSeen", !0);
-                    try {
-                        r.db.patch(a, {
-                            schemaVersion: 1,
-                            data: {
-                                [l]: !0
-                            }
-                        })
-                    } catch (e) {
-                        r.logger.error("Failed saving Discord Live EAT seen", e)
-                    }
-                },
                 init: function() {
-                    this._super(...arguments), r.db.observe(c, this, (e => {
+                    this._super(...arguments), r.db.observe(s, this, (e => {
                         this.set("isOOGIJEnabled", Boolean(e))
-                    })), r.db.observe(d, this, (e => {
-                        this.set("isDiscordIntegrationBeta", Boolean(e)), this.set("hasClientConfigFetched", !0)
+                    })), r.db.observe(l, this, (e => {
+                        this.set("hasClientConfigFetched", !0)
                     })), r.db.observe(a, this, (e => {
-                        e?.data && (this.set("isDiscordBetaEatSeen", Boolean(e.data[s])), this.set("isDiscordLiveEatSeen", Boolean(e.data[l])), this.set("hasSettingsObserverFetched", !0))
+                        e?.data && this.set("hasSettingsObserverFetched", !0)
                     })), r.db.observe(o, this, (e => {
                         this.set("isEnabled", Boolean(e)), this.set("hasDiscordEnabledFetched", !0)
                     })), r.db.observe(i, this, (e => {
@@ -20323,10 +20248,10 @@
                     }))
                 },
                 willDestroy() {
-                    this._super(...arguments), r.db.unobserve(c, this), r.db.unobserve(d, this), r.db.unobserve(a, this), r.db.unobserve(o, this), r.db.unobserve(i, this)
+                    this._super(...arguments), r.db.unobserve(s, this), r.db.unobserve(l, this), r.db.unobserve(a, this), r.db.unobserve(o, this), r.db.unobserve(i, this)
                 }
             });
-            t.default = p
+            t.default = c
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -20414,7 +20339,7 @@
                 i = (r = n(159)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(395);
+                a = n(394);
             var s = o.Ember.Service.extend({
                 friendsService: o.Ember.inject.service("friends"),
                 systemService: o.Ember.inject.service("system"),
@@ -20548,8 +20473,8 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(395),
-                i = n(393);
+                o = n(394),
+                i = n(392);
             const a = "/lol-chat/v2/friend-requests",
                 s = "/lol-chat/v1/blocked-players",
                 l = "/lol-client-config/v3/client-config/lol.client_settings.match_history.recently_played_summoners.friend_finder_disabled",
@@ -20657,8 +20582,8 @@
                 i = (r = n(161)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(393),
-                s = n(395);
+                a = n(392),
+                s = n(394);
             const l = "/lol-chat/v1/friends",
                 c = "/lol-honor-v2/v1/recognition-history",
                 d = "/lol-client-config/v3/client-config/lol.client_settings.discordIntegration.enabled";
@@ -20853,7 +20778,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(395);
+                o = n(394);
             const i = {
                     NORMAL_GAME: "game_type_normal",
                     TUTORIAL_GAME: "game_type_tutorial",
@@ -21045,7 +20970,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(424)) && r.__esModule ? r : {
+                i = (r = n(423)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -21062,7 +20987,7 @@
                 d = "OnLockoutWarning",
                 p = "RankedRestrictedGames",
                 u = ["InProgress", "WaitingForStats", "PreEndOfGame"],
-                m = n(466),
+                m = n(465),
                 g = o.Ember.get;
             var h = o.Ember.Service.extend(a, i.default, {
                 init() {
@@ -21073,7 +20998,7 @@
                         name: "LeaverBusterWarning",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        LeaverBusterWarningComponent: n(467).default
+                        LeaverBusterWarningComponent: n(466).default
                     })
                 },
                 notificationObserver: o.Ember.on("init", o.Ember.observer("leaverBusterNotifications.[]", "gameflow.phase", (function() {
@@ -21194,7 +21119,7 @@
             var r = n(1),
                 o = r.Ember.Component.extend({
                     classNames: ["leaver-buster-dialog"],
-                    layout: n(468),
+                    layout: n(467),
                     agreeText: r.Ember.computed("tra.leaver_buster_warning_agree", "tra.leaver_buster_warning_agree_prompt$html", "notificationContext.agreeText", (function() {
                         return this.get("tra").formatString("leaver_buster_warning_agree_prompt$html", {
                             leaverBusterWarningAgree: this.get("notificationContext.agreeText")
@@ -21374,7 +21299,7 @@
             }), t.default = void 0;
             var r = n(1),
                 o = n(179),
-                i = n(395);
+                i = n(394);
             const a = {
                 queue_id_800: "Intermediate",
                 queue_id_810: "Intro",
@@ -21558,7 +21483,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r = n(393);
+            var r = n(392);
             const o = n(1),
                 {
                     dataBinding: i,
@@ -21640,7 +21565,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(424)) && r.__esModule ? r : {
+                i = (r = n(423)) && r.__esModule ? r : {
                     default: r
                 };
             const a = "PERMA_BAN";
@@ -21653,22 +21578,22 @@
                         name: "ReformCard",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        ReformCardComponent: n(480).default,
-                        ReformCardChatLogComponent: n(482).default,
-                        ReformCardMatchHistoryComponent: n(484).default
+                        ReformCardComponent: n(479).default,
+                        ReformCardChatLogComponent: n(481).default,
+                        ReformCardMatchHistoryComponent: n(483).default
                     }), o.emberApplicationFactory.setFactoryDefinition({
                         name: "ReformCardV2",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        ReformCardV2Component: n(486).default,
-                        ReformCardV2ChatLogComponent: n(488).default,
-                        ReformCardV2MatchHistoryComponent: n(490).default
+                        ReformCardV2Component: n(485).default,
+                        ReformCardV2ChatLogComponent: n(487).default,
+                        ReformCardV2MatchHistoryComponent: n(489).default
                     }), o.emberApplicationFactory.setFactoryDefinition({
                         name: "ReformCardV3",
                         tra: o.traService,
                         ComponentFactory: o.ComponentFactory,
-                        ReformCardV3Component: n(492).default,
-                        ReformCardV3ChatLogComponent: n(495).default
+                        ReformCardV3Component: n(491).default,
+                        ReformCardV3ChatLogComponent: n(494).default
                     }))
                 },
                 initDataBindings() {
@@ -21751,7 +21676,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(481)) && r.__esModule ? r : {
+                i = (r = n(480)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -21895,7 +21820,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(483)) && r.__esModule ? r : {
+                i = (r = n(482)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -21969,7 +21894,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(485)) && r.__esModule ? r : {
+                i = (r = n(484)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -22007,7 +21932,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(487)) && r.__esModule ? r : {
+                i = (r = n(486)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -22185,7 +22110,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(489)) && r.__esModule ? r : {
+                i = (r = n(488)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -22240,7 +22165,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(491)) && r.__esModule ? r : {
+                i = (r = n(490)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -22278,10 +22203,10 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(493)) && r.__esModule ? r : {
+                i = (r = n(492)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(494);
+                a = n(493);
             const s = o.Ember.Object.extend(o.Ember.PromiseProxyMixin);
             var l = o.Ember.Component.extend({
                 classNames: ["player-behavior-reform-card-v3"],
@@ -22338,7 +22263,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(496)) && r.__esModule ? r : {
+                i = (r = n(495)) && r.__esModule ? r : {
                     default: r
                 };
             var a = o.Ember.Component.extend({
@@ -22384,7 +22309,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(424)) && r.__esModule ? r : {
+                i = (r = n(423)) && r.__esModule ? r : {
                     default: r
                 };
             const a = "/client-config/v2/config/lol.client_settings.remedy.obfuscated_player_name";
@@ -22533,7 +22458,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(424)) && r.__esModule ? r : {
+                i = (r = n(423)) && r.__esModule ? r : {
                     default: r
                 };
             const a = (0, o.emberDataBinding)({
@@ -23039,7 +22964,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = n(514);
+                o = n(513);
             const i = "c3e84157-4b03-4887-b342-0fb8c9f78ac3",
                 a = `/lol-progression/v1/groups/${i}/configuration`,
                 s = `/lol-progression/v1/groups/${i}/instanceData`,
@@ -23213,13 +23138,6 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "YjBKX+8v",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\discord-eat.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\styles\\\\components\\\\discord-eat.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\discord-eat.js\\" "],["text","\\n"],["block",["if"],[["get",["showEphemeralActionTooltip"]]],null,0],["append",["helper",["discord-popup"],null,[["showModal"],[["get",["showDiscordPopup"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"markToolTipRead"],null],null],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-content"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-content-decoration"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-icon"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-social/discord_eat_logo.svg"],["static-attr","alt","Profile attention tooltip icon"],["static-attr","class","discord-attention-tooltip-icon-profile"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-text"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-text-title"],["flush-element"],["text","\\n          "],["append",["unknown",["eatTitle"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","discord-attention-tooltip-text-msg"],["flush-element"],["text","\\n          "],["append",["unknown",["eatDescription"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
-                meta: {}
-            })
-        }, (e, t, n) => {
-            const r = n(1).Ember;
-            e.exports = r.HTMLBars.template({
                 id: "v/qlfHOF",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-add-summoner-by-name.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-add-summoner-by-name.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","description"],["flush-element"],["append",["unknown",["instructions"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","summoner-name-input-wrapper"],["flush-element"],["text","\\n  "],["append",["helper",["player-name-input"],null,[["enableSubmitButton","submitButtonText","disabled","enterKeyPressHandler","validationHandler","successHandler","errorHandler"],[true,["get",["tra","friend_finder_modal_button_add_friend"]],["get",["working"]],["helper",["action"],[["get",[null]],"enterKeyPressHandler"],null],["helper",["action"],[["get",[null]],"validationHandler"],null],["helper",["action"],[["get",[null]],"successHandler"],null],["helper",["action"],[["get",[null]],"errorHandler"],null]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
@@ -23297,8 +23215,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "iUJaJ11b",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\sidebar-main.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\sidebar-main.js\\" "],["text","\\n"],["append",["unknown",["social-panel"]],false],["text","\\n"],["append",["unknown",["vng-age-rating"]],false],["text","\\n"],["open-element","div",[]],["static-attr","class","alpha-version-panel"],["flush-element"],["text","\\n  "],["append",["unknown",["chat-toggle-button"]],false],["text","\\n\\n"],["block",["if"],[["get",["missionsButtonEnabled"]]],null,3],["text","\\n"],["block",["each"],[["get",["socialButtons"]]],null,2],["text","\\n  "],["append",["unknown",["version-bar"]],false],["text","\\n\\n  "],["open-element","button",[]],["dynamic-attr","class",["unknown",["bugReportButtonClassNames"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"reportBug"],null],null],["dynamic-attr","disabled",["unknown",["bugReportDisabled"]],null],["static-attr","data-dd-action-name","button.social.report_bug"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isDiagnosticAssistantNeedNotify"]]],null,1],["block",["social-text-tooltip"],null,[["direction"],["left"]],0],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["unknown",["discord-eat"]],false]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["unknown",["tra","tooltip_report_bug"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","bug-report-button-notification"],["flush-element"],["append",["unknown",["call-to-action-pip"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["social-button"],null,[["buttonPacket"],[["get",["socialButton"]]]]],false],["text","\\n"]],"locals":["socialButton"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","social-button"],["flush-element"],["text","\\n      "],["append",["unknown",["missions-button"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "oqq4KmKm",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\sidebar-main.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\sidebar-main.js\\" "],["text","\\n"],["append",["unknown",["social-panel"]],false],["text","\\n"],["append",["unknown",["vng-age-rating"]],false],["text","\\n"],["open-element","div",[]],["static-attr","class","alpha-version-panel"],["flush-element"],["text","\\n  "],["append",["unknown",["chat-toggle-button"]],false],["text","\\n\\n"],["block",["if"],[["get",["missionsButtonEnabled"]]],null,3],["text","\\n"],["block",["each"],[["get",["socialButtons"]]],null,2],["text","\\n  "],["append",["unknown",["version-bar"]],false],["text","\\n\\n  "],["open-element","button",[]],["dynamic-attr","class",["unknown",["bugReportButtonClassNames"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"reportBug"],null],null],["dynamic-attr","disabled",["unknown",["bugReportDisabled"]],null],["static-attr","data-dd-action-name","button.social.report_bug"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isDiagnosticAssistantNeedNotify"]]],null,1],["block",["social-text-tooltip"],null,[["direction"],["left"]],0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["unknown",["tra","tooltip_report_bug"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","bug-report-button-notification"],["flush-element"],["append",["unknown",["call-to-action-pip"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["social-button"],null,[["buttonPacket"],[["get",["socialButton"]]]]],false],["text","\\n"]],"locals":["socialButton"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","social-button"],["flush-element"],["text","\\n      "],["append",["unknown",["missions-button"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -23454,11 +23372,11 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(561)) && r.__esModule ? r : {
+                i = (r = n(559)) && r.__esModule ? r : {
                     default: r
                 };
-            n(562);
-            var a = n(563);
+            n(560);
+            var a = n(561);
             var s = o.Ember.Component.extend({
                 classNames: ["remedies-received-component"],
                 layout: i.default,
@@ -23548,13 +23466,13 @@
             t.ARAM_REROLL_REFUND_REWARD_TYPE = f;
             const _ = "LP_CONSOLATION";
             t.LP_CONSOLATION_REWARD_TYPE = _;
-            const A = n(564);
+            const A = n(562);
             t.ARAM_REROLL_ICON_PATH = A;
-            const b = n(565);
+            const b = n(563);
             t.XP_BOOST_ICON_PATH = b;
-            const y = n(566);
+            const y = n(564);
             t.AUTOFILL_PROTECTION_REMEDY_ICON_PATH = y;
-            const x = n(567);
+            const x = n(565);
             t.LP_CONSOLATION_REMEDY_ICON_PATH = x;
             const v = {};
             t.REMEDY_ICON_MAP = v, v[g] = b, v[h] = y, v[f] = A, v[_] = x
@@ -23576,11 +23494,11 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = n(563),
-                a = (r = n(569)) && r.__esModule ? r : {
+                i = n(561),
+                a = (r = n(567)) && r.__esModule ? r : {
                     default: r
                 };
-            n(570);
+            n(568);
             const s = {};
             s[i.XP_BOOSTED_GAMES_REWARD_TYPE] = "xp_boosted_games_reward_description", s[i.AUTOFILL_PROTECTED_GAMES_REWARD_TYPE] = "autofill_protected_games_reward_description", s[i.ARAM_REROLL_REFUND_REWARD_TYPE] = "aram_reroll_refund_reward_description", s[i.LP_CONSOLATION_REWARD_TYPE] = "lp_consolation_reward_description";
             var l = o.Ember.Component.extend({
@@ -23615,11 +23533,11 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = n(572),
-                a = (r = n(573)) && r.__esModule ? r : {
+                i = n(570),
+                a = (r = n(571)) && r.__esModule ? r : {
                     default: r
                 };
-            n(574);
+            n(572);
             var s = o.Ember.Component.extend({
                 classNames: ["credibility-behavior-warning-component"],
                 layout: a.default,
@@ -23685,10 +23603,10 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(576)) && r.__esModule ? r : {
+                i = (r = n(574)) && r.__esModule ? r : {
                     default: r
                 };
-            n(577);
+            n(575);
             var a = o.Ember.Component.extend({
                 classNames: ["credibility-behavior-warning-option"],
                 layout: i.default,
@@ -23714,7 +23632,7 @@
             n.r(t)
         }, (e, t, n) => {
             "use strict";
-            n(579), n(580), n(581), n(584), n(586), n(599), n(601), n(604), n(605), n(607), n(608), n(610), n(611), n(613), n(614), n(615), n(617), n(618), n(620), n(621)
+            n(577), n(578), n(579), n(582), n(584), n(597), n(599), n(602), n(603), n(605), n(606), n(608), n(609), n(611), n(612), n(613), n(615), n(616), n(618), n(619)
         }, (e, t, n) => {
             "use strict";
             const r = n(1);
@@ -23816,7 +23734,7 @@
                     computed: i
                 } = o;
             o.defineElement("lol-player-notifications-button", {
-                styles: n(582),
+                styles: n(580),
                 computed: {
                     notifications: i.resource("/player-notifications/v1/notifications"),
                     toastNotifications: "notifications.reduce(reduceToasts, [])",
@@ -23898,7 +23816,7 @@
             var r = n(231),
                 o = n(232),
                 i = n(235),
-                a = n(583),
+                a = n(581),
                 s = o(r),
                 l = i(a);
             s.push([e.id, "/* notifications button styles */\n.player-notifications-button {\n  position: relative;\n  cursor: pointer;\n  width: 18px;\n  height: 18px;\n}\n.player-notifications-button-icon {\n  outline: none;\n  border: none;\n  background: none;\n  padding: 0;\n  width: 18px;\n  height: 18px;\n  -webkit-mask: url(" + l + ") no-repeat center;\n  background-color: #c8aa6e;\n  -webkit-mask-size: contain;\n}\n.player-notifications-button-icon:hover {\n  background-color: #f0e6d2;\n}\n.player-notifications-button-icon:active,\n.player-notifications-button.open .player-notifications-button-icon {\n  background-color: #785a28;\n}\n.player-notifications-button.disabled .player-notifications-button-icon {\n  background-color: #5c5b57;\n}\n.player-notifications-button.disabled {\n  pointer-events: none;\n}\n.player-notifications-button-unread-pip {\n  position: absolute;\n  top: 1px;\n  right: -1px;\n  width: 8px;\n  height: 8px;\n  box-sizing: border-box;\n  border-radius: 50%;\n  flex-shrink: 0;\n  background: #010a13;\n  box-shadow: 0 0 0 2px #010a13;\n  background-color: #c89b3c;\n}\n", "", {
@@ -23919,7 +23837,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-default-toast", {
-                styles: n(585)
+                styles: n(583)
             })
         }, (e, t, n) => {
             var r = n(231),
@@ -23934,7 +23852,7 @@
             }]), e.exports = o
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(587)) && r.__esModule ? r : {
+            var r, o = (r = n(585)) && r.__esModule ? r : {
                 default: r
             };
             const i = n(1),
@@ -23943,7 +23861,7 @@
                     tra: s
                 } = i;
             a.defineElement("lol-player-notifications-item", {
-                styles: n(597),
+                styles: n(595),
                 dismiss: function() {
                     Object.prototype.hasOwnProperty.call(this.notification, "dismissible") && !this.notification.dismissible || (this.notification.state = "dismissed", i.ajax.delete("/player-notifications/v1/notifications/" + this.notification.id).then((() => {
                         i.playerNotificationsPrivateApi.dispatch("remove", this.notification)
@@ -23975,15 +23893,15 @@
             }), t.default = function(e) {
                 return m.get(e) || e
             };
-            var r = u(n(588)),
-                o = u(n(589)),
-                i = u(n(590)),
-                a = u(n(591)),
-                s = u(n(592)),
-                l = u(n(593)),
-                c = u(n(594)),
-                d = u(n(595)),
-                p = u(n(596));
+            var r = u(n(586)),
+                o = u(n(587)),
+                i = u(n(588)),
+                a = u(n(589)),
+                s = u(n(590)),
+                l = u(n(591)),
+                c = u(n(592)),
+                d = u(n(593)),
+                p = u(n(594));
 
             function u(e) {
                 return e && e.__esModule ? e : {
@@ -24032,7 +23950,7 @@
             var r = n(231),
                 o = n(232),
                 i = n(235),
-                a = n(598),
+                a = n(596),
                 s = o(r),
                 l = i(a);
             s.push([e.id, ".player-notifications-item {\n  display: flex;\n  padding: 12px 18px 10px;\n  border-bottom: thin solid #1e282d;\n}\n.player-notifications-item:hover {\n  background: #1e2328;\n}\n.player-notifications-item:hover .text {\n  color: #f0e6d2;\n}\n.player-notifications-item:hover .time {\n  color: #a09b8c;\n}\n.player-notifications-item-image {\n  width: 56px;\n  height: 56px;\n  flex: 0 0 auto;\n  margin: 0 18px 0 0;\n}\n.player-notifications-item-image:lang(ar-ae) {\n  margin: 0 0 0 18px;\n}\n.player-notifications-item-text {\n  display: flex;\n  flex-direction: column;\n  flex: 1 1 auto;\n  overflow: hidden;\n}\n.player-notifications-item-dismiss-button {\n  outline: none;\n  border: none;\n  background: none;\n  cursor: pointer;\n  padding: 0;\n}\n.player-notifications-item-dismiss-button {\n  -webkit-mask: url(" + l + ") no-repeat center;\n  background-color: #cdbe91;\n  -webkit-mask-size: contain;\n  width: 18px;\n  height: 18px;\n  flex: 0 0 auto;\n}\n.player-notifications-item-dismiss-button:hover {\n  background-color: #f0e6d2;\n}\n.player-notifications-item-dismiss-button:active {\n  background-color: #463714;\n}\n.text {\n  color: #a09b8c;\n  text-overflow: ellipsis;\n  overflow: hidden;\n}\nh6.unread,\nh6.toast {\n  color: #c89b3c;\n}\n.text-unread,\n.text-toast {\n  color: #f0e6d2;\n}\n.time {\n  color: #3c3c41;\n}\n.time-unread,\n.time-toast {\n  color: #a09b8c;\n}\n", "", {
@@ -24054,7 +23972,7 @@
                 } = r,
                 i = /^(\/|https?:\/\/)/;
             o.defineElement("lol-player-notifications-toast", {
-                styles: n(600),
+                styles: n(598),
                 attached: function() {
                     const e = this.querySelector(".player-notifications-toast-container");
                     let t = this.notification.backgroundUrl;
@@ -24086,7 +24004,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-tray", {
-                styles: n(602),
+                styles: n(600),
                 dismissAll: function() {
                     r.modalManager.add({
                         type: "DialogConfirm",
@@ -24118,7 +24036,7 @@
             var r = n(231),
                 o = n(232),
                 i = n(235),
-                a = n(603),
+                a = n(601),
                 s = o(r),
                 l = i(a);
             s.push([e.id, "lol-player-notifications-tray {\n  display: block;\n  width: 414px;\n  height: 402px;\n}\n.notifications-tray {\n  display: flex;\n  flex-direction: column;\n}\n.notifications-tray-header {\n  display: flex;\n  align-items: center;\n  height: 46px;\n  padding: 0 18px;\n  border-bottom: thin solid #463714;\n}\n.notifications-tray-title {\n  flex-grow: 1;\n}\n.notifications-dismiss-all-btn {\n  width: 16px;\n  height: 16px;\n  -webkit-mask: url(" + l + ") no-repeat center;\n  background-color: #cdbe91;\n  -webkit-mask-size: contain;\n  cursor: pointer;\n}\n.notifications-dismiss-all-btn:hover {\n  background-color: #f0e6d2;\n}\n.notifications-dismiss-all-btn:active {\n  background-color: #463714;\n}\n.notifications-dismiss-all-btn:lang(ar-ae) {\n  transform: scaleX(-1);\n}\n.notifications-tray-body {\n  flex-grow: 1;\n  height: 355px;\n}\n", "", {
@@ -24148,7 +24066,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-esports-toast", {
-                styles: n(606)
+                styles: n(604)
             })
         }, (e, t, n) => {
             var r = n(231),
@@ -24172,14 +24090,14 @@
             }))
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(587)) && r.__esModule ? r : {
+            var r, o = (r = n(585)) && r.__esModule ? r : {
                 default: r
             };
             const {
                 components: i
             } = n(1);
             i.defineElement("lol-player-notifications-esports-tft-toast", {
-                styles: n(609),
+                styles: n(607),
                 getIcon() {
                     const {
                         iconUrl: e
@@ -24214,7 +24132,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-merch-toast", {
-                styles: n(612)
+                styles: n(610)
             })
         }, (e, t, n) => {
             var r = n(231),
@@ -24249,14 +24167,14 @@
             }))
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(587)) && r.__esModule ? r : {
+            var r, o = (r = n(585)) && r.__esModule ? r : {
                 default: r
             };
             const {
                 components: i
             } = n(1);
             i.defineElement("lol-player-notifications-rewards-program-toast", {
-                styles: n(616),
+                styles: n(614),
                 getIcon() {
                     const {
                         iconUrl: e
@@ -24314,7 +24232,7 @@
                     components: o
                 } = r;
             o.defineElement("lol-player-notifications-rgm-toast", {
-                styles: n(619)
+                styles: n(617)
             })
         }, (e, t, n) => {
             var r = n(231),
@@ -24338,14 +24256,14 @@
             }))
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(587)) && r.__esModule ? r : {
+            var r, o = (r = n(585)) && r.__esModule ? r : {
                 default: r
             };
             const {
                 components: i
             } = n(1);
             i.defineElement("lol-player-notifications-xbox-gamepass-toast", {
-                styles: n(622),
+                styles: n(620),
                 getIcon() {
                     const {
                         iconUrl: e
@@ -24405,21 +24323,21 @@
                         r.tournaments.persistentPanel = e || null, i.sync()
                     },
                     getHovercardTemplates: () => ({
-                        "components/hovercard-name-alias-mode": n(535),
-                        "components/hovercard-name-summoner-mode": n(536)
+                        "components/hovercard-name-alias-mode": n(533),
+                        "components/hovercard-name-summoner-mode": n(534)
                     }),
                     getHovercardComponent: () => {
                         const {
                             PlayerNameComponent: e
                         } = s;
                         return {
-                            HovercardComponentComponent: n(389).default,
-                            HovercardShellComponent: n(397).default,
-                            HovercardContentComponent: n(392).default,
-                            SocialSessionService: n(505).default,
-                            SocialPlatformConfigService: n(504).default,
-                            SocialSettingsService: n(506).default,
-                            ProfileChampionInfoService: n(477).default,
+                            HovercardComponentComponent: n(388).default,
+                            HovercardShellComponent: n(396).default,
+                            HovercardContentComponent: n(391).default,
+                            SocialSessionService: n(504).default,
+                            SocialPlatformConfigService: n(503).default,
+                            SocialSettingsService: n(505).default,
+                            ProfileChampionInfoService: n(476).default,
                             PlayerNameComponent: e
                         }
                     },
@@ -24573,7 +24491,7 @@
                     g.setChatWindowVisibility = e => {
                         t.setVisibility(e)
                     }
-                })), e.default.playerNotificationsApi = new r.default, e.default.playerNotificationsPrivateApi = e.default.playerNotificationsApi._api, n(578);
+                })), e.default.playerNotificationsApi = new r.default, e.default.playerNotificationsPrivateApi = e.default.playerNotificationsApi._api, n(576);
                 const y = f.create("rcp-fe-lol-social");
                 _.bump().then((e => {
                     e.getElement().appendChild(b)
@@ -24583,7 +24501,7 @@
                         friendFinder: x.__container__.lookup("service:friend-finder"),
                         socialButtons: x.__container__.lookup("service:social-buttons")
                     };
-                return n(623)(v)
+                return n(621)(v)
             }))
         }), {
             once: !0

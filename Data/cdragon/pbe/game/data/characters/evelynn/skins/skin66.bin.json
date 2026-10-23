@@ -606,11 +606,6 @@
                         "boneName": "Dog2_Spine2",
                         "effectKey": "Evelynn_Idle_Tar",
                         "__type": "PersistentVfxData"
-                    },
-                    {
-                        "boneName": "Dog2_Spine2",
-                        "effectKey": "{7b333265}",
-                        "__type": "PersistentVfxData"
                     }
                 ],
                 "__type": "PersistentEffectConditionData"
@@ -656,11 +651,6 @@
                     {
                         "boneName": "Dog2_Spine2",
                         "effectKey": "Evelynn_Idle_Tar",
-                        "__type": "PersistentVfxData"
-                    },
-                    {
-                        "boneName": "Dog2_Spine2",
-                        "effectKey": "Evelynn_Emote_Taunt_Dog",
                         "__type": "PersistentVfxData"
                     }
                 ],
@@ -6869,6 +6859,7 @@
                 "lifetime": 99999.0,
                 "isSingleParticle": 1,
                 "emitterName": "flash4",
+                "disabled": true,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -6984,15 +6975,6 @@
                     "__type": "VfxShapeSphere"
                 },
                 "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        0.5000076293945312
-                    ],
-                    "__type": "ValueColor"
-                },
                 "Color": {
                     "dynamics": {
                         "times": [
@@ -7015,15 +6997,15 @@
                                 1.0
                             ],
                             [
-                                0.7997406125068665,
+                                0.21725794672966003,
                                 0.0,
-                                0.30843061208724976,
+                                0.7997406125068665,
                                 0.6000000238418579
                             ],
                             [
-                                0.4404516816139221,
+                                0.06761272251605988,
                                 0.0,
-                                0.10981918126344681,
+                                0.4404516816139221,
                                 0.0
                             ]
                         ],
@@ -7035,7 +7017,7 @@
                 "useNavmeshMask": 1,
                 "birthScale0": {
                     "constantValue": [
-                        8.0,
+                        6.0,
                         6.0,
                         6.0
                     ],
@@ -7064,7 +7046,7 @@
                         ],
                         "values": [
                             [
-                                8.0,
+                                6.0,
                                 6.0,
                                 6.0
                             ]
@@ -7078,11 +7060,11 @@
             },
             {
                 "rate": {
-                    "constantValue": 15.0,
+                    "constantValue": 5.0,
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 0.4000000059604645,
+                    "constantValue": 1.0,
                     "dynamics": {
                         "probabilityTables": [
                             {
@@ -7103,7 +7085,7 @@
                             0.0
                         ],
                         "values": [
-                            0.4000000059604645
+                            1.0
                         ],
                         "__type": "VfxAnimatedFloatVariableData"
                     },
@@ -7113,7 +7095,7 @@
                 "birthOrbitalVelocity": {
                     "constantValue": [
                         0.0,
-                        1.0,
+                        0.5,
                         0.0
                     ],
                     "dynamics": {
@@ -7142,7 +7124,7 @@
                         "values": [
                             [
                                 0.0,
-                                1.0,
+                                0.5,
                                 0.0
                             ]
                         ],
@@ -7152,8 +7134,8 @@
                 },
                 "birthVelocity": {
                     "constantValue": [
-                        100.0,
-                        100.0,
+                        50.0,
+                        50.0,
                         50.0
                     ],
                     "dynamics": {
@@ -7197,8 +7179,8 @@
                         ],
                         "values": [
                             [
-                                100.0,
-                                100.0,
+                                50.0,
+                                50.0,
                                 50.0
                             ]
                         ],
@@ -7303,15 +7285,15 @@
                                 1.0
                             ],
                             [
+                                0.23422598838806152,
+                                0.0,
                                 0.8281681537628174,
-                                0.0,
-                                0.0,
                                 1.0
                             ],
                             [
-                                0.4801556468009949,
+                                0.1750209778547287,
                                 0.0,
-                                0.13563744723796844,
+                                0.4801556468009949,
                                 0.0
                             ]
                         ],
@@ -17462,6 +17444,14 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "EmitterPosition": {
+                    "constantValue": [
+                        -10.0,
+                        15.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
                 "primitive": {
                     "__type": "VfxPrimitiveRay"
                 },
@@ -17518,45 +17508,10 @@
                 "particleIsLocalOrientation": 1,
                 "birthRotation0": {
                     "constantValue": [
+                        100.0,
                         0.0,
-                        -90.0,
                         0.0
                     ],
-                    "__type": "ValueVector3"
-                },
-                "birthRotationalVelocity0": {
-                    "dynamics": {
-                        "probabilityTables": [
-                            {
-                                "keyTimes": [
-                                    0.0,
-                                    1.0
-                                ],
-                                "keyValues": [
-                                    -1.0,
-                                    1.0
-                                ],
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            }
-                        ],
-                        "times": [
-                            0.0
-                        ],
-                        "values": [
-                            [
-                                0.0,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
                     "__type": "ValueVector3"
                 },
                 "birthScale0": {
@@ -18613,7 +18568,6 @@
                     "__type": "ValueColor"
                 },
                 "alphaRef": 0,
-                "miscRenderFlags": 1,
                 "isUniformScale": 1,
                 "birthRotation0": {
                     "constantValue": [
@@ -26610,6 +26564,7 @@
                 },
                 "pass": 20,
                 "alphaRef": 0,
+                "{cb13aff1}": -45.0,
                 "isUniformScale": 1,
                 "isLocalOrientation": 0,
                 "birthScale0": {
@@ -102944,6 +102899,8 @@
                 "pass": -500,
                 "alphaRef": 0,
                 "{cb13aff1}": -110.0,
+                "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -103065,6 +103022,8 @@
                 "alphaRef": 0,
                 "{cb13aff1}": -110.0,
                 "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -103155,6 +103114,8 @@
                 "disableBackfaceCull": true,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -104144,6 +104105,7 @@
                 },
                 "pass": 20,
                 "alphaRef": 0,
+                "{cb13aff1}": -25.0,
                 "isUniformScale": 1,
                 "isLocalOrientation": 0,
                 "birthScale0": {
@@ -124338,6 +124300,8 @@
                 "pass": -500,
                 "alphaRef": 0,
                 "{cb13aff1}": -90.0,
+                "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -124488,6 +124452,8 @@
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "{cb13aff1}": -90.0,
+                "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -134513,6 +134479,7 @@
                     "__type": "ValueColor"
                 },
                 "alphaRef": 0,
+                "{cb13aff1}": -100.0,
                 "isUniformScale": 1,
                 "birthRotation0": {
                     "constantValue": [
@@ -177772,8 +177739,10 @@
                 },
                 "pass": -500,
                 "alphaRef": 0,
-                "{cb13aff1}": -80.0,
+                "{cb13aff1}": -60.0,
                 "particleIsLocalOrientation": 1,
+                "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -178173,6 +178142,7 @@
                     -1.0,
                     -2.0
                 ],
+                "{cb13aff1}": 50.0,
                 "isUniformScale": 1,
                 "isRandomStartFrame": 1,
                 "birthRotation0": {
@@ -178682,12 +178652,14 @@
                     },
                     "__type": "ValueColor"
                 },
-                "pass": -2,
+                "pass": -499,
                 "alphaRef": 0,
                 "{cb13aff1}": -20.0,
                 "disableBackfaceCull": true,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -179768,10 +179740,12 @@
                     ],
                     "__type": "ValueColor"
                 },
-                "pass": -300,
+                "pass": -500,
                 "alphaRef": 0,
                 "disableBackfaceCull": true,
                 "particleIsLocalOrientation": 1,
+                "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -180157,7 +180131,7 @@
                         0.0,
                         0.7400014996528625,
                         1.0,
-                        0.43999388813972473
+                        0.20999465882778168
                     ],
                     "__type": "ValueColor"
                 },
@@ -180607,7 +180581,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Evelynn/Skins/Skin66/Particles/Evelynn_Skin99_W_Heart.tex",
+                "texture": "ASSETS/Characters/Evelynn/Skins/Skin66/Particles/Evelynn_Skin66_W_Heart.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -180675,7 +180649,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Evelynn/Skins/Skin66/Particles/Evelynn_Skin99_W_Heart.tex",
+                "texture": "ASSETS/Characters/Evelynn/Skins/Skin66/Particles/Evelynn_Skin66_W_Heart.tex",
                 "textureMult": {
                     "textureMult": "ASSETS/Characters/Evelynn/Skins/Skin66/Particles/Evelynn_Skin66_R_Mult02.tex",
                     "birthUvScrollRateMult": {
@@ -180876,7 +180850,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Evelynn/Skins/Skin66/Particles/Evelynn_Skin99_W_Heart.tex",
+                "texture": "ASSETS/Characters/Evelynn/Skins/Skin66/Particles/Evelynn_Skin66_W_Heart.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -181895,7 +181869,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Evelynn/Skins/Skin66/Particles/Evelynn_Skin99_W_Heart.tex",
+                "texture": "ASSETS/Characters/Evelynn/Skins/Skin66/Particles/Evelynn_Skin66_W_Heart.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -185806,8 +185780,8 @@
                         "mRuleName": "Kill - General",
                         "mAudioAction": {
                             "mSelfEventName": "Kill3DGeneral",
+                            "mEnemyEventName": "Kill3DGeneral",
                             "mWaitForAnnouncerQueue": true,
-                            "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
                         "mPriority": 30,
@@ -185893,7 +185867,7 @@
                                 "mChildCondition": {
                                     "mChildConditions": [
                                         {
-                                            "__type": "ContextualConditionIsSelf"
+                                            "__type": "ContextualConditionIsAlly"
                                         }
                                     ],
                                     "__type": "ContextualConditionCharacter"
@@ -185918,7 +185892,7 @@
                                 "mChildCondition": {
                                     "mChildConditions": [
                                         {
-                                            "__type": "ContextualConditionIsSelf"
+                                            "__type": "ContextualConditionIsAlly"
                                         }
                                     ],
                                     "__type": "ContextualConditionCharacter"
@@ -185944,7 +185918,7 @@
                                 "mChildCondition": {
                                     "mChildConditions": [
                                         {
-                                            "__type": "ContextualConditionIsSelf"
+                                            "__type": "ContextualConditionIsAlly"
                                         }
                                     ],
                                     "__type": "ContextualConditionCharacter"
@@ -185970,7 +185944,7 @@
                                 "mChildCondition": {
                                     "mChildConditions": [
                                         {
-                                            "__type": "ContextualConditionIsSelf"
+                                            "__type": "ContextualConditionIsAlly"
                                         }
                                     ],
                                     "__type": "ContextualConditionCharacter"
@@ -185978,7 +185952,7 @@
                                 "__type": "ContextualConditionNegation"
                             },
                             {
-                                "mTakenObjective": 1024,
+                                "mTakenObjective": 256,
                                 "__type": "ContextualConditionObjectiveTakeByMyTeam"
                             }
                         ],
@@ -185999,6 +185973,7 @@
                         "mConditions": [
                             {
                                 "mChildCondition": {
+                                    "mCharacterType": 1,
                                     "mChildConditions": [
                                         {
                                             "mIsAlly": true,
@@ -186014,7 +185989,6 @@
                                     "objectives": 8,
                                     "__type": "{e46a1cdb}"
                                 },
-                                "CompareOp": 2,
                                 "{b95ee9e0}": {
                                     "{df38ac45}": 1,
                                     "objectives": 8,
@@ -186044,6 +186018,7 @@
                         "mConditions": [
                             {
                                 "mChildCondition": {
+                                    "mCharacterType": 1,
                                     "mChildConditions": [
                                         {
                                             "mIsAlly": true,
@@ -186059,7 +186034,7 @@
                                     "objectives": 8,
                                     "__type": "{e46a1cdb}"
                                 },
-                                "CompareOp": 5,
+                                "CompareOp": 4,
                                 "{b95ee9e0}": {
                                     "{df38ac45}": 1,
                                     "objectives": 8,
@@ -186148,7 +186123,7 @@
                         "mRuleName": "Steal Void Grubs",
                         "mConditions": [
                             {
-                                "mTakenObjective": 2048,
+                                "mTakenObjective": 512,
                                 "__type": "ContextualConditionObjectiveTakeByMyTeam"
                             }
                         ],
