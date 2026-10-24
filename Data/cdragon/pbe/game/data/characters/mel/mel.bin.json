@@ -4157,7 +4157,7 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "TotalDamage": {
+                "TotalDamageTT": {
                     "mFormulaParts": [
                         {
                             "mSubparts": [
@@ -4166,40 +4166,59 @@
                                     "__type": "NamedDataValueCalculationPart"
                                 },
                                 {
-                                    "mDataValue": "APRatioInitial",
-                                    "__type": "StatByNamedDataValueCalculationPart"
+                                    "mPart1": {
+                                        "mSubparts": [
+                                            {
+                                                "mDataValue": "COUNT",
+                                                "__type": "NamedDataValueCalculationPart"
+                                            },
+                                            {
+                                                "mNumber": -1.0,
+                                                "__type": "NumberCalculationPart"
+                                            }
+                                        ],
+                                        "__type": "SumOfSubPartsCalculationPart"
+                                    },
+                                    "mPart2": {
+                                        "mDataValue": "BaseDamageSubsequent",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "__type": "ProductOfSubPartsCalculationPart"
                                 }
                             ],
                             "__type": "SumOfSubPartsCalculationPart"
                         },
                         {
-                            "mPart1": {
+                            "mSubpart": {
                                 "mSubparts": [
                                     {
-                                        "mDataValue": "COUNT",
+                                        "mDataValue": "APRatioInitial",
                                         "__type": "NamedDataValueCalculationPart"
                                     },
                                     {
-                                        "mNumber": -1.0,
-                                        "__type": "NumberCalculationPart"
+                                        "mPart1": {
+                                            "mSubparts": [
+                                                {
+                                                    "mDataValue": "COUNT",
+                                                    "__type": "NamedDataValueCalculationPart"
+                                                },
+                                                {
+                                                    "mNumber": -1.0,
+                                                    "__type": "NumberCalculationPart"
+                                                }
+                                            ],
+                                            "__type": "SumOfSubPartsCalculationPart"
+                                        },
+                                        "mPart2": {
+                                            "mDataValue": "APRatioSubsuquent",
+                                            "__type": "NamedDataValueCalculationPart"
+                                        },
+                                        "__type": "ProductOfSubPartsCalculationPart"
                                     }
                                 ],
                                 "__type": "SumOfSubPartsCalculationPart"
                             },
-                            "mPart2": {
-                                "mSubparts": [
-                                    {
-                                        "mDataValue": "BaseDamageSubsequent",
-                                        "__type": "NamedDataValueCalculationPart"
-                                    },
-                                    {
-                                        "mDataValue": "APRatioSubsuquent",
-                                        "__type": "StatByNamedDataValueCalculationPart"
-                                    }
-                                ],
-                                "__type": "SumOfSubPartsCalculationPart"
-                            },
-                            "__type": "ProductOfSubPartsCalculationPart"
+                            "__type": "StatBySubPartCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -4421,7 +4440,7 @@
             "{6d548702}": {
                 "mFormulaParts": [
                     {
-                        "mSpellCalculationKey": "TotalDamage",
+                        "mSpellCalculationKey": "TotalDamageTT",
                         "__type": "{f3cbe7b2}"
                     }
                 ],

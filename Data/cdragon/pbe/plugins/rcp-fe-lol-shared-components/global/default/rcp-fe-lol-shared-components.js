@@ -3555,6 +3555,9 @@
                 static get _BUTTON_STATE_ERROR() {
                     return "error"
                 }
+                static get _BUTTON_STATE_MAX_LIMIT_REACHED() {
+                    return "maxLimitReached"
+                }
                 static get _BUTTON_STATE_FOUND() {
                     return "found"
                 }
@@ -3574,6 +3577,7 @@
                         incompatible: r.tra.get("replays_button_default_tooltip_incompatible"),
                         missingOrExpired: r.tra.get("replays_button_default_tooltip_missing_or_expired"),
                         error: r.tra.get("replays_button_default_tooltip_error"),
+                        maxLimitReached: r.tra.get("replays_button_default_tooltip_max_limit_reached"),
                         unsupported: r.tra.get("replays_button_default_tooltip_unsupported"),
                         watchDisabledPatching: r.tra.get("replays_button_tooltip_watch_disabled_patching"),
                         watchDisabledInTournament: r.tra.get("replays_button_tooltip_watch_disabled_in_tournament"),
@@ -3692,11 +3696,14 @@
                 static _updateButtonToError(e, t) {
                     u._clearStateClasses(e), e.addClass("error"), e.prop("disabled", !0), u._setTooltip(t, r.lodash.get(t, "_tooltips.error", null)), u._unbindClick(e), u._logStateChange(t, "clickDisabled")
                 }
+                static _updateButtonToMaxLimitReached(e, t) {
+                    u._clearStateClasses(e), e.addClass("error"), e.prop("disabled", !0), u._setTooltip(t, r.lodash.get(t, "_tooltips.maxLimitReached", null)), u._unbindClick(e), u._logStateChange(t, "clickDisabled")
+                }
                 static _updateButton(e, t) {
                     if (!t) return;
                     e._previousState = e._state, e._state = t.state, e._gameMetaData = t;
                     const n = e._button;
-                    u._unbindClick(n), t.state === u._BUTTON_STATE_DOWNLOAD ? u._updateButtonToDownload(n, e) : t.state === u._BUTTON_STATE_CHECKING ? u._updateButtonToChecking(n, e) : t.state === u._BUTTON_STATE_FOUND ? u._updateButtonToFound(n, e) : t.state === u._BUTTON_STATE_DOWNLOADING ? u._updateReplayButtonToDownloading(n, e) : t.state === u._BUTTON_STATE_WATCH ? u._updateButtonToWatch(n, e) : t.state === u._BUTTON_STATE_INCOMPATIBLE ? u._updateButtonToIncompatible(n, e) : t.state === u._BUTTON_STATE_MISSING_OR_EXPIRED ? u._updateButtonToMissingOrExpired(n, e) : t.state === u._BUTTON_STATE_RETRY_DOWNLOAD ? u._updateButtonToRetryDownload(n, e) : t.state === u._BUTTON_STATE_LOST ? u._updateButtonToLost(n, e) : t.state === u._BUTTON_STATE_ERROR ? u._updateButtonToError(n, e) : t.state === u._BUTTON_STATE_UNSUPPORTED ? u._updateButtonToUnsupported(n, e) : u._logError(e, "the assigned state is invalid!")
+                    u._unbindClick(n), t.state === u._BUTTON_STATE_DOWNLOAD ? u._updateButtonToDownload(n, e) : t.state === u._BUTTON_STATE_CHECKING ? u._updateButtonToChecking(n, e) : t.state === u._BUTTON_STATE_FOUND ? u._updateButtonToFound(n, e) : t.state === u._BUTTON_STATE_DOWNLOADING ? u._updateReplayButtonToDownloading(n, e) : t.state === u._BUTTON_STATE_WATCH ? u._updateButtonToWatch(n, e) : t.state === u._BUTTON_STATE_INCOMPATIBLE ? u._updateButtonToIncompatible(n, e) : t.state === u._BUTTON_STATE_MISSING_OR_EXPIRED ? u._updateButtonToMissingOrExpired(n, e) : t.state === u._BUTTON_STATE_RETRY_DOWNLOAD ? u._updateButtonToRetryDownload(n, e) : t.state === u._BUTTON_STATE_LOST ? u._updateButtonToLost(n, e) : t.state === u._BUTTON_STATE_ERROR ? u._updateButtonToError(n, e) : t.state === u._BUTTON_STATE_MAX_LIMIT_REACHED ? u._updateButtonToMaxLimitReached(n, e) : t.state === u._BUTTON_STATE_UNSUPPORTED ? u._updateButtonToUnsupported(n, e) : u._logError(e, "the assigned state is invalid!")
                 }
                 static _updateConfiguration(e, t) {
                     if (!t) return;

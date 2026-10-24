@@ -27177,18 +27177,16 @@
             const s = "/lol-challenges/v1/notifications",
                 o = "/lol-platform-config/v1/namespaces/Challenges/LevelUpCelebrationEnabled",
                 r = "/lol-gameflow/v1/session",
-                l = "VIGNETTE",
-                c = "TOAST",
-                d = "APEX";
-            var u = i.Ember.Service.extend({
+                l = "VIGNETTE";
+            var c = i.Ember.Service.extend({
                 challengesEnabled: !1,
                 animationsEnabled: !1,
                 challengesVignette: null,
                 playedNotifications: {},
                 notifications: [],
-                isValidToastDisplayPhase: !0,
-                notificationsChangedObserver: i.Ember.on("init", i.Ember.observer("notifications.[]", "challengesEnabled", "isValidToastDisplayPhase", (function() {
-                    this.get("isValidToastDisplayPhase") ? i.Ember.run.once(this, "_processChallengeNotification") : i.Ember.run.once(this, "_endToastCelebration")
+                isValidNotificationDisplayPhase: !0,
+                notificationsChangedObserver: i.Ember.on("init", i.Ember.observer("notifications.[]", "challengesEnabled", (function() {
+                    i.Ember.run.once(this, "_processChallengeNotification")
                 }))),
                 init() {
                     this._super(...arguments), this.initDataBindings()
@@ -27199,30 +27197,26 @@
                 initDataBindings() {
                     i.db.observe(o, this, this._handleCelebrationEnabled.bind(this)), i.db.observe(s, this, this._handleChallengeNotification.bind(this)), i.db.observe(r, this, this._handleGameflowPhase.bind(this)), this._handleUXSettings = this.handleUXSettings.bind(this), i.UXSettings.addObserver(this._handleUXSettings)
                 },
-                _endToastCelebration() {
-                    const e = this.get("notifications");
-                    !e || e && 0 === e.length || i.ToastCelebrationManager.dismissAll()
-                },
                 _handleGameflowPhase(e) {
-                    if (!e) return void this.set("isValidToastDisplayPhase", !0);
+                    if (!e) return void this.set("isValidNotificationDisplayPhase", !0);
                     const t = e.phase,
                         n = !t || a.VALID_GAMEFLOW_TOAST_DISPLAY_STATES.includes(t);
-                    this.set("isValidToastDisplayPhase", n)
+                    this.set("isValidNotificationDisplayPhase", n)
                 },
                 _handleCelebrationEnabled(e) {
                     const t = i.SharedChallengesConstants.getFlagValueOrDefault(i.SharedChallengesConstants.CHALLENGE_FLAG_NAMES.LEVEL_UP_CELEBRATION_ENABLED, e);
                     this.set("challengesEnabled", t)
                 },
-                _canShowToasts() {
-                    return this.get("challengesEnabled") && this.get("isValidToastDisplayPhase")
+                _canShowNotifications() {
+                    return this.get("challengesEnabled") && this.get("isValidNotificationDisplayPhase")
                 },
                 _handleChallengeNotification(e) {
                     this.set("notifications", e), this._waitForUnlock(this._processChallengeNotification, e)
                 },
                 _processChallengeNotification() {
-                    if (!this._canShowToasts()) return;
+                    if (!this._canShowNotifications()) return;
                     const e = this.get("notifications");
-                    !e || e && 0 === e.length || (this._handleVignetteNotifications(e), this._waitForUnlock(this._handleToastNotifications, e))
+                    !e || e && 0 === e.length || this._handleVignetteNotifications(e)
                 },
                 handleUXSettings(e) {
                     const t = e && e.largeAreaAnimationsEnabled;
@@ -27280,63 +27274,6 @@
                 _ackChallengeNotification(e) {
                     e && i.db.post(`/lol-challenges/v1/ack-challenge-update/${e}`)
                 },
-                _showGroupToast(e) {
-                    const t = this.get("tra"),
-                        n = t.get("challenges_toast_title"),
-                        a = t.formatString("challenges_toast_group_desc", {
-                            challengeCount: e.length
-                        }),
-                        s = e[0],
-                        o = e[1],
-                        r = document.createElement("div");
-                    r.style.height = "100%", r.style.width = "100%", r.style.position = "relative";
-                    const l = this._getChallengeToastIconElement(s.iconPath);
-                    l.style.position = "absolute", l.style.bottom = "10px", l.style.right = "15px";
-                    const c = this._getChallengeToastIconElement(o.iconPath);
-                    c.style.position = "absolute", c.style.top = "11px", c.style.left = "18px", r.appendChild(l), r.appendChild(c);
-                    const d = this.get("playedNotifications");
-                    e.forEach((e => {
-                        d[e.id] = e, this._ackChallengeNotification(e.id)
-                    })), i.ToastCelebrationManager.add({
-                        data: {
-                            title: n,
-                            details: a,
-                            iconElement: r
-                        },
-                        timing: "infinite"
-                    })
-                },
-                _showToast(e) {
-                    if (!e) return;
-                    const t = this._getChallengeToastTitle(e.updateReason),
-                        n = this._getChallengeToastDetails(e.level, e.challengeName),
-                        a = this._getChallengeToastIconElement(e.iconPath);
-                    this._ackChallengeNotification(e.id), i.ToastCelebrationManager.add({
-                        data: {
-                            title: t,
-                            details: n,
-                            iconElement: a
-                        },
-                        timing: "infinite"
-                    })
-                },
-                _getChallengeToastTitle(e) {
-                    const t = this.get("tra"),
-                        n = t.get("challenges_toast_title"),
-                        i = t.get("challenges_toast_leaderboard_title");
-                    return e === d ? i : n
-                },
-                _getChallengeToastDetails(e, t) {
-                    const n = t || "";
-                    return this.get("tra").formatString("challenges_toast_desc", {
-                        challengeName: n,
-                        challengeRank: this._challengeLevelLoc(e)
-                    })
-                },
-                _getChallengeToastIconElement(e) {
-                    const t = document.createElement("div");
-                    return t.style.height = "100%", t.style.width = "100%", t.style.background = `no-repeat center/60% url("${e}")`, t
-                },
                 _challengeLevelLoc(e) {
                     const t = this.get("tra"),
                         n = e ? e.toLowerCase() : "none";
@@ -27357,21 +27294,9 @@
                     t.forEach((e => {
                         e && !n[e.id] && (n[e.id] = e, this._waitForUnlock(this._prepareLevelUpVignette, e))
                     }))
-                },
-                _handleToastNotifications(e) {
-                    const t = this.get("playedNotifications"),
-                        n = e.filter((e => {
-                            const n = e.displayType === c,
-                                i = e && e.id,
-                                a = !!i && !t[i];
-                            return n && a
-                        }));
-                    n.length > 10 ? this._showGroupToast(n) : n.forEach((e => {
-                        e && (t[e.id] = e, this._showToast(e))
-                    }))
                 }
             });
-            t.default = u
+            t.default = c
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
