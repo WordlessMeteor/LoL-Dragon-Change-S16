@@ -90,18 +90,6 @@
                     "{095185ec}": {
                         "mMaskDataName": "FullAnim",
                         "__type": "ConformToPathEventData"
-                    },
-                    "{b81e6ae2}": {
-                        "mShowSubmeshList": [
-                            "{eee1df28}"
-                        ],
-                        "__type": "SubmeshVisibilityEventData"
-                    },
-                    "{1db94e13}": {
-                        "mShowSubmeshList": [
-                            "{f1e1e3e1}"
-                        ],
-                        "__type": "SubmeshVisibilityEventData"
                     }
                 },
                 "mAnimationResourceData": {
@@ -117,18 +105,6 @@
                         "mMaskDataName": "FullAnim",
                         "mBlendInTime": 0.25,
                         "__type": "ConformToPathEventData"
-                    },
-                    "{b81e6ae2}": {
-                        "mShowSubmeshList": [
-                            "{eee1df28}"
-                        ],
-                        "__type": "SubmeshVisibilityEventData"
-                    },
-                    "{1db94e13}": {
-                        "mShowSubmeshList": [
-                            "{f1e1e3e1}"
-                        ],
-                        "__type": "SubmeshVisibilityEventData"
                     }
                 },
                 "mAnimationResourceData": {
@@ -615,7 +591,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "Respawn": {
+            "{ebc3be23}": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "{3d759003}": {
@@ -683,15 +659,6 @@
                         ],
                         "__type": "ParticleEventData"
                     },
-                    "{5c3112f7}": {
-                        "mStartFrame": 76.0,
-                        "mEndFrame": 124.0,
-                        "mHideSubmeshList": [
-                            "{8c4fbac0}",
-                            "{edd4a5c6}"
-                        ],
-                        "__type": "SubmeshVisibilityEventData"
-                    },
                     "{a91aa49d}": {
                         "mHideSubmeshList": [
                             "{eee1df28}",
@@ -701,7 +668,7 @@
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "assets/characters/evelynn/skins/skin66/animations/respawn.anm",
+                    "mAnimationFilePath": "{a949a20162d4adbf}",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -1741,13 +1708,11 @@
                         "mIsLoop": false,
                         "__type": "SoundEventData"
                     },
-                    "{1ea1eb91}": {
-                        "mStartFrame": 140.0,
+                    "{0f7ae4b5}": {
+                        "mStartFrame": 129.0,
                         "mShowSubmeshList": [
                             "{aec90f3b}",
-                            "Recall",
-                            "Coffin",
-                            "{0ba566b5}"
+                            "Recall"
                         ],
                         "__type": "SubmeshVisibilityEventData"
                     },
@@ -1787,10 +1752,6 @@
                         "mStartFrame": 18.0,
                         "mEffectKey": "Evelynn_Skin65_Recall_Light01",
                         "mParticleEventDataPairList": [
-                            {
-                                "mBoneName": "{17052e1a}",
-                                "__type": "ParticleEventDataPair"
-                            },
                             {
                                 "mBoneName": "{6a2608a0}",
                                 "__type": "ParticleEventDataPair"
@@ -1874,6 +1835,7 @@
                         "__type": "SubmeshVisibilityEventData"
                     },
                     "{a91aa49d}": {
+                        "mStartFrame": 129.0,
                         "mShowSubmeshList": [
                             "{eee1df28}",
                             "{f1e1e3e1}"
@@ -1923,12 +1885,24 @@
                         "__type": "SubmeshVisibilityEventData"
                     },
                     "{de833c28}": {
-                        "mEndFrame": 94.0,
-                        "mHideSubmeshList": [
+                        "mStartFrame": 94.0,
+                        "mEndFrame": 260.0,
+                        "mShowSubmeshList": [
                             "Coffin",
                             "{0ba566b5}"
                         ],
                         "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{e4e8b47a}": {
+                        "mStartFrame": 18.0,
+                        "mEffectKey": "Evelynn_Recall_GroundVFX",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "{17052e1a}",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
                     }
                 },
                 "mAnimationResourceData": {
@@ -1975,19 +1949,18 @@
                         ],
                         "__type": "SubmeshVisibilityEventData"
                     },
-                    "{ab781fd8}": {
-                        "mEffectKey": "Evelynn_Emote_Respawn_Light",
-                        "mParticleEventDataPairList": [
-                            {
-                                "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
-                                "__type": "ParticleEventDataPair"
-                            }
+                    "Submesh": {
+                        "mEndFrame": 30.0,
+                        "mShowSubmeshList": [
+                            "{2800f670}",
+                            "{0ba566b5}",
+                            "Coffin"
                         ],
-                        "__type": "ParticleEventData"
+                        "__type": "SubmeshVisibilityEventData"
                     },
                     "{ed90e984}": {
                         "mStartFrame": 30.0,
-                        "mEffectKey": "Evelynn_Emote_Respawn",
+                        "mEffectKey": "Evelynn_Emote_Respawn_ab",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
@@ -1997,9 +1970,7 @@
                         "__type": "ParticleEventData"
                     },
                     "{a6f9fb79}": {
-                        "mStartFrame": 28.0,
-                        "mEndFrame": 35.0,
-                        "mEffectKey": "Evelynn_Skin65_Emote_Respawn_Fingers",
+                        "mEffectKey": "Evelynn_Emote_Respawn_Light",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "C_Buffbone_GLB_Layout_Loc",
@@ -2007,15 +1978,6 @@
                             }
                         ],
                         "__type": "ParticleEventData"
-                    },
-                    "Submesh": {
-                        "mEndFrame": 30.0,
-                        "mShowSubmeshList": [
-                            "{2800f670}",
-                            "{0ba566b5}",
-                            "Coffin"
-                        ],
-                        "__type": "SubmeshVisibilityEventData"
                     }
                 },
                 "mAnimationResourceData": {
@@ -2972,6 +2934,7 @@
                         "__type": "ConformToPathEventData"
                     },
                     "VFX2": {
+                        "mEndFrame": 78.0,
                         "mEffectKey": "Evelynn_Emote_Joke_fireglow052",
                         "mParticleEventDataPairList": [
                             {
@@ -3030,7 +2993,7 @@
                     "{d9eea6c8}": {
                         "mStartFrame": 39.0,
                         "mEndFrame": 81.0,
-                        "mEffectKey": "{970ca382}",
+                        "mEffectKey": "Evelynn_Emote_Joke_fireChild02",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "{946347e4}",
@@ -3092,6 +3055,7 @@
                         "__type": "SoundEventData"
                     },
                     "VFX2": {
+                        "mEndFrame": 78.0,
                         "mEffectKey": "Evelynn_Emote_Joke_fireglow052",
                         "mParticleEventDataPairList": [
                             {
@@ -3148,7 +3112,7 @@
                     "{d9eea6c8}": {
                         "mStartFrame": 39.0,
                         "mEndFrame": 81.0,
-                        "mEffectKey": "{970ca382}",
+                        "mEffectKey": "Evelynn_Emote_Joke_fireChild02",
                         "mParticleEventDataPairList": [
                             {
                                 "mBoneName": "{946347e4}",
@@ -3899,6 +3863,111 @@
                 },
                 "mTrueConditionClipName": "{c448ba13}",
                 "mFalseConditionClipName": "{c448ba13}",
+                "__type": "ConditionBoolClipData"
+            },
+            "{06c7c1df}": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{3d759003}": {
+                        "__type": "FaceTargetEventData"
+                    },
+                    "{24d78f00}": {
+                        "mHideSubmeshList": [
+                            "Evelynn_Mat"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{919b8054}": {
+                        "mHideSubmeshList": [
+                            "Evelynn_Lashers_Mat",
+                            "Evelynn_Shadow_MAT",
+                            "Evelynn_Mat"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "Face_Camera": {
+                        "__type": "FaceTargetEventData"
+                    },
+                    "{ab781fd8}": {
+                        "mEffectKey": "Evelynn_Emote_RespawnStart",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{04f62be4}": {
+                        "mSoundName": "Play_sfx_EvelynnSkin66_Respawn3D_buffactivate",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    },
+                    "Submesh": {
+                        "mEndFrame": 60.0,
+                        "mShowSubmeshList": [
+                            "{2800f670}",
+                            "{0ba566b5}",
+                            "Coffin"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{ed90e984}": {
+                        "mStartFrame": 30.0,
+                        "mEffectKey": "Evelynn_Emote_Respawn_ab",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{a6f9fb79}": {
+                        "mEffectKey": "Evelynn_Emote_Respawn_Light",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_Buffbone_GLB_Layout_Loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{5c3112f7}": {
+                        "mStartFrame": 76.0,
+                        "mEndFrame": 124.0,
+                        "mHideSubmeshList": [
+                            "{8c4fbac0}",
+                            "{edd4a5c6}"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{a91aa49d}": {
+                        "mEndFrame": 64.0,
+                        "mHideSubmeshList": [
+                            "{eee1df28}",
+                            "{f1e1e3e1}"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "{07cfef3276ee6be1}",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Respawn": {
+                "mFlags": 1,
+                "Updater": {
+                    "driver": {
+                        "mSlot": 3,
+                        "__type": "LearnedSpellDynamicMaterialBoolDriver"
+                    },
+                    "__type": "LogicDriverBoolParametricUpdater"
+                },
+                "mTrueConditionClipName": "{06c7c1df}",
+                "mFalseConditionClipName": "{ebc3be23}",
                 "__type": "ConditionBoolClipData"
             }
         },
@@ -5888,11 +5957,11 @@
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
-            "11490697228592759042": {
+            "16988631280190374146": {
                 "mTime": 0.05000000074505806,
                 "__type": "TimeBlendData"
             },
-            "11490697228519267634": {
+            "16988631280116882738": {
                 "mTime": 0.05000000074505806,
                 "__type": "TimeBlendData"
             },
@@ -8476,7 +8545,7 @@
                 "mClipName": "Run_Homeguard_IN",
                 "__type": "TransitionClipBlendData"
             },
-            "11490697227728731017": {
+            "16988631279326346121": {
                 "mClipName": "Run_Homeguard_IN",
                 "__type": "TransitionClipBlendData"
             },
@@ -8992,7 +9061,7 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "11490697226825612720": {
+            "16988631278423227824": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -9240,7 +9309,7 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "11490697227189602239": {
+            "16988631278787217343": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -9568,7 +9637,7 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "11490697228136946496": {
+            "16988631279734561600": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -9756,279 +9825,279 @@
                 "mClipName": "{7ed98fd5}",
                 "__type": "TransitionClipBlendData"
             },
-            "6247030501643069503": {
+            "6247030502923157027": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "11480947154004420671": {
+            "11480947155284508195": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "3410003864453589055": {
+            "3410003865733676579": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6463208476372314175": {
+            "6463208477652401699": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "8290604743130556479": {
+            "8290604744410644003": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6155551018247989311": {
+            "6155551019528076835": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6391149151462565951": {
+            "6391149152742653475": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "15488872654512269375": {
+            "15488872655792356899": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "16119339128754481215": {
+            "16119339130034568739": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "10234850508619065407": {
+            "10234850509899152931": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14111537961933154367": {
+            "14111537963213241891": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "10832289109556799551": {
+            "10832289110836887075": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "2291038461483231295": {
+            "2291038462763318819": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "13630352413322324031": {
+            "13630352414602411555": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "17300619155660548159": {
+            "17300619156940635683": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "16174395910794979391": {
+            "16174395912075066915": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "7794375148147517503": {
+            "7794375149427605027": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "16132709915997710399": {
+            "16132709917277797923": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "7803544946274150463": {
+            "7803544947554237987": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "16631778720586606655": {
+            "16631778721866694179": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "13795894768036161599": {
+            "13795894769316249123": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "4811792898225285183": {
+            "4811792899505372707": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "12153837983756658751": {
+            "12153837985036746275": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "8085025381888239679": {
+            "8085025383168327203": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "11490697227982547007": {
+            "16988631280860249635": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "11608862640267798591": {
+            "11608862641547886115": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "934847978801670207": {
+            "934847980081757731": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "17183302128265275455": {
+            "17183302129545362979": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "10400565851730683967": {
+            "10400565853010771491": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "3352494162165835839": {
+            "3352494163445923363": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14289569269794940991": {
+            "14289569271075028515": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "7800963177008015423": {
+            "7800963178288102947": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "8743363994858235967": {
+            "8743363996138323491": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "9459430683433183295": {
+            "9459430684713270819": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "4188995921313736767": {
+            "4188995922593824291": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "12895556605025134655": {
+            "12895556606305222179": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "18304794286265673791": {
+            "18304794287545761315": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "10365030095482464319": {
+            "10365030096762551843": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "17379224723693971519": {
+            "17379224724974059043": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "13006235348147578943": {
+            "13006235349427666467": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "15995408908285323327": {
+            "15995408909565410851": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "8003466465493067839": {
+            "8003466466773155363": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "12521393167460149311": {
+            "12521393168740236835": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "3953264721422395455": {
+            "3953264722702482979": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "10943633061509015615": {
+            "10943633062789103139": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "12613465652694820927": {
+            "12613465653974908451": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "2108816536850868287": {
+            "2108816538130955811": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "15669612102462941247": {
+            "15669612103743028771": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "3910529418870073407": {
+            "3910529420150160931": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "12575147414768789567": {
+            "12575147416048877091": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "13039675254844631103": {
+            "13039675256124718627": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6354146758372042815": {
+            "6354146759652130339": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "16222612149962745919": {
+            "16222612151242833443": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "13255853229573875775": {
+            "13255853230853963299": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "12587709996541093951": {
+            "12587709997821181475": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "8351779190688131135": {
+            "8351779191968218659": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "13793459113557436479": {
+            "13793459114837524003": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "4757325836669364287": {
+            "4757325837949451811": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "10817028236055619647": {
+            "10817028237335707171": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "9140495066391324735": {
+            "9140495067671412259": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "3958868021656102975": {
+            "3958868022936190499": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "3742690046926858303": {
+            "3742690048206945827": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "5664902875000023103": {
+            "5664902876280110627": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "724839222081955903": {
+            "724839223362043427": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "15548260915365750847": {
+            "15548260916645838371": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "17058178937679980607": {
+            "17058178938960068131": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "7469273465602123839": {
+            "7469273466882211363": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "2955422107778361407": {
+            "2955422109058448931": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14466983773108381759": {
+            "14466983774388469283": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -10104,11 +10173,11 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "10463968253443516479": {
+            "10463968254723604003": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "15234831987563243583": {
+            "15234831988843331107": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -10624,19 +10693,19 @@
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
-            "11490697225798157687": {
+            "16988631277395772791": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
-            "11490697228955526447": {
+            "16988631280553141551": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
-            "11490697226217651657": {
+            "16988631277815266761": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
-            "11490697228235040242": {
+            "16988631279832655346": {
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
@@ -11352,14 +11421,6 @@
                 "mClipName": "Attack1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "11490697226228906365": {
-                "mClipName": "Respawn_StealthIdle_Hookup",
-                "__type": "TransitionClipBlendData"
-            },
-            "11490697226178573508": {
-                "mClipName": "Respawn_StealthIdle_Hookup",
-                "__type": "TransitionClipBlendData"
-            },
             "15995408905827598152": {
                 "mClipName": "{ad644a3f}",
                 "__type": "TransitionClipBlendData"
@@ -11480,7 +11541,7 @@
                 "mTime": 0.05000000074505806,
                 "__type": "TimeBlendData"
             },
-            "11490697228216191551": {
+            "16988631279813806655": {
                 "mTime": 0.05000000074505806,
                 "__type": "TimeBlendData"
             },
@@ -11824,7 +11885,7 @@
                 "mTime": 0.05000000074505806,
                 "__type": "TimeBlendData"
             },
-            "11490697229231632562": {
+            "16988631280829247666": {
                 "mTime": 0.05000000074505806,
                 "__type": "TimeBlendData"
             },
@@ -12724,7 +12785,7 @@
                 "mClipName": "{8c03c879}",
                 "__type": "TransitionClipBlendData"
             },
-            "11490697227706031693": {
+            "16988631279303646797": {
                 "mClipName": "{8c03c879}",
                 "__type": "TransitionClipBlendData"
             },
@@ -13024,10 +13085,6 @@
                 "mClipName": "{7ed98fd5}",
                 "__type": "TransitionClipBlendData"
             },
-            "11490697227121929958": {
-                "mClipName": "Respawn_Idle_Hookup",
-                "__type": "TransitionClipBlendData"
-            },
             "3958868019191256917": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
@@ -13236,7 +13293,7 @@
                 "mClipName": "Laugh_In",
                 "__type": "TransitionClipBlendData"
             },
-            "11490697228370431166": {
+            "16988631279968046270": {
                 "mClipName": "Laugh_In",
                 "__type": "TransitionClipBlendData"
             },
@@ -13716,7 +13773,7 @@
                 "mClipName": "{2903c4bf}",
                 "__type": "TransitionClipBlendData"
             },
-            "11490697228675517719": {
+            "16988631280273132823": {
                 "mClipName": "{2903c4bf}",
                 "__type": "TransitionClipBlendData"
             },
@@ -14492,11 +14549,11 @@
                 "mTime": 0.05000000074505806,
                 "__type": "TimeBlendData"
             },
-            "11490697227744082910": {
+            "16988631279341698014": {
                 "mTime": 0.05000000074505806,
                 "__type": "TimeBlendData"
             },
-            "11490697225459705328": {
+            "16988631277057320432": {
                 "mTime": 0.05000000074505806,
                 "__type": "TimeBlendData"
             },
@@ -15324,7 +15381,7 @@
                 "mTime": 0.05000000074505806,
                 "__type": "TimeBlendData"
             },
-            "11490697227380223700": {
+            "16988631278977838804": {
                 "mTime": 0.05000000074505806,
                 "__type": "TimeBlendData"
             },
@@ -15764,7 +15821,7 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "13590883338909329471": {
+            "13590883340189416995": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -16004,7 +16061,7 @@
                 "mClipName": "{c448ba13}",
                 "__type": "TransitionClipBlendData"
             },
-            "11490697229234615579": {
+            "16988631280832230683": {
                 "mClipName": "{c448ba13}",
                 "__type": "TransitionClipBlendData"
             },
@@ -16364,7 +16421,7 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "16868290797071968319": {
+            "16868290798352055843": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -16431,6 +16488,86 @@
             "16868290794432997096": {
                 "mTime": 0.05000000074505806,
                 "__type": "TimeBlendData"
+            },
+            "488572250187919060": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "488572250551778270": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "488572248267400688": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "488572251326962994": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "488572251178126526": {
+                "mClipName": "Laugh_In",
+                "__type": "TransitionClipBlendData"
+            },
+            "488572250944641856": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "488572249633308080": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "488572249997297599": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "488572252070329891": {
+                "mTime": 0.0,
+                "__type": "TimeBlendData"
+            },
+            "488572250536426377": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "488572251023886911": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "488572252039327922": {
+                "mTime": 0.05000000074505806,
+                "__type": "TimeBlendData"
+            },
+            "488572248605853047": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "488572251763221807": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "488572249025347017": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "488572251042735602": {
+                "mTime": 0.10000000149011612,
+                "__type": "TimeBlendData"
+            },
+            "488572250513727053": {
+                "mClipName": "{8c03c879}",
+                "__type": "TransitionClipBlendData"
+            },
+            "488572252042310939": {
+                "mClipName": "{c448ba13}",
+                "__type": "TransitionClipBlendData"
+            },
+            "488572251483213079": {
+                "mClipName": "{2903c4bf}",
+                "__type": "TransitionClipBlendData"
+            },
+            "488572249036601725": {
+                "mClipName": "{cded11ae}",
+                "__type": "TransitionClipBlendData"
             }
         },
         "objectPath": "Characters/Evelynn/Animations/Skin66",

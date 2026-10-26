@@ -313,7 +313,7 @@
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             },
             {
-                "effectKey": "{671296e1}",
+                "effectKey": "Akali_Idle_BodyFlare",
                 "boneName": "C_Breath",
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             }
@@ -352,19 +352,32 @@
             },
             {
                 "OwnerCondition": {
-                    "Spell": "Characters/Akali/Spells/AkaliRAbility/AkaliR",
-                    "mDeactivateEarlySeconds": -1.0,
-                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                    "mDrivers": [
+                        {
+                            "Spell": "Characters/Akali/Spells/AkaliRAbility/AkaliR",
+                            "mDeactivateEarlySeconds": -1.0,
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Kalista/Spells/KalistaRInvuln",
+                                "mDeactivateEarlySeconds": -1.0,
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
                 },
                 "PersistentVfxs": [
                     {
                         "boneName": "Spine2",
-                        "effectKey": "{3c353e8b}",
+                        "effectKey": "Akali_R_FireFly01",
                         "__type": "PersistentVfxData"
                     },
                     {
                         "boneName": "Dagger",
-                        "effectKey": "{9cb98de0}",
+                        "effectKey": "Akali_R_WeaponFire01",
                         "__type": "PersistentVfxData"
                     }
                 ],
@@ -22680,7 +22693,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{815a0912}",
+                            "effectKey": "Akali_E_Run_Trail_Child_R",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -54050,7 +54063,10 @@
                             "BODY",
                             "Skateboard",
                             "metal",
-                            "Hair"
+                            "Hair",
+                            "Hair2",
+                            "Hair3",
+                            "Ulthair"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -54575,6 +54591,7 @@
                     -1.0,
                     -1.0
                 ],
+                "{cb13aff1}": -5.0,
                 "particleIsLocalOrientation": 1,
                 "birthScale0": {
                     "constantValue": [
@@ -55371,7 +55388,10 @@
                             "Helmet",
                             "Skateboard",
                             "metal",
-                            "Hair"
+                            "Hair",
+                            "Hair2",
+                            "Hair3",
+                            "Ulthair"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -55439,7 +55459,10 @@
                             "Helmet",
                             "Skateboard",
                             "metal",
-                            "Hair"
+                            "Hair",
+                            "Hair2",
+                            "Hair3",
+                            "Ulthair"
                         ],
                         "__type": "VfxMeshDefinitionData"
                     },
@@ -55948,6 +55971,7 @@
                     -1.0,
                     -1.0
                 ],
+                "{cb13aff1}": -5.0,
                 "particleIsLocalOrientation": 1,
                 "birthScale0": {
                     "constantValue": [
@@ -55958,6 +55982,118 @@
                     "__type": "ValueVector3"
                 },
                 "texture": "ASSETS/Characters/Akali/Skins/Skin102/Akali_Skin102_W_TX_CM.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 10.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 10.0,
+                "isSingleParticle": 1,
+                "emitterName": "Avatar14",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "Hair2",
+                            "Hair3",
+                            "Ulthair"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.5900053381919861
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 2,
+                "depthBiasFactors": [
+                    -1.0,
+                    -1.0
+                ],
+                "{cb13aff1}": -5.0,
+                "particleIsLocalOrientation": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        1.003999948501587,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Akali/Skins/Skin102/Akali_Skin102_Ult_Hair2_TX_CM.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 10.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 10.0,
+                "isSingleParticle": 1,
+                "emitterName": "Avatar15",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "Hair2",
+                            "Hair3",
+                            "Ulthair"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.125490203499794,
+                        0.125490203499794,
+                        0.125490203499794,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 1,
+                "depthBiasFactors": [
+                    -1.0,
+                    -1.0
+                ],
+                "{cb13aff1}": -5.0,
+                "particleIsLocalOrientation": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        1.003999948501587,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Akali/Skins/Skin102/Akali_Skin102_Ult_Hair2_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -60197,7 +60333,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{110c9d54}",
+                            "effectKey": "Akali_Emote_Dance_Glow01Child01",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -60260,7 +60396,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{110c9d54}",
+                            "effectKey": "Akali_Emote_Dance_Glow01Child01",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -60312,7 +60448,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{110c9d54}",
+                            "effectKey": "Akali_Emote_Dance_Glow01Child01",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -60443,7 +60579,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{110c9d54}",
+                            "effectKey": "Akali_Emote_Dance_Glow01Child01",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -72314,7 +72450,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{0c0f2672}",
+                            "effectKey": "Akali_Dance_GlowChild01",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -72398,7 +72534,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{0b0f24df}",
+                            "effectKey": "Akali_Dance_GlowChild02",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -72482,7 +72618,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{0c0f2672}",
+                            "effectKey": "Akali_Dance_GlowChild01",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -72566,7 +72702,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{0b0f24df}",
+                            "effectKey": "Akali_Dance_GlowChild02",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -72650,7 +72786,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{0b0f24df}",
+                            "effectKey": "Akali_Dance_GlowChild02",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -72734,7 +72870,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{0c0f2672}",
+                            "effectKey": "Akali_Dance_GlowChild01",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -72818,7 +72954,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{0b0f24df}",
+                            "effectKey": "Akali_Dance_GlowChild02",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -72902,7 +73038,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{0c0f2672}",
+                            "effectKey": "Akali_Dance_GlowChild01",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -72986,7 +73122,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{0c0f2672}",
+                            "effectKey": "Akali_Dance_GlowChild01",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -73070,7 +73206,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{0b0f24df}",
+                            "effectKey": "Akali_Dance_GlowChild02",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -223500,7 +223636,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{de43b03d}",
+                            "effectKey": "Akali_Emote_Respawn_Firework",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -223541,7 +223677,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{de43b03d}",
+                            "effectKey": "Akali_Emote_Respawn_Firework",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -223582,7 +223718,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{de43b03d}",
+                            "effectKey": "Akali_Emote_Respawn_Firework",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -223623,7 +223759,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{de43b03d}",
+                            "effectKey": "Akali_Emote_Respawn_Firework",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -261126,7 +261262,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{f4aca2c4}",
+                            "effectKey": "Akali_E_Run_LongTrail_Child_R",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -266903,7 +267039,7 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "{1b7987062f8bdecd}",
+                "texturePath": "assets/characters/akali/skins/skin102/akali_skin102_ult_hair2_tx_cm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
@@ -267878,7 +268014,7 @@
             "Akali_E_Enemy_Indicator_Smoke_red": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_E_EnemyIndicatorSmokeRed",
             "{0f87747f}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_P_IndicatorCircleSelfChild",
             "{ba4ddce9}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_P_IndicatorCircleSelfLight",
-            "{3c353e8b}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_R_FireFly01",
+            "Akali_R_FireFly01": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_R_FireFly01",
             "{1d743510}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_P_IndicatorCircleActivateChild",
             "{2ffd598f}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_P_IndicatorCircleActivateChildFlare",
             "{914c0a8b}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_P_IndicatorCircleActivateSpark01",
@@ -267900,72 +268036,72 @@
             "{7c1da10d}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_E_EnemyFire01",
             "{22a7a90e}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_E_EnemyIndicatorPhoenix",
             "{4ae170c3}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_E_RunTrailChild",
-            "{815a0912}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_E_Run_Trail_Child_R",
+            "Akali_E_Run_Trail_Child_R": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_E_Run_Trail_Child_R",
             "{3cc35d2a}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_R_CasLightChild",
             "{1da62d61}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_P_IndicatorCircleFirework",
             "{49ba9421}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_W_SmokeRingNodeFirework01",
             "{46ba8f68}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_W_SmokeRingNodeFirework02",
             "{47ba90fb}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_W_SmokeRingNodeFirework03",
             "{2d336a78}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_R_CasReflection",
-            "{7fc68904}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Idle_Ground",
+            "Akali_Idle_Ground": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Idle_Ground",
             "{faacac36}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_E_RunLongTrailChildL",
             "{f8e39d01}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_E_RunDustLong",
-            "{4ba537f0}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_W_Skateboard",
-            "{1bc53599}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_W_Lighter",
-            "{f4aca2c4}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_E_Run_LongTrail_Child_R",
-            "{4b15a418}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_E_Run_Dust_Long_R",
+            "Akali_W_Skateboard": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_W_Skateboard",
+            "Akali_W_Lighter": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_W_Lighter",
+            "Akali_E_Run_LongTrail_Child_R": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_E_Run_LongTrail_Child_R",
+            "Akali_E_Run_Dust_Long_R": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_E_Run_Dust_Long_R",
             "{114a95ba}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_P_GroundSmoke01",
-            "{eca79a0c}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Joke_01",
+            "Akali_Emote_Joke_01": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Joke_01",
             "{f957a019}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Joke_01Spray02",
             "{f8579e86}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Joke_01Spray03",
-            "{962b524a}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Homeguard_Stage",
-            "{f6fb515e}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Homeguard_SkateBoard",
-            "{bd5387d3}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Homeguard_Fire01",
-            "{be538966}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Homeguard_Fire02",
+            "Akali_Emote_Homeguard_Stage": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Homeguard_Stage",
+            "Akali_Emote_Homeguard_SkateBoard": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Homeguard_SkateBoard",
+            "Akali_Emote_Homeguard_Fire01": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Homeguard_Fire01",
+            "Akali_Emote_Homeguard_Fire02": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Homeguard_Fire02",
             "{8b7b814c}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Idle02GroundSmoke",
             "{69b17775}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_E_EnemyIndicatorLightRed",
             "{9c08edef}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Idle_Weapon01",
-            "{1a03bf95}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Recall_Ground",
+            "Akali_Recall_Ground": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Recall_Ground",
             "{f4598b45}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Idle_Weapon02Flare",
             "{6b13fe8e}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Idle_Weapon03Flare",
-            "{d8cb6081}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Recall_Fire01",
-            "{d5cb5bc8}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Recall_Fire02",
-            "{4473c048}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Recall_Road",
-            "{726f3733}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Recall_Skate01",
-            "{60b5e337}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Recall_Painted",
-            "{d6cb5d5b}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Recall_Fire03",
-            "{dbcb653a}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Recall_Fire04",
-            "{9cb98de0}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_R_WeaponFire01",
-            "{84602589}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Death",
+            "Akali_Recall_Fire01": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Recall_Fire01",
+            "Akali_Recall_Fire02": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Recall_Fire02",
+            "Akali_Recall_Road": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Recall_Road",
+            "Akali_Recall_Skate01": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Recall_Skate01",
+            "Akali_Recall_Painted": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Recall_Painted",
+            "Akali_Recall_Fire03": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Recall_Fire03",
+            "Akali_Recall_Fire04": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Recall_Fire04",
+            "Akali_R_WeaponFire01": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_R_WeaponFire01",
+            "Akali_Emote_Death": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Death",
             "{d2b34e50}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Death_Fire01",
-            "{cdbdea23}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Death_Weapons",
+            "Akali_Emote_Death_Weapons": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Death_Weapons",
             "{d5b35309}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Death_Fire02",
-            "{0279ace5}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Taunt_Ring01",
-            "{ff79a82c}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Taunt_Ring02",
-            "{0079a9bf}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Taunt_Ring03",
-            "{17ce242b}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Respawn",
+            "Akali_Emote_Taunt_Ring01": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Taunt_Ring01",
+            "Akali_Emote_Taunt_Ring02": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Taunt_Ring02",
+            "Akali_Emote_Taunt_Ring03": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Taunt_Ring03",
+            "Akali_Emote_Respawn": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Respawn",
             "{cacf19b2}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Respawn_Fire01",
             "{772860e7}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Respawn_FireLight",
-            "{6656c815}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Respawn_Smoke",
-            "{de43b03d}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Respawn_Firework",
+            "Akali_Emote_Respawn_Smoke": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Respawn_Smoke",
+            "Akali_Emote_Respawn_Firework": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Respawn_Firework",
             "{3929ffd4}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_P_IndicatorCircleFireworkAudio",
             "{f6579b60}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Joke_01Spray01",
-            "{0b695c9d}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Joke_Taunt",
-            "{91c90fd3}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Joke_Laugh01",
-            "{92c91166}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Joke_Laugh02",
-            "{93c912f9}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Joke_Laugh03",
-            "{90c90e40}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Joke_Laugh00",
-            "{2735d607}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Joke_Taunt_Spray",
-            "{8e0640a0}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Death_Smoke01",
+            "Akali_Emote_Joke_Taunt": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Joke_Taunt",
+            "Akali_Emote_Joke_Laugh01": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Joke_Laugh01",
+            "Akali_Emote_Joke_Laugh02": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Joke_Laugh02",
+            "Akali_Emote_Joke_Laugh03": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Joke_Laugh03",
+            "Akali_Emote_Joke_Laugh00": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Joke_Laugh00",
+            "Akali_Emote_Joke_Taunt_Spray": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Joke_Taunt_Spray",
+            "Akali_Emote_Death_Smoke01": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Death_Smoke01",
             "{17f96630}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Idle_WeaponVfx",
-            "{125a26d1}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Dance_Ground01",
-            "{110c9d54}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Dance_Glow01Child01",
-            "{6b01e540}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Recall_Light01",
-            "{736f38c6}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Recall_Skate02",
+            "Akali_Emote_Dance_Ground01": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Dance_Ground01",
+            "Akali_Emote_Dance_Glow01Child01": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Dance_Glow01Child01",
+            "Akali_Emote_Recall_Light01": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Emote_Recall_Light01",
+            "Akali_Recall_Skate02": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Recall_Skate02",
             "{3c38000e}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Recall_Road02",
-            "{671296e1}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Idle_BodyFlare",
-            "{0c0f2672}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Dance_GlowChild01",
-            "{0b0f24df}": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Dance_GlowChild02"
+            "Akali_Idle_BodyFlare": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Idle_BodyFlare",
+            "Akali_Dance_GlowChild01": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Dance_GlowChild01",
+            "Akali_Dance_GlowChild02": "Characters/Akali/Skins/Skin102/Particles/Akali_Skin102_Dance_GlowChild02"
         },
         "__type": "ResourceResolver"
     },
@@ -268030,9 +268166,10 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "mCategory": "thememusic",
-                                        "mData": "kda2026",
-                                        "__type": "ContextualConditionCharacterMetadata"
+                                        "mSkinIDs": [
+                                            65
+                                        ],
+                                        "__type": "ContextualConditionCharacterSkinID"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -268065,9 +268202,10 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "mCategory": "thememusic",
-                                        "mData": "EvelynnSkin66",
-                                        "__type": "ContextualConditionCharacterMetadata"
+                                        "mSkinIDs": [
+                                            66
+                                        ],
+                                        "__type": "ContextualConditionCharacterSkinID"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -268666,9 +268804,10 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "mCategory": "thememusic",
-                                        "mData": "kda2026",
-                                        "__type": "ContextualConditionCharacterMetadata"
+                                        "mSkinIDs": [
+                                            65
+                                        ],
+                                        "__type": "ContextualConditionCharacterSkinID"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -268701,9 +268840,10 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "mCategory": "thememusic",
-                                        "mData": "EvelynnSkin66",
-                                        "__type": "ContextualConditionCharacterMetadata"
+                                        "mSkinIDs": [
+                                            66
+                                        ],
+                                        "__type": "ContextualConditionCharacterSkinID"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"

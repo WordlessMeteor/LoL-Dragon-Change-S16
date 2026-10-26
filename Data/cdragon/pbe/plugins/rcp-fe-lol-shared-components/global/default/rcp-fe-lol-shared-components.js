@@ -30263,7 +30263,7 @@
                 const e = o(),
                     t = document.createElement("form");
                 t.setAttribute("method", "GET");
-                t.setAttribute("action", "https://d3eucth1whan43.cloudfront.net/");
+                t.setAttribute("action", "https://micro-sites.kr.riotgames.com/kor-leagueclient-rp-purchase-modal/");
                 const n = document.createElement("script");
                 return n.setAttribute("type", "text/javascript"), n.innerText = "document.forms[0].submit();", e.appendChild(t), e.appendChild(n), e
             }

@@ -1,5 +1,5 @@
 {
-    "{a7709fbb}": {
+    "Characters/Evelynn/Skins/Skin69": {
         "skinClassification": 2,
         "championSkinId": 28069,
         "championSkinName": "EvelynnSkin69",
@@ -175,7 +175,7 @@
             "__type": "SkinAudioProperties"
         },
         "skinAnimationProperties": {
-            "animationGraphData": "{1a0a301c}",
+            "animationGraphData": "Characters/Evelynn/Animations/Skin65",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
@@ -254,12 +254,12 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "{c295bfcfa0cc29b0}",
+                    "texture": "assets/characters/evelynn/skins/skin69/evelynn_skin69_q_tx_cm.tex",
                     "submesh": "Lipstick",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "{c295bfcfa0cc29b0}",
+                    "texture": "assets/characters/evelynn/skins/skin69/evelynn_skin69_q_tx_cm.tex",
                     "submesh": "OilDrum",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -390,7 +390,7 @@
             "__type": "SkinMeshDataProperties"
         },
         "armorMaterial": "Flesh",
-        "mContextualActionData": "{280da3e8}",
+        "mContextualActionData": "Characters/Evelynn/CAC/Evelynn_Skin65",
         "iconCircle": "assets/characters/evelynn/hud/evelynn_circle.tex",
         "iconSquare": "assets/characters/evelynn/hud/evelynn_square.tex",
         "iconAvatar": "assets/characters/evelynn/hud/evelynn_circle_24.tex",
@@ -406,7 +406,7 @@
                 "__type": "SkinEmblem"
             }
         ],
-        "mResourceResolver": "{f5b5e4a9}",
+        "mResourceResolver": "Characters/Evelynn/Skins/Skin69/Resources",
         "PersistentEffectConditions": [
             {
                 "OwnerCondition": {
@@ -416,12 +416,12 @@
                 "PersistentVfxs": [
                     {
                         "boneName": "L_Eye",
-                        "effectKey": "{41efc7b9}",
+                        "effectKey": "Evelynn_Skin65_P_StealthEye",
                         "__type": "PersistentVfxData"
                     },
                     {
                         "boneName": "R_Eye",
-                        "effectKey": "{41efc7b9}",
+                        "effectKey": "Evelynn_Skin65_P_StealthEye",
                         "__type": "PersistentVfxData"
                     }
                 ],
@@ -429,7 +429,7 @@
             }
         ],
         "{55d3758e}": "ASSETS/Characters/Evelynn/Skins/Skin69/ChromaPreview.tex",
-        "objectPath": "{a7709fbb}",
+        "objectPath": "Characters/Evelynn/Skins/Skin69",
         "__type": "SkinCharacterDataProperties"
     },
     "{05c32d81}": {
@@ -759,7 +759,7 @@
                                 ],
                                 "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                             },
-                            "TextureName": "{66db71c4876e78d6}",
+                            "TextureName": "assets/characters/evelynn/skins/skin69/evelynn_skin69_taunt_tx_cm.tex",
                             "__type": "DynamicMaterialTextureSwapOption"
                         },
                         {
@@ -773,7 +773,7 @@
                                 ],
                                 "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                             },
-                            "TextureName": "{66db71c4876e78d6}",
+                            "TextureName": "assets/characters/evelynn/skins/skin69/evelynn_skin69_taunt_tx_cm.tex",
                             "__type": "DynamicMaterialTextureSwapOption"
                         }
                     ],
@@ -942,7 +942,7 @@
         "samplerValues": [
             {
                 "TextureName": "Masks",
-                "texturePath": "{be94fc499ea898fb}",
+                "texturePath": "assets/characters/evelynn/skins/skin65/evelynn_skin65_tailmask_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -1919,7 +1919,7 @@
         "samplerValues": [
             {
                 "TextureName": "Masks",
-                "texturePath": "{be94fc499ea898fb}",
+                "texturePath": "assets/characters/evelynn/skins/skin65/evelynn_skin65_tailmask_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -2067,7 +2067,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{5f026f76}": {
+    "Characters/Evelynn/Skins/Skin69/Particles/Evelynn_Skin69_Z_Death": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -2075,7 +2075,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 2.299999952316284,
+                    "constantValue": 2.5999999046325684,
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
@@ -2098,14 +2098,11 @@
                     "__type": "VfxPrimitiveAttachedMesh"
                 },
                 "blendMode": 1,
-                "{cb13aff1}": -100.0,
+                "{cb13aff1}": -1.0,
+                "disableBackfaceCull": true,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
-                "isGroundLayer": 1,
                 "texture": "ASSETS/Characters/Evelynn/Skins/Skin69/Evelynn_Skin69_Recall_TX_CM.tex",
-                "textureMult": {
-                    "__type": "VfxTextureMultDefinitionData"
-                },
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -2115,7 +2112,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 1.600000023841858,
+                    "constantValue": 2.5999999046325684,
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
@@ -2142,7 +2139,7 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.5
+                            0.2478991597890854
                         ],
                         "values": [
                             [
@@ -2162,82 +2159,11 @@
                     },
                     "__type": "ValueColor"
                 },
-                "{cb13aff1}": -120.0,
+                "{cb13aff1}": -1.0,
+                "disableBackfaceCull": true,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
-                "useNavmeshMask": 1,
                 "texture": "ASSETS/Characters/Evelynn/Skins/Skin69/Evelynn_Skin69_Recall_TX_CM.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 2.299999952316284,
-                    "__type": "ValueFloat"
-                },
-                "isSingleParticle": 1,
-                "emitterName": "Avatar3",
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSubmeshesToDraw": [
-                            "BODY",
-                            "Hair",
-                            "cloth",
-                            "{eb84764e}"
-                        ],
-                        "mLockMeshToAttachment": true,
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveAttachedMesh"
-                },
-                "blendMode": 1,
-                "{cb13aff1}": -100.0,
-                "particleIsLocalOrientation": 1,
-                "isUniformScale": 1,
-                "isGroundLayer": 1,
-                "texture": "ASSETS/Characters/Evelynn/Skins/Skin69/Evelynn_Skin69_TX_CM.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 2.299999952316284,
-                    "__type": "ValueFloat"
-                },
-                "isSingleParticle": 1,
-                "emitterName": "Avatar4",
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSubmeshesToDraw": [
-                            "Tail",
-                            "{4cfdeb96}"
-                        ],
-                        "mLockMeshToAttachment": true,
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveAttachedMesh"
-                },
-                "blendMode": 1,
-                "{cb13aff1}": -100.0,
-                "particleIsLocalOrientation": 1,
-                "isUniformScale": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
-                "texture": "ASSETS/Characters/Evelynn/Skins/Skin69/Evelynn_Skin69_Tail_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -2518,7 +2444,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Evelynn/Skins/Skin65/Particles/Jhin_Skin36_Bokeh_Dots_4x4.tex",
+                "texture": "ASSETS/Characters/Evelynn/Skins/Skin69/Evelynn_Skin69_TX_CM.tex",
                 "birthFrameRate": {
                     "constantValue": 0.0,
                     "__type": "ValueFloat"
@@ -2850,7 +2776,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Evelynn/Skins/Skin65/Particles/Yone_Skin55_Taunt_Flecks.tex",
+                "texture": "ASSETS/Characters/Evelynn/Skins/Skin69/Evelynn_Skin69_Tail_TX_CM.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -3722,10 +3648,10 @@
         "particleName": "Evelynn_Skin69_Z_Death",
         "particlePath": "Characters/Evelynn/Skins/Skin69/Particles/Evelynn_Skin69_Z_Death",
         "flags": 199,
-        "objectPath": "{5f026f76}",
+        "objectPath": "Characters/Evelynn/Skins/Skin69/Particles/Evelynn_Skin69_Z_Death",
         "__type": "VfxSystemDefinitionData"
     },
-    "{709ba702}": {
+    "Characters/Evelynn/Skins/Skin69/Particles/Evelynn_Skin69_Emote_Respawn": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -4004,10 +3930,10 @@
         "particleName": "Evelynn_Skin69_Emote_Respawn",
         "particlePath": "Characters/Evelynn/Skins/Skin69/Particles/Evelynn_Skin69_Emote_Respawn",
         "flags": 197,
-        "objectPath": "{709ba702}",
+        "objectPath": "Characters/Evelynn/Skins/Skin69/Particles/Evelynn_Skin69_Emote_Respawn",
         "__type": "VfxSystemDefinitionData"
     },
-    "{99ca6a6d}": {
+    "Characters/Evelynn/Skins/Skin69/Particles/Evelynn_Skin69_R_Activate": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.25,
@@ -6626,171 +6552,171 @@
         "particleName": "Evelynn_Skin69_R_Activate",
         "particlePath": "Characters/Evelynn/Skins/Skin69/Particles/Evelynn_Skin69_R_Activate",
         "flags": 196,
-        "objectPath": "{99ca6a6d}",
+        "objectPath": "Characters/Evelynn/Skins/Skin69/Particles/Evelynn_Skin69_R_Activate",
         "__type": "VfxSystemDefinitionData"
     },
-    "{f5b5e4a9}": {
+    "Characters/Evelynn/Skins/Skin69/Resources": {
         "resourceMap": {
-            "Evelynn-Yikes": "{b71fb1be}",
-            "{c5416058}": "{4f78b91c}",
-            "Evelynn_E_Empowered": "{2f4624c3}",
-            "Evelynn_E_Empowered_L": "{1a6bbf7d}",
-            "Evelynn_E_Empowered_R": "{946fdd12}",
-            "Evelynn_R_Swipe": "{e6e5ad56}",
-            "Evelynn_E_Swipe": "{1b792497}",
-            "Evelynn_Generic_Illaoi_Impact": "{a22563d8}",
-            "Evelynn_P_CameraBoundVFX": "{c57c1acd}",
-            "Evelynn_P_Charm_buf": "{872e62d6}",
-            "Evelynn_P_Heal_BodyGlow": "{1cb47a71}",
-            "Evelynn_P_Heal_tar": "{862726d3}",
-            "Evelynn_P_Pulse": "{f1041ff3}",
-            "Evelynn_Q_Beam": "{23509144}",
-            "Evelynn_Q_Beam_Return": "{1f771ada}",
-            "Evelynn_Q_Hatespike_Cas": "{7c759f44}",
-            "Evelynn_Q_Buf": "{bc4d6471}",
-            "Evelynn_Q_HateSpike_Mis": "{3cc3ac6a}",
-            "Evelynn_R_Activate": "{99ca6a6d}",
-            "Evelynn_Sound_Environment_Processing_Start": "{99f9c370}",
-            "Evelynn_Sound_Environment_Processing_Stop": "{d85406f4}",
-            "Evelynn_W_Cas_Beam": "{7697cbbd}",
-            "Evelynn_W_Fizz_Mark": "{7e221fb9}",
-            "Evelynn_W_Fizz_Mark_Decay": "{a2657b19}",
-            "Evelynn_W_Mark_Cook": "{66e6a640}",
-            "Evelynn_BasicAttack": "{af200fc0}",
-            "{e9e038ef}": "{b2201479}",
-            "Evelynn_E_cas": "{dced8dac}",
-            "Evelynn_E_Tar": "{44cf515e}",
-            "Evelynn_Q_HateSpike_tar": "{c6d19996}",
-            "Evelynn_RedEye": "{d0a48921}",
-            "Evelynn_Ring_Green": "{cbb5661c}",
-            "Evelynn_R_cas": "{e1a6752d}",
-            "Evelynn_R_Tar": "{a0a319c3}",
-            "Evelynn_YellowEye": "{8435bafe}",
-            "Evelynn_Q_Mis": "{f9c749e6}",
-            "Evelynn_W_Sound_Start": "{038bb22c}",
-            "Evelynn_W_Sound_Ready": "{e8d78627}",
-            "Evelynn_W_Sound_End": "{1fc93615}",
-            "Evelynn_W_VO_Start": "{779557a6}",
-            "{0beebdca}": "{8d38e411}",
-            "Evelynn_R_Trail": "{05336598}",
-            "Evelynn_R_Landing": "{8ec5904f}",
-            "Evelynn_Base_Q_Shred": "{bc8eeda7}",
-            "Evelynn_W_Cas": "{e9ef57e5}",
-            "Evelynn_Q_Cas": "{e2e26f08}",
-            "Evelynn_W_Mark_Cook_Ground": "{3d67c85b}",
-            "Evelynn_Q_Mis_Linger": "{d66342e5}",
-            "Evelynn_P_Stealth_Head": "{1a1d84c7}",
-            "Evelynn_P_Stealth_L_Hand": "{f377d5d6}",
-            "Evelynn_P_Stealth_R_Hand": "{65ec2cd8}",
-            "Evelynn_P_Stealth_R_Foot": "{cd95d691}",
-            "Evelynn_P_Stealth_L_Foot": "{9e201ce7}",
-            "Evelynn_W_Directional_Indicator": "{fc7c0b78}",
-            "Evelynn_W_enemy_screen": "{2882b98b}",
-            "Evelynn_W_Sound_Start_Self": "{97c787ae}",
-            "Evelynn_P_Stealth_Exit": "{413ac249}",
-            "Evelynn_R_Crit_Indicator": "{0b2c9e21}",
-            "Evelynn_W_Tar": "{2a713560}",
-            "Evelynn_E_BackflipSwipe": "{d1ab3fa3}",
-            "Evelynn_E_Empowered_Tar": "{a08ea4aa}",
-            "Evelynn_E_Empowered_Trail": "{8af58669}",
-            "Evelynn_Q_Tar": "{06fdd1d2}",
-            "Evelynn_W_Heart_Break": "{02221f72}",
-            "Evelynn_P_Pre_6_BodyEffects": "{637dc6fb}",
-            "Evelynn_P_Pre_6_HeadEffects": "{332a39fd}",
-            "Evelynn_R_Tar_Crit": "{cd1fb89b}",
-            "Evelynn_W_Cas_Mis": "{e9ef57e5}",
-            "Evelynn_Passive_Hair": "{3f408218}",
-            "Evelynn_Q_Sphere_Explode": "{2b3a922b}",
-            "Evelynn_Taunt_Heart_CrossOut": "{8b9b0a32}",
-            "Evelynn_invis_cas": "{1fd76eab}",
-            "Evelynn_invis_exit_cas": "{3a31e743}",
-            "Evelynn_W_Mark_Cook_Ground_Enemy": "{666c15c1}",
-            "Evelynn_BA_Crit_Tar": "{7257bc95}",
+            "Evelynn-Yikes": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Evelynn-Yikes",
+            "{c5416058}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_BasicAttackTarNew",
+            "Evelynn_E_Empowered": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_E_Empowered",
+            "Evelynn_E_Empowered_L": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_E_EmpoweredL",
+            "Evelynn_E_Empowered_R": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_E_Empowered_R",
+            "Evelynn_R_Swipe": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_Swipe",
+            "Evelynn_E_Swipe": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_E_Swipe",
+            "Evelynn_Generic_Illaoi_Impact": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_GenericIllaoiImpact",
+            "Evelynn_P_CameraBoundVFX": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_P_CameraBoundVFX",
+            "Evelynn_P_Charm_buf": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_P_CharmBuf",
+            "Evelynn_P_Heal_BodyGlow": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_P_HealBodyGlow",
+            "Evelynn_P_Heal_tar": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_P_HealTar",
+            "Evelynn_P_Pulse": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_P_Pulse",
+            "Evelynn_Q_Beam": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Q_Beam",
+            "Evelynn_Q_Beam_Return": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Q_BeamReturn",
+            "Evelynn_Q_Hatespike_Cas": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Q_HatespikeCas",
+            "Evelynn_Q_Buf": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_W_MiniHeartsTrail",
+            "Evelynn_Q_HateSpike_Mis": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Q_HateSpikeMis",
+            "Evelynn_R_Activate": "Characters/Evelynn/Skins/Skin69/Particles/Evelynn_Skin69_R_Activate",
+            "Evelynn_Sound_Environment_Processing_Start": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_SoundEnvironmentProcessingStart",
+            "Evelynn_Sound_Environment_Processing_Stop": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_SoundEnvironmentProcessingStop",
+            "Evelynn_W_Cas_Beam": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_W_CasBeam",
+            "Evelynn_W_Fizz_Mark": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_W_FizzMark",
+            "Evelynn_W_Fizz_Mark_Decay": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_W_FizzMarkDecay",
+            "Evelynn_W_Mark_Cook": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_W_MarkCook",
+            "Evelynn_BasicAttack": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_BasicAttack01",
+            "{e9e038ef}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_BasicAttack02",
+            "Evelynn_E_cas": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_E_cas",
+            "Evelynn_E_Tar": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_E_Tar",
+            "Evelynn_Q_HateSpike_tar": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Q_HateSpikeTar",
+            "Evelynn_RedEye": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Evelynn_RedEye",
+            "Evelynn_Ring_Green": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_RingGreen",
+            "Evelynn_R_cas": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_cas",
+            "Evelynn_R_Tar": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_Tar",
+            "Evelynn_YellowEye": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Evelynn_YellowEye",
+            "Evelynn_Q_Mis": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Q_Mis",
+            "Evelynn_W_Sound_Start": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_W_SoundStart",
+            "Evelynn_W_Sound_Ready": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_W_SoundReady",
+            "Evelynn_W_Sound_End": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_W_SoundEnd",
+            "Evelynn_W_VO_Start": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_W_VOStart",
+            "{0beebdca}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_W_Mark_Death",
+            "Evelynn_R_Trail": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_Trail",
+            "Evelynn_R_Landing": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_Landing",
+            "Evelynn_Base_Q_Shred": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Q_Shred",
+            "Evelynn_W_Cas": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_W_CasMis",
+            "Evelynn_Q_Cas": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Q_Cas",
+            "Evelynn_W_Mark_Cook_Ground": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_W_MarkCookGround",
+            "Evelynn_Q_Mis_Linger": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Q_MisLinger",
+            "Evelynn_P_Stealth_Head": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_P_StealthHead",
+            "Evelynn_P_Stealth_L_Hand": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_P_StealthLHand",
+            "Evelynn_P_Stealth_R_Hand": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_P_Stealth_R_Hand",
+            "Evelynn_P_Stealth_R_Foot": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_P_Stealth_R_Foot",
+            "Evelynn_P_Stealth_L_Foot": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_P_StealthLFoot",
+            "Evelynn_W_Directional_Indicator": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_W_DirectionalIndicator",
+            "Evelynn_W_enemy_screen": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_W_EnemyScreen",
+            "Evelynn_W_Sound_Start_Self": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_W_SoundStartSelf",
+            "Evelynn_P_Stealth_Exit": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_P_StealthExit",
+            "Evelynn_R_Crit_Indicator": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_CritIndicator",
+            "Evelynn_W_Tar": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_W_Tar",
+            "Evelynn_E_BackflipSwipe": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_E_BackflipSwipe",
+            "Evelynn_E_Empowered_Tar": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_E_EmpoweredTar",
+            "Evelynn_E_Empowered_Trail": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_E_EmpoweredTrail",
+            "Evelynn_Q_Tar": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Q_Tar",
+            "Evelynn_W_Heart_Break": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_W_HeartBreak",
+            "Evelynn_P_Pre_6_BodyEffects": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_P_Pre6BodyEffects",
+            "Evelynn_P_Pre_6_HeadEffects": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_P_Pre6HeadEffects",
+            "Evelynn_R_Tar_Crit": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_TarCrit",
+            "Evelynn_W_Cas_Mis": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_W_CasMis",
+            "Evelynn_Passive_Hair": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_PassiveHair",
+            "Evelynn_Q_Sphere_Explode": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Q_SphereExplode",
+            "Evelynn_Taunt_Heart_CrossOut": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Taunt_HeartCrossOut",
+            "Evelynn_invis_cas": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_InvisCas",
+            "Evelynn_invis_exit_cas": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_InvisExitCas",
+            "Evelynn_W_Mark_Cook_Ground_Enemy": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_W_MarkCookGroundEnemy",
+            "Evelynn_BA_Crit_Tar": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_BACritTarNew",
             "Evelynn_E_Empowered_Buf": "{00000000}",
-            "Evelynn_E_EmpoweredBuf": "{3ec09b7c}",
-            "Evelynn_E_EmpoweredBody": "{23d4df8b}",
-            "Evelynn_Recall_WingsAppear": "{023acea4}",
-            "Evelynn_Recall_GroundVFX": "{6f8bb398}",
-            "Evelynn_Recall_FlowersGround": "{b561ac26}",
-            "Evelynn_Z_HawkVFX": "{a3fa0063}",
-            "Evelynn_Z_HawkWinddown": "{f35b9467}",
-            "Evelynn_Z_FlowersWinddown": "{b6786b36}",
-            "Evelynn_Emote_JokeGround": "{9ccfc9f6}",
-            "Evelynn_Emote_SplitJokeFlower": "{439776be}",
-            "Evelynn_Emote_DanceGround": "{5a334efe}",
-            "Evelynn_Emote_GroundVFXAppear": "{4dfcfe3a}",
-            "Evelynn_Emote_TauntSwipe": "{9163531c}",
-            "Evelynn_Emote_FlowerJokeAir": "{3365a81e}",
-            "Evelynn_Z_HomeguardSmoke": "{6cde4731}",
-            "Evelynn_Emote_TauntLoop": "{ac0c72d4}",
-            "Evelynn_Emote_Respawn": "{709ba702}",
-            "Evelynn_Emote_RespawnStart": "{6c990c82}",
-            "Evelynn_Z_Death": "{5f026f76}",
-            "{e1891533}": "{994b6967}",
-            "{e28916c6}": "{9a4b6afa}",
-            "{e3891859}": "{9b4b6c8d}",
-            "{e48919ec}": "{944b6188}",
-            "{e5891b7f}": "{954b631b}",
-            "{63694883}": "{0543c4a6}",
-            "{64694a16}": "{0443c313}",
-            "{65694ba9}": "{0343c180}",
-            "{66694d3c}": "{0a43cc85}",
-            "{67694ecf}": "{0943caf2}",
-            "{e6891d12}": "{964b64ae}",
-            "{e7891ea5}": "{974b6641}",
-            "{705d51d8}": "{d9052a1c}",
-            "{de9bf297}": "{37e1826b}",
-            "{71b561d0}": "{cb1c4a91}",
-            "{e58283c7}": "{b12012e6}",
-            "{fc4ddb9b}": "{cf2d7be7}",
-            "{a3fa929a}": "{fabe1e7e}",
-            "{a00eeba0}": "{516cf89c}",
-            "{960ca1ef}": "{7bbb5813}",
-            "{b54e0145}": "{4513e981}",
-            "{a20eeec6}": "{536cfbc2}",
-            "{78049f19}": "{f694211d}",
-            "{0c7ea92b}": "{aef6e9ea}",
-            "{75049a60}": "{f3941c64}",
-            "{0d7eaabe}": "{adf6e857}",
-            "{76049bf3}": "{f4941df7}",
-            "{239f97f5}": "{9683b42c}",
-            "{7b04a3d2}": "{f194193e}",
-            "{3539f72c}": "{a8f078ef}",
-            "{3839fbe5}": "{a9f07a82}",
-            "{3739fa52}": "{aaf07c15}",
-            "{3239f273}": "{a3f07110}",
-            "{ac7c99e8}": "{3efc8224}",
-            "{51f43682}": "{1f65ffd5}",
-            "{3139f0e0}": "{a4f072a3}",
-            "{3a226454}": "{9cafe9b0}",
-            "{77a361b6}": "{3e0f2c09}",
-            "{76a36023}": "{3b0f2750}",
-            "{75a35e90}": "{3c0f28e3}",
-            "{7ca36995}": "{410f30c2}",
-            "{35748ec6}": "{0d2a4d9a}",
-            "{ad8312d7}": "{da7c0ebb}",
-            "{a788f6f5}": "{31b2213a}",
-            "{317ae25d}": "{ef3dcb7d}",
-            "{7b9a95b8}": "{1c648bad}",
-            "{ca52ec20}": "{0a618acb}",
-            "{4b548f15}": "{1934999c}",
-            "{c2b9826f}": "{c1d83343}",
-            "{4cedaef8}": "{9905588d}",
-            "{260c6465}": "{8f873728}",
-            "{692b017a}": "{9a4bac26}",
-            "{ebce2ea6}": "{fbfed476}",
-            "{9e44c10a}": "{b0ac750f}",
-            "{7a71d475}": "{8f013b99}",
-            "{7ba36802}": "{420f3255}",
-            "{41efc7b9}": "{73ad05e6}",
-            "{44160511}": "{a1307518}",
-            "{d4cf809c}": "{632639ce}",
-            "{1d276ac1}": "{b6070980}",
-            "{28f79d46}": "{205bbb07}",
-            "{2adb2e0f}": "{93c5d472}",
-            "{b49247ce}": "{775a5a91}",
-            "{6cb2d869}": "{7b315609}",
-            "{2186c07a}": "{44819046}"
+            "Evelynn_E_EmpoweredBuf": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_E_EmpoweredBuf",
+            "Evelynn_E_EmpoweredBody": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_E_EmpoweredBody",
+            "Evelynn_Recall_WingsAppear": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Recall_WingsAppear",
+            "Evelynn_Recall_GroundVFX": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Recall_GroundVFX",
+            "Evelynn_Recall_FlowersGround": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Recall_FlowersGround",
+            "Evelynn_Z_HawkVFX": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Z_HawkVFX",
+            "Evelynn_Z_HawkWinddown": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Z_HawkWinddown",
+            "Evelynn_Z_FlowersWinddown": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Z_FlowersWinddown",
+            "Evelynn_Emote_JokeGround": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_JokeGround",
+            "Evelynn_Emote_SplitJokeFlower": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_SplitJokeFlower",
+            "Evelynn_Emote_DanceGround": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_DanceGround",
+            "Evelynn_Emote_GroundVFXAppear": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_GroundVFXAppear",
+            "Evelynn_Emote_TauntSwipe": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_TauntSwipe",
+            "Evelynn_Emote_FlowerJokeAir": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_FlowerJokeAir",
+            "Evelynn_Z_HomeguardSmoke": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Z_HomeguardSmoke",
+            "Evelynn_Emote_TauntLoop": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_TauntLoop",
+            "Evelynn_Emote_Respawn": "Characters/Evelynn/Skins/Skin69/Particles/Evelynn_Skin69_Emote_Respawn",
+            "Evelynn_Emote_RespawnStart": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_RespawnStart",
+            "Evelynn_Z_Death": "Characters/Evelynn/Skins/Skin69/Particles/Evelynn_Skin69_Z_Death",
+            "{e1891533}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_SwipeChild01",
+            "{e28916c6}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_SwipeChild02",
+            "{e3891859}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_SwipeChild03",
+            "{e48919ec}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_SwipeChild04",
+            "{e5891b7f}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_SwipeChild05",
+            "{63694883}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_SwipeChild51",
+            "{64694a16}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_SwipeChild52",
+            "{65694ba9}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_SwipeChild53",
+            "{66694d3c}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_SwipeChild54",
+            "{67694ecf}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_SwipeChild55",
+            "{e6891d12}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_SwipeChild06",
+            "{e7891ea5}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_SwipeChild07",
+            "{705d51d8}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_SwipeChild8bf",
+            "{de9bf297}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_SwipeChild9bf",
+            "{71b561d0}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_R_SwipeChild10bf",
+            "Evelynn_Skin65_BasicAttack03": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_BasicAttack03",
+            "Evelynn_Joke_Glow01": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Joke_Glow01",
+            "Evelynn_Emote_Joke_fireboom01": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Joke_fireboom01",
+            "Evelynn_Emote_Joke_fireglow01": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Joke_fireglow01",
+            "Evelynn_Emote_Joke_fireChild01": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Joke_fireChild01",
+            "Evelynn_Emote_fireglow02": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_fireglow02",
+            "Evelynn_Emote_Joke_fireglow03": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Joke_fireglow03",
+            "Evelynn_Emote_Taunt_fireglow01": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Taunt_fireglow01",
+            "{0c7ea92b}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Taunt_Fireglow01Child01",
+            "Evelynn_Emote_Taunt_fireglow02": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Taunt_fireglow02",
+            "{0d7eaabe}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Taunt_Fireglow01Child02",
+            "Evelynn_Emote_Taunt_fireglow03": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Taunt_fireglow03",
+            "{239f97f5}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Taunt_Fireglow03Child01",
+            "Evelynn_Emote_Taunt_fireglow04": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Taunt_fireglow04",
+            "{3539f72c}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Taunt_Fireglow04Child01",
+            "{3839fbe5}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Taunt_Fireglow04Child02",
+            "{3739fa52}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Taunt_Fireglow04Child03",
+            "{3239f273}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Taunt_Fireglow04Child04",
+            "Evelynn_Emote_Taunt_fireBom01": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Taunt_fireBom01",
+            "{51f43682}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Taunt_FireBom01Child01",
+            "{3139f0e0}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Taunt_Fireglow04Child05",
+            "Evelynn_Emote_Dance_glow01": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Dance_glow01",
+            "{77a361b6}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Dance_Glow01Child01",
+            "{76a36023}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Dance_Glow01Child02",
+            "{75a35e90}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Dance_Glow01Child03",
+            "{7ca36995}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Dance_Glow01Child04",
+            "Evelynn_Emote_Idle_fire01": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Idle_fire01",
+            "Evelynn_Emote_Idle_glow01": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Idle_glow01",
+            "Evelynn_Skin65_Recall_Light01": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Recall_Light01",
+            "{317ae25d}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Recall_FireStart",
+            "Evelynn_Skin65_Recall_GasSmoke": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Recall_GasSmoke",
+            "Evelynn_Skin65_Recall_GasSplash": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Recall_GasSplash",
+            "Evelynn_Skin65_Recall_EndLight": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Recall_EndLight",
+            "{c2b9826f}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Recall_EndGround",
+            "Evelynn_Skin65_Recall_GasSlash": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Recall_GasSlash",
+            "Evelynn_Skin65_Recall_GroundFire": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Recall_GroundFire",
+            "Evelynn_Emote_Homeguard_Trail01": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Homeguard_Trail01",
+            "{ebce2ea6}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_P_StealthRun",
+            "Evelynn_Skin65_Recall_HairFire": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Recall_HairFire",
+            "Evelynn_Emote_Homeguard_glow01": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Homeguard_glow01",
+            "{7ba36802}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Dance_Glow01Child05",
+            "Evelynn_Skin65_P_StealthEye": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_P_StealthEye",
+            "{44160511}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Idle_Glow01Child01",
+            "{d4cf809c}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Recall_ChildFlame",
+            "Evelynn_Skin65_Emote_Respawn_Smoke": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Respawn_Smoke",
+            "Evelynn_Skin65_Emote_Respawn_Fingers": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Respawn_Fingers",
+            "{2adb2e0f}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_WinddownGlow01",
+            "{b49247ce}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_WinddownTaril01",
+            "{6cb2d869}": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_WinddownLightChild01",
+            "Evelynn_Emote_Joke_fireglow052": "Characters/Evelynn/Skins/Skin65/Particles/Evelynn_Skin65_Emote_Joke_fireglow052"
         },
         "__type": "ResourceResolver"
     },
