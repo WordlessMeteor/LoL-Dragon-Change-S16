@@ -8,6 +8,10 @@
             "image": "assets/characters/ahri/skins/skin97/ahriloadscreen_97.tex",
             "__type": "CensoredImage"
         },
+        "loadscreenVintage": {
+            "image": "assets/characters/ahri/skins/skin97/ahriloadscreen_97_le.tex",
+            "__type": "CensoredImage"
+        },
         "skinAudioProperties": {
             "tagEventList": [
                 "Ahri",
@@ -355,6 +359,7 @@
         "mContextualActionData": "Characters/Ahri/CAC/Ahri_Base",
         "iconCircle": "assets/characters/ahri/hud/ahri_circle_0.tex",
         "iconSquare": "assets/characters/ahri/hud/ahri_square_0.tex",
+        "iconAvatar": "assets/characters/ahri/hud/ahri_circle_97.tex",
         "healthBarData": {
             "attachToBone": "Buffbone_Cstm_Healthbar",
             "unitHealthBarStyle": 12,
@@ -775,6 +780,13 @@
                                 "__type": "ObjectTags"
                             },
                             "__type": "{18278f59}"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Kalista/Spells/KalistaRInvuln",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
@@ -861,6 +873,13 @@
                                 "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                             },
                             "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Kalista/Spells/KalistaRInvuln",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
@@ -917,6 +936,55 @@
                             },
                             "mDelayOn": 1.0,
                             "__type": "DelayedBoolMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Cassiopeia/Spells/CassiopeiaRAbility/CassiopeiaRStun",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Kalista/Spells/KalistaRInvuln",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Bard/Spells/BardRAbility/BardRStasis",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Shared/Spells/ZhonyasRingShield",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Brand/Spells/BrandPassiveAbility/BrandAblaze",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Ornn/Spells/OrnnWAbility/OrnnVulnerableDebuff",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Pyke/Spells/PykeEAbility/PykeEMissile",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"

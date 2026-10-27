@@ -175,6 +175,26 @@
             "__type": "CharacterHealthBarDataRecord"
         },
         "mResourceResolver": "Characters/Akali/Skins/Skin3/Resources",
+        "PersistentEffectConditions": [
+            {
+                "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "mScriptName": "AkaliWStealth",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "effectKey": "Akali_W_GlobalInvisibilityShimmerLong",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            }
+        ],
         "objectPath": "Characters/Akali/Skins/Skin3",
         "__type": "SkinCharacterDataProperties"
     },

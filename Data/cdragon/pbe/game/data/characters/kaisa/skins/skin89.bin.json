@@ -307,7 +307,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "assets/characters/kaisa/skins/skin89/kaisa_skin89_weapons_tx_cm.tex",
+                    "Material": "{da7e8386}",
                     "submesh": "EStyle",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -941,6 +941,22 @@
                             },
                             "TextureName": "assets/characters/kaisa/skins/skin89/kaisa_skin89_thermal_tx_cm.tex",
                             "__type": "DynamicMaterialTextureSwapOption"
+                        },
+                        {
+                            "driver": {
+                                "Spell": "Characters/Kaisa/Spells/KaisaEAbility/KaisaE",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "TextureName": "assets/characters/kaisa/skins/skin83/kaisa_skin83_thermal_tx_cm.tex",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        },
+                        {
+                            "driver": {
+                                "Spell": "Characters/Kaisa/Spells/KaisaEAbility/KaisaEAttackSpeed",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "TextureName": "assets/characters/kaisa/skins/skin83/kaisa_skin83_thermal_tx_cm.tex",
+                            "__type": "DynamicMaterialTextureSwapOption"
                         }
                     ],
                     "__type": "DynamicMaterialTextureSwapDef"
@@ -1147,6 +1163,22 @@
                                 "__type": "HasBuffDynamicMaterialBoolDriver"
                             },
                             "TextureName": "assets/characters/kaisa/skins/skin89/kaisa_skin89_thermal_tx_cm.tex",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        },
+                        {
+                            "driver": {
+                                "Spell": "Characters/Kaisa/Spells/KaisaEAbility/KaisaEAttackSpeed",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "TextureName": "assets/characters/kaisa/skins/skin83/kaisa_skin83_thermal_tx_cm.tex",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        },
+                        {
+                            "driver": {
+                                "Spell": "Characters/Kaisa/Spells/KaisaEAbility/KaisaE",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "TextureName": "assets/characters/kaisa/skins/skin83/kaisa_skin83_thermal_tx_cm.tex",
                             "__type": "DynamicMaterialTextureSwapOption"
                         }
                     ],
@@ -1561,6 +1593,22 @@
                             },
                             "TextureName": "assets/characters/kaisa/skins/skin89/kaisa_skin89_thermal_tx_cm.tex",
                             "__type": "DynamicMaterialTextureSwapOption"
+                        },
+                        {
+                            "driver": {
+                                "Spell": "Characters/Kaisa/Spells/KaisaEAbility/KaisaE",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "TextureName": "assets/characters/kaisa/skins/skin83/kaisa_skin83_thermal_tx_cm.tex",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        },
+                        {
+                            "driver": {
+                                "Spell": "Characters/Kaisa/Spells/KaisaEAbility/KaisaEAttackSpeed",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "TextureName": "assets/characters/kaisa/skins/skin83/kaisa_skin83_thermal_tx_cm.tex",
+                            "__type": "DynamicMaterialTextureSwapOption"
                         }
                     ],
                     "__type": "DynamicMaterialTextureSwapDef"
@@ -1973,6 +2021,22 @@
                                 "__type": "HasBuffDynamicMaterialBoolDriver"
                             },
                             "TextureName": "{9a7bba04c9393f1f}",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        },
+                        {
+                            "driver": {
+                                "Spell": "Characters/Kaisa/Spells/KaisaEAbility/KaisaEAttackSpeed",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "TextureName": "assets/characters/kaisa/skins/skin83/kaisa_skin83_weaponst_tx_cm.tex",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        },
+                        {
+                            "driver": {
+                                "Spell": "Characters/Kaisa/Spells/KaisaEAbility/KaisaE",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "TextureName": "assets/characters/kaisa/skins/skin83/kaisa_skin83_weaponst_tx_cm.tex",
                             "__type": "DynamicMaterialTextureSwapOption"
                         }
                     ],
@@ -5051,7 +5115,8 @@
                             "{10d076b1}",
                             "{8c3b7f51}",
                             "{a683edc6}",
-                            "{9302de72}"
+                            "necklace",
+                            "Headwear"
                         ],
                         "mSubmeshesToDrawAlways": [
                             "BODY",
@@ -5059,7 +5124,8 @@
                             "{10d076b1}",
                             "{8c3b7f51}",
                             "{a683edc6}",
-                            "{9302de72}"
+                            "necklace",
+                            "Headwear"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -5092,7 +5158,6 @@
                     "__type": "ValueColor"
                 },
                 "pass": 1,
-                "meshRenderFlags": 0,
                 "reflectionDefinition": {
                     "reflectionMapTexture": "ASSETS/Shared/Particles/Generic_Grey_Cubemap.dds",
                     "reflectionOpacityDirect": 0.10000000149011612,
@@ -18477,7 +18542,7 @@
                             "{10d076b1}",
                             "{8c3b7f51}",
                             "{a683edc6}",
-                            "{9302de72}"
+                            "necklace"
                         ],
                         "mSubmeshesToDrawAlways": [
                             "BODY",
@@ -18485,7 +18550,7 @@
                             "{10d076b1}",
                             "{8c3b7f51}",
                             "{a683edc6}",
-                            "{9302de72}"
+                            "necklace"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -18541,7 +18606,6 @@
                     "__type": "ValueColor"
                 },
                 "pass": 5,
-                "meshRenderFlags": 0,
                 "reflectionDefinition": {
                     "reflectionMapTexture": "ASSETS/Shared/Particles/Generic_Grey_Cubemap.dds",
                     "reflectionOpacityDirect": 3.0,
@@ -18603,14 +18667,16 @@
                             "EngineVFX",
                             "{10d076b1}",
                             "{8c3b7f51}",
-                            "{a683edc6}"
+                            "{a683edc6}",
+                            "necklace"
                         ],
                         "mSubmeshesToDrawAlways": [
                             "BODY",
                             "EngineVFX",
                             "{10d076b1}",
                             "{8c3b7f51}",
-                            "{a683edc6}"
+                            "{a683edc6}",
+                            "necklace"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -18657,7 +18723,6 @@
                     "__type": "ValueColor"
                 },
                 "pass": 1,
-                "meshRenderFlags": 0,
                 "depthBiasFactors": [
                     -1.0,
                     -1.0
