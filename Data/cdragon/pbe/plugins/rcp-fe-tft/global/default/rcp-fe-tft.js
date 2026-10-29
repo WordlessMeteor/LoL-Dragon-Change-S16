@@ -617,27 +617,37 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.setFullLaunchProxy = function(e) {
-                u = e
+                h = e
             };
             const i = n(1),
                 s = "/lol-client-config/v3/client-config/",
                 a = s + "lol.client_settings.tft.full_launch_enabled",
-                l = s + "lol.client_settings.tft.new_tab.overrideUrl",
-                o = "/deep-links/v1/settings",
-                r = s + "lol.client_settings.tft.set17_extension_config",
-                c = "/telemetry/v1/common-data",
-                d = "/riotclient/region-locale";
-            let u = null;
+                l = s + "lol.client_settings.tft.showTFTSpectator",
+                o = {
+                    id: "spectator-mode",
+                    title: "tft_spectator_mode_title",
+                    titleFallback: "Spectator Mode",
+                    description: "tft_spectator_mode_description",
+                    descriptionFallback: "Launch Teamfight Tactics in Spectator Mode."
+                },
+                r = s + "lol.client_settings.tft.new_tab.overrideUrl",
+                c = "/deep-links/v1/settings",
+                d = s + "lol.client_settings.tft.set17_extension_config",
+                u = "/telemetry/v1/common-data",
+                m = "/riotclient/region-locale";
+            let h = null;
             t.default = i.Ember.Service.extend({
                 homeOverrideUrl: "",
                 init: function() {
-                    this._super(...arguments), u && (u._registerLaunchTFTCallback(this.launchTFT.bind(this)), u._registerIsFullLaunchEnabledCallback(this.isFullLaunchEnabled.bind(this)), u._registerIsHextechTFTQueueCallback(this.isHextechTFTQueue.bind(this))), this.set("fullLaunchEnabled", !1), this.set("directLaunchEnabled", !0), this.set("TFTNewTabVisible", !1), this.set("isTencentRegion", !1), this.set("launchLink", ""), this.set("externalClientScheme", ""), this.set("leagueSessionId", ""), i.dataBinding.observe(a, this, (e => {
+                    this._super(...arguments), h && (h._registerLaunchTFTCallback(this.launchTFT.bind(this)), h._registerIsFullLaunchEnabledCallback(this.isFullLaunchEnabled.bind(this)), h._registerIsHextechTFTQueueCallback(this.isHextechTFTQueue.bind(this))), this.set("fullLaunchEnabled", !1), this.set("showTFTSpectator", !1), this.set("directLaunchEnabled", !0), this.set("TFTNewTabVisible", !1), this.set("isTencentRegion", !1), this.set("launchLink", ""), this.set("externalClientScheme", ""), this.set("leagueSessionId", ""), i.dataBinding.observe(a, this, (e => {
                         this.set("fullLaunchEnabled", e)
                     })), i.dataBinding.observe(l, this, (e => {
+                        this.set("showTFTSpectator", !0 === e)
+                    })), i.dataBinding.observe(r, this, (e => {
                         this.set("homeOverrideUrl", e)
-                    })), this.sharedAudioManager = i.navigation?.activityCenter?.getHomeHubsSharedAudioManager(), i.dataBinding.observe(d, this, (e => {
+                    })), this.sharedAudioManager = i.navigation?.activityCenter?.getHomeHubsSharedAudioManager(), i.dataBinding.observe(m, this, (e => {
                         this.set("isTencentRegion", "TENCENT" === e?.region)
-                    })), i.dataBinding.observe(o, this, (e => {
+                    })), i.dataBinding.observe(c, this, (e => {
                         e ? (this.set("externalClientScheme", e.externalClientScheme), i.logger.info(`Saves externalClientScheme as ${this.get("externalClientScheme")}`)) : i.logger.warning("No external link settings received.")
                     })), i.dataBinding.observe("/lol-patch/v1/product-dependency", this, (e => {
                         if (e && Object.prototype.hasOwnProperty.call(e, "product_id") && Object.prototype.hasOwnProperty.call(e, "patchline_id")) {
@@ -645,9 +655,9 @@
                                 n = e.patchline_id;
                             this.set("launchLink", `product/launch/v1/${t}/${n}?directLaunch=true`), i.logger.info(`Saves launchLink product with link: ${this.get("launchLink")}`)
                         }
-                    })), i.dataBinding.observe(r, this, (e => {
+                    })), i.dataBinding.observe(d, this, (e => {
                         e ? this.set("set17ExtensionConfig", e) : i.logger.warning("No set17 extension config received.")
-                    })), i.dataBinding.observe(c, this, (e => {
+                    })), i.dataBinding.observe(u, this, (e => {
                         if (!e) return;
                         const t = e["common.session_id"];
                         t ? this.set("leagueSessionId", t) : this.set("leagueSessionId", "")
@@ -660,18 +670,22 @@
                     return this.get("directLaunchEnabled")
                 },
                 willDestroy: function() {
-                    this._super(...arguments), i.dataBinding.unobserve(a, this), i.dataBinding.unobserve(l, this), i.dataBinding.unobserve(d, this), i.dataBinding.unobserve(o, this), i.dataBinding.unobserve(c, this), u && u._unregisterCallbacks()
+                    this._super(...arguments), i.dataBinding.unobserve(a, this), i.dataBinding.unobserve(l, this), i.dataBinding.unobserve(r, this), i.dataBinding.unobserve(m, this), i.dataBinding.unobserve(c, this), i.dataBinding.unobserve(d, this), i.dataBinding.unobserve(u, this), h && h._unregisterCallbacks()
                 },
-                launchTFT: function(e) {
+                launchTFT: function(e, t) {
+                    if (t === o.id) {
+                        if (!this.get("showTFTSpectator") || !this.isDirectLaunchEnabled()) return;
+                        return this.sendTFTuLaunchButtonTelemetry(e), i.dataBinding.post("/lol-gameflow/v1/launch-tft-spectator")
+                    }
                     if (this.get("isTencentRegion")) return i.logger.info("Launching bundled executable for Tencent."), void i.dataBinding.post("/lol-gameflow/v1/launch-tft");
-                    const t = this.get("launchLink");
-                    if (!t) return void i.logger.warning("No external product link found");
-                    const n = this.get("externalClientScheme");
-                    if (!n) return void i.logger.warning("No riot client launch scheme found");
-                    const s = this.get("leagueSessionId");
-                    s || i.logger.warning("No league session ID found"), this.sendTFTuLaunchButtonTelemetry(e);
-                    const a = s ? `${t}&session_id=${s}` : t;
-                    i.logger.info(`Launching external product with link: ${a}`), window.open(`${n}://${a}`)
+                    const n = this.get("launchLink");
+                    if (!n) return void i.logger.warning("No external product link found");
+                    const s = this.get("externalClientScheme");
+                    if (!s) return void i.logger.warning("No riot client launch scheme found");
+                    const a = this.get("leagueSessionId");
+                    a || i.logger.warning("No league session ID found"), this.sendTFTuLaunchButtonTelemetry(e);
+                    const l = a ? `${n}&session_id=${a}` : n;
+                    i.logger.info(`Launching external product with link: ${l}`), window.open(`${s}://${l}`)
                 },
                 setTFTNewTabVisible: function(e) {
                     this.set("TFTNewTabVisible", e), !e && this.sharedAudioManager && this.sharedAudioManager.stopAll({
@@ -685,10 +699,14 @@
                     this.set("directLaunchEnabled", !this.get("directLaunchEnabled"))
                 },
                 isSet17ExtensionEnabled() {
-                    return this.isFullLaunchEnabled() && this.get("set17ExtensionConfig")?.tftu_queue_entries.length > 0
+                    return this.isFullLaunchEnabled() && this.get("set17ExtensionConfig")?.tftu_queue_entries?.length > 0
                 },
                 getTFTuQueueEntries() {
-                    return this.isSet17ExtensionEnabled() && this.get("set17ExtensionConfig")?.tftu_queue_entries || []
+                    const e = this.isFullLaunchEnabled() ? this.get("set17ExtensionConfig")?.tftu_queue_entries : [],
+                        t = Array.isArray(e) ? e.filter((e => e.id !== o.id)) : [];
+                    return this.get("showTFTSpectator") ? [...t, {
+                        ...o
+                    }] : t
                 },
                 getHextechTFTQueueIds() {
                     if (!this.isSet17ExtensionEnabled()) return [];

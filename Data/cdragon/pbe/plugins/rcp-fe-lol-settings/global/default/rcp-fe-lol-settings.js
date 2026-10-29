@@ -399,7 +399,7 @@
                     DiscordButtonComponent: t,
                     DiscordLinkingPopupComponent: l,
                     DiscordPopupComponent: r
-                } = s.SharedComponents.getApi_SharedDiscordPopupComponents(), m = s.emberApplicationFactory.factoryDefinitionBuilder().setName("rcp-fe-lol-settings").setRoot(document.createElement("div")).setComponentFactory(s.ComponentFactory).setRouter(a.default).setEmber(s.Ember).setL10n(s.emberL10n).setTra(s.tra).setFeatureFlag("EMBER_CLI_COMPAT", !0).addRoute("Application", n(20).default).addRoute("General", n(21).default).addRoute("Notifications", n(22).default).addRoute("Chat", n(23).default).addRoute("Sound", n(24).default).addRoute("Voice", n(25).default).addRoute("BlockList", n(26).default).addRoute("GameHotkeys", n(27).default).addRoute("GameSound", n(28).default).addRoute("GameInterface", n(30).default).addRoute("GameGameplay", n(31).default).addRoute("Replays", n(32).default).addRoute("PrivacyNotice", n(33).default).addRoute("TermsOfUse", n(34).default).addRoute("ThirdpartyLicenses", n(35).default).addRoute("Version", n(36).default).addRoute("LegalStatements", n(37).default).addController("Application", n(38).default).addController("General", n(39).default).addController("Notifications", n(65).default).addController("Chat", n(66).default).addController("Sound", n(67).default).addController("Voice", n(68).default).addController("BlockList", n(71).default).addController("GameHotkeys", n(72).default).addController("GameSound", n(73).default).addController("GameInterface", n(75).default).addController("GameGameplay", n(76).default).addController("Replays", n(77).default).addController("PrivacyNotice", n(78).default).addController("TermsOfUse", n(79).default).addController("ThirdpartyLicenses", n(80).default).addController("Version", n(81).default).addController("LegalStatements", n(82).default).addComponent("ModalHeader", n(83).default).addComponent("ModalFooter", n(84).default).addComponent("NavigationBarGroup", n(85).default).addComponent("NavigationBarGroupItem", n(86).default).addComponent("BlockedPlayer", n(87).default).addComponent("BlockListError", n(88).default).addComponent("GameSoundContent", n(89).default).addComponent("GameInterfaceContent", n(90).default).addComponent("GameGameplayContent", n(91).default).addComponent("GameHotkeysAdditionalSection", n(92).default).addComponent("GameHotkeysAdditional", n(93).default).addComponent("GameHotkeysPrimaryButton", n(96).default).addComponent("GameHotkeysPrimary", n(97).default).addComponent("GameHotkeysQuickcast", n(99).default).addComponent("GameHotkeysContent", n(100).default).addComponent("RepairGameButton", n(102).default).addComponent("PublishingLocale", n(103).default).addComponent("AccountVerification", n(104).default).addComponent("SettingsSlider", n(105).default).addComponent("PushToTalkKey", n(106).default).addComponent("MicLevelRings", n(109).default).addComponent("VngPublisherSettings", n(110).default).addComponent("HoneyfruitSettingsErrors", n(112).default).addComponent("PlayerName", i).addComponent("DiscordBeta", e).addComponent("DiscordButton", t).addComponent("DiscordPopup", r).addComponent("DiscordLinkingPopup", l).addService("Honeyfruit", n(114).default).addService("ModalManager", n(115).default).addService("Patch", n(118).default).addService("Persistence", n(119).default).addService("Voice", n(121).default).addService("Gameflow", n(101).default).addHelper("FormatKeyBindings", s.Ember.Helper.helper(o.formatAdditionalKeyBindings)).addHelper("GetKeyBindingsModifier", s.Ember.Helper.helper(o.getPrimaryModifierDisplay)).addHelper("GetKeyBindingsMainKey", s.Ember.Helper.helper(o.getPrimaryMainKeyDisplay)).addTemplate("application", n(122)).addTemplate("index", n(123)).addTemplate("general", n(124)).addTemplate("notifications", n(125)).addTemplate("chat", n(126)).addTemplate("sound", n(127)).addTemplate("voice", n(128)).addTemplate("block-list", n(129)).addTemplate("game-hotkeys", n(130)).addTemplate("game-sound", n(131)).addTemplate("game-interface", n(132)).addTemplate("game-gameplay", n(133)).addTemplate("replays", n(134)).addTemplate("privacy-notice", n(135)).addTemplate("terms-of-use", n(136)).addTemplate("thirdparty-licenses", n(137)).addTemplate("loading", n(138)).addTemplate("version", n(139)).addTemplate("legal-statements", n(140)).addTemplate("components/modal-header", n(141)).addTemplate("components/modal-footer", n(142)).addTemplate("components/navigation-bar-group", n(143)).addTemplate("components/navigation-bar-group-item", n(144)).addTemplate("components/blocked-player", n(145)).addTemplate("components/block-list-error", n(146)).addTemplate("components/repair-game-button", n(147)).addTemplate("components/publishing-locale", n(148)).addTemplate("components/account-verification", n(149)).addTemplate("components/settings-slider", n(150)).addTemplate("components/push-to-talk-key", n(151)).addTemplate("components/mic-level-rings", n(152)).addTemplate("components/game-sound-content", n(153)).addTemplate("components/game-interface-content", n(154)).addTemplate("components/game-gameplay-content", n(155)).addTemplate("components/game-hotkeys-additional-section", n(156)).addTemplate("components/game-hotkeys-additional", n(157)).addTemplate("components/game-hotkeys-primary-button", n(158)).addTemplate("components/game-hotkeys-primary", n(159)).addTemplate("components/game-hotkeys-quickcast", n(160)).addTemplate("components/game-hotkeys-content", n(161)).addTemplate("components/vng-publisher-settings", n(162)).addTemplate("components/honeyfruit-settings-error", n(163));
+                } = s.SharedComponents.getApi_SharedDiscordPopupComponents(), m = s.emberApplicationFactory.factoryDefinitionBuilder().setName("rcp-fe-lol-settings").setRoot(document.createElement("div")).setComponentFactory(s.ComponentFactory).setRouter(a.default).setEmber(s.Ember).setL10n(s.emberL10n).setTra(s.tra).setFeatureFlag("EMBER_CLI_COMPAT", !0).addRoute("Application", n(20).default).addRoute("General", n(21).default).addRoute("Notifications", n(22).default).addRoute("Chat", n(23).default).addRoute("Sound", n(24).default).addRoute("Voice", n(25).default).addRoute("BlockList", n(26).default).addRoute("GameHotkeys", n(27).default).addRoute("GameSound", n(28).default).addRoute("GameInterface", n(30).default).addRoute("GameGameplay", n(31).default).addRoute("Replays", n(32).default).addRoute("PrivacyNotice", n(33).default).addRoute("TermsOfUse", n(34).default).addRoute("ThirdpartyLicenses", n(35).default).addRoute("Version", n(36).default).addRoute("LegalStatements", n(37).default).addController("Application", n(38).default).addController("General", n(39).default).addController("Notifications", n(65).default).addController("Chat", n(66).default).addController("Sound", n(67).default).addController("Voice", n(68).default).addController("BlockList", n(70).default).addController("GameHotkeys", n(71).default).addController("GameSound", n(72).default).addController("GameInterface", n(74).default).addController("GameGameplay", n(75).default).addController("Replays", n(76).default).addController("PrivacyNotice", n(77).default).addController("TermsOfUse", n(78).default).addController("ThirdpartyLicenses", n(79).default).addController("Version", n(80).default).addController("LegalStatements", n(81).default).addComponent("ModalHeader", n(82).default).addComponent("ModalFooter", n(83).default).addComponent("NavigationBarGroup", n(84).default).addComponent("NavigationBarGroupItem", n(85).default).addComponent("BlockedPlayer", n(86).default).addComponent("BlockListError", n(87).default).addComponent("GameSoundContent", n(88).default).addComponent("GameInterfaceContent", n(89).default).addComponent("GameGameplayContent", n(90).default).addComponent("GameHotkeysAdditionalSection", n(91).default).addComponent("GameHotkeysAdditional", n(92).default).addComponent("GameHotkeysPrimaryButton", n(95).default).addComponent("GameHotkeysPrimary", n(96).default).addComponent("GameHotkeysQuickcast", n(98).default).addComponent("GameHotkeysContent", n(99).default).addComponent("RepairGameButton", n(101).default).addComponent("PublishingLocale", n(102).default).addComponent("AccountVerification", n(103).default).addComponent("SettingsSlider", n(104).default).addComponent("PushToTalkKey", n(105).default).addComponent("MicLevelRings", n(108).default).addComponent("VngPublisherSettings", n(109).default).addComponent("HoneyfruitSettingsErrors", n(111).default).addComponent("PlayerName", i).addComponent("DiscordBeta", e).addComponent("DiscordButton", t).addComponent("DiscordPopup", r).addComponent("DiscordLinkingPopup", l).addService("Honeyfruit", n(113).default).addService("ModalManager", n(114).default).addService("Patch", n(117).default).addService("Persistence", n(118).default).addService("Voice", n(120).default).addService("Gameflow", n(100).default).addHelper("FormatKeyBindings", s.Ember.Helper.helper(o.formatAdditionalKeyBindings)).addHelper("GetKeyBindingsModifier", s.Ember.Helper.helper(o.getPrimaryModifierDisplay)).addHelper("GetKeyBindingsMainKey", s.Ember.Helper.helper(o.getPrimaryMainKeyDisplay)).addTemplate("application", n(121)).addTemplate("index", n(122)).addTemplate("general", n(123)).addTemplate("notifications", n(124)).addTemplate("chat", n(125)).addTemplate("sound", n(126)).addTemplate("voice", n(127)).addTemplate("block-list", n(128)).addTemplate("game-hotkeys", n(129)).addTemplate("game-sound", n(130)).addTemplate("game-interface", n(131)).addTemplate("game-gameplay", n(132)).addTemplate("replays", n(133)).addTemplate("privacy-notice", n(134)).addTemplate("terms-of-use", n(135)).addTemplate("thirdparty-licenses", n(136)).addTemplate("loading", n(137)).addTemplate("version", n(138)).addTemplate("legal-statements", n(139)).addTemplate("components/modal-header", n(140)).addTemplate("components/modal-footer", n(141)).addTemplate("components/navigation-bar-group", n(142)).addTemplate("components/navigation-bar-group-item", n(143)).addTemplate("components/blocked-player", n(144)).addTemplate("components/block-list-error", n(145)).addTemplate("components/repair-game-button", n(146)).addTemplate("components/publishing-locale", n(147)).addTemplate("components/account-verification", n(148)).addTemplate("components/settings-slider", n(149)).addTemplate("components/push-to-talk-key", n(150)).addTemplate("components/mic-level-rings", n(151)).addTemplate("components/game-sound-content", n(152)).addTemplate("components/game-interface-content", n(153)).addTemplate("components/game-gameplay-content", n(154)).addTemplate("components/game-hotkeys-additional-section", n(155)).addTemplate("components/game-hotkeys-additional", n(156)).addTemplate("components/game-hotkeys-primary-button", n(157)).addTemplate("components/game-hotkeys-primary", n(158)).addTemplate("components/game-hotkeys-quickcast", n(159)).addTemplate("components/game-hotkeys-content", n(160)).addTemplate("components/vng-publisher-settings", n(161)).addTemplate("components/honeyfruit-settings-error", n(162));
                 return c.registerOnAppBuilder(m), m
             };
             var l, s = n(1),
@@ -2260,21 +2260,16 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var l = n(1),
-                s = i(n(40)),
-                a = n(69),
-                o = i(n(70));
-
-            function i(e) {
-                return e && e.__esModule ? e : {
-                    default: e
-                }
-            }
-            const c = "/lol-settings/v2/account/LCUPreferences/lol-navigation",
-                r = "/lol-settings/v2/account/LCUPreferences/lol-premade-voice",
-                m = "/lol-client-config/v3/client-config/lol.client_settings.team_voice.enabled",
-                u = l.dataBinding.bindTo(l.socket),
-                d = {
+            var l, s = n(1),
+                a = (l = n(40)) && l.__esModule ? l : {
+                    default: l
+                },
+                o = n(69);
+            const i = "/lol-settings/v2/account/LCUPreferences/lol-navigation",
+                c = "/lol-settings/v2/account/LCUPreferences/lol-premade-voice",
+                r = "/lol-client-config/v3/client-config/lol.client_settings.team_voice.enabled",
+                m = s.dataBinding.bindTo(s.socket),
+                u = {
                     model: "accountVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
@@ -2282,7 +2277,7 @@
                     scope: "account",
                     defaultValue: !1
                 },
-                p = {
+                d = {
                     model: "accountVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
@@ -2290,7 +2285,7 @@
                     scope: "account",
                     defaultValue: !1
                 },
-                g = {
+                p = {
                     model: "accountVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
@@ -2298,7 +2293,7 @@
                     scope: "account",
                     defaultValue: !1
                 },
-                _ = {
+                g = {
                     model: "localVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
@@ -2306,7 +2301,7 @@
                     scope: "local",
                     defaultValue: "Default System Device"
                 },
-                h = {
+                _ = {
                     model: "localVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
@@ -2314,7 +2309,7 @@
                     scope: "local",
                     defaultValue: 50
                 },
-                E = {
+                h = {
                     model: "localVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
@@ -2322,7 +2317,7 @@
                     scope: "local",
                     defaultValue: !1
                 },
-                S = {
+                E = {
                     model: "localVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
@@ -2330,28 +2325,28 @@
                     scope: "local",
                     defaultValue: !0
                 },
-                f = "voiceActivity",
-                v = "pushToTalk",
-                T = ["Refreshing", "Loaded"],
-                b = "noOne",
-                y = "team",
-                N = "partyAndTeam";
+                S = "voiceActivity",
+                f = "pushToTalk",
+                v = ["Refreshing", "Loaded"],
+                T = "noOne",
+                b = "team",
+                y = "partyAndTeam";
 
-            function A(e) {
+            function N(e) {
                 return {
-                    partyVoiceEnabled: e === N,
-                    teamVoiceEnabled: e !== b
+                    partyVoiceEnabled: e === y,
+                    teamVoiceEnabled: e !== T
                 }
             }
-            const L = {
+            const A = {
                     model: "accountVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
                     property: "inputMode",
                     scope: "account",
-                    defaultValue: f
+                    defaultValue: S
                 },
-                I = {
+                L = {
                     model: "localVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
@@ -2359,104 +2354,104 @@
                     scope: "local",
                     defaultValue: 65
                 },
-                k = [h.property, _.property, S.property],
-                x = "[<Unbound>]",
-                C = {
+                I = [g.property, E.property],
+                k = "[<Unbound>]",
+                x = {
                     model: "accountVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
                     property: "pushToTalkKey",
                     scope: "account",
-                    defaultValue: x
+                    defaultValue: k
                 },
-                M = {
+                C = {
                     model: "accountVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
                     property: "pushToTalkTeamKey",
                     scope: "account",
-                    defaultValue: x
+                    defaultValue: k
                 };
-            var O = l.Ember.Controller.extend(s.default, {
-                localVoiceSettings: l.Ember.computed.alias("model.localVoiceSettings"),
-                accountVoiceSettings: l.Ember.computed.alias("model.accountVoiceSettings"),
-                persistenceService: l.Ember.inject.service("persistence"),
-                voiceService: l.Ember.inject.service("voice"),
-                teamVoicePluginEnabled: l.Ember.computed.alias("voiceService.teamVoicePluginEnabled"),
-                voiceSkinsEnabled: l.Ember.computed.alias("voiceService.voiceSkinsEnabled"),
-                isVoiceChatRestricted: l.Ember.computed.alias("voiceService.isVoiceChatRestricted"),
-                noiseSuppressionAvailable: l.Ember.computed("voiceService.noiseSuppressionAlgorithm", "voiceService.teamVoicePluginEnabled", (function() {
+            var M = s.Ember.Controller.extend(a.default, {
+                localVoiceSettings: s.Ember.computed.alias("model.localVoiceSettings"),
+                accountVoiceSettings: s.Ember.computed.alias("model.accountVoiceSettings"),
+                persistenceService: s.Ember.inject.service("persistence"),
+                voiceService: s.Ember.inject.service("voice"),
+                teamVoicePluginEnabled: s.Ember.computed.alias("voiceService.teamVoicePluginEnabled"),
+                voiceSkinsEnabled: s.Ember.computed.alias("voiceService.voiceSkinsEnabled"),
+                isVoiceChatRestricted: s.Ember.computed.alias("voiceService.isVoiceChatRestricted"),
+                noiseSuppressionAvailable: s.Ember.computed("voiceService.noiseSuppressionAlgorithm", "voiceService.teamVoicePluginEnabled", (function() {
                     return this.get("voiceService.teamVoicePluginEnabled") && "string" == typeof this.get("voiceService.noiseSuppressionAlgorithm")
                 })),
                 voiceComplianceAgreementAuthorized: !1,
                 teamVoiceEnabledConfig: !1,
-                voiceFontAudience: l.Ember.computed.alias("voiceService.voiceFontAudience"),
+                voiceFontAudience: s.Ember.computed.alias("voiceService.voiceFontAudience"),
                 voiceFontAudienceUpdatePending: !1,
-                selectedVoiceFontId: l.Ember.computed.alias("voiceService.selectedVoiceFontId"),
+                selectedVoiceFontId: s.Ember.computed.alias("voiceService.selectedVoiceFontId"),
                 voiceFontSelectionUpdatePending: !1,
-                noVoiceFontSelected: l.Ember.computed.empty("selectedVoiceFontId"),
-                voiceFontOffLabel: l.Ember.computed("voiceService.voiceFontHardwareUnsupported", (function() {
+                noVoiceFontSelected: s.Ember.computed.empty("selectedVoiceFontId"),
+                voiceFontOffLabel: s.Ember.computed("voiceService.voiceFontHardwareUnsupported", (function() {
                     return this.get("voiceService.voiceFontHardwareUnsupported") ? this.get("tra.voice_settings_voice_skins_unsupported") : this.get("tra.voice_settings_voice_skins_off")
                 })),
-                voiceFontsLoading: l.Ember.computed("voiceService.voiceFontsStatus", "voiceService.voiceFontHardwareSupportKnown", "voiceService.voiceFontHardwareUnsupported", (function() {
+                voiceFontsLoading: s.Ember.computed("voiceService.voiceFontsStatus", "voiceService.voiceFontHardwareSupportKnown", "voiceService.voiceFontHardwareUnsupported", (function() {
                     return "unknown" === this.get("voiceService.voiceFontsStatus") && this.get("voiceService.voiceFontHardwareSupportKnown") && !this.get("voiceService.voiceFontHardwareUnsupported")
                 })),
-                voiceSkinPreviewActive: l.Ember.computed.alias("voiceService.micTestActive"),
-                voiceSkinPreviewMicEnergy: l.Ember.computed.alias("voiceService.micEnergy"),
-                micTestSpeechAllowed: l.Ember.computed("voiceService.pttActive", "voiceService.localMicMuted", (function() {
+                voiceSkinPreviewActive: s.Ember.computed.alias("voiceService.micTestActive"),
+                voiceSkinPreviewMicEnergy: s.Ember.computed.alias("voiceService.micEnergy"),
+                micTestSpeechAllowed: s.Ember.computed("voiceService.pttActive", "voiceService.localMicMuted", (function() {
                     return !this.get("voiceService.pttActive") || !this.get("voiceService.localMicMuted")
                 })),
-                voiceSkinPreviewSpeaking: l.Ember.computed("voiceSkinPreviewActive", "voiceSkinPreviewMicEnergy", "micTestSpeechAllowed", (function() {
+                voiceSkinPreviewSpeaking: s.Ember.computed("voiceSkinPreviewActive", "voiceSkinPreviewMicEnergy", "micTestSpeechAllowed", (function() {
                     return this.get("voiceSkinPreviewActive") && this.get("voiceSkinPreviewMicEnergy") > 0 && this.get("micTestSpeechAllowed")
                 })),
-                voiceSkinPreviewHaloStyle: l.Ember.computed("voiceSkinPreviewSpeaking", "voiceSkinPreviewMicEnergy", (function() {
-                    if (!this.get("voiceSkinPreviewSpeaking")) return l.Ember.String.htmlSafe("box-shadow: none");
+                voiceSkinPreviewHaloStyle: s.Ember.computed("voiceSkinPreviewSpeaking", "voiceSkinPreviewMicEnergy", (function() {
+                    if (!this.get("voiceSkinPreviewSpeaking")) return s.Ember.String.htmlSafe("box-shadow: none");
                     const e = 40 * this.get("voiceSkinPreviewMicEnergy") / 100 + 2;
-                    return l.Ember.String.htmlSafe(`box-shadow: 0 0 ${e}px 1px #36D987`)
+                    return s.Ember.String.htmlSafe(`box-shadow: 0 0 ${e}px 1px #36D987`)
                 })),
-                voiceSessionActive: l.Ember.computed.alias("voiceService.voiceSessionActive"),
+                voiceSessionActive: s.Ember.computed.alias("voiceService.voiceSessionActive"),
                 voiceSkinPreviewUpdatePending: !1,
                 voiceSkinPreviewRequest: void 0,
                 voiceSkinPreviewOwned: !1,
-                voiceSkinPreviewActiveObserver: l.Ember.observer("voiceSkinPreviewActive", (function() {
+                voiceSkinPreviewActiveObserver: s.Ember.observer("voiceSkinPreviewActive", (function() {
                     this.get("voiceSkinPreviewActive") || this.get("voiceSkinPreviewUpdatePending") || this.set("voiceSkinPreviewOwned", !1)
                 })),
-                voiceSkinPreviewDisabled: l.Ember.computed("noVoiceFontSelected", "voiceSessionActive", "voiceSkinPreviewActive", "isVoiceChatRestricted", (function() {
+                voiceSkinPreviewDisabled: s.Ember.computed("noVoiceFontSelected", "voiceSessionActive", "voiceSkinPreviewActive", "isVoiceChatRestricted", (function() {
                     const e = this.get("noVoiceFontSelected") || this.get("voiceSessionActive") || this.get("isVoiceChatRestricted");
                     return !this.get("voiceSkinPreviewActive") && e
                 })),
-                voiceSkinPreviewTooltip: l.Ember.computed("noVoiceFontSelected", "voiceSkinPreviewActive", (function() {
+                voiceSkinPreviewTooltip: s.Ember.computed("noVoiceFontSelected", "voiceSkinPreviewActive", (function() {
                     return this.get("voiceSkinPreviewActive") ? this.get("tra.voice_settings_voice_skins_preview_stop") : this.get("noVoiceFontSelected") ? this.get("tra.voice_settings_voice_skins_preview_unavailable") : this.get("tra.voice_settings_voice_skins_preview_start")
                 })),
-                voiceFontAudiences: l.Ember.computed("voiceFontAudience", (function() {
+                voiceFontAudiences: s.Ember.computed("voiceFontAudience", (function() {
                     return [{
-                        id: b,
+                        id: T,
                         label: this.get("tra.voice_settings_voice_skins_heard_by_no_one"),
+                        selected: this.get("voiceFontAudience") === T
+                    }, {
+                        id: b,
+                        label: this.get("tra.voice_settings_voice_skins_heard_by_team"),
                         selected: this.get("voiceFontAudience") === b
                     }, {
                         id: y,
-                        label: this.get("tra.voice_settings_voice_skins_heard_by_team"),
-                        selected: this.get("voiceFontAudience") === y
-                    }, {
-                        id: N,
                         label: this.get("tra.voice_settings_voice_skins_heard_by_party_and_team"),
-                        selected: this.get("voiceFontAudience") === N
+                        selected: this.get("voiceFontAudience") === y
                     }]
                 })),
-                shouldShowAgreementSection: l.Ember.computed("voiceComplianceAgreementAuthorized", "teamVoiceEnabledConfig", (function() {
+                shouldShowAgreementSection: s.Ember.computed("voiceComplianceAgreementAuthorized", "teamVoiceEnabledConfig", (function() {
                     return this.get("teamVoiceEnabledConfig") && !this.get("voiceComplianceAgreementAuthorized")
                 })),
-                isTeamVoiceDisabled: l.Ember.computed(d.property, "voiceComplianceAgreementAuthorized", (function() {
-                    return !this.get(d.property) || !this.get("voiceComplianceAgreementAuthorized")
+                isTeamVoiceDisabled: s.Ember.computed(u.property, "voiceComplianceAgreementAuthorized", (function() {
+                    return !this.get(u.property) || !this.get("voiceComplianceAgreementAuthorized")
                 })),
-                autoJoinObserver: l.Ember.observer(d.property, (function() {
-                    this.get(d.property) || this.changeSetting(g.property, !1)
+                autoJoinObserver: s.Ember.observer(u.property, (function() {
+                    this.get(u.property) || this.changeSetting(p.property, !1)
                 })),
-                captureDevices: l.Ember.computed("voiceService.captureDevices", _.property, (function() {
+                captureDevices: s.Ember.computed("voiceService.captureDevices", g.property, (function() {
                     const e = this.get("voiceService.captureDevices") || [],
-                        t = this.get(_.property) || l.lodash.get(l.lodash.first(e.filter((e => e.is_current_device))), "handle");
+                        t = this.get(g.property) || s.lodash.get(s.lodash.first(e.filter((e => e.is_current_device))), "handle");
                     return e.map((e => {
-                        const n = e.handle === _.defaultValue ? this.get("tra.voice_settings_default_input_device") : e.name;
+                        const n = e.handle === g.defaultValue ? this.get("tra.voice_settings_default_input_device") : e.name;
                         return {
                             handle: e.handle,
                             name: n,
@@ -2464,91 +2459,72 @@
                         }
                     }))
                 })),
-                availableVoiceFonts: l.Ember.computed("voiceService.voiceFonts.[]", "selectedVoiceFontId", (function() {
+                availableVoiceFonts: s.Ember.computed("voiceService.voiceFonts.[]", "selectedVoiceFontId", (function() {
                     const e = this.get("voiceService.voiceFonts") || [],
                         t = this.get("selectedVoiceFontId");
-                    return e.filter((e => !e.fetchStatus || T.includes(e.fetchStatus))).map((e => ({
+                    return e.filter((e => !e.fetchStatus || v.includes(e.fetchStatus))).map((e => ({
                         id: e.id,
                         name: e.name || e.id,
                         selected: e.id === t
                     })))
                 })),
-                inputVolumeLabel: l.Ember.computed(h.property, (function() {
-                    const e = Number.isInteger(this.get(h.property)) ? this.get(h.property) : h.defaultValue;
+                inputVolumeLabel: s.Ember.computed(_.property, (function() {
+                    const e = Number.isInteger(this.get(_.property)) ? this.get(_.property) : _.defaultValue;
                     return this.get("tra.formatString")("voice_settings_input_gain", {
                         inputVolume: e
                     })
                 })),
-                micLevelDbfs: null,
-                micLevelDisabled: l.Ember.computed.not("voiceService.micTestActive"),
-                micTestSampleObserver: l.Ember.observer("voiceService.micTestActive", "voiceService.micFastEnergyMeter", (function() {
+                micLevel: null,
+                micLevelDisabled: s.Ember.computed.not("voiceService.micTestActive"),
+                micTestSampleObserver: s.Ember.observer("voiceService.micTestActive", "voiceService.micFastEnergyMeter", (function() {
                     const e = this.get("voiceService.micTestActive");
-                    if (e !== this._lastMicTestActive && (this._lastMicTestActive = e, this._micLevelDiagnostics.event(e ? "mic test started" : "mic test stopped", {
-                            inputVolume: this.get(h.property),
-                            pttActive: this.get("voiceService.pttActive")
-                        }), this.resetMicLevel()), !e) return;
-                    const t = this._now(),
-                        n = this.get("voiceService.micFastEnergyMeter"),
-                        l = this.get("voiceService.micNoiseFloorMeter"),
-                        s = (0, a.isSpeech)(n, l),
-                        o = s && this.get("micTestSpeechAllowed");
-                    o && this.set("micLevelDbfs", this._micLevelTracker.addSample((0, a.meterToDbfs)(n), t)), this._micLevelDiagnostics.sample({
-                        nowMs: t,
-                        fastEnergyMeter: n,
-                        noiseFloorMeter: l,
-                        micEnergy: this.get("voiceService.micEnergy"),
-                        speech: s,
-                        accepted: o,
-                        levelDbfs: this.get("micLevelDbfs")
-                    })
+                    e !== this._lastMicTestActive && (this._lastMicTestActive = e, this.resetMicLevel());
+                    const t = this.get("voiceService.micFastEnergyMeter");
+                    e && this.get("micTestSpeechAllowed") && (0, o.isSpeech)(t, this.get("voiceService.micNoiseFloorMeter")) && this.set("micLevel", this._micLevelTracker.addSample(t, this._now()))
                 })),
-                inputModes: l.Ember.computed(L.property, (function() {
+                inputModes: s.Ember.computed(A.property, (function() {
                     return [{
-                        name: f,
+                        name: S,
                         label: this.get("tra.voice_settings_input_activity"),
                         selected: this.get("isInputModeVoice")
                     }, {
-                        name: v,
+                        name: f,
                         label: this.get("tra.voice_settings_push_to_talk"),
                         selected: this.get("isInputModePushToTalk")
                     }]
                 })),
-                isInputModeVoice: l.Ember.computed(L.property, (function() {
-                    return this.get(L.property) === f
+                isInputModeVoice: s.Ember.computed(A.property, (function() {
+                    return this.get(A.property) === S
                 })),
-                isInputModePushToTalk: l.Ember.computed(L.property, (function() {
-                    return this.get(L.property) === v
+                isInputModePushToTalk: s.Ember.computed(A.property, (function() {
+                    return this.get(A.property) === f
                 })),
-                inputModeVoiceSensitivityLabel: l.Ember.computed(I.property, (function() {
-                    const e = Number.isInteger(this.get(I.property)) ? this.get(I.property) : I.defaultValue;
+                inputModeVoiceSensitivityLabel: s.Ember.computed(L.property, (function() {
+                    const e = Number.isInteger(this.get(L.property)) ? this.get(L.property) : L.defaultValue;
                     return this.get("tra.formatString")("voice_settings_input_sensitivity", {
                         sensitivity: e
                     })
                 })),
                 init() {
-                    this._super(...arguments), this._micLevelTracker = new a.MicLevelTracker, this._micLevelDiagnostics = new o.default, this._lastMicTestActive = this.get("voiceService.micTestActive"), this.bindSetting(d), this.bindSetting(p), this.bindSetting(g), this.bindSetting(_), this.bindSetting(h), this.bindSetting(E), this.bindSetting(S), this.bindSetting(L), this.bindSetting(I), this.bindSetting(C), this.bindSetting(M), u.observe(c, this, (e => {
-                        const t = l.lodash.get(e, ["data", "voiceComplianceAgreementAuthorized"], !1);
+                    this._super(...arguments), this._micLevelTracker = new o.MicLevelTracker, this._lastMicTestActive = this.get("voiceService.micTestActive"), this.bindSetting(u), this.bindSetting(d), this.bindSetting(p), this.bindSetting(g), this.bindSetting(_), this.bindSetting(h), this.bindSetting(E), this.bindSetting(A), this.bindSetting(L), this.bindSetting(x), this.bindSetting(C), m.observe(i, this, (e => {
+                        const t = s.lodash.get(e, ["data", "voiceComplianceAgreementAuthorized"], !1);
                         this.set("voiceComplianceAgreementAuthorized", Boolean(t))
-                    })), u.observe(r, this, (e => {
+                    })), m.observe(c, this, (e => {
                         const t = this.get("model.accountVoiceSettings");
-                        e && e.data && t && !l.lodash.isEqual(t.data, e.data) && this.set("model.accountVoiceSettings", e)
-                    })), u.observe(m, this, (e => {
+                        e && e.data && t && !s.lodash.isEqual(t.data, e.data) && this.set("model.accountVoiceSettings", e)
+                    })), m.observe(r, this, (e => {
                         this.set("teamVoiceEnabledConfig", Boolean(e))
                     }))
                 },
                 willDestroy() {
-                    this._super(...arguments), u.unobserve(c, this), u.unobserve(r, this), u.unobserve(m, this)
+                    this._super(...arguments), m.unobserve(i, this), m.unobserve(c, this), m.unobserve(r, this)
                 },
                 _now: () => Date.now(),
                 resetMicLevel(e = 0) {
-                    this._micLevelTracker.reset(e), this.set("micLevelDbfs", null)
+                    this._micLevelTracker.reset(e), this.set("micLevel", null)
                 },
                 onSaveSetting(e, t) {
-                    this._super(e, t), k.includes(e) && (this._micLevelDiagnostics.event("reset after setting change", {
-                        property: e,
-                        value: t,
-                        settleMs: a.GAIN_SETTLE_MS
-                    }), this.resetMicLevel(this._now() + a.GAIN_SETTLE_MS))
+                    this._super(e, t), I.includes(e) && this.resetMicLevel(this._now() + o.DEVICE_SETTLE_MS)
                 },
                 setVoiceSkinPreviewActive(e, t = !1) {
                     const n = this.get("voiceSkinPreviewActive"),
@@ -2582,38 +2558,38 @@
                     }))
                 },
                 resetToDefault: function() {
-                    this.changeSetting(d.property, d.defaultValue), this.changeSetting(p.property, p.defaultValue), this.changeSetting(g.property, g.defaultValue), this.changeSetting(_.property, _.defaultValue), this.changeSetting(h.property, h.defaultValue), this.changeSetting(E.property, E.defaultValue), this.changeSetting(S.property, S.defaultValue), this.changeSetting(L.property, L.defaultValue), this.changeSetting(I.property, I.defaultValue), this.changeSetting(C.property, C.defaultValue), this.changeSetting(M.property, M.defaultValue)
+                    this.changeSetting(u.property, u.defaultValue), this.changeSetting(d.property, d.defaultValue), this.changeSetting(p.property, p.defaultValue), this.changeSetting(g.property, g.defaultValue), this.changeSetting(_.property, _.defaultValue), this.changeSetting(h.property, h.defaultValue), this.changeSetting(E.property, E.defaultValue), this.changeSetting(A.property, A.defaultValue), this.changeSetting(L.property, L.defaultValue), this.changeSetting(x.property, x.defaultValue), this.changeSetting(C.property, C.defaultValue)
                 },
                 _showPTTPermissionsModal() {
-                    this.changeSetting(L.property, f);
+                    this.changeSetting(A.property, S);
                     const e = this.get("tra.voice_settings_push_to_talk_modal_header"),
                         t = this.get("tra.voice_settings_push_to_talk_modal_body"),
                         n = {
                             type: "DialogAlert",
                             data: {
-                                contents: l.templateHelper.contentBlockDialog(e, t, "dialog-small", "voice-settings-push-to-talk-alert"),
+                                contents: s.templateHelper.contentBlockDialog(e, t, "dialog-small", "voice-settings-push-to-talk-alert"),
                                 okText: this.get("tra.voice_settings_push_to_talk_modal_confirm")
                             },
                             show: !0
                         };
-                    l.ModalManager.add(n)
+                    s.ModalManager.add(n)
                 },
                 actions: {
                     selectPushToTalkKey: function(e) {
-                        this.changeSetting(C.property, e)
+                        this.changeSetting(x.property, e)
                     },
                     selectPushToTalkTeamKey: function(e) {
-                        this.changeSetting(M.property, e)
+                        this.changeSetting(C.property, e)
                     },
                     selectInputMode: function(e) {
-                        this.changeSetting(L.property, e), e === v && this.get("voiceService").isPushToTalkAvailable(!0).then((e => {
+                        this.changeSetting(A.property, e), e === f && this.get("voiceService").isPushToTalkAvailable(!0).then((e => {
                             e || this._showPTTPermissionsModal()
                         })).catch((() => {
                             this._showPTTPermissionsModal()
                         }))
                     },
                     selectCaptureDevice: function(e) {
-                        this.changeSetting(_.property, e)
+                        this.changeSetting(g.property, e)
                     },
                     selectVoiceFont: function(e) {
                         const t = this.get("selectedVoiceFontId");
@@ -2626,13 +2602,13 @@
                         const t = this.get("voiceFontAudience");
                         if (this.get("voiceFontAudienceUpdatePending") || e === t) return Promise.resolve();
                         const n = this.get("voiceService"),
-                            s = A(e),
-                            a = A(t);
+                            l = N(e),
+                            a = N(t);
                         return this.setProperties({
                             voiceFontAudience: e,
                             voiceFontAudienceUpdatePending: !0
-                        }), n.setVoiceFontEnabledForSessions(s.partyVoiceEnabled, s.teamVoiceEnabled).catch((e => n.setVoiceFontEnabledForSessions(a.partyVoiceEnabled, a.teamVoiceEnabled).catch((t => {
-                            l.logger.error("Failed to roll back voice font audience", {
+                        }), n.setVoiceFontEnabledForSessions(l.partyVoiceEnabled, l.teamVoiceEnabled).catch((e => n.setVoiceFontEnabledForSessions(a.partyVoiceEnabled, a.teamVoiceEnabled).catch((t => {
+                            s.logger.error("Failed to roll back voice font audience", {
                                 updateError: e,
                                 rollbackError: t
                             })
@@ -2651,109 +2627,50 @@
                         }))
                     },
                     viewAgreement: function() {
-                        l.SharedPlayerBehaviorApps.showCommunicationsAgreementModal()
+                        s.SharedPlayerBehaviorApps.showCommunicationsAgreementModal()
                     }
                 }
             });
-            t.default = O
+            t.default = M
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.TARGET_ZONE_DBFS = t.PEAK_WINDOW_MS = t.MicLevelTracker = t.GAIN_SETTLE_MS = void 0, t.isSpeech = function(e, t) {
-                const n = a(e),
-                    s = a(t);
-                if (null === n || null === s || n === -1 / 0) return !1;
-                return n - s >= l
-            }, t.meterToDbfs = a;
+            }), t.TARGET_ZONE_METER = t.MicLevelTracker = t.LEVEL_SMOOTHING_MS = t.DEVICE_SETTLE_MS = void 0, t.isSpeech = function(e, t) {
+                if (!a(e) || !a(t) || 0 === e) return !1;
+                return e - t >= l
+            };
             const n = Object.freeze({
-                low: -28,
-                high: -16
+                low: 58,
+                high: 70
             });
-            t.TARGET_ZONE_DBFS = n;
+            t.TARGET_ZONE_METER = n;
             const l = 6;
-            t.PEAK_WINDOW_MS = 1500;
-            t.GAIN_SETTLE_MS = 750;
+            t.LEVEL_SMOOTHING_MS = 200;
+            t.DEVICE_SETTLE_MS = 750;
             const s = 100;
 
             function a(e) {
-                return function(e) {
-                    return Number.isFinite(e) && e >= 0 && e <= s
-                }(e) ? 0 === e ? -1 / 0 : e - s : null
+                return Number.isFinite(e) && e >= 0 && e <= s
             }
             t.MicLevelTracker = class {
                 constructor() {
                     this.reset()
                 }
                 reset(e = 0) {
-                    this.levelDbfs = null, this._samples = [], this._ignoreUntilMs = e
+                    this.level = null, this._lastSampleMs = null, this._ignoreUntilMs = e
                 }
                 addSample(e, t) {
-                    return t < this._ignoreUntilMs || !Number.isFinite(e) || (this._samples = this._samples.filter((e => e.timeMs >= t - 1500)), this._samples.push({
-                        levelDbfs: e,
-                        timeMs: t
-                    }), this.levelDbfs = Math.max(...this._samples.map((e => e.levelDbfs)))), this.levelDbfs
+                    if (t < this._ignoreUntilMs || !a(e)) return this.level;
+                    if (null === this.level) this.level = e;
+                    else {
+                        const n = Math.min(Math.max(t - this._lastSampleMs, 0), 50),
+                            l = 1 - Math.exp(-n / 200);
+                        this.level += l * (e - this.level)
+                    }
+                    return this._lastSampleMs = t, this.level
                 }
             }
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var l = n(1),
-                s = n(69);
-            const a = e => Number.isFinite(e) ? e.toFixed(1) : String(e);
-            var o = class {
-                constructor() {
-                    this._resetSummary(0)
-                }
-                event(e, t) {
-                    l.logger.info(`[mic-level] ${e}`, t)
-                }
-                sample({
-                    nowMs: e,
-                    fastEnergyMeter: t,
-                    noiseFloorMeter: n,
-                    micEnergy: l,
-                    speech: o,
-                    accepted: i,
-                    levelDbfs: c
-                }) {
-                    const r = (0, s.meterToDbfs)(t),
-                        m = this._summary;
-                    m.samples += 1, m.speech += o ? 1 : 0, m.accepted += i ? 1 : 0, Number.isFinite(r) && (m.minDbfs = Math.min(m.minDbfs, r), m.maxDbfs = Math.max(m.maxDbfs, r)), o && Number.isFinite(r) && (m.maxSpeechDbfs = Math.max(m.maxSpeechDbfs, r)), m.last = {
-                        fastEnergyMeter: t,
-                        noiseFloorMeter: n,
-                        micEnergy: l,
-                        shownDbfs: c
-                    }, e - m.startMs >= 1e3 && (this.event("summary", {
-                        samples: m.samples,
-                        speechSamples: m.speech,
-                        acceptedSamples: m.accepted,
-                        minDbfs: a(m.minDbfs),
-                        maxDbfs: a(m.maxDbfs),
-                        maxSpeechDbfs: a(m.maxSpeechDbfs),
-                        noiseFloorDbfs: a((0, s.meterToDbfs)(n)),
-                        lastFastEnergyMeter: t,
-                        lastNoiseFloorMeter: n,
-                        lastMicEnergy: l,
-                        shownDbfs: a(c)
-                    }), this._resetSummary(e))
-                }
-                _resetSummary(e) {
-                    this._summary = {
-                        startMs: e,
-                        samples: 0,
-                        speech: 0,
-                        accepted: 0,
-                        minDbfs: 1 / 0,
-                        maxDbfs: -1 / 0,
-                        maxSpeechDbfs: -1 / 0,
-                        last: null
-                    }
-                }
-            };
-            t.default = o
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -2942,7 +2859,7 @@
                 value: !0
             }), t.default = void 0;
             var l, s = n(1),
-                a = (l = n(74)) && l.__esModule ? l : {
+                a = (l = n(73)) && l.__esModule ? l : {
                     default: l
                 };
             var o = s.Ember.Controller.extend(a.default);
@@ -2973,7 +2890,7 @@
                 value: !0
             }), t.default = void 0;
             var l, s = n(1),
-                a = (l = n(74)) && l.__esModule ? l : {
+                a = (l = n(73)) && l.__esModule ? l : {
                     default: l
                 };
             var o = s.Ember.Controller.extend(a.default);
@@ -2984,7 +2901,7 @@
                 value: !0
             }), t.default = void 0;
             var l, s = n(1),
-                a = (l = n(74)) && l.__esModule ? l : {
+                a = (l = n(73)) && l.__esModule ? l : {
                     default: l
                 };
             var o = s.Ember.Controller.extend(a.default);
@@ -4287,13 +4204,13 @@
                 value: !0
             }), t.default = void 0;
             var l, s = n(1),
-                a = (l = n(94)) && l.__esModule ? l : {
+                a = (l = n(93)) && l.__esModule ? l : {
                     default: l
                 };
             var o = s.Ember.Component.extend(a.default, {
                 namespace: "lol-in-game-hotkeys",
                 category: "lol-in-game-hotkeys",
-                additionalHotkeyGroups: s.Ember.A(n(95)),
+                additionalHotkeyGroups: s.Ember.A(n(94)),
                 actions: {
                     showKeybindingDialog(e, t, n) {
                         this.showKeybindingDialog(e, t, n)
@@ -4504,14 +4421,14 @@
                 value: !0
             }), t.default = void 0;
             var l, s = n(1),
-                a = (l = n(94)) && l.__esModule ? l : {
+                a = (l = n(93)) && l.__esModule ? l : {
                     default: l
                 };
             var o = s.Ember.Component.extend(a.default, {
                 persistenceService: s.Ember.inject.service("persistence"),
                 namespace: "lol-in-game-hotkeys",
                 category: "lol-in-game-hotkeys",
-                primaryHotkeys: s.Ember.A(n(98)),
+                primaryHotkeys: s.Ember.A(n(97)),
                 abilities: s.Ember.computed("primaryHotkeys", (function() {
                     return s.Ember.A(this.get("primaryHotkeys").objectAt(0).controls.slice(0, 4))
                 })),
@@ -4606,7 +4523,7 @@
             }), t.default = void 0;
             var l = n(1),
                 s = n(19),
-                a = n(101);
+                a = n(100);
             const o = "Quickbinds",
                 i = "GameEvents",
                 c = "HUDEvents",
@@ -4906,8 +4823,8 @@
                 value: !0
             }), t.default = void 0;
             var l = n(1),
-                s = n(107),
-                a = n(108),
+                s = n(106),
+                a = n(107),
                 o = l.Ember.Component.extend({
                     key: void 0,
                     onChange: void 0,
@@ -5406,28 +5323,28 @@
                 classNameBindings: ["zoneStateClass", "disabled:is-disabled"],
                 attributeBindings: ["ariaHidden:aria-hidden"],
                 ariaHidden: "true",
-                levelDbfs: null,
+                level: null,
                 disabled: !1,
-                hasLevel: l.Ember.computed("levelDbfs", "disabled", (function() {
-                    return !this.get("disabled") && Number.isFinite(this.get("levelDbfs"))
+                hasLevel: l.Ember.computed("level", "disabled", (function() {
+                    return !this.get("disabled") && Number.isFinite(this.get("level"))
                 })),
-                zoneState: l.Ember.computed("levelDbfs", "hasLevel", (function() {
+                zoneState: l.Ember.computed("level", "hasLevel", (function() {
                     if (!this.get("hasLevel")) return null;
-                    const e = this.get("levelDbfs");
-                    return e < s.TARGET_ZONE_DBFS.low ? a.UNDER : e > s.TARGET_ZONE_DBFS.high ? a.OVER : a.GOOD
+                    const e = this.get("level");
+                    return e < s.TARGET_ZONE_METER.low ? a.UNDER : e > s.TARGET_ZONE_METER.high ? a.OVER : a.GOOD
                 })),
                 zoneStateClass: l.Ember.computed("zoneState", (function() {
                     const e = this.get("zoneState");
                     return e ? `is-${e}` : null
                 })),
-                levelRingStyle: l.Ember.computed("levelDbfs", "hasLevel", (function() {
+                levelRingStyle: l.Ember.computed("level", "hasLevel", (function() {
                     return l.Ember.String.htmlSafe(i(this.get("hasLevel") ? function(e) {
                         const {
                             low: t,
                             high: n
-                        } = s.TARGET_ZONE_DBFS;
-                        return e < t ? o(e, -46, t, 4, 14) : e > n ? o(e, n, 0, 32, 52) : o(e, t, n, 14, 32)
-                    }(this.get("levelDbfs")) : 0))
+                        } = s.TARGET_ZONE_METER;
+                        return e < t ? o(e, 40, t, 4, 14) : e > n ? o(e, n, 100, 32, 52) : o(e, t, n, 14, 32)
+                    }(this.get("level")) : 0))
                 })),
                 targetZoneStyle: l.Ember.computed((function() {
                     const e = 9;
@@ -5441,7 +5358,7 @@
                 value: !0
             }), t.default = void 0;
             var l = n(1);
-            n(111);
+            n(110);
             var s = l.Ember.Component.extend({
                 classNames: ["vng-publisher-settings"],
                 honeyfruit: l.Ember.inject.service("honeyfruit"),
@@ -5473,7 +5390,7 @@
                 value: !0
             }), t.default = void 0;
             var l = n(1);
-            n(113);
+            n(112);
             var s = l.Ember.Component.extend({
                 classNames: ["honeyfruit-settings__error"]
             });
@@ -5507,7 +5424,7 @@
                 value: !0
             }), t.default = void 0;
             var l, s = n(1),
-                a = (l = n(116)) && l.__esModule ? l : {
+                a = (l = n(115)) && l.__esModule ? l : {
                     default: l
                 };
             const o = s.dataBinding.bindTo(s.socket);
@@ -5633,7 +5550,7 @@
             };
             var l, s = n(3),
                 a = n(1),
-                o = (l = n(117)) && l.__esModule ? l : {
+                o = (l = n(116)) && l.__esModule ? l : {
                     default: l
                 };
             const i = a.dataBinding.bindTo(a.socket);
@@ -5723,7 +5640,7 @@
                 value: !0
             }), t.default = void 0;
             var l = n(1),
-                s = n(120),
+                s = n(119),
                 a = n(41);
             const {
                 DEFAULT_PROFILE_PRIVACY: o
@@ -6026,8 +5943,8 @@
         }, (e, t, n) => {
             const l = n(1).Ember;
             e.exports = l.HTMLBars.template({
-                id: "eROwiZZd",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\voice.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\voice.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isVoiceChatRestricted"]]],null,17],["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-settings-voice-content ",["helper",["if"],[["get",["isVoiceChatRestricted"]],"lol-settings-voice-content-disabled"],null]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-party-join"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","voice_settings_party_join_title"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","autoJoin"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","autoJoin",["helper",["mut"],[["get",["autoJoin"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","autoJoin"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n          "],["append",["helper",["sanitize"],[["get",["tra","voice_settings_party_auto_join"]]],null],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,16],["block",["if"],[["get",["shouldShowAgreementSection"]]],null,15],["text","      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","muteOnConnect"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","muteOnConnect",["helper",["mut"],[["get",["muteOnConnect"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","muteOnConnect"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","voice_settings_party_connect_mute"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","voice_settings_input_title"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-row input-mode-row"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-device-section"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-device-label"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","voice_settings_input_device_label"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","lol-uikit-framed-dropdown",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["captureDevices"]]],null,14],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","lol-parties-mic-test-button",[]],["flush-element"],["close-element"],["text","\\n        "],["append",["helper",["mic-level-rings"],null,[["levelDbfs","disabled"],[["get",["micLevelDbfs"]],["get",["micLevelDisabled"]]]]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-row"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-volume-label"],["flush-element"],["text","\\n          "],["append",["unknown",["inputVolumeLabel"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-input-volume-slider"],["flush-element"],["text","\\n          "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","clickset","handleOnChange"],["inputVolume",["get",["inputVolume"]],true,true,true,["helper",["action"],[["get",[null]],"onSliderChange"],null]]]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-mic-level-text"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","voice_settings_mic_level_help"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["noiseSuppressionAvailable"]]],null,13],["text","      "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-mode"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","voice_settings_party_input_mode_title"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-mode-description"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","voice_settings_party_input_mode_description"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-mode-controls"],["flush-element"],["text","\\n"],["block",["each"],[["get",["inputModes"]]],null,5],["text","      "],["close-element"],["text","\\n"],["block",["if"],[["get",["isInputModeVoice"]]],null,4],["text","      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-push-to-talk"],["flush-element"],["text","\\n        "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label","voiceType","disabled"],[["get",["pushToTalkKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkKey"],null],"voice_settings_ptt_party_label","party",["get",["isInputModeVoice"]]]]],false],["text","\\n"],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,0],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label","voiceType"],[["get",["pushToTalkTeamKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkTeamKey"],null],"voice_settings_ptt_team_label","team"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","voice-sensitivity-slider-wrapper"],["flush-element"],["text","\\n              "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","clickset","handleOnChange"],["vadSensitivity",["get",["vadSensitivity"]],true,true,true,["helper",["action"],[["get",[null]],"onSliderChange"],null]]]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["inputModeVoiceSensitivityLabel"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["tra","voice_settings_input_sensitivity_label"]],false],["text","\\n              "],["open-element","span",[]],["static-attr","class","lol-settings-voice-auto-badge"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","voice_settings_input_auto_badge"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-sensitivity"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","vadAuto"],["flush-element"],["text","\\n            "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","vadAuto",["helper",["mut"],[["get",["vadAuto"]]],null]]]],false],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","vadAuto"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","voice_settings_input_auto_vad"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-sensitivity-label"],["flush-element"],["text","\\n"],["block",["if"],[["get",["vadAuto"]]],null,3,2],["text","          "],["close-element"],["text","\\n"],["block",["unless"],[["get",["vadAuto"]]],null,1],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-radio-input",[]],["flush-element"],["text","\\n            "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","class","lol-settings-voice-input-mode-option"],["dynamic-attr","selected",["unknown",["inputMode","selected"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectInputMode",["get",["inputMode","name"]]],null],null],["flush-element"],["text","\\n              "],["append",["unknown",["inputMode","label"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["inputMode"]},{"statements":[["text","                    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","padding","small"],["flush-element"],["text","\\n                      "],["open-element","p",[]],["flush-element"],["append",["unknown",["voiceSkinPreviewTooltip"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["voiceFont","selected"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectVoiceFont",["get",["voiceFont","id"]]],null],null],["flush-element"],["text","\\n                      "],["append",["unknown",["voiceFont","name"]],false],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":["voiceFont"]},{"statements":[["text","                  "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["noVoiceFontSelected"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectVoiceFont",""],null],null],["flush-element"],["text","\\n                    "],["append",["unknown",["voiceFontOffLabel"]],false],["text","\\n                  "],["close-element"],["text","\\n"],["block",["each"],[["get",["availableVoiceFonts"]]],null,7]],"locals":[]},{"statements":[["text","                  "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","selected",""],["flush-element"],["text","\\n                    "],["append",["unknown",["tra","voice_settings_voice_fonts_loading"]],false],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["voiceFontAudience","selected"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectVoiceFontAudience",["get",["voiceFontAudience","id"]]],null],null],["flush-element"],["text","\\n                  "],["append",["unknown",["voiceFontAudience","label"]],false],["text","\\n                "],["close-element"],["text","\\n"]],"locals":["voiceFontAudience"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-skins"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-skins-header"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title lol-settings-voice-skins-title"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","voice_settings_voice_skins_title"]],false],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","lol-settings-voice-skins-beta"],["flush-element"],["append",["unknown",["tra","voice_settings_voice_skins_beta"]],false],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","lol-settings-voice-skins-brand-logo"],["static-attr","aria-hidden","true"],["flush-element"],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","lol-settings-voice-skins-brand"],["flush-element"],["append",["unknown",["tra","voice_settings_voice_skins_brand"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-skins-description"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","voice_settings_voice_skins_description"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-skins-label"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","voice_settings_voice_skins_heard_by"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","lol-settings-voice-skins-dropdown"],["static-attr","direction","downward"],["flush-element"],["text","\\n"],["block",["each"],[["get",["voiceFontAudiences"]]],null,10],["text","            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-skins-label lol-settings-voice-skins-selected-label"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","voice_settings_voice_skins_selected"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-skins-selected-row"],["flush-element"],["text","\\n              "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","lol-settings-voice-skins-selected-dropdown"],["static-attr","direction","downward"],["dynamic-attr","disabled",["unknown",["voiceFontsLoading"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"expandVoiceSkinsDropdown"],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["voiceFontsLoading"]]],null,9,8],["text","              "],["close-element"],["text","\\n              "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-settings-voice-skins-preview-halo ",["helper",["if"],[["get",["voiceSkinPreviewSpeaking"]],"speaking"],null]]]],["dynamic-attr","style",["unknown",["voiceSkinPreviewHaloStyle"]],null],["flush-element"],["text","\\n                "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","lol-settings-voice-skins-preview"],["static-attr","remove-padding",""],["dynamic-attr","aria-label",["unknown",["tra","voice_settings_voice_skins_preview"]],null],["dynamic-attr","aria-pressed",["unknown",["voiceSkinPreviewActive"]],null],["dynamic-attr","disabled",["unknown",["voiceSkinPreviewDisabled"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"toggleVoiceSkinPreview"],null],null],["flush-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","aria-hidden","true"],["flush-element"],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","restrictArea"],["top","whole-window"]],6],["text","                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-noise-suppression-tooltip"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","voice_settings_noise_suppression_tooltip"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row lol-settings-voice-noise-suppression"],["static-attr","for","noiseSuppressionEnabled"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","noiseSuppressionEnabled",["helper",["mut"],[["get",["noiseSuppressionEnabled"]]],null]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","noiseSuppressionEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","voice_settings_noise_suppression_enabled"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["unless"],[["get",["noiseSuppressionEnabled"]]],null,12],["block",["if"],[["get",["voiceSkinsEnabled"]]],null,11]],"locals":[]},{"statements":[["text","              "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["deviceInfo","selected"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectCaptureDevice",["get",["deviceInfo","handle"]]],null],null],["flush-element"],["text","\\n                "],["append",["unknown",["deviceInfo","name"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["deviceInfo"]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-agreement"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-agreement-description"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","voice_settings_agreement_description"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","button",[]],["static-attr","class","lol-settings-voice-agreement-button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"viewAgreement"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","voice_settings_agreement_view_button"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","autoJoinTeamVoice"],["flush-element"],["text","\\n            "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","autoJoinTeamVoice",["helper",["mut"],[["get",["autoJoinTeamVoice"]]],null],["get",["isTeamVoiceDisabled"]]]]],false],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","autoJoinTeamVoice"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n                "],["append",["helper",["sanitize"],[["get",["tra","voice_settings_team_voice_enabled"]]],null],false],["text","\\n            "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-restricted"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","voice_settings_parental_controls_restricted"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "4LSKjP7h",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\voice.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\voice.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isVoiceChatRestricted"]]],null,17],["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-settings-voice-content ",["helper",["if"],[["get",["isVoiceChatRestricted"]],"lol-settings-voice-content-disabled"],null]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-party-join"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","voice_settings_party_join_title"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","autoJoin"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","autoJoin",["helper",["mut"],[["get",["autoJoin"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","autoJoin"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n          "],["append",["helper",["sanitize"],[["get",["tra","voice_settings_party_auto_join"]]],null],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,16],["block",["if"],[["get",["shouldShowAgreementSection"]]],null,15],["text","      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","muteOnConnect"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","muteOnConnect",["helper",["mut"],[["get",["muteOnConnect"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","muteOnConnect"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","voice_settings_party_connect_mute"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","voice_settings_input_title"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-row input-mode-row"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-device-section"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-device-label"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","voice_settings_input_device_label"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","lol-uikit-framed-dropdown",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["captureDevices"]]],null,14],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","lol-parties-mic-test-button",[]],["flush-element"],["close-element"],["text","\\n        "],["append",["helper",["mic-level-rings"],null,[["level","disabled"],[["get",["micLevel"]],["get",["micLevelDisabled"]]]]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-row"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-volume-label"],["flush-element"],["text","\\n          "],["append",["unknown",["inputVolumeLabel"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-input-volume-slider"],["flush-element"],["text","\\n          "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","clickset","handleOnChange"],["inputVolume",["get",["inputVolume"]],true,true,true,["helper",["action"],[["get",[null]],"onSliderChange"],null]]]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-mic-level-text"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","voice_settings_mic_level_help"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["noiseSuppressionAvailable"]]],null,13],["text","      "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-mode"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","voice_settings_party_input_mode_title"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-mode-description"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","voice_settings_party_input_mode_description"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-mode-controls"],["flush-element"],["text","\\n"],["block",["each"],[["get",["inputModes"]]],null,5],["text","      "],["close-element"],["text","\\n"],["block",["if"],[["get",["isInputModeVoice"]]],null,4],["text","      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-push-to-talk"],["flush-element"],["text","\\n        "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label","voiceType","disabled"],[["get",["pushToTalkKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkKey"],null],"voice_settings_ptt_party_label","party",["get",["isInputModeVoice"]]]]],false],["text","\\n"],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,0],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label","voiceType"],[["get",["pushToTalkTeamKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkTeamKey"],null],"voice_settings_ptt_team_label","team"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","voice-sensitivity-slider-wrapper"],["flush-element"],["text","\\n              "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","clickset","handleOnChange"],["vadSensitivity",["get",["vadSensitivity"]],true,true,true,["helper",["action"],[["get",[null]],"onSliderChange"],null]]]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["inputModeVoiceSensitivityLabel"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["tra","voice_settings_input_sensitivity_label"]],false],["text","\\n              "],["open-element","span",[]],["static-attr","class","lol-settings-voice-auto-badge"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","voice_settings_input_auto_badge"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-sensitivity"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","vadAuto"],["flush-element"],["text","\\n            "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","vadAuto",["helper",["mut"],[["get",["vadAuto"]]],null]]]],false],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","vadAuto"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","voice_settings_input_auto_vad"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-sensitivity-label"],["flush-element"],["text","\\n"],["block",["if"],[["get",["vadAuto"]]],null,3,2],["text","          "],["close-element"],["text","\\n"],["block",["unless"],[["get",["vadAuto"]]],null,1],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-radio-input",[]],["flush-element"],["text","\\n            "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","class","lol-settings-voice-input-mode-option"],["dynamic-attr","selected",["unknown",["inputMode","selected"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectInputMode",["get",["inputMode","name"]]],null],null],["flush-element"],["text","\\n              "],["append",["unknown",["inputMode","label"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["inputMode"]},{"statements":[["text","                    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","padding","small"],["flush-element"],["text","\\n                      "],["open-element","p",[]],["flush-element"],["append",["unknown",["voiceSkinPreviewTooltip"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["voiceFont","selected"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectVoiceFont",["get",["voiceFont","id"]]],null],null],["flush-element"],["text","\\n                      "],["append",["unknown",["voiceFont","name"]],false],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":["voiceFont"]},{"statements":[["text","                  "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["noVoiceFontSelected"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectVoiceFont",""],null],null],["flush-element"],["text","\\n                    "],["append",["unknown",["voiceFontOffLabel"]],false],["text","\\n                  "],["close-element"],["text","\\n"],["block",["each"],[["get",["availableVoiceFonts"]]],null,7]],"locals":[]},{"statements":[["text","                  "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","selected",""],["flush-element"],["text","\\n                    "],["append",["unknown",["tra","voice_settings_voice_fonts_loading"]],false],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["voiceFontAudience","selected"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectVoiceFontAudience",["get",["voiceFontAudience","id"]]],null],null],["flush-element"],["text","\\n                  "],["append",["unknown",["voiceFontAudience","label"]],false],["text","\\n                "],["close-element"],["text","\\n"]],"locals":["voiceFontAudience"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-skins"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-skins-header"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title lol-settings-voice-skins-title"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","voice_settings_voice_skins_title"]],false],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","lol-settings-voice-skins-beta"],["flush-element"],["append",["unknown",["tra","voice_settings_voice_skins_beta"]],false],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","lol-settings-voice-skins-brand-logo"],["static-attr","aria-hidden","true"],["flush-element"],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","lol-settings-voice-skins-brand"],["flush-element"],["append",["unknown",["tra","voice_settings_voice_skins_brand"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-skins-description"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","voice_settings_voice_skins_description"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-skins-label"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","voice_settings_voice_skins_heard_by"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","lol-settings-voice-skins-dropdown"],["static-attr","direction","downward"],["flush-element"],["text","\\n"],["block",["each"],[["get",["voiceFontAudiences"]]],null,10],["text","            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-skins-label lol-settings-voice-skins-selected-label"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","voice_settings_voice_skins_selected"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-skins-selected-row"],["flush-element"],["text","\\n              "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","lol-settings-voice-skins-selected-dropdown"],["static-attr","direction","downward"],["dynamic-attr","disabled",["unknown",["voiceFontsLoading"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"expandVoiceSkinsDropdown"],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["voiceFontsLoading"]]],null,9,8],["text","              "],["close-element"],["text","\\n              "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-settings-voice-skins-preview-halo ",["helper",["if"],[["get",["voiceSkinPreviewSpeaking"]],"speaking"],null]]]],["dynamic-attr","style",["unknown",["voiceSkinPreviewHaloStyle"]],null],["flush-element"],["text","\\n                "],["open-element","lol-uikit-flat-button",[]],["static-attr","class","lol-settings-voice-skins-preview"],["static-attr","remove-padding",""],["dynamic-attr","aria-label",["unknown",["tra","voice_settings_voice_skins_preview"]],null],["dynamic-attr","aria-pressed",["unknown",["voiceSkinPreviewActive"]],null],["dynamic-attr","disabled",["unknown",["voiceSkinPreviewDisabled"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"toggleVoiceSkinPreview"],null],null],["flush-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","aria-hidden","true"],["flush-element"],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","restrictArea"],["top","whole-window"]],6],["text","                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-noise-suppression-tooltip"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","voice_settings_noise_suppression_tooltip"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row lol-settings-voice-noise-suppression"],["static-attr","for","noiseSuppressionEnabled"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","noiseSuppressionEnabled",["helper",["mut"],[["get",["noiseSuppressionEnabled"]]],null]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","noiseSuppressionEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","voice_settings_noise_suppression_enabled"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["unless"],[["get",["noiseSuppressionEnabled"]]],null,12],["block",["if"],[["get",["voiceSkinsEnabled"]]],null,11]],"locals":[]},{"statements":[["text","              "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["deviceInfo","selected"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectCaptureDevice",["get",["deviceInfo","handle"]]],null],null],["flush-element"],["text","\\n                "],["append",["unknown",["deviceInfo","name"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["deviceInfo"]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-agreement"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-agreement-description"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","voice_settings_agreement_description"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","button",[]],["static-attr","class","lol-settings-voice-agreement-button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"viewAgreement"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","voice_settings_agreement_view_button"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","autoJoinTeamVoice"],["flush-element"],["text","\\n            "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","autoJoinTeamVoice",["helper",["mut"],[["get",["autoJoinTeamVoice"]]],null],["get",["isTeamVoiceDisabled"]]]]],false],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","autoJoinTeamVoice"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n                "],["append",["helper",["sanitize"],[["get",["tra","voice_settings_team_voice_enabled"]]],null],false],["text","\\n            "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-restricted"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","voice_settings_parental_controls_restricted"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
