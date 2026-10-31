@@ -82241,12 +82241,12 @@
         },
         "__type": "SpellObject"
     },
-    "{a32d6afe}": {
+    "Maps/ModeSpecificData/Augments/ArmoredImpact": {
         "AugmentNameId": "ArmoredImpact",
         "NameTra": "Kiwi_Augment_ArmoredImpact_Name",
         "DescriptionTra": "Kiwi_Augment_ArmoredImpact_Description",
         "AugmentTooltipTra": "Kiwi_Augment_ArmoredImpact_Tooltip",
-        "RootSpell": "{1ff45a3d}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/ArmoredImpact/Augment_ArmoredImpact",
         "AdditionalSpells": [
             "{5d836541}"
         ],
@@ -82263,18 +82263,18 @@
     },
     "{0142dc74}": {
         "resourceMap": {
-            "{c4bcb09b}": "{77cca621}",
-            "{337ab737}": "{09e8ca65}",
-            "{5c66ee0c}": "{abb8283a}",
-            "{535ef047}": "{6933607d}",
-            "{5e0a1a0b}": "{aa296fe9}",
-            "{7d00796a}": "{1a01cd48}",
-            "{ea87dd54}": "{3e1ab256}",
-            "{2aa8ee10}": "{cb47425d}"
+            "ArmoredImpact_AOE": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_AOE",
+            "ArmoredImpact_Tar": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_Tar",
+            "ArmoredImpact_Fire": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_Fire",
+            "ArmoredImpact_TarChild": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_TarChild",
+            "ArmoredImpact_AOE2": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_AOE2",
+            "ArmoredImpact_AOE2_child": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_AOE2_child",
+            "ArmoredImpact_Charge": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_Charge",
+            "{2aa8ee10}": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact"
         },
         "__type": "ResourceResolver"
     },
-    "{09e8ca65}": {
+    "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_Tar": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.05000000074505806,
@@ -82290,7 +82290,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{535ef047}",
+                            "effectKey": "ArmoredImpact_TarChild",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -82306,10 +82306,10 @@
         ],
         "particleName": "ArmoredImpact_Tar",
         "particlePath": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_Tar",
-        "objectPath": "{09e8ca65}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_Tar",
         "__type": "VfxSystemDefinitionData"
     },
-    "{1a01cd48}": {
+    "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_AOE2_child": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -82507,10 +82507,10 @@
         "particleName": "ArmoredImpact_AOE2_child",
         "particlePath": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_AOE2_child",
         "scaleDynamicallyWithAttachedBone": true,
-        "objectPath": "{1a01cd48}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_AOE2_child",
         "__type": "VfxSystemDefinitionData"
     },
-    "{3e1ab256}": {
+    "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_Charge": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -83113,10 +83113,10 @@
         ],
         "particleName": "ArmoredImpact_Charge",
         "particlePath": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_Charge",
-        "objectPath": "{3e1ab256}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_Charge",
         "__type": "VfxSystemDefinitionData"
     },
-    "{6933607d}": {
+    "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_TarChild": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -84303,10 +84303,10 @@
         ],
         "particleName": "ArmoredImpact_TarChild",
         "particlePath": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_TarChild",
-        "objectPath": "{6933607d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_TarChild",
         "__type": "VfxSystemDefinitionData"
     },
-    "{77cca621}": {
+    "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_AOE": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -85390,10 +85390,10 @@
         ],
         "particleName": "ArmoredImpact_AOE",
         "particlePath": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_AOE",
-        "objectPath": "{77cca621}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_AOE",
         "__type": "VfxSystemDefinitionData"
     },
-    "{aa296fe9}": {
+    "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_AOE2": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -88027,10 +88027,10 @@
         "particleName": "ArmoredImpact_AOE2",
         "particlePath": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_AOE2",
         "scaleDynamicallyWithAttachedBone": true,
-        "objectPath": "{aa296fe9}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_AOE2",
         "__type": "VfxSystemDefinitionData"
     },
-    "{abb8283a}": {
+    "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_Fire": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -89414,10 +89414,10 @@
         ],
         "particleName": "ArmoredImpact_Fire",
         "particlePath": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_Fire",
-        "objectPath": "{abb8283a}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact_Fire",
         "__type": "VfxSystemDefinitionData"
     },
-    "{cb47425d}": {
+    "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -90119,12 +90119,12 @@
         ],
         "particleName": "ArmoredImpact",
         "particlePath": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact",
-        "objectPath": "{cb47425d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ArmoredImpact/Particles/ArmoredImpact",
         "__type": "VfxSystemDefinitionData"
     },
-    "{1ff45a3d}": {
+    "Maps/ModeSpecificData/Augments/ArmoredImpact/Augment_ArmoredImpact": {
         "ObjectName": "Augment_ArmoredImpact",
-        "objectPath": "{1ff45a3d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ArmoredImpact/Augment_ArmoredImpact",
         "mScriptName": "Augment_ArmoredImpact",
         "mSpell": {
             "DataValues": [
@@ -103530,12 +103530,12 @@
         },
         "__type": "ResourceResolver"
     },
-    "{969bd53e}": {
+    "Maps/ModeSpecificData/Augments/StillHere": {
         "AugmentNameId": "StillHere",
         "NameTra": "Kiwi_Augment_StillHere_Name",
         "DescriptionTra": "Kiwi_Augment_StillHere_Description",
         "AugmentTooltipTra": "Kiwi_Augment_StillHere_Tooltip",
-        "RootSpell": "{9a6e9165}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/StillHere/Augment_StillHere",
         "AugmentLargeIconPath": "{dd999552367027e8}",
         "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/stillhere_small.tex",
         "AugmentDisplayTags": [
@@ -103548,11 +103548,11 @@
     },
     "{028fb234}": {
         "resourceMap": {
-            "{fd49ff5b}": "{8f5c790d}"
+            "StillHere_Aura": "Maps/ModeSpecificData/Augments/StillHere/Particles/StillHere_Aura"
         },
         "__type": "ResourceResolver"
     },
-    "{8f5c790d}": {
+    "Maps/ModeSpecificData/Augments/StillHere/Particles/StillHere_Aura": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -104370,12 +104370,12 @@
         "particlePath": "Maps/ModeSpecificData/Augments/StillHere/Particles/StillHere_Aura",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_StillHere_buffactivate",
         "flags": 244,
-        "objectPath": "{8f5c790d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/StillHere/Particles/StillHere_Aura",
         "__type": "VfxSystemDefinitionData"
     },
-    "{9a6e9165}": {
+    "Maps/ModeSpecificData/Augments/StillHere/Augment_StillHere": {
         "ObjectName": "Augment_StillHere",
-        "objectPath": "{9a6e9165}",
+        "objectPath": "Maps/ModeSpecificData/Augments/StillHere/Augment_StillHere",
         "mScriptName": "Augment_StillHere",
         "mSpell": {
             "DataValues": [
@@ -124460,12 +124460,12 @@
         },
         "__type": "SpellObject"
     },
-    "{3a66fcab}": {
+    "Maps/ModeSpecificData/Augments/BEES": {
         "AugmentNameId": "BEES",
         "NameTra": "Kiwi_Augment_BEES_Name",
         "DescriptionTra": "Kiwi_Augment_BEES_Description",
         "AugmentTooltipTra": "Kiwi_Augment_BEES_Tooltip",
-        "RootSpell": "{bb4ffa5d}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/BEES/Augment_BEES",
         "AdditionalSpells": [
             "{712d85d3}",
             "{7b8a6311}",
@@ -124485,22 +124485,22 @@
     },
     "{02ea5439}": {
         "resourceMap": {
-            "{08a1a657}": "{c8155b0e}",
-            "{3d9a4394}": "{88135e0f}",
-            "{3e9a4527}": "{87135c7c}",
-            "{944d8968}": "{e7492783}",
-            "{0a80bdc6}": "{6fe9b90b}",
-            "{e8a73696}": "{1a47aa7f}",
-            "{152e9b30}": "{2560f273}",
-            "{e10ec37b}": "{dcfb0cf8}",
-            "{acd9a5cc}": "{e0fdfc81}",
-            "{1ff38a07}": "{4c276648}",
-            "{26a5bf20}": "{902b2c2d}",
-            "{392a4a20}": "{d4305fdd}"
+            "BEES_Bees_Active": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Bees_Active",
+            "BEES_Bees_Level_2": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Bees_Level_2",
+            "BEES_Bees_Level_3": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Bees_Level_3",
+            "BEES_Hive_Missile": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Hive_Missile",
+            "BEES_HoneyZone": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_HoneyZone",
+            "BEES_HoneyZone_Child_Droplet": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_HoneyZone_Child_Droplet",
+            "BEES_HoneyZone_Child_Puddle": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_HoneyZone_Child_Puddle",
+            "BEES_HoneyZone_Child_Splash": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_HoneyZone_Child_Splash",
+            "BEES_Bee_Missile": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Bee_Missile",
+            "BEES_DamageOverTime": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_DamageOverTime",
+            "BEES_HiveExplode": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_HiveExplode",
+            "BEES_Bees_Inactive": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Bees_Inactive"
         },
         "__type": "ResourceResolver"
     },
-    "{1a47aa7f}": {
+    "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_HoneyZone_Child_Droplet": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -124692,10 +124692,10 @@
         "visibilityRadius": 100000.0,
         "particleName": "BEES_HoneyZone_Child_Droplet",
         "particlePath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_HoneyZone_Child_Droplet",
-        "objectPath": "{1a47aa7f}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_HoneyZone_Child_Droplet",
         "__type": "VfxSystemDefinitionData"
     },
-    "{2560f273}": {
+    "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_HoneyZone_Child_Puddle": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -124805,10 +124805,10 @@
         "visibilityRadius": 100000.0,
         "particleName": "BEES_HoneyZone_Child_Puddle",
         "particlePath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_HoneyZone_Child_Puddle",
-        "objectPath": "{2560f273}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_HoneyZone_Child_Puddle",
         "__type": "VfxSystemDefinitionData"
     },
-    "{4c276648}": {
+    "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_DamageOverTime": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -126911,10 +126911,10 @@
         "particlePath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_DamageOverTime",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_Bees_buffactivate",
         "flags": 214,
-        "objectPath": "{4c276648}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_DamageOverTime",
         "__type": "VfxSystemDefinitionData"
     },
-    "{6fe9b90b}": {
+    "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_HoneyZone": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -127954,7 +127954,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{152e9b30}",
+                            "effectKey": "BEES_HoneyZone_Child_Puddle",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -128020,7 +128020,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{e10ec37b}",
+                            "effectKey": "BEES_HoneyZone_Child_Splash",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -128909,7 +128909,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{e8a73696}",
+                            "effectKey": "BEES_HoneyZone_Child_Droplet",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -130230,24 +130230,24 @@
         ],
         "particleName": "BEES_HoneyZone",
         "particlePath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_HoneyZone",
-        "objectPath": "{6fe9b90b}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_HoneyZone",
         "__type": "VfxSystemDefinitionData"
     },
-    "{87135c7c}": {
+    "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Bees_Level_3": {
         "particleName": "BEES_Bees_Level_3",
         "particlePath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Bees_Level_3",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_Bees_hive_spawn",
-        "objectPath": "{87135c7c}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Bees_Level_3",
         "__type": "VfxSystemDefinitionData"
     },
-    "{88135e0f}": {
+    "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Bees_Level_2": {
         "particleName": "BEES_Bees_Level_2",
         "particlePath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Bees_Level_2",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_Bees_hive_spawn",
-        "objectPath": "{88135e0f}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Bees_Level_2",
         "__type": "VfxSystemDefinitionData"
     },
-    "{902b2c2d}": {
+    "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_HiveExplode": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -135103,10 +135103,10 @@
         "particleName": "BEES_HiveExplode",
         "particlePath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_HiveExplode",
         "soundOnCreateDefault": "Play_sfx_Kiwi_Augment_Bees_hitlocation",
-        "objectPath": "{902b2c2d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_HiveExplode",
         "__type": "VfxSystemDefinitionData"
     },
-    "{c8155b0e}": {
+    "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Bees_Active": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -135947,10 +135947,10 @@
         "particleName": "BEES_Bees_Active",
         "particlePath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Bees_Active",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_Bees_hive_spawn",
-        "objectPath": "{c8155b0e}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Bees_Active",
         "__type": "VfxSystemDefinitionData"
     },
-    "{d4305fdd}": {
+    "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Bees_Inactive": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -136045,10 +136045,10 @@
         ],
         "particleName": "BEES_Bees_Inactive",
         "particlePath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Bees_Inactive",
-        "objectPath": "{d4305fdd}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Bees_Inactive",
         "__type": "VfxSystemDefinitionData"
     },
-    "{dcfb0cf8}": {
+    "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_HoneyZone_Child_Splash": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -136357,16 +136357,16 @@
         ],
         "particleName": "BEES_HoneyZone_Child_Splash",
         "particlePath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_HoneyZone_Child_Splash",
-        "objectPath": "{dcfb0cf8}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_HoneyZone_Child_Splash",
         "__type": "VfxSystemDefinitionData"
     },
-    "{e0fdfc81}": {
+    "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Bee_Missile": {
         "particleName": "BEES_Bee_Missile",
         "particlePath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Bee_Missile",
-        "objectPath": "{e0fdfc81}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Bee_Missile",
         "__type": "VfxSystemDefinitionData"
     },
-    "{e7492783}": {
+    "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Hive_Missile": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -139547,7 +139547,7 @@
         "particleName": "BEES_Hive_Missile",
         "particlePath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Hive_Missile",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_Bees_missilelaunch",
-        "objectPath": "{e7492783}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BEES/Particles/BEES_Hive_Missile",
         "__type": "VfxSystemDefinitionData"
     },
     "{712d85d3}": {
@@ -139634,7 +139634,7 @@
                 "__type": "MissileSpecification"
             },
             "mCastType": 3,
-            "mMissileEffectKey": "{944d8968}",
+            "mMissileEffectKey": "BEES_Hive_Missile",
             "selectionPriority": 1,
             "mTargetingTypeData": {
                 "mCanCompleteCastWithoutTarget": true,
@@ -139729,7 +139729,7 @@
             },
             "mCastType": 3,
             "missileSpeed": 1800.0,
-            "mMissileEffectKey": "{acd9a5cc}",
+            "mMissileEffectKey": "BEES_Bee_Missile",
             "selectionPriority": 1,
             "mDimensionBehavior": 1,
             "__type": "SpellDataResource"
@@ -139756,9 +139756,9 @@
         },
         "__type": "SpellObject"
     },
-    "{bb4ffa5d}": {
+    "Maps/ModeSpecificData/Augments/BEES/Augment_BEES": {
         "ObjectName": "Augment_BEES",
-        "objectPath": "{bb4ffa5d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BEES/Augment_BEES",
         "mScriptName": "Augment_BEES",
         "mSpell": {
             "DataValues": [
@@ -177523,12 +177523,12 @@
         },
         "__type": "SpellObject"
     },
-    "{2fa76fdd}": {
+    "Maps/ModeSpecificData/Augments/TheBoomAndTheBass": {
         "AugmentNameId": "TheBoomAndTheBass",
         "NameTra": "Kiwi_Augment_TheBoomAndTheBass_Name",
         "DescriptionTra": "Kiwi_Augment_TheBoomAndTheBass_Description",
         "AugmentTooltipTra": "Kiwi_Augment_TheBoomAndTheBass_Tooltip",
-        "RootSpell": "{6fdeb8bd}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/TheBoomAndTheBass/Augment_TheBoomAndTheBass",
         "AdditionalSpells": [
             "{ad5768e0}",
             "{90525b08}"
@@ -177544,7 +177544,7 @@
         "ResourceResolver": "{3af79fa7}",
         "__type": "AugmentData"
     },
-    "{03c3fce5}": {
+    "Maps/ModeSpecificData/Augments/TheBoomAndTheBass/Particles/TheBoomAndTheBass_AttackReady": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.05000000074505806,
@@ -181004,10 +181004,10 @@
         ],
         "particleName": "TheBoomAndTheBass_AttackReady",
         "particlePath": "Maps/ModeSpecificData/Augments/TheBoomAndTheBass/Particles/TheBoomAndTheBass_AttackReady",
-        "objectPath": "{03c3fce5}",
+        "objectPath": "Maps/ModeSpecificData/Augments/TheBoomAndTheBass/Particles/TheBoomAndTheBass_AttackReady",
         "__type": "VfxSystemDefinitionData"
     },
-    "{2ee241d3}": {
+    "Maps/ModeSpecificData/Augments/TheBoomAndTheBass/Particles/TheBoomAndTheBass_AttackBuff": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -184384,10 +184384,10 @@
         ],
         "particleName": "TheBoomAndTheBass_AttackBuff",
         "particlePath": "Maps/ModeSpecificData/Augments/TheBoomAndTheBass/Particles/TheBoomAndTheBass_AttackBuff",
-        "objectPath": "{2ee241d3}",
+        "objectPath": "Maps/ModeSpecificData/Augments/TheBoomAndTheBass/Particles/TheBoomAndTheBass_AttackBuff",
         "__type": "VfxSystemDefinitionData"
     },
-    "{3ba9e7ab}": {
+    "Maps/ModeSpecificData/Augments/TheBoomAndTheBass/Particles/TheBoomAndTheBass_Hit": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -188517,20 +188517,20 @@
         "particleName": "TheBoomAndTheBass_Hit",
         "particlePath": "Maps/ModeSpecificData/Augments/TheBoomAndTheBass/Particles/TheBoomAndTheBass_Hit",
         "soundOnCreateDefault": "Play_sfx_Kiwi_Augment_TheBoomAndTheBass_hit",
-        "objectPath": "{3ba9e7ab}",
+        "objectPath": "Maps/ModeSpecificData/Augments/TheBoomAndTheBass/Particles/TheBoomAndTheBass_Hit",
         "__type": "VfxSystemDefinitionData"
     },
     "{3af79fa7}": {
         "resourceMap": {
-            "{96bb2ec0}": "{2ee241d3}",
-            "{8fc7f57e}": "{3ba9e7ab}",
-            "{bfb43308}": "{03c3fce5}"
+            "TheBoomAndTheBass_AttackBuff": "Maps/ModeSpecificData/Augments/TheBoomAndTheBass/Particles/TheBoomAndTheBass_AttackBuff",
+            "TheBoomAndTheBass_Hit": "Maps/ModeSpecificData/Augments/TheBoomAndTheBass/Particles/TheBoomAndTheBass_Hit",
+            "TheBoomAndTheBass_AttackReady": "Maps/ModeSpecificData/Augments/TheBoomAndTheBass/Particles/TheBoomAndTheBass_AttackReady"
         },
         "__type": "ResourceResolver"
     },
-    "{6fdeb8bd}": {
+    "Maps/ModeSpecificData/Augments/TheBoomAndTheBass/Augment_TheBoomAndTheBass": {
         "ObjectName": "Augment_TheBoomAndTheBass",
-        "objectPath": "{6fdeb8bd}",
+        "objectPath": "Maps/ModeSpecificData/Augments/TheBoomAndTheBass/Augment_TheBoomAndTheBass",
         "mScriptName": "Augment_TheBoomAndTheBass",
         "mSpell": {
             "DataValues": [
@@ -241044,12 +241044,12 @@
         },
         "__type": "SpellObject"
     },
-    "{b212b3fd}": {
+    "Maps/ModeSpecificData/Augments/Totentanz": {
         "AugmentNameId": "Totentanz",
         "NameTra": "Kiwi_Augment_Totentanz_Name",
         "DescriptionTra": "Kiwi_Augment_Totentanz_Description",
         "AugmentTooltipTra": "Kiwi_Augment_Totentanz_Tooltip",
-        "RootSpell": "{7ddb443d}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/Totentanz/Augment_Totentanz",
         "AdditionalSpells": [
             "{b8dcb020}"
         ],
@@ -241063,7 +241063,7 @@
         "ResourceResolver": "{0a8951c7}",
         "__type": "AugmentData"
     },
-    "{04ed5152}": {
+    "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_GroundTimer": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -250756,17 +250756,17 @@
         "particleName": "Totentanz_GroundTimer",
         "particlePath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_GroundTimer",
         "flags": 197,
-        "objectPath": "{04ed5152}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_GroundTimer",
         "__type": "VfxSystemDefinitionData"
     },
-    "{0ac86436}": {
+    "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_BuffAvatar": {
         "particleName": "Totentanz_BuffAvatar",
         "particlePath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_BuffAvatar",
         "flags": 197,
-        "objectPath": "{0ac86436}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_BuffAvatar",
         "__type": "VfxSystemDefinitionData"
     },
-    "{15a2d3a3}": {
+    "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Blink_Missile": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -254789,10 +254789,10 @@
         "particleName": "Totentanz_Blink_Missile",
         "particlePath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Blink_Missile",
         "flags": 214,
-        "objectPath": "{15a2d3a3}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Blink_Missile",
         "__type": "VfxSystemDefinitionData"
     },
-    "{34e8bd6b}": {
+    "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Avatar": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -255917,10 +255917,10 @@
         "particleName": "Totentanz_Avatar",
         "particlePath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Avatar",
         "flags": 197,
-        "objectPath": "{34e8bd6b}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Avatar",
         "__type": "VfxSystemDefinitionData"
     },
-    "{35084c42}": {
+    "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_CastBegin": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -258722,10 +258722,10 @@
         "particleName": "Totentanz_CastBegin",
         "particlePath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_CastBegin",
         "flags": 214,
-        "objectPath": "{35084c42}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_CastBegin",
         "__type": "VfxSystemDefinitionData"
     },
-    "{51f4042f}": {
+    "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_DeathExplosion": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.10000000149011612,
@@ -260969,10 +260969,10 @@
         "particlePath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_DeathExplosion",
         "soundOnCreateDefault": "Play_sfx_Kiwi_Augment_Totentanz_buffdeactivate_death",
         "flags": 199,
-        "objectPath": "{51f4042f}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_DeathExplosion",
         "__type": "VfxSystemDefinitionData"
     },
-    "{52ad8644}": {
+    "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_BuffTimer": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -263422,10 +263422,10 @@
         ],
         "particleName": "Totentanz_BuffTimer",
         "particlePath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_BuffTimer",
-        "objectPath": "{52ad8644}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_BuffTimer",
         "__type": "VfxSystemDefinitionData"
     },
-    "{6096bc9d}": {
+    "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_BlinkEnd": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -264580,10 +264580,10 @@
         "particleName": "Totentanz_BlinkEnd",
         "particlePath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_BlinkEnd",
         "flags": 198,
-        "objectPath": "{6096bc9d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_BlinkEnd",
         "__type": "VfxSystemDefinitionData"
     },
-    "{80616229}": {
+    "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_BlinkCas": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -267157,10 +267157,10 @@
         "particleName": "Totentanz_BlinkCas",
         "particlePath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_BlinkCas",
         "flags": 214,
-        "objectPath": "{80616229}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_BlinkCas",
         "__type": "VfxSystemDefinitionData"
     },
-    "{880a27ca}": {
+    "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_ArmGrab_Hand": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -267944,10 +267944,10 @@
         ],
         "particleName": "Totentanz_ArmGrab_Hand",
         "particlePath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_ArmGrab_Hand",
-        "objectPath": "{880a27ca}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_ArmGrab_Hand",
         "__type": "VfxSystemDefinitionData"
     },
-    "{8b9f9b57}": {
+    "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_BeamGrab": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -268310,10 +268310,10 @@
         ],
         "particleName": "Totentanz_BeamGrab",
         "particlePath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_BeamGrab",
-        "objectPath": "{8b9f9b57}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_BeamGrab",
         "__type": "VfxSystemDefinitionData"
     },
-    "{8f19e11d}": {
+    "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Beam": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -270035,10 +270035,10 @@
         "particleName": "Totentanz_Beam",
         "particlePath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Beam",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_Totentanz_beam_buffactivate",
-        "objectPath": "{8f19e11d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Beam",
         "__type": "VfxSystemDefinitionData"
     },
-    "{a0b37717}": {
+    "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Beam_Chest": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -270145,10 +270145,10 @@
         ],
         "particleName": "Totentanz_Beam_Chest",
         "particlePath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Beam_Chest",
-        "objectPath": "{a0b37717}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Beam_Chest",
         "__type": "VfxSystemDefinitionData"
     },
-    "{a904872d}": {
+    "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_LeaveBehind": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -272390,10 +272390,10 @@
         ],
         "particleName": "Totentanz_LeaveBehind",
         "particlePath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_LeaveBehind",
-        "objectPath": "{a904872d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_LeaveBehind",
         "__type": "VfxSystemDefinitionData"
     },
-    "{af17479e}": {
+    "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_ArmGrab": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -272948,10 +272948,10 @@
         ],
         "particleName": "Totentanz_ArmGrab",
         "particlePath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_ArmGrab",
-        "objectPath": "{af17479e}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_ArmGrab",
         "__type": "VfxSystemDefinitionData"
     },
-    "{bb7d514b}": {
+    "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Timer": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -277052,10 +277052,10 @@
         "particleName": "Totentanz_Timer",
         "particlePath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Timer",
         "flags": 213,
-        "objectPath": "{bb7d514b}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Timer",
         "__type": "VfxSystemDefinitionData"
     },
-    "{fbf4537d}": {
+    "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Unkillable": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -277749,34 +277749,34 @@
         "particlePath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Unkillable",
         "flags": 213,
         "buildUpTime": 5.0,
-        "objectPath": "{fbf4537d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Unkillable",
         "__type": "VfxSystemDefinitionData"
     },
     "{0a8951c7}": {
         "resourceMap": {
-            "{c7c0eba2}": "{15a2d3a3}",
-            "{12fb3349}": "{0ac86436}",
-            "{a9f98e8e}": "{fbf4537d}",
-            "{fb81cf04}": "{51f4042f}",
-            "{50970603}": "{04ed5152}",
-            "{d1b23381}": "{52ad8644}",
-            "{8486b116}": "{80616229}",
-            "{0b785f62}": "{6096bc9d}",
-            "{e026e02e}": "{bb7d514b}",
-            "{1fe0b256}": "{8f19e11d}",
-            "{99e401a0}": "{34e8bd6b}",
-            "{219cad97}": "{35084c42}",
-            "{938a3ad8}": "{a904872d}",
-            "{c55af973}": "{af17479e}",
-            "{113299a5}": "{880a27ca}",
-            "{8bce0f60}": "{a0b37717}",
-            "{a091532c}": "{8b9f9b57}"
+            "Totentanz_Blink_Missile": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Blink_Missile",
+            "Totentanz_BuffAvatar": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_BuffAvatar",
+            "Totentanz_Unkillable": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Unkillable",
+            "Totentanz_DeathExplosion": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_DeathExplosion",
+            "Totentanz_GroundTimer": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_GroundTimer",
+            "Totentanz_BuffTimer": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_BuffTimer",
+            "Totentanz_BlinkCas": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_BlinkCas",
+            "Totentanz_BlinkEnd": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_BlinkEnd",
+            "Totentanz_Timer": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Timer",
+            "Totentanz_Beam": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Beam",
+            "Totentanz_Avatar": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Avatar",
+            "Totentanz_CastBegin": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_CastBegin",
+            "Totentanz_LeaveBehind": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_LeaveBehind",
+            "Totentanz_ArmGrab": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_ArmGrab",
+            "Totentanz_ArmGrab_Hand": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_ArmGrab_Hand",
+            "Totentanz_Beam_Chest": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_Beam_Chest",
+            "Totentanz_BeamGrab": "Maps/ModeSpecificData/Augments/Totentanz/Particles/Totentanz_BeamGrab"
         },
         "__type": "ResourceResolver"
     },
-    "{7ddb443d}": {
+    "Maps/ModeSpecificData/Augments/Totentanz/Augment_Totentanz": {
         "ObjectName": "Augment_Totentanz",
-        "objectPath": "{7ddb443d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Totentanz/Augment_Totentanz",
         "mScriptName": "Augment_Totentanz",
         "mSpell": {
             "DataValues": [
@@ -278026,7 +278026,7 @@
             "mCastType": 1,
             "castFrame": 9.5,
             "missileSpeed": 12000.0,
-            "mMissileEffectKey": "{c7c0eba2}",
+            "mMissileEffectKey": "Totentanz_Blink_Missile",
             "mHitEffectOrientType": 2,
             "selectionPriority": 1,
             "mTargetingTypeData": {
@@ -369942,12 +369942,12 @@
         },
         "__type": "SpellObject"
     },
-    "{db7ff5d0}": {
+    "Maps/ModeSpecificData/Augments/BouncingBees": {
         "AugmentNameId": "BouncingBees",
         "NameTra": "BouncingBees_Name",
         "DescriptionTra": "BouncingBees_Description",
         "AugmentTooltipTra": "BouncingBees_Tooltip",
-        "RootSpell": "{1cf22e43}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/BouncingBees/Augment_BouncingBees",
         "AdditionalSpells": [
             "{afdbabdc}",
             "{a94ba883}"
@@ -369966,7 +369966,7 @@
         },
         "__type": "AugmentData"
     },
-    "{0a56cf93}": {
+    "Maps/ModeSpecificData/Augments/BouncingBees/Particles/BouncingBees_Mis": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -372775,10 +372775,10 @@
         "particleName": "BouncingBees_Mis",
         "particlePath": "Maps/ModeSpecificData/Augments/BouncingBees/Particles/BouncingBees_Mis",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_BouncingBees_missilelaunch",
-        "objectPath": "{0a56cf93}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BouncingBees/Particles/BouncingBees_Mis",
         "__type": "VfxSystemDefinitionData"
     },
-    "{4ff2ac37}": {
+    "Maps/ModeSpecificData/Augments/BouncingBees/Particles/BouncingBees_Tar": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -374958,10 +374958,10 @@
         "particlePath": "Maps/ModeSpecificData/Augments/BouncingBees/Particles/BouncingBees_Tar",
         "soundOnCreateDefault": "Play_sfx_Kiwi_Augment_BouncingBees_hit",
         "flags": 198,
-        "objectPath": "{4ff2ac37}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BouncingBees/Particles/BouncingBees_Tar",
         "__type": "VfxSystemDefinitionData"
     },
-    "{69af296e}": {
+    "Maps/ModeSpecificData/Augments/BouncingBees/Particles/BouncingBees_Hands": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -375448,10 +375448,10 @@
         ],
         "particleName": "BouncingBees_Hands",
         "particlePath": "Maps/ModeSpecificData/Augments/BouncingBees/Particles/BouncingBees_Hands",
-        "objectPath": "{69af296e}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BouncingBees/Particles/BouncingBees_Hands",
         "__type": "VfxSystemDefinitionData"
     },
-    "{836165a2}": {
+    "Maps/ModeSpecificData/Augments/BouncingBees/Particles/BouncingBees_Self": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -376700,10 +376700,10 @@
         ],
         "particleName": "BouncingBees_Self",
         "particlePath": "Maps/ModeSpecificData/Augments/BouncingBees/Particles/BouncingBees_Self",
-        "objectPath": "{836165a2}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BouncingBees/Particles/BouncingBees_Self",
         "__type": "VfxSystemDefinitionData"
     },
-    "{e37c1cab}": {
+    "Maps/ModeSpecificData/Augments/BouncingBees/Particles/BouncingBees_Cone": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -378501,12 +378501,12 @@
                 1.0
             ]
         ],
-        "objectPath": "{e37c1cab}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BouncingBees/Particles/BouncingBees_Cone",
         "__type": "VfxSystemDefinitionData"
     },
-    "{1cf22e43}": {
+    "Maps/ModeSpecificData/Augments/BouncingBees/Augment_BouncingBees": {
         "ObjectName": "Augment_BouncingBees",
-        "objectPath": "{1cf22e43}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BouncingBees/Augment_BouncingBees",
         "mScriptName": "Augment_BouncingBees",
         "mSpell": {
             "DataValues": [
@@ -378599,11 +378599,11 @@
     },
     "{5640bb3a}": {
         "resourceMap": {
-            "{fdc62c17}": "{0a56cf93}",
-            "{23d704ab}": "{4ff2ac37}",
-            "{c06c5b1e}": "{836165a2}",
-            "{83598fe7}": "{e37c1cab}",
-            "{cae4a1aa}": "{69af296e}"
+            "BouncingBees_Mis": "Maps/ModeSpecificData/Augments/BouncingBees/Particles/BouncingBees_Mis",
+            "BouncingBees_Tar": "Maps/ModeSpecificData/Augments/BouncingBees/Particles/BouncingBees_Tar",
+            "BouncingBees_Self": "Maps/ModeSpecificData/Augments/BouncingBees/Particles/BouncingBees_Self",
+            "BouncingBees_Cone": "Maps/ModeSpecificData/Augments/BouncingBees/Particles/BouncingBees_Cone",
+            "BouncingBees_Hands": "Maps/ModeSpecificData/Augments/BouncingBees/Particles/BouncingBees_Hands"
         },
         "__type": "ResourceResolver"
     },
@@ -384814,12 +384814,12 @@
         },
         "__type": "SpellObject"
     },
-    "{29c88527}": {
+    "Maps/ModeSpecificData/Augments/BrassBlast": {
         "AugmentNameId": "BrassBlast",
         "NameTra": "Kiwi_Augment_BrassBlast_Name",
         "DescriptionTra": "Kiwi_Augment_BrassBlast_Description",
         "AugmentTooltipTra": "Kiwi_Augment_BrassBlast_Tooltip",
-        "RootSpell": "{4ad41b3d}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/BrassBlast/Augment_BrassBlast",
         "AdditionalSpells": [
             "{b170626b}",
             "{acead21b}"
@@ -384835,7 +384835,7 @@
         "ResourceResolver": "{79fa65bd}",
         "__type": "AugmentData"
     },
-    "{0aef9c94}": {
+    "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlastCharge": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -386210,10 +386210,10 @@
         "particleName": "Kiwi_Augment_BrassBlastCharge",
         "particlePath": "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlastCharge",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_BrassBlast_chargeup_buffactivate",
-        "objectPath": "{0aef9c94}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlastCharge",
         "__type": "VfxSystemDefinitionData"
     },
-    "{197123a8}": {
+    "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_VFX_Enemies": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -389292,10 +389292,10 @@
         "particlePath": "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_VFX_Enemies",
         "soundOnCreateDefault": "Play_sfx_Kiwi_Augment_BrassBlast_hitlocation",
         "flags": 198,
-        "objectPath": "{197123a8}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_VFX_Enemies",
         "__type": "VfxSystemDefinitionData"
     },
-    "{2705ffdf}": {
+    "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_WallCollision": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -391880,10 +391880,10 @@
         "particleName": "Kiwi_Augment_BrassBlast_WallCollision",
         "particlePath": "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_WallCollision",
         "flags": 198,
-        "objectPath": "{2705ffdf}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_WallCollision",
         "__type": "VfxSystemDefinitionData"
     },
-    "{6535b3ca}": {
+    "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_HitVFX": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -392346,10 +392346,10 @@
         ],
         "particleName": "Kiwi_Augment_BrassBlast_HitVFX",
         "particlePath": "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_HitVFX",
-        "objectPath": "{6535b3ca}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_HitVFX",
         "__type": "VfxSystemDefinitionData"
     },
-    "{aacafb5f}": {
+    "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_VFX": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -395401,10 +395401,10 @@
         "particlePath": "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_VFX",
         "soundOnCreateDefault": "Play_sfx_Kiwi_Augment_BrassBlast_hitlocation",
         "flags": 198,
-        "objectPath": "{aacafb5f}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_VFX",
         "__type": "VfxSystemDefinitionData"
     },
-    "{d263c5b8}": {
+    "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_Warning_Enemies": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -397358,10 +397358,10 @@
         "particleName": "Kiwi_Augment_BrassBlast_Warning_Enemies",
         "particlePath": "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_Warning_Enemies",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_BrassBlast_cast_release",
-        "objectPath": "{d263c5b8}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_Warning_Enemies",
         "__type": "VfxSystemDefinitionData"
     },
-    "{d436e236}": {
+    "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_Warning_Allies": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -399306,12 +399306,12 @@
         "particleName": "Kiwi_Augment_BrassBlast_Warning_Allies",
         "particlePath": "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_Warning_Allies",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_BrassBlast_cast_release",
-        "objectPath": "{d436e236}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_Warning_Allies",
         "__type": "VfxSystemDefinitionData"
     },
-    "{4ad41b3d}": {
+    "Maps/ModeSpecificData/Augments/BrassBlast/Augment_BrassBlast": {
         "ObjectName": "Augment_BrassBlast",
-        "objectPath": "{4ad41b3d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BrassBlast/Augment_BrassBlast",
         "mScriptName": "Augment_BrassBlast",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -399662,13 +399662,13 @@
     },
     "{79fa65bd}": {
         "resourceMap": {
-            "{252ff393}": "{d263c5b8}",
-            "{26316753}": "{197123a8}",
-            "{6d1845f7}": "{d436e236}",
-            "{1ebfdfb0}": "{2705ffdf}",
-            "{9be6379b}": "{0aef9c94}",
-            "{55ca77d3}": "{6535b3ca}",
-            "{0f4e2c60}": "{aacafb5f}"
+            "Kiwi_Augment_BrassBlast_Warning_Enemies": "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_Warning_Enemies",
+            "Kiwi_Augment_BrassBlast_VFX_Enemies": "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_VFX_Enemies",
+            "Kiwi_Augment_BrassBlast_Warning_Allies": "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_Warning_Allies",
+            "Kiwi_Augment_BrassBlast_WallCollision": "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_WallCollision",
+            "Kiwi_Augment_BrassBlastCharge": "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlastCharge",
+            "Kiwi_Augment_BrassBlast_HitVFX": "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_HitVFX",
+            "Kiwi_Augment_BrassBlast_VFX": "Maps/ModeSpecificData/Augments/BrassBlast/Particles/Kiwi_Augment_BrassBlast_VFX"
         },
         "__type": "ResourceResolver"
     },
@@ -417276,12 +417276,12 @@
         "AugmentPlatformId": 1204,
         "__type": "AugmentData"
     },
-    "{b8b91114}": {
+    "Maps/ModeSpecificData/Augments/GetJinxed": {
         "AugmentNameId": "GetJinxed",
         "NameTra": "Kiwi_Augment_GetJinxed_Name",
         "DescriptionTra": "Kiwi_Augment_GetJinxed_Description",
         "AugmentTooltipTra": "Kiwi_Augment_GetJinxed_Tooltip",
-        "RootSpell": "{eb8b6e89}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/GetJinxed/Augment_GetJinxed",
         "AdditionalSpells": [
             "{731b3733}",
             "{0ba61ffe}"
@@ -417528,7 +417528,7 @@
             "mCastType": 3,
             "castFrame": 7.5,
             "missileSpeed": 1700.0,
-            "mMissileEffectKey": "{f3f94e44}",
+            "mMissileEffectKey": "GetJinxed_R_Mis",
             "mLineWidth": 140.0,
             "mFloatVarsDecimals": [
                 0,
@@ -417601,7 +417601,7 @@
         },
         "__type": "SpellObject"
     },
-    "{2a3f292e}": {
+    "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Rocket_Child": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -418283,10 +418283,10 @@
         "particleName": "GetJinxed_Base_R_Rocket_Child",
         "particlePath": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Rocket_Child",
         "flags": 199,
-        "objectPath": "{2a3f292e}",
+        "objectPath": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Rocket_Child",
         "__type": "VfxSystemDefinitionData"
     },
-    "{608824c2}": {
+    "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Mis": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.10000000149011612,
@@ -425640,10 +425640,10 @@
                 1.0
             ]
         ],
-        "objectPath": "{608824c2}",
+        "objectPath": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Mis",
         "__type": "VfxSystemDefinitionData"
     },
-    "{7422fd45}": {
+    "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Rocket_Child_Minis": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -426423,10 +426423,10 @@
         "particlePath": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Rocket_Child_Minis",
         "flags": 199,
         "scaleDynamicallyWithAttachedBone": true,
-        "objectPath": "{7422fd45}",
+        "objectPath": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Rocket_Child_Minis",
         "__type": "VfxSystemDefinitionData"
     },
-    "{77f1d009}": {
+    "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Rocket_Child_Minis_Continuous": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -427022,10 +427022,10 @@
         "particlePath": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Rocket_Child_Minis_Continuous",
         "flags": 199,
         "scaleDynamicallyWithAttachedBone": true,
-        "objectPath": "{77f1d009}",
+        "objectPath": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Rocket_Child_Minis_Continuous",
         "__type": "VfxSystemDefinitionData"
     },
-    "{a01a1d8e}": {
+    "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Tar": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.10000000149011612,
@@ -434678,10 +434678,10 @@
         "particlePath": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Tar",
         "soundOnCreateDefault": "Play_sfx_Kiwi_Augment_GetJinxed_hitlocation",
         "flags": 198,
-        "objectPath": "{a01a1d8e}",
+        "objectPath": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Tar",
         "__type": "VfxSystemDefinitionData"
     },
-    "{bf339f56}": {
+    "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Cast_RocketIgnition": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 1.4199999570846558,
@@ -436478,10 +436478,10 @@
         "particleName": "GetJinxed_Base_R_Cast_RocketIgnition",
         "particlePath": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Cast_RocketIgnition",
         "flags": 199,
-        "objectPath": "{bf339f56}",
+        "objectPath": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Cast_RocketIgnition",
         "__type": "VfxSystemDefinitionData"
     },
-    "{fa788ac5}": {
+    "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Cast": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -436497,7 +436497,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effect": "{bf339f56}",
+                            "effect": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Cast_RocketIgnition",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -439364,10 +439364,10 @@
         "particleName": "GetJinxed_Cast",
         "particlePath": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Cast",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_GetJinxed_cast",
-        "objectPath": "{fa788ac5}",
+        "objectPath": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Cast",
         "__type": "VfxSystemDefinitionData"
     },
-    "{fd29c63d}": {
+    "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Mis_Alistar": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.10000000149011612,
@@ -446721,10 +446721,10 @@
                 1.0
             ]
         ],
-        "objectPath": "{fd29c63d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Mis_Alistar",
         "__type": "VfxSystemDefinitionData"
     },
-    "{ff653f2b}": {
+    "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Mis_Backwards": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.10000000149011612,
@@ -454078,7 +454078,7 @@
                 1.0
             ]
         ],
-        "objectPath": "{ff653f2b}",
+        "objectPath": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Mis_Backwards",
         "__type": "VfxSystemDefinitionData"
     },
     "{731b3733}": {
@@ -454313,7 +454313,7 @@
             "mCastType": 3,
             "castFrame": 7.5,
             "missileSpeed": 1700.0,
-            "mMissileEffectKey": "{f3f94e44}",
+            "mMissileEffectKey": "GetJinxed_R_Mis",
             "mLineWidth": 140.0,
             "mFloatVarsDecimals": [
                 0,
@@ -454391,21 +454391,21 @@
     },
     "{a919c296}": {
         "resourceMap": {
-            "{2840679b}": "{fd29c63d}",
-            "{e9003d99}": "{ff653f2b}",
-            "{c98609b0}": "{bf339f56}",
-            "{1c42eaef}": "{77f1d009}",
-            "{e0376933}": "{7422fd45}",
-            "{b4e8829d}": "{fa788ac5}",
-            "{52910090}": "{2a3f292e}",
-            "{7e2e4ae0}": "{a01a1d8e}",
-            "{f3f94e44}": "{608824c2}"
+            "GetJinxed_R_Mis_Alistar": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Mis_Alistar",
+            "GetJinxed_R_Mis_Backwards": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Mis_Backwards",
+            "GetJinxed_R_Cast_RocketIgnition": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Cast_RocketIgnition",
+            "GetJinxed_R_Rocket_Child_Minis_Continuous": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Rocket_Child_Minis_Continuous",
+            "GetJinxed_R_Rocket_Child_Minis": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Rocket_Child_Minis",
+            "GetJinxed_Cast": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Cast",
+            "GetJinxed_R_Rocket_Child": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Rocket_Child",
+            "GetJinxed_R_Tar": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Tar",
+            "GetJinxed_R_Mis": "Maps/ModeSpecificData/Augments/GetJinxed/Particles/GetJinxed_Base_R_Mis"
         },
         "__type": "ResourceResolver"
     },
-    "{eb8b6e89}": {
+    "Maps/ModeSpecificData/Augments/GetJinxed/Augment_GetJinxed": {
         "ObjectName": "Augment_GetJinxed",
-        "objectPath": "{eb8b6e89}",
+        "objectPath": "Maps/ModeSpecificData/Augments/GetJinxed/Augment_GetJinxed",
         "mScriptName": "Augment_GetJinxed",
         "mSpell": {
             "flags": 4,
@@ -454805,7 +454805,7 @@
             "luaOnMissileUpdateDistanceInterval": 1350.0,
             "castFrame": 7.5,
             "missileSpeed": 1700.0,
-            "mMissileEffectKey": "{f3f94e44}",
+            "mMissileEffectKey": "GetJinxed_R_Mis",
             "mLineWidth": 140.0,
             "mFloatVarsDecimals": [
                 0,
@@ -480461,12 +480461,12 @@
         },
         "__type": "SpellObject"
     },
-    "{fb8cf33c}": {
+    "Maps/ModeSpecificData/Augments/CrimsonCobalt": {
         "AugmentNameId": "CrimsonCobalt",
         "NameTra": "Kiwi_Augment_CrimsonCobalt_Name",
         "DescriptionTra": "Kiwi_Augment_CrimsonCobalt_Description",
         "AugmentTooltipTra": "Kiwi_Augment_CrimsonCobalt_Tooltip",
-        "RootSpell": "{b47fde49}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/CrimsonCobalt/Augment_CrimsonCobalt",
         "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.tex",
         "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.tex",
         "AugmentDisplayTags": [
@@ -480480,12 +480480,12 @@
     },
     "{0cf014fe}": {
         "resourceMap": {
-            "{d1e6039f}": "{39a8d02f}",
-            "{a4294c7f}": "{bb6b80af}"
+            "CrimsonCobalt_Mark": "Maps/ModeSpecificData/Augments/CrimsonCobalt/Particles/CrimsonCobalt_Mark",
+            "CrimsonCobalt_MarkConsume": "Maps/ModeSpecificData/Augments/CrimsonCobalt/Particles/CrimsonCobalt_MarkConsume"
         },
         "__type": "ResourceResolver"
     },
-    "{39a8d02f}": {
+    "Maps/ModeSpecificData/Augments/CrimsonCobalt/Particles/CrimsonCobalt_Mark": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -482031,10 +482031,10 @@
         "particleName": "CrimsonCobalt_Mark",
         "particlePath": "Maps/ModeSpecificData/Augments/CrimsonCobalt/Particles/CrimsonCobalt_Mark",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_CrimsonCobalt_mark_buffactivate",
-        "objectPath": "{39a8d02f}",
+        "objectPath": "Maps/ModeSpecificData/Augments/CrimsonCobalt/Particles/CrimsonCobalt_Mark",
         "__type": "VfxSystemDefinitionData"
     },
-    "{bb6b80af}": {
+    "Maps/ModeSpecificData/Augments/CrimsonCobalt/Particles/CrimsonCobalt_MarkConsume": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -485132,12 +485132,12 @@
         "particleName": "CrimsonCobalt_MarkConsume",
         "particlePath": "Maps/ModeSpecificData/Augments/CrimsonCobalt/Particles/CrimsonCobalt_MarkConsume",
         "soundOnCreateDefault": "Play_sfx_Kiwi_Augment_CrimsonCobalt_mark_detonate",
-        "objectPath": "{bb6b80af}",
+        "objectPath": "Maps/ModeSpecificData/Augments/CrimsonCobalt/Particles/CrimsonCobalt_MarkConsume",
         "__type": "VfxSystemDefinitionData"
     },
-    "{b47fde49}": {
+    "Maps/ModeSpecificData/Augments/CrimsonCobalt/Augment_CrimsonCobalt": {
         "ObjectName": "Augment_CrimsonCobalt",
-        "objectPath": "{b47fde49}",
+        "objectPath": "Maps/ModeSpecificData/Augments/CrimsonCobalt/Augment_CrimsonCobalt",
         "mScriptName": "Augment_CrimsonCobalt",
         "mSpell": {
             "DataValues": [
@@ -564902,12 +564902,12 @@
         },
         "__type": "SpellObject"
     },
-    "{1e82fad5}": {
+    "Maps/ModeSpecificData/Augments/BlueBarrier": {
         "AugmentNameId": "BlueBarrier",
         "NameTra": "Kiwi_Augment_BlueBarrier_Name",
         "DescriptionTra": "Kiwi_Augment_BlueBarrier_Description",
         "AugmentTooltipTra": "Kiwi_Augment_BlueBarrier_Tooltip",
-        "RootSpell": "{0fdd916d}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/BlueBarrier/Augment_BlueBarrier",
         "AugmentLargeIconPath": "{3af710d256bc8c50}",
         "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/bluenote_small.tex",
         "AugmentDisplayTags": [
@@ -564917,9 +564917,9 @@
         "ResourceResolver": "{376c27df}",
         "__type": "AugmentData"
     },
-    "{0fdd916d}": {
+    "Maps/ModeSpecificData/Augments/BlueBarrier/Augment_BlueBarrier": {
         "ObjectName": "Augment_BlueBarrier",
-        "objectPath": "{0fdd916d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BlueBarrier/Augment_BlueBarrier",
         "mScriptName": "Augment_BlueBarrier",
         "mSpell": {
             "DataValues": [
@@ -564966,11 +564966,11 @@
     },
     "{376c27df}": {
         "resourceMap": {
-            "{aa67a15e}": "{74925b8f}"
+            "BlueBarrier_Cas": "Maps/ModeSpecificData/Augments/BlueBarrier/Particles/BlueBarrier_Cas"
         },
         "__type": "ResourceResolver"
     },
-    "{74925b8f}": {
+    "Maps/ModeSpecificData/Augments/BlueBarrier/Particles/BlueBarrier_Cas": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -567018,15 +567018,15 @@
         ],
         "particleName": "BlueBarrier_Cas",
         "particlePath": "Maps/ModeSpecificData/Augments/BlueBarrier/Particles/BlueBarrier_Cas",
-        "objectPath": "{74925b8f}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BlueBarrier/Particles/BlueBarrier_Cas",
         "__type": "VfxSystemDefinitionData"
     },
-    "{6fe7d8a5}": {
+    "Maps/ModeSpecificData/Augments/MoshMonster": {
         "AugmentNameId": "MoshMonster",
         "NameTra": "Kiwi_Augment_MoshMonster_Name",
         "DescriptionTra": "Kiwi_Augment_MoshMonster_Description",
         "AugmentTooltipTra": "Kiwi_Augment_MoshMonster_Tooltip",
-        "RootSpell": "{f0780a4d}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/MoshMonster/Augment_MoshMonster",
         "AdditionalSpells": [
             "{ad15fb63}",
             "{1076d5c1}"
@@ -567064,7 +567064,7 @@
         },
         "__type": "SpellObject"
     },
-    "{41c86611}": {
+    "Maps/ModeSpecificData/Augments/MoshMonster/Particles/MoshMonster_Aura": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -569577,10 +569577,10 @@
         "particleName": "MoshMonster_Aura",
         "particlePath": "Maps/ModeSpecificData/Augments/MoshMonster/Particles/MoshMonster_Aura",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_MoshMonster_buffactivate_loop",
-        "objectPath": "{41c86611}",
+        "objectPath": "Maps/ModeSpecificData/Augments/MoshMonster/Particles/MoshMonster_Aura",
         "__type": "VfxSystemDefinitionData"
     },
-    "{7fc99c2a}": {
+    "Maps/ModeSpecificData/Augments/MoshMonster/Particles/MoshMonster_HandGlow": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -570056,10 +570056,10 @@
         ],
         "particleName": "MoshMonster_HandGlow",
         "particlePath": "Maps/ModeSpecificData/Augments/MoshMonster/Particles/MoshMonster_HandGlow",
-        "objectPath": "{7fc99c2a}",
+        "objectPath": "Maps/ModeSpecificData/Augments/MoshMonster/Particles/MoshMonster_HandGlow",
         "__type": "VfxSystemDefinitionData"
     },
-    "{ad494b77}": {
+    "Maps/ModeSpecificData/Augments/MoshMonster/Particles/MoshMonster_Transform_Child": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -572375,10 +572375,10 @@
         "particleName": "MoshMonster_Transform_Child",
         "particlePath": "Maps/ModeSpecificData/Augments/MoshMonster/Particles/MoshMonster_Transform_Child",
         "flags": 1221,
-        "objectPath": "{ad494b77}",
+        "objectPath": "Maps/ModeSpecificData/Augments/MoshMonster/Particles/MoshMonster_Transform_Child",
         "__type": "VfxSystemDefinitionData"
     },
-    "{d2912522}": {
+    "Maps/ModeSpecificData/Augments/MoshMonster/Particles/MoshMonster_Transform": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -572670,7 +572670,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effect": "{ad494b77}",
+                            "effect": "Maps/ModeSpecificData/Augments/MoshMonster/Particles/MoshMonster_Transform_Child",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -572736,7 +572736,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effect": "{ad494b77}",
+                            "effect": "Maps/ModeSpecificData/Augments/MoshMonster/Particles/MoshMonster_Transform_Child",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -572802,7 +572802,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effect": "{ad494b77}",
+                            "effect": "Maps/ModeSpecificData/Augments/MoshMonster/Particles/MoshMonster_Transform_Child",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -572868,7 +572868,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effect": "{ad494b77}",
+                            "effect": "Maps/ModeSpecificData/Augments/MoshMonster/Particles/MoshMonster_Transform_Child",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -572934,7 +572934,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effect": "{ad494b77}",
+                            "effect": "Maps/ModeSpecificData/Augments/MoshMonster/Particles/MoshMonster_Transform_Child",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -572989,7 +572989,7 @@
         ],
         "particleName": "MoshMonster_Transform",
         "particlePath": "Maps/ModeSpecificData/Augments/MoshMonster/Particles/MoshMonster_Transform",
-        "objectPath": "{d2912522}",
+        "objectPath": "Maps/ModeSpecificData/Augments/MoshMonster/Particles/MoshMonster_Transform",
         "__type": "VfxSystemDefinitionData"
     },
     "{ad15fb63}": {
@@ -573010,15 +573010,15 @@
     },
     "{ea53958f}": {
         "resourceMap": {
-            "{1eacd796}": "{41c86611}",
-            "{ce3aad93}": "{d2912522}",
-            "{ab931a79}": "{7fc99c2a}"
+            "MoshMonster_Aura": "Maps/ModeSpecificData/Augments/MoshMonster/Particles/MoshMonster_Aura",
+            "MoshMonster_Transform": "Maps/ModeSpecificData/Augments/MoshMonster/Particles/MoshMonster_Transform",
+            "MoshMonster_HandGlow": "Maps/ModeSpecificData/Augments/MoshMonster/Particles/MoshMonster_HandGlow"
         },
         "__type": "ResourceResolver"
     },
-    "{f0780a4d}": {
+    "Maps/ModeSpecificData/Augments/MoshMonster/Augment_MoshMonster": {
         "ObjectName": "Augment_MoshMonster",
-        "objectPath": "{f0780a4d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/MoshMonster/Augment_MoshMonster",
         "mScriptName": "Augment_MoshMonster",
         "mSpell": {
             "DataValues": [
@@ -574011,12 +574011,12 @@
         "objectPath": "Maps/ModeSpecificData/Augments/SpecializedEmpowerment/Particles/QuestComplete",
         "__type": "VfxSystemDefinitionData"
     },
-    "{32445793}": {
+    "Maps/ModeSpecificData/Augments/TakeemDownDownDown": {
         "AugmentNameId": "TakeemDownDownDown",
         "NameTra": "Kiwi_Augment_TakeemDownDownDown_Name",
         "DescriptionTra": "Kiwi_Augment_TakeemDownDownDown_Description",
         "AugmentTooltipTra": "Kiwi_Augment_TakeemDownDownDown_Tooltip",
-        "RootSpell": "{8679f7dd}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Augment_TakeemDownDownDown",
         "AdditionalSpells": [
             "{b6df4b12}",
             "{557ba0ec}"
@@ -574033,20 +574033,20 @@
     },
     "{11109341}": {
         "resourceMap": {
-            "{12af1beb}": "{c13bed7e}",
-            "{13af1d7e}": "{c03bebeb}",
-            "{14af1f11}": "{bf3bea58}",
-            "{15af20a4}": "{c63bf55d}",
-            "{f97a492e}": "{41afe12b}",
-            "{294e0cbf}": "{62c9bd5e}",
-            "{1e14178c}": "{e8006aed}",
-            "{a4b5b967}": "{4fe16050}",
-            "{bfb54d08}": "{edfc97bd}",
-            "{1589ddb4}": "{b62a067d}"
+            "TakeemDownDownDown_Stack_1": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_1",
+            "TakeemDownDownDown_Stack_2": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_2",
+            "TakeemDownDownDown_Stack_3": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_3",
+            "TakeemDownDownDown_Stack_4": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_4",
+            "TakeemDownDownDown_Stack_Consume": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_Consume",
+            "TakeemDownDownDown_Stack_Pop": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_Pop",
+            "TakeemDownDownDown_BlinkActivate": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_BlinkActivate",
+            "TakeemDownDownDown_BlinkTrail": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_BlinkTrail",
+            "TakeemDownDownDown_DashReadyOverhead": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_DashReadyOverhead",
+            "TakeemDownDownDown_ValidDashTarget": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_ValidDashTarget"
         },
         "__type": "ResourceResolver"
     },
-    "{41afe12b}": {
+    "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_Consume": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -575849,17 +575849,17 @@
         "particlePath": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_Consume",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_TakeEmDownDownDown_hit_detonate",
         "flags": 214,
-        "objectPath": "{41afe12b}",
+        "objectPath": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_Consume",
         "__type": "VfxSystemDefinitionData"
     },
-    "{4fe16050}": {
+    "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_BlinkTrail": {
         "particleName": "TakeemDownDownDown_BlinkTrail",
         "particlePath": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_BlinkTrail",
         "flags": 198,
-        "objectPath": "{4fe16050}",
+        "objectPath": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_BlinkTrail",
         "__type": "VfxSystemDefinitionData"
     },
-    "{62c9bd5e}": {
+    "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_Pop": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -577277,10 +577277,10 @@
         "particleName": "TakeemDownDownDown_Stack_Pop",
         "particlePath": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_Pop",
         "flags": 198,
-        "objectPath": "{62c9bd5e}",
+        "objectPath": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_Pop",
         "__type": "VfxSystemDefinitionData"
     },
-    "{b62a067d}": {
+    "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_ValidDashTarget": {
         "particleName": "TakeemDownDownDown_ValidDashTarget",
         "particlePath": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_ValidDashTarget",
         "transform": [
@@ -577309,10 +577309,10 @@
                 1.0
             ]
         ],
-        "objectPath": "{b62a067d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_ValidDashTarget",
         "__type": "VfxSystemDefinitionData"
     },
-    "{bf3bea58}": {
+    "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_3": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -577701,10 +577701,10 @@
         ],
         "particleName": "TakeemDownDownDown_Stack_3",
         "particlePath": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_3",
-        "objectPath": "{bf3bea58}",
+        "objectPath": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_3",
         "__type": "VfxSystemDefinitionData"
     },
-    "{c03bebeb}": {
+    "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_2": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -577985,10 +577985,10 @@
         ],
         "particleName": "TakeemDownDownDown_Stack_2",
         "particlePath": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_2",
-        "objectPath": "{c03bebeb}",
+        "objectPath": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_2",
         "__type": "VfxSystemDefinitionData"
     },
-    "{c13bed7e}": {
+    "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_1": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -578220,10 +578220,10 @@
         ],
         "particleName": "TakeemDownDownDown_Stack_1",
         "particlePath": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_1",
-        "objectPath": "{c13bed7e}",
+        "objectPath": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_1",
         "__type": "VfxSystemDefinitionData"
     },
-    "{c63bf55d}": {
+    "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_4": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -578669,16 +578669,16 @@
         ],
         "particleName": "TakeemDownDownDown_Stack_4",
         "particlePath": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_4",
-        "objectPath": "{c63bf55d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_Stack_4",
         "__type": "VfxSystemDefinitionData"
     },
-    "{e8006aed}": {
+    "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_BlinkActivate": {
         "particleName": "TakeemDownDownDown_BlinkActivate",
         "particlePath": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_BlinkActivate",
-        "objectPath": "{e8006aed}",
+        "objectPath": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_BlinkActivate",
         "__type": "VfxSystemDefinitionData"
     },
-    "{edfc97bd}": {
+    "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_DashReadyOverhead": {
         "particleName": "TakeemDownDownDown_DashReadyOverhead",
         "particlePath": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_DashReadyOverhead",
         "transform": [
@@ -578707,7 +578707,7 @@
                 1.0
             ]
         ],
-        "objectPath": "{edfc97bd}",
+        "objectPath": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Particles/TakeemDownDownDown_DashReadyOverhead",
         "__type": "VfxSystemDefinitionData"
     },
     "{557ba0ec}": {
@@ -578726,9 +578726,9 @@
         },
         "__type": "SpellObject"
     },
-    "{8679f7dd}": {
+    "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Augment_TakeemDownDownDown": {
         "ObjectName": "Augment_TakeemDownDownDown",
-        "objectPath": "{8679f7dd}",
+        "objectPath": "Maps/ModeSpecificData/Augments/TakeemDownDownDown/Augment_TakeemDownDownDown",
         "mScriptName": "Augment_TakeemDownDownDown",
         "mSpell": {
             "DataValues": [
@@ -578977,7 +578977,7 @@
             "mCastType": 1,
             "castFrame": 9.5,
             "missileSpeed": 12000.0,
-            "mMissileEffectKey": "{a4b5b967}",
+            "mMissileEffectKey": "TakeemDownDownDown_BlinkTrail",
             "mHitEffectOrientType": 2,
             "selectionPriority": 1,
             "mTargetingTypeData": {
@@ -581118,12 +581118,12 @@
         },
         "__type": "ResourceResolver"
     },
-    "{1888e37b}": {
+    "Maps/ModeSpecificData/Augments/WeaponOfDestiny": {
         "AugmentNameId": "WeaponOfDestiny",
         "NameTra": "Kiwi_Augment_WeaponOfDestiny_Name",
         "DescriptionTra": "Kiwi_Augment_WeaponOfDestiny_Description",
         "AugmentTooltipTra": "Kiwi_Augment_WeaponOfDestiny_Tooltip",
-        "RootSpell": "{12154b4d}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/WeaponOfDestiny/Augment_WeaponOfDestiny",
         "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/protagonistssignatureweapon_large.tex",
         "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/protagonistssignatureweapon_small.tex",
         "AugmentDisplayTags": [
@@ -581134,9 +581134,9 @@
         "ResourceResolver": "{e0d05ce9}",
         "__type": "AugmentData"
     },
-    "{12154b4d}": {
+    "Maps/ModeSpecificData/Augments/WeaponOfDestiny/Augment_WeaponOfDestiny": {
         "ObjectName": "Augment_WeaponOfDestiny",
-        "objectPath": "{12154b4d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/WeaponOfDestiny/Augment_WeaponOfDestiny",
         "mScriptName": "Augment_WeaponOfDestiny",
         "mSpell": {
             "DataValues": [
@@ -604023,12 +604023,12 @@
         },
         "__type": "ResourceResolver"
     },
-    "{e797c1ff}": {
+    "Maps/ModeSpecificData/Augments/HeavyIsTheCrown": {
         "AugmentNameId": "HeavyIsTheCrown",
         "NameTra": "Kiwi_Augment_HeavyIsTheCrown_Name",
         "DescriptionTra": "Kiwi_Augment_HeavyIsTheCrown_Description",
         "AugmentTooltipTra": "Kiwi_Augment_HeavyIsTheCrown_Tooltip",
-        "RootSpell": "{3808688d}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/HeavyIsTheCrown/Augment_HeavyIsTheCrown",
         "AdditionalSpells": [
             "{a2b2e2b6}"
         ],
@@ -604042,7 +604042,7 @@
         "ResourceResolver": "{2a183c55}",
         "__type": "AugmentData"
     },
-    "{141b67f1}": {
+    "Maps/ModeSpecificData/Augments/HeavyIsTheCrown/Particles/HeavyIsTheCrown_Crown": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -605501,10 +605501,10 @@
         "visibilityRadius": 25000.0,
         "particleName": "HeavyIsTheCrown_Crown",
         "particlePath": "Maps/ModeSpecificData/Augments/HeavyIsTheCrown/Particles/HeavyIsTheCrown_Crown",
-        "objectPath": "{141b67f1}",
+        "objectPath": "Maps/ModeSpecificData/Augments/HeavyIsTheCrown/Particles/HeavyIsTheCrown_Crown",
         "__type": "VfxSystemDefinitionData"
     },
-    "{65df316d}": {
+    "Maps/ModeSpecificData/Augments/HeavyIsTheCrown/Particles/HeavyIsTheCrown_Crown_NoCombat": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -605920,19 +605920,19 @@
         "visibilityRadius": 25000.0,
         "particleName": "HeavyIsTheCrown_Crown_NoCombat",
         "particlePath": "Maps/ModeSpecificData/Augments/HeavyIsTheCrown/Particles/HeavyIsTheCrown_Crown_NoCombat",
-        "objectPath": "{65df316d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/HeavyIsTheCrown/Particles/HeavyIsTheCrown_Crown_NoCombat",
         "__type": "VfxSystemDefinitionData"
     },
     "{2a183c55}": {
         "resourceMap": {
-            "{9603860e}": "{141b67f1}",
-            "{fed73fb8}": "{65df316d}"
+            "HeavyIsTheCrown_Crown": "Maps/ModeSpecificData/Augments/HeavyIsTheCrown/Particles/HeavyIsTheCrown_Crown",
+            "HeavyIsTheCrown_Crown_NoCombat": "Maps/ModeSpecificData/Augments/HeavyIsTheCrown/Particles/HeavyIsTheCrown_Crown_NoCombat"
         },
         "__type": "ResourceResolver"
     },
-    "{3808688d}": {
+    "Maps/ModeSpecificData/Augments/HeavyIsTheCrown/Augment_HeavyIsTheCrown": {
         "ObjectName": "Augment_HeavyIsTheCrown",
-        "objectPath": "{3808688d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/HeavyIsTheCrown/Augment_HeavyIsTheCrown",
         "mScriptName": "Augment_HeavyIsTheCrown",
         "mSpell": {
             "DataValues": [
@@ -647425,12 +647425,12 @@
         },
         "__type": "SpellObject"
     },
-    "{58bac436}": {
+    "Maps/ModeSpecificData/Augments/Fruitify": {
         "AugmentNameId": "Fruitify",
         "NameTra": "Kiwi_Augment_Fruitify_Name",
         "DescriptionTra": "Kiwi_Augment_Fruitify_Description",
         "AugmentTooltipTra": "Kiwi_Augment_Fruitify_Tooltip",
-        "RootSpell": "{58f62f7f}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/Fruitify/Augment_Fruitify",
         "AdditionalSpells": [
             "{8f47a4f8}"
         ],
@@ -647445,17 +647445,17 @@
     },
     "{15ff1bec}": {
         "resourceMap": {
-            "{60fcff26}": "{817659fc}",
-            "{86d057d1}": "{7b1fc28f}",
-            "{d49cab91}": "{d46ada87}",
-            "{3fba1efe}": "{489c8cc4}",
-            "{940872bd}": "{87df892b}",
-            "{96304b1a}": "{434a9390}",
-            "{757c5961}": "{a9263237}"
+            "Fruitify_Pickup": "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Pickup",
+            "Fruitify_Tar": "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Tar",
+            "Fruitify_Pop": "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Pop",
+            "Fruitify_Puddle": "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Puddle",
+            "Fruitify_Mis": "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Mis",
+            "Fruitify_Mis_Enemy": "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Mis_Enemy",
+            "Fruitify_Pickup_Enemy": "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Pickup_Enemy"
         },
         "__type": "ResourceResolver"
     },
-    "{434a9390}": {
+    "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Mis_Enemy": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -647946,10 +647946,10 @@
         ],
         "particleName": "Fruitify_Mis_Enemy",
         "particlePath": "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Mis_Enemy",
-        "objectPath": "{434a9390}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Mis_Enemy",
         "__type": "VfxSystemDefinitionData"
     },
-    "{489c8cc4}": {
+    "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Puddle": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -648172,10 +648172,10 @@
         ],
         "particleName": "Fruitify_Puddle",
         "particlePath": "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Puddle",
-        "objectPath": "{489c8cc4}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Puddle",
         "__type": "VfxSystemDefinitionData"
     },
-    "{7b1fc28f}": {
+    "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Tar": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -649353,10 +649353,10 @@
         "particleName": "Fruitify_Tar",
         "particlePath": "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Tar",
         "soundOnCreateDefault": "Play_sfx_Kiwi_Augment_Fruitify_pickup_buffactivate",
-        "objectPath": "{7b1fc28f}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Tar",
         "__type": "VfxSystemDefinitionData"
     },
-    "{817659fc}": {
+    "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Pickup": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -651762,10 +651762,10 @@
         ],
         "particleName": "Fruitify_Pickup",
         "particlePath": "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Pickup",
-        "objectPath": "{817659fc}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Pickup",
         "__type": "VfxSystemDefinitionData"
     },
-    "{87df892b}": {
+    "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Mis": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -652265,10 +652265,10 @@
         ],
         "particleName": "Fruitify_Mis",
         "particlePath": "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Mis",
-        "objectPath": "{87df892b}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Mis",
         "__type": "VfxSystemDefinitionData"
     },
-    "{a9263237}": {
+    "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Pickup_Enemy": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -654130,10 +654130,10 @@
         ],
         "particleName": "Fruitify_Pickup_Enemy",
         "particlePath": "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Pickup_Enemy",
-        "objectPath": "{a9263237}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Pickup_Enemy",
         "__type": "VfxSystemDefinitionData"
     },
-    "{d46ada87}": {
+    "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Pop": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -655981,12 +655981,12 @@
         ],
         "particleName": "Fruitify_Pop",
         "particlePath": "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Pop",
-        "objectPath": "{d46ada87}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Fruitify/Particles/Fruitify_Pop",
         "__type": "VfxSystemDefinitionData"
     },
-    "{58f62f7f}": {
+    "Maps/ModeSpecificData/Augments/Fruitify/Augment_Fruitify": {
         "ObjectName": "Augment_Fruitify",
-        "objectPath": "{58f62f7f}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Fruitify/Augment_Fruitify",
         "mScriptName": "Augment_Fruitify",
         "mSpell": {
             "DataValues": [
@@ -656168,7 +656168,7 @@
                 "__type": "MissileSpecification"
             },
             "mCastType": 3,
-            "mMissileEffectKey": "{940872bd}",
+            "mMissileEffectKey": "Fruitify_Mis",
             "mLineWidth": 60.0,
             "mHitEffectOrientType": 2,
             "mFloatVarsDecimals": [
@@ -667033,12 +667033,12 @@
         },
         "__type": "SpellObject"
     },
-    "{652231a9}": {
+    "Maps/ModeSpecificData/Augments/Salvation": {
         "AugmentNameId": "Salvation",
         "NameTra": "Kiwi_Augment_Salvation_Name",
         "DescriptionTra": "Kiwi_Augment_Salvation_Description",
         "AugmentTooltipTra": "Kiwi_Augment_Salvation_Tooltip",
-        "RootSpell": "{de3d5e5d}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/Salvation/Augment_Salvation",
         "AdditionalSpells": [
             "{2a802518}"
         ],
@@ -667052,14 +667052,14 @@
         "ResourceResolver": "{df0bf94b}",
         "__type": "AugmentData"
     },
-    "{18c5b8c2}": {
+    "Maps/ModeSpecificData/Augments/Salvation/Particles/Kiwi_Salvation_Explosion": {
         "particleName": "Kiwi_Salvation_Explosion",
         "particlePath": "Maps/ModeSpecificData/Augments/Salvation/Particles/Kiwi_Salvation_Explosion",
         "flags": 198,
-        "objectPath": "{18c5b8c2}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Salvation/Particles/Kiwi_Salvation_Explosion",
         "__type": "VfxSystemDefinitionData"
     },
-    "{2cb3c0b4}": {
+    "Maps/ModeSpecificData/Augments/Salvation/Particles/Salvation_KnockBackAOE": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -669413,10 +669413,10 @@
         "particleName": "Salvation_KnockBackAOE",
         "particlePath": "Maps/ModeSpecificData/Augments/Salvation/Particles/Salvation_KnockBackAOE",
         "soundOnCreateDefault": "Play_sfx_Kiwi_Augment_Salvation_hitlocation",
-        "objectPath": "{2cb3c0b4}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Salvation/Particles/Salvation_KnockBackAOE",
         "__type": "VfxSystemDefinitionData"
     },
-    "{2f1782eb}": {
+    "Maps/ModeSpecificData/Augments/Salvation/Particles/Kiwi_Salvation_Charge": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -670494,10 +670494,10 @@
         "particleName": "Kiwi_Salvation_Charge",
         "particlePath": "Maps/ModeSpecificData/Augments/Salvation/Particles/Kiwi_Salvation_Charge",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_Salvation_charge_buffactivate",
-        "objectPath": "{2f1782eb}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Salvation/Particles/Kiwi_Salvation_Charge",
         "__type": "VfxSystemDefinitionData"
     },
-    "{571f78df}": {
+    "Maps/ModeSpecificData/Augments/Salvation/Particles/Salvation_HealAOE": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -672402,10 +672402,10 @@
         ],
         "particleName": "Salvation_HealAOE",
         "particlePath": "Maps/ModeSpecificData/Augments/Salvation/Particles/Salvation_HealAOE",
-        "objectPath": "{571f78df}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Salvation/Particles/Salvation_HealAOE",
         "__type": "VfxSystemDefinitionData"
     },
-    "{a6474c2a}": {
+    "Maps/ModeSpecificData/Augments/Salvation/Particles/Kiwi_Salvation_Empowering": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -673475,10 +673475,10 @@
         ],
         "particleName": "Kiwi_Salvation_Empowering",
         "particlePath": "Maps/ModeSpecificData/Augments/Salvation/Particles/Kiwi_Salvation_Empowering",
-        "objectPath": "{a6474c2a}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Salvation/Particles/Kiwi_Salvation_Empowering",
         "__type": "VfxSystemDefinitionData"
     },
-    "{b2978442}": {
+    "Maps/ModeSpecificData/Augments/Salvation/Particles/kiwi_Salvation_Tar": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.03999999910593033,
@@ -675392,10 +675392,10 @@
         "particlePath": "Maps/ModeSpecificData/Augments/Salvation/Particles/kiwi_Salvation_Tar",
         "overrideScaleCap": 500.0,
         "flags": 198,
-        "objectPath": "{b2978442}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Salvation/Particles/kiwi_Salvation_Tar",
         "__type": "VfxSystemDefinitionData"
     },
-    "{d71907e8}": {
+    "Maps/ModeSpecificData/Augments/Salvation/Particles/Kiwi_Salvation_Aura": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -676332,7 +676332,7 @@
         "particleName": "Kiwi_Salvation_Aura",
         "particlePath": "Maps/ModeSpecificData/Augments/Salvation/Particles/Kiwi_Salvation_Aura",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_Salvation_buffactivate",
-        "objectPath": "{d71907e8}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Salvation/Particles/Kiwi_Salvation_Aura",
         "__type": "VfxSystemDefinitionData"
     },
     "{2a802518}": {
@@ -676351,9 +676351,9 @@
         },
         "__type": "SpellObject"
     },
-    "{de3d5e5d}": {
+    "Maps/ModeSpecificData/Augments/Salvation/Augment_Salvation": {
         "ObjectName": "Augment_Salvation",
-        "objectPath": "{de3d5e5d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Salvation/Augment_Salvation",
         "mScriptName": "Augment_Salvation",
         "mSpell": {
             "DataValues": [
@@ -676552,7 +676552,7 @@
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{9d8c75c8}",
+                            "mDataValue": "HealthPercentTrigger",
                             "__type": "NamedDataValueCalculationPart"
                         }
                     ],
@@ -676565,13 +676565,13 @@
     },
     "{df0bf94b}": {
         "resourceMap": {
-            "{b5466f5d}": "{d71907e8}",
-            "{fd58b0d3}": "{a6474c2a}",
-            "{456f13f1}": "{18c5b8c2}",
-            "{b07fa2ed}": "{b2978442}",
-            "{dfc3a65e}": "{2f1782eb}",
-            "{c5ae67da}": "{571f78df}",
-            "{60768ef3}": "{2cb3c0b4}"
+            "Kiwi_Salvation_Aura": "Maps/ModeSpecificData/Augments/Salvation/Particles/Kiwi_Salvation_Aura",
+            "Kiwi_Salvation_Empowering": "Maps/ModeSpecificData/Augments/Salvation/Particles/Kiwi_Salvation_Empowering",
+            "Kiwi_Salvation_Explosion": "Maps/ModeSpecificData/Augments/Salvation/Particles/Kiwi_Salvation_Explosion",
+            "kiwi_Salvation_Tar": "Maps/ModeSpecificData/Augments/Salvation/Particles/kiwi_Salvation_Tar",
+            "Kiwi_Salvation_Charge": "Maps/ModeSpecificData/Augments/Salvation/Particles/Kiwi_Salvation_Charge",
+            "Salvation_HealAOE": "Maps/ModeSpecificData/Augments/Salvation/Particles/Salvation_HealAOE",
+            "Salvation_KnockBackAOE": "Maps/ModeSpecificData/Augments/Salvation/Particles/Salvation_KnockBackAOE"
         },
         "__type": "ResourceResolver"
     },
@@ -791530,12 +791530,12 @@
         },
         "__type": "ResourceResolver"
     },
-    "{95695009}": {
+    "Maps/ModeSpecificData/Augments/LonelyWarrior": {
         "AugmentNameId": "LonelyWarrior",
         "NameTra": "Kiwi_Augment_LonelyWarrior_Name",
         "DescriptionTra": "Kiwi_Augment_LonelyWarrior_Description",
         "AugmentTooltipTra": "Kiwi_Augment_LonelyWarrior_Tooltip",
-        "RootSpell": "{1c86959d}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/LonelyWarrior/Augment_LonelyWarrior",
         "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/adamant_large.tex",
         "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/adamant_small.tex",
         "AugmentDisplayTags": [
@@ -791544,9 +791544,9 @@
         "AugmentPlatformId": 3134,
         "__type": "AugmentData"
     },
-    "{1c86959d}": {
+    "Maps/ModeSpecificData/Augments/LonelyWarrior/Augment_LonelyWarrior": {
         "ObjectName": "Augment_LonelyWarrior",
-        "objectPath": "{1c86959d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/LonelyWarrior/Augment_LonelyWarrior",
         "mScriptName": "Augment_LonelyWarrior",
         "mSpell": {
             "DataValues": [
@@ -791608,7 +791608,7 @@
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{c9393610}",
+                            "mDataValue": "ASPerEnemy",
                             "__type": "NamedDataValueCalculationPart"
                         }
                     ],
@@ -876918,12 +876918,12 @@
         },
         "__type": "SpellObject"
     },
-    "{57a3fa32}": {
+    "Maps/ModeSpecificData/Augments/DoubleTime": {
         "AugmentNameId": "DoubleTime",
         "NameTra": "Kiwi_Augment_DoubleTime_Name",
         "DescriptionTra": "Kiwi_Augment_DoubleTime_Description",
         "AugmentTooltipTra": "Kiwi_Augment_DoubleTime_Tooltip",
-        "RootSpell": "{af31385f}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/DoubleTime/Augment_DoubleTime",
         "AdditionalSpells": [
             "{3c767ff4}"
         ],
@@ -876937,7 +876937,7 @@
         "ResourceResolver": "{2ca74c80}",
         "__type": "AugmentData"
     },
-    "{20f7f182}": {
+    "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_ManaGlow": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -878410,10 +878410,10 @@
         ],
         "particleName": "DoubleTime_ManaGlow",
         "particlePath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_ManaGlow",
-        "objectPath": "{20f7f182}",
+        "objectPath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_ManaGlow",
         "__type": "VfxSystemDefinitionData"
     },
-    "{2bd7f2f3}": {
+    "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_Mis": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -880038,10 +880038,10 @@
         ],
         "particleName": "DoubleTime_Mis",
         "particlePath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_Mis",
-        "objectPath": "{2bd7f2f3}",
+        "objectPath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_Mis",
         "__type": "VfxSystemDefinitionData"
     },
-    "{48b3c07d}": {
+    "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v2_Child": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -882453,10 +882453,10 @@
         "particleName": "Kiwi_DoubleTime_Head_v2_Child",
         "particlePath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v2_Child",
         "flags": 198,
-        "objectPath": "{48b3c07d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v2_Child",
         "__type": "VfxSystemDefinitionData"
     },
-    "{7173cf97}": {
+    "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_Tar": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -883188,10 +883188,10 @@
         "particleName": "DoubleTime_Tar",
         "particlePath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_Tar",
         "flags": 198,
-        "objectPath": "{7173cf97}",
+        "objectPath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_Tar",
         "__type": "VfxSystemDefinitionData"
     },
-    "{79c5e86a}": {
+    "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v3_Child": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -886573,10 +886573,10 @@
         "particleName": "Kiwi_DoubleTime_Head_v3_Child",
         "particlePath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v3_Child",
         "flags": 198,
-        "objectPath": "{79c5e86a}",
+        "objectPath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v3_Child",
         "__type": "VfxSystemDefinitionData"
     },
-    "{88d13670}": {
+    "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_ManaGain": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -888383,10 +888383,10 @@
         "particlePath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_ManaGain",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_DoubleTime_managain_buffactivate",
         "flags": 213,
-        "objectPath": "{88d13670}",
+        "objectPath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_ManaGain",
         "__type": "VfxSystemDefinitionData"
     },
-    "{9d3d7690}": {
+    "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_MarkTar": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -889367,10 +889367,10 @@
         "particleName": "DoubleTime_MarkTar",
         "particlePath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_MarkTar",
         "soundOnCreateDefault": "Play_sfx_Kiwi_Augment_DoubleTime_mark_detonate",
-        "objectPath": "{9d3d7690}",
+        "objectPath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_MarkTar",
         "__type": "VfxSystemDefinitionData"
     },
-    "{b99cbf78}": {
+    "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v2": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -889385,7 +889385,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effect": "{48b3c07d}",
+                            "effect": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v2_Child",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -889515,10 +889515,10 @@
         "particlePath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v2",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_DoubleTime_spawn_buffactivate",
         "flags": 246,
-        "objectPath": "{b99cbf78}",
+        "objectPath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v2",
         "__type": "VfxSystemDefinitionData"
     },
-    "{ba9cc10b}": {
+    "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v3": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -889533,7 +889533,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effect": "{79c5e86a}",
+                            "effect": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v3_Child",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -889663,10 +889663,10 @@
         "particlePath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v3",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_DoubleTime_spawn_buffactivate",
         "flags": 246,
-        "objectPath": "{ba9cc10b}",
+        "objectPath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v3",
         "__type": "VfxSystemDefinitionData"
     },
-    "{bc9cc431}": {
+    "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v1": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -889681,7 +889681,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effect": "{bcb9c4d0}",
+                            "effect": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v1_Child",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -889811,10 +889811,10 @@
         "particlePath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v1",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_DoubleTime_head_spawn",
         "flags": 246,
-        "objectPath": "{bc9cc431}",
+        "objectPath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v1",
         "__type": "VfxSystemDefinitionData"
     },
-    "{bcb9c4d0}": {
+    "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v1_Child": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -891763,10 +891763,10 @@
         "particleName": "Kiwi_DoubleTime_Head_v1_Child",
         "particlePath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v1_Child",
         "flags": 198,
-        "objectPath": "{bcb9c4d0}",
+        "objectPath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v1_Child",
         "__type": "VfxSystemDefinitionData"
     },
-    "{e3d70d19}": {
+    "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_Mark": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -893576,20 +893576,20 @@
         "particlePath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_Mark",
         "overrideScaleCap": -1.0,
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_DoubleTime_mark_hit",
-        "objectPath": "{e3d70d19}",
+        "objectPath": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_Mark",
         "__type": "VfxSystemDefinitionData"
     },
     "{2ca74c80}": {
         "resourceMap": {
-            "{06189ef9}": "{7173cf97}",
-            "{bea2964e}": "{88d13670}",
-            "{ece893ec}": "{20f7f182}",
-            "{e0a59725}": "{2bd7f2f3}",
-            "{eddf89bc}": "{bc9cc431}",
-            "{f0df8e75}": "{b99cbf78}",
-            "{efdf8ce2}": "{ba9cc10b}",
-            "{819994b3}": "{e3d70d19}",
-            "{837e427a}": "{9d3d7690}"
+            "DoubleTime_Tar": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_Tar",
+            "DoubleTime_ManaGain": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_ManaGain",
+            "DoubleTime_ManaGlow": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_ManaGlow",
+            "DoubleTime_Mis": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_Mis",
+            "{eddf89bc}": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v1",
+            "{f0df8e75}": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v2",
+            "{efdf8ce2}": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/Kiwi_DoubleTime_Head_v3",
+            "DoubleTime_Mark": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_Mark",
+            "DoubleTime_MarkTar": "Maps/ModeSpecificData/Augments/DoubleTime/Particles/DoubleTime_MarkTar"
         },
         "__type": "ResourceResolver"
     },
@@ -893702,7 +893702,7 @@
             "mCastType": 1,
             "castFrame": 14.800000190734863,
             "missileSpeed": 1800.0,
-            "mMissileEffectKey": "{e0a59725}",
+            "mMissileEffectKey": "DoubleTime_Mis",
             "mLineWidth": 120.0,
             "mHitEffectOrientType": 2,
             "mResourceResolvers": [
@@ -893722,9 +893722,9 @@
         },
         "__type": "SpellObject"
     },
-    "{af31385f}": {
+    "Maps/ModeSpecificData/Augments/DoubleTime/Augment_DoubleTime": {
         "ObjectName": "Augment_DoubleTime",
-        "objectPath": "{af31385f}",
+        "objectPath": "Maps/ModeSpecificData/Augments/DoubleTime/Augment_DoubleTime",
         "mScriptName": "Augment_DoubleTime",
         "mSpell": {
             "DataValues": [
@@ -898309,12 +898309,12 @@
         },
         "__type": "SpellObject"
     },
-    "{5a79b648}": {
+    "Maps/ModeSpecificData/Augments/Recoil": {
         "AugmentNameId": "Recoil",
         "NameTra": "Augment_Recoil_Name",
         "DescriptionTra": "Augment_Recoil_Summary",
         "AugmentTooltipTra": "Augment_Recoil_Tooltip",
-        "RootSpell": "{cd0f99b7}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/Recoil/Augment_Recoil",
         "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.tex",
         "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.tex",
         "AugmentDisplayTags": [
@@ -898329,12 +898329,12 @@
     },
     "{21b8ead2}": {
         "resourceMap": {
-            "{bc4655a7}": "{c2772ad3}",
-            "{df81c222}": "{fe33b2f6}"
+            "{bc4655a7}": "Maps/ModeSpecificData/Augments/Recoil/Particles/KiwiS3_Augment_Recoil_Afterimage_4d478049",
+            "Augment_Recoil_Blast": "Maps/ModeSpecificData/Augments/Recoil/Particles/Augment_Recoil_Blast"
         },
         "__type": "ResourceResolver"
     },
-    "{c2772ad3}": {
+    "Maps/ModeSpecificData/Augments/Recoil/Particles/KiwiS3_Augment_Recoil_Afterimage_4d478049": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -899120,10 +899120,10 @@
         "particleName": "KiwiS3_Augment_Recoil_Afterimage_4d478049",
         "particlePath": "Maps/ModeSpecificData/Augments/Recoil/Particles/KiwiS3_Augment_Recoil_Afterimage_4d478049",
         "mIsPoseAfterimage": true,
-        "objectPath": "{c2772ad3}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Recoil/Particles/KiwiS3_Augment_Recoil_Afterimage_4d478049",
         "__type": "VfxSystemDefinitionData"
     },
-    "{fe33b2f6}": {
+    "Maps/ModeSpecificData/Augments/Recoil/Particles/Augment_Recoil_Blast": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -900446,12 +900446,12 @@
         "particleName": "Augment_Recoil_Blast",
         "particlePath": "Maps/ModeSpecificData/Augments/Recoil/Particles/Augment_Recoil_Blast",
         "flags": 214,
-        "objectPath": "{fe33b2f6}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Recoil/Particles/Augment_Recoil_Blast",
         "__type": "VfxSystemDefinitionData"
     },
-    "{cd0f99b7}": {
+    "Maps/ModeSpecificData/Augments/Recoil/Augment_Recoil": {
         "ObjectName": "Augment_Recoil",
-        "objectPath": "{cd0f99b7}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Recoil/Augment_Recoil",
         "mScriptName": "Augment_Recoil",
         "mSpell": {
             "DataValues": [
@@ -918184,12 +918184,12 @@
         },
         "__type": "SpellObject"
     },
-    "{2ee0fcd5}": {
+    "Maps/ModeSpecificData/Augments/Sound_Barrier": {
         "AugmentNameId": "Sound_Barrier",
         "NameTra": "Kiwi_Augment_Sound_Barrier_Name",
         "DescriptionTra": "Kiwi_Augment_Sound_Barrier_Description",
         "AugmentTooltipTra": "Kiwi_Augment_Sound_Barrier_Tooltip",
-        "RootSpell": "{2539aa8d}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/Sound_Barrier/Augment_Sound_Barrier",
         "AdditionalSpells": [
             "{ad446cc4}"
         ],
@@ -918203,9 +918203,9 @@
         "ResourceResolver": "{cd3739df}",
         "__type": "AugmentData"
     },
-    "{2539aa8d}": {
+    "Maps/ModeSpecificData/Augments/Sound_Barrier/Augment_Sound_Barrier": {
         "ObjectName": "Augment_Sound_Barrier",
-        "objectPath": "{2539aa8d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Sound_Barrier/Augment_Sound_Barrier",
         "mScriptName": "Augment_Sound_Barrier",
         "mSpell": {
             "DataValues": [
@@ -918258,7 +918258,7 @@
         },
         "__type": "SpellObject"
     },
-    "{80bc8d6d}": {
+    "Maps/ModeSpecificData/Augments/Sound_Barrier/Particles/Kiwi_Augment_Sound_Barrier_Trail": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -919569,10 +919569,10 @@
         "particleName": "Kiwi_Augment_Sound_Barrier_Trail",
         "particlePath": "Maps/ModeSpecificData/Augments/Sound_Barrier/Particles/Kiwi_Augment_Sound_Barrier_Trail",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_SoundBarrier_buffactivate",
-        "objectPath": "{80bc8d6d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Sound_Barrier/Particles/Kiwi_Augment_Sound_Barrier_Trail",
         "__type": "VfxSystemDefinitionData"
     },
-    "{ebd60e42}": {
+    "Maps/ModeSpecificData/Augments/Sound_Barrier/Particles/Kiwi_Augment_Sound_Barrier_BuffVFX": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -920198,7 +920198,7 @@
         ],
         "particleName": "Kiwi_Augment_Sound_Barrier_BuffVFX",
         "particlePath": "Maps/ModeSpecificData/Augments/Sound_Barrier/Particles/Kiwi_Augment_Sound_Barrier_BuffVFX",
-        "objectPath": "{ebd60e42}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Sound_Barrier/Particles/Kiwi_Augment_Sound_Barrier_BuffVFX",
         "__type": "VfxSystemDefinitionData"
     },
     "{ad446cc4}": {
@@ -920273,8 +920273,8 @@
     },
     "{cd3739df}": {
         "resourceMap": {
-            "{4555345d}": "{ebd60e42}",
-            "{7a331f2e}": "{80bc8d6d}"
+            "Kiwi_Augment_Sound_Barrier_BuffVFX": "Maps/ModeSpecificData/Augments/Sound_Barrier/Particles/Kiwi_Augment_Sound_Barrier_BuffVFX",
+            "Kiwi_Augment_Sound_Barrier_Trail": "Maps/ModeSpecificData/Augments/Sound_Barrier/Particles/Kiwi_Augment_Sound_Barrier_Trail"
         },
         "__type": "ResourceResolver"
     },
@@ -922975,12 +922975,12 @@
         },
         "__type": "ResourceResolver"
     },
-    "{4726b778}": {
+    "Maps/ModeSpecificData/Augments/BigShot": {
         "AugmentNameId": "BigShot",
         "NameTra": "Kiwi_Augment_BigShot_Name",
         "DescriptionTra": "Kiwi_Augment_BigShot_Description",
         "AugmentTooltipTra": "Kiwi_Augment_BigShot_Tooltip",
-        "RootSpell": "{7ac73ec9}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/BigShot/Augment_BigShot",
         "AugmentLargeIconPath": "{2771e88191a9d0ef}",
         "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/bigshot_small.tex",
         "AugmentDisplayTags": [
@@ -922991,7 +922991,7 @@
         "ResourceResolver": "{3b382f22}",
         "__type": "AugmentData"
     },
-    "{2630f619}": {
+    "Maps/ModeSpecificData/Augments/BigShot/Particles/BigShot_CritMis04": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -930410,10 +930410,10 @@
         "particleName": "BigShot_CritMis04",
         "particlePath": "Maps/ModeSpecificData/Augments/BigShot/Particles/BigShot_CritMis04",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_BigShot_missilelaunch_tier2",
-        "objectPath": "{2630f619}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BigShot/Particles/BigShot_CritMis04",
         "__type": "VfxSystemDefinitionData"
     },
-    "{289628c6}": {
+    "Maps/ModeSpecificData/Augments/BigShot/Particles/BigShot_CritTar01": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -931836,10 +931836,10 @@
         "particleName": "BigShot_CritTar01",
         "particlePath": "Maps/ModeSpecificData/Augments/BigShot/Particles/BigShot_CritTar01",
         "soundOnCreateDefault": "Play_sfx_Kiwi_Augment_BigShot_hit_tier1",
-        "objectPath": "{289628c6}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BigShot/Particles/BigShot_CritTar01",
         "__type": "VfxSystemDefinitionData"
     },
-    "{2930fad2}": {
+    "Maps/ModeSpecificData/Augments/BigShot/Particles/BigShot_CritMis01": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -933586,10 +933586,10 @@
         "particleName": "BigShot_CritMis01",
         "particlePath": "Maps/ModeSpecificData/Augments/BigShot/Particles/BigShot_CritMis01",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_BigShot_missilelaunch_tier1",
-        "objectPath": "{2930fad2}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BigShot/Particles/BigShot_CritMis01",
         "__type": "VfxSystemDefinitionData"
     },
-    "{2d9630a5}": {
+    "Maps/ModeSpecificData/Augments/BigShot/Particles/BigShot_CritTar04": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -938756,21 +938756,21 @@
         "particleName": "BigShot_CritTar04",
         "particlePath": "Maps/ModeSpecificData/Augments/BigShot/Particles/BigShot_CritTar04",
         "soundOnCreateDefault": "Play_sfx_Kiwi_Augment_BigShot_hit_tier2",
-        "objectPath": "{2d9630a5}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BigShot/Particles/BigShot_CritTar04",
         "__type": "VfxSystemDefinitionData"
     },
     "{3b382f22}": {
         "resourceMap": {
-            "{01fe82de}": "{2930fad2}",
-            "{06fe8abd}": "{2630f619}",
-            "{f06fffc9}": "{2d9630a5}",
-            "{f3700482}": "{289628c6}"
+            "BigShot_CritMis01": "Maps/ModeSpecificData/Augments/BigShot/Particles/BigShot_CritMis01",
+            "BigShot_CritMis04": "Maps/ModeSpecificData/Augments/BigShot/Particles/BigShot_CritMis04",
+            "BigShot_CritTar04": "Maps/ModeSpecificData/Augments/BigShot/Particles/BigShot_CritTar04",
+            "BigShot_CritTar01": "Maps/ModeSpecificData/Augments/BigShot/Particles/BigShot_CritTar01"
         },
         "__type": "ResourceResolver"
     },
-    "{7ac73ec9}": {
+    "Maps/ModeSpecificData/Augments/BigShot/Augment_BigShot": {
         "ObjectName": "Augment_BigShot",
-        "objectPath": "{7ac73ec9}",
+        "objectPath": "Maps/ModeSpecificData/Augments/BigShot/Augment_BigShot",
         "mScriptName": "Augment_BigShot",
         "mSpell": {
             "DataValues": [
@@ -938845,7 +938845,7 @@
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{18ca104b}",
+                            "mDataValue": "ConversionCritNum",
                             "__type": "NamedDataValueCalculationPart"
                         }
                     ],
@@ -1004257,12 +1004257,12 @@
         },
         "__type": "SpellObject"
     },
-    "{ec1af3af}": {
+    "Maps/ModeSpecificData/Augments/GroupHug": {
         "AugmentNameId": "GroupHug",
         "NameTra": "Kiwi_Augment_GroupHug_Name",
         "DescriptionTra": "Kiwi_Augment_GroupHug_Description",
         "AugmentTooltipTra": "Kiwi_Augment_GroupHug_Tooltip",
-        "RootSpell": "{2d5e24fd}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/GroupHug/Augment_GroupHug",
         "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/empyreampromise_large.tex",
         "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/empyreampromise_small.tex",
         "AugmentDisplayTags": [
@@ -1004273,9 +1004273,9 @@
         "IsAbilityAugment": true,
         "__type": "AugmentData"
     },
-    "{2d5e24fd}": {
+    "Maps/ModeSpecificData/Augments/GroupHug/Augment_GroupHug": {
         "ObjectName": "Augment_GroupHug",
-        "objectPath": "{2d5e24fd}",
+        "objectPath": "Maps/ModeSpecificData/Augments/GroupHug/Augment_GroupHug",
         "mScriptName": "Augment_GroupHug",
         "mSpell": {
             "DataValues": [
@@ -1004346,12 +1004346,12 @@
         "AugmentPlatformId": 1404,
         "__type": "AugmentData"
     },
-    "{990f5430}": {
+    "Maps/ModeSpecificData/Augments/ThirdTimesTheHarm": {
         "AugmentNameId": "ThirdTimesTheHarm",
         "NameTra": "Kiwi_Augment_ThirdTimesTheHarm_Name",
         "DescriptionTra": "Kiwi_Augment_ThirdTimesTheHarm_Description",
         "AugmentTooltipTra": "Kiwi_Augment_ThirdTimesTheHarm_Tooltip",
-        "RootSpell": "{d2fe059d}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/ThirdTimesTheHarm/Augment_ThirdTimesTheHarm",
         "AdditionalSpells": [
             "{c0cc5cb9}",
             "{70f8b757}"
@@ -1004368,14 +1004368,14 @@
     },
     "{2d7e771a}": {
         "resourceMap": {
-            "{b5c6eb6f}": "{e30bbb23}",
-            "{b6c6ed02}": "{e40bbcb6}",
-            "{988391bd}": "{3c16e809}",
-            "{2f2db831}": "{a9be5c35}"
+            "ThirdTimesTheHarm_Ring1": "Maps/ModeSpecificData/Augments/ThirdTimesTheHarm/Particles/ThirdTimesTheHarm_Ring1",
+            "ThirdTimesTheHarm_Ring2": "Maps/ModeSpecificData/Augments/ThirdTimesTheHarm/Particles/ThirdTimesTheHarm_Ring2",
+            "ThirdTimesTheHarm_Tar": "Maps/ModeSpecificData/Augments/ThirdTimesTheHarm/Particles/ThirdTimesTheHarm_Tar",
+            "ThirdTimesTheHarm_TriggerMis": "Maps/ModeSpecificData/Augments/ThirdTimesTheHarm/Particles/ThirdTimesTheHarm_TriggerMis"
         },
         "__type": "ResourceResolver"
     },
-    "{3c16e809}": {
+    "Maps/ModeSpecificData/Augments/ThirdTimesTheHarm/Particles/ThirdTimesTheHarm_Tar": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1005505,10 +1005505,10 @@
         "particlePath": "Maps/ModeSpecificData/Augments/ThirdTimesTheHarm/Particles/ThirdTimesTheHarm_Tar",
         "soundOnCreateDefault": "Play_sfx_Kiwi_Augment_ThirdTimesTheHarm_hit_third",
         "flags": 198,
-        "objectPath": "{3c16e809}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ThirdTimesTheHarm/Particles/ThirdTimesTheHarm_Tar",
         "__type": "VfxSystemDefinitionData"
     },
-    "{a9be5c35}": {
+    "Maps/ModeSpecificData/Augments/ThirdTimesTheHarm/Particles/ThirdTimesTheHarm_TriggerMis": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1006509,10 +1006509,10 @@
                 1.0
             ]
         ],
-        "objectPath": "{a9be5c35}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ThirdTimesTheHarm/Particles/ThirdTimesTheHarm_TriggerMis",
         "__type": "VfxSystemDefinitionData"
     },
-    "{e30bbb23}": {
+    "Maps/ModeSpecificData/Augments/ThirdTimesTheHarm/Particles/ThirdTimesTheHarm_Ring1": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1007833,10 +1007833,10 @@
         "particlePath": "Maps/ModeSpecificData/Augments/ThirdTimesTheHarm/Particles/ThirdTimesTheHarm_Ring1",
         "overrideScaleCap": 375.0,
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_ThirdTimesTheHarm_hit_first",
-        "objectPath": "{e30bbb23}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ThirdTimesTheHarm/Particles/ThirdTimesTheHarm_Ring1",
         "__type": "VfxSystemDefinitionData"
     },
-    "{e40bbcb6}": {
+    "Maps/ModeSpecificData/Augments/ThirdTimesTheHarm/Particles/ThirdTimesTheHarm_Ring2": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1009244,7 +1009244,7 @@
         "particlePath": "Maps/ModeSpecificData/Augments/ThirdTimesTheHarm/Particles/ThirdTimesTheHarm_Ring2",
         "overrideScaleCap": 375.0,
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_ThirdTimesTheHarm_hit_second",
-        "objectPath": "{e40bbcb6}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ThirdTimesTheHarm/Particles/ThirdTimesTheHarm_Ring2",
         "__type": "VfxSystemDefinitionData"
     },
     "{70f8b757}": {
@@ -1009350,7 +1009350,7 @@
             "mCastType": 1,
             "castFrame": 9.5,
             "missileSpeed": 4000.0,
-            "mMissileEffectKey": "{2f2db831}",
+            "mMissileEffectKey": "ThirdTimesTheHarm_TriggerMis",
             "mHitEffectOrientType": 2,
             "selectionPriority": 1,
             "mTargetingTypeData": {
@@ -1009369,9 +1009369,9 @@
         },
         "__type": "SpellObject"
     },
-    "{d2fe059d}": {
+    "Maps/ModeSpecificData/Augments/ThirdTimesTheHarm/Augment_ThirdTimesTheHarm": {
         "ObjectName": "Augment_ThirdTimesTheHarm",
-        "objectPath": "{d2fe059d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ThirdTimesTheHarm/Augment_ThirdTimesTheHarm",
         "mScriptName": "Augment_ThirdTimesTheHarm",
         "mSpell": {
             "DataValues": [
@@ -1009427,12 +1009427,12 @@
         },
         "__type": "SpellObject"
     },
-    "{c4a713ba}": {
+    "Maps/ModeSpecificData/Augments/Upgrade_Stormsurge": {
         "AugmentNameId": "Upgrade_Stormsurge",
         "NameTra": "Kiwi_Augment_Upgrade_Stormsurge_Name",
         "DescriptionTra": "Kiwi_Augment_Upgrade_Stormsurge_Description",
         "AugmentTooltipTra": "Kiwi_Augment_Upgrade_Stormsurge_Tooltip",
-        "RootSpell": "{911b5937}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/Upgrade_Stormsurge/Augment_Upgrade_Stormsurge",
         "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/upgradehubris_large.tex",
         "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/upgradehubris_small.tex",
         "AugmentDisplayTags": [
@@ -1009445,14 +1009445,14 @@
     },
     "{2f1a62a8}": {
         "resourceMap": {
-            "{35a48594}": "{8df8560f}",
-            "{2af11640}": "{fbb172d3}",
-            "{a22ecbda}": "{5ef0ee9f}",
-            "{097df921}": "{e57a947d}"
+            "{35a48594}": "Maps/ModeSpecificData/Augments/Upgrade_Stormsurge/Particles/KiwiS3_Upgrade_Stormsurge_TimerAoE",
+            "{2af11640}": "Maps/ModeSpecificData/Augments/Upgrade_Stormsurge/Particles/KiwiS3_Upgrade_Stormsurge_AoE_Blast",
+            "{a22ecbda}": "Maps/ModeSpecificData/Augments/Upgrade_Stormsurge/Particles/KiwiS3_Upgrade_Stormsurge__tar",
+            "{097df921}": "Maps/ModeSpecificData/Augments/Upgrade_Stormsurge/Particles/Upgrade_Stormsurge_TimerAoE_Child"
         },
         "__type": "ResourceResolver"
     },
-    "{5ef0ee9f}": {
+    "Maps/ModeSpecificData/Augments/Upgrade_Stormsurge/Particles/KiwiS3_Upgrade_Stormsurge__tar": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1011750,10 +1011750,10 @@
         ],
         "particleName": "KiwiS3_Upgrade_Stormsurge__tar",
         "particlePath": "Maps/ModeSpecificData/Augments/Upgrade_Stormsurge/Particles/KiwiS3_Upgrade_Stormsurge__tar",
-        "objectPath": "{5ef0ee9f}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Upgrade_Stormsurge/Particles/KiwiS3_Upgrade_Stormsurge__tar",
         "__type": "VfxSystemDefinitionData"
     },
-    "{8df8560f}": {
+    "Maps/ModeSpecificData/Augments/Upgrade_Stormsurge/Particles/KiwiS3_Upgrade_Stormsurge_TimerAoE": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1012800,10 +1012800,10 @@
         ],
         "particleName": "KiwiS3_Upgrade_Stormsurge_TimerAoE",
         "particlePath": "Maps/ModeSpecificData/Augments/Upgrade_Stormsurge/Particles/KiwiS3_Upgrade_Stormsurge_TimerAoE",
-        "objectPath": "{8df8560f}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Upgrade_Stormsurge/Particles/KiwiS3_Upgrade_Stormsurge_TimerAoE",
         "__type": "VfxSystemDefinitionData"
     },
-    "{e57a947d}": {
+    "Maps/ModeSpecificData/Augments/Upgrade_Stormsurge/Particles/Upgrade_Stormsurge_TimerAoE_Child": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1013856,10 +1013856,10 @@
         ],
         "particleName": "Upgrade_Stormsurge_TimerAoE_Child",
         "particlePath": "Maps/ModeSpecificData/Augments/Upgrade_Stormsurge/Particles/Upgrade_Stormsurge_TimerAoE_Child",
-        "objectPath": "{e57a947d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Upgrade_Stormsurge/Particles/Upgrade_Stormsurge_TimerAoE_Child",
         "__type": "VfxSystemDefinitionData"
     },
-    "{fbb172d3}": {
+    "Maps/ModeSpecificData/Augments/Upgrade_Stormsurge/Particles/KiwiS3_Upgrade_Stormsurge_AoE_Blast": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1018991,12 +1018991,12 @@
         ],
         "particleName": "KiwiS3_Upgrade_Stormsurge_AoE_Blast",
         "particlePath": "Maps/ModeSpecificData/Augments/Upgrade_Stormsurge/Particles/KiwiS3_Upgrade_Stormsurge_AoE_Blast",
-        "objectPath": "{fbb172d3}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Upgrade_Stormsurge/Particles/KiwiS3_Upgrade_Stormsurge_AoE_Blast",
         "__type": "VfxSystemDefinitionData"
     },
-    "{911b5937}": {
+    "Maps/ModeSpecificData/Augments/Upgrade_Stormsurge/Augment_Upgrade_Stormsurge": {
         "ObjectName": "Augment_Upgrade_Stormsurge",
-        "objectPath": "{911b5937}",
+        "objectPath": "Maps/ModeSpecificData/Augments/Upgrade_Stormsurge/Augment_Upgrade_Stormsurge",
         "mScriptName": "Augment_Upgrade_Stormsurge",
         "mSpell": {
             "DataValues": [
@@ -1019058,11 +1019058,11 @@
                     "DamageType": 1,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{f3477415}",
+                            "mDataValue": "PercentHealthBase",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mDataValue": "{8ad21bd6}",
+                            "mDataValue": "PercentHealthPerAP",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -1023791,12 +1023791,12 @@
         },
         "__type": "SpellObject"
     },
-    "{31a9b8be}": {
+    "Maps/ModeSpecificData/Augments/TickleMonster": {
         "AugmentNameId": "TickleMonster",
         "NameTra": "Kiwi_Augment_TickleMonster_Name",
         "DescriptionTra": "Kiwi_Augment_TickleMonster_Description",
         "AugmentTooltipTra": "Kiwi_Augment_TickleMonster_Tooltip",
-        "RootSpell": "{e53b51f5}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/TickleMonster/Augment_TickleMonster",
         "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/ticklemonster_large.tex",
         "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/ticklemonster_small.tex",
         "AugmentDisplayTags": [
@@ -1028715,12 +1028715,12 @@
         "ResourceResolver": "Maps/ModeSpecificData/Augments/ARAM_BigBrain/Resources",
         "__type": "AugmentData"
     },
-    "{df038206}": {
+    "Maps/ModeSpecificData/Augments/FlowOfSpirit": {
         "AugmentNameId": "FlowOfSpirit",
         "NameTra": "Kiwi_Augment_FlowOfSpirit_Name",
         "DescriptionTra": "Kiwi_Augment_FlowOfSpirit_Description",
         "AugmentTooltipTra": "Kiwi_Augment_FlowOfSpirit_Tooltip",
-        "RootSpell": "{c0e3b9b7}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/FlowOfSpirit/Augment_FlowOfSpirit",
         "AdditionalSpells": [
             "{332b53ba}"
         ],
@@ -1028752,11 +1028752,11 @@
     },
     "{572b13dc}": {
         "resourceMap": {
-            "{adfde3da}": "{bd9a4318}"
+            "Kiwi_Augment_FlowOfSpirit_Buff": "Maps/ModeSpecificData/Augments/FlowOfSpirit/Particles/Kiwi_Augment_FlowOfSpirit_Buff"
         },
         "__type": "ResourceResolver"
     },
-    "{bd9a4318}": {
+    "Maps/ModeSpecificData/Augments/FlowOfSpirit/Particles/Kiwi_Augment_FlowOfSpirit_Buff": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1029883,12 +1029883,12 @@
         ],
         "particleName": "Kiwi_Augment_FlowOfSpirit_Buff",
         "particlePath": "Maps/ModeSpecificData/Augments/FlowOfSpirit/Particles/Kiwi_Augment_FlowOfSpirit_Buff",
-        "objectPath": "{bd9a4318}",
+        "objectPath": "Maps/ModeSpecificData/Augments/FlowOfSpirit/Particles/Kiwi_Augment_FlowOfSpirit_Buff",
         "__type": "VfxSystemDefinitionData"
     },
-    "{c0e3b9b7}": {
+    "Maps/ModeSpecificData/Augments/FlowOfSpirit/Augment_FlowOfSpirit": {
         "ObjectName": "Augment_FlowOfSpirit",
-        "objectPath": "{c0e3b9b7}",
+        "objectPath": "Maps/ModeSpecificData/Augments/FlowOfSpirit/Augment_FlowOfSpirit",
         "mScriptName": "Augment_FlowOfSpirit",
         "mSpell": {
             "DataValues": [
@@ -1047002,7 +1047002,7 @@
         },
         "__type": "SpellObject"
     },
-    "{62ecbf17}": {
+    "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v1": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1047017,7 +1047017,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effect": "{916a002e}",
+                            "effect": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v1_Child",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -1047147,10 +1047147,10 @@
         "particlePath": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v1",
         "soundPersistentDefault": "Play_sfx_Augment_PhenomenalEvil_Proc",
         "flags": 1220,
-        "objectPath": "{62ecbf17}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v1",
         "__type": "VfxSystemDefinitionData"
     },
-    "{63ecc0aa}": {
+    "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v2": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1047165,7 +1047165,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effect": "{b3f5cebf}",
+                            "effect": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v2_Child",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -1047295,10 +1047295,10 @@
         "particlePath": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v2",
         "soundPersistentDefault": "Play_sfx_Augment_PhenomenalEvil_Proc",
         "flags": 1220,
-        "objectPath": "{63ecc0aa}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v2",
         "__type": "VfxSystemDefinitionData"
     },
-    "{64ecc23d}": {
+    "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v3": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1047313,7 +1047313,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effect": "{a3b833e4}",
+                            "effect": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v3_Child",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -1047443,7 +1047443,7 @@
         "particlePath": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v3",
         "soundPersistentDefault": "Play_sfx_Augment_PhenomenalEvil_Proc",
         "flags": 1220,
-        "objectPath": "{64ecc23d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v3",
         "__type": "VfxSystemDefinitionData"
     },
     "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Proc": {
@@ -1048838,7 +1048838,7 @@
         "objectPath": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Proc",
         "__type": "VfxSystemDefinitionData"
     },
-    "{916a002e}": {
+    "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v1_Child": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1050748,10 +1050748,10 @@
         "particlePath": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v1_Child",
         "soundPersistentDefault": "Play_sfx_Augment_PhenomenalEvil_Proc",
         "flags": 1220,
-        "objectPath": "{916a002e}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v1_Child",
         "__type": "VfxSystemDefinitionData"
     },
-    "{a3b833e4}": {
+    "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v3_Child": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1053357,34 +1053357,34 @@
         "particlePath": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v3_Child",
         "soundPersistentDefault": "Play_sfx_Augment_PhenomenalEvil_Proc",
         "flags": 1220,
-        "objectPath": "{a3b833e4}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v3_Child",
         "__type": "VfxSystemDefinitionData"
     },
-    "{ace61998}": {
+    "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Chest_v1": {
         "particleName": "Kiwi_PhenomenalEvil_Chest_v1",
         "particlePath": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Chest_v1",
         "soundPersistentDefault": "Play_sfx_Augment_PhenomenalEvil_Proc",
         "flags": 1220,
-        "objectPath": "{ace61998}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Chest_v1",
         "__type": "VfxSystemDefinitionData"
     },
-    "{aee61cbe}": {
+    "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Chest_v3": {
         "particleName": "Kiwi_PhenomenalEvil_Chest_v3",
         "particlePath": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Chest_v3",
         "soundPersistentDefault": "Play_sfx_Augment_PhenomenalEvil_Proc",
         "flags": 1220,
-        "objectPath": "{aee61cbe}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Chest_v3",
         "__type": "VfxSystemDefinitionData"
     },
-    "{afe61e51}": {
+    "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Chest_v2": {
         "particleName": "Kiwi_PhenomenalEvil_Chest_v2",
         "particlePath": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Chest_v2",
         "soundPersistentDefault": "Play_sfx_Augment_PhenomenalEvil_Proc",
         "flags": 1220,
-        "objectPath": "{afe61e51}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Chest_v2",
         "__type": "VfxSystemDefinitionData"
     },
-    "{b3f5cebf}": {
+    "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v2_Child": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1055507,18 +1055507,18 @@
         "particlePath": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v2_Child",
         "soundPersistentDefault": "Play_sfx_Augment_PhenomenalEvil_Proc",
         "flags": 1220,
-        "objectPath": "{b3f5cebf}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v2_Child",
         "__type": "VfxSystemDefinitionData"
     },
     "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Resources": {
         "resourceMap": {
             "Kiwi_PhenomenalEvil_Proc": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Proc",
-            "{19e89b61}": "{ace61998}",
-            "{16e896a8}": "{afe61e51}",
-            "{17e8983b}": "{aee61cbe}",
-            "{7aa50020}": "{62ecbf17}",
-            "{7da504d9}": "{63ecc0aa}",
-            "{7ca50346}": "{64ecc23d}"
+            "Kiwi_PhenomenalEvil_Chest_v1": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Chest_v1",
+            "Kiwi_PhenomenalEvil_Chest_v2": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Chest_v2",
+            "Kiwi_PhenomenalEvil_Chest_v3": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Chest_v3",
+            "Kiwi_PhenomenalEvil_Head_v1": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v1",
+            "Kiwi_PhenomenalEvil_Head_v2": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v2",
+            "Kiwi_PhenomenalEvil_Head_v3": "Maps/ModeSpecificData/Augments/ARAM_PhenomenalEvil/Particles/Kiwi_PhenomenalEvil_Head_v3"
         },
         "__type": "ResourceResolver"
     },
@@ -1057105,12 +1057105,12 @@
         "ResourceResolver": "Maps/ModeSpecificData/Augments/ARAM_SonicBoom/Resources",
         "__type": "AugmentData"
     },
-    "{8ff62a3d}": {
+    "Maps/ModeSpecificData/Augments/SapMagic": {
         "AugmentNameId": "SapMagic",
         "NameTra": "Kiwi_Augment_SapMagic_Name",
         "DescriptionTra": "Kiwi_Augment_SapMagic_Description",
         "AugmentTooltipTra": "Kiwi_Augment_SapMagic_Tooltip",
-        "RootSpell": "{aa56623d}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/SapMagic/Augment_SapMagic",
         "AdditionalSpells": [
             "{3f5f5e2f}",
             "{8ae0f285}"
@@ -1057126,7 +1057126,7 @@
         "ResourceResolver": "{7b4fba87}",
         "__type": "AugmentData"
     },
-    "{3ae0cfd7}": {
+    "Maps/ModeSpecificData/Augments/SapMagic/Particles/SapMagic_Damage_Tar": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1060532,10 +1060532,10 @@
         "particlePath": "Maps/ModeSpecificData/Augments/SapMagic/Particles/SapMagic_Damage_Tar",
         "overrideScaleCap": 375.0,
         "soundOnCreateDefault": "Play_sfx_Kiwi_Augment_SapMagic_hit",
-        "objectPath": "{3ae0cfd7}",
+        "objectPath": "Maps/ModeSpecificData/Augments/SapMagic/Particles/SapMagic_Damage_Tar",
         "__type": "VfxSystemDefinitionData"
     },
-    "{b46144dc}": {
+    "Maps/ModeSpecificData/Augments/SapMagic/Particles/SapMagic_Heal": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1063281,10 +1063281,10 @@
         "overrideScaleCap": 375.0,
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_SapMagic_heal_buffactivate",
         "flags": 214,
-        "objectPath": "{b46144dc}",
+        "objectPath": "Maps/ModeSpecificData/Augments/SapMagic/Particles/SapMagic_Heal",
         "__type": "VfxSystemDefinitionData"
     },
-    "{cc0fba6a}": {
+    "Maps/ModeSpecificData/Augments/SapMagic/Particles/SapMagic_BuffOn": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1065770,7 +1065770,7 @@
         "particleName": "SapMagic_BuffOn",
         "particlePath": "Maps/ModeSpecificData/Augments/SapMagic/Particles/SapMagic_BuffOn",
         "overrideScaleCap": -1.0,
-        "objectPath": "{cc0fba6a}",
+        "objectPath": "Maps/ModeSpecificData/Augments/SapMagic/Particles/SapMagic_BuffOn",
         "__type": "VfxSystemDefinitionData"
     },
     "{3f5f5e2f}": {
@@ -1065799,9 +1065799,9 @@
     },
     "{7b4fba87}": {
         "resourceMap": {
-            "{2e86eaa7}": "{cc0fba6a}",
-            "{3ac41b31}": "{b46144dc}",
-            "{3fde93ce}": "{3ae0cfd7}"
+            "SapMagic_BuffOn": "Maps/ModeSpecificData/Augments/SapMagic/Particles/SapMagic_BuffOn",
+            "SapMagic_Heal": "Maps/ModeSpecificData/Augments/SapMagic/Particles/SapMagic_Heal",
+            "SapMagic_Damage_Tar": "Maps/ModeSpecificData/Augments/SapMagic/Particles/SapMagic_Damage_Tar"
         },
         "__type": "ResourceResolver"
     },
@@ -1065830,9 +1065830,9 @@
         },
         "__type": "SpellObject"
     },
-    "{aa56623d}": {
+    "Maps/ModeSpecificData/Augments/SapMagic/Augment_SapMagic": {
         "ObjectName": "Augment_SapMagic",
-        "objectPath": "{aa56623d}",
+        "objectPath": "Maps/ModeSpecificData/Augments/SapMagic/Augment_SapMagic",
         "mScriptName": "Augment_SapMagic",
         "mSpell": {
             "mSpellCalculations": {
@@ -1077566,12 +1077566,12 @@
         },
         "__type": "SpellObject"
     },
-    "{3e826c7a}": {
+    "Maps/ModeSpecificData/Augments/LichBrain": {
         "AugmentNameId": "LichBrain",
         "NameTra": "Kiwi_Augment_LichBrain_Name",
         "DescriptionTra": "Kiwi_Augment_LichBrain_Description",
         "AugmentTooltipTra": "Kiwi_Augment_LichBrain_Tooltip",
-        "RootSpell": "{8cda6f05}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/LichBrain/Augment_LichBrain",
         "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/lichbrain_large.tex",
         "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/lichbrain_small.tex",
         "AugmentDisplayTags": [
@@ -1077580,12 +1077580,12 @@
         "AugmentPlatformId": 3094,
         "__type": "AugmentData"
     },
-    "{aa10921c}": {
+    "Maps/ModeSpecificData/Augments/EnchantingButterflies": {
         "AugmentNameId": "EnchantingButterflies",
         "NameTra": "Kiwi_Augment_EnchantingButterflies_Name",
         "DescriptionTra": "Kiwi_Augment_EnchantingButterflies_Description",
         "AugmentTooltipTra": "Kiwi_Augment_EnchantingButterflies_Tooltip",
-        "RootSpell": "{4261cfd1}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/EnchantingButterflies/Augment_EnchantingButterflies",
         "AdditionalSpells": [
             "{5e59387a}",
             "{824c0a59}",
@@ -1077601,7 +1077601,7 @@
         "ResourceResolver": "{dafed0de}",
         "__type": "AugmentData"
     },
-    "{3e957cb8}": {
+    "Maps/ModeSpecificData/Augments/EnchantingButterflies/Particles/EnchantingButterflies_Butterfly_Child": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1079169,10 +1079169,10 @@
         ],
         "particleName": "EnchantingButterflies_Butterfly_Child",
         "particlePath": "Maps/ModeSpecificData/Augments/EnchantingButterflies/Particles/EnchantingButterflies_Butterfly_Child",
-        "objectPath": "{3e957cb8}",
+        "objectPath": "Maps/ModeSpecificData/Augments/EnchantingButterflies/Particles/EnchantingButterflies_Butterfly_Child",
         "__type": "VfxSystemDefinitionData"
     },
-    "{81111a39}": {
+    "Maps/ModeSpecificData/Augments/EnchantingButterflies/Particles/EnchantingButterflies_Butterfly": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1079190,7 +1079190,7 @@
                 "childParticleSetDefinition": {
                     "childrenIdentifiers": [
                         {
-                            "effectKey": "{a57a65a8}",
+                            "effectKey": "EnchantingButterflies_Butterfly_Child",
                             "__type": "VfxChildIdentifier"
                         }
                     ],
@@ -1079411,10 +1079411,10 @@
         "particleName": "EnchantingButterflies_Butterfly",
         "particlePath": "Maps/ModeSpecificData/Augments/EnchantingButterflies/Particles/EnchantingButterflies_Butterfly",
         "flags": 2260,
-        "objectPath": "{81111a39}",
+        "objectPath": "Maps/ModeSpecificData/Augments/EnchantingButterflies/Particles/EnchantingButterflies_Butterfly",
         "__type": "VfxSystemDefinitionData"
     },
-    "{9e212069}": {
+    "Maps/ModeSpecificData/Augments/EnchantingButterflies/Particles/EnchantingButterflies_Mis": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.05000000074505806,
@@ -1081576,10 +1081576,10 @@
         "particlePath": "Maps/ModeSpecificData/Augments/EnchantingButterflies/Particles/EnchantingButterflies_Mis",
         "soundPersistentDefault": "Play_sfx_Kiwi_Augment_EnchantingButterflies_missilelaunch",
         "flags": 2260,
-        "objectPath": "{9e212069}",
+        "objectPath": "Maps/ModeSpecificData/Augments/EnchantingButterflies/Particles/EnchantingButterflies_Mis",
         "__type": "VfxSystemDefinitionData"
     },
-    "{e45acdcd}": {
+    "Maps/ModeSpecificData/Augments/EnchantingButterflies/Particles/EnchantingButterflies_Tar": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1083858,12 +1083858,12 @@
         "particleName": "EnchantingButterflies_Tar",
         "particlePath": "Maps/ModeSpecificData/Augments/EnchantingButterflies/Particles/EnchantingButterflies_Tar",
         "flags": 2260,
-        "objectPath": "{e45acdcd}",
+        "objectPath": "Maps/ModeSpecificData/Augments/EnchantingButterflies/Particles/EnchantingButterflies_Tar",
         "__type": "VfxSystemDefinitionData"
     },
-    "{4261cfd1}": {
+    "Maps/ModeSpecificData/Augments/EnchantingButterflies/Augment_EnchantingButterflies": {
         "ObjectName": "Augment_EnchantingButterflies",
-        "objectPath": "{4261cfd1}",
+        "objectPath": "Maps/ModeSpecificData/Augments/EnchantingButterflies/Augment_EnchantingButterflies",
         "mScriptName": "Augment_EnchantingButterflies",
         "mSpell": {
             "DataValues": [
@@ -1084191,11 +1084191,11 @@
             "mCastType": 1,
             "castFrame": 7.5,
             "missileSpeed": 1400.0,
-            "mMissileEffectKey": "{7dbf8cb9}",
+            "mMissileEffectKey": "EnchantingButterflies_Mis",
             "mResourceResolvers": [
                 "Maps/ModeSpecificData/Augments/ARAM_Firefox/Resources"
             ],
-            "mHitEffectKey": "{5e5668bd}",
+            "mHitEffectKey": "EnchantingButterflies_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "selectionPriority": 1,
@@ -1084214,10 +1084214,10 @@
     },
     "{dafed0de}": {
         "resourceMap": {
-            "{75c05109}": "{81111a39}",
-            "{7dbf8cb9}": "{9e212069}",
-            "{5e5668bd}": "{e45acdcd}",
-            "{a57a65a8}": "{3e957cb8}"
+            "EnchantingButterflies_Butterfly": "Maps/ModeSpecificData/Augments/EnchantingButterflies/Particles/EnchantingButterflies_Butterfly",
+            "EnchantingButterflies_Mis": "Maps/ModeSpecificData/Augments/EnchantingButterflies/Particles/EnchantingButterflies_Mis",
+            "EnchantingButterflies_Tar": "Maps/ModeSpecificData/Augments/EnchantingButterflies/Particles/EnchantingButterflies_Tar",
+            "EnchantingButterflies_Butterfly_Child": "Maps/ModeSpecificData/Augments/EnchantingButterflies/Particles/EnchantingButterflies_Butterfly_Child"
         },
         "__type": "ResourceResolver"
     },
@@ -1084361,7 +1084361,7 @@
             "mCastType": 4,
             "castFrame": 7.5,
             "missileSpeed": 900.0,
-            "mMissileEffectKey": "{75c05109}",
+            "mMissileEffectKey": "EnchantingButterflies_Butterfly",
             "mResourceResolvers": [
                 "Maps/ModeSpecificData/Augments/ARAM_Firefox/Resources"
             ],
@@ -1084381,12 +1084381,12 @@
         },
         "__type": "SpellObject"
     },
-    "{400a964f}": {
+    "Maps/ModeSpecificData/Augments/UltimateRecursion": {
         "AugmentNameId": "UltimateRecursion",
         "NameTra": "Kiwi_Augment_UltimateRecursion_Name",
         "DescriptionTra": "Kiwi_Augment_UltimateRecursion_Description",
         "AugmentTooltipTra": "Kiwi_Augment_UltimateRecursion_Tooltip",
-        "RootSpell": "{525d19c1}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/UltimateRecursion/Augment_UltimateRecursion",
         "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/zealot_large.tex",
         "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/zealot_large.tex",
         "AugmentDisplayTags": [
@@ -1087319,12 +1087319,12 @@
         "AugmentPlatformId": 1041,
         "__type": "AugmentData"
     },
-    "{eed14418}": {
+    "Maps/ModeSpecificData/Augments/ArcaneAxiom": {
         "AugmentNameId": "ArcaneAxiom",
         "NameTra": "Kiwi_Augment_ArcaneAxiom_Name",
         "DescriptionTra": "Kiwi_Augment_ArcaneAxiom_Description",
         "AugmentTooltipTra": "Kiwi_Augment_ArcaneAxiom_Tooltip",
-        "RootSpell": "{45895f11}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/ArcaneAxiom/Augment_ArcaneAxiom",
         "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/arcaneaxiom_large.tex",
         "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/arcaneaxiom_small.tex",
         "AugmentDisplayTags": [
@@ -1087334,9 +1087334,9 @@
         "AugmentPlatformId": 3118,
         "__type": "AugmentData"
     },
-    "{45895f11}": {
+    "Maps/ModeSpecificData/Augments/ArcaneAxiom/Augment_ArcaneAxiom": {
         "ObjectName": "Augment_ArcaneAxiom",
-        "objectPath": "{45895f11}",
+        "objectPath": "Maps/ModeSpecificData/Augments/ArcaneAxiom/Augment_ArcaneAxiom",
         "mScriptName": "Augment_ArcaneAxiom",
         "mSpell": {
             "DataValues": [
@@ -1099138,13 +1099138,13 @@
         },
         "__type": "SpellObject"
     },
-    "{525d19c1}": {
+    "Maps/ModeSpecificData/Augments/UltimateRecursion/Augment_UltimateRecursion": {
         "ObjectName": "Augment_UltimateRecursion",
-        "objectPath": "{525d19c1}",
+        "objectPath": "Maps/ModeSpecificData/Augments/UltimateRecursion/Augment_UltimateRecursion",
         "mScriptName": "Augment_UltimateRecursion",
         "mSpell": {
             "mSpellCalculations": {
-                "{fb3096a9}": {
+                "UltimateHaste": {
                     "mFormulaParts": [
                         {
                             "mNumber": 50.0,
@@ -1119462,12 +1119462,12 @@
         "ResourceResolver": "Maps/ModeSpecificData/Augments/Twinfire/Resources",
         "__type": "AugmentData"
     },
-    "{6f1fd202}": {
+    "Maps/ModeSpecificData/Augments/HandsOffTheTalent": {
         "AugmentNameId": "HandsOffTheTalent",
         "NameTra": "Kiwi_Augment_HandsOffTheTalent_Name",
         "DescriptionTra": "Kiwi_Augment_HandsOffTheTalent_Description",
         "AugmentTooltipTra": "Kiwi_Augment_HandsOffTheTalent_Tooltip",
-        "RootSpell": "{8f5caedd}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/HandsOffTheTalent/Augment_HandsOffTheTalent",
         "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/bonk_large.tex",
         "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/bonk_large.tex",
         "AugmentDisplayTags": [
@@ -1142889,9 +1142889,9 @@
         "AugmentPlatformId": 1379,
         "__type": "AugmentData"
     },
-    "{8cda6f05}": {
+    "Maps/ModeSpecificData/Augments/LichBrain/Augment_LichBrain": {
         "ObjectName": "Augment_LichBrain",
-        "objectPath": "{8cda6f05}",
+        "objectPath": "Maps/ModeSpecificData/Augments/LichBrain/Augment_LichBrain",
         "mScriptName": "Augment_LichBrain",
         "mSpell": {
             "mSpellCalculations": {
@@ -1147506,12 +1147506,12 @@
         },
         "__type": "ResourceResolver"
     },
-    "{bf14bda8}": {
+    "Maps/ModeSpecificData/Augments/JeweledBracelet": {
         "AugmentNameId": "JeweledBracelet",
         "NameTra": "Kiwi_Augment_JeweledBracelet_Name",
         "DescriptionTra": "Kiwi_Augment_JeweledBracelet_Description",
         "AugmentTooltipTra": "Kiwi_Augment_JeweledBracelet_Tooltip",
-        "RootSpell": "{8e4dc695}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/JeweledBracelet/Augment_JeweledBracelet",
         "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.tex",
         "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/genericabilityaugmenticon_gold.tex",
         "AugmentDisplayTags": [
@@ -1147522,9 +1147522,9 @@
         "IsAbilityAugment": true,
         "__type": "AugmentData"
     },
-    "{8e4dc695}": {
+    "Maps/ModeSpecificData/Augments/JeweledBracelet/Augment_JeweledBracelet": {
         "ObjectName": "Augment_JeweledBracelet",
-        "objectPath": "{8e4dc695}",
+        "objectPath": "Maps/ModeSpecificData/Augments/JeweledBracelet/Augment_JeweledBracelet",
         "mScriptName": "Augment_JeweledBracelet",
         "mSpell": {
             "mSpellCalculations": {
@@ -1147558,7 +1147558,7 @@
                     "mDisplayAsPercent": true,
                     "__type": "GameCalculation"
                 },
-                "{891d77d3}": {
+                "CritDamageTooltip": {
                     "mFormulaParts": [
                         {
                             "mNumber": 45.0,
@@ -1147572,9 +1147572,9 @@
         },
         "__type": "SpellObject"
     },
-    "{8f5caedd}": {
+    "Maps/ModeSpecificData/Augments/HandsOffTheTalent/Augment_HandsOffTheTalent": {
         "ObjectName": "Augment_HandsOffTheTalent",
-        "objectPath": "{8f5caedd}",
+        "objectPath": "Maps/ModeSpecificData/Augments/HandsOffTheTalent/Augment_HandsOffTheTalent",
         "mScriptName": "Augment_HandsOffTheTalent",
         "mSpell": {
             "DataValues": [
@@ -1147610,7 +1147610,7 @@
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{7e382db3}",
+                            "mDataValue": "MaxDistanceProximity",
                             "__type": "NamedDataValueCalculationPart"
                         }
                     ],
@@ -1148505,12 +1148505,12 @@
         },
         "__type": "SpellObject"
     },
-    "{b2d9e618}": {
+    "Maps/ModeSpecificData/Augments/NoManaNoProblem": {
         "AugmentNameId": "NoManaNoProblem",
         "NameTra": "Kiwi_Augment_NoManaNoProblem_Name",
         "DescriptionTra": "Kiwi_Augment_NoManaNoProblem_Description",
         "AugmentTooltipTra": "Kiwi_Augment_NoManaNoProblem_Tooltip",
-        "RootSpell": "{af3c9f19}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/NoManaNoProblem/Augment_NoManaNoProblem",
         "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/nomananoproblem_large.tex",
         "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/nomananoproblem_small.tex",
         "AugmentDisplayTags": [
@@ -1148519,9 +1148519,9 @@
         "AugmentPlatformId": 3059,
         "__type": "AugmentData"
     },
-    "{af3c9f19}": {
+    "Maps/ModeSpecificData/Augments/NoManaNoProblem/Augment_NoManaNoProblem": {
         "ObjectName": "Augment_NoManaNoProblem",
-        "objectPath": "{af3c9f19}",
+        "objectPath": "Maps/ModeSpecificData/Augments/NoManaNoProblem/Augment_NoManaNoProblem",
         "mScriptName": "Augment_NoManaNoProblem",
         "mSpell": {
             "DataValues": [
@@ -1149562,12 +1149562,12 @@
         },
         "__type": "SpellObject"
     },
-    "{d01dd487}": {
+    "Maps/ModeSpecificData/Augments/GiftoftheDrowned": {
         "AugmentNameId": "GiftoftheDrowned",
         "NameTra": "Kiwi_Augment_GiftoftheDrowned_Name",
         "DescriptionTra": "Kiwi_Augment_GiftoftheDrowned_Description",
         "AugmentTooltipTra": "Kiwi_Augment_GiftoftheDrowned_Tooltip",
-        "RootSpell": "{f3ea7185}",
+        "RootSpell": "Maps/ModeSpecificData/Augments/GiftoftheDrowned/Augment_GiftoftheDrowned",
         "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/giftofthedrowned_large.tex",
         "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/giftofthedrowned_small.tex",
         "AugmentDisplayTags": [
@@ -1150092,9 +1150092,9 @@
         "AugmentPlatformId": 1206,
         "__type": "AugmentData"
     },
-    "{e53b51f5}": {
+    "Maps/ModeSpecificData/Augments/TickleMonster/Augment_TickleMonster": {
         "ObjectName": "Augment_TickleMonster",
-        "objectPath": "{e53b51f5}",
+        "objectPath": "Maps/ModeSpecificData/Augments/TickleMonster/Augment_TickleMonster",
         "mScriptName": "Augment_TickleMonster",
         "mSpell": {
             "DataValues": [
@@ -1150142,7 +1150142,7 @@
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{536abdab}",
+                            "mDataValue": "CalcASVal",
                             "__type": "NamedDataValueCalculationPart"
                         }
                     ],
@@ -1150537,9 +1150537,9 @@
         },
         "__type": "SpellObject"
     },
-    "{f3ea7185}": {
+    "Maps/ModeSpecificData/Augments/GiftoftheDrowned/Augment_GiftoftheDrowned": {
         "ObjectName": "Augment_GiftoftheDrowned",
-        "objectPath": "{f3ea7185}",
+        "objectPath": "Maps/ModeSpecificData/Augments/GiftoftheDrowned/Augment_GiftoftheDrowned",
         "mScriptName": "Augment_GiftoftheDrowned",
         "mSpell": {
             "mSpellCalculations": {
@@ -1151134,7 +1151134,7 @@
         },
         "EventIcon": "{477d8592}",
         "EventIconPath": "{418fe50586faba2b}",
-        "{a9dfcc13}": "{b7e6d9df}",
+        "{a9dfcc13}": "Maps/Shipping/Map12/GuestOfHonor/CommandLine/Particles/Kiwi_S3_MusicSet_BandAnnouncement_GameStart_CommandLine",
         "__type": "{05c8aed6}"
     },
     "{0f064907}": {
@@ -1151147,7 +1151147,7 @@
         },
         "EventIcon": "{477d8592}",
         "EventIconPath": "{e446b83eb8889303}",
-        "{a9dfcc13}": "{6a8fb663}",
+        "{a9dfcc13}": "Maps/Shipping/Map12/GuestOfHonor/Disco/Particles/Kiwi_S3_MusicSet_BandAnnouncement_GameStart_Disco",
         "__type": "{05c8aed6}"
     },
     "{150e3a9f}": {
@@ -1151173,7 +1151173,7 @@
         },
         "EventIcon": "{477d8592}",
         "EventIconPath": "{1a364aeed66f6eaf}",
-        "{a9dfcc13}": "{b7b1dcad}",
+        "{a9dfcc13}": "Maps/Shipping/Map12/GuestOfHonor/CafeCuties/Particles/Kiwi_S3_MusicSet_BandAnnouncement_GameStart_CafeCuties",
         "__type": "{05c8aed6}"
     },
     "{3143af11}": {
@@ -1151186,7 +1151186,7 @@
         },
         "EventIcon": "{477d8592}",
         "EventIconPath": "{bd23f7f44c4008ba}",
-        "{a9dfcc13}": "{5c544b7b}",
+        "{a9dfcc13}": "Maps/Shipping/Map12/GuestOfHonor/Pentakill/Particles/Kiwi_S3_MusicSet_BandAnnouncement_GameStart_Pentakill",
         "__type": "{05c8aed6}"
     },
     "{7d531672}": {
@@ -1151199,7 +1151199,7 @@
         },
         "EventIcon": "{477d8592}",
         "EventIconPath": "{4419fe8be5c0176f}",
-        "{a9dfcc13}": "{768eac77}",
+        "{a9dfcc13}": "Maps/Shipping/Map12/GuestOfHonor/Bees/Particles/Kiwi_S3_MusicSet_BandAnnouncement_GameStart_Bees",
         "__type": "{05c8aed6}"
     },
     "{7d72d80e}": {
@@ -1151212,7 +1151212,7 @@
         },
         "EventIcon": "{477d8592}",
         "EventIconPath": "{172be063b5b9a374}",
-        "{a9dfcc13}": "{d2b6faff}",
+        "{a9dfcc13}": "Maps/Shipping/Map12/GuestOfHonor/TrueDamage/Particles/Kiwi_S3_MusicSet_BandAnnouncement_GameStart_TrueDamage",
         "__type": "{05c8aed6}"
     },
     "{99b35958}": {
@@ -1151225,7 +1151225,7 @@
         },
         "EventIcon": "{477d8592}",
         "EventIconPath": "{4f4b06354f4e4f54}",
-        "{a9dfcc13}": "{afa49127}",
+        "{a9dfcc13}": "Maps/Shipping/Map12/GuestOfHonor/Heartsteel/Particles/Kiwi_S3_MusicSet_BandAnnouncement_GameStart_Heartsteel",
         "__type": "{05c8aed6}"
     },
     "{233dd63f}": {
@@ -1153043,7 +1153043,7 @@
             "Maps/ModeSpecificData/ModesQuests/SupportMainQuest",
             "Maps/ModeSpecificData/ModesQuests/VoidImmolationQuest",
             "Maps/ModeSpecificData/ModesQuests/UltraHydraQuest",
-            "{f5593c37}"
+            "Maps/ModeSpecificData/ModesQuests/BouncingBeesQuest"
         ],
         "__type": "{a0ffdf09}"
     },
@@ -1153255,49 +1153255,49 @@
             "Maps/ModeSpecificData/Augments/SupportMain",
             "Maps/ModeSpecificData/Augments/Upgrade_SunderedSky",
             "Maps/ModeSpecificData/Augments/Upgrade_Ravenous",
-            "{2ee0fcd5}",
-            "{652231a9}",
-            "{29c88527}",
-            "{6fe7d8a5}",
-            "{5a79b648}",
-            "{b212b3fd}",
+            "Maps/ModeSpecificData/Augments/Sound_Barrier",
+            "Maps/ModeSpecificData/Augments/Salvation",
+            "Maps/ModeSpecificData/Augments/BrassBlast",
+            "Maps/ModeSpecificData/Augments/MoshMonster",
+            "Maps/ModeSpecificData/Augments/Recoil",
+            "Maps/ModeSpecificData/Augments/Totentanz",
             "Maps/ModeSpecificData/Augments/Quest_UltraHydra",
-            "{31a9b8be}",
-            "{b2d9e618}",
-            "{d01dd487}",
-            "{3e826c7a}",
-            "{4726b778}",
-            "{db7ff5d0}",
-            "{57a3fa32}",
-            "{990f5430}",
+            "Maps/ModeSpecificData/Augments/TickleMonster",
+            "Maps/ModeSpecificData/Augments/NoManaNoProblem",
+            "Maps/ModeSpecificData/Augments/GiftoftheDrowned",
+            "Maps/ModeSpecificData/Augments/LichBrain",
+            "Maps/ModeSpecificData/Augments/BigShot",
+            "Maps/ModeSpecificData/Augments/BouncingBees",
+            "Maps/ModeSpecificData/Augments/DoubleTime",
+            "Maps/ModeSpecificData/Augments/ThirdTimesTheHarm",
             "Maps/ModeSpecificData/Augments/Upgrade_DeathDance",
-            "{3a66fcab}",
+            "Maps/ModeSpecificData/Augments/BEES",
             "Maps/ModeSpecificData/Augments/ARAM_ClownCollege",
-            "{2fa76fdd}",
-            "{32445793}",
-            "{a32d6afe}",
-            "{58bac436}",
-            "{bf14bda8}",
-            "{b8b91114}",
-            "{969bd53e}",
-            "{8ff62a3d}",
-            "{e797c1ff}",
-            "{1e82fad5}",
-            "{fb8cf33c}",
-            "{1888e37b}",
-            "{df038206}",
-            "{ec1af3af}",
-            "{aa10921c}",
-            "{400a964f}",
-            "{6f1fd202}",
-            "{95695009}",
+            "Maps/ModeSpecificData/Augments/TheBoomAndTheBass",
+            "Maps/ModeSpecificData/Augments/TakeemDownDownDown",
+            "Maps/ModeSpecificData/Augments/ArmoredImpact",
+            "Maps/ModeSpecificData/Augments/Fruitify",
+            "Maps/ModeSpecificData/Augments/JeweledBracelet",
+            "Maps/ModeSpecificData/Augments/GetJinxed",
+            "Maps/ModeSpecificData/Augments/StillHere",
+            "Maps/ModeSpecificData/Augments/SapMagic",
+            "Maps/ModeSpecificData/Augments/HeavyIsTheCrown",
+            "Maps/ModeSpecificData/Augments/BlueBarrier",
+            "Maps/ModeSpecificData/Augments/CrimsonCobalt",
+            "Maps/ModeSpecificData/Augments/WeaponOfDestiny",
+            "Maps/ModeSpecificData/Augments/FlowOfSpirit",
+            "Maps/ModeSpecificData/Augments/GroupHug",
+            "Maps/ModeSpecificData/Augments/EnchantingButterflies",
+            "Maps/ModeSpecificData/Augments/UltimateRecursion",
+            "Maps/ModeSpecificData/Augments/HandsOffTheTalent",
+            "Maps/ModeSpecificData/Augments/LonelyWarrior",
             "{a6c26eaf}",
             "{a4c26b89}",
             "{92c24f33}",
             "{a7c27042}",
-            "{eed14418}",
+            "Maps/ModeSpecificData/Augments/ArcaneAxiom",
             "{34bd76c9}",
-            "{c4a713ba}"
+            "Maps/ModeSpecificData/Augments/Upgrade_Stormsurge"
         ],
         "__type": "{eb5adb26}"
     },
@@ -1159623,7 +1159623,7 @@
         "{c504ece0}": true,
         "__type": "ModesQuestData"
     },
-    "{f5593c37}": {
+    "Maps/ModeSpecificData/ModesQuests/BouncingBeesQuest": {
         "QuestId": "{6fd6649b}",
         "QuestName": "BouncingBeesQuest",
         "QuestNameTra": "BouncingBees_Max_Summary",
@@ -1159652,7 +1159652,7 @@
         ],
         "__type": "ModesQuestData"
     },
-    "{5c544b7b}": {
+    "Maps/Shipping/Map12/GuestOfHonor/Pentakill/Particles/Kiwi_S3_MusicSet_BandAnnouncement_GameStart_Pentakill": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.25,
@@ -1165910,10 +1165910,10 @@
         "flags": 213,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
-        "objectPath": "{5c544b7b}",
+        "objectPath": "Maps/Shipping/Map12/GuestOfHonor/Pentakill/Particles/Kiwi_S3_MusicSet_BandAnnouncement_GameStart_Pentakill",
         "__type": "VfxSystemDefinitionData"
     },
-    "{6a8fb663}": {
+    "Maps/Shipping/Map12/GuestOfHonor/Disco/Particles/Kiwi_S3_MusicSet_BandAnnouncement_GameStart_Disco": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1171220,10 +1171220,10 @@
         "flags": 213,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
-        "objectPath": "{6a8fb663}",
+        "objectPath": "Maps/Shipping/Map12/GuestOfHonor/Disco/Particles/Kiwi_S3_MusicSet_BandAnnouncement_GameStart_Disco",
         "__type": "VfxSystemDefinitionData"
     },
-    "{768eac77}": {
+    "Maps/Shipping/Map12/GuestOfHonor/Bees/Particles/Kiwi_S3_MusicSet_BandAnnouncement_GameStart_Bees": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1173931,10 +1173931,10 @@
         "flags": 213,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
-        "objectPath": "{768eac77}",
+        "objectPath": "Maps/Shipping/Map12/GuestOfHonor/Bees/Particles/Kiwi_S3_MusicSet_BandAnnouncement_GameStart_Bees",
         "__type": "VfxSystemDefinitionData"
     },
-    "{afa49127}": {
+    "Maps/Shipping/Map12/GuestOfHonor/Heartsteel/Particles/Kiwi_S3_MusicSet_BandAnnouncement_GameStart_Heartsteel": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1177957,10 +1177957,10 @@
         "flags": 213,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
-        "objectPath": "{afa49127}",
+        "objectPath": "Maps/Shipping/Map12/GuestOfHonor/Heartsteel/Particles/Kiwi_S3_MusicSet_BandAnnouncement_GameStart_Heartsteel",
         "__type": "VfxSystemDefinitionData"
     },
-    "{b7b1dcad}": {
+    "Maps/Shipping/Map12/GuestOfHonor/CafeCuties/Particles/Kiwi_S3_MusicSet_BandAnnouncement_GameStart_CafeCuties": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1181758,10 +1181758,10 @@
         "flags": 213,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
-        "objectPath": "{b7b1dcad}",
+        "objectPath": "Maps/Shipping/Map12/GuestOfHonor/CafeCuties/Particles/Kiwi_S3_MusicSet_BandAnnouncement_GameStart_CafeCuties",
         "__type": "VfxSystemDefinitionData"
     },
-    "{b7e6d9df}": {
+    "Maps/Shipping/Map12/GuestOfHonor/CommandLine/Particles/Kiwi_S3_MusicSet_BandAnnouncement_GameStart_CommandLine": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1187279,7 +1187279,7 @@
         "flags": 213,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
-        "objectPath": "{b7e6d9df}",
+        "objectPath": "Maps/Shipping/Map12/GuestOfHonor/CommandLine/Particles/Kiwi_S3_MusicSet_BandAnnouncement_GameStart_CommandLine",
         "__type": "VfxSystemDefinitionData"
     },
     "{bcef2307}": {
@@ -1192963,7 +1192963,7 @@
         "objectPath": "{bcef2307}",
         "__type": "VfxSystemDefinitionData"
     },
-    "{d2b6faff}": {
+    "Maps/Shipping/Map12/GuestOfHonor/TrueDamage/Particles/Kiwi_S3_MusicSet_BandAnnouncement_GameStart_TrueDamage": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1197508,7 +1197508,7 @@
         "flags": 213,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
-        "objectPath": "{d2b6faff}",
+        "objectPath": "Maps/Shipping/Map12/GuestOfHonor/TrueDamage/Particles/Kiwi_S3_MusicSet_BandAnnouncement_GameStart_TrueDamage",
         "__type": "VfxSystemDefinitionData"
     },
     "Maps/Shipping/Map11/Particles/Default/SRX_Buf_Baron_Child": {
