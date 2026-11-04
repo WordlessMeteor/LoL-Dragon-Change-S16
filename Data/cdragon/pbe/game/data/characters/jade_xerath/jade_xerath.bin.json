@@ -1,0 +1,2405 @@
+{
+    "{14e3c909}": {
+        "ObjectName": "Jade_XerathBasicAttack2",
+        "objectPath": "{14e3c909}",
+        "mScriptName": "Jade_XerathBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 24527,
+            "mAlternateName": "Jade_XerathBasicAttack",
+            "mAnimationName": "Attack2",
+            "spellCastTime": 0.4327000081539154,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0
+                ],
+                "{0a3e0478}": 625.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "l_uparm",
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.0,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "{5e4243ee}",
+            "mHitEffectName": "doesnotexist.troy",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Xerath_XerathBasicAttack_OnCast",
+                "16": "Play_sfx_Xerath_XerathBasicAttack_OnMissileLaunch",
+                "13": "Play_sfx_Xerath_XerathBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{3b069c92}": {
+        "mRootSpell": "{700a889f}",
+        "mChildSpells": [
+            "{700a889f}"
+        ],
+        "mName": "Jade_XerathEAbility",
+        "__type": "AbilityObject"
+    },
+    "{e682a880}": {
+        "mRootSpell": "{b557b7cb}",
+        "mChildSpells": [
+            "{b557b7cb}"
+        ],
+        "mName": "Jade_XerathWAbility",
+        "__type": "AbilityObject"
+    },
+    "{6883f26f}": {
+        "ObjectName": "Jade_XerathWToggle",
+        "objectPath": "{6883f26f}",
+        "mScriptName": "Jade_XerathWToggle",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 8192,
+            "mAnimationName": "",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Xerath_LocusOfPower.dds"
+            ],
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mClientData": {
+                "mUseTooltipFromAnotherSpell": "{b557b7cb}",
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{8b68e19c}": {
+        "ObjectName": "Jade_XerathWMovementSpeedBuff",
+        "objectPath": "{8b68e19c}",
+        "mScriptName": "Jade_XerathWMovementSpeedBuff",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Zilean_Recall.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_XerathW_Jade_MS_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{b557b7cb}": {
+        "ObjectName": "Jade_XerathW",
+        "objectPath": "{b557b7cb}",
+        "mScriptName": "Jade_XerathW",
+        "mSpell": {
+            "mAffectsTypeFlags": 8192,
+            "mSpellTags": [
+                "Trait_DamageAbility"
+            ],
+            "DataValues": [
+                {
+                    "name": "MagicPenValue",
+                    "values": [
+                        10.0,
+                        16.0,
+                        22.0,
+                        28.0,
+                        34.0,
+                        40.0,
+                        46.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RootDuration",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MovementSpeedValue",
+                    "values": [
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MovementSpeedDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "LockoutTimer",
+                    "values": [
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ExtendedQRange",
+                    "values": [
+                        1600.0,
+                        1600.0,
+                        1600.0,
+                        1600.0,
+                        1600.0,
+                        1600.0,
+                        1600.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ExtendedERange",
+                    "values": [
+                        950.0,
+                        950.0,
+                        950.0,
+                        950.0,
+                        950.0,
+                        950.0,
+                        950.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ExtendedRRange",
+                    "values": [
+                        1600.0,
+                        1600.0,
+                        1600.0,
+                        1600.0,
+                        1600.0,
+                        1600.0,
+                        1600.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxRangeToAllowForClamping",
+                    "values": [
+                        25000.0,
+                        25000.0,
+                        25000.0,
+                        25000.0,
+                        25000.0,
+                        25000.0,
+                        25000.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mAnimationName": "Spell2",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Xerath_LocusOfPower.dds"
+            ],
+            "mCastTime": 0.75,
+            "spellCastTime": 0.75,
+            "spellTotalTime": 0.75,
+            "cooldownTime": [
+                20.0,
+                20.0,
+                16.0,
+                12.0,
+                8.0,
+                4.0,
+                4.0
+            ],
+            "Cooldown": {
+                "values": [
+                    20.0,
+                    20.0,
+                    16.0,
+                    12.0,
+                    8.0,
+                    4.0,
+                    4.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mMaxAmmo": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castRadiusSecondary": [
+                250.0,
+                250.0,
+                250.0,
+                250.0,
+                250.0,
+                250.0,
+                250.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.5,
+            "missileSpeed": 20.0,
+            "bHaveHitBone": true,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Xerath_XerathLocusOfPower2_OnCast",
+                "18": "Play_sfx_Xerath_XerathLocusOfPower2_OnBuffActivate",
+                "19": "Play_sfx_Xerath_XerathLocusOfPower2_OnBuffDeactivate"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_XerathW",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_XerathW_Jade_Name",
+                        "keySummary": "Spell_XerathW_Jade_Summary",
+                        "keyTooltip": "Spell_XerathW_Jade_Tooltip",
+                        "keyCost": "Spell_Cost_NoCost"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "MagicPenValue",
+                                    "nameOverride": "Spell_ListType_Jade_Xerath_MagicPenetration",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "nameOverride": "Spell_ListType_Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_XerathW_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{e1d3a655}": {
+        "mRootSpell": "{796f60b3}",
+        "mChildSpells": [
+            "{69e2c787}",
+            "{796f60b3}"
+        ],
+        "mLifetimeManuallyManaged": true,
+        "mName": "Jade_XerathRAbility",
+        "mType": 2,
+        "AbilityTraits": 2,
+        "__type": "AbilityObject"
+    },
+    "{69e2c787}": {
+        "ObjectName": "Jade_XerathR",
+        "objectPath": "{69e2c787}",
+        "mScriptName": "Jade_XerathR",
+        "mSpell": {
+            "flags": 36,
+            "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "Trait_ChannelSpell",
+                "Trait_Ultimate"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        50.0,
+                        125.0,
+                        200.0,
+                        275.0,
+                        350.0,
+                        425.0,
+                        500.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Radius",
+                    "values": [
+                        275.0,
+                        275.0,
+                        275.0,
+                        275.0,
+                        275.0,
+                        275.0,
+                        275.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AvailableCasts",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Xerath_ArcaneBarrage.dds"
+            ],
+            "spellCastTime": 0.25,
+            "cooldownTime": [
+                80.0,
+                80.0,
+                70.0,
+                60.0,
+                60.0,
+                60.0,
+                60.0
+            ],
+            "Cooldown": {
+                "values": [
+                    80.0,
+                    80.0,
+                    70.0,
+                    60.0,
+                    60.0,
+                    60.0,
+                    60.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mChannelIsInterruptedByDisables": false,
+            "mChannelIsInterruptedByAttacking": false,
+            "mDoesntBreakChannels": true,
+            "mUseMinimapTargeting": true,
+            "mShowChannelBar": false,
+            "castRange": [
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    1100.0,
+                    1100.0,
+                    1100.0,
+                    1100.0,
+                    1100.0,
+                    1100.0,
+                    1100.0
+                ],
+                "{0a3e0478}": 1100.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                275.0,
+                275.0,
+                275.0,
+                275.0,
+                275.0,
+                275.0,
+                275.0
+            ],
+            "castFrame": 7.5,
+            "mana": [
+                150.0,
+                180.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "manaValues": {
+                "values": [
+                    150.0,
+                    180.0,
+                    210.0,
+                    210.0,
+                    210.0,
+                    210.0
+                ],
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_XerathR",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_XerathR_Jade_Name",
+                        "keySummary": "Spell_XerathR_Jade_Summary",
+                        "keyTooltip": "Spell_XerathR_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 3,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{796f60b3}": {
+        "ObjectName": "Jade_XerathRSpell",
+        "objectPath": "{796f60b3}",
+        "mScriptName": "Jade_XerathRSpell",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "Trait_Ultimate",
+                "Trait_DamageAbility",
+                "Trait_RecastOrReplaceSpell"
+            ],
+            "mEffectAmount": [
+                {
+                    "value": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        4.0,
+                        4.0,
+                        5.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        0.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        170.0,
+                        170.0,
+                        220.0,
+                        270.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        0.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.44999998807907104,
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Xerath_ArcaneBarrage.dds"
+            ],
+            "mCastTime": 0.25,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.0,
+            "cooldownTime": [
+                0.6000000238418579,
+                0.6000000238418579,
+                0.6000000238418579,
+                0.6000000238418579,
+                0.6000000238418579,
+                0.6000000238418579,
+                0.6000000238418579
+            ],
+            "Cooldown": {
+                "values": [
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579,
+                    0.6000000238418579
+                ],
+                "{0a3e0478}": 0.6000000238418579,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mChannelIsInterruptedByDisables": false,
+            "mChannelIsInterruptedByAttacking": false,
+            "mShowChannelBar": false,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    1100.0,
+                    1100.0,
+                    1100.0,
+                    1100.0,
+                    1100.0,
+                    1100.0,
+                    1100.0
+                ],
+                "{0a3e0478}": 1100.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                275.0,
+                275.0,
+                275.0,
+                275.0,
+                275.0,
+                275.0,
+                275.0
+            ],
+            "castFrame": 7.5,
+            "mana": [
+                100.0,
+                100.0,
+                100.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "manaValues": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Xerath_XerathArcaneBarrage2_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mUseTooltipFromAnotherSpell": "{69e2c787}",
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{aa69cde9}": {
+        "ObjectName": "Jade_XerathRHolder",
+        "objectPath": "{aa69cde9}",
+        "mScriptName": "Jade_XerathRHolder",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Xerath_ArcaneBarrage.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_XerathR_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{700a889f}": {
+        "ObjectName": "Jade_XerathE",
+        "objectPath": "{700a889f}",
+        "mScriptName": "Jade_XerathE",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}",
+                    "minion",
+                    "Monster"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mSpellTags": [
+                "Trait_ImmobilizingCCSpell",
+                "Trait_DamageAbility"
+            ],
+            "DataValues": [
+                {
+                    "name": "StunDuration",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        20.0,
+                        70.0,
+                        120.0,
+                        170.0,
+                        220.0,
+                        270.0,
+                        320.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ApRatio",
+                    "values": [
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DebuffDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Xerath_MageChains.dds"
+            ],
+            "mCastTime": 0.25,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
+            "cooldownTime": [
+                12.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                8.0
+            ],
+            "Cooldown": {
+                "values": [
+                    12.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    9.0,
+                    8.0,
+                    8.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mMaxAmmo": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "mAmmoUsed": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0
+                ],
+                "{0a3e0478}": 650.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+                    "mTargetBoneName": "C_Buffbone_Glb_Chest_Loc",
+                    "mSpeed": 2100.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.0,
+            "missileSpeed": 1600.0,
+            "mMissileEffectKey": "{76af998a}",
+            "mLineWidth": 70.0,
+            "mHitEffectOrientType": 2,
+            "mHitBoneName": "head",
+            "mana": [
+                70.0,
+                75.0,
+                80.0,
+                85.0,
+                90.0,
+                90.0
+            ],
+            "manaValues": {
+                "values": [
+                    70.0,
+                    75.0,
+                    80.0,
+                    85.0,
+                    90.0,
+                    90.0
+                ],
+                "__type": "{630af303}"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Xerath_XerathMageSpear_OnCast",
+                "16": "Play_sfx_Xerath_XerathMageSpearMissile_OnMissileLaunch",
+                "18": "Play_sfx_Xerath_XerathMageSpearMissile_OnMissileLaunch"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_XerathE",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_XerathE_Jade_Name",
+                        "keySummary": "Spell_XerathE_Jade_Summary",
+                        "keyTooltip": "Spell_XerathE_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "nameOverride": "Spell_ListType_Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_XerathE_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 32768,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mNumber": 70.0,
+                                "__type": "NumberCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 4096,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 16384,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 2048,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8192,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{85cd1c41}": {
+        "ObjectName": "Jade_XerathBasicAttack",
+        "objectPath": "{85cd1c41}",
+        "mScriptName": "Jade_XerathBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 24527,
+            "mAlternateName": "Jade_XerathBasicAttack",
+            "spellCastTime": 0.4327000081539154,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0
+                ],
+                "{0a3e0478}": 625.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "r_uparm",
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.0,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "{5e4243ee}",
+            "mHitEffectName": "doesnotexist.troy",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Xerath_XerathBasicAttack_OnCast",
+                "16": "Play_sfx_Xerath_XerathBasicAttack_OnMissileLaunch",
+                "13": "Play_sfx_Xerath_XerathBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{c1f5c04e}": {
+        "mRootSpell": "{c12326a7}",
+        "mChildSpells": [
+            "{c12326a7}"
+        ],
+        "mName": "Jade_XerathQAbility",
+        "AbilityTraits": 256,
+        "__type": "AbilityObject"
+    },
+    "{c12326a7}": {
+        "ObjectName": "Jade_XerathQ",
+        "objectPath": "{c12326a7}",
+        "mScriptName": "Jade_XerathQ",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "Trait_ChannelSpell",
+                "Trait_DamageAbility"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        35.0,
+                        75.0,
+                        115.0,
+                        155.0,
+                        195.0,
+                        235.0,
+                        275.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageDelay",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageWidth",
+                    "values": [
+                        95.0,
+                        95.0,
+                        95.0,
+                        95.0,
+                        95.0,
+                        95.0,
+                        95.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageLength",
+                    "values": [
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "DamageType": 1,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell1Finish",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Xerath_Arcanopulse.dds"
+            ],
+            "mCastTime": 0.6000000238418579,
+            "spellTotalTime": 0.0,
+            "cooldownTime": [
+                7.0,
+                7.0,
+                6.5,
+                6.0,
+                5.5,
+                5.0,
+                5.0
+            ],
+            "Cooldown": {
+                "values": [
+                    7.0,
+                    7.0,
+                    6.5,
+                    6.0,
+                    5.5,
+                    5.0,
+                    5.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mMaxAmmo": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "mAmmoUsed": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "mAmmoRechargeTime": [
+                10.0,
+                9.0,
+                8.0,
+                7.0,
+                6.0,
+                5.0,
+                5.0
+            ],
+            "mCantCancelWhileWindingUp": true,
+            "mChannelIsInterruptedByDisables": false,
+            "mChannelIsInterruptedByAttacking": false,
+            "mShowChannelBar": false,
+            "alwaysSnapFacing": true,
+            "castRange": [
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "{0a3e0478}": 1000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                1500.0,
+                1500.0,
+                1500.0,
+                1500.0,
+                1500.0,
+                1500.0,
+                1500.0
+            ],
+            "castFrame": 15.0,
+            "mLineWidth": 100.0,
+            "mana": [
+                65.0,
+                70.0,
+                75.0,
+                80.0,
+                85.0,
+                85.0
+            ],
+            "manaValues": {
+                "values": [
+                    65.0,
+                    70.0,
+                    75.0,
+                    80.0,
+                    85.0,
+                    85.0
+                ],
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Direction"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Xerath_XerathArcanopulseChargeUp_OnCast"
+            },
+            "mDimensionBehavior": 1,
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_XerathQ",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_XerathQ_Jade_Name",
+                        "keySummary": "Spell_XerathQ_Jade_Summary",
+                        "keyTooltip": "Spell_XerathQ_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{d429af31}": {
+        "ObjectName": "Jade_XerathCritAttack",
+        "objectPath": "{d429af31}",
+        "mScriptName": "Jade_XerathCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 24527,
+            "mAlternateName": "Jade_XerathCritAttack",
+            "mAnimationName": "Crit",
+            "spellCastTime": 0.4327000081539154,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRange": [
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0
+                ],
+                "{0a3e0478}": 625.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "l_hand",
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.529999732971191,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "{5e4243ee}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Xerath_XerathCritAttack_OnCast",
+                "16": "Play_sfx_Xerath_XerathCritAttack_OnMissileLaunch",
+                "13": "Play_sfx_Xerath_XerathCritAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{e12e6400}": {
+        "mRootSpell": "{d6bda28b}",
+        "mChildSpells": [
+            "{d6bda28b}"
+        ],
+        "mName": "Jade_XerathPassiveAbility",
+        "mType": 3,
+        "__type": "AbilityObject"
+    },
+    "{d6bda28b}": {
+        "ObjectName": "Jade_XerathPassive",
+        "objectPath": "{d6bda28b}",
+        "mScriptName": "Jade_XerathPassive",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "ApToArmorConversion",
+                    "values": [
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "{62313bea}": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "{03eb8404}",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Xerath_AscendedForm.dds"
+            ],
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "13": "Play_sfx_Xerath_XerathManaAttack_buffactivate"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_XerathPassive",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyName": "Spell_XerathPassive_Jade_Name",
+                        "keySummary": "Spell_XerathPassive_Jade_Summary",
+                        "keyTooltip": "Spell_XerathPassive_Jade_Tooltip"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Jade_XerathAscended",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{5f8d9673}": {
+        "mOverrides": [
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/1056",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1082",
+                            "Items/2003",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/2033"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/6655",
+                            "Items/6653",
+                            "Items/4644"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3020",
+                            "Items/3111",
+                            "Items/3158"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/4628",
+                            "Items/4645",
+                            "Items/3165"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3157",
+                            "Items/3102"
+                        ],
+                        "MaxCompletedItems": 4,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3089",
+                            "Items/3135"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/4628",
+                            "Items/4645",
+                            "Items/4629",
+                            "Items/3165",
+                            "Items/4637",
+                            "Items/3116",
+                            "Items/3157",
+                            "Items/3102"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 12,
+                        "mModeNameStringId": "ARAM",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/3112"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/3802"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/6655",
+                            "Items/6653",
+                            "Items/6656"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3020",
+                            "Items/3111",
+                            "Items/3158"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/4628",
+                            "Items/3102",
+                            "Items/3165"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3157",
+                            "Items/3102"
+                        ],
+                        "MaxCompletedItems": 4,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3089",
+                            "Items/3135"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/4629",
+                            "Items/3165",
+                            "Items/4637",
+                            "Items/3116",
+                            "Items/3157",
+                            "Items/3102",
+                            "Items/4628"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "mPosition": "utility",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/3865",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/6655",
+                            "Items/6653",
+                            "Items/6656"
+                        ],
+                        "MaxCompletedItems": 0,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3020",
+                            "Items/3111",
+                            "Items/3158"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/4628",
+                            "Items/3102",
+                            "Items/3165"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3157",
+                            "Items/3102"
+                        ],
+                        "MaxCompletedItems": 4,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3089",
+                            "Items/3135"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/4629",
+                            "Items/3165",
+                            "Items/4637",
+                            "Items/3116",
+                            "Items/3157",
+                            "Items/3102",
+                            "Items/4628"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "mCoreItems": [
+                    "Items/3871"
+                ],
+                "__type": "ItemRecommendationOverride"
+            }
+        ],
+        "__type": "ItemRecommendationOverrideSet"
+    },
+    "{a222a246}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "{a4f8f252}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 12,
+                "Position": "None",
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "middle",
+                "IsDefaultRecommendation": true,
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "utility",
+                "mEarlyLevelOverrides": [
+                    1,
+                    0,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{78f064bc}": {
+        "mCharacterName": "Jade_Xerath",
+        "baseHPModifiable": {
+            "baseValue": 460.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 80.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.0099999904632568,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.10999999940395355,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 120.0,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 295.0,
+                "__type": "ModifiableFloat"
+            },
+            "{6216bf7b}": {
+                "baseValue": 45.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 1.5199999809265137,
+                "__type": "ModifiableFloat"
+            },
+            "{3a509002}": {
+                "baseValue": 0.11999999731779099,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 54.65999984741211,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 3.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 15.5,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 3.5,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 340.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 550.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 1.3600000143051147,
+            "__type": "ModifiableFloat"
+        },
+        "mAdaptiveForceToAbilityPowerWeight": 1.0,
+        "acquisitionRange": 600.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": -0.029260000213980675,
+            "mAttackDelayCastOffsetPercentAttackSpeedRatio": 1.0,
+            "mAttackProbability": 0.5,
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackProbability": 0.5,
+                "mAttackName": "Jade_XerathBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": 0.0,
+                "mAttackDelayCastOffsetPercentAttackSpeedRatio": 1.0,
+                "mAttackName": "Jade_XerathCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_XerathQAbility/Jade_XerathQ",
+            "Jade_XerathWAbility/Jade_XerathW",
+            "Jade_XerathEAbility/Jade_XerathE",
+            "Jade_XerathRAbility/Jade_XerathR"
+        ],
+        "spells": [
+            "{c12326a7}",
+            "{b557b7cb}",
+            "{700a889f}",
+            "{69e2c787}"
+        ],
+        "extraSpells": [
+            "Jade_XerathArcanopulse2",
+            "BaseSpell",
+            "BaseSpell",
+            "Jade_XerathLocusPulse",
+            "BaseSpell",
+            "Jade_XerathMageSpearMissile",
+            "Jade_XerathLocusPulse",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "extraSpellsList": [
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "{e1d3a655}",
+            "{c1f5c04e}",
+            "{e682a880}",
+            "{3b069c92}",
+            "{e12e6400}"
+        ],
+        "passiveName": "game_character_passiveName_Jade_Xerath",
+        "passiveLuaName": "Jade_XerathAscended2",
+        "passiveToolTip": "game_character_passiveDescription_Jade_Xerath",
+        "passive1IconName": "{f2381149d0f0377e}",
+        "name": "game_character_displayname_Jade_Xerath",
+        "mUseCCAnimations": true,
+        "selectionHeight": 302.7778015136719,
+        "selectionRadius": 120.0,
+        "pathfindingCollisionRadius": 35.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1056,
+            "__type": "ToolEducationData"
+        },
+        "characterToolData": {
+            "recItems": [
+                "1056",
+                "3020",
+                "3027",
+                "3116",
+                "3089",
+                "3135"
+            ],
+            "spellData": [
+                {
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "__type": "ToolSpellDesc"
+                }
+            ],
+            "mapAIPresence": {
+                "8": {
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passiveData": [
+                {
+                    "name": "game_character_passiveName_Jade_Xerath",
+                    "__type": "ToolPassiveData"
+                }
+            ],
+            "searchTags": "mage",
+            "searchTagsSecondary": "support",
+            "championId": 60101,
+            "roles": "SUPPORT",
+            "magicRank": 10,
+            "difficultyRank": 8,
+            "description": "game_character_description_Jade_Xerath",
+            "defenseRank": 3,
+            "ChasingAttackRangePercent": 0.800000011920929,
+            "attackRank": 1,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "purchaseIdentities": [
+            "Ranged"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Sorcery",
+        "mCharacterPassiveSpell": "{d6bda28b}",
+        "mCharacterPassiveBuffs": [
+            {
+                "mParentPassiveBuff": "{d6bda28b}",
+                "__type": "CharacterPassiveData"
+            }
+        ],
+        "{c5c48b41}": 1,
+        "Script": "{891fe387}",
+        "__type": "CharacterRecord"
+    },
+    "{891fe387}": {
+        "ScriptName": "charscriptJade_Xerath",
+        "path": "{891fe387}",
+        "__type": "CharScript"
+    },
+    "{8b1f5c2a}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

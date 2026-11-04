@@ -1384,6 +1384,44 @@
                                             }
                                         ],
                                         "__type": "OverrideOptionItemGroup"
+                                    },
+                                    {
+                                        "Filter": {
+                                            "__type": "{d4737a04}"
+                                        },
+                                        "template": "{d80144ac}",
+                                        "LabelTraKey": "Options_Hotkeys_Voice_Label",
+                                        "items": [
+                                            {
+                                                "template": "{7df5fd7a}",
+                                                "Header": {
+                                                    "Column0LabelTraKey": "Options_Voice_InputSettings_VoiceControlHotkeys_label",
+                                                    "Column1LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set1_label",
+                                                    "Column2LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set2_label",
+                                                    "__type": "OptionItemSecondaryHotkeys2Column_Header"
+                                                },
+                                                "{349ad6a6}": true,
+                                                "RowsList": [
+                                                    {
+                                                        "LabelTraKey": "Options_Voice_InputSettings_VoiceControlHotkeys_ShowHideVoiceChatPanel",
+                                                        "EventName": "[WASD]evtShowVoicePanel",
+                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                                    },
+                                                    {
+                                                        "LabelTraKey": "Options_Voice_InputSettings_VoiceControlHotkeys_PushToTalk",
+                                                        "EventName": "[WASD]evtPushToTalk",
+                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                                    },
+                                                    {
+                                                        "LabelTraKey": "Options_Voice_InputSettings_InputMode_PushToTalkTeam",
+                                                        "EventName": "[WASD]evtPushToTalkTeam",
+                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                                    }
+                                                ],
+                                                "__type": "OptionItemSecondaryHotkeys2Column"
+                                            }
+                                        ],
+                                        "__type": "OverrideOptionItemGroup"
                                     }
                                 ],
                                 "{43bf01e1}": false,
@@ -2731,6 +2769,44 @@
                                                     {
                                                         "LabelTraKey": "Options_Hotkeys_MoveCursorRight_Label",
                                                         "EventName": "[GameEvents]evtMoveCursorRight",
+                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                                    }
+                                                ],
+                                                "__type": "OptionItemSecondaryHotkeys2Column"
+                                            }
+                                        ],
+                                        "__type": "OverrideOptionItemGroup"
+                                    },
+                                    {
+                                        "Filter": {
+                                            "__type": "{ef2cc9a6}"
+                                        },
+                                        "template": "{d80144ac}",
+                                        "LabelTraKey": "Options_Hotkeys_Voice_Label",
+                                        "items": [
+                                            {
+                                                "template": "{7df5fd7a}",
+                                                "Header": {
+                                                    "Column0LabelTraKey": "Options_Voice_InputSettings_VoiceControlHotkeys_label",
+                                                    "Column1LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set1_label",
+                                                    "Column2LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set2_label",
+                                                    "__type": "OptionItemSecondaryHotkeys2Column_Header"
+                                                },
+                                                "{349ad6a6}": true,
+                                                "RowsList": [
+                                                    {
+                                                        "LabelTraKey": "Options_Voice_InputSettings_VoiceControlHotkeys_ShowHideVoiceChatPanel",
+                                                        "EventName": "[GameEvents]evtShowVoicePanel",
+                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                                    },
+                                                    {
+                                                        "LabelTraKey": "Options_Voice_InputSettings_VoiceControlHotkeys_PushToTalk",
+                                                        "EventName": "[GameEvents]evtPushToTalk",
+                                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                                    },
+                                                    {
+                                                        "LabelTraKey": "Options_Voice_InputSettings_InputMode_PushToTalkTeam",
+                                                        "EventName": "[GameEvents]evtPushToTalkTeam",
                                                         "__type": "OptionItemSecondaryHotkeys2Column_Row"
                                                     }
                                                 ],
@@ -5925,6 +6001,18 @@
                         "__type": "OptionItemCheckbox"
                     },
                     {
+                        "LiveUpdate": true,
+                        "option": 118,
+                        "template": "{2f26143a}",
+                        "LabelTraKey": "Options_Voice_InputSettings_NoiseSuppression",
+                        "__type": "OptionItemCheckbox"
+                    },
+                    {
+                        "template": "{c38f3585}",
+                        "Label1TraKey": "Options_Voice_InputSettings_NoiseSuppression_Description",
+                        "__type": "OptionItemLabel"
+                    },
+                    {
                         "template": "{eeccf10a}",
                         "LabelTraKey": "Options_Voice_InputSettings_InputDevice_label",
                         "__type": "OptionItemVoiceInputDeviceDropdown"
@@ -5961,8 +6049,10 @@
                         "__type": "OptionItemSliderFloat"
                     },
                     {
-                        "template": "{b5e1975a}",
-                        "LabelTraKey": "Options_Voice_InputSettings_Interface",
+                        "Filter": {
+                            "__type": "{ef2cc9a6}"
+                        },
+                        "template": "{d80144ac}",
                         "ExpandedByDefault": true,
                         "items": [
                             {
@@ -5973,6 +6063,7 @@
                                     "Column2LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set2_label",
                                     "__type": "OptionItemSecondaryHotkeys2Column_Header"
                                 },
+                                "{349ad6a6}": true,
                                 "RowsList": [
                                     {
                                         "LabelTraKey": "Options_Voice_InputSettings_VoiceControlHotkeys_ShowHideVoiceChatPanel",
@@ -5983,12 +6074,100 @@
                                         "LabelTraKey": "Options_Voice_InputSettings_VoiceControlHotkeys_PushToTalk",
                                         "EventName": "[GameEvents]evtPushToTalk",
                                         "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Voice_InputSettings_InputMode_PushToTalkTeam",
+                                        "EventName": "[GameEvents]evtPushToTalkTeam",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
                                     }
                                 ],
                                 "__type": "OptionItemSecondaryHotkeys2Column"
                             }
                         ],
-                        "__type": "OptionItemGroup"
+                        "__type": "OverrideOptionItemGroup"
+                    },
+                    {
+                        "Filter": {
+                            "__type": "{d4737a04}"
+                        },
+                        "template": "{d80144ac}",
+                        "ExpandedByDefault": true,
+                        "items": [
+                            {
+                                "template": "{7df5fd7a}",
+                                "Header": {
+                                    "Column0LabelTraKey": "Options_Voice_InputSettings_VoiceControlHotkeys_label",
+                                    "Column1LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set1_label",
+                                    "Column2LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Set2_label",
+                                    "__type": "OptionItemSecondaryHotkeys2Column_Header"
+                                },
+                                "{349ad6a6}": true,
+                                "RowsList": [
+                                    {
+                                        "LabelTraKey": "Options_Voice_InputSettings_VoiceControlHotkeys_ShowHideVoiceChatPanel",
+                                        "EventName": "[WASD]evtShowVoicePanel",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Voice_InputSettings_VoiceControlHotkeys_PushToTalk",
+                                        "EventName": "[WASD]evtPushToTalk",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    },
+                                    {
+                                        "LabelTraKey": "Options_Voice_InputSettings_InputMode_PushToTalkTeam",
+                                        "EventName": "[WASD]evtPushToTalkTeam",
+                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
+                                    }
+                                ],
+                                "__type": "OptionItemSecondaryHotkeys2Column"
+                            }
+                        ],
+                        "__type": "OverrideOptionItemGroup"
+                    }
+                ],
+                "__type": "OptionItemGroup"
+            },
+            {
+                "Filter": {
+                    "{8cd74f74}": true,
+                    "__type": "OptionItemFilter_VoiceChat"
+                },
+                "template": "{3cd8d5b2}",
+                "LabelTraKey": "Options_Voice_VoiceSkins_label",
+                "items": [
+                    {
+                        "Filter": {
+                            "__type": "OptionItemFilter_VoiceChat"
+                        },
+                        "template": "{68ee0df7}",
+                        "Label1TraKey": "Options_Voice_VoiceSkins_Attribution",
+                        "__type": "OptionItemLabel"
+                    },
+                    {
+                        "Filter": {
+                            "__type": "OptionItemFilter_VoiceChat"
+                        },
+                        "template": "{c38f3585}",
+                        "Label1TraKey": "Options_Voice_VoiceSkins_Description",
+                        "__type": "OptionItemLabel"
+                    },
+                    {
+                        "Filter": {
+                            "__type": "OptionItemFilter_VoiceChat"
+                        },
+                        "LiveUpdate": true,
+                        "template": "{eeccf10a}",
+                        "LabelTraKey": "Options_Voice_VoiceSkins_HeardBy",
+                        "__type": "{a644f771}"
+                    },
+                    {
+                        "Filter": {
+                            "__type": "OptionItemFilter_VoiceChat"
+                        },
+                        "LiveUpdate": true,
+                        "template": "{eeccf10a}",
+                        "LabelTraKey": "Options_Voice_VoiceSkins_Selection",
+                        "__type": "{5ea71f0d}"
                     }
                 ],
                 "__type": "OptionItemGroup"
@@ -6000,8 +6179,27 @@
         "TabNameTraKey": "options_tab_sound",
         "ItemsList": [
             {
+                "Filter": {
+                    "__type": "OptionItemFilter_VoiceChat"
+                },
                 "template": "{3cd8d5b2}",
-                "LabelTraKey": "Options_Sound_label",
+                "LabelTraKey": "Options_Sound_VoiceChat_label",
+                "items": [
+                    {
+                        "LiveUpdate": true,
+                        "template": "{6e23f27a}",
+                        "LabelTraKey": "Options_Sound_PlayerVoiceVolume",
+                        "option": 32,
+                        "MuteButtonTemplate": "{dd21e65a}",
+                        "MuteOption": 65,
+                        "__type": "OptionItemSliderVolume"
+                    }
+                ],
+                "__type": "OptionItemGroup"
+            },
+            {
+                "template": "{3cd8d5b2}",
+                "LabelTraKey": "Options_Sound_GameAudio_label",
                 "items": [
                     {
                         "template": "{860afb8b}",
@@ -6934,6 +7132,13 @@
         "{f6b809cd}": "ClientStates/LoLCommon/UX/Options/UIBase/Options/Opt_ActiveTab/Templates/MovementCameraSettingsHeader/OptT_CameraSettingsHeader_DefaultCamera_Pos",
         "{baa5364a}": "ClientStates/LoLCommon/UX/Options/UIBase/Options/Opt_ActiveTab/Templates/MovementCameraSettingsHeader/OptT_CameraSettingsHeader_LockedCamera_Pos",
         "__type": "{31bf21b0}"
+    },
+    "{68ee0df7}": {
+        "boundsElement": "{408b4cff}",
+        "Label1": "{c4bb93ff}",
+        "Label2": "{c5bb9592}",
+        "Icon": "{a1259481}",
+        "__type": "OptionTemplateLabel"
     },
     "{6e23f27a}": {
         "boundsElement": "ClientStates/LoLCommon/UX/Options/UIBase/Options/Opt_ActiveTab/Templates/Slider/OptT_Slider_Bounds",
@@ -8290,20 +8495,24 @@
         "PanelSceneHandle": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "{ae0a8415}": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel",
         "Backdrop": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_Backdrop",
-        "errorText": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_ErrorMessageText",
+        "errorText": "{10ae4df5}",
         "PlayerSlotRegionHandle": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_P0/VCP_PlayerSlotHeightRef",
         "ConnectedBgRegionHandle": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_BackdropConnectedHeightRef",
         "SelfSlot": {
-            "Portrait": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/Self/VCP_SelfSlot_Portrait",
-            "Halo": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/Self/VCP_SelfSlot_Halo",
-            "NameText": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/Self/VCP_SelfSlot_NameText",
-            "MicVolumeText": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/Self/VCP_SelfSlot_MeterText",
+            "Portrait": "{88a9d471}",
+            "Halo": "{d33390fc}",
+            "NameText": "{c9d6be72}",
+            "MicVolumeText": "{e234fa0c}",
             "MicVolumeSliderBar": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider",
             "MuteButton": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton",
             "ConnectionButton": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton",
+            "{401f7351}": "{7fdb1da6}",
+            "{846675b0}": "{b0324aad}",
+            "{331ba69a}": "{421b0fb8}",
             "__type": "VoiceChatViewSelfSlot"
         },
         "PlayerGrid": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PlayerGrid",
+        "{3290d463}": "{d1bf1818}",
         "PlayerSlotData": {
             "Group": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_P0",
             "Portrait": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_P0/VCP_P0_Portrait",
@@ -8312,6 +8521,7 @@
             "VolumeText": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_P0/VCP_P0_MeterText",
             "VolumeSliderBar": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_P0/VCP_P0_VolumeMeter",
             "MuteButton": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_P0/VCP_P0_MuteButton",
+            "{331ba69a}": "{6793936a}",
             "__type": "VoiceChatViewPlayerSlotData"
         },
         "{e38d9a41}": [
@@ -8320,12 +8530,26 @@
             67,
             255
         ],
+        "{110c2462}": [
+            0,
+            135,
+            232,
+            255
+        ],
         "{70f56833}": [
             255,
             0,
             186,
             255
         ],
+        "{4cb83f07}": "{06793a8c}",
+        "{dfb07c06}": "{404cb1b7}",
+        "{f708271e}": "{fd4cf375}",
+        "{b5112919}": "{05c40730}",
+        "TeamButton": "{3f9c6041}",
+        "{2481a959}": "{248e88c3}",
+        "{606658a7}": "{7d68e239}",
+        "{b3773b0e}": "{e38a3eb2}",
         "{acc641e6}": {
             "TextureName": "{e73cdb5ee4448d83}",
             "__type": "{7693d3be}"
@@ -8353,6 +8577,65 @@
         "{dfe489b3}": {
             "TextureName": "{e9ef928157896fa9}",
             "__type": "{7693d3be}"
+        },
+        "{c6cfd728}": "{3ebe3426}",
+        "{2998beff}": "{a627f3c7}",
+        "{b2d986fc}": "{388ec4a4}",
+        "{e0075ef5}": "{122c7060}",
+        "{536e2c9d}": "{53eae24a}",
+        "{6852c74b}": {
+            "4": {
+                "title": "VoiceChatPanel_Tooltip_Title_TeamVoiceUnavailable",
+                "desc": "VoiceChatPanel_Tooltip_Description_TeamVoice_Unavailable",
+                "__type": "{9e5f5386}"
+            },
+            "5": {
+                "title": "VoiceChatPanel_Tooltip_Title_TeamVoiceUnavailableInMode",
+                "desc": "VoiceChatPanel_Tooltip_Description_TeamVoice_UnavailableInMode",
+                "__type": "{9e5f5386}"
+            },
+            "6": {
+                "title": "VoiceChatPanel_DisabledText_Disabled",
+                "desc": "VoiceChatPanel_Tooltip_Description_TeamVoiceDisabled_RequireAgreement",
+                "__type": "{9e5f5386}"
+            },
+            "3": {
+                "title": "VoiceChatPanel_Tooltip_Title_TeamVoiceConnectionFailure",
+                "desc": "VoiceChatPanel_Tooltip_Description_Voice_DisabledConnectionFailure",
+                "__type": "{9e5f5386}"
+            },
+            "2": {
+                "title": "VoiceChatPanel_Tooltip_Title_TeamVoiceDisabled",
+                "desc": "VoiceChatPanel_Tooltip_Description_TeamVoice_Restricted",
+                "__type": "{9e5f5386}"
+            },
+            "8": {
+                "title": "VoiceChatPanel_Tooltip_Title_TeamVoiceRestricted",
+                "desc": "VoiceChatPanel_Tooltip_Description_TeamVoice_Restricted",
+                "__type": "{9e5f5386}"
+            },
+            "11": {
+                "title": "VoiceChatPanel_Tooltip_Title_TeamVoiceRestricted",
+                "desc": "VoiceChatPanel_Tooltip_Description_TeamVoice_RestrictedActive",
+                "__type": "{9e5f5386}"
+            },
+            "9": {
+                "title": "VoiceChatPanel_Tooltip_Title_TeamVoiceConnectionFailure",
+                "desc": "VoiceChatPanel_Tooltip_Description_TeamVoice_RetryConnectionFailure",
+                "__type": "{9e5f5386}"
+            }
+        },
+        "{dcc4214a}": {
+            "7": {
+                "title": "VoiceChatPanel_Tooltip_Title_PartyVoiceNoParty",
+                "desc": "VoiceChatPanel_Tooltip_Description_PartyVoice_NoParty",
+                "__type": "{9e5f5386}"
+            },
+            "3": {
+                "title": "VoiceChatPanel_Tooltip_Title_PartyVoiceConnectionFailure",
+                "desc": "VoiceChatPanel_Tooltip_Description_Voice_DisabledConnectionFailure",
+                "__type": "{9e5f5386}"
+            }
         },
         "__type": "VoiceChatViewController"
     },

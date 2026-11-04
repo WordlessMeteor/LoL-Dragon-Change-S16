@@ -1158,11 +1158,6 @@
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
-                "TextureName": "Inner_Fresnel_Mask",
-                "texturePath": "assets/characters/ahri/skins/skin97/ahri_skin97_highlight_tx_cm.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
                 "TextureName": "DeformNoise",
                 "texturePath": "assets/shared/materials/base_caustic_noise.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -2082,6 +2077,7 @@
             },
             {
                 "name": "USE_LIGHTNESS_ADJUSTMENT",
+                "on": false,
                 "Group": "Lightness_Adjustment",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -2093,6 +2089,7 @@
             },
             {
                 "name": "USE_BLOOM",
+                "on": false,
                 "Group": "Bloom",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -2785,11 +2782,6 @@
             {
                 "TextureName": "Fresnel_Mask",
                 "texturePath": "{f3ad957b504d9daf}",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Inner_Fresnel_Mask",
-                "texturePath": "assets/characters/ahri/skins/skin97/ahri_skin97_highlight_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -3513,7 +3505,7 @@
             {
                 "name": "Bloom_Strength",
                 "value": [
-                    0.6679999828338623,
+                    2.0,
                     0.0,
                     0.0,
                     0.0
@@ -3523,9 +3515,9 @@
             {
                 "name": "Bloom_Tint_Color",
                 "value": [
-                    1.0,
-                    1.0,
-                    1.0,
+                    0.8666666746139526,
+                    0.23137255012989044,
+                    0.501960813999176,
                     1.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -3543,7 +3535,7 @@
             {
                 "name": "Fresnel_Strength",
                 "value": [
-                    0.7925000190734863,
+                    0.16750000417232513,
                     0.0,
                     0.0,
                     0.0
@@ -3563,7 +3555,7 @@
             {
                 "name": "Fresnel_Softness",
                 "value": [
-                    0.10000000149011612,
+                    0.05999999865889549,
                     0.0,
                     0.0,
                     0.0
@@ -3709,6 +3701,7 @@
             },
             {
                 "name": "USE_LIGHTNESS_ADJUSTMENT",
+                "on": false,
                 "Group": "Lightness_Adjustment",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -3720,13 +3713,11 @@
             },
             {
                 "name": "USE_BLOOM",
-                "on": false,
                 "Group": "Bloom",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "USE_BLOOM_TINT_COLOR",
-                "on": false,
                 "Group": "Bloom",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -3995,11 +3986,6 @@
             },
             {
                 "TextureName": "Fresnel_Mask",
-                "texturePath": "assets/shared/materials/black.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Inner_Fresnel_Mask",
                 "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
@@ -5040,11 +5026,6 @@
             },
             {
                 "TextureName": "Fresnel_Mask",
-                "texturePath": "assets/shared/materials/black.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Inner_Fresnel_Mask",
                 "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
@@ -6109,17 +6090,12 @@
             },
             {
                 "TextureName": "Fresnel_Color_Texture",
-                "texturePath": "{5bca74a87981eb24}",
+                "texturePath": "{d4d2c5a8c193761d}",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Fresnel_Mask",
                 "texturePath": "{f3ad957b504d9daf}",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Inner_Fresnel_Mask",
-                "texturePath": "assets/characters/ahri/skins/skin97/ahri_skin97_highlight_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -6843,7 +6819,7 @@
             {
                 "name": "Bloom_Strength",
                 "value": [
-                    0.6679999828338623,
+                    2.200000047683716,
                     0.0,
                     0.0,
                     0.0
@@ -6853,9 +6829,9 @@
             {
                 "name": "Bloom_Tint_Color",
                 "value": [
-                    1.0,
-                    1.0,
-                    1.0,
+                    0.8666666746139526,
+                    0.23137255012989044,
+                    0.501960813999176,
                     1.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -6873,7 +6849,7 @@
             {
                 "name": "Fresnel_Strength",
                 "value": [
-                    1.2000000476837158,
+                    0.6000000238418579,
                     0.0,
                     0.0,
                     0.0
@@ -6883,7 +6859,7 @@
             {
                 "name": "Fresnel_Thickness",
                 "value": [
-                    0.4000000059604645,
+                    0.3499999940395355,
                     0.0,
                     0.0,
                     0.0
@@ -6893,7 +6869,7 @@
             {
                 "name": "Fresnel_Softness",
                 "value": [
-                    0.11999999731779099,
+                    0.05999999865889549,
                     0.0,
                     0.0,
                     0.0
@@ -7039,6 +7015,7 @@
             },
             {
                 "name": "USE_LIGHTNESS_ADJUSTMENT",
+                "on": false,
                 "Group": "Lightness_Adjustment",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -7050,13 +7027,11 @@
             },
             {
                 "name": "USE_BLOOM",
-                "on": false,
                 "Group": "Bloom",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
                 "name": "USE_BLOOM_TINT_COLOR",
-                "on": false,
                 "Group": "Bloom",
                 "__type": "StaticMaterialSwitchDef"
             },

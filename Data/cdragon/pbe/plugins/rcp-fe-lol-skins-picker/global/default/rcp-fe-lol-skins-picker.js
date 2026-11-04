@@ -298,8 +298,8 @@
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "EQguLS3T",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.22\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\flyout-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.22\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\flyout-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.22\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\flyout-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","flyout-title"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","flyout-title-label"],["flush-element"],["append",["unknown",["tra","flyout_title_label"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","flyout-title-close"],["modifier",["action"],[["get",[null]],"closeFlyout"]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","flyout-control-panel"],["flush-element"],["text","\\n  "],["append",["helper",["control-panel"],null,[["groupingSortingState","setNameFilter","setGroupingAndSorting"],[["get",["groupingSortingState"]],["helper",["action"],[["get",[null]],"setNameFilter"],null],["helper",["action"],[["get",[null]],"setGroupingAndSorting"],null]]]],false],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","skins-grid"],["flush-element"],["text","\\n  "],["append",["helper",["skins-grid"],null,[["selectedSkinId","selectedAugments","filteredSkins","onSkinSelected"],[["get",["model","selectedSkinId"]],["get",["model","selectedAugments"]],["get",["skinsStore","filteredSkins"]],["helper",["action"],[["get",[null]],"updateSelectedSkinId"],null]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "o0H3cEpX",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\flyout-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\flyout-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\flyout-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","flyout-title"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","flyout-title-label"],["flush-element"],["append",["unknown",["tra","flyout_title_label"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","flyout-title-close"],["modifier",["action"],[["get",[null]],"closeFlyout"]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","flyout-control-panel"],["flush-element"],["text","\\n  "],["append",["helper",["control-panel"],null,[["groupingSortingState","setNameFilter","setGroupingAndSorting"],[["get",["groupingSortingState"]],["helper",["action"],[["get",[null]],"setNameFilter"],null],["helper",["action"],[["get",[null]],"setGroupingAndSorting"],null]]]],false],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","skins-grid"],["flush-element"],["text","\\n  "],["append",["helper",["skins-grid"],null,[["selectedSkinId","selectedAugments","filteredSkins","onSkinSelected"],[["get",["model","selectedSkinId"]],["get",["model","selectedAugments"]],["get",["skinsStore","filteredSkins"]],["helper",["action"],[["get",[null]],"updateSelectedSkinId"],null]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1056,7 +1056,7 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.UNOWNED_SKIN_FILTER = t.THUMBNAIL_PER_ROW = t.TENCENT_REGION_NAME = t.SPLASH_VIDEO_CONFIG = t.SORT_ORDER = t.SKIN_WITH_SKINLINE_FILTER = t.SKIN_UNLOCK_TRANSACTION_TYPE = t.SKINS_VIEWER_PAW_SOURCE = t.SKINS_VIEWER_LOC_KEY_IN_COLLECTIONS = t.SKINS_VIEWER_ASSET_BASE_PATH = t.SHOWCASE_VIEW_VIDEO_BASE_PATH = t.PARSEINT_DEFAULT_RADIX = t.OWNED_SKIN_FILTER = t.NO_SKINLINE_ID = t.DEFAULT_LOCALE = t.COUNTING_STEPS = t.COUNTING_INTERVAL = t.COLLECTION_VIEW_VIDEO_BASE_PATH = t.COLLECTION_GRID_WIDTH = t.COLLECTION_GRID_SEPARATOR_ROW_HEIGHTS = t.COLLECTION_GRID_ROW_TYPES = t.COLLECTION_GRID_OWNERSHIP_FILTERS = t.COLLECTION_GRID_LAST_PURCHASES_GROUP_ID = t.COLLECTION_GRID_HEIGHT = t.COLLECTION_GRID = t.CLIENT_RECT_PROPERTY = t.CANNOT_PURCHASE_REASONS = t.ALL_SKINLINE_ID = void 0;
+            }), t.isJadeChampion = t.UNOWNED_SKIN_FILTER = t.THUMBNAIL_PER_ROW = t.TENCENT_REGION_NAME = t.SPLASH_VIDEO_CONFIG = t.SORT_ORDER = t.SKIN_WITH_SKINLINE_FILTER = t.SKIN_UNLOCK_TRANSACTION_TYPE = t.SKINS_VIEWER_PAW_SOURCE = t.SKINS_VIEWER_LOC_KEY_IN_COLLECTIONS = t.SKINS_VIEWER_ASSET_BASE_PATH = t.SHOWCASE_VIEW_VIDEO_BASE_PATH = t.PARSEINT_DEFAULT_RADIX = t.OWNED_SKIN_FILTER = t.NO_SKINLINE_ID = t.JADE_SKIN_ID_OFFSET = t.JADE_CHAMPION_ID_OFFSET = t.DEFAULT_LOCALE = t.COUNTING_STEPS = t.COUNTING_INTERVAL = t.COLLECTION_VIEW_VIDEO_BASE_PATH = t.COLLECTION_GRID_WIDTH = t.COLLECTION_GRID_SEPARATOR_ROW_HEIGHTS = t.COLLECTION_GRID_ROW_TYPES = t.COLLECTION_GRID_OWNERSHIP_FILTERS = t.COLLECTION_GRID_LAST_PURCHASES_GROUP_ID = t.COLLECTION_GRID_HEIGHT = t.COLLECTION_GRID = t.CLIENT_RECT_PROPERTY = t.CANNOT_PURCHASE_REASONS = t.ALL_SKINLINE_ID = void 0;
             t.DEFAULT_LOCALE = "en";
             t.THUMBNAIL_PER_ROW = 4;
             t.NO_SKINLINE_ID = 0;
@@ -1200,12 +1200,15 @@
             t.SPLASH_VIDEO_CONFIG = r;
             t.TENCENT_REGION_NAME = "TENCENT";
             t.SKINS_VIEWER_PAW_SOURCE = "skinsViewer";
-            t.SKINS_VIEWER_LOC_KEY_IN_COLLECTIONS = "collections_sub_nav_skins_viewer"
+            t.SKINS_VIEWER_LOC_KEY_IN_COLLECTIONS = "collections_sub_nav_skins_viewer";
+            t.JADE_CHAMPION_ID_OFFSET = 6e4;
+            t.JADE_SKIN_ID_OFFSET = 6e7;
+            t.isJadeChampion = e => e.id >= 6e4 && e.id <= 60999
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "VyQCd+OO",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.22\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\control-panel-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.22\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\control-panel-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.22\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\control-panel-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","control-panel-text-filter"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-input",[]],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["type","maxlength","class","value","placeholder"],["search","50","control-panel-search-text",["get",["nameFilter"]],["get",["tra","control_panel_search_placeholder"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","control-panel-grouping-options"],["flush-element"],["text","\\n"],["block",["each"],[["get",["availableGroups"]]],null,1],["close-element"],["text","\\n\\n"],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","control-panel-sort-options"],["flush-element"],["text","\\n"],["block",["each"],[["get",["availableSorts"]]],[["key"],["name"]],0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["sort","selected"]],null],["dynamic-attr","value",["unknown",["sort","name"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"setSortOrder",["get",["sort"]]],null],null],["flush-element"],["append",["unknown",["sort","label"]],false],["close-element"],["text","\\n"]],"locals":["sort"]},{"statements":[["text","    "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"setGroupingKey",["get",["group","groupKey"]]],null],null],["dynamic-attr","selected",["unknown",["group","isSelected"]],null],["flush-element"],["append",["unknown",["group","name"]],false],["close-element"],["text","\\n"]],"locals":["group"]}],"hasPartials":false}',
+                id: "SlB9eAyF",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\control-panel-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\control-panel-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\control-panel-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","control-panel-text-filter"],["flush-element"],["text","\\n  "],["open-element","lol-uikit-flat-input",[]],["flush-element"],["text","\\n    "],["append",["helper",["input"],null,[["type","maxlength","class","value","placeholder"],["search","50","control-panel-search-text",["get",["nameFilter"]],["get",["tra","control_panel_search_placeholder"]]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","control-panel-grouping-options"],["flush-element"],["text","\\n"],["block",["each"],[["get",["availableGroups"]]],null,1],["close-element"],["text","\\n\\n"],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","control-panel-sort-options"],["flush-element"],["text","\\n"],["block",["each"],[["get",["availableSorts"]]],[["key"],["name"]],0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["sort","selected"]],null],["dynamic-attr","value",["unknown",["sort","name"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"setSortOrder",["get",["sort"]]],null],null],["flush-element"],["append",["unknown",["sort","label"]],false],["close-element"],["text","\\n"]],"locals":["sort"]},{"statements":[["text","    "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"setGroupingKey",["get",["group","groupKey"]]],null],null],["dynamic-attr","selected",["unknown",["group","isSelected"]],null],["flush-element"],["append",["unknown",["group","name"]],false],["close-element"],["text","\\n"]],"locals":["group"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1912,8 +1915,8 @@
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "WIboka/V",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.22\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\skins-grid-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.22\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\skins-grid-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.22\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\skins-grid-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","skins-grid-content"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "7KGtFumt",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\skins-grid-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\skins-grid-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-skins-picker\\\\src\\\\components\\\\skins-grid-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","skins-grid-content"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2017,19 +2020,28 @@
                 playerSkinInfo: E("playerChampionFullInfo", (function() {
                     const e = [],
                         t = this.get("playerChampionFullInfo");
-                    return t && t.forEach((t => {
-                        t.skins.forEach((n => {
-                            const i = [],
-                                o = n.questSkinInfo;
-                            if (o && o.tiers.length > 0) {
-                                for (let e = o.tiers.length - 1; e >= 0; e--) {
-                                    const r = o.tiers[e];
-                                    r.champOwnership = t.ownership, r.championId = t.id, r.parentSkin = n.id, i.push(r)
-                                }
-                                e.push(...i.reverse())
-                            } else n.champOwnership = t.ownership, n.championId = t.id, e.push(n)
+                    if (t) {
+                        const n = new Set;
+                        t.forEach((e => {
+                            (0, o.isJadeChampion)(e) || e.skins.forEach((e => n.add(e.id)))
+                        })), t.forEach((t => {
+                            const i = (0, o.isJadeChampion)(t),
+                                r = i ? t.id - o.JADE_CHAMPION_ID_OFFSET : t.id;
+                            t.skins.forEach((s => {
+                                if (i && n.has(s.id - o.JADE_SKIN_ID_OFFSET)) return;
+                                const a = [],
+                                    l = s.questSkinInfo;
+                                if (l && l.tiers.length > 0) {
+                                    for (let e = l.tiers.length - 1; e >= 0; e--) {
+                                        const n = l.tiers[e];
+                                        n.champOwnership = t.ownership, n.championId = r, n.parentSkin = s.id, a.push(n)
+                                    }
+                                    e.push(...a.reverse())
+                                } else s.champOwnership = t.ownership, s.championId = r, e.push(s)
+                            }))
                         }))
-                    })), e
+                    }
+                    return e
                 })),
                 skinData: E("playerSkinInfo", "playerChampionInfo", "skinsGameData", "championsById", "allStoreSkins", (function() {
                     const e = this.get("playerSkinInfo"),
@@ -2050,7 +2062,7 @@
                             skinsGameData: i,
                             championsById: n,
                             isTencentRegion: s
-                        })), this._handleDataReady(o)
+                        })).filter((e => i[e.id] || e.parentSkin && i[e.parentSkin])), this._handleDataReady(o)
                     }
                     return o
                 })),

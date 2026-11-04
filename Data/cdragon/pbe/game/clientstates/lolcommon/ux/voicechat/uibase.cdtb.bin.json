@@ -1,23 +1,224 @@
 {
-    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel": {
-        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel",
-        "Layer": 33,
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 1033,
         "__type": "UISceneData"
     },
-    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel/VCP_ShockedPoro": {
-        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel/VCP_ShockedPoro",
-        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel",
+    "{06793a8c}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PartyButton",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Elements": [
+            "{fd4cf375}",
+            "{05c40730}",
+            "{348d0a93}",
+            "{9629cf20}",
+            "{370986b5}",
+            "{404cb1b7}"
+        ],
+        "HitRegionElement": "{348d0a93}",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "{404cb1b7}"
+            ],
+            "TextElement": "{370986b5}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "{404cb1b7}"
+            ],
+            "TextElement": "{370986b5}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "{404cb1b7}"
+            ],
+            "TextElement": "{370986b5}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveStateElements": {
+            "DisplayElementList": [
+                "{404cb1b7}"
+            ],
+            "TextElement": "{370986b5}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "{404cb1b7}"
+            ],
+            "TextElement": "{370986b5}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedHoverStateElements": {
+            "DisplayElementList": [
+                "{404cb1b7}"
+            ],
+            "TextElement": "{370986b5}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "DisplayElementList": [
+                "{404cb1b7}"
+            ],
+            "TextElement": "{370986b5}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveSelectedStateElements": {
+            "DisplayElementList": [
+                "{404cb1b7}"
+            ],
+            "TextElement": "{370986b5}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SoundEvents": {
+            "MouseUpEvent": "Play_sfx_HUD_voicechat_toggle_on_click",
+            "MouseUpSelected": "Play_sfx_HUD_voicechat_toggle_off_click",
+            "__type": "UiElementGroupButtonSoundEvents"
+        },
+        "objectPath": "{06793a8c}",
+        "__type": "UiElementGroupButtonData"
+    },
+    "{05c40730}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PartyButton/VCP_PartyButton_HotkeyButton",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Elements": [
+            "{c5a8401b}",
+            "{c074447b}",
+            "{9fc8cf5c}",
+            "{5d657129}",
+            "{76901637}"
+        ],
+        "HitRegionElement": "{c5a8401b}",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "{76901637}"
+            ],
+            "TextElement": "{5d657129}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "{9fc8cf5c}"
+            ],
+            "TextElement": "{5d657129}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "{c074447b}"
+            ],
+            "TextElement": "{5d657129}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "{76901637}"
+            ],
+            "TextElement": "{5d657129}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedHoverStateElements": {
+            "DisplayElementList": [
+                "{9fc8cf5c}"
+            ],
+            "TextElement": "{5d657129}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "DisplayElementList": [
+                "{c074447b}"
+            ],
+            "TextElement": "{5d657129}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SoundEvents": {
+            "MouseUpEvent": "Play_sfx_hud_base_Generic_Button_Click",
+            "MouseUpSelected": "Play_sfx_hud_base_Generic_Button_Click",
+            "__type": "UiElementGroupButtonSoundEvents"
+        },
+        "objectPath": "{05c40730}",
+        "__type": "UiElementGroupButtonData"
+    },
+    "{348d0a93}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PartyButton/VCP_PartyButton_HitRegion",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Enabled": true,
-        "Layer": 2,
+        "Layer": 12,
         "Position": {
             "UIRect": {
                 "Position": [
-                    1096.0,
-                    870.0
+                    910.0,
+                    1044.0
                 ],
                 "Size": [
-                    110.0,
-                    105.0
+                    44.0,
+                    20.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "{370986b5}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PartyButton/VCP_PartyButton_PartyText",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 12,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    682.0,
+                    1046.0
+                ],
+                "Size": [
+                    55.0,
+                    15.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "VoiceChatPanel_Title_PartyVoice",
+        "FontDescription": "{6f221dfa}",
+        "__type": "UiElementTextData"
+    },
+    "{404cb1b7}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PartyButton/VCP_PartyButton_Icon",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    910.0,
+                    1044.0
+                ],
+                "Size": [
+                    44.0,
+                    20.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -34,25 +235,33 @@
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "TextureName": "assets/ux/menu/voicepanel_shockedporo.png",
-            "__type": "LooseUiTextureData"
+            "mTextureName": "{dff2781bf62b6870}",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                44.0,
+                0.0,
+                88.0,
+                20.0
+            ],
+            "__type": "AtlasData"
         },
         "__type": "UiElementIconData"
     },
-    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel/VCP_Backdrop": {
-        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel/VCP_Backdrop",
-        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel",
+    "{5d657129}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PartyButton/VCP_PartyButton_HotkeyButton/VCP_HotkeyButton_Text",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Enabled": true,
-        "Layer": 1,
+        "Layer": 12,
         "Position": {
             "UIRect": {
                 "Position": [
-                    1014.0,
-                    814.0
+                    741.0,
+                    1046.0
                 ],
                 "Size": [
-                    273.0,
-                    350.0
+                    54.0,
+                    16.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -66,52 +275,504 @@
                 "__type": "AnchorSingle"
             },
             "IgnoreGlobalScale": true,
-            "DisablePixelSnappingX": true,
-            "DisablePixelSnappingY": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "VoiceChatPanel_Title_Voice",
+        "FontDescription": "{628364df}",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "{76901637}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PartyButton/VCP_PartyButton_HotkeyButton/VCP_HotkeyButton_ButtonDefault",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    741.0,
+                    1046.0
+                ],
+                "Size": [
+                    54.0,
+                    16.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "{642d63059db22795}",
+            "EdgeSizesLeftRight": [
+                4.0,
+                4.0
+            ],
+            "EdgeSizesTopBottom": [
+                4.0,
+                4.0
+            ],
+            "__type": "LooseUiTextureData9Slice"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{9fc8cf5c}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PartyButton/VCP_PartyButton_HotkeyButton/VCP_HotkeyButton_ButtonHover",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 7,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    741.0,
+                    1046.0
+                ],
+                "Size": [
+                    54.0,
+                    16.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "{642d63059db22795}",
+            "EdgeSizesLeftRight": [
+                4.0,
+                4.0
+            ],
+            "EdgeSizesTopBottom": [
+                4.0,
+                4.0
+            ],
+            "__type": "LooseUiTextureData9Slice"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{c074447b}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PartyButton/VCP_PartyButton_HotkeyButton/VCP_HotkeyButton_ButtonClicked",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 8,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    741.0,
+                    1046.0
+                ],
+                "Size": [
+                    54.0,
+                    16.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "{642d63059db22795}",
+            "EdgeSizesLeftRight": [
+                4.0,
+                4.0
+            ],
+            "EdgeSizesTopBottom": [
+                4.0,
+                4.0
+            ],
+            "__type": "LooseUiTextureData9Slice"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{c5a8401b}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PartyButton/VCP_PartyButton_HotkeyButton/VCP_HotkeyButton_HitRegion",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 12,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    741.0,
+                    1044.0
+                ],
+                "Size": [
+                    54.0,
+                    20.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "{9629cf20}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PartyButton/VCP_PartyButton_DummyBackdrop",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    671.0,
+                    1030.0
+                ],
+                "Size": [
+                    291.0,
+                    48.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "Color": [
+            255,
+            255,
+            255,
+            0
+        ],
+        "TextureData": {
+            "__type": "{5eaead1a}"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{fd4cf375}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PartyButton/VCP_PartyButton_ConnectingSpinner",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 7,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    917.0,
+                    1047.0
+                ],
+                "Size": [
+                    14.0,
+                    14.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "{f37cdcf35bce28a1}",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementEffectRotatingIconData"
+    },
+    "{53eae24a}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TitleButton",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Elements": [
+            "{05d07eb3}",
+            "{c399a1bc}",
+            "{d0d6dc3f}",
+            "{d2706837}",
+            "{7e2c40c8}",
+            "{e5e95add}",
+            "{3b3596ab}",
+            "{7fdb1da6}"
+        ],
+        "HitRegionElement": "{d0d6dc3f}",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "{3b3596ab}"
+            ],
+            "TextElement": "{e5e95add}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "{7e2c40c8}"
+            ],
+            "TextElement": "{e5e95add}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "{d2706837}"
+            ],
+            "TextElement": "{e5e95add}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "{3b3596ab}"
+            ],
+            "TextElement": "{e5e95add}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedHoverStateElements": {
+            "DisplayElementList": [
+                "{7e2c40c8}"
+            ],
+            "TextElement": "{e5e95add}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "DisplayElementList": [
+                "{d2706837}"
+            ],
+            "TextElement": "{e5e95add}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SoundEvents": {
+            "MouseUpEvent": "Play_sfx_HUD_voicechat_window_open",
+            "MouseUpSelected": "Play_sfx_HUD_voicechat_window_close",
+            "__type": "UiElementGroupButtonSoundEvents"
+        },
+        "objectPath": "{53eae24a}",
+        "__type": "UiElementGroupButtonData"
+    },
+    "{05d07eb3}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TitleButton/VCP_TitleButton_Divider",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 4,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    673.0,
+                    1029.0
+                ],
+                "Size": [
+                    289.0,
+                    2.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "Color": [
+            45,
+            40,
+            30,
+            255
+        ],
+        "TextureData": {
+            "__type": "{5eaead1a}"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{7fdb1da6}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TitleButton/VCP_Self_OptionsButton",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Elements": [
+            "{1943ca83}",
+            "{d4ec4f20}",
+            "{4739b810}",
+            "{d4571437}",
+            "{6ea7ac9e}",
+            "{ef9f36d4}",
+            "{e418bb53}",
+            "{391bb51c}"
+        ],
+        "HitRegionElement": "{1943ca83}",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "{4739b810}"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "{d4571437}"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "{d4ec4f20}"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveStateElements": {
+            "DisplayElementList": [
+                "{6ea7ac9e}"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "{ef9f36d4}"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedHoverStateElements": {
+            "DisplayElementList": [
+                "{e418bb53}"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "DisplayElementList": [
+                "{391bb51c}"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveSelectedStateElements": {
+            "DisplayElementList": [
+                "{6ea7ac9e}"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "SoundEvents": {
+            "MouseUpEvent": "play_sfx_hud_base_Generic_Button_Click",
+            "MouseUpSelected": "play_sfx_hud_base_Generic_Button_Click",
+            "__type": "UiElementGroupButtonSoundEvents"
+        },
+        "objectPath": "{7fdb1da6}",
+        "__type": "UiElementGroupButtonData"
+    },
+    "{1943ca83}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TitleButton/VCP_Self_OptionsButton/VCP_SelfSlot_Option_HitRegion",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 12,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    909.0,
+                    992.0
+                ],
+                "Size": [
+                    20.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "{391bb51c}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TitleButton/VCP_Self_OptionsButton/VCP_SelfSlot_Option_OnClicked",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 8,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    909.0,
+                    992.0
+                ],
+                "Size": [
+                    20.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
             "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
             "mTextureSourceResolutionWidth": 256,
             "mTextureSourceResolutionHeight": 256,
-            "TextureUs": [
-                7.0,
-                38.0,
-                70.0,
-                103.0
+            "mTextureUV": [
+                140.0,
+                82.0,
+                160.0,
+                100.0
             ],
-            "TextureVs": [
-                155.0,
-                186.0,
-                218.0,
-                251.0
-            ],
-            "TopBottomHeights": [
-                31.0,
-                33.0
-            ],
-            "LeftRightWidths": [
-                31.0,
-                33.0
-            ],
-            "__type": "AtlasData9Slice"
+            "__type": "AtlasData"
         },
         "__type": "UiElementIconData"
     },
-    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel/VCP_DisabledMessage": {
-        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel/VCP_DisabledMessage",
-        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel",
-        "Enabled": true,
-        "Layer": 1,
+    "{4739b810}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TitleButton/VCP_Self_OptionsButton/VCP_SelfSlot_Option_OffDefault",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 6,
         "Position": {
             "UIRect": {
                 "Position": [
-                    1032.0,
-                    989.0
+                    909.0,
+                    992.0
                 ],
                 "Size": [
-                    238.0,
-                    152.0
+                    20.0,
+                    18.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -127,17 +788,596 @@
             "IgnoreGlobalScale": true,
             "__type": "UiPositionRect"
         },
-        "TRAKey": "VoiceChatPanel_Message_ParentalControlDisabled",
+        "TextureData": {
+            "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                140.0,
+                28.0,
+                160.0,
+                46.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{6ea7ac9e}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TitleButton/VCP_Self_OptionsButton/VCP_SelfSlot_Option_OffInactive",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    909.0,
+                    992.0
+                ],
+                "Size": [
+                    20.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "Color": [
+            255,
+            255,
+            255,
+            100
+        ],
+        "TextureData": {
+            "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                140.0,
+                28.0,
+                160.0,
+                46.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{d4571437}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TitleButton/VCP_Self_OptionsButton/VCP_SelfSlot_Option_OffHover",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 7,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    909.0,
+                    992.0
+                ],
+                "Size": [
+                    20.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                140.0,
+                55.0,
+                160.0,
+                73.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{d4ec4f20}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TitleButton/VCP_Self_OptionsButton/VCP_SelfSlot_Option_OffClicked",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 8,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    909.0,
+                    992.0
+                ],
+                "Size": [
+                    20.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                140.0,
+                82.0,
+                160.0,
+                100.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{e418bb53}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TitleButton/VCP_Self_OptionsButton/VCP_SelfSlot_Option_OnHover",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 7,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    909.0,
+                    992.0
+                ],
+                "Size": [
+                    20.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                140.0,
+                55.0,
+                160.0,
+                73.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{ef9f36d4}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TitleButton/VCP_Self_OptionsButton/VCP_SelfSlot_Option_OnDefault",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    909.0,
+                    992.0
+                ],
+                "Size": [
+                    20.0,
+                    18.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                140.0,
+                28.0,
+                160.0,
+                46.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{3b3596ab}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TitleButton/VCP_TitleButton_ButtonDefault",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    937.0,
+                    992.0
+                ],
+                "Size": [
+                    16.0,
+                    17.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "{dff2781bf62b6870}",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                220.0,
+                0.0,
+                236.0,
+                16.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{7e2c40c8}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TitleButton/VCP_TitleButton_ButtonHover",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 7,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    937.0,
+                    992.0
+                ],
+                "Size": [
+                    16.0,
+                    17.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "{dff2781bf62b6870}",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                236.0,
+                0.0,
+                252.0,
+                16.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{c399a1bc}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TitleButton/VCP_TitleButton_Backdrop",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    671.0,
+                    982.0
+                ],
+                "Size": [
+                    291.0,
+                    48.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "Color": [
+            255,
+            255,
+            255,
+            0
+        ],
+        "TextureData": {
+            "__type": "{5eaead1a}"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{d0d6dc3f}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TitleButton/VCP_TitleButton_HitRegion",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 12,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    937.0,
+                    992.0
+                ],
+                "Size": [
+                    16.0,
+                    17.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "{d2706837}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TitleButton/VCP_TitleButton_ButtonClicked",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 8,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    937.0,
+                    992.0
+                ],
+                "Size": [
+                    16.0,
+                    17.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "{dff2781bf62b6870}",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                220.0,
+                0.0,
+                236.0,
+                16.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{e5e95add}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TitleButton/VCP_SelfSlot_Connected_StatusText",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 12,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    681.0,
+                    994.0
+                ],
+                "Size": [
+                    128.0,
+                    16.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "VoiceChatPanel_Title_Voice",
+        "FontDescription": "{6f221dfa}",
+        "__type": "UiElementTextData"
+    },
+    "{122c7060}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_ErrorMessageGroup",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Elements": [
+            "{f7a90dd3}",
+            "{10ae4df5}",
+            "{96248eba}"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "{10ae4df5}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_ErrorMessageGroup/VCP_ErrorMessageText",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 8,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1006.0,
+                    1012.0
+                ],
+                "Size": [
+                    269.0,
+                    48.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
         "FontDescription": "UX/Fonts/Descriptions/HUD_VoiceChatPanel",
         "TextAlignmentHorizontal": 1,
         "TextAlignmentVertical": 0,
+        "HTMLStyleSheet": "UX/Fonts/CSS/StyleSheet",
         "WrappingMode": 1,
         "__type": "UiElementTextData"
     },
-    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel": {
-        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
-        "Layer": 33,
-        "__type": "UISceneData"
+    "{96248eba}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_ErrorMessageGroup/VCP_ErrorMessageHeightRef",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    996.0,
+                    1000.0
+                ],
+                "Size": [
+                    289.0,
+                    64.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "{f7a90dd3}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_ErrorMessageGroup/VCP_ErrorMessageDivider",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 4,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    996.0,
+                    1062.0
+                ],
+                "Size": [
+                    289.0,
+                    2.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "Color": [
+            45,
+            40,
+            30,
+            255
+        ],
+        "TextureData": {
+            "__type": "{5eaead1a}"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{21b3e084}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Elements": [
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton",
+            "{1aeaa4e0}",
+            "{d33390fc}",
+            "{e234fa0c}",
+            "{c9d6be72}",
+            "{88a9d471}",
+            "{60c31e02}",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider",
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton",
+            "{b0324aad}"
+        ],
+        "__type": "UiElementGroupData"
     },
     "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton",
@@ -202,8 +1442,8 @@
             "__type": "UiElementGroupButtonState"
         },
         "SoundEvents": {
-            "MouseUpEvent": "play_sfx_hud_base_Generic_Button_Click",
-            "MouseUpSelected": "play_sfx_hud_base_Generic_Button_Click",
+            "MouseUpEvent": "Play_sfx_hud_voicechat_mute",
+            "MouseUpSelected": "Play_sfx_hud_voicechat_unmute",
             "__type": "UiElementGroupButtonSoundEvents"
         },
         "objectPath": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MuteButton",
@@ -216,8 +1456,8 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1257.0,
-                    1128.0
+                    1258.0,
+                    1127.0
                 ],
                 "Size": [
                     18.0,
@@ -258,8 +1498,8 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1257.0,
-                    1128.0
+                    1258.0,
+                    1127.0
                 ],
                 "Size": [
                     18.0,
@@ -300,8 +1540,8 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1260.0,
-                    1128.0
+                    1261.0,
+                    1127.0
                 ],
                 "Size": [
                     15.0,
@@ -342,8 +1582,8 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1260.0,
-                    1128.0
+                    1261.0,
+                    1127.0
                 ],
                 "Size": [
                     15.0,
@@ -384,8 +1624,8 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1260.0,
-                    1128.0
+                    1261.0,
+                    1127.0
                 ],
                 "Size": [
                     15.0,
@@ -426,8 +1666,8 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1257.0,
-                    1128.0
+                    1258.0,
+                    1127.0
                 ],
                 "Size": [
                     18.0,
@@ -469,8 +1709,8 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1260.0,
-                    1128.0
+                    1261.0,
+                    1127.0
                 ],
                 "Size": [
                     15.0,
@@ -499,8 +1739,8 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1260.0,
-                    1128.0
+                    1261.0,
+                    1127.0
                 ],
                 "Size": [
                     15.0,
@@ -535,6 +1775,51 @@
                 28.0,
                 103.0,
                 46.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{1aeaa4e0}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_SelfSlot_Backdrop",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    995.0,
+                    1093.0
+                ],
+                "Size": [
+                    291.0,
+                    70.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "DisablePixelSnappingX": true,
+            "DisablePixelSnappingY": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "{dff2781bf62b6870}",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                97.0,
+                97.0,
+                256.0,
+                128.0
             ],
             "__type": "AtlasData"
         },
@@ -578,6 +1863,12 @@
         },
         "BarHitRegion": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_HitRegion",
         "SliderHitRegion": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_DragTarget",
+        "SoundEvents": {
+            "OnDragStartEvent": "Play_sfx_hud_voicechat_volume_click",
+            "OnDragEndEvent": "Play_sfx_hud_voicechat_volume_release",
+            "OnBarClickedEvent": "Play_sfx_hud_voicechat_volume_bar_click",
+            "__type": "UiElementGroupSliderSoundEvents"
+        },
         "__type": "UiElementGroupSliderData"
     },
     "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_MicVolumeSlider/VCP_SelfSlot_MicMeter_Backdrop": {
@@ -589,11 +1880,11 @@
             "UIRect": {
                 "Position": [
                     1056.0,
-                    1134.0
+                    1136.0
                 ],
                 "Size": [
                     190.0,
-                    5.0
+                    2.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -615,9 +1906,9 @@
             "mTextureSourceResolutionHeight": 256,
             "mTextureUV": [
                 6.0,
-                6.0,
+                7.5,
                 164.0,
-                11.0
+                9.5
             ],
             "__type": "AtlasData"
         },
@@ -631,12 +1922,12 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1233.0,
-                    1124.0
+                    1232.0,
+                    1130.0
                 ],
                 "Size": [
-                    25.0,
-                    25.0
+                    14.0,
+                    14.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -653,14 +1944,14 @@
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
+            "mTextureName": "{dff2781bf62b6870}",
             "mTextureSourceResolutionWidth": 256,
             "mTextureSourceResolutionHeight": 256,
             "mTextureUV": [
-                5.0,
-                25.0,
-                30.0,
-                50.0
+                140.0,
+                64.0,
+                172.0,
+                96.0
             ],
             "__type": "AtlasData"
         },
@@ -674,12 +1965,12 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1233.0,
-                    1124.0
+                    1232.0,
+                    1130.0
                 ],
                 "Size": [
-                    25.0,
-                    25.0
+                    14.0,
+                    14.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -696,14 +1987,14 @@
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
+            "mTextureName": "{dff2781bf62b6870}",
             "mTextureSourceResolutionWidth": 256,
             "mTextureSourceResolutionHeight": 256,
             "mTextureUV": [
-                5.0,
-                51.0,
-                30.0,
-                76.0
+                140.0,
+                64.0,
+                172.0,
+                96.0
             ],
             "__type": "AtlasData"
         },
@@ -717,12 +2008,12 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1233.0,
-                    1124.0
+                    1232.0,
+                    1130.0
                 ],
                 "Size": [
-                    25.0,
-                    25.0
+                    14.0,
+                    14.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -751,12 +2042,12 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1233.0,
-                    1124.0
+                    1232.0,
+                    1130.0
                 ],
                 "Size": [
-                    25.0,
-                    25.0
+                    14.0,
+                    14.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -773,14 +2064,14 @@
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
+            "mTextureName": "{dff2781bf62b6870}",
             "mTextureSourceResolutionWidth": 256,
             "mTextureSourceResolutionHeight": 256,
             "mTextureUV": [
-                5.0,
-                78.0,
-                30.0,
-                103.0
+                140.0,
+                64.0,
+                172.0,
+                96.0
             ],
             "__type": "AtlasData"
         },
@@ -795,11 +2086,11 @@
             "UIRect": {
                 "Position": [
                     1056.0,
-                    1134.0
+                    1136.0
                 ],
                 "Size": [
                     190.0,
-                    5.0
+                    2.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -826,11 +2117,11 @@
             "UIRect": {
                 "Position": [
                     1056.0,
-                    1134.0
+                    1136.0
                 ],
                 "Size": [
                     190.0,
-                    5.0
+                    2.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -853,9 +2144,9 @@
             "mTextureSourceResolutionHeight": 256,
             "mTextureUV": [
                 6.0,
-                16.0,
+                17.5,
                 164.0,
-                21.0
+                19.5
             ],
             "__type": "AtlasData"
         },
@@ -928,6 +2219,11 @@
             "TextElement": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton/VCP_SelfSlot_Connected_StatusTextHover",
             "__type": "UiElementGroupButtonState"
         },
+        "SoundEvents": {
+            "MouseUpEvent": "Play_sfx_HUD_voicechat_connect",
+            "MouseUpSelected": "Play_sfx_HUD_voicechat_disconnect",
+            "__type": "UiElementGroupButtonSoundEvents"
+        },
         "objectPath": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_ConnectionButton",
         "__type": "UiElementGroupButtonData"
     },
@@ -938,12 +2234,12 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1259.0,
+                    1234.0,
                     1068.0
                 ],
                 "Size": [
-                    16.0,
-                    16.0
+                    44.0,
+                    20.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -960,14 +2256,14 @@
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
+            "mTextureName": "{dff2781bf62b6870}",
             "mTextureSourceResolutionWidth": 256,
             "mTextureSourceResolutionHeight": 256,
             "mTextureUV": [
-                195.0,
-                57.0,
-                211.0,
-                73.0
+                44.0,
+                0.0,
+                88.0,
+                20.0
             ],
             "__type": "AtlasData"
         },
@@ -1013,12 +2309,12 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1259.0,
+                    1234.0,
                     1068.0
                 ],
                 "Size": [
-                    16.0,
-                    16.0
+                    44.0,
+                    20.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -1035,14 +2331,14 @@
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
+            "mTextureName": "{dff2781bf62b6870}",
             "mTextureSourceResolutionWidth": 256,
             "mTextureSourceResolutionHeight": 256,
             "mTextureUV": [
-                195.0,
-                83.0,
-                211.0,
-                99.0
+                44.0,
+                0.0,
+                88.0,
+                20.0
             ],
             "__type": "AtlasData"
         },
@@ -1055,12 +2351,12 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1259.0,
+                    1234.0,
                     1068.0
                 ],
                 "Size": [
-                    16.0,
-                    16.0
+                    44.0,
+                    20.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -1077,14 +2373,14 @@
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
+            "mTextureName": "{dff2781bf62b6870}",
             "mTextureSourceResolutionWidth": 256,
             "mTextureSourceResolutionHeight": 256,
             "mTextureUV": [
-                195.0,
-                29.0,
-                211.0,
-                45.0
+                44.0,
+                0.0,
+                88.0,
+                20.0
             ],
             "__type": "AtlasData"
         },
@@ -1184,12 +2480,12 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1259.0,
+                    1234.0,
                     1068.0
                 ],
                 "Size": [
-                    16.0,
-                    16.0
+                    44.0,
+                    20.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -1214,12 +2510,12 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1259.0,
-                    1070.0
+                    1234.0,
+                    1068.0
                 ],
                 "Size": [
-                    18.0,
-                    15.0
+                    44.0,
+                    20.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -1236,14 +2532,14 @@
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
+            "mTextureName": "{dff2781bf62b6870}",
             "mTextureSourceResolutionWidth": 256,
             "mTextureSourceResolutionHeight": 256,
             "mTextureUV": [
-                167.0,
-                30.0,
-                185.0,
-                45.0
+                0.0,
+                0.0,
+                44.0,
+                20.0
             ],
             "__type": "AtlasData"
         },
@@ -1355,12 +2651,12 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1259.0,
-                    1070.0
+                    1234.0,
+                    1068.0
                 ],
                 "Size": [
-                    18.0,
-                    15.0
+                    44.0,
+                    20.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -1377,14 +2673,14 @@
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
+            "mTextureName": "{dff2781bf62b6870}",
             "mTextureSourceResolutionWidth": 256,
             "mTextureSourceResolutionHeight": 256,
             "mTextureUV": [
-                167.0,
-                84.0,
-                185.0,
-                99.0
+                0.0,
+                0.0,
+                44.0,
+                20.0
             ],
             "__type": "AtlasData"
         },
@@ -1397,12 +2693,55 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1259.0,
-                    1070.0
+                    1234.0,
+                    1068.0
                 ],
                 "Size": [
-                    18.0,
-                    15.0
+                    44.0,
+                    20.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "{dff2781bf62b6870}",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                0.0,
+                0.0,
+                44.0,
+                20.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{60c31e02}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_SelfSlot_PortraitFrame",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 9,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1006.0,
+                    1108.0
+                ],
+                "Size": [
+                    40.0,
+                    40.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -1423,14 +2762,282 @@
             "mTextureSourceResolutionWidth": 256,
             "mTextureSourceResolutionHeight": 256,
             "mTextureUV": [
-                167.0,
-                57.0,
-                185.0,
-                72.0
+                6.0,
+                108.0,
+                46.0,
+                148.0
             ],
             "__type": "AtlasData"
         },
         "__type": "UiElementIconData"
+    },
+    "{b0324aad}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_VoiceSkinButton",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Elements": [
+            "{c43c3ad8}",
+            "{6c95fc74}",
+            "{f25186f3}"
+        ],
+        "HitRegionElement": "{c43c3ad8}",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "{6c95fc74}"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "{f25186f3}"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "{6c95fc74}"
+            ],
+            "__type": "UiElementGroupButtonState"
+        },
+        "objectPath": "{b0324aad}",
+        "__type": "UiElementGroupButtonData"
+    },
+    "{6c95fc74}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_VoiceSkinButton/VCP_Self_VoiceSkin_Default",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 13,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1211.0,
+                    1110.0
+                ],
+                "Size": [
+                    14.0,
+                    14.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "{2f4d865bcb5fab9f}",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{c43c3ad8}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_VoiceSkinButton/VCP_Self_VoiceSkin_HitRegion",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 13,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1211.0,
+                    1110.0
+                ],
+                "Size": [
+                    14.0,
+                    14.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "{f25186f3}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_Self_VoiceSkinButton/VCP_Self_VoiceSkin_Hover",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 13,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1211.0,
+                    1110.0
+                ],
+                "Size": [
+                    14.0,
+                    14.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "{dfba109db875e1a1}",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{88a9d471}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_SelfSlot_Portrait",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 7,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1011.0,
+                    1113.0
+                ],
+                "Size": [
+                    30.0,
+                    30.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{c9d6be72}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_SelfSlot_NameText",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 12,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1055.0,
+                    1109.0
+                ],
+                "Size": [
+                    152.0,
+                    16.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "{51c8eeb4}",
+        "WrappingMode": 4,
+        "__type": "UiElementTextData"
+    },
+    "{d33390fc}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_SelfSlot_Halo",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 8,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1006.0,
+                    1108.0
+                ],
+                "Size": [
+                    40.0,
+                    40.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                160.0,
+                108.0,
+                200.0,
+                148.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{e234fa0c}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/SelfSlot/VCP_SelfSlot_MeterText",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 12,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1217.0,
+                    1109.0
+                ],
+                "Size": [
+                    28.0,
+                    15.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/HUD_VoiceChatPanel",
+        "TextAlignmentHorizontal": 2,
+        "__type": "UiElementTextData"
     },
     "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_P0": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_P0",
@@ -1539,8 +3146,8 @@
             "__type": "UiElementGroupButtonState"
         },
         "SoundEvents": {
-            "MouseUpEvent": "play_sfx_hud_base_Generic_Button_Click",
-            "MouseUpSelected": "play_sfx_hud_base_Generic_Button_Click",
+            "MouseUpEvent": "Play_sfx_hud_voicechat_mute",
+            "MouseUpSelected": "Play_sfx_hud_voicechat_unmute",
             "__type": "UiElementGroupButtonSoundEvents"
         },
         "objectPath": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_P0/VCP_P0_MuteButton",
@@ -1584,6 +3191,12 @@
         },
         "BarHitRegion": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_P0/VCP_P0_VolumeMeter/VCP_P0_VolumeMeter_BarHitRegion",
         "SliderHitRegion": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_P0/VCP_P0_VolumeMeter/VCP_P0_VolumeMeter_DragTarget",
+        "SoundEvents": {
+            "OnDragStartEvent": "Play_sfx_hud_voicechat_volume_click",
+            "OnDragEndEvent": "Play_sfx_hud_voicechat_volume_release",
+            "OnBarClickedEvent": "Play_sfx_hud_voicechat_volume_bar_click",
+            "__type": "UiElementGroupSliderSoundEvents"
+        },
         "__type": "UiElementGroupSliderData"
     },
     "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_P0/VCP_P0_VolumeMeter/VCP_P0_VolumeMeter_DragTarget": {
@@ -1594,12 +3207,12 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1233.0,
-                    1023.0
+                    1232.0,
+                    1028.0
                 ],
                 "Size": [
-                    25.0,
-                    25.0
+                    14.0,
+                    14.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -1629,11 +3242,11 @@
             "UIRect": {
                 "Position": [
                     1056.0,
-                    1033.0
+                    1034.0
                 ],
                 "Size": [
                     190.0,
-                    5.0
+                    2.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -1671,12 +3284,12 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1233.0,
-                    1023.0
+                    1232.0,
+                    1028.0
                 ],
                 "Size": [
-                    25.0,
-                    25.0
+                    14.0,
+                    14.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -1693,14 +3306,14 @@
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
+            "mTextureName": "{dff2781bf62b6870}",
             "mTextureSourceResolutionWidth": 256,
             "mTextureSourceResolutionHeight": 256,
             "mTextureUV": [
-                5.0,
-                25.0,
-                30.0,
-                50.0
+                140.0,
+                64.0,
+                172.0,
+                96.0
             ],
             "__type": "AtlasData"
         },
@@ -1715,11 +3328,11 @@
             "UIRect": {
                 "Position": [
                     1056.0,
-                    1033.0
+                    1034.0
                 ],
                 "Size": [
                     190.0,
-                    5.0
+                    2.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -1745,12 +3358,12 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1233.0,
-                    1023.0
+                    1232.0,
+                    1028.0
                 ],
                 "Size": [
-                    25.0,
-                    25.0
+                    14.0,
+                    14.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -1767,14 +3380,14 @@
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
+            "mTextureName": "{dff2781bf62b6870}",
             "mTextureSourceResolutionWidth": 256,
             "mTextureSourceResolutionHeight": 256,
             "mTextureUV": [
-                5.0,
-                78.0,
-                30.0,
-                103.0
+                140.0,
+                64.0,
+                172.0,
+                96.0
             ],
             "__type": "AtlasData"
         },
@@ -1788,12 +3401,12 @@
         "Position": {
             "UIRect": {
                 "Position": [
-                    1233.0,
-                    1023.0
+                    1232.0,
+                    1028.0
                 ],
                 "Size": [
-                    25.0,
-                    25.0
+                    14.0,
+                    14.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -1810,14 +3423,14 @@
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
+            "mTextureName": "{dff2781bf62b6870}",
             "mTextureSourceResolutionWidth": 256,
             "mTextureSourceResolutionHeight": 256,
             "mTextureUV": [
-                5.0,
-                51.0,
-                30.0,
-                76.0
+                140.0,
+                64.0,
+                172.0,
+                96.0
             ],
             "__type": "AtlasData"
         },
@@ -1832,11 +3445,11 @@
             "UIRect": {
                 "Position": [
                     1056.0,
-                    1033.0
+                    1034.0
                 ],
                 "Size": [
                     190.0,
-                    5.0
+                    2.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -2272,7 +3885,7 @@
             "IgnoreGlobalScale": true,
             "__type": "UiPositionRect"
         },
-        "FontDescription": "UX/Fonts/Descriptions/HUD_VoiceChatPanel",
+        "FontDescription": "{51c8eeb4}",
         "WrappingMode": 4,
         "__type": "UiElementTextData"
     },
@@ -2318,33 +3931,73 @@
         },
         "__type": "UiElementIconData"
     },
-    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PlayerGrid": {
-        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PlayerGrid",
+    "{3ebe3426}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_MergedMemberButton",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Elements": [
-            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PlayerGrid/VCP_PlayerGridRegion"
+            "{1edd4f06}",
+            "{b218e3f1}",
+            "{a627f3c7}",
+            "{388ec4a4}",
+            "{21ddfded}"
         ],
-        "Region": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PlayerGrid/VCP_PlayerGridRegion",
-        "LayoutStyle": {
-            "VerticalJustification": 2,
-            "__type": "LayoutStyleVerticalList"
+        "HitRegionElement": "{b218e3f1}",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "{21ddfded}"
+            ],
+            "TextElement": "{388ec4a4}",
+            "__type": "UiElementGroupButtonState"
         },
-        "__type": "UiElementGroupManagedLayoutData"
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "{21ddfded}"
+            ],
+            "TextElement": "{388ec4a4}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "{21ddfded}"
+            ],
+            "TextElement": "{388ec4a4}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "{21ddfded}"
+            ],
+            "TextElement": "{388ec4a4}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedHoverStateElements": {
+            "TextElement": "{388ec4a4}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "TextElement": "{388ec4a4}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SoundEvents": {
+            "__type": "UiElementGroupButtonSoundEvents"
+        },
+        "objectPath": "{3ebe3426}",
+        "__type": "UiElementGroupButtonData"
     },
-    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/Self/VCP_SelfSlot_Backdrop": {
-        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/Self/VCP_SelfSlot_Backdrop",
+    "{1edd4f06}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_MergedMemberButton/VCP_MergedMemberButton_Backdrop",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Enabled": true,
-        "Layer": 2,
+        "Layer": 3,
         "Position": {
             "UIRect": {
                 "Position": [
-                    995.0,
-                    1093.0
+                    671.0,
+                    948.0
                 ],
                 "Size": [
                     291.0,
-                    70.0
+                    34.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -2358,70 +4011,35 @@
                 "__type": "AnchorSingle"
             },
             "IgnoreGlobalScale": true,
-            "DisablePixelSnappingX": true,
-            "DisablePixelSnappingY": true,
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
+            "mTextureName": "{dff2781bf62b6870}",
             "mTextureSourceResolutionWidth": 256,
             "mTextureSourceResolutionHeight": 256,
             "mTextureUV": [
-                169.0,
-                6.0,
-                173.0,
-                10.0
+                0.0,
+                192.0,
+                160.0,
+                214.0
             ],
             "__type": "AtlasData"
         },
         "__type": "UiElementIconData"
     },
-    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/Self/VCP_SelfSlot_NameText": {
-        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/Self/VCP_SelfSlot_NameText",
+    "{21ddfded}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_MergedMemberButton/VCP_MergedMemberButton_ButtonDefault",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
-        "Enabled": true,
-        "Layer": 12,
+        "Layer": 6,
         "Position": {
             "UIRect": {
                 "Position": [
-                    1055.0,
-                    1109.0
+                    682.0,
+                    953.0
                 ],
                 "Size": [
-                    152.0,
-                    16.0
-                ],
-                "SourceResolutionWidth": 1600,
-                "SourceResolutionHeight": 1200,
-                "__type": "UiElementRect"
-            },
-            "Anchors": {
-                "Anchor": [
-                    1.0,
-                    1.0
-                ],
-                "__type": "AnchorSingle"
-            },
-            "IgnoreGlobalScale": true,
-            "__type": "UiPositionRect"
-        },
-        "FontDescription": "UX/Fonts/Descriptions/HUD_VoiceChatPanel",
-        "WrappingMode": 4,
-        "__type": "UiElementTextData"
-    },
-    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/Self/VCP_SelfSlot_Halo": {
-        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/Self/VCP_SelfSlot_Halo",
-        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
-        "Layer": 8,
-        "Position": {
-            "UIRect": {
-                "Position": [
-                    1006.0,
-                    1108.0
-                ],
-                "Size": [
-                    40.0,
-                    40.0
+                    41.0,
+                    24.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -2438,32 +4056,32 @@
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
+            "mTextureName": "{dff2781bf62b6870}",
             "mTextureSourceResolutionWidth": 256,
             "mTextureSourceResolutionHeight": 256,
             "mTextureUV": [
                 160.0,
-                108.0,
+                192.0,
                 200.0,
-                148.0
+                216.0
             ],
             "__type": "AtlasData"
         },
         "__type": "UiElementIconData"
     },
-    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/Self/VCP_SelfSlot_MeterText": {
-        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/Self/VCP_SelfSlot_MeterText",
+    "{388ec4a4}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_MergedMemberButton/VCP_MergedMemberButton_PlayerNamesText",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Enabled": true,
         "Layer": 12,
         "Position": {
             "UIRect": {
                 "Position": [
-                    1217.0,
-                    1109.0
+                    731.0,
+                    957.0
                 ],
                 "Size": [
-                    28.0,
+                    128.0,
                     15.0
                 ],
                 "SourceResolutionWidth": 1600,
@@ -2480,24 +4098,24 @@
             "IgnoreGlobalScale": true,
             "__type": "UiPositionRect"
         },
-        "FontDescription": "UX/Fonts/Descriptions/HUD_VoiceChatPanel",
-        "TextAlignmentHorizontal": 2,
+        "TRAKey": "VoiceChatPanel_Title_Voice",
+        "FontDescription": "{51c8eeb4}",
         "__type": "UiElementTextData"
     },
-    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/Self/VCP_SelfSlot_Portrait": {
-        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/Self/VCP_SelfSlot_Portrait",
+    "{a627f3c7}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_MergedMemberButton/VCP_MergedMemberButton_PlayerCountText",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Enabled": true,
-        "Layer": 7,
+        "Layer": 12,
         "Position": {
             "UIRect": {
                 "Position": [
-                    1011.0,
-                    1113.0
+                    705.0,
+                    958.0
                 ],
                 "Size": [
-                    30.0,
-                    30.0
+                    10.0,
+                    15.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -2513,22 +4131,132 @@
             "IgnoreGlobalScale": true,
             "__type": "UiPositionRect"
         },
-        "__type": "UiElementIconData"
+        "TRAKey": "VoiceChatPanel_Title_Voice",
+        "FontDescription": "{51c8eeb4}",
+        "__type": "UiElementTextData"
     },
-    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/Self/VCP_SelfSlot_PortraitFrame": {
-        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/Self/VCP_SelfSlot_PortraitFrame",
+    "{b218e3f1}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_MergedMemberButton/VCP_MergedMemberButton_HitRegion",
         "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
         "Enabled": true,
-        "Layer": 9,
+        "Layer": 12,
         "Position": {
             "UIRect": {
                 "Position": [
-                    1006.0,
-                    1108.0
+                    682.0,
+                    953.0
                 ],
                 "Size": [
-                    40.0,
-                    40.0
+                    41.0,
+                    24.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "{3f9c6041}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TeamButton",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Elements": [
+            "{7d68e239}",
+            "{e38a3eb2}",
+            "{4cd643af}",
+            "{8e8afc84}",
+            "{89c73c68}",
+            "{248e88c3}",
+            "{7fbca3e3}"
+        ],
+        "HitRegionElement": "{4cd643af}",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "{248e88c3}"
+            ],
+            "TextElement": "{89c73c68}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "{248e88c3}"
+            ],
+            "TextElement": "{89c73c68}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "{248e88c3}"
+            ],
+            "TextElement": "{89c73c68}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveStateElements": {
+            "DisplayElementList": [
+                "{248e88c3}"
+            ],
+            "TextElement": "{89c73c68}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "{248e88c3}"
+            ],
+            "TextElement": "{89c73c68}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedHoverStateElements": {
+            "DisplayElementList": [
+                "{248e88c3}"
+            ],
+            "TextElement": "{89c73c68}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "DisplayElementList": [
+                "{248e88c3}"
+            ],
+            "TextElement": "{89c73c68}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveSelectedStateElements": {
+            "DisplayElementList": [
+                "{248e88c3}"
+            ],
+            "TextElement": "{89c73c68}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SoundEvents": {
+            "MouseUpEvent": "Play_sfx_HUD_voicechat_toggle_on_click",
+            "MouseUpSelected": "Play_sfx_HUD_voicechat_toggle_off_click",
+            "__type": "UiElementGroupButtonSoundEvents"
+        },
+        "objectPath": "{3f9c6041}",
+        "__type": "UiElementGroupButtonData"
+    },
+    "{248e88c3}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TeamButton/VCP_TeamButton_Icon",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 8,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    910.0,
+                    1094.0
+                ],
+                "Size": [
+                    44.0,
+                    20.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -2545,18 +4273,503 @@
             "__type": "UiPositionRect"
         },
         "TextureData": {
-            "mTextureName": "assets/ux/menu/voicepanelatlas.tex",
+            "mTextureName": "{dff2781bf62b6870}",
             "mTextureSourceResolutionWidth": 256,
             "mTextureSourceResolutionHeight": 256,
             "mTextureUV": [
-                6.0,
-                108.0,
-                46.0,
-                148.0
+                44.0,
+                0.0,
+                88.0,
+                20.0
             ],
             "__type": "AtlasData"
         },
         "__type": "UiElementIconData"
+    },
+    "{4cd643af}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TeamButton/VCP_TeamButton_HitRegion",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 12,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    910.0,
+                    1094.0
+                ],
+                "Size": [
+                    44.0,
+                    20.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "{e38a3eb2}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TeamButton/VCP_HotkeyButton",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Elements": [
+            "{a4f7d6e1}",
+            "{80874ff9}",
+            "{8123f152}",
+            "{e99abf73}",
+            "{56a19a3d}"
+        ],
+        "HitRegionElement": "{a4f7d6e1}",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "{56a19a3d}"
+            ],
+            "TextElement": "{e99abf73}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "{8123f152}"
+            ],
+            "TextElement": "{e99abf73}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "{80874ff9}"
+            ],
+            "TextElement": "{e99abf73}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedStateElements": {
+            "DisplayElementList": [
+                "{56a19a3d}"
+            ],
+            "TextElement": "{e99abf73}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedHoverStateElements": {
+            "DisplayElementList": [
+                "{8123f152}"
+            ],
+            "TextElement": "{e99abf73}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SelectedClickedStateElements": {
+            "DisplayElementList": [
+                "{80874ff9}"
+            ],
+            "TextElement": "{e99abf73}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "SoundEvents": {
+            "MouseUpEvent": "play_sfx_hud_base_Generic_Button_Click",
+            "MouseUpSelected": "play_sfx_hud_base_Generic_Button_Click",
+            "__type": "UiElementGroupButtonSoundEvents"
+        },
+        "objectPath": "{e38a3eb2}",
+        "__type": "UiElementGroupButtonData"
+    },
+    "{56a19a3d}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TeamButton/VCP_HotkeyButton/VCP_HotkeyButton_ButtonDefault",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    741.0,
+                    1096.0
+                ],
+                "Size": [
+                    54.0,
+                    16.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "{642d63059db22795}",
+            "EdgeSizesLeftRight": [
+                4.0,
+                4.0
+            ],
+            "EdgeSizesTopBottom": [
+                4.0,
+                4.0
+            ],
+            "__type": "LooseUiTextureData9Slice"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{80874ff9}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TeamButton/VCP_HotkeyButton/VCP_HotkeyButton_ButtonClicked",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 8,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    741.0,
+                    1096.0
+                ],
+                "Size": [
+                    54.0,
+                    16.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "{642d63059db22795}",
+            "EdgeSizesLeftRight": [
+                4.0,
+                4.0
+            ],
+            "EdgeSizesTopBottom": [
+                4.0,
+                4.0
+            ],
+            "__type": "LooseUiTextureData9Slice"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{8123f152}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TeamButton/VCP_HotkeyButton/VCP_HotkeyButton_ButtonHover",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 7,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    741.0,
+                    1096.0
+                ],
+                "Size": [
+                    54.0,
+                    16.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "{642d63059db22795}",
+            "EdgeSizesLeftRight": [
+                4.0,
+                4.0
+            ],
+            "EdgeSizesTopBottom": [
+                4.0,
+                4.0
+            ],
+            "__type": "LooseUiTextureData9Slice"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{a4f7d6e1}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TeamButton/VCP_HotkeyButton/VCP_HotkeyButton_HitRegion",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 12,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    741.0,
+                    1094.0
+                ],
+                "Size": [
+                    54.0,
+                    20.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "{e99abf73}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TeamButton/VCP_HotkeyButton/VCP_HotkeyButton_Text",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 12,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    741.0,
+                    1096.0
+                ],
+                "Size": [
+                    54.0,
+                    16.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "VoiceChatPanel_Title_Voice",
+        "FontDescription": "{628364df}",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "{7d68e239}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TeamButton/VCP_TeamButton_ConnectingSpinner",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Layer": 9,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    917.0,
+                    1097.0
+                ],
+                "Size": [
+                    14.0,
+                    14.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "{f37cdcf35bce28a1}",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementEffectRotatingIconData"
+    },
+    "{7fbca3e3}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TeamButton/VCP_TeamButton_Divider",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 4,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    682.0,
+                    1080.0
+                ],
+                "Size": [
+                    272.0,
+                    2.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "Color": [
+            65,
+            60,
+            60,
+            255
+        ],
+        "TextureData": {
+            "__type": "{5eaead1a}"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{89c73c68}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TeamButton/VCP_TeamButton_TeamText",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 12,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    682.0,
+                    1096.0
+                ],
+                "Size": [
+                    55.0,
+                    15.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "VoiceChatPanel_Title_TeamVoice",
+        "FontDescription": "{6f221dfa}",
+        "__type": "UiElementTextData"
+    },
+    "{8e8afc84}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_TeamButton/VCP_TeamButton_DummyBackdrop",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Enabled": true,
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    671.0,
+                    1080.0
+                ],
+                "Size": [
+                    291.0,
+                    48.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "Color": [
+            255,
+            255,
+            255,
+            0
+        ],
+        "TextureData": {
+            "__type": "{5eaead1a}"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PlayerGrid": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PlayerGrid",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Elements": [
+            "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PlayerGrid/VCP_PlayerGridRegion"
+        ],
+        "Region": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PlayerGrid/VCP_PlayerGridRegion",
+        "LayoutStyle": {
+            "VerticalJustification": 2,
+            "__type": "LayoutStyleVerticalList"
+        },
+        "__type": "UiElementGroupManagedLayoutData"
+    },
+    "{d1bf1818}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PlayerGridTeamVoiceChat",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Elements": [
+            "{6f4da9c2}"
+        ],
+        "Region": "{6f4da9c2}",
+        "LayoutStyle": {
+            "VerticalJustification": 2,
+            "__type": "LayoutStyleVerticalList"
+        },
+        "__type": "UiElementGroupManagedLayoutData"
+    },
+    "{6f4da9c2}": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PlayerGridTeamVoiceChat/VCP_PlayerGridRegion",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    995.0,
+                    1059.0
+                ],
+                "Size": [
+                    291.0,
+                    34.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
     },
     "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_BackdropConnectedHeightRef": {
         "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_BackdropConnectedHeightRef",
@@ -2600,7 +4813,135 @@
                 ],
                 "Size": [
                     293.0,
-                    109.0
+                    108.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "DisablePixelSnappingX": true,
+            "DisablePixelSnappingY": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "{dff2781bf62b6870}",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "TextureUs": [
+                0.0,
+                31.0,
+                63.0,
+                96.0
+            ],
+            "TextureVs": [
+                96.0,
+                127.0,
+                159.0,
+                192.0
+            ],
+            "TopBottomHeights": [
+                31.0,
+                33.0
+            ],
+            "LeftRightWidths": [
+                31.0,
+                33.0
+            ],
+            "__type": "AtlasData9Slice"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PlayerGrid/VCP_PlayerGridRegion": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PlayerGrid/VCP_PlayerGridRegion",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    995.0,
+                    1000.0
+                ],
+                "Size": [
+                    291.0,
+                    49.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel",
+        "Layer": 33,
+        "__type": "UISceneData"
+    },
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel/VCP_ShockedPoro": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel/VCP_ShockedPoro",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1096.0,
+                    870.0
+                ],
+                "Size": [
+                    110.0,
+                    105.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "assets/ux/menu/voicepanel_shockedporo.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel/VCP_Backdrop": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel/VCP_Backdrop",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel",
+        "Enabled": true,
+        "Layer": 1,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1014.0,
+                    814.0
+                ],
+                "Size": [
+                    273.0,
+                    350.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -2646,18 +4987,20 @@
         },
         "__type": "UiElementIconData"
     },
-    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PlayerGrid/VCP_PlayerGridRegion": {
-        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_PlayerGrid/VCP_PlayerGridRegion",
-        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
+    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel/VCP_DisabledMessage": {
+        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel/VCP_DisabledMessage",
+        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/DisabledPanel",
+        "Enabled": true,
+        "Layer": 1,
         "Position": {
             "UIRect": {
                 "Position": [
-                    995.0,
-                    1000.0
+                    1032.0,
+                    989.0
                 ],
                 "Size": [
-                    291.0,
-                    49.0
+                    238.0,
+                    152.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -2673,39 +5016,10 @@
             "IgnoreGlobalScale": true,
             "__type": "UiPositionRect"
         },
-        "__type": "UiElementRegionData"
-    },
-    "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_ErrorMessageText": {
-        "name": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel/VCP_ErrorMessageText",
-        "Scene": "ClientStates/LoLCommon/UX/VoiceChat/UIBase/VoiceChatPanel",
-        "Layer": 8,
-        "Position": {
-            "UIRect": {
-                "Position": [
-                    1006.0,
-                    1000.0
-                ],
-                "Size": [
-                    269.0,
-                    49.0
-                ],
-                "SourceResolutionWidth": 1600,
-                "SourceResolutionHeight": 1200,
-                "__type": "UiElementRect"
-            },
-            "Anchors": {
-                "Anchor": [
-                    1.0,
-                    1.0
-                ],
-                "__type": "AnchorSingle"
-            },
-            "IgnoreGlobalScale": true,
-            "__type": "UiPositionRect"
-        },
+        "TRAKey": "VoiceChatPanel_Message_ParentalControlDisabled",
         "FontDescription": "UX/Fonts/Descriptions/HUD_VoiceChatPanel",
         "TextAlignmentHorizontal": 1,
-        "HTMLStyleSheet": "UX/Fonts/CSS/StyleSheet",
+        "TextAlignmentVertical": 0,
         "WrappingMode": 1,
         "__type": "UiElementTextData"
     },

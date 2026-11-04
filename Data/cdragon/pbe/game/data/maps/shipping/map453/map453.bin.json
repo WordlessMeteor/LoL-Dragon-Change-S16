@@ -20663,7 +20663,10 @@
             "evtPracticeToolDec10Resistance": "[]",
             "evtChatModeReturnPressed": "[]",
             "evtOpenChat": "[]",
-            "evtOpenChatAll": "[]"
+            "evtOpenChatAll": "[]",
+            "evtPushToTalk": "[]",
+            "evtPushToTalkTeam": "[]",
+            "evtShowVoicePanel": "[]"
         },
         "{911d1120}": true,
         "__type": "{5a92b195}"
@@ -20958,7 +20961,10 @@
                 "evtNormalCastRoleBound": "[]",
                 "evtChatModeReturnPressed": "[]",
                 "evtOpenChat": "[]",
-                "evtOpenChatAll": "[]"
+                "evtOpenChatAll": "[]",
+                "evtPushToTalk": "[]",
+                "evtPushToTalkTeam": "[]",
+                "evtShowVoicePanel": "[]"
             },
             "__type": "{5a92b195}"
         },
@@ -23243,11 +23249,13 @@
             "Characters/Jade_Shyvana",
             "Characters/Jade_XinZhao",
             "{110c9a15}",
+            "{e9a0a873}",
             "{bedf231f}",
             "Characters/Jade_Graves",
             "Characters/Jade_Nami",
             "Characters/Jade_Nautilus",
             "Characters/Jade_Fizz",
+            "{12616560}",
             "{a8009f85}",
             "{8cdcd387}",
             "{0bda2162}",
@@ -23257,7 +23265,9 @@
             "{e8ae00fa}",
             "{69dc7521}",
             "{f727914b}",
-            "{1240ac8f}"
+            "{1240ac8f}",
+            "{b5340d57}",
+            "{4a348237}"
         ],
         "__type": "GameModeChampionList"
     },
@@ -25435,7 +25445,10 @@
                 "evtNormalCastRoleBound": "[]",
                 "evtChatModeReturnPressed": "[]",
                 "evtOpenChat": "[]",
-                "evtOpenChatAll": "[]"
+                "evtOpenChatAll": "[]",
+                "evtPushToTalk": "[]",
+                "evtPushToTalkTeam": "[]",
+                "evtShowVoicePanel": "[]"
             },
             "__type": "{5a92b195}"
         },
@@ -25691,7 +25704,10 @@
             "evtPracticeToolDec10Resistance": "[]",
             "evtChatModeReturnPressed": "[]",
             "evtOpenChat": "[]",
-            "evtOpenChatAll": "[]"
+            "evtOpenChatAll": "[]",
+            "evtPushToTalk": "[]",
+            "evtPushToTalkTeam": "[]",
+            "evtShowVoicePanel": "[]"
         },
         "{911d1120}": true,
         "__type": "{5a92b195}"
@@ -28104,6 +28120,37 @@
                     "Play_sfx_Emotes_Happy_Poro_01",
                     "Play_sfx_Emotes_Happy_Poro_02",
                     "Play_sfx_Emotes_Taunt_Poro_01"
+                ],
+                "__type": "BankUnit"
+            },
+            {
+                "name": "HUD_VoiceChat",
+                "bankPath": [
+                    "ASSETS/Sounds/Wwise2016/SFX/Shared/HUD_VoiceChat_audio.bnk",
+                    "ASSETS/Sounds/Wwise2016/SFX/Shared/HUD_VoiceChat_events.bnk"
+                ],
+                "events": [
+                    "Play_sfx_HUD_voicechat_connect",
+                    "Play_sfx_HUD_voicechat_disconnect",
+                    "Play_sfx_HUD_voicechat_mute",
+                    "Play_sfx_HUD_voicechat_party_channel_connect",
+                    "Play_sfx_HUD_voicechat_party_channel_disconnect",
+                    "Play_sfx_HUD_voicechat_party_ptt",
+                    "Play_sfx_HUD_voicechat_party_ptt_denied",
+                    "Play_sfx_HUD_voicechat_party_ptt_release",
+                    "Play_sfx_HUD_voicechat_team_channel_connect",
+                    "Play_sfx_HUD_voicechat_team_channel_disconnect",
+                    "Play_sfx_HUD_voicechat_team_ptt",
+                    "Play_sfx_HUD_voicechat_team_ptt_denied",
+                    "Play_sfx_HUD_voicechat_team_ptt_release",
+                    "Play_sfx_HUD_voicechat_toggle_off_click",
+                    "Play_sfx_HUD_voicechat_toggle_on_click",
+                    "Play_sfx_HUD_voicechat_unmute",
+                    "Play_sfx_HUD_voicechat_volume_bar_click",
+                    "Play_sfx_HUD_voicechat_volume_click",
+                    "Play_sfx_HUD_voicechat_volume_release",
+                    "Play_sfx_HUD_voicechat_window_close",
+                    "Play_sfx_HUD_voicechat_window_open"
                 ],
                 "__type": "BankUnit"
             }
@@ -73602,7 +73649,7 @@
         "TriggerValue": 500,
         "Counter": "{18fc8109}",
         "properties": [
-            "{f6af4f5a}"
+            "EventHub/2026_Classic_Pass_S3A2_TokenBank/RewardGroups/2026_Classic_Pass_S3A2_Token_50"
         ],
         "__type": "MilestoneDefinition"
     },
@@ -73613,7 +73660,7 @@
         "TriggerValue": 400,
         "Counter": "{18fc8109}",
         "properties": [
-            "{f6af4f5a}"
+            "EventHub/2026_Classic_Pass_S3A2_TokenBank/RewardGroups/2026_Classic_Pass_S3A2_Token_50"
         ],
         "__type": "MilestoneDefinition"
     },
@@ -73624,7 +73671,7 @@
         "TriggerValue": 450,
         "Counter": "{18fc8109}",
         "properties": [
-            "{f6af4f5a}"
+            "EventHub/2026_Classic_Pass_S3A2_TokenBank/RewardGroups/2026_Classic_Pass_S3A2_Token_50"
         ],
         "__type": "MilestoneDefinition"
     },
@@ -73635,7 +73682,7 @@
         "TriggerValue": 300,
         "Counter": "{18fc8109}",
         "properties": [
-            "{f6af4f5a}"
+            "EventHub/2026_Classic_Pass_S3A2_TokenBank/RewardGroups/2026_Classic_Pass_S3A2_Token_50"
         ],
         "__type": "MilestoneDefinition"
     },
@@ -73646,7 +73693,7 @@
         "TriggerValue": 350,
         "Counter": "{18fc8109}",
         "properties": [
-            "{f6af4f5a}"
+            "EventHub/2026_Classic_Pass_S3A2_TokenBank/RewardGroups/2026_Classic_Pass_S3A2_Token_50"
         ],
         "__type": "MilestoneDefinition"
     },
@@ -73657,7 +73704,7 @@
         "TriggerValue": 200,
         "Counter": "{18fc8109}",
         "properties": [
-            "{f6af4f5a}"
+            "EventHub/2026_Classic_Pass_S3A2_TokenBank/RewardGroups/2026_Classic_Pass_S3A2_Token_50"
         ],
         "__type": "MilestoneDefinition"
     },
@@ -73668,7 +73715,7 @@
         "TriggerValue": 250,
         "Counter": "{18fc8109}",
         "properties": [
-            "{f6af4f5a}"
+            "EventHub/2026_Classic_Pass_S3A2_TokenBank/RewardGroups/2026_Classic_Pass_S3A2_Token_50"
         ],
         "__type": "MilestoneDefinition"
     },
@@ -73679,7 +73726,7 @@
         "TriggerValue": 100,
         "Counter": "{18fc8109}",
         "properties": [
-            "{f6af4f5a}"
+            "EventHub/2026_Classic_Pass_S3A2_TokenBank/RewardGroups/2026_Classic_Pass_S3A2_Token_50"
         ],
         "__type": "MilestoneDefinition"
     },
@@ -73690,7 +73737,7 @@
         "TriggerValue": 150,
         "Counter": "{18fc8109}",
         "properties": [
-            "{f6af4f5a}"
+            "EventHub/2026_Classic_Pass_S3A2_TokenBank/RewardGroups/2026_Classic_Pass_S3A2_Token_50"
         ],
         "__type": "MilestoneDefinition"
     },
@@ -73701,7 +73748,7 @@
         "TriggerValue": 50,
         "Counter": "{18fc8109}",
         "properties": [
-            "{f6af4f5a}"
+            "EventHub/2026_Classic_Pass_S3A2_TokenBank/RewardGroups/2026_Classic_Pass_S3A2_Token_50"
         ],
         "__type": "MilestoneDefinition"
     },
@@ -73731,7 +73778,7 @@
         ],
         "__type": "ProgressTrack"
     },
-    "{f6af4f5a}": {
+    "EventHub/2026_Classic_Pass_S3A2_TokenBank/RewardGroups/2026_Classic_Pass_S3A2_Token_50": {
         "ID": "e12214f4-a32c-4ca2-aeeb-82283eb3b54b",
         "internalName": "EventHub/2026_Classic_Pass_S3A2_TokenBank/RewardGroups/2026_Classic_Pass_S3A2_Token_50",
         "LocalizedName": "rewardgroup_name_2026_Classic_Pass_S3A2_Token_50",

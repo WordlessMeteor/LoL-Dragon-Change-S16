@@ -1,0 +1,676 @@
+{
+    "id": 60091,
+    "contentId": "99a24d27-61a4-4760-9136-afd6b639dafb",
+    "relatedPrimeContentId": "b6447476-7126-4fa8-b6f3-6d1550801b0a",
+    "relatedPrimeItemId": 91,
+    "name": "Talon",
+    "alias": "Jade_Talon",
+    "title": "คมมีดในเงามืด",
+    "shortBio": "- รีเวิร์คสกิลติดตัว: การโจมตีสร้างความเสียหายมากขึ้นแก่ศัตรูที่ติดสถานะ CC<br>- สกิล Q บัฟการโจมตีครั้งถัดไปให้สร้างโบนัสความเสียหายและติดสถานะเลือดไหล<br>- สกิล E คือท่าวาร์ปที่จะใบ้และเพิ่มความเสียหายที่ทำใส่ศัตรู",
+    "isVisibleInClient": true,
+    "tacticalInfo": {
+        "style": 7,
+        "difficulty": 2,
+        "damageType": "kPhysical",
+        "attackType": "melee"
+    },
+    "playstyleInfo": {
+        "damage": 3,
+        "durability": 1,
+        "crowdControl": 1,
+        "mobility": 2,
+        "utility": 1
+    },
+    "championTagInfo": {
+        "championTagPrimary": "คล่องตัวสูง",
+        "championTagSecondary": "ความเสียหายฉับพลัน"
+    },
+    "squarePortraitPath": "/lol-game-data/assets/v1/champion-icons/60091.png",
+    "stingerSfxPath": "/lol-game-data/assets/v1/champion-sfx-audios/60091.ogg",
+    "chooseVoPath": "/lol-game-data/assets/v1/champion-choose-vo/60091.ogg",
+    "banVoPath": "/lol-game-data/assets/v1/champion-ban-vo/60091.ogg",
+    "roles": [
+        "assassin",
+        "fighter"
+    ],
+    "recommendedItemDefaults": [],
+    "skins": [
+        {
+            "id": 60091000,
+            "contentId": "d290e6b6-6f37-4e84-8eec-9ced50c918f2",
+            "relatedPrimeContentId": "d7ffba76-4ff5-412d-820c-d47f4898c02c",
+            "relatedPrimeItemId": 91000,
+            "isBase": true,
+            "name": "Talon",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/Skins/Base/Images/Jade_Talon_splash_centered_0.project_jade_talon.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/Skins/Base/Images/Jade_Talon_splash_uncentered_0.project_jade_talon.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/Skins/Base/Images/Jade_Talon_splash_tile_0.project_jade_talon.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/Skins/Base/Jade_TalonLoadScreen_0.project_jade_talon.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/Skins/Base/Jade_TalonLoadScreen_0_LE.project_jade_talon.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": null
+        }
+    ],
+    "passive": {
+        "name": "Mercy",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/HUD/Icons2D/Jade_TalonP.project_jade_talon.png",
+        "abilityVideoPath": "",
+        "abilityVideoImagePath": "",
+        "description": "การโจมตีของ Talon สร้างความเสียหายมากขึ้นแก่ศัตรูที่ได้รับผลเอฟเฟกต์หยุดการเคลื่อนที่บางอย่าง"
+    },
+    "spells": [
+        {
+            "spellKey": "q",
+            "name": "Noxian Diplomacy",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/HUD/Icons2D/Jade_TalonQ.project_jade_talon.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@Cost@ @AbilityResourceName@",
+            "cooldown": "@Cooldown@ วินาที %i:cooldown%",
+            "description": "การโจมตีครั้งถัดไปของ Talon สร้างโบนัสความเสียหาย ทำให้แชมเปี้ยนศัตรูเลือดไหล และเปิดเผยตัวพวกเขา",
+            "dynamicDescription": "การโจมตีครั้งถัดไปของ Talon ภายใน @ReadyDuration@ วินาทีจะสร้าง<physicalDamage>ความเสียหายกายภาพ @TotalAttackDamage@ หน่วย</physicalDamage><br><br>อีกทั้งการโจมตีแชมเปี้ยนจะสร้าง<physicalDamage>ความเสียหายกายภาพ @TotalBleedDamage@ หน่วย</physicalDamage>ในช่วงเวลา @BleedDuration@ วินาที และเปิดเผยตำแหน่งของพวกเขาเป็นเวลา @RevealDuration@ วินาที@SpellModifierDescriptionAppend@",
+            "range": [
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0
+            ],
+            "costCoefficients": [
+                40.0,
+                45.0,
+                50.0,
+                55.0,
+                60.0,
+                65.0
+            ],
+            "cooldownCoefficients": [
+                8.0,
+                7.0,
+                6.0,
+                5.0,
+                4.0,
+                3.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "w",
+            "name": "Rake",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/HUD/Icons2D/Jade_TalonW.project_jade_talon.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@Cost@ @AbilityResourceName@",
+            "cooldown": "@Cooldown@ วินาที %i:cooldown%",
+            "description": "Talon ขว้างใบมีดออกไปและเรียกกลับมา สร้างความเสียหายและสโลว์ศัตรูทั้งขาไปและกลับ",
+            "dynamicDescription": "Talon ขว้างใบมีดออกไปซึ่งกลับมาอย่างรวดเร็ว สร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamage@ หน่วย</physicalDamage>ทั้งขาไปและกลับ พร้อมทั้ง<status>สโลว์</status>ศัตรู <scaleBonus>@SlowAmount.0*100@%</scaleBonus> เป็นเวลา @WSlowDuration@ วินาที@SpellModifierDescriptionAppend@",
+            "range": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "costCoefficients": [
+                60.0,
+                65.0,
+                70.0,
+                75.0,
+                80.0,
+                85.0
+            ],
+            "cooldownCoefficients": [
+                10.0,
+                10.0,
+                10.0,
+                10.0,
+                10.0,
+                10.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "e",
+            "name": "Cutthroat",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/HUD/Icons2D/Jade_TalonE.project_jade_talon.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@Cost@ @AbilityResourceName@",
+            "cooldown": "@Cooldown@ วินาที %i:cooldown%",
+            "description": "Talon วาร์ปไปด้านหลังเป้าหมาย ใบ้ศัตรูและสร้างความเสียหายเพิ่มขึ้นแก่เป้าหมายเหล่านั้น",
+            "dynamicDescription": "Talon วาร์ปไปด้านหลังเป้าหมาย หากเป็นศัตรู เขาจะ<status>ใบ้</status>พวกเขาเป็นเวลา @SilenceDuration@ วินาที และสร้างความเสียหายเพิ่มขึ้น <scaleBonus>@DamageAmp.0*100@%</scaleBonus> แก่พวกเขาเป็นเวลา @AmpDuration@ วินาที@SpellModifierDescriptionAppend@",
+            "range": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "costCoefficients": [
+                35.0,
+                40.0,
+                45.0,
+                50.0,
+                55.0,
+                60.0
+            ],
+            "cooldownCoefficients": [
+                18.0,
+                16.0,
+                14.0,
+                12.0,
+                10.0,
+                8.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "r",
+            "name": "Shadow Assault",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/HUD/Icons2D/Jade_TalonR.project_jade_talon.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@Cost@ @AbilityResourceName@",
+            "cooldown": "@Cooldown@ วินาที %i:cooldown%",
+            "description": "Talon กระจายใบมีดรอบตัวและล่องหนพร้อมกับได้รับความเร็วเคลื่อนที่เพิ่มเติม ใบมีดจะย้อนกลับมาเมื่อเขาปรากฏตัวอีกครั้ง",
+            "dynamicDescription": "Talon กระจายใบมีดออกไป สร้าง<physicalDamage>ความเสียหายกายภาพ @spell.Jade_TalonR:TotalDamage@ หน่วย</physicalDamage> อีกทั้งได้รับสถานะ<keywordStealth>ล่องหน</keywordStealth>และ<speed>ความเร็วเคลื่อนที่ @spell.Jade_TalonR:MoveSpeed.0*100@%</speed> เป็นเวลา @spell.Jade_TalonR:RStealthDuration@ วินาที<br><br>เมื่อการล่องหนสิ้นสุด ใบมีดจะย้อนกลับมา สร้าง<physicalDamage>ความเสียหายกายภาพ @spell.Jade_TalonR:TotalDamage@ หน่วย</physicalDamage>อีกครั้ง<br><br><recast>กดใช้ซ้ำ</recast> โจมตี หรือใช้สกิลอื่น ๆ เพื่อยกเลิกสถานะล่องหนก่อนเวลา@SpellModifierDescriptionAppend@",
+            "range": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "costCoefficients": [
+                80.0,
+                90.0,
+                100.0,
+                110.0,
+                120.0,
+                130.0
+            ],
+            "cooldownCoefficients": [
+                75.0,
+                65.0,
+                55.0,
+                45.0,
+                35.0,
+                25.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        }
+    ]
+}

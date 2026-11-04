@@ -1,0 +1,676 @@
+{
+    "id": 60091,
+    "contentId": "99a24d27-61a4-4760-9136-afd6b639dafb",
+    "relatedPrimeContentId": "b6447476-7126-4fa8-b6f3-6d1550801b0a",
+    "relatedPrimeItemId": 91,
+    "name": "タロン",
+    "alias": "Jade_Talon",
+    "title": "将軍の懐刀",
+    "shortBio": "- P (修正後): 行動妨害効果を受けている敵への通常攻撃ダメージが増加する。<br>- Q: 次の通常攻撃を強化して追加ダメージを与え、出血効果を付与する。<br>- E: 敵をサイレンス状態にするブリンクで、対象へのダメージを増加させる。",
+    "isVisibleInClient": true,
+    "tacticalInfo": {
+        "style": 7,
+        "difficulty": 2,
+        "damageType": "kPhysical",
+        "attackType": "melee"
+    },
+    "playstyleInfo": {
+        "damage": 3,
+        "durability": 1,
+        "crowdControl": 1,
+        "mobility": 2,
+        "utility": 1
+    },
+    "championTagInfo": {
+        "championTagPrimary": "機動性",
+        "championTagSecondary": "バースト"
+    },
+    "squarePortraitPath": "/lol-game-data/assets/v1/champion-icons/60091.png",
+    "stingerSfxPath": "/lol-game-data/assets/v1/champion-sfx-audios/60091.ogg",
+    "chooseVoPath": "/lol-game-data/assets/v1/champion-choose-vo/60091.ogg",
+    "banVoPath": "/lol-game-data/assets/v1/champion-ban-vo/60091.ogg",
+    "roles": [
+        "assassin",
+        "fighter"
+    ],
+    "recommendedItemDefaults": [],
+    "skins": [
+        {
+            "id": 60091000,
+            "contentId": "d290e6b6-6f37-4e84-8eec-9ced50c918f2",
+            "relatedPrimeContentId": "d7ffba76-4ff5-412d-820c-d47f4898c02c",
+            "relatedPrimeItemId": 91000,
+            "isBase": true,
+            "name": "タロン",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/Skins/Base/Images/Jade_Talon_splash_centered_0.project_jade_talon.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/Skins/Base/Images/Jade_Talon_splash_uncentered_0.project_jade_talon.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/Skins/Base/Images/Jade_Talon_splash_tile_0.project_jade_talon.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/Skins/Base/Jade_TalonLoadScreen_0.project_jade_talon.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/Skins/Base/Jade_TalonLoadScreen_0_LE.project_jade_talon.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": null
+        }
+    ],
+    "passive": {
+        "name": "慈悲",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/HUD/Icons2D/Jade_TalonP.project_jade_talon.png",
+        "abilityVideoPath": "",
+        "abilityVideoImagePath": "",
+        "description": "通常攻撃が特定の行動妨害効果を受けている敵に対して追加ダメージを与えるようになる。"
+    },
+    "spells": [
+        {
+            "spellKey": "q",
+            "name": "ノクサスの刃",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/HUD/Icons2D/Jade_TalonQ.project_jade_talon.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@Cost@@AbilityResourceName@",
+            "cooldown": "@Cooldown@秒 %i:cooldown%",
+            "description": "次の通常攻撃で追加ダメージを与えて敵チャンピオンを出血させ、可視状態にする。",
+            "dynamicDescription": "@ReadyDuration@秒以内の次の通常攻撃が<physicalDamage>@TotalAttackDamage@の物理ダメージ</physicalDamage>を与える。<br><br>チャンピオンに命中すると、@BleedDuration@秒かけて<physicalDamage>@TotalBleedDamage@の物理ダメージ</physicalDamage>を与え、対象を@RevealDuration@秒間可視化する。@SpellModifierDescriptionAppend@",
+            "range": [
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0
+            ],
+            "costCoefficients": [
+                40.0,
+                45.0,
+                50.0,
+                55.0,
+                60.0,
+                65.0
+            ],
+            "cooldownCoefficients": [
+                8.0,
+                7.0,
+                6.0,
+                5.0,
+                4.0,
+                3.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "w",
+            "name": "飛燕手裏剣",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/HUD/Icons2D/Jade_TalonW.project_jade_talon.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@Cost@@AbilityResourceName@",
+            "cooldown": "@Cooldown@秒 %i:cooldown%",
+            "description": "ブーメランのように戻ってくる刃を投げ、行きと帰りの両方で敵にダメージを与えてスロウ効果を付与する。",
+            "dynamicDescription": "ブーメランのように素早く戻ってくる刃を投げ、行きと帰りでそれぞれ<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与え、@WSlowDuration@秒間<status>、<scaleBonus>@SlowAmount.0*100@%</scaleBonus>のスロウ効果</status>を付与する。@SpellModifierDescriptionAppend@",
+            "range": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "costCoefficients": [
+                60.0,
+                65.0,
+                70.0,
+                75.0,
+                80.0,
+                85.0
+            ],
+            "cooldownCoefficients": [
+                10.0,
+                10.0,
+                10.0,
+                10.0,
+                10.0,
+                10.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "e",
+            "name": "鉄砲玉",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/HUD/Icons2D/Jade_TalonE.project_jade_talon.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@Cost@@AbilityResourceName@",
+            "cooldown": "@Cooldown@秒 %i:cooldown%",
+            "description": "対象の背後にブリンクする。敵をサイレンス状態にして、その敵に対するダメージを増加させる。",
+            "dynamicDescription": "対象の背後にブリンクする。敵だった場合は@SilenceDuration@秒間<status>サイレンス</status>状態にして、@AmpDuration@秒間その敵へのダメージが<scaleBonus>@DamageAmp.0*100@%</scaleBonus>増加する。@SpellModifierDescriptionAppend@",
+            "range": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "costCoefficients": [
+                35.0,
+                40.0,
+                45.0,
+                50.0,
+                55.0,
+                60.0
+            ],
+            "cooldownCoefficients": [
+                18.0,
+                16.0,
+                14.0,
+                12.0,
+                10.0,
+                8.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "r",
+            "name": "シャドウアサルト",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/HUD/Icons2D/Jade_TalonR.project_jade_talon.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@Cost@@AbilityResourceName@",
+            "cooldown": "@Cooldown@秒 %i:cooldown%",
+            "description": "刃を放つとインビジブル状態になり、移動速度が増加する。彼が再出現すると刃が戻ってくる。",
+            "dynamicDescription": "刃を放ち、<physicalDamage>@spell.Jade_TalonR:TotalDamage@の物理ダメージ</physicalDamage>を与え、@spell.Jade_TalonR:RStealthDuration@秒間<keywordStealth>インビジブル状態</keywordStealth>と<speed>@spell.Jade_TalonR:MoveSpeed.0*100@%の移動速度</speed>を獲得する。<br><br>インビジブル状態が終了すると刃が戻ってきて、再び<physicalDamage>@spell.Jade_TalonR:TotalDamage@の物理ダメージ</physicalDamage>を与える。<br><br><recast>再発動</recast>、通常攻撃、またはスキルを使用すると、インビジブル状態が早く終了する。@SpellModifierDescriptionAppend@",
+            "range": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "costCoefficients": [
+                80.0,
+                90.0,
+                100.0,
+                110.0,
+                120.0,
+                130.0
+            ],
+            "cooldownCoefficients": [
+                75.0,
+                65.0,
+                55.0,
+                45.0,
+                35.0,
+                25.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        }
+    ]
+}
