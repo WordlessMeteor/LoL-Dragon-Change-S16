@@ -359,11 +359,6 @@
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
-                "TextureName": "Pattern_Mask",
-                "texturePath": "assets/shared/materials/black.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
                 "TextureName": "Pattern_01",
                 "texturePath": "assets/shared/materials/blank.tex",
                 "addressU": 1,
@@ -371,12 +366,12 @@
             },
             {
                 "TextureName": "Pattern_02",
-                "texturePath": "{022d365a4b61fd9e}",
+                "texturePath": "assets/characters/sett/skins/skin76/zoe_skin43_black_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "FBM_Texture",
-                "texturePath": "{1b96a5ae06642afa}",
+                "texturePath": "assets/characters/sett/skins/skin76/zoe_skin43_generated_noise.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -384,12 +379,12 @@
             },
             {
                 "TextureName": "Distortion_Texture",
-                "texturePath": "{1b96a5ae06642afa}",
+                "texturePath": "assets/characters/sett/skins/skin76/zoe_skin43_generated_noise.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Distortion_Texture_02",
-                "texturePath": "{022d365a4b61fd9e}",
+                "texturePath": "assets/characters/sett/skins/skin76/zoe_skin43_black_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -402,22 +397,22 @@
             },
             {
                 "TextureName": "Screen_Space_Texture",
-                "texturePath": "{022d365a4b61fd9e}",
+                "texturePath": "assets/characters/sett/skins/skin76/zoe_skin43_black_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "FlowMap_Texture",
-                "texturePath": "{022d365a4b61fd9e}",
+                "texturePath": "assets/characters/sett/skins/skin76/zoe_skin43_black_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "FlowMap_Texture_02",
-                "texturePath": "{022d365a4b61fd9e}",
+                "texturePath": "assets/characters/sett/skins/skin76/zoe_skin43_black_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Lightness_Adjustment_Texture",
-                "texturePath": "{022d365a4b61fd9e}",
+                "texturePath": "assets/characters/sett/skins/skin76/zoe_skin43_black_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -472,6 +467,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Fresnel_As_Mask_Power",
                 "value": [
@@ -1173,6 +1208,19 @@
         ],
         "switches": [
             {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_THIN_FILM",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_INNER_FRESNEL",
                 "on": false,
                 "Group": "Fresnel",
@@ -1408,7 +1456,7 @@
             },
             {
                 "TextureName": "AdditiveScrollTex",
-                "texturePath": "{5be07de3b2831e41}",
+                "texturePath": "assets/characters/sett/skins/skin76/brand_skin53_additivescroll_tx_cm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
@@ -1854,7 +1902,7 @@
         "samplerValues": [
             {
                 "TextureName": "Grid_Texture",
-                "texturePath": "{560d20910ef523d8}",
+                "texturePath": "assets/characters/sett/skins/skin76/21.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {

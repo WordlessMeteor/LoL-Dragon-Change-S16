@@ -5,8 +5,8 @@
     "relatedPrimeItemId": 91,
     "name": "Talon",
     "alias": "Jade_Talon",
-    "title": "",
-    "shortBio": "",
+    "title": "A Sombra da Lâmina",
+    "shortBio": "– P reformulada: Ataques causam mais dano a inimigos sob efeito de controle de grupo.<br>– O Q fortalece o próximo Ataque de Talon, que causará dano adicional e sangramento.<br>– O E é um teleporte que silencia e concede amplificação de dano contra inimigos.",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 7,
@@ -69,7 +69,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/HUD/Icons2D/Jade_TalonP.project_jade_talon.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Spell_TalonPassive_Jade_Summary"
+        "description": "Os Ataques de Talon causam mais dano a inimigos afetados por certos efeitos de controle de grupo."
     },
     "spells": [
         {
@@ -80,8 +80,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Spell_TalonQ_Jade_Summary",
-            "dynamicDescription": "Spell_TalonQ_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "O próximo Ataque de Talon causa dano adicional e faz com que Campeões inimigos sangrem, revelando-os.",
+            "dynamicDescription": "O próximo Ataque de Talon em até @ReadyDuration@s causará <physicalDamage>@TotalAttackDamage@ de Dano Físico</physicalDamage>.<br><br>Atingir um Campeão também causa <physicalDamage>@TotalBleedDamage@ de Dano Físico</physicalDamage> ao longo de @BleedDuration@s e o revela por @RevealDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 300.0,
                 300.0,
@@ -230,8 +230,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Spell_TalonW_Jade_Summary",
-            "dynamicDescription": "Spell_TalonW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Talon arremessa lâminas que retornam, causando dano e Lentidão aos inimigos na ida e na volta.",
+            "dynamicDescription": "Talon arremessa lâminas que retornam rapidamente, causando <physicalDamage>@TotalDamage@ de Dano Físico</physicalDamage> na ida e na volta e <scaleBonus>@SlowAmount.0*100@%</scaleBonus> de <status>Lentidão</status> por @WSlowDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -380,8 +380,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Spell_TalonE_Jade_Summary",
-            "dynamicDescription": "Spell_TalonE_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Talon teleporta-se para trás de um alvo. Ele silencia inimigos e causa mais dano contra eles.",
+            "dynamicDescription": "Talon teleporta-se para trás de um alvo. Se for um inimigo, ele o <status>Silenciará</status> por @SilenceDuration@s e causará <scaleBonus>@DamageAmp.0*100@%</scaleBonus> mais de dano a ele por @AmpDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -530,8 +530,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Spell_TalonR_Jade_Summary",
-            "dynamicDescription": "Spell_TalonR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Talon espalha lâminas e fica invisível com Velocidade de Movimento adicional. As lâminas retornam quando o Campeão reaparece.",
+            "dynamicDescription": "Talon espalha lâminas, causando <physicalDamage>@spell.Jade_TalonR:TotalDamage@ de Dano Físico</physicalDamage> e recebendo <keywordStealth>Invisibilidade</keywordStealth> e <speed>@spell.Jade_TalonR:MoveSpeed.0*100@% de Velocidade de Movimento</speed> por @spell.Jade_TalonR:RStealthDuration@s.<br><br>Quando a invisibilidade acaba, as lâminas retornam, causando <physicalDamage>@spell.Jade_TalonR:TotalDamage@ de Dano Físico</physicalDamage> novamente.<br><br><recast>Reconjure</recast>, ataque ou use uma Habilidade para encerrar a invisibilidade mais cedo.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,

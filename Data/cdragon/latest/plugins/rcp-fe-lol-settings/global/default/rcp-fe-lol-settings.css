@@ -62,6 +62,7 @@
 .lol-settings-voice-agreement .lol-settings-voice-agreement-description,
 .lol-settings-voice-input .lol-settings-voice-input-device-label,
 .lol-settings-voice-input .lol-settings-voice-input-volume-label,
+.lol-settings-voice-input .lol-settings-voice-mic-level-text,
 .lol-settings-voice-input .lol-settings-voice-noise-suppression-tooltip,
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-brand,
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-description,
@@ -1399,6 +1400,63 @@ lol-uikit-scrollable>.lol-settings-general-section-title:nth-of-type(n+2) {
     margin-top: 10px
 }
 
+.lol-settings-voice-input .lol-settings-voice-mic-level-rings {
+    align-self: flex-end;
+    flex: 0 0 40px;
+    height: 32px;
+    margin-left: 8px;
+    overflow: visible;
+    pointer-events: none;
+    position: relative;
+    width: 40px
+}
+
+.lol-settings-voice-input .lol-settings-voice-mic-level-rings .lol-settings-voice-mic-level-live,
+.lol-settings-voice-input .lol-settings-voice-mic-level-rings .lol-settings-voice-mic-level-target {
+    border-radius: 50%;
+    box-sizing: border-box;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.lol-settings-voice-input .lol-settings-voice-mic-level-rings .lol-settings-voice-mic-level-target {
+    border-color: hsla(45, 10%, 59%, .18);
+    border-style: solid;
+    box-shadow: 0 0 0 1px hsla(45, 10%, 59%, .55), inset 0 0 0 1px hsla(45, 10%, 59%, .55);
+    transition: border-color .15s ease-out, box-shadow .15s ease-out
+}
+
+.lol-settings-voice-input .lol-settings-voice-mic-level-rings .lol-settings-voice-mic-level-live {
+    border: 1px dashed #a09b8c;
+    transition: width .08s linear, height .08s linear, box-shadow .15s ease-out
+}
+
+.lol-settings-voice-input .lol-settings-voice-mic-level-rings.is-good .lol-settings-voice-mic-level-target {
+    border-color: rgba(200, 155, 60, .3);
+    box-shadow: 0 0 0 1px #c8aa6e, inset 0 0 0 1px #c8aa6e
+}
+
+.lol-settings-voice-input .lol-settings-voice-mic-level-rings.is-good .lol-settings-voice-mic-level-live {
+    border: 2px solid #c89b3c;
+    box-shadow: 0 0 6px 1px rgba(200, 155, 60, .7)
+}
+
+.lol-settings-voice-input .lol-settings-voice-mic-level-rings.is-disabled {
+    opacity: .35
+}
+
+.lol-settings-voice-input .lol-settings-voice-mic-level-text {
+    color: #a09b8c;
+    direction: ltr;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 16px;
+    margin-bottom: 10px
+}
+
 .lol-settings-voice-input .lol-settings-voice-input-device-label {
     margin-bottom: 5px
 }
@@ -1448,16 +1506,17 @@ lol-uikit-scrollable>.lol-settings-general-section-title:nth-of-type(n+2) {
 }
 
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-brand-logo {
-    background: url(/fe/lol-settings/voicemod-logo.svg) no-repeat 50%;
-    flex: 0 0 31px;
+    background: url(/fe/lol-settings/voicemod-logo.png) no-repeat 50%;
+    background-size: contain;
+    flex: 0 0 32px;
     height: 10px;
     margin-left: auto;
     margin-right: 10px;
-    width: 31px
+    width: 32px
 }
 
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-brand {
-    color: #c8aa6e
+    color: #f0e6d2
 }
 
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-description {

@@ -5,7 +5,7 @@
         "championSkinName": "MissFortuneSkin26",
         "skinParent": 21,
         "metaDataTags": "faction:bilgewater,gender:female,race:human,skinline:ruined",
-        "{c3a944e7}": {
+        "ChromaData": {
             "{7dd33afb}": 15,
             "{a2cb8e03}": {
                 "TENCENT": 1
@@ -218,6 +218,39 @@
             "__type": "CharacterHealthBarDataRecord"
         },
         "mResourceResolver": "Characters/MissFortune/Skins/Skin26/Resources",
+        "PersistentEffectConditions": [
+            {
+                "OwnerCondition": {
+                    "Spell": "Characters/MissFortune/Spells/MissFortuneViciousStrikesAbility/MissFortuneViciousStrikes",
+                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "boneName": "BUFFBONE_CSTM_WEAPON_1",
+                        "effectKey": "MissFortune_W_Buf_RWeapon",
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "boneName": "BUFFBONE_CSTM_WEAPON_3",
+                        "effectKey": "MissFortune_W_Buf_LWeapon",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "{1d59904c}": [
+                    {
+                        "boneName": "BUFFBONE_CSTM_WEAPON_1",
+                        "effectKey": "MissFortune_W_Buf_End_RWeapon",
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "boneName": "BUFFBONE_CSTM_WEAPON_3",
+                        "effectKey": "MissFortune_W_Buf_End_LWeapon",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            }
+        ],
         "objectPath": "Characters/MissFortune/Skins/Skin26",
         "__type": "SkinCharacterDataProperties"
     },

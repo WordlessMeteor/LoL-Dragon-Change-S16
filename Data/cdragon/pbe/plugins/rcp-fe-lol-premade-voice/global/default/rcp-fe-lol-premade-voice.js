@@ -2457,7 +2457,7 @@
             t.MIGRATION_VERSION_KEY = d;
             const h = e => Object.keys(e).length > 0,
                 m = e => e ? JSON.parse(JSON.stringify(e)) : e,
-                u = e => Boolean(e && e.data && 1 === e.data[d]),
+                u = e => Boolean(e && e.data && 2 === e.data[d]),
                 g = e => e && e.HUD && 1 === e.HUD["Movement Mode"] ? o.WASD : o.POINT_AND_CLICK;
             t.getControlScheme = g;
             const A = e => o.CONTROL_SCHEME_MIGRATIONS[e] || o.CONTROL_SCHEME_MIGRATIONS[o.POINT_AND_CLICK],
@@ -2525,6 +2525,7 @@
                     const h = ((e, t, n) => {
                         const [r] = n.chain, i = x(t, r), a = y(e, r);
                         if (!_(i, r) || v(a)) return [];
+                        if (0 === f(e, r.next, n.sections).length) return [r];
                         const o = k(e, n, 1);
                         return o && o.concat(r)
                     })(e, t, r);
@@ -2648,7 +2649,7 @@
                 }
                 async _recordMigration() {
                     await a.default.patchNavigationPreferences({
-                        [d]: 1
+                        [d]: 2
                     }), this._migrated = !0
                 }
                 async revert() {

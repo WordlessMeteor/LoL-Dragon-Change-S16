@@ -5,8 +5,8 @@
     "relatedPrimeItemId": 101,
     "name": "Xerath",
     "alias": "Jade_Xerath",
-    "title": "",
-    "shortBio": "",
+    "title": "O Mago Ascendente",
+    "shortBio": "– A Passiva concede armadura adicional com base no Poder de Habilidade.<br>– O Q não precisa mais canalizar.<br>– O W é uma nova Habilidade: ancora-se no lugar para receber alcance e Penetração Mágica adicionais.<br>– O E é uma nova Habilidade: causa dano e aplica uma marca em um inimigo, Atordoando-o na próxima vez que você acertar uma Habilidade.<br>– O R não imobiliza mais Xerath durante as três conjurações.",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 9,
@@ -231,7 +231,7 @@
             "cost": "Sem custo",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Xerath se imobiliza, aumentando o alcance de todas as suas Habilidades e recebendo Penetração Mágica adicional. Quando o efeito termina, a Velocidade de Movimento de Xerath aumenta brevemente.",
-            "dynamicDescription": "Spell_XerathW_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Xerath se imobiliza por até @RootDuration@s, aumentando o alcance de todas as suas Habilidades e recebendo <magicPen>@MagicPenValue@% de Penetração Mágica</magicPen>. É possível reconjurar a Habilidade ou se mover para cancelar o efeito antecipadamente.<br><br>Quando o efeito termina, Xerath recebe <speed>@MovementSpeedValue*100@% de Velocidade de Movimento</speed> por @MovementSpeedDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
                 0.0,
@@ -530,8 +530,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Spell_XerathR_Jade_Summary",
-            "dynamicDescription": "Spell_XerathR_Jade_Tooltip@SpellModifierDescriptionAppend@",
+            "description": "Xerath invoca uma explosão de energia arcana, causando Dano Mágico a todos os inimigos em uma área. Pode ser conjurada até três vezes antes de entrar em Tempo de Recarga.",
+            "dynamicDescription": "Xerath invoca uma explosão de energia arcana, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> a todos os inimigos em uma área. Pode ser conjurada até @AvailableCasts@x antes de entrar em Tempo de Recarga.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,

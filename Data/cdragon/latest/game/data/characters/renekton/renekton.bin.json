@@ -2835,12 +2835,20 @@
         },
         "__type": "SpellObject"
     },
-    "Characters/Renekton/Spells/RenekthonTyrantForm": {
-        "ObjectName": "RenekthonTyrantForm",
-        "objectPath": "Characters/Renekton/Spells/RenekthonTyrantForm",
-        "mScriptName": "RenekthonTyrantForm",
+    "{d1688f05}": {
+        "ObjectName": "RenektonDominusInputManager",
+        "objectPath": "{d1688f05}",
+        "mScriptName": "RenektonDominusInputManager",
         "mBuff": {
-            "mDescription": "game_buff_tooltip_RenektonTyrantForm",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{f4628250}": {
+        "ObjectName": "RenektonDominusInputBuffer",
+        "objectPath": "{f4628250}",
+        "mScriptName": "RenektonDominusInputBuffer",
+        "mBuff": {
             "__type": "BuffData"
         },
         "__type": "SpellObject"
@@ -3007,6 +3015,14 @@
                 ],
                 "__type": "{0a0eddc9}"
             },
+            "mSpellPassives": [
+                {
+                    "mBuff": "{d1688f05}",
+                    "mRemoveWhenOnCooldown": false,
+                    "mDisplayFlags": 0,
+                    "__type": "SpellPassiveData"
+                }
+            ],
             "mCantCancelWhileWindingUp": true,
             "castRange": [
                 20.0,
@@ -3114,6 +3130,16 @@
                 }
             ],
             "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Renekton/Spells/RenekthonTyrantForm": {
+        "ObjectName": "RenekthonTyrantForm",
+        "objectPath": "Characters/Renekton/Spells/RenekthonTyrantForm",
+        "mScriptName": "RenekthonTyrantForm",
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_RenektonTyrantForm",
+            "__type": "BuffData"
         },
         "__type": "SpellObject"
     },

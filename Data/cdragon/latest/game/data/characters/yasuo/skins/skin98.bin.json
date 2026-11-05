@@ -7644,7 +7644,7 @@
                                 "mGearIndex": 2,
                                 "__type": "HasGearDynamicMaterialBoolDriver"
                             },
-                            "TextureName": "{559896cd3dfa17f7}",
+                            "TextureName": "assets/characters/yasuo/skins/skin97/qiyana_skin51_genre02_tx_cm.tex",
                             "__type": "DynamicMaterialTextureSwapOption"
                         },
                         {
@@ -7652,7 +7652,7 @@
                                 "mGearIndex": 3,
                                 "__type": "HasGearDynamicMaterialBoolDriver"
                             },
-                            "TextureName": "{b3b7d056ba70939c}",
+                            "TextureName": "assets/characters/yasuo/skins/skin97/qiyana_skin51_genre03_tx_cm.tex",
                             "__type": "DynamicMaterialTextureSwapOption"
                         }
                     ],
@@ -7894,6 +7894,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_THIN_FILM",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ONLY_PATTERN_ALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_RIM",
                 "__type": "StaticMaterialSwitchDef"
@@ -8193,6 +8203,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_THIN_FILM",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ONLY_PATTERN_ALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_RIM",
                 "__type": "StaticMaterialSwitchDef"
@@ -8632,7 +8652,7 @@
                                 "mGearIndex": 2,
                                 "__type": "HasGearDynamicMaterialBoolDriver"
                             },
-                            "TextureName": "{559896cd3dfa17f7}",
+                            "TextureName": "assets/characters/yasuo/skins/skin97/qiyana_skin51_genre02_tx_cm.tex",
                             "__type": "DynamicMaterialTextureSwapOption"
                         },
                         {
@@ -8640,7 +8660,7 @@
                                 "mGearIndex": 3,
                                 "__type": "HasGearDynamicMaterialBoolDriver"
                             },
-                            "TextureName": "{b3b7d056ba70939c}",
+                            "TextureName": "assets/characters/yasuo/skins/skin97/qiyana_skin51_genre03_tx_cm.tex",
                             "__type": "DynamicMaterialTextureSwapOption"
                         }
                     ],
@@ -8662,11 +8682,6 @@
             {
                 "TextureName": "Mask_Texture",
                 "texturePath": "assets/shared/materials/white.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Pattern_Mask",
-                "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -8777,6 +8792,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Fresnel_As_Mask_Power",
                 "value": [
@@ -9495,6 +9550,19 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_THIN_FILM",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_INNER_FRESNEL",
                 "on": false,

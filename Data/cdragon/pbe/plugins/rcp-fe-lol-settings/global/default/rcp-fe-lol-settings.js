@@ -2355,23 +2355,24 @@
                     defaultValue: 65
                 },
                 I = [g.property, E.property],
-                k = {
+                k = "[<Unbound>]",
+                x = {
                     model: "accountVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
                     property: "pushToTalkKey",
                     scope: "account",
-                    defaultValue: "[<Unbound>]"
+                    defaultValue: k
                 },
-                x = {
+                C = {
                     model: "accountVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
                     property: "pushToTalkTeamKey",
                     scope: "account",
-                    defaultValue: "[c]"
+                    defaultValue: k
                 };
-            var C = s.Ember.Controller.extend(a.default, {
+            var M = s.Ember.Controller.extend(a.default, {
                 localVoiceSettings: s.Ember.computed.alias("model.localVoiceSettings"),
                 accountVoiceSettings: s.Ember.computed.alias("model.accountVoiceSettings"),
                 persistenceService: s.Ember.inject.service("persistence"),
@@ -2508,7 +2509,7 @@
                     })
                 })),
                 init() {
-                    this._super(...arguments), this._micLevelTracker = new o.MicLevelTracker, this._lastMicTestActive = this.get("voiceService.micTestActive"), this.bindSetting(u), this.bindSetting(d), this.bindSetting(p), this.bindSetting(g), this.bindSetting(_), this.bindSetting(h), this.bindSetting(E), this.bindSetting(A), this.bindSetting(L), this.bindSetting(k), this.bindSetting(x), m.observe(i, this, (e => {
+                    this._super(...arguments), this._micLevelTracker = new o.MicLevelTracker, this._lastMicTestActive = this.get("voiceService.micTestActive"), this.bindSetting(u), this.bindSetting(d), this.bindSetting(p), this.bindSetting(g), this.bindSetting(_), this.bindSetting(h), this.bindSetting(E), this.bindSetting(A), this.bindSetting(L), this.bindSetting(x), this.bindSetting(C), m.observe(i, this, (e => {
                         const t = s.lodash.get(e, ["data", "voiceComplianceAgreementAuthorized"], !1);
                         this.set("voiceComplianceAgreementAuthorized", Boolean(t))
                     })), m.observe(c, this, (e => {
@@ -2567,7 +2568,7 @@
                     }))
                 },
                 resetToDefault: function() {
-                    this.changeSetting(u.property, u.defaultValue), this.changeSetting(d.property, d.defaultValue), this.changeSetting(p.property, p.defaultValue), this.changeSetting(g.property, g.defaultValue), this.changeSetting(_.property, _.defaultValue), this.changeSetting(h.property, h.defaultValue), this.changeSetting(E.property, E.defaultValue), this.changeSetting(A.property, A.defaultValue), this.changeSetting(L.property, L.defaultValue), this.changeSetting(k.property, k.defaultValue), this.changeSetting(x.property, x.defaultValue)
+                    this.changeSetting(u.property, u.defaultValue), this.changeSetting(d.property, d.defaultValue), this.changeSetting(p.property, p.defaultValue), this.changeSetting(g.property, g.defaultValue), this.changeSetting(_.property, _.defaultValue), this.changeSetting(h.property, h.defaultValue), this.changeSetting(E.property, E.defaultValue), this.changeSetting(A.property, A.defaultValue), this.changeSetting(L.property, L.defaultValue), this.changeSetting(x.property, x.defaultValue), this.changeSetting(C.property, "[c]")
                 },
                 _showPTTPermissionsModal() {
                     this.changeSetting(A.property, S);
@@ -2585,10 +2586,10 @@
                 },
                 actions: {
                     selectPushToTalkKey: function(e) {
-                        this.changeSetting(k.property, e)
+                        this.changeSetting(x.property, e)
                     },
                     selectPushToTalkTeamKey: function(e) {
-                        this.changeSetting(x.property, e)
+                        this.changeSetting(C.property, e)
                     },
                     selectInputMode: function(e) {
                         this.changeSetting(A.property, e), e === f && this.get("voiceService").isPushToTalkAvailable(!0).then((e => {
@@ -2640,7 +2641,7 @@
                     }
                 }
             });
-            t.default = C
+            t.default = M
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {

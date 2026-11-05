@@ -1,0 +1,216 @@
+{
+    "{405bb975}": {
+        "ObjectName": "Jade_EliseSpiderlingBasicAttack",
+        "objectPath": "{405bb975}",
+        "mScriptName": "Jade_EliseSpiderlingBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_EliseSpiderlingBasicAttack",
+            "DataValues": [
+                {
+                    "name": "HealAmount",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HumanEHealDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Elise/HUD/Icons2D/Jade_ElisePassive.DDS"
+            ],
+            "spellCastTime": 0.3461499810218811,
+            "mSpellRevealsChampion": false,
+            "bHaveHitEffect": true,
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 2000.0,
+            "mHitEffectKey": "Jade_EliseSpiderling_BA_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Elise_EliseSpiderlingBasicAttack_OnCast"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_EliseSpiderling/CharacterRecords/Root": {
+        "mCharacterName": "Jade_EliseSpiderling",
+        "mFallbackCharacterName": "Jade_Elise",
+        "baseHPModifiable": {
+            "baseValue": 80.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.5,
+            "__type": "ModifiableFloat"
+        },
+        "{2290fc9a}": {
+            "baseValue": 0.001500000013038516,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 20.0,
+        "primaryAbilityResource": {
+            "{726ee5cd}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 0.5,
+                "__type": "ModifiableFloat"
+            },
+            "{452033bb}": {
+                "baseValue": 0.001500000013038516,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 50.0,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 1.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 345.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 175.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.664893627166748,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.664893627166748,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 400.0,
+        "basicAttack": {
+            "mAttackProbability": 1.0,
+            "__type": "AttackSlotData"
+        },
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 5.0,
+        "significance": 0.30000001192092896,
+        "extraSpells": [
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "extraSpellsList": [
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "passiveName": "Spell_ElisePassive_Jade_Name",
+        "passiveToolTip": "Spell_ElisePassive_Jade_Tooltip",
+        "name": "game_character_displayname_Jade_EliseSpiderling",
+        "minimapIconOverride": "NoIcon",
+        "selectionHeight": 28.0,
+        "selectionRadius": 35.0,
+        "pathfindingCollisionRadius": 1.0,
+        "overrideGameplayCollisionRadius": 1.0,
+        "unitTagsString": "Minion | Minion_Summon",
+        "characterToolData": {
+            "mapAIPresence": {
+                "0": {
+                    "{ca762bfc}": true,
+                    "{b75b2ab8}": true,
+                    "{b66d0e47}": true,
+                    "{6175bb7b}": true,
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "{6175bb7b}": true,
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "{6175bb7b}": true,
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "PostAttackMoveDelay": 0.800000011920929,
+            "description": "game_character_description_Jade_EliseSpiderling",
+            "ChasingAttackRangePercent": 0.5,
+            "botEnabled": true,
+            "botEnabledMM": true,
+            "BaseSpellEffectiveness": 1.0,
+            "attackSpeed": 10.0,
+            "__type": "CharacterToolData"
+        },
+        "minionScoreValue": 0.0,
+        "flags": 8402184,
+        "__type": "CharacterRecord"
+    },
+    "Characters/Jade_EliseSpiderling/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

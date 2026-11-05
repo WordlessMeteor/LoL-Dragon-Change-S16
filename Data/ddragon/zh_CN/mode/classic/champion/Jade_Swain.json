@@ -1,0 +1,639 @@
+{
+    "type": "champion",
+    "format": "standAloneComplex",
+    "version": "16.22.1",
+    "data": {
+        "Jade_Swain": {
+            "id": "Jade_Swain",
+            "key": "60050",
+            "name": "策士统领",
+            "title": "斯维因",
+            "image": {
+                "full": "Jade_Swain.png",
+                "sprite": "champion2.png",
+                "group": "champion",
+                "x": 432,
+                "y": 0,
+                "w": 48,
+                "h": 48
+            },
+            "skins": [
+                {
+                    "id": "60050000",
+                    "num": 0,
+                    "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "60050001",
+                    "num": 1,
+                    "name": "北领前线 斯维因",
+                    "chromas": false
+                },
+                {
+                    "id": "60050002",
+                    "num": 2,
+                    "name": "海贼参谋 斯维因",
+                    "chromas": false
+                }
+            ],
+            "lore": "- 技能完全不同。请阅读描述。<br>- 喀啊！",
+            "blurb": "- 技能完全不同。请阅读描述。<br>- 喀啊！",
+            "allytips": [],
+            "enemytips": [],
+            "tags": [
+                "Mage",
+                "Support"
+            ],
+            "partype": "法力",
+            "info": {
+                "attack": 2,
+                "defense": 6,
+                "magic": 9,
+                "difficulty": 8
+            },
+            "stats": {
+                "hp": 463,
+                "hpperlevel": 78,
+                "mp": 290,
+                "mpperlevel": 50,
+                "movespeed": 335,
+                "armor": 16,
+                "armorperlevel": 4,
+                "spellblock": 30,
+                "spellblockperlevel": 0,
+                "attackrange": 500,
+                "hpregen": 7.4,
+                "hpregenperlevel": 0.65,
+                "mpregen": 7.45,
+                "mpregenperlevel": 0.65,
+                "crit": 0,
+                "critperlevel": 0,
+                "attackdamage": 52,
+                "attackdamageperlevel": 0,
+                "attackspeedperlevel": 2.11,
+                "attackspeed": 0.625
+            },
+            "spells": [
+                {
+                    "id": "Jade_SwainQ",
+                    "name": "恶鸦来袭",
+                    "description": "斯维因释放渡鸦削弱一名敌人。在接下来的几秒内，目标会受到持续伤害并被减速。",
+                    "tooltip": "斯维因释放渡鸦削弱一名敌人。在接下来的{{ duration }}秒内，目标每秒受到<magicDamage>{{ damagepersecond }}魔法伤害</magicDamage>(最高：<magicDamage>{{ totaldamage }}伤害</magicDamage>)，并被<status>减速</status>{{ movespeedmod*-100 }}%。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "基础伤害",
+                            "减速",
+                            "@AbilityResourceName@消耗"
+                        ],
+                        "effect": [
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ movespeedmod*-100.000000 }}% -> {{ movespeedmodnl*-100.000000 }}%",
+                            "{{ cost }} -> {{ costNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        8,
+                        8,
+                        8,
+                        8,
+                        8
+                    ],
+                    "cooldownBurn": "8",
+                    "cost": [
+                        60,
+                        70,
+                        80,
+                        90,
+                        100
+                    ],
+                    "costBurn": "60/70/80/90/100",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        625,
+                        625,
+                        625,
+                        625,
+                        625
+                    ],
+                    "rangeBurn": "625",
+                    "image": {
+                        "full": "Jade_SwainQ.png",
+                        "sprite": "spell7.png",
+                        "group": "spell",
+                        "x": 96,
+                        "y": 48,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                },
+                {
+                    "id": "Jade_SwainW",
+                    "name": "鸦爪之缚",
+                    "description": "斯维因标记一片目标区域。短暂延迟后，会出现强力利爪抓住敌方单位，造成伤害并将其禁锢。",
+                    "tooltip": "斯维因标记一片目标区域。短暂延迟后，会出现利爪抓住敌方单位，造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>和{{ rootduration }}秒<status>禁锢</status>。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "基础伤害",
+                            "冷却时间",
+                            "@AbilityResourceName@消耗"
+                        ],
+                        "effect": [
+                            "{{ damage }} -> {{ damageNL }}",
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ cost }} -> {{ costNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        18,
+                        16,
+                        14,
+                        12,
+                        10
+                    ],
+                    "cooldownBurn": "18/16/14/12/10",
+                    "cost": [
+                        80,
+                        90,
+                        100,
+                        110,
+                        120
+                    ],
+                    "costBurn": "80/90/100/110/120",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        900,
+                        900,
+                        900,
+                        900,
+                        900
+                    ],
+                    "rangeBurn": "900",
+                    "image": {
+                        "full": "Jade_SwainW.png",
+                        "sprite": "spell7.png",
+                        "group": "spell",
+                        "x": 144,
+                        "y": 48,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                },
+                {
+                    "id": "Jade_SwainE",
+                    "name": "苦难折磨",
+                    "description": "斯维因折磨目标，造成持续伤害，并使其受到斯维因攻击时承受更多伤害。",
+                    "tooltip": "斯维因折磨目标，使其在{{ duration }}秒内受到<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。在此状态下，目标所受来自斯维因的攻击的伤害提高{{ ttamp*100 }}%。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "基础伤害",
+                            "伤害增幅",
+                            "@AbilityResourceName@消耗"
+                        ],
+                        "effect": [
+                            "{{ dotdamage }} -> {{ dotdamageNL }}",
+                            "{{ ttamp*100.000000 }}% -> {{ ttampnl*100.000000 }}%",
+                            "{{ cost }} -> {{ costNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        10,
+                        10,
+                        10,
+                        10,
+                        10
+                    ],
+                    "cooldownBurn": "10",
+                    "cost": [
+                        65,
+                        70,
+                        75,
+                        80,
+                        85
+                    ],
+                    "costBurn": "65/70/75/80/85",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        625,
+                        625,
+                        625,
+                        625,
+                        625
+                    ],
+                    "rangeBurn": "625",
+                    "image": {
+                        "full": "Jade_SwainE.png",
+                        "sprite": "spell7.png",
+                        "group": "spell",
+                        "x": 192,
+                        "y": 48,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                },
+                {
+                    "id": "Jade_SwainR",
+                    "name": "狂食鸦群",
+                    "description": "斯维因暂时化身渡鸦，令敌人心生畏惧。在此期间，渡鸦会攻击附近敌人。每只渡鸦都会造成伤害，并基于造成伤害为斯维因回复生命值。",
+                    "tooltip": "<toggle>激活：</toggle>斯维因化身为渡鸦形态。在此期间，每{{ tickinterval }}秒内会有最多{{ maxravens }}只小型渡鸦攻击附近的敌人，优先攻击英雄。每只渡鸦会造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>，并为斯维因<healing>治疗生命值</healing>，治疗量相当于对英雄的<healing>{{ championhealpercent*100 }}%</healing>造成伤害、对小兵的<healing>{{ minionhealpercent*100 }}%</healing>造成伤害。<br /><br />维持【狂食鸦群】所需的消耗每{{ tickinterval }}秒增加<scaleMana>{{ manacostinc }}法力值</scaleMana>。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "基础伤害",
+                            "每秒法力消耗"
+                        ],
+                        "effect": [
+                            "{{ damage }} -> {{ damageNL }}",
+                            "{{ manacostinc }} -> {{ manacostincNL }}"
+                        ]
+                    },
+                    "maxrank": 3,
+                    "cooldown": [
+                        8,
+                        8,
+                        8
+                    ],
+                    "cooldownBurn": "8",
+                    "cost": [
+                        25,
+                        25,
+                        25
+                    ],
+                    "costBurn": "25",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        625,
+                        625,
+                        625
+                    ],
+                    "rangeBurn": "625",
+                    "image": {
+                        "full": "Jade_SwainR.png",
+                        "sprite": "spell7.png",
+                        "group": "spell",
+                        "x": 240,
+                        "y": 48,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                }
+            ],
+            "passive": {
+                "name": "腐肉再生",
+                "description": "斯维因每次击杀单位时回复法力值。该数值会随等级提升而增加。",
+                "image": {
+                    "full": "Jade_Swain_P.png",
+                    "sprite": "passive2.png",
+                    "group": "passive",
+                    "x": 432,
+                    "y": 0,
+                    "w": 48,
+                    "h": 48
+                }
+            },
+            "recommended": []
+        }
+    }
+}

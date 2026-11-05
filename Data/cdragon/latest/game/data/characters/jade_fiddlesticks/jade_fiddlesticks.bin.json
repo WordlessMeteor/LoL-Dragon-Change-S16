@@ -119,13 +119,13 @@
                 {
                     "name": "BaseDamage",
                     "values": [
-                        45.0,
-                        65.0,
-                        85.0,
-                        105.0,
+                        25.0,
+                        50.0,
+                        75.0,
+                        100.0,
                         125.0,
-                        145.0,
-                        165.0
+                        150.0,
+                        175.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -590,7 +590,7 @@
                         "mDataValue": "TicksPerSecond",
                         "__type": "NamedDataValueCalculationPart"
                     },
-                    "{72c5c2a8}": 1,
+                    "DamageType": 1,
                     "mFormulaParts": [
                         {
                             "mSpellCalculationKey": "TotalDamagePerSecond",
@@ -1102,7 +1102,7 @@
         },
         "__type": "SpellObject"
     },
-    "{9c34c496}": {
+    "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksPassiveAbility": {
         "mRootSpell": "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksPassiveAbility/Jade_FiddlesticksPassive",
         "mChildSpells": [
             "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksPassiveAbility/Jade_FiddlesticksPassive",
@@ -1437,7 +1437,7 @@
                 "ASSETS/UX/Jade/S3Icons/SameSized/Fiddlesticks_Crowstorm.dds"
             ],
             "spellCastTime": 0.0,
-            "spellTotalTime": 0.0,
+            "spellTotalTime": 1.5,
             "cooldownTime": [
                 150.0,
                 150.0,
@@ -1462,6 +1462,7 @@
             "mCantCancelWhileWindingUp": true,
             "mCantCancelWhileChanneling": true,
             "cantCastWhileRooted": true,
+            "useAnimatorFramerate": true,
             "castRange": [
                 25000.0,
                 25000.0,
@@ -2522,7 +2523,7 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{9c34c496}",
+            "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksPassiveAbility",
             "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksQAbility",
             "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksWAbility",
             "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksEAbility",

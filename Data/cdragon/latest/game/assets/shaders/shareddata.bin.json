@@ -8,7 +8,7 @@
             "Shaders/SharedData/ConstantBuffers/CharacterPerRenderPassPS",
             "Shaders/SharedData/ConstantBuffers/Bones",
             "Shaders/SharedData/ConstantBuffers/FontRendering",
-            "Shaders/SharedData/ConstantBuffers/PostEffects",
+            "{6ad778f5}",
             "Shaders/SharedData/ConstantBuffers/DebugPixel",
             "Shaders/SharedData/ConstantBuffers/UIPerPassVS",
             "Shaders/SharedData/ConstantBuffers/UIPerPassPS",
@@ -27,7 +27,9 @@
             "Shaders/SharedData/ConstantBuffers/VFXDynamicPerParticlePS",
             "Shaders/SharedData/ConstantBuffers/GameplayTexture",
             "Shaders/SharedData/ConstantBuffers/EnvEffectorVertex",
-            "{66d4a0d3}"
+            "{66d4a0d3}",
+            "{88c09f02}",
+            "{7ad181f7}"
         ],
         "textures": [
             {
@@ -285,6 +287,17 @@
                 "name": "GAMEPLAY_TEXTURE_VS",
                 "BindLocation": 0,
                 "__type": "X3DSharedTextureDef"
+            },
+            {
+                "name": "PROJECTED_DECAL_RECEIVER_DEPTH",
+                "{ec5a120e}": 1,
+                "DefaultValue": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "X3DSharedTextureDef"
             }
         ],
         "samplers": [
@@ -382,6 +395,10 @@
         "objectPath": "{9966ff25}",
         "__type": "SkinnedPbrShadingModel"
     },
+    "{aa3986e5}": {
+        "objectPath": "{aa3986e5}",
+        "__type": "SkinnedPbrShadingModel"
+    },
     "{baebc346}": {
         "objectPath": "{baebc346}",
         "__type": "SkinnedStandardShadingModel"
@@ -460,7 +477,7 @@
             {
                 "name": "EnvEffectorInfo",
                 "type": 3,
-                "Count": 128,
+                "Count": 512,
                 "__type": "X3DSharedConstantDef"
             }
         ],
@@ -606,7 +623,7 @@
             {
                 "name": "EnvEffectorInfo",
                 "type": 3,
-                "Count": 128,
+                "Count": 512,
                 "__type": "X3DSharedConstantDef"
             },
             {
@@ -889,6 +906,47 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
+    "{6ad778f5}": {
+        "name": "PostEffectPixelCB",
+        "type": 1,
+        "frequency": 1,
+        "constants": [
+            {
+                "name": "COLOR_OVERRIDE_PARAMS",
+                "type": 3,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "MAP_COLORIZATION_COLOR",
+                "type": 3,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "POST_EFFECT_STRENGTH",
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "DEATH_EFFECT_APPLY_FRACTION",
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "DEATH_EFFECT_COLOR_TINT",
+                "type": 3,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "BLOOM_INTENSITY_SCALE",
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "SMAA_SETTINGS",
+                "type": 10,
+                "StructureLink": "{644f3506}",
+                "__type": "X3DSharedConstantDef"
+            }
+        ],
+        "__type": "X3DSharedConstantBufferDef"
+    },
     "Shaders/SharedData/ConstantBuffers/EnvironmentTransitionVertexCB": {
         "name": "EnvironmentTransitionVertexCB",
         "constants": [
@@ -931,6 +989,19 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
+    "{7ad181f7}": {
+        "name": "PostEffectVertexCB",
+        "frequency": 1,
+        "constants": [
+            {
+                "name": "SMAA_SETTINGS",
+                "type": 10,
+                "StructureLink": "{644f3506}",
+                "__type": "X3DSharedConstantDef"
+            }
+        ],
+        "__type": "X3DSharedConstantBufferDef"
+    },
     "Shaders/SharedData/ConstantBuffers/GameplayTexture": {
         "name": "GameplayTexture",
         "type": 1,
@@ -960,6 +1031,34 @@
             },
             {
                 "name": "DECAL_PROJECTION_Y_RANGE",
+                "type": 3,
+                "__type": "X3DSharedConstantDef"
+            }
+        ],
+        "__type": "X3DSharedConstantBufferDef"
+    },
+    "{88c09f02}": {
+        "name": "ParticleDecalPS",
+        "type": 1,
+        "frequency": 2,
+        "constants": [
+            {
+                "name": "DECAL_WORLD_TO_UV_MATRIX",
+                "type": 9,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "DECAL_PROJECTION_Y_RANGE",
+                "type": 3,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "PROJECTED_DECAL_INV_VIEW_PROJECTION",
+                "type": 9,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "FOG_OF_WAR_PARAMS",
                 "type": 3,
                 "__type": "X3DSharedConstantDef"
             }
@@ -1100,41 +1199,6 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "Shaders/SharedData/ConstantBuffers/PostEffects": {
-        "name": "PostEffectPixelCB",
-        "type": 1,
-        "frequency": 1,
-        "constants": [
-            {
-                "name": "COLOR_OVERRIDE_PARAMS",
-                "type": 3,
-                "__type": "X3DSharedConstantDef"
-            },
-            {
-                "name": "MAP_COLORIZATION_COLOR",
-                "type": 3,
-                "__type": "X3DSharedConstantDef"
-            },
-            {
-                "name": "POST_EFFECT_STRENGTH",
-                "__type": "X3DSharedConstantDef"
-            },
-            {
-                "name": "DEATH_EFFECT_APPLY_FRACTION",
-                "__type": "X3DSharedConstantDef"
-            },
-            {
-                "name": "DEATH_EFFECT_COLOR_TINT",
-                "type": 3,
-                "__type": "X3DSharedConstantDef"
-            },
-            {
-                "name": "BLOOM_INTENSITY_SCALE",
-                "__type": "X3DSharedConstantDef"
-            }
-        ],
-        "__type": "X3DSharedConstantBufferDef"
-    },
     "Shaders/SharedData/ConstantBuffers/TransitionPositions": {
         "name": "TransitionPositions",
         "type": 1,
@@ -1155,7 +1219,7 @@
             {
                 "name": "IBL_CUBEMAP_SCALES",
                 "type": 3,
-                "Count": 32,
+                "Count": 64,
                 "__type": "X3DSharedConstantDef"
             }
         ],

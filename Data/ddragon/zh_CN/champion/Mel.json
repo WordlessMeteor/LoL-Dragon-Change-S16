@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.21.1",
+    "version": "16.22.1",
     "data": {
         "Mel": {
             "id": "Mel",
@@ -165,12 +165,12 @@
             "lore": "梅尔·米达尔达是诺克萨斯旧贵族——米达尔达家族目前的第一顺位继承人。台前，她是优雅的贵族小姐；幕后，她是完美的政治家，对她遇到的每个人、每件事了然于胸，加以利用。在与神秘的黑色玫瑰接触之后，梅尔发现了母亲编织的层层谎言。也许是此生第一次，时局的发展超出了她的掌控。带着刚刚觉醒的魔法能力，梅尔乘船返回故乡探寻答案。许多人都想制服她体内的光，但梅尔的灵魂永远都昂扬倔强。",
             "blurb": "梅尔·米达尔达是诺克萨斯旧贵族——米达尔达家族目前的第一顺位继承人。台前，她是优雅的贵族小姐；幕后，她是完美的政治家，对她遇到的每个人、每件事了然于胸，加以利用。在与神秘的黑色玫瑰接触之后，梅尔发现了母亲编织的层层谎言。也许是此生第一次，时局的发展超出了她的掌控。带着刚刚觉醒的魔法能力，梅尔乘船返回故乡探寻答案。许多人都想制服她体内的光，但梅尔的灵魂永远都昂扬倔强。",
             "allytips": [
-                "梅尔可以反弹敌方的弹体，包括强力的技能。先等她的【灵魂折镜】到期，再朝她扔出强力弹体。",
-                "梅尔命中你的次数越多，就会对你施加越多【夺命残影】层数。如果你的生命值跌得过低，那么她的下一次命中就会击杀你，因此，要退到后方等待若干秒，好让【夺命残影】的层数脱落。"
+                "梅尔可以摧毁敌方的投射物，包括强力法术。等她施放【灵魂折镜】后再对她使用强力的投射物攻击。",
+                "梅尔命中你越多次，她施加的【夺命残影】层数就越多。如果你的生命值过低，她的下一次命中便可能将你秒杀。因此，要先后撤一段时间，等【夺命残影】层数消失。"
             ],
             "enemytips": [
-                "梅尔可以反弹敌方的弹体，包括强力的技能。先等她的【灵魂折镜】到期，再朝她扔出强力弹体。",
-                "梅尔命中你的次数越多，对你施加的【夺命残影】层数也越多。如果你的生命值跌得过低，那么她的下一次命中就会击杀你，因此，要退到后方等待若干秒，好让【夺命残影】的层数脱落。"
+                "梅尔可以摧毁敌方的投射物，包括强力法术。等她施放【灵魂折镜】后再对她使用强力的投射物攻击。",
+                "梅尔命中你越多次，她施加的【夺命残影】层数就越多。如果你的生命值过低，她的下一次命中便可能将你秒杀。因此，要先后撤一段时间，等【夺命残影】层数消失。"
             ],
             "tags": [
                 "Mage",
@@ -184,13 +184,13 @@
                 "difficulty": 5
             },
             "stats": {
-                "hp": 630,
-                "hpperlevel": 99,
-                "mp": 480,
-                "mpperlevel": 28,
+                "hp": 590,
+                "hpperlevel": 107,
+                "mp": 455,
+                "mpperlevel": 38,
                 "movespeed": 330,
                 "armor": 21,
-                "armorperlevel": 5.2,
+                "armorperlevel": 5.4,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
                 "attackrange": 550,
@@ -200,29 +200,27 @@
                 "mpregenperlevel": 0.9,
                 "crit": 0,
                 "critperlevel": 0,
-                "attackdamage": 54,
+                "attackdamage": 52,
                 "attackdamageperlevel": 0,
-                "attackspeedperlevel": 2.5,
+                "attackspeedperlevel": 2.75,
                 "attackspeed": 0.625
             },
             "spells": [
                 {
                     "id": "MelQ",
-                    "name": "耀光齐射",
-                    "description": "梅尔发射一连串耀光飞弹，飞弹会在目标位置周围爆炸，对范围内的敌人造成多段伤害。",
-                    "tooltip": "梅尔释放一道由{{ explosioncount }}个耀光飞弹组成的弹幕，飞弹会在目标位置周围爆炸。<br /><br />命中的第一次爆炸造成<magicDamage>{{ initialexplosiondamage }}魔法伤害</magicDamage>并且每次后续爆炸造成<magicDamage>{{ totalexplosiondamage }}魔法伤害</magicDamage>，至多增加至<magicDamage>{{ alldamagehit }}魔法伤害</magicDamage>总和。{{ spellmodifierdescriptionappend }}",
+                    "name": "耀光弹幕",
+                    "description": "梅尔发射一阵弹幕，造成魔法伤害。命中敌方英雄会缩减该技能的冷却时间。",
+                    "tooltip": "梅尔发射由{{ count }}颗飞弹组成的弹幕，飞弹在到达目标位置后爆炸。敌人首次被命中时，会受到<magicDamage>{{ initialdamage }}魔法伤害</magicDamage>，后续每次命中造成<magicDamage>{{ subsequentdamage }}魔法伤害</magicDamage>，最多造成<magicDamage>{{ totaldamagett }}魔法伤害</magicDamage>。<br /><br />如果弹幕至少命中一名敌方英雄，则该技能的冷却时间缩减{{ cdrefundchamphit }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "初始伤害",
-                            "爆炸伤害",
-                            "爆炸计数",
+                            "后续伤害",
+                            "飞弹数",
                             "冷却时间",
-                            "法力消耗"
+                            "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ initialdamage }} -> {{ initialdamageNL }}",
-                            "{{ explosiondamage }} -> {{ explosiondamageNL }}",
-                            "{{ explosioncount }} -> {{ explosioncountNL }}",
+                            "{{ basedamagesubsequent }} -> {{ basedamagesubsequentNL }}",
+                            "{{ count }} -> {{ countNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -237,13 +235,13 @@
                     ],
                     "cooldownBurn": "10/9/8/7/6",
                     "cost": [
+                        60,
+                        65,
                         70,
                         75,
-                        80,
-                        85,
-                        90
+                        80
                     ],
-                    "costBurn": "70/75/80/85/90",
+                    "costBurn": "60/65/70/75/80",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -356,39 +354,41 @@
                 {
                     "id": "MelW",
                     "name": "灵魂折镜",
-                    "description": "梅尔生成一道屏障围绕自身，这道屏障会将敌方弹体反弹给攻击者，使她免受伤害，并为她提供移动速度。",
-                    "tooltip": "梅尔生成一道屏障围绕自身，这道屏障会将敌方英雄弹体反弹给攻击者，使她免受伤害，并获得持续{{ duration }}秒的<shield>{{ shieldamount }}护盾值</shield>和在{{ movespeedduration }}秒里<speed>持续衰减的{{ movespeed*100 }}%移动速度</speed>。<br /><br />被反弹的弹体会造成<magicDamage>{{ damagepercent }}原伤害值的魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "description": "梅尔发射一颗折射新星，摧毁碰到的敌方投射物，并射出魔法飞弹进行反击。<br><br>新星还会为梅尔及其队友提供护盾并提升移动速度。",
+                    "tooltip": "梅尔发射一颗折射新星，摧毁碰到的敌方投射物，并发动造成<magicDamage>{{ initialdamage }}魔法伤害</magicDamage>的反击。对同一敌人的后续反击改为造成<magicDamage>{{ subsequentdamage }}魔法伤害</magicDamage>。<br /><br />新星还会为梅尔及其队友提供持续{{ buffduration }}秒的<shield>{{ totalshield }}护盾</shield>和<speed>{{ totalms }}移动速度</speed>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "反弹伤害",
-                            "护盾值",
                             "冷却时间",
-                            "法力消耗"
+                            "法力消耗",
+                            "护盾值",
+                            "初始伤害",
+                            "后续伤害"
                         ],
                         "effect": [
-                            "{{ basedamagepercent*100.000000 }}% -> {{ basedamagepercentnl*100.000000 }}%",
-                            "{{ baseshieldamount }} -> {{ baseshieldamountNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ cost }} -> {{ costNL }}"
+                            "{{ cost }} -> {{ costNL }}",
+                            "{{ baseshield }} -> {{ baseshieldNL }}",
+                            "{{ basedamageinitial }} -> {{ basedamageinitialNL }}",
+                            "{{ basedamagesubsequent }} -> {{ basedamagesubsequentNL }}"
                         ]
                     },
                     "maxrank": 5,
                     "cooldown": [
-                        38,
-                        35,
-                        33,
-                        29,
-                        26
+                        30,
+                        28.5,
+                        27,
+                        25.5,
+                        24
                     ],
-                    "cooldownBurn": "38/35/33/29/26",
+                    "cooldownBurn": "30/28.5/27/25.5/24",
                     "cost": [
-                        80,
-                        60,
-                        40,
-                        20,
+                        100,
+                        75,
+                        50,
+                        25,
                         0
                     ],
-                    "costBurn": "80/60/40/20/0",
+                    "costBurn": "100/75/50/25/0",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -480,13 +480,13 @@
                     "costType": " {{ abilityresourcename }}",
                     "maxammo": "-1",
                     "range": [
-                        250,
-                        250,
-                        250,
-                        250,
-                        250
+                        400,
+                        400,
+                        400,
+                        400,
+                        400
                     ],
-                    "rangeBurn": "250",
+                    "rangeBurn": "400",
                     "image": {
                         "full": "MelW.png",
                         "sprite": "spell9.png",
@@ -502,19 +502,23 @@
                     "id": "MelE",
                     "name": "阳炎涡旋",
                     "description": "梅尔发射一颗阳炎法球，禁锢中心区域的敌人并减速周围区域的敌人并造成持续伤害。",
-                    "tooltip": "梅尔发射一颗阳炎法球，<status>禁锢</status>中心区域的敌人{{ rootduration }}秒并造成<magicDamage>{{ damage }}魔法伤害</magicDamage>。<br /><br />法球会在其周围逐渐形成一个妨害区域，这个区域会对敌人们造成{{ areaslowamount*100 }}%<status>减速</status>以及<magicDamage>每秒{{ areadamagepersecond }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "梅尔发射一颗光辉法球，将球心的敌人<status>禁锢</status>{{ rootdurationmin }}至{{ rootdurationmax }}秒(基于飞行距离)，并造成<magicDamage>{{ damage }}魔法伤害</magicDamage>。<br /><br />法球周围会生成攻击区域，使敌人<status>减速</status>{{ areaslowamount*100 }}%并<magicDamage>每秒造成{{ areadamagepersecond }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
                             "每秒伤害",
                             "冷却时间",
-                            "法力消耗"
+                            "法力消耗",
+                            "减速",
+                            "最大禁锢时长"
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ baseareadamage }} -> {{ baseareadamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ cost }} -> {{ costNL }}"
+                            "{{ cost }} -> {{ costNL }}",
+                            "{{ areaslowamount*100.000000 }}% -> {{ areaslowamountnl*100.000000 }}%",
+                            "{{ rootdurationmax }} -> {{ rootdurationmaxNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -527,13 +531,13 @@
                     ],
                     "cooldownBurn": "11/10.5/10/9.5/9",
                     "cost": [
+                        40,
                         50,
                         60,
                         70,
-                        80,
-                        90
+                        80
                     ],
-                    "costBurn": "50/60/70/80/90",
+                    "costBurn": "40/50/60/70/80",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -667,10 +671,10 @@
                     "maxrank": 3,
                     "cooldown": [
                         120,
-                        100,
-                        80
+                        90,
+                        60
                     ],
-                    "cooldownBurn": "120/100/80",
+                    "cooldownBurn": "120/90/60",
                     "cost": [
                         100,
                         100,

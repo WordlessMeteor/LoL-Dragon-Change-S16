@@ -465,6 +465,18 @@
             "Spell2_Idle": {
                 "mTrackDataName": "Default",
                 "mSyncGroupDataName": "group",
+                "mEventDataMap": {
+                    "AvatarGlow": {
+                        "mEffectKey": "Mel_W_AvatarGlow",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    }
+                },
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "assets/characters/mel/skins/base/animations/spell2.anm",
                     "__type": "AnimationResourceData"
@@ -1557,6 +1569,16 @@
                         "mBlendInTime": 0.15000000596046448,
                         "mBlendOutTime": 0.15000000596046448,
                         "__type": "ConformToPathEventData"
+                    },
+                    "AvatarGlow": {
+                        "mEffectKey": "Mel_W_AvatarGlow",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "BUFFBONE_GLB_GROUND_LOC",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
                     }
                 },
                 "mTickDuration": 0.03999999910593033,

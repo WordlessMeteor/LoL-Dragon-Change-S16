@@ -1367,32 +1367,19 @@
                 {
                     "name": "ReducedDamagePercent",
                     "values": [
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MinimumDamagePercent",
-                    "values": [
-                        70.0,
-                        70.0,
-                        70.0,
-                        70.0,
-                        70.0,
-                        70.0,
-                        70.0
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071
                     ],
                     "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
-                "TotalDamageTooltip": {
+                "TotalDamage": {
                     "mFormulaParts": [
                         {
                             "mDataValue": "BaseDamage",
@@ -1405,20 +1392,13 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "MinimumDamageTooltip": {
+                "ReducedDamage": {
                     "mMultiplier": {
-                        "mPart1": {
-                            "mNumber": 0.009999999776482582,
-                            "__type": "NumberCalculationPart"
-                        },
-                        "mPart2": {
-                            "mDataValue": "MinimumDamagePercent",
-                            "__type": "NamedDataValueCalculationPart"
-                        },
-                        "__type": "ProductOfSubPartsCalculationPart"
+                        "mDataValue": "ReducedDamagePercent",
+                        "__type": "NamedDataValueCalculationPart"
                     },
                     "mSimpleTooltipCalculationDisplay": 6,
-                    "mModifiedGameCalculation": "TotalDamageTooltip",
+                    "mModifiedGameCalculation": "TotalDamage",
                     "__type": "GameCalculationModified"
                 }
             },
@@ -1632,7 +1612,7 @@
             "{6d548702}": {
                 "mFormulaParts": [
                     {
-                        "mSpellCalculationKey": "TotalDamageTooltip",
+                        "mSpellCalculationKey": "TotalDamage",
                         "__type": "{f3cbe7b2}"
                     }
                 ],

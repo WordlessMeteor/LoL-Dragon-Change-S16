@@ -31498,7 +31498,7 @@
             },
             {
                 "TextureName": "iridescentTex",
-                "texturePath": "{ad6ccfb0ccc22e57}",
+                "texturePath": "assets/characters/urgot/skins/skin41/leesin_skin52_iridescent_rainbow_mat_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
@@ -32230,7 +32230,7 @@
                                 ],
                                 "__type": "AllTrueMaterialDriver"
                             },
-                            "TextureName": "{989f69674680a1f3}",
+                            "TextureName": "assets/characters/urgot/skins/skin41/irelia_skin55_tm_cm_1.tex",
                             "__type": "DynamicMaterialTextureSwapOption"
                         }
                     ],
@@ -32249,7 +32249,7 @@
                                 ],
                                 "__type": "AllTrueMaterialDriver"
                             },
-                            "TextureName": "{66c307cbbd190b26}",
+                            "TextureName": "assets/characters/urgot/skins/skin41/irelia_skin55_arm_mask.tex",
                             "__type": "DynamicMaterialTextureSwapOption"
                         }
                     ],
@@ -32275,11 +32275,6 @@
                 "texturePath": "assets/shared/materials/white.tex",
                 "addressU": 1,
                 "addressV": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Pattern_Mask",
-                "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -32391,6 +32386,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Fresnel_As_Mask_Power",
                 "value": [
@@ -33062,6 +33097,19 @@
         ],
         "switches": [
             {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_THIN_FILM",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_INNER_FRESNEL",
                 "on": false,
                 "Group": "Fresnel",
@@ -33278,7 +33326,7 @@
             },
             {
                 "TextureName": "iridescentTex",
-                "texturePath": "{ad6ccfb0ccc22e57}",
+                "texturePath": "assets/characters/urgot/skins/skin41/leesin_skin52_iridescent_rainbow_mat_tx_cm.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],

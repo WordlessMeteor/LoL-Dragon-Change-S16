@@ -4582,6 +4582,12 @@
                 "mRules": [
                     {
                         "mRuleName": "Kill Ward",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 50,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "Kill3DWard",
@@ -4828,6 +4834,70 @@
                             "mMaxOccurences": 1,
                             "mSelfEventName": "Kill3DStealDragon",
                             "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Ally team kill dragon while ahead on dragons",
+                        "mConditions": [
+                            {
+                                "{49e47ecd}": {
+                                    "objectives": 8,
+                                    "__type": "{e46a1cdb}"
+                                },
+                                "CompareOp": 2,
+                                "{b95ee9e0}": {
+                                    "{df38ac45}": 1,
+                                    "objectives": 8,
+                                    "__type": "{e46a1cdb}"
+                                },
+                                "__type": "ContextualConditionObjectiveCountComparison"
+                            },
+                            {
+                                "mTakenObjective": 8,
+                                "__type": "ContextualConditionObjectiveTakeByMyTeam"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Kill3DEpicMonsterAheadAllyTeam",
+                            "mAllyEventName": "Kill3DEpicMonsterAheadAllyTeam",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Ally team kill dragon while behind on dragons",
+                        "mConditions": [
+                            {
+                                "{49e47ecd}": {
+                                    "objectives": 8,
+                                    "__type": "{e46a1cdb}"
+                                },
+                                "CompareOp": 5,
+                                "{b95ee9e0}": {
+                                    "{df38ac45}": 1,
+                                    "objectives": 8,
+                                    "__type": "{e46a1cdb}"
+                                },
+                                "__type": "ContextualConditionObjectiveCountComparison"
+                            },
+                            {
+                                "mTakenObjective": 8,
+                                "__type": "ContextualConditionObjectiveTakeByMyTeam"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Kill3DEpicMonsterBehindAllyTeam",
+                            "mAllyEventName": "Kill3DEpicMonsterBehindAllyTeam",
                             "__type": "ContextualActionPlayVO"
                         },
                         "CooldownModifications": {
@@ -5635,6 +5705,30 @@
                         ],
                         "mAudioAction": {
                             "mSelfEventName": "Spell3DRReady",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "ObjectiveTakeByEnemyTeam": {
+                "mRules": [
+                    {
+                        "mRuleName": "Enemy kill dragon",
+                        "mConditions": [
+                            {
+                                "mTakenObjective": 8,
+                                "__type": "ContextualConditionObjectiveTakeByMyTeam"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "EnemyTeamKill3DEpicMonster",
+                            "mAllyEventName": "EnemyTeamKill3DEpicMonster",
                             "__type": "ContextualActionPlayVO"
                         },
                         "CooldownModifications": {

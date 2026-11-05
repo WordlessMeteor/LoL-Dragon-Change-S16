@@ -1,0 +1,3870 @@
+{
+    "{0371a28d}": {
+        "AugmentNameId": "ARAM_StatAnvil_Omnivamp",
+        "NameTra": "Cherry_StatAnvil_Omnivamp_Name",
+        "DescriptionTra": "Kiwi_StatAnvil_Omnicamp_Tooltip",
+        "AugmentTooltipTra": "Kiwi_StatAnvil_Omnicamp_Tooltip",
+        "RootSpell": "{18e347d8}",
+        "mBuildTags": 242,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/prismatic_vamp.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/prismatic_vamp.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            9
+        ],
+        "__type": "AnvilData"
+    },
+    "{0438a4ec}": {
+        "AugmentNameId": "ARAM_StatAnvil_Pristine",
+        "Enabled": false,
+        "NameTra": "Cherry_StatAnvil_Pristine_Name",
+        "DescriptionTra": "Cherry_StatAnvil_Pristine_Tooltip",
+        "AugmentTooltipTra": "Cherry_StatAnvil_Pristine_Tooltip",
+        "RootSpell": "{b21cb66c}",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/silver_pristine.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/silver_pristine.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            9,
+            8,
+            9
+        ],
+        "__type": "AnvilData"
+    },
+    "{5298c6fb}": {
+        "AugmentNameId": "ARAM_StatAnvil_MR",
+        "NameTra": "Cherry_StatAnvil_MR_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_MR_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_MR_Tooltip",
+        "RootSpell": "{103e6078}",
+        "mBuildTags": 256,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/silver_mr.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/silver_mr.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            0
+        ],
+        "__type": "AnvilData"
+    },
+    "{103e6078}": {
+        "ObjectName": "Augment_ARAM_StatAnvil_MR",
+        "objectPath": "{103e6078}",
+        "mScriptName": "Augment_ARAM_StatAnvil_MR",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinMR",
+                    "values": [
+                        14.0,
+                        14.0,
+                        14.0,
+                        14.0,
+                        14.0,
+                        14.0,
+                        14.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandMR": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinMR",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{2ddd0efb}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxMR": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinMR",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_StatAnvil_MR",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{598e44a4}": {
+        "AugmentNameId": "ARAM_StatAnvil_AS",
+        "NameTra": "Cherry_StatAnvil_AS_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_AS_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_AS_Tooltip",
+        "RootSpell": "{114cd91c}",
+        "mBuildTags": 82,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/silver_as.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/silver_as.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            0
+        ],
+        "__type": "AnvilData"
+    },
+    "{114cd91c}": {
+        "ObjectName": "Augment_ARAM_StatAnvil_AS",
+        "objectPath": "{114cd91c}",
+        "mScriptName": "Augment_ARAM_StatAnvil_AS",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinAS",
+                    "values": [
+                        0.10999999940395355,
+                        0.10999999940395355,
+                        0.10999999940395355,
+                        0.10999999940395355,
+                        0.10999999940395355,
+                        0.10999999940395355,
+                        0.10999999940395355
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandAS": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinAS",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{c150a50e}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                },
+                "MaxAS": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinAS",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_StatAnvil_AS",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{5198c568}": {
+        "AugmentNameId": "ARAM_StatAnvil_MS",
+        "NameTra": "Cherry_StatAnvil_MS_Name",
+        "DescriptionTra": "Cherry_StatAnvil_MS_Tooltip",
+        "AugmentTooltipTra": "Cherry_StatAnvil_MS_Tooltip",
+        "RootSpell": "{187aca9c}",
+        "mBuildTags": 506,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/prismatic_ms.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/prismatic_ms.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            9
+        ],
+        "__type": "AnvilData"
+    },
+    "{187aca9c}": {
+        "ObjectName": "Augment_ARAM_StatAnvil_MS",
+        "objectPath": "{187aca9c}",
+        "mScriptName": "Augment_ARAM_StatAnvil_MS",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinMS",
+                    "values": [
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SizeMod",
+                    "values": [
+                        -0.10000000149011612,
+                        -0.10000000149011612,
+                        -0.10000000149011612,
+                        -0.10000000149011612,
+                        -0.10000000149011612,
+                        -0.10000000149011612,
+                        -0.10000000149011612
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandMS": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinMS",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{a61737fa}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "mPrecision": 1,
+                    "__type": "GameCalculation"
+                },
+                "MaxMS": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinMS",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_StatAnvil_MS",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{18e347d8}": {
+        "ObjectName": "Augment_ARAM_StatAnvil_Omnivamp",
+        "objectPath": "{18e347d8}",
+        "mScriptName": "Augment_ARAM_StatAnvil_Omnivamp",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MeleeOmnivamp",
+                    "values": [
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RangedOmnivamp",
+                    "values": [
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "OmnivampIncrease": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mNumber": 0.20000000298023224,
+                            "__type": "NumberCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "mRangedMultiplier": {
+                        "mNumber": 0.5,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "__type": "{e9a3c91d}"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_StatAnvil_Omnivamp",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{38818d7d}": {
+        "AugmentNameId": "ARAM_GoldStatAnvil_Random",
+        "Enabled": false,
+        "NameTra": "Cherry_GoldStatAnvil_Random_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_Random_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_Random_Tooltip",
+        "RootSpell": "{1dd4cdfc}",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/gold_faith.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/gold_faith.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            8
+        ],
+        "__type": "AnvilData"
+    },
+    "{1dd4cdfc}": {
+        "ObjectName": "Augment_ARAM_GoldStatAnvil_Random",
+        "objectPath": "{1dd4cdfc}",
+        "mScriptName": "Augment_ARAM_GoldStatAnvil_Random",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinRand",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandRand": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinRand",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{cf8a268b}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                },
+                "MaxRand": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinRand",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_GoldStatAnvil_Random",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{1dec22f3}": {
+        "AugmentNameId": "ARAM_GoldStatAnvil_AH",
+        "NameTra": "Cherry_GoldStatAnvil_AH_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_AH_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_AH_Tooltip",
+        "RootSpell": "{fce48840}",
+        "mBuildTags": 314,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/gold_ah.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/gold_ah.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            8
+        ],
+        "__type": "AnvilData"
+    },
+    "{f175fb88}": {
+        "AugmentNameId": "ARAM_GoldStatAnvil_Lethality",
+        "NameTra": "Cherry_GoldStatAnvil_Lethality_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_Lethality_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_Lethality_Tooltip",
+        "RootSpell": "{25e24794}",
+        "mAugmentTags": 4,
+        "mBuildTags": 18,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/gold_apen.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/gold_apen.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            8
+        ],
+        "__type": "AnvilData"
+    },
+    "{25e24794}": {
+        "ObjectName": "Augment_ARAM_GoldStatAnvil_Lethality",
+        "objectPath": "{25e24794}",
+        "mScriptName": "Augment_ARAM_GoldStatAnvil_Lethality",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinLethality",
+                    "values": [
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandLethality": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinLethality",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{33972dec}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "mPrecision": 1,
+                    "__type": "GameCalculation"
+                },
+                "MaxLethality": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinLethality",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_GoldStatAnvil_Lethality",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{8597e546}": {
+        "AugmentNameId": "ARAM_StatAnvil_MPen",
+        "NameTra": "Cherry_StatAnvil_MPen_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_MPen_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_MPen_Tooltip",
+        "RootSpell": "{25e696dc}",
+        "mAugmentTags": 2,
+        "mBuildTags": 34,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/silver_mpen.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/silver_mpen.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            0
+        ],
+        "__type": "AnvilData"
+    },
+    "{25e696dc}": {
+        "ObjectName": "Augment_ARAM_StatAnvil_MPen",
+        "objectPath": "{25e696dc}",
+        "mScriptName": "Augment_ARAM_StatAnvil_MPen",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinMPen",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandMPen": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinMPen",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{902de314}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "mPrecision": 1,
+                    "__type": "GameCalculation"
+                },
+                "MaxMPen": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinMPen",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_StatAnvil_MPen",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{5a8e4637}": {
+        "AugmentNameId": "ARAM_StatAnvil_AR",
+        "NameTra": "Cherry_StatAnvil_AR_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_AR_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_AR_Tooltip",
+        "RootSpell": "{275282d8}",
+        "mBuildTags": 256,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/silver_ar.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/silver_ar.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            0
+        ],
+        "__type": "AnvilData"
+    },
+    "{275282d8}": {
+        "ObjectName": "Augment_ARAM_StatAnvil_AR",
+        "objectPath": "{275282d8}",
+        "mScriptName": "Augment_ARAM_StatAnvil_AR",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinAR",
+                    "values": [
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandAR": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinAR",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{66f94c4f}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxAR": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinAR",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_StatAnvil_AR",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{29ec35d7}": {
+        "AugmentNameId": "ARAM_GoldStatAnvil_AD",
+        "NameTra": "Cherry_GoldStatAnvil_AD_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_AD_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_AD_Tooltip",
+        "RootSpell": "{61617700}",
+        "mAugmentTags": 4,
+        "mBuildTags": 594,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/gold_ad.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/gold_ad.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            8
+        ],
+        "__type": "AnvilData"
+    },
+    "{300ce031}": {
+        "AugmentNameId": "ARAM_StatAnvil_Tenacity",
+        "NameTra": "Cherry_StatAnvil_Tenacity_Name",
+        "DescriptionTra": "Cherry_StatAnvil_Tenacity_Tooltip",
+        "AugmentTooltipTra": "Cherry_StatAnvil_Tenacity_Tooltip",
+        "RootSpell": "{64f36a34}",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/prismatic_tenacity.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/prismatic_tenacity.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            9
+        ],
+        "__type": "AnvilData"
+    },
+    "{d50a5123}": {
+        "AugmentNameId": "ARAM_GoldStatAnvil_Hybrid1",
+        "NameTra": "Cherry_GoldStatAnvil_Hybrid1_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_Hybrid1_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_Hybrid1_Tooltip",
+        "RootSpell": "{3047f6ea}",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/gold_hybrid1.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/gold_hybrid1.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            8
+        ],
+        "__type": "AnvilData"
+    },
+    "{3047f6ea}": {
+        "ObjectName": "Augment_ARAM_GoldStatAnvil_Hybrid1",
+        "objectPath": "{3047f6ea}",
+        "mScriptName": "Augment_ARAM_GoldStatAnvil_Hybrid1",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinAS",
+                    "values": [
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinAH",
+                    "values": [
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandAS": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinAS",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{f142fe6d}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                },
+                "RandAH": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinAH",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{f142fe6d}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxAS": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinAS",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                },
+                "MaxAH": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinAH",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_GoldStatAnvil_Hybrid1",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{88dec758}": {
+        "AugmentNameId": "ARAM_StatAnvil_Hybrid2",
+        "NameTra": "Cherry_StatAnvil_Hybrid2_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_Hybrid2_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_Hybrid2_Tooltip",
+        "RootSpell": "{3556e3f4}",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/silver_hybrid2.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/silver_hybrid2.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            0
+        ],
+        "__type": "AnvilData"
+    },
+    "{3556e3f4}": {
+        "ObjectName": "Augment_ARAM_StatAnvil_Hybrid2",
+        "objectPath": "{3556e3f4}",
+        "mScriptName": "Augment_ARAM_StatAnvil_Hybrid2",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinAD",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinAP",
+                    "values": [
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandAD": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinAD",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{a347d44a}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "RandAP": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinAP",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{a347d44a}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxAD": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinAD",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxAP": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinAP",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_StatAnvil_Hybrid2",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{358caff2}": {
+        "AugmentNameId": "ARAM_PrisStatAnvil_HP",
+        "NameTra": "Cherry_PrisStatAnvil_HP_Name",
+        "DescriptionTra": "Cherry_PrisStatAnvil_HP_Tooltip",
+        "AugmentTooltipTra": "Cherry_PrisStatAnvil_HP_Tooltip",
+        "RootSpell": "{eea19750}",
+        "mBuildTags": 256,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/prismatic_hp.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/prismatic_hp.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            9
+        ],
+        "__type": "AnvilData"
+    },
+    "{35ec48bb}": {
+        "AugmentNameId": "ARAM_GoldStatAnvil_AP",
+        "NameTra": "Cherry_GoldStatAnvil_AP_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_AP_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_AP_Tooltip",
+        "RootSpell": "{f5444030}",
+        "mAugmentTags": 2,
+        "mBuildTags": 42,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/gold_ap.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/gold_ap.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            8
+        ],
+        "__type": "AnvilData"
+    },
+    "{36ec4a4e}": {
+        "AugmentNameId": "ARAM_GoldStatAnvil_AS",
+        "NameTra": "Cherry_GoldStatAnvil_AS_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_AS_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_AS_Tooltip",
+        "RootSpell": "{5b19c674}",
+        "mBuildTags": 82,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/gold_as.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/gold_as.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            8
+        ],
+        "__type": "AnvilData"
+    },
+    "{ad3e91c0}": {
+        "AugmentNameId": "ARAM_PrisStatAnvil_MPen",
+        "NameTra": "Cherry_PrisStatAnvil_MPen_Name",
+        "DescriptionTra": "Cherry_PrisStatAnvil_MPen_Tooltip",
+        "AugmentTooltipTra": "Cherry_PrisStatAnvil_MPen_Tooltip",
+        "RootSpell": "{3753b82c}",
+        "mAugmentTags": 2,
+        "mBuildTags": 34,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/prismatic_mpen.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/prismatic_mpen.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            9
+        ],
+        "__type": "AnvilData"
+    },
+    "{3753b82c}": {
+        "ObjectName": "Augment_ARAM_PrisStatAnvil_MPen",
+        "objectPath": "{3753b82c}",
+        "mScriptName": "Augment_ARAM_PrisStatAnvil_MPen",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinMPen",
+                    "values": [
+                        0.17499999701976776,
+                        0.17499999701976776,
+                        0.17499999701976776,
+                        0.17499999701976776,
+                        0.17499999701976776,
+                        0.17499999701976776,
+                        0.17499999701976776
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandMPen": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinMPen",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{aab00bc2}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "mPrecision": 1,
+                    "__type": "GameCalculation"
+                },
+                "MaxMPen": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinMPen",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_PrisStatAnvil_MPen",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{37ec4be1}": {
+        "AugmentNameId": "ARAM_GoldStatAnvil_AR",
+        "NameTra": "Cherry_GoldStatAnvil_AR_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_AR_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_AR_Tooltip",
+        "RootSpell": "{45d0d118}",
+        "mBuildTags": 256,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/gold_ar.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/gold_ar.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            8
+        ],
+        "__type": "AnvilData"
+    },
+    "{3ffda19a}": {
+        "AugmentNameId": "ARAM_GoldStatAnvil_HP",
+        "NameTra": "Cherry_GoldStatAnvil_HP_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_HP_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_HP_Tooltip",
+        "RootSpell": "{5dccbff8}",
+        "mBuildTags": 256,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/gold_hp.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/gold_hp.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            8
+        ],
+        "__type": "AnvilData"
+    },
+    "{400a6d8d}": {
+        "AugmentNameId": "ARAM_GoldStatAnvil_MR",
+        "NameTra": "Cherry_StatAnvil_MR_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_MR_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_MR_Tooltip",
+        "RootSpell": "{e6b849d0}",
+        "mBuildTags": 256,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/gold_mr.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/gold_mr.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            8
+        ],
+        "__type": "AnvilData"
+    },
+    "{45d0d118}": {
+        "ObjectName": "Augment_ARAM_GoldStatAnvil_AR",
+        "objectPath": "{45d0d118}",
+        "mScriptName": "Augment_ARAM_GoldStatAnvil_AR",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinAR",
+                    "values": [
+                        45.0,
+                        45.0,
+                        45.0,
+                        45.0,
+                        45.0,
+                        45.0,
+                        45.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandAR": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinAR",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{66f94c4f}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxAR": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinAR",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_GoldStatAnvil_AR",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{469f6fdc}": {
+        "AugmentNameId": "ARAM_StatAnvil_HP",
+        "NameTra": "Cherry_StatAnvil_HP_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_HP_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_HP_Tooltip",
+        "RootSpell": "{9b3e3aac}",
+        "mBuildTags": 256,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/silver_hp.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/silver_hp.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            0
+        ],
+        "__type": "AnvilData"
+    },
+    "{499f7495}": {
+        "AugmentNameId": "ARAM_StatAnvil_HS",
+        "NameTra": "Cherry_StatAnvil_Spirit_Name",
+        "DescriptionTra": "Cherry_StatAnvil_Spirit_Tooltip",
+        "AugmentTooltipTra": "Cherry_StatAnvil_Spirit_Tooltip",
+        "RootSpell": "{f290ec74}",
+        "mAugmentTags": 2048,
+        "mBuildTags": 8,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/prismatic_hs.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/prismatic_hs.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            9
+        ],
+        "__type": "AnvilData"
+    },
+    "{4b9563ec}": {
+        "AugmentNameId": "ARAM_StatAnvil_CritChance",
+        "NameTra": "Cherry_StatAnvil_CritChance_Name",
+        "DescriptionTra": "Kiwi_StatAnvil_CritChance_Tooltip",
+        "AugmentTooltipTra": "Kiwi_StatAnvil_CritChance_Tooltip",
+        "RootSpell": "{da7f686c}",
+        "mBuildTags": 512,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/silver_critchance.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/silver_critchance.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            0
+        ],
+        "__type": "AnvilData"
+    },
+    "{98ff37f6}": {
+        "AugmentNameId": "ARAM_GoldStatAnvil_CritChance",
+        "NameTra": "Cherry_GoldStatAnvil_CritChance_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_CritChance_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_CritChance_Tooltip",
+        "RootSpell": "{4f82c5d4}",
+        "mBuildTags": 512,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/gold_critchance.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/gold_critchance.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            8
+        ],
+        "__type": "AnvilData"
+    },
+    "{4f82c5d4}": {
+        "ObjectName": "Augment_ARAM_GoldStatAnvil_CritChance",
+        "objectPath": "{4f82c5d4}",
+        "mScriptName": "Augment_ARAM_GoldStatAnvil_CritChance",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinCritChance",
+                    "values": [
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandCritChance": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinCritChance",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{de021ee6}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                },
+                "MaxCritChance": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinCritChance",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_GoldStatAnvil_CritChance",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{51162390}": {
+        "AugmentNameId": "ARAM_PrisStatAnvil_Lethality",
+        "NameTra": "Cherry_PrisStatAnvil_ArmorPen",
+        "DescriptionTra": "Cherry_PrisStatAnvil_ArmorPen_Tooltip",
+        "AugmentTooltipTra": "Cherry_PrisStatAnvil_ArmorPen_Tooltip",
+        "RootSpell": "{aa1b6434}",
+        "mAugmentTags": 4,
+        "mBuildTags": 18,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/prismatic_apen.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/prismatic_apen.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            9
+        ],
+        "__type": "AnvilData"
+    },
+    "{d70a5449}": {
+        "AugmentNameId": "ARAM_GoldStatAnvil_Hybrid3",
+        "NameTra": "Cherry_GoldStatAnvil_Hybrid3_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_Hybrid3_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_Hybrid3_Tooltip",
+        "RootSpell": "{578d8612}",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/gold_ar.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/gold_ar.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            8
+        ],
+        "__type": "AnvilData"
+    },
+    "{578d8612}": {
+        "ObjectName": "Augment_ARAM_GoldStatAnvil_Hybrid3",
+        "objectPath": "{578d8612}",
+        "mScriptName": "Augment_ARAM_GoldStatAnvil_Hybrid3",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinArmor",
+                    "values": [
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinMR",
+                    "values": [
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandArmor": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinArmor",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{7f74c8cb}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "RandMR": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinMR",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{7f74c8cb}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxArmor": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinArmor",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxMR": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinMR",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_GoldStatAnvil_Hybrid3",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{5b19c674}": {
+        "ObjectName": "Augment_ARAM_GoldStatAnvil_AS",
+        "objectPath": "{5b19c674}",
+        "mScriptName": "Augment_ARAM_GoldStatAnvil_AS",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinAS",
+                    "values": [
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandAS": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinAS",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{c150a50e}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                },
+                "MaxAS": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinAS",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_GoldStatAnvil_AS",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{5c8e495d}": {
+        "AugmentNameId": "ARAM_StatAnvil_AP",
+        "NameTra": "Cherry_StatAnvil_AP_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_AP_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_AP_Tooltip",
+        "RootSpell": "{9a97fef4}",
+        "mAugmentTags": 2,
+        "mBuildTags": 42,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/silver_ap.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/silver_ap.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            0
+        ],
+        "__type": "AnvilData"
+    },
+    "{5dccbff8}": {
+        "ObjectName": "Augment_ARAM_GoldStatAnvil_HP",
+        "objectPath": "{5dccbff8}",
+        "mScriptName": "Augment_ARAM_GoldStatAnvil_HP",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinHP",
+                    "values": [
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandHP": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinHP",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{e1a08e36}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxHP": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinHP",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_GoldStatAnvil_HP",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{648e55f5}": {
+        "AugmentNameId": "ARAM_StatAnvil_AH",
+        "NameTra": "Cherry_StatAnvil_AH_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_AH_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_AH_Tooltip",
+        "RootSpell": "{6151df94}",
+        "mBuildTags": 314,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/silver_ah.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/silver_ah.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            0
+        ],
+        "__type": "AnvilData"
+    },
+    "{6151df94}": {
+        "ObjectName": "Augment_ARAM_StatAnvil_AH",
+        "objectPath": "{6151df94}",
+        "mScriptName": "Augment_ARAM_StatAnvil_AH",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinAH",
+                    "values": [
+                        11.0,
+                        11.0,
+                        11.0,
+                        11.0,
+                        11.0,
+                        11.0,
+                        11.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandAH": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinAH",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{b1a1ce39}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxAH": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinAH",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_StatAnvil_AH",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{61617700}": {
+        "ObjectName": "Augment_ARAM_GoldStatAnvil_AD",
+        "objectPath": "{61617700}",
+        "mScriptName": "Augment_ARAM_GoldStatAnvil_AD",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinAD",
+                    "values": [
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandAD": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinAD",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{7b8fb1fd}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxAD": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinAD",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_GoldStatAnvil_AD",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{64f36a34}": {
+        "ObjectName": "Augment_ARAM_StatAnvil_Tenacity",
+        "objectPath": "{64f36a34}",
+        "mScriptName": "Augment_ARAM_StatAnvil_Tenacity",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinTenacity",
+                    "values": [
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandTenacity": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinTenacity",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{274f114d}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "mPrecision": 1,
+                    "__type": "GameCalculation"
+                },
+                "MaxTenacity": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinTenacity",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_StatAnvil_Tenacity",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{688e5c41}": {
+        "AugmentNameId": "ARAM_StatAnvil_AD",
+        "NameTra": "Cherry_StatAnvil_AD_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_AD_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_AD_Tooltip",
+        "RootSpell": "{66c72c44}",
+        "mAugmentTags": 4,
+        "mBuildTags": 594,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/silver_ad.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/silver_ad.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            0
+        ],
+        "__type": "AnvilData"
+    },
+    "{66c72c44}": {
+        "ObjectName": "Augment_ARAM_StatAnvil_AD",
+        "objectPath": "{66c72c44}",
+        "mScriptName": "Augment_ARAM_StatAnvil_AD",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinAD",
+                    "values": [
+                        11.0,
+                        11.0,
+                        11.0,
+                        11.0,
+                        11.0,
+                        11.0,
+                        11.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandAD": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinAD",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{7b8fb1fd}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxAD": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinAD",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_StatAnvil_AD",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{b768efb3}": {
+        "AugmentNameId": "ARAM_PrisStatAnvil_CritDamage",
+        "NameTra": "Cherry_PrisStatAnvil_CritDamage_Name",
+        "DescriptionTra": "Cherry_PrisStatAnvil_CritDamage_Tooltip",
+        "AugmentTooltipTra": "Cherry_PrisStatAnvil_CritDamage_Tooltip",
+        "RootSpell": "{68bcb7f0}",
+        "mAugmentTags": 4,
+        "mBuildTags": 512,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/prismatic_apen.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/prismatic_apen.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            9
+        ],
+        "__type": "AnvilData"
+    },
+    "{68bcb7f0}": {
+        "ObjectName": "Augment_ARAM_PrisStatAnvil_CritDamage",
+        "objectPath": "{68bcb7f0}",
+        "mScriptName": "Augment_ARAM_PrisStatAnvil_CritDamage",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinCritDamage",
+                    "values": [
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "{de4c3eb7}": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinCritDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{75ff192d}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                },
+                "{0a00a164}": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinCritDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_PrisStatAnvil_CritDamage",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{8bdecc11}": {
+        "AugmentNameId": "ARAM_StatAnvil_Hybrid1",
+        "NameTra": "Cherry_StatAnvil_Hybrid1_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_Hybrid1_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_Hybrid1_Tooltip",
+        "RootSpell": "{85ce236a}",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/silver_hybrid1.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/silver_hybrid1.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            0
+        ],
+        "__type": "AnvilData"
+    },
+    "{85ce236a}": {
+        "ObjectName": "Augment_ARAM_StatAnvil_Hybrid1",
+        "objectPath": "{85ce236a}",
+        "mScriptName": "Augment_ARAM_StatAnvil_Hybrid1",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinAS",
+                    "values": [
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinAH",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandAS": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinAS",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{f142fe6d}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                },
+                "RandAH": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinAH",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{f142fe6d}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxAS": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinAS",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                },
+                "MaxAH": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinAH",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_StatAnvil_Hybrid1",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{89dec8eb}": {
+        "AugmentNameId": "ARAM_StatAnvil_Hybrid3",
+        "NameTra": "Cherry_StatAnvil_Hybrid3_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_Hybrid3_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_Hybrid3_Tooltip",
+        "RootSpell": "{a763ae3e}",
+        "AugmentLargeIconPath": "assets/items/icons2d/icon_stat_ar.tex",
+        "AugmentSmallIconPath": "assets/items/icons2d/icon_stat_ar.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            0
+        ],
+        "__type": "AnvilData"
+    },
+    "{9a97fef4}": {
+        "ObjectName": "Augment_ARAM_StatAnvil_AP",
+        "objectPath": "{9a97fef4}",
+        "mScriptName": "Augment_ARAM_StatAnvil_AP",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinAP",
+                    "values": [
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandAP": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinAP",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{34d41c91}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxAP": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinAP",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_StatAnvil_AP",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{9b3e3aac}": {
+        "ObjectName": "Augment_ARAM_StatAnvil_HP",
+        "objectPath": "{9b3e3aac}",
+        "mScriptName": "Augment_ARAM_StatAnvil_HP",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinHP",
+                    "values": [
+                        110.0,
+                        110.0,
+                        110.0,
+                        110.0,
+                        110.0,
+                        110.0,
+                        110.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandHP": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinHP",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{e1a08e36}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxHP": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinHP",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_StatAnvil_HP",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{a14fd42b}": {
+        "AugmentNameId": "ARAM_StatAnvil_Random",
+        "Enabled": false,
+        "NameTra": "Cherry_StatAnvil_Random_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_Random_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_Random_Tooltip",
+        "RootSpell": "{d6f33c44}",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/silver_faith.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/silver_faith.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            0
+        ],
+        "__type": "AnvilData"
+    },
+    "{a763ae3e}": {
+        "ObjectName": "Augment_ARAM_StatAnvil_Hybrid3",
+        "objectPath": "{a763ae3e}",
+        "mScriptName": "Augment_ARAM_StatAnvil_Hybrid3",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinArmor",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinMR",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandArmor": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinArmor",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{7f74c8cb}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "RandMR": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinMR",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{7f74c8cb}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxArmor": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinArmor",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxMR": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinMR",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_StatAnvil_Hybrid3",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{aa1b6434}": {
+        "ObjectName": "Augment_ARAM_PrisStatAnvil_Lethality",
+        "objectPath": "{aa1b6434}",
+        "mScriptName": "Augment_ARAM_PrisStatAnvil_Lethality",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinLethality",
+                    "values": [
+                        0.17499999701976776,
+                        0.17499999701976776,
+                        0.17499999701976776,
+                        0.17499999701976776,
+                        0.17499999701976776,
+                        0.17499999701976776,
+                        0.17499999701976776
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandLethality": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinLethality",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{70606c32}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "mPrecision": 1,
+                    "__type": "GameCalculation"
+                },
+                "MaxLethality": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinLethality",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_PrisStatAnvil_Lethality",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{aacea458}": {
+        "AugmentNameId": "ARAM_GoldStatAnvil_MPen",
+        "NameTra": "Cherry_GoldStatAnvil_MPen_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_MPen_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_MPen_Tooltip",
+        "RootSpell": "{ed54b10c}",
+        "mAugmentTags": 2,
+        "mBuildTags": 34,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/gold_mpen.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/gold_mpen.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            8
+        ],
+        "__type": "AnvilData"
+    },
+    "{b21cb66c}": {
+        "ObjectName": "Augment_ARAM_StatAnvil_Pristine",
+        "objectPath": "{b21cb66c}",
+        "mScriptName": "Augment_ARAM_StatAnvil_Pristine",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinMultiplier",
+                    "values": [
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandMultiplier": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinMultiplier",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{2e86f6e6}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "mPrecision": 1,
+                    "__type": "GameCalculation"
+                },
+                "MaxMultiplier": {
+                    "mMultiplier": {
+                        "mNumber": 4.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinMultiplier",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_StatAnvil_Pristine",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{b2a1fbae}": {
+        "AugmentNameId": "ARAM_StatAnvil_Lethality",
+        "NameTra": "Cherry_StatAnvil_Lethality_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_Lethality_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_Lethality_Tooltip",
+        "RootSpell": "{edd5df9c}",
+        "mAugmentTags": 4,
+        "mBuildTags": 18,
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/silver_apen.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/silver_apen.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            0
+        ],
+        "__type": "AnvilData"
+    },
+    "{d60a52b6}": {
+        "AugmentNameId": "ARAM_GoldStatAnvil_Hybrid2",
+        "NameTra": "Cherry_GoldStatAnvil_Hybrid2_Name",
+        "DescriptionTra": "Cherry_GoldStatAnvil_Hybrid2_Tooltip",
+        "AugmentTooltipTra": "Cherry_GoldStatAnvil_Hybrid2_Tooltip",
+        "RootSpell": "{f910bb50}",
+        "AugmentLargeIconPath": "assets/ux/cherry/augments/statanvil/gold_hybrid2.tex",
+        "AugmentSmallIconPath": "assets/ux/cherry/augments/statanvil/gold_hybrid2.tex",
+        "AugmentDisplayTags": [
+            6
+        ],
+        "AnvilTypes": [
+            8
+        ],
+        "__type": "AnvilData"
+    },
+    "{d6f33c44}": {
+        "ObjectName": "Augment_ARAM_StatAnvil_Random",
+        "objectPath": "{d6f33c44}",
+        "mScriptName": "Augment_ARAM_StatAnvil_Random",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinRand",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandRand": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinRand",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{cf8a268b}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                },
+                "MaxRand": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinRand",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_StatAnvil_Random",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{da7f686c}": {
+        "ObjectName": "Augment_ARAM_StatAnvil_CritChance",
+        "objectPath": "{da7f686c}",
+        "mScriptName": "Augment_ARAM_StatAnvil_CritChance",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinCritChance",
+                    "values": [
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandCritChance": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinCritChance",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{de021ee6}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                },
+                "MaxCritChance": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinCritChance",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_StatAnvil_CritChance",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{e6b849d0}": {
+        "ObjectName": "Augment_ARAM_GoldStatAnvil_MR",
+        "objectPath": "{e6b849d0}",
+        "mScriptName": "Augment_ARAM_GoldStatAnvil_MR",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinMR",
+                    "values": [
+                        45.0,
+                        45.0,
+                        45.0,
+                        45.0,
+                        45.0,
+                        45.0,
+                        45.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandMR": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinMR",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{2ddd0efb}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxMR": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinMR",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_GoldStatAnvil_MR",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{ed54b10c}": {
+        "ObjectName": "Augment_ARAM_GoldStatAnvil_MPen",
+        "objectPath": "{ed54b10c}",
+        "mScriptName": "Augment_ARAM_GoldStatAnvil_MPen",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinMPen",
+                    "values": [
+                        18.0,
+                        18.0,
+                        18.0,
+                        18.0,
+                        18.0,
+                        18.0,
+                        18.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandMPen": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinMPen",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{902de314}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "mPrecision": 1,
+                    "__type": "GameCalculation"
+                },
+                "MaxMPen": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinMPen",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_GoldStatAnvil_MPen",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{edd5df9c}": {
+        "ObjectName": "Augment_ARAM_StatAnvil_Lethality",
+        "objectPath": "{edd5df9c}",
+        "mScriptName": "Augment_ARAM_StatAnvil_Lethality",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinLethality",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandLethality": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinLethality",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{33972dec}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "mPrecision": 1,
+                    "__type": "GameCalculation"
+                },
+                "MaxLethality": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinLethality",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_StatAnvil_Lethality",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{eea19750}": {
+        "ObjectName": "Augment_ARAM_PrisStatAnvil_HP",
+        "objectPath": "{eea19750}",
+        "mScriptName": "Augment_ARAM_PrisStatAnvil_HP",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinHP",
+                    "values": [
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SizeGain",
+                    "values": [
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandHP": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinHP",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{e1a08e36}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxHP": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinHP",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_PrisStatAnvil_HP",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{f290ec74}": {
+        "ObjectName": "Augment_ARAM_StatAnvil_HS",
+        "objectPath": "{f290ec74}",
+        "mScriptName": "Augment_ARAM_StatAnvil_HS",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinHS",
+                    "values": [
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandHS": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinHS",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{bbccfa99}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "mPrecision": 1,
+                    "__type": "GameCalculation"
+                },
+                "MaxHS": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinHS",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_StatAnvil_HS",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{f5444030}": {
+        "ObjectName": "Augment_ARAM_GoldStatAnvil_AP",
+        "objectPath": "{f5444030}",
+        "mScriptName": "Augment_ARAM_GoldStatAnvil_AP",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinAP",
+                    "values": [
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandAP": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinAP",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{34d41c91}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxAP": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinAP",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_GoldStatAnvil_AP",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{f910bb50}": {
+        "ObjectName": "Augment_ARAM_GoldStatAnvil_Hybrid2",
+        "objectPath": "{f910bb50}",
+        "mScriptName": "Augment_ARAM_GoldStatAnvil_Hybrid2",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinAD",
+                    "values": [
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinAP",
+                    "values": [
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandAD": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinAD",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{a347d44a}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "RandAP": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinAP",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{a347d44a}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxAD": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinAD",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxAP": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinAP",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_GoldStatAnvil_Hybrid2",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{fce48840}": {
+        "ObjectName": "Augment_ARAM_GoldStatAnvil_AH",
+        "objectPath": "{fce48840}",
+        "mScriptName": "Augment_ARAM_GoldStatAnvil_AH",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinAH",
+                    "values": [
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RandAH": {
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "MinAH",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{b1a1ce39}",
+                                        "mCoefficient": 0.10000000149011612,
+                                        "__type": "BuffCounterByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxAH": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinAH",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Terrify.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_ARAM_GoldStatAnvil_AH",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{d7c27163}": {
+        "mObjectName": "Spell",
+        "mInputLocKeysWithDefaults": {
+            "keyName": "",
+            "keySummary": "",
+            "keyTooltip": "",
+            "keyCost": "Spell_Default_Cost",
+            "keyCooldown": "Spell_Default_Cooldown",
+            "keyTooltipExtended": "Spell_Default_TooltipExtended",
+            "keyTooltipExtendedBelowLine": "Spell_Default_ExtendedBelowLine",
+            "keyTooltipSimple": "Spell_Default_TooltipSimple",
+            "keyNameUnformatted": "Spell_Default_NameUnformatted",
+            "keyHotkey": "Spell_Default_Hotkey",
+            "keyPickChoiceName": "Spell_Default_PickChoiceName",
+            "keyPickChoiceDescription": "Spell_Default_PickChoiceDescription"
+        },
+        "mListNames": [
+            "LevelUp"
+        ],
+        "mListTypeChoices": {
+            "Cooldown": "Spell_ListType_Cooldown",
+            "Cost": "Spell_ListType_Cost",
+            "Effect%dAmount": "",
+            "CastRange": "Spell_ListType_Range",
+            "CastRangeDisplayOverride": "Spell_ListType_Range",
+            "AmmoRechargeTime": "Spell_ListType_RechargeTime",
+            "BaseCost": "Spell_ListType_Cost"
+        },
+        "mListStyles": {
+            "0": "Spell_ListStyle_Default",
+            "1": "Spell_ListType_Percent"
+        },
+        "mUsesListValues": true,
+        "mListValueSeparator": "Template_Spell_ValueSeparator",
+        "mListGridPrefix": "Template_Spell_GridPrefix",
+        "mListGridPostfix": "Template_Spell_GridPostfix",
+        "mListGridSeparator": "Template_Spell_GridSeparator",
+        "mOutputStrings": {
+            "Description": "Template_Spell_Description",
+            "DisplayName": "Template_Spell_DisplayName",
+            "Tooltip": "Template_Spell_Tooltip",
+            "TooltipSimple": "Template_Spell_TooltipSimple",
+            "TooltipExtended": "Template_Spell_TooltipExtended",
+            "TooltipLevelUp": "Template_Spell_TooltipLevelUp",
+            "TooltipLevelUpUnlearned": "Template_Spell_TooltipLevelUpUnlearned",
+            "TooltipWithExtendedBehaviorHint": "Template_Spell_TooltipWithExtendedBehaviorHint",
+            "TooltipContent": "Template_Spell_TooltipContent",
+            "TooltipContentExtended": "Template_Spell_TooltipContentExtended",
+            "TooltipLevelUpList": "Template_Spell_TooltipLevelUpList",
+            "TooltipLevelUpGrid": "Template_Spell_TooltipLevelUpGrid",
+            "PickChoiceName": "Template_Spell_PickChoiceName",
+            "PickChoiceDescription": "Template_Spell_PickChoiceDescription"
+        },
+        "__type": "TooltipFormat"
+    },
+    "__linked": []
+}

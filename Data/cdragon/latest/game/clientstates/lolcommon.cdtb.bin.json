@@ -2855,13 +2855,13 @@
                 "LabelTraKey": "Options_Hotkeys_QuickCastWithIndicator_label",
                 "items": [
                     {
-                        "option": 108,
+                        "option": 109,
                         "template": "{2f26143a}",
                         "LabelTraKey": "Options_Hotkeys_QuickCastWithIndicator_ReplaceQuickCastWithIndicator",
                         "__type": "OptionItemCheckbox"
                     },
                     {
-                        "option": 109,
+                        "option": 110,
                         "template": "{2f26143a}",
                         "LabelTraKey": "Options_Hotkeys_QuickCastWithIndicator_CastThePressedSpell",
                         "__type": "OptionItemCheckbox"
@@ -4360,14 +4360,6 @@
                 "ShowOnPlatform": 2,
                 "template": "{6e23f27a}",
                 "LabelTraKey": "standalone_common_Settings_AudioSetting_MasterVolume",
-                "option": 21,
-                "__type": "OptionItemSliderFloat"
-            },
-            {
-                "LiveUpdate": true,
-                "ShowOnPlatform": 2,
-                "template": "{6e23f27a}",
-                "LabelTraKey": "standalone_common_Settings_AudioSetting_MusicVolume",
                 "option": 25,
                 "__type": "OptionItemSliderFloat"
             },
@@ -4375,8 +4367,16 @@
                 "LiveUpdate": true,
                 "ShowOnPlatform": 2,
                 "template": "{6e23f27a}",
-                "LabelTraKey": "standalone_common_Settings_AudioSetting_SfxVolume",
+                "LabelTraKey": "standalone_common_Settings_AudioSetting_MusicVolume",
                 "option": 29,
+                "__type": "OptionItemSliderFloat"
+            },
+            {
+                "LiveUpdate": true,
+                "ShowOnPlatform": 2,
+                "template": "{6e23f27a}",
+                "LabelTraKey": "standalone_common_Settings_AudioSetting_SfxVolume",
+                "option": 34,
                 "__type": "OptionItemSliderFloat"
             }
         ],
@@ -4401,7 +4401,7 @@
                         "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Interface_InterfaceSize_HUDScale",
-                        "option": 17,
+                        "option": 21,
                         "UpdateOnDrag": false,
                         "__type": "OptionItemSliderFloat"
                     },
@@ -4414,7 +4414,7 @@
                         "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Interface_InterfaceSize_CursorScale",
-                        "option": 12,
+                        "option": 16,
                         "scale": 2.0,
                         "{5368b9de}": 200.0,
                         "__type": "OptionItemSliderFloat"
@@ -4429,7 +4429,7 @@
                         "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Interface_InterfaceSize_ShopScale",
-                        "option": 33,
+                        "option": 38,
                         "UpdateOnDrag": false,
                         "__type": "OptionItemSliderFloat"
                     },
@@ -4450,7 +4450,7 @@
                         "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Interface_InterfaceSize_MinimapScale",
-                        "option": 23,
+                        "option": 27,
                         "scale": 3.0,
                         "__type": "OptionItemSliderFloat"
                     },
@@ -4465,7 +4465,7 @@
                         "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Interface_InterfaceSize_MinimapScaleSpectator",
-                        "option": 24,
+                        "option": 28,
                         "scale": 5.0,
                         "__type": "OptionItemSliderFloat"
                     },
@@ -4478,7 +4478,7 @@
                         "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Interface_InterfaceSize_ObjectivePlanningScale",
-                        "option": 26,
+                        "option": 30,
                         "__type": "OptionItemSliderFloat"
                     },
                     {
@@ -4491,7 +4491,7 @@
                         "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Interface_InterfaceSize_DeathRecapScale",
-                        "option": 13,
+                        "option": 17,
                         "__type": "OptionItemSliderFloat"
                     },
                     {
@@ -4513,7 +4513,7 @@
                         "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Interface_InterfaceSize_PracticeToolScale",
-                        "option": 28,
+                        "option": 33,
                         "__type": "OptionItemSliderFloat"
                     }
                 ],
@@ -4528,7 +4528,7 @@
                         "itemsLeft": [
                             {
                                 "LiveUpdate": true,
-                                "option": 89,
+                                "option": 90,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_HealthAndResourceBars_ShowHealthBars",
                                 "__type": "OptionItemCheckbox"
@@ -4577,14 +4577,14 @@
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
                                 "LiveUpdate": true,
-                                "option": 93,
+                                "option": 94,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_HealthAndResourceBars_ShowLossOfControlUI",
                                 "__type": "OptionItemCheckbox"
                             },
                             {
                                 "LiveUpdate": true,
-                                "option": 88,
+                                "option": 89,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_HealthAndResourceBars_ShowHealthBarAnimations",
                                 "__type": "OptionItemCheckbox"
@@ -4597,7 +4597,7 @@
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 90,
+                                "option": 91,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_HealthAndResrouceBars_ShowLastHitAssist",
                                 "__type": "OptionItemCheckbox"
@@ -4626,7 +4626,7 @@
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 85,
+                                "option": 86,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_Notifications_ChampionHightlightOnCameraCenter",
                                 "__type": "OptionItemCheckbox"
@@ -4642,7 +4642,7 @@
                             },
                             {
                                 "LiveUpdate": true,
-                                "option": 96,
+                                "option": 97,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_Notifications_ShowOffScreenPointsOfInterest",
                                 "__type": "OptionItemCheckbox"
@@ -4718,19 +4718,19 @@
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 78,
+                                "option": 79,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_AbilityAndAttackDisplay_ShowAttackRange",
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 102,
+                                "option": 103,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_AbilityAndAttackDisplay_ShowSpellCosts",
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 79,
+                                "option": 80,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_AbilityAndAttackDisplay_ShowAutoAttackRangeIndicatorLine",
                                 "__type": "OptionItemCheckbox"
@@ -4783,7 +4783,7 @@
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 103,
+                                "option": 104,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_ShowSpellRecommendations",
                                 "__type": "OptionItemCheckbox"
@@ -4807,7 +4807,7 @@
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
                                 "LiveUpdate": true,
-                                "option": 95,
+                                "option": 96,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_Minimap_ShowNeutralCamps",
                                 "__type": "OptionItemCheckbox"
@@ -4865,7 +4865,7 @@
                         ],
                         "itemsRight": [
                             {
-                                "option": 104,
+                                "option": 105,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_Scoreboard_ShowSummonerNames",
                                 "__type": "OptionItemCheckbox"
@@ -4888,7 +4888,7 @@
                 "items": [
                     {
                         "LiveUpdate": true,
-                        "option": 105,
+                        "option": 106,
                         "template": "{2f26143a}",
                         "LabelTraKey": "Options_Interface_TeamFrames_ShowTeamFramesOnLeft",
                         "__type": "OptionItemCheckbox"
@@ -4930,7 +4930,7 @@
                                     ],
                                     "__type": "OptionItemFilter_And"
                                 },
-                                "option": 75,
+                                "option": 76,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_Chat_ShowAllChatMatchedGames",
                                 "__type": "OptionItemCheckbox"
@@ -4961,7 +4961,7 @@
                                     ],
                                     "__type": "OptionItemFilter_And"
                                 },
-                                "option": 76,
+                                "option": 77,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_Chat_ShowAllChatMatchedGames",
                                 "__type": "OptionItemCheckbox"
@@ -4975,7 +4975,7 @@
                                     "ShowInTftPregame": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
-                                "option": 77,
+                                "option": 78,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_Chat_ShowAlliedChat",
                                 "__type": "OptionItemCheckbox"
@@ -5022,7 +5022,7 @@
                                 "__type": "OptionItemDropdown"
                             },
                             {
-                                "option": 106,
+                                "option": 107,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_Chat_ShowTimestamps",
                                 "__type": "OptionItemCheckbox"
@@ -5137,13 +5137,13 @@
                     {
                         "ItemsEither": [
                             {
-                                "option": 81,
+                                "option": 82,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Damage",
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 87,
+                                "option": 88,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Heal",
                                 "__type": "OptionItemCheckbox"
@@ -5154,13 +5154,13 @@
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
-                                "option": 86,
+                                "option": 87,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Gold",
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 91,
+                                "option": 92,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Status",
                                 "__type": "OptionItemCheckbox"
@@ -5171,31 +5171,31 @@
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
-                                "option": 97,
+                                "option": 98,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Quest",
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 94,
+                                "option": 95,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Mana",
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 83,
+                                "option": 84,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_EnemyDamage",
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 82,
+                                "option": 83,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Dodge",
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 92,
+                                "option": 93,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Level",
                                 "__type": "OptionItemCheckbox"
@@ -5206,7 +5206,7 @@
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
-                                "option": 101,
+                                "option": 102,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Special",
                                 "__type": "OptionItemCheckbox"
@@ -5217,7 +5217,7 @@
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
-                                "option": 99,
+                                "option": 100,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Score",
                                 "__type": "OptionItemCheckbox"
@@ -5228,7 +5228,7 @@
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
-                                "option": 84,
+                                "option": 85,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Interface_CombatText_Experience",
                                 "__type": "OptionItemCheckbox"
@@ -5294,7 +5294,7 @@
                             "__type": "OptionItemFilter_Osx"
                         },
                         "LiveUpdate": true,
-                        "option": 68,
+                        "option": 69,
                         "template": "{2f26143a}",
                         "LabelTraKey": "Options_Game_Controls_OSXMouseAcceleration",
                         "__type": "OptionItemCheckbox"
@@ -5328,7 +5328,7 @@
                                 "__type": "OptionItemCheckbox"
                             },
                             {
-                                "option": 69,
+                                "option": 70,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Gameplay_UseMovementPrediction",
                                 "TooltipTraKey": "Options_Gameplay_UseMovementPrediction_Description",
@@ -5340,7 +5340,7 @@
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
-                                "option": 107,
+                                "option": 108,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Gameplay_ShowTurretRangeIndicators",
                                 "__type": "OptionItemCheckbox"
@@ -5371,7 +5371,7 @@
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
-                                "option": 111,
+                                "option": 112,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Gameplay_TreatTargetChampionsOnlyAsAToggle",
                                 "__type": "OptionItemCheckbox"
@@ -5384,7 +5384,7 @@
                                     "ShowInTftPregame": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
-                                "option": 98,
+                                "option": 99,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Recommend_Jungle_Path_Label",
                                 "TooltipTraKey": "Options_Recommend_Jungle_Path_Tooltip",
@@ -5652,7 +5652,7 @@
                         "Filter": {
                             "__type": "OptionItemFilter_Osx"
                         },
-                        "option": 68,
+                        "option": 69,
                         "template": "{2f26143a}",
                         "LabelTraKey": "Options_Game_Controls_OSXMouseAcceleration",
                         "__type": "OptionItemCheckbox"
@@ -5665,7 +5665,7 @@
                         },
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Controls_CameraMoveSpeedMouse",
-                        "option": 20,
+                        "option": 24,
                         "__type": "OptionItemSliderFloat"
                     },
                     {
@@ -5676,7 +5676,7 @@
                         },
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Controls_CameraMoveSpeedKeyboard",
-                        "option": 18,
+                        "option": 22,
                         "__type": "OptionItemSliderFloat"
                     },
                     {
@@ -5687,7 +5687,7 @@
                         },
                         "itemsLeft": [
                             {
-                                "option": 110,
+                                "option": 111,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Controls_MoveCameraOnRevive",
                                 "__type": "OptionItemCheckbox"
@@ -5771,21 +5771,21 @@
                     {
                         "template": "{6e23f27a}",
                         "LabelTraKey": "DynamicCamera_Speed_Label",
-                        "option": 14,
+                        "option": 18,
                         "UpdateOnDrag": false,
                         "__type": "OptionItemSliderFloat"
                     },
                     {
                         "template": "{6e23f27a}",
                         "LabelTraKey": "DynamicCamera_ScoutAhead_Edgepan_Speed_Label",
-                        "option": 15,
+                        "option": 19,
                         "UpdateOnDrag": false,
                         "__type": "OptionItemSliderFloat"
                     },
                     {
                         "template": "{6e23f27a}",
                         "LabelTraKey": "DynamicCamera_ScoutAhead_Drag_Speed_Label",
-                        "option": 16,
+                        "option": 20,
                         "UpdateOnDrag": false,
                         "__type": "OptionItemSliderFloat"
                     },
@@ -5809,7 +5809,7 @@
                         "Filter": {
                             "__type": "OptionItemFilter_Osx"
                         },
-                        "option": 68,
+                        "option": 69,
                         "template": "{2f26143a}",
                         "LabelTraKey": "Options_Game_Controls_OSXMouseAcceleration",
                         "__type": "OptionItemCheckbox"
@@ -5822,7 +5822,7 @@
                         },
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Controls_CameraMoveSpeedMouse",
-                        "option": 20,
+                        "option": 24,
                         "__type": "OptionItemSliderFloat"
                     },
                     {
@@ -5833,7 +5833,7 @@
                         },
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Controls_CameraMoveSpeedKeyboard",
-                        "option": 18,
+                        "option": 22,
                         "__type": "OptionItemSliderFloat"
                     },
                     {
@@ -5844,7 +5844,7 @@
                         },
                         "itemsLeft": [
                             {
-                                "option": 110,
+                                "option": 111,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Controls_MoveCameraOnRevive",
                                 "__type": "OptionItemCheckbox"
@@ -5912,14 +5912,14 @@
                 "items": [
                     {
                         "LiveUpdate": true,
-                        "option": 118,
+                        "option": 119,
                         "template": "{2f26143a}",
                         "LabelTraKey": "Options_Voice_InputSettings_ShowVoicePanelWithScoreboard",
                         "__type": "OptionItemCheckbox"
                     },
                     {
                         "LiveUpdate": true,
-                        "option": 119,
+                        "option": 120,
                         "template": "{2f26143a}",
                         "LabelTraKey": "Options_Voice_InputSettings_ShowSpeakingIndicatorsOnHUD",
                         "__type": "OptionItemCheckbox"
@@ -5933,11 +5933,11 @@
                         "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Voice_InputSettings_InputVolumeGain",
-                        "option": 35,
+                        "option": 40,
                         "__type": "OptionItemSliderFloat"
                     },
                     {
-                        "option": 36,
+                        "option": 37,
                         "template": "{eeccf10a}",
                         "LabelTraKey": "Options_Voice_InputSettings_InputMode_label",
                         "ItemsList": [
@@ -5957,7 +5957,7 @@
                         "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Voice_InputSettings_ActivationThreshold",
-                        "option": 34,
+                        "option": 39,
                         "__type": "OptionItemSliderFloat"
                     },
                     {
@@ -6010,7 +6010,7 @@
                                 "LiveUpdate": true,
                                 "template": "{6e23f27a}",
                                 "LabelTraKey": "Options_Sound_MasterVolume",
-                                "option": 21,
+                                "option": 25,
                                 "MuteButtonTemplate": "{dd21e65a}",
                                 "MuteOption": 62,
                                 "__type": "OptionItemSliderVolume"
@@ -6022,7 +6022,7 @@
                         "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Sound_MusicVolume",
-                        "option": 25,
+                        "option": 29,
                         "MuteButtonTemplate": "{dd21e65a}",
                         "MuteOption": 63,
                         "__type": "OptionItemSliderVolume"
@@ -6040,26 +6040,26 @@
                         "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Sound_VoiceVolume",
-                        "option": 36,
+                        "option": 41,
                         "MuteButtonTemplate": "{dd21e65a}",
-                        "MuteOption": 67,
+                        "MuteOption": 68,
                         "__type": "OptionItemSliderVolume"
                     },
                     {
                         "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Sound_SoundFXVolume",
-                        "option": 29,
+                        "option": 34,
                         "MuteButtonTemplate": "{dd21e65a}",
-                        "MuteOption": 65,
+                        "MuteOption": 66,
                         "__type": "OptionItemSliderVolume"
                     },
                     {
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Sound_NotificationsVolume",
-                        "option": 30,
+                        "option": 35,
                         "MuteButtonTemplate": "{dd21e65a}",
-                        "MuteOption": 66,
+                        "MuteOption": 67,
                         "__type": "OptionItemSliderVolume"
                     },
                     {
@@ -6075,7 +6075,7 @@
                         "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Sound_PingsVolume",
-                        "option": 27,
+                        "option": 31,
                         "MuteButtonTemplate": "{dd21e65a}",
                         "MuteOption": 64,
                         "__type": "OptionItemSliderVolume"
@@ -6156,7 +6156,7 @@
                         ],
                         "itemsRight": [
                             {
-                                "option": 37,
+                                "option": 38,
                                 "template": "{eeccf10a}",
                                 "LabelTraKey": "Options_WindowMode_label",
                                 "ItemsList": [
@@ -6199,7 +6199,7 @@
                                     "ShowInTftReplay": false,
                                     "__type": "OptionItemFilter_GameStyle"
                                 },
-                                "option": 70,
+                                "option": 71,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Video_UseRelativeTeamColors",
                                 "TooltipTraKey": "Options_Video_UseRelativeTeamColors_Description",
@@ -6584,7 +6584,7 @@
                                 "Filter": {
                                     "__type": "OptionItemFilter_Windows"
                                 },
-                                "option": 120,
+                                "option": 121,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Video_WaitForVSync",
                                 "TooltipTraKey": "Options_Video_WaitForVSync_Description",
@@ -6594,7 +6594,7 @@
                                 "Filter": {
                                     "__type": "OptionItemFilter_Osx"
                                 },
-                                "option": 120,
+                                "option": 121,
                                 "template": "{2f26143a}",
                                 "LabelTraKey": "Options_Video_WaitForVSyncOSX",
                                 "TooltipTraKey": "Options_Video_WaitForVSync_Description",
@@ -6725,28 +6725,28 @@
                         "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Video_Accessibility_ColorLevel",
-                        "option": 11,
+                        "option": 15,
                         "__type": "OptionItemSliderFloat"
                     },
                     {
                         "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Video_Accessibility_ColorGamma",
-                        "option": 10,
+                        "option": 14,
                         "__type": "OptionItemSliderFloat"
                     },
                     {
                         "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Video_Accessibility_ColorBrightness",
-                        "option": 8,
+                        "option": 12,
                         "__type": "OptionItemSliderFloat"
                     },
                     {
                         "LiveUpdate": true,
                         "template": "{6e23f27a}",
                         "LabelTraKey": "Options_Video_Accessibility_ColorContrast",
-                        "option": 9,
+                        "option": 13,
                         "__type": "OptionItemSliderFloat"
                     }
                 ],
