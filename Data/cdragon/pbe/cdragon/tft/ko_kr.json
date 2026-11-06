@@ -53363,7 +53363,7 @@
             "composition": [],
             "desc": "아군 마법사의 최대 마나가 @MaxManaMultiplier*100@% 감소합니다.",
             "effects": {
-                "{24a482c1}": 0.1499999761581421
+                "{24a482c1}": 0.18000000715255737
             },
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -53588,7 +53588,7 @@
             "composition": [],
             "desc": "아군 마법사의 최대 마나가 @MaxManaMultiplierUpgrade*100@% 감소합니다.",
             "effects": {
-                "{e475c01b}": 0.19999998807907104
+                "{e475c01b}": 0.25
             },
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -56071,7 +56071,7 @@
             "composition": [],
             "desc": "아군 챔피언이 사망 시 폭발하여 최대 체력의 @maxHealthExplosionDamage*100@%만큼 마법 피해를 입힙니다.",
             "effects": {
-                "{8e1bf27f}": 0.15000000596046448
+                "{8e1bf27f}": 0.11999999731779099
             },
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -57793,7 +57793,7 @@
             "composition": [],
             "desc": "아이템 상점을 엽니다. 아이템 비용은 0~@TooltipMaxCostOfItem@골드입니다.",
             "effects": {
-                "{72eb58d9}": 15.0
+                "{72eb58d9}": 17.0
             },
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -58070,7 +58070,7 @@
             "desc": "아이템 상점을 엽니다. 아이템 비용은 0~@TooltipMaxCostOfItem@골드입니다. @UpgradeGoldGain@<Set18CharmUpgrade>골드</Set18CharmUpgrade>를 <Set18CharmUpgrade>획득합니다.</Set18CharmUpgrade>",
             "effects": {
                 "{0fb627ae}": 1.0,
-                "{72eb58d9}": 15.0
+                "{72eb58d9}": 17.0
             },
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -83231,7 +83231,7 @@
             "desc": "레벨 업하면 레벨+@BonusRollPerLevel@만큼 상점 새로고침 기회를 얻습니다. @GoldGain@골드를 획득합니다.",
             "effects": {
                 "BonusRollPerLevel": 1.0,
-                "GoldGain": 6.0
+                "GoldGain": 7.0
             },
             "from": null,
             "icon": "assets/maps/tft/icons/augments/hexcore/silver-ticket-iii.tex",
@@ -83860,6 +83860,23 @@
             "unique": false
         },
         {
+            "apiName": "DA_BranchingOut",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "무작위 상징 1개를 획득합니다.",
+            "effects": {},
+            "from": null,
+            "icon": "assets/maps/tft/icons/augments/hexcore/branching-out-i.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": true,
+            "name": "가지 뻗기",
+            "tags": [
+                "{d11fd6d5}"
+            ],
+            "unique": false
+        },
+        {
             "apiName": "DA_InvestmentStrategy",
             "associatedTraits": [],
             "composition": [],
@@ -84074,25 +84091,6 @@
             "name": "투자+",
             "tags": [
                 "{cf1fd3af}"
-            ],
-            "unique": false
-        },
-        {
-            "apiName": "DA_18_BigGrabBag",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "무작위 조합 아이템 3개, @Gold@골드, 재조합기 1개를 획득합니다.",
-            "effects": {
-                "Gold": 2.0
-            },
-            "from": null,
-            "icon": "assets/maps/tft/icons/augments/hexcore/grab-bag-ii.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": true,
-            "name": "큰 꾸러미",
-            "tags": [
-                "{ce1fd21c}"
             ],
             "unique": false
         },
@@ -84715,25 +84713,6 @@
             "unique": false
         },
         {
-            "apiName": "DA_18_OneTwoFive",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "무작위 조합 아이템 1개, @Gold@골드, 무작위 5단계 챔피언 1명을 획득합니다.",
-            "effects": {
-                "Gold": 2.0
-            },
-            "from": null,
-            "icon": "assets/maps/tft/icons/augments/hexcore/one-two-five-i.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": true,
-            "name": "하나, 둘, 다섯!",
-            "tags": [
-                "{d11fd6d5}"
-            ],
-            "unique": false
-        },
-        {
             "apiName": "DA_MaliciousMonetization",
             "associatedTraits": [],
             "composition": [],
@@ -85141,7 +85120,7 @@
             "desc": "아군이 방어력 및 마법 저항력을 @ArmorInstant@ 얻습니다. 체력이 @HealthDropThreshold*100@% 아래로 떨어지면 전투가 끝날 때까지 대신 @ThresholdArmorBoostCombined@만큼 얻습니다.",
             "effects": {
                 "{0735b729}": 40.0,
-                "{5705afa5}": 8.0,
+                "{5705afa5}": 10.0,
                 "{a6c6ae91}": 0.5
             },
             "from": null,
@@ -85152,6 +85131,26 @@
             "name": "주인공 버프",
             "tags": [
                 "{ce1fd21c}"
+            ],
+            "unique": false
+        },
+        {
+            "apiName": "DA_GoodForSomethingI",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "아이템을 장착하지 않은 챔피언이 사망하면 @ChangeDrop*100@% 확률로 @GoldReward@골드를 떨어뜨립니다.",
+            "effects": {
+                "GoldReward": 1.0,
+                "{f117ccd4}": 0.4000000059604645
+            },
+            "from": null,
+            "icon": "assets/maps/tft/icons/augments/hexcore/good-for-something-i.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": true,
+            "name": "다 쓸 데가 있다니까 I",
+            "tags": [
+                "{d11fd6d5}"
             ],
             "unique": false
         },
@@ -85304,6 +85303,23 @@
             "unique": false
         },
         {
+            "apiName": "DA_OneTwoFive",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "무작위 조합 아이템 1개, @Gold@골드, 무작위 5단계 챔피언 1명을 획득합니다.",
+            "effects": {},
+            "from": null,
+            "icon": "assets/maps/tft/icons/augments/hexcore/one-two-five-i.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": true,
+            "name": "하나, 둘, 다섯!",
+            "tags": [
+                "{d11fd6d5}"
+            ],
+            "unique": false
+        },
+        {
             "apiName": "DA_18_FaeTraitAugment",
             "associatedTraits": [
                 "DA_18_Fae"
@@ -85311,7 +85327,7 @@
             "composition": [],
             "desc": "요정의 나비정령이 더 커지고 공격력 및 주문력을 @BonusMultiplier*100@% 더 부여합니다. 요정 챔피언이 즉시 공격력 및 주문력을 @UpfrontADAP*100@% 얻습니다. 자야와 라칸을 획득합니다.",
             "effects": {
-                "BonusMultiplier": 0.5,
+                "BonusMultiplier": 0.3499999940395355,
                 "{020fc56b}": 0.18000000715255737
             },
             "from": null,
@@ -85608,19 +85624,21 @@
             "unique": false
         },
         {
-            "apiName": "DA_18_BranchingOutPlus",
+            "apiName": "DA_BigGrabBag",
             "associatedTraits": [],
             "composition": [],
-            "desc": "무작위 상징과 재조합기를 획득합니다.",
-            "effects": {},
+            "desc": "무작위 조합 아이템 3개, @Gold@골드, 재조합기 1개를 획득합니다.",
+            "effects": {
+                "Gold": 2.0
+            },
             "from": null,
-            "icon": "assets/maps/tft/icons/augments/hexcore/branching-out-i.tex",
+            "icon": "assets/maps/tft/icons/augments/hexcore/grab-bag-ii.tex",
             "id": null,
             "incompatibleTraits": [],
             "isAugment": true,
-            "name": "가지 뻗기+",
+            "name": "큰 꾸러미",
             "tags": [
-                "{d11fd6d5}"
+                "{ce1fd21c}"
             ],
             "unique": false
         },
@@ -86705,7 +86723,7 @@
             "composition": [],
             "desc": "아군이 전투에서 @FrequencySeconds@초마다 공격 속도를 @AttackSpeed*100@% 얻습니다.",
             "effects": {
-                "AttackSpeed": 0.10000002384185791,
+                "AttackSpeed": 0.12000000476837158,
                 "{0810f00e}": 3.0
             },
             "from": null,
@@ -86832,6 +86850,23 @@
             "name": "영혼 각성",
             "tags": [
                 "{cf1fd3af}"
+            ],
+            "unique": false
+        },
+        {
+            "apiName": "DA_BranchingOutPlus",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "TFT18_Augment_BranchingOutPlus_desc",
+            "effects": {},
+            "from": null,
+            "icon": "assets/maps/tft/icons/augments/hexcore/branching-out-i.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": true,
+            "name": "TFT18_Augment_BranchingOutPlus_name",
+            "tags": [
+                "{d11fd6d5}"
             ],
             "unique": false
         },
@@ -87285,6 +87320,26 @@
             "unique": false
         },
         {
+            "apiName": "DA_HeartOfSteel",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "굳건한 심장 1개를 획득합니다. 장착 유닛이 전투에서 @SurvivePeriodInSeconds@초 생존할 때마다 굳건한 심장이 영구히 최대 체력을 @MaxHealthGain@ 추가로 제공합니다.",
+            "effects": {
+                "MaxHealthGain": 18.0,
+                "{40e6f170}": 10.0
+            },
+            "from": null,
+            "icon": "assets/maps/tft/icons/augments/hexcore/healthygains_ii.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": true,
+            "name": "강철의 심장",
+            "tags": [
+                "{ce1fd21c}"
+            ],
+            "unique": false
+        },
+        {
             "apiName": "DA_SalvageBinPlus",
             "associatedTraits": [],
             "composition": [],
@@ -87607,23 +87662,6 @@
             "name": "붉고 푸른 효과",
             "tags": [
                 "{cf1fd3af}"
-            ],
-            "unique": false
-        },
-        {
-            "apiName": "DA_18_BranchingOut",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "무작위 상징 1개를 획득합니다.",
-            "effects": {},
-            "from": null,
-            "icon": "assets/maps/tft/icons/augments/hexcore/branching-out-i.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": true,
-            "name": "가지 뻗기",
-            "tags": [
-                "{d11fd6d5}"
             ],
             "unique": false
         },
@@ -87964,26 +88002,6 @@
             "name": "남작의 소굴",
             "tags": [
                 "{cf1fd3af}"
-            ],
-            "unique": false
-        },
-        {
-            "apiName": "DA_18_GoodForSomethingI",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "아이템을 장착하지 않은 챔피언이 사망하면 @ChangeDrop*100@% 확률로 @GoldReward@골드를 떨어뜨립니다.",
-            "effects": {
-                "GoldReward": 1.0,
-                "{f117ccd4}": 0.4000000059604645
-            },
-            "from": null,
-            "icon": "assets/maps/tft/icons/augments/hexcore/good-for-something-i.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": true,
-            "name": "다 쓸 데가 있다니까 I",
-            "tags": [
-                "{d11fd6d5}"
             ],
             "unique": false
         },
@@ -99886,10 +99904,7 @@
         },
         {
             "augments": [
-                "DA_18_BigGrabBag",
                 "DA_18_BlossomTraitAugment",
-                "DA_18_BranchingOut",
-                "DA_18_BranchingOutPlus",
                 "DA_18_CaretakersAlly",
                 "DA_18_CovenTraitAugment",
                 "DA_18_CovenTraitAugment_LootToAP",
@@ -99898,12 +99913,10 @@
                 "DA_18_FOURcing",
                 "DA_18_FaeTraitAugment",
                 "DA_18_FloraFatalisAugment",
-                "DA_18_GoodForSomethingI",
                 "DA_18_InfernoTraitAugment",
                 "DA_18_LunarTraitAugment",
                 "DA_18_LunarTraitAugmentPlus",
                 "DA_18_LuxAugmentII",
-                "DA_18_OneTwoFive",
                 "DA_18_OnesTwosThree",
                 "DA_18_PrimalAugmentPlus_Nidalee",
                 "DA_18_PrimalAugmentPlus_Sivir",
@@ -99932,6 +99945,7 @@
                 "DA_BandOfThievesIIPlusPlus",
                 "DA_BaronsLair",
                 "DA_BeltOverflow",
+                "DA_BigGrabBag",
                 "DA_BirthdayPresent",
                 "DA_BirthdayReunion",
                 "DA_BlackthornTraitAugment",
@@ -99942,6 +99956,8 @@
                 "DA_BoosterPackPlus",
                 "DA_BoosterPackPlusPlus",
                 "DA_BoxingLessons",
+                "DA_BranchingOut",
+                "DA_BranchingOutPlus",
                 "DA_BronzeForLifeI",
                 "DA_BronzeForLifeII",
                 "DA_BuildABud",
@@ -100014,6 +100030,7 @@
                 "DA_GoldenGamble",
                 "DA_GoldenGamblePlus",
                 "DA_GoldenGamblePlusPlus",
+                "DA_GoodForSomethingI",
                 "DA_GroupHugI",
                 "DA_GroupHugII",
                 "DA_HardBargain",
@@ -100063,6 +100080,7 @@
                 "DA_NestingAnvilsPlus",
                 "DA_NoScoutNoPivot",
                 "DA_OneBuffTwoBuff",
+                "DA_OneTwoFive",
                 "DA_PandorasBench",
                 "DA_PandorasItemsI",
                 "DA_PandorasItemsIII",
@@ -105460,7 +105478,7 @@
                             "minUnits": 7,
                             "style": 5,
                             "variables": {
-                                "ADAP": 0.5,
+                                "ADAP": 0.550000011920929,
                                 "BonusHealth": 0.10000002384185791,
                                 "{91925b8e}": 4.0
                             }
@@ -105470,7 +105488,7 @@
                             "minUnits": 9,
                             "style": 5,
                             "variables": {
-                                "ADAP": 0.550000011920929,
+                                "ADAP": 0.6499999761581421,
                                 "BonusHealth": 0.10000002384185791
                             }
                         },
@@ -523296,7 +523314,7 @@
                             "minUnits": 7,
                             "style": 5,
                             "variables": {
-                                "ADAP": 0.5,
+                                "ADAP": 0.550000011920929,
                                 "BonusHealth": 0.10000002384185791,
                                 "{91925b8e}": 4.0
                             }
@@ -523306,7 +523324,7 @@
                             "minUnits": 9,
                             "style": 5,
                             "variables": {
-                                "ADAP": 0.550000011920929,
+                                "ADAP": 0.6499999761581421,
                                 "BonusHealth": 0.10000002384185791
                             }
                         },

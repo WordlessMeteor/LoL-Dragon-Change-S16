@@ -2842,7 +2842,7 @@
 			<td>No changes</td>
 		</tr>
 		<tr>
-			<td style="text-align:center;">2026-11-01 08-03-09</td>
+			<td style="text-align:center;">2026-11-04 08-03-09</td>
 			<td style="text-align:center;">CDragon: 1/2/1</td>
 			<td>
 				CDragon: <br>
@@ -2852,7 +2852,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td style="text-align:center;">2026-10-22 14-55-46</td>
+			<td style="text-align:center;">2026-11-05 08-15-19</td>
 			<td style="text-align:center;">CDragon: 1/2/1<br>DDragon: 1/2</td>
 			<td>
 				CDragon: <br>
@@ -2861,6 +2861,16 @@
 						<li>PBE: 16.23.835.0685 -> 16.23.835.5229</li>
 					</ul>
 				DDragon: 16.21.1 -> 16.22.1
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-11-06 07-39-05</td>
+			<td style="text-align:center;">CDragon: 1/2/1<br>DDragon: 1/2</td>
+			<td>
+				CDragon: <br>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>PBE: 16.23.835.5229 -> 16.23.835.9444</li>
+					</ul>
 			</td>
 		</tr>
 	</tbody>
