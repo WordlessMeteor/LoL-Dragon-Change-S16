@@ -3319,9 +3319,9 @@
                     return super.getComponentFolderPath(), "mic-test-button"
                 }
                 _clickHandler() {
-                    this._inVoiceChannel || (this._testIsRunning ? a.default.stopMicTest() : a.default.checkMicrophonePermissions().then((e => {
-                        e ? a.default.startMicTest() : this._showMicrophonePermissionsModal()
-                    })))
+                    this._inVoiceChannel || (this._testIsRunning ? a.default.stopMicTest() : (a.default.startMicTest(), a.default.checkMicrophonePermissions().then((e => {
+                        e || this._showMicrophonePermissionsModal()
+                    }))))
                 }
                 _showMicrophonePermissionsModal() {
                     const e = r.tra.get("voice_microphone_permissions_modal_header"),

@@ -267,8 +267,8 @@
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_RefreshOverlayVFX",
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_Icon_Large",
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_Tag",
-            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GoldenReroll",
-            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GoldenRerollClick",
+            "{49ee2801}",
+            "{5f324f71}",
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_TagSpacer",
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/TagRow",
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_Desc",
@@ -278,8 +278,8 @@
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GuaranteedElementsGroup",
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSpellGroup",
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentQuestGroup",
-            "{ceacdb17}",
-            "{0597eda8}"
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_Icon_Overlay",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_ModifierOverlayVFX"
         ],
         "HitRegionElement": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_HitRegion",
         "DefaultStateElements": {
@@ -430,7 +430,7 @@
         "VfxSystem": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/Particles/Augment_TextNew_TextGlow",
         "__type": "UiElementParticleSystemData"
     },
-    "{0597eda8}": {
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_ModifierOverlayVFX": {
         "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_ModifierOverlayVFX",
         "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
         "Layer": 22,
@@ -460,14 +460,6 @@
         },
         "VfxSystem": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/Particles/Augment_StaticVFX",
         "__type": "UiElementParticleSystemData"
-    },
-    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GoldenReroll": {
-        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GoldenReroll",
-        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
-        "Elements": [
-            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GoldenReroll/GoldenReroll"
-        ],
-        "__type": "UiElementGroupData"
     },
     "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_HitRegion": {
         "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_HitRegion",
@@ -1172,6 +1164,14 @@
         },
         "__type": "UiElementIconData"
     },
+    "{49ee2801}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/SpecialRerollGroup",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
+        "Elements": [
+            "{adf6a777}"
+        ],
+        "__type": "UiElementGroupData"
+    },
     "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_HoverVFX": {
         "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_HoverVFX",
         "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
@@ -1201,46 +1201,6 @@
             "__type": "UiPositionRect"
         },
         "VfxSystem": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/Particles/Augment_Silver_HoverVFX",
-        "__type": "UiElementParticleSystemData"
-    },
-    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GoldenRerollClick": {
-        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GoldenRerollClick",
-        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
-        "Elements": [
-            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GoldenRerollClick/GoldenRerollClick"
-        ],
-        "__type": "UiElementGroupData"
-    },
-    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GoldenRerollClick/GoldenRerollClick": {
-        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GoldenRerollClick/GoldenRerollClick",
-        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
-        "Layer": 9,
-        "Position": {
-            "UIRect": {
-                "Position": [
-                    765.0,
-                    848.0
-                ],
-                "Size": [
-                    78.0,
-                    48.0
-                ],
-                "SourceResolutionWidth": 1600,
-                "SourceResolutionHeight": 1200,
-                "__type": "UiElementRect"
-            },
-            "Anchors": {
-                "Anchor": [
-                    0.5,
-                    1.0
-                ],
-                "__type": "AnchorSingle"
-            },
-            "IgnoreGlobalScale": true,
-            "__type": "UiPositionRect"
-        },
-        "VfxSystem": "{5692071c}",
-        "PlayDuringTransition": false,
         "__type": "UiElementParticleSystemData"
     },
     "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_Name": {
@@ -1278,6 +1238,14 @@
         "HTMLStyleSheet": "UX/Fonts/CSS/StyleSheet",
         "WrappingMode": 1,
         "__type": "UiElementTextData"
+    },
+    "{5f324f71}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/SpecialRerollClickGroup",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
+        "Elements": [
+            "{e5afaa89}"
+        ],
+        "__type": "UiElementGroupData"
     },
     "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_Desc": {
         "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_Desc",
@@ -1481,37 +1449,6 @@
         },
         "__type": "UiElementRegionData"
     },
-    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GoldenReroll/GoldenReroll": {
-        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GoldenReroll/GoldenReroll",
-        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
-        "Layer": 5,
-        "Position": {
-            "UIRect": {
-                "Position": [
-                    765.0,
-                    848.0
-                ],
-                "Size": [
-                    78.0,
-                    48.0
-                ],
-                "SourceResolutionWidth": 1600,
-                "SourceResolutionHeight": 1200,
-                "__type": "UiElementRect"
-            },
-            "Anchors": {
-                "Anchor": [
-                    0.5,
-                    1.0
-                ],
-                "__type": "AnchorSingle"
-            },
-            "IgnoreGlobalScale": true,
-            "__type": "UiPositionRect"
-        },
-        "VfxSystem": "{1e6bdf7f}",
-        "__type": "UiElementParticleSystemData"
-    },
     "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_IdleVFX": {
         "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_IdleVFX",
         "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
@@ -1541,6 +1478,37 @@
             "__type": "UiPositionRect"
         },
         "VfxSystem": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/Particles/Augment_Silver_IdleVFX",
+        "__type": "UiElementParticleSystemData"
+    },
+    "{adf6a777}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/SpecialRerollGroup/SpecialReroll",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
+        "Layer": 6,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    765.0,
+                    848.0
+                ],
+                "Size": [
+                    78.0,
+                    48.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/Particles/Kiwi_S3_Augment_GoldReroll_CommandLine",
         "__type": "UiElementParticleSystemData"
     },
     "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_PickedVFX": {
@@ -1574,7 +1542,7 @@
         "VfxSystem": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/Particles/Augment_Silver_SelectedVFX",
         "__type": "UiElementParticleSystemData"
     },
-    "{ceacdb17}": {
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_Icon_Overlay": {
         "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_Icon_Overlay",
         "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
         "Layer": 65,
@@ -1634,6 +1602,38 @@
             "__type": "UiPositionRect"
         },
         "__type": "UiElementIconData"
+    },
+    "{e5afaa89}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/SpecialRerollClickGroup/SpecialRerollClick",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
+        "Layer": 9,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    765.0,
+                    848.0
+                ],
+                "Size": [
+                    78.0,
+                    48.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/Particles/Kiwi_S3_Augment_GoldReroll_Click_CommandLine",
+        "PlayDuringTransition": false,
+        "__type": "UiElementParticleSystemData"
     },
     "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/AugmentSelection_Background/AugmentSelection_Background": {
         "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/AugmentSelection_Background/AugmentSelection_Background",

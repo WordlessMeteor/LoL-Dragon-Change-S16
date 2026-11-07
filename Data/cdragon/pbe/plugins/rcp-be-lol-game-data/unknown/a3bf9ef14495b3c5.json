@@ -6,7 +6,7 @@
     "name": "ゼラス",
     "alias": "Jade_Xerath",
     "title": "超越魔神",
-    "shortBio": "- 自動効果で魔力に応じて物理防御が増加するようになる。<br>- Qは詠唱が不要になる。<br>- W (新スキル): その場に留まることで射程と魔法防御貫通が増加する。<br>- E (新スキル): 敵にダメージとマークを与え、次のスキルが命中するとスタンさせる。<br>- Rは3回すべての詠唱でその場に固定されなくなる。",
+    "shortBio": "- 自動効果で魔力に応じて物理防御が増加するようになる<br>- Qは詠唱が不要になる<br>- W (新スキル): その場に留まることで射程と魔法防御貫通が増加する<br>- E (新スキル): 敵にダメージとマークを与え、次のスキルが命中するとスタンさせる<br>- Rは3回すべての詠唱でその場に固定されなくなる",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 9,
@@ -230,7 +230,7 @@
             "abilityVideoImagePath": "",
             "cost": "コスト無し",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "行動不能状態になり、すべてのスキルの射程が増加して、追加の魔法防御貫通を獲得する。効果が終了すると、少しの間移動速度が増加する。",
+            "description": "移動不能状態になり、すべてのスキルの射程が増加して、追加の魔法防御貫通を獲得する。効果が終了すると、少しの間移動速度が増加する。",
             "dynamicDescription": "最大@RootDuration@秒間その場に固定され、すべてのスキルの射程が増加して<magicPen>@MagicPenValue@%の魔法防御貫通</magicPen>を獲得する。スキルを再発動するか移動すると、効果を早めにキャンセルすることができる。<br><br>効果終了時、@MovementSpeedDuration@秒間、自身の<speed>移動速度が@MovementSpeedValue*100@%</speed>増加する。@SpellModifierDescriptionAppend@",
             "range": [
                 0.0,
@@ -531,7 +531,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "神秘のエネルギーを空から降らせ、範囲内の敵ユニットに魔法ダメージを与える。クールダウンに入るまでに、最大3回使用できる。",
-            "dynamicDescription": "神秘のエネルギーを空から降らせ、範囲内の敵ユニットに<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。クールダウンに入るまでに、最大@AvailableCasts@回使用できる。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "神秘のエネルギーを空から降らせ、範囲内のすべての敵ユニットに<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。クールダウンに入るまでに、最大@AvailableCasts@回使用できる。@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
