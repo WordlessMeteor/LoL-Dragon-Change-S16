@@ -18299,11 +18299,10 @@
                 })),
                 overrideCategories: null,
                 _defaultCategories: r.Ember.A(s.DEFAULT_CATEGORIES),
-                _categories: r.Ember.computed("productOverride", "_defaultCategories.[]", "inGameReportedCategories.[]", "teamVoiceEnabled", (function() {
-                    const e = this.get("productOverride"),
-                        t = this.get("inGameReportedCategories");
-                    let n = this.get("_defaultCategories");
-                    return e && s.PRODUCT_REPORT_CATEGORIES_MAPPING[e] && (n = s.PRODUCT_REPORT_CATEGORIES_MAPPING[e]), n.map((e => (e.isChecked = e && e.categoryId && t.includes(e.categoryId), e)))
+                _categories: r.Ember.computed("productOverride", "_defaultCategories.[]", (function() {
+                    const e = this.get("productOverride");
+                    let t = this.get("_defaultCategories");
+                    return e && s.PRODUCT_REPORT_CATEGORIES_MAPPING[e] && (t = s.PRODUCT_REPORT_CATEGORIES_MAPPING[e]), t
                 })),
                 categorySections: r.Ember.computed("productOverride", (function() {
                     const e = this.get("productOverride");
@@ -18315,9 +18314,12 @@
                     return t && t[e] ? t[e].categories : []
                 })),
                 maxCommentLength: 255,
-                categories: r.Ember.computed.map("_categories", (function(e) {
-                    const t = r.Ember.$.extend({}, e);
-                    return t.isChecked = !!e.isChecked, t
+                categories: r.Ember.computed("_categories.[]", "reportModalDataService.inGameReportData", "reportedPlayer.puuid", (function() {
+                    const e = this.get("inGameReportedCategories");
+                    return r.Ember.A(this.get("_categories").map((t => {
+                        const n = r.Ember.$.extend({}, t);
+                        return n.isChecked = !!(t && t.categoryId && e.includes(t.categoryId)), n
+                    })))
                 })),
                 _categoriesById: r.Ember.computed("categories.[]", (function() {
                     const e = {},
@@ -26452,7 +26454,10 @@
             const c = "ReportModal";
             var d = new class {
                 constructor() {
-                    this._registerReportModalComponent()
+                    this._registerReportModalComponent(), this._prefetchInGameReports()
+                }
+                _prefetchInGameReports() {
+                    (0, a.dataBinding)("/lol-player-report-sender", a.socket).get("/v1/in-game-reports")
                 }
                 _registerReportModalComponent() {
                     const {

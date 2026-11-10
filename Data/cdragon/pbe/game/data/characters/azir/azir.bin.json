@@ -618,6 +618,42 @@
                     "__type": "GameCalculation"
                 }
             },
+            "{66185ec4}": {
+                "cherry": {
+                    "Calculations": {
+                        "TotalDamage": {
+                            "mFormulaParts": [
+                                {
+                                    "mDataValue": "BaseDamage",
+                                    "__type": "NamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mBreakpoints": [
+                                        {
+                                            "mLevel": 10,
+                                            "mBonusPerLevelAtAndAfter": 8.0,
+                                            "__type": "Breakpoint"
+                                        }
+                                    ],
+                                    "__type": "ByCharLevelBreakpointsCalculationPart"
+                                },
+                                {
+                                    "mDataValue": "APRatio",
+                                    "__type": "StatByNamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mStat": 2,
+                                    "mStatFormula": 2,
+                                    "mCoefficient": 0.30000001192092896,
+                                    "__type": "StatByCoefficientCalculationPart"
+                                }
+                            ],
+                            "__type": "GameCalculation"
+                        }
+                    },
+                    "__type": "{4acf67d2}"
+                }
+            },
             "mCoefficient2": 0.4000000059604645,
             "mAnimationName": "Spell2",
             "mImgIconName": [

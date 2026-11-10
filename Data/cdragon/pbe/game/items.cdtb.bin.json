@@ -297132,7 +297132,7 @@
                         "__type": "StatByCoefficientCalculationPart"
                     },
                     {
-                        "mCoefficient": 0.07999999821186066,
+                        "mCoefficient": 0.07000000029802322,
                         "__type": "StatByCoefficientCalculationPart"
                     },
                     {
@@ -318964,7 +318964,7 @@
             },
             {
                 "mName": "PickupHealthGain",
-                "mValue": 0.20000000298023224,
+                "mValue": 0.1599999964237213,
                 "__type": "ItemDataValue"
             },
             {
@@ -664920,7 +664920,7 @@
             "ManaToHeal": {
                 "mFormulaParts": [
                     {
-                        "mCoefficient": 0.00800000037997961,
+                        "mCoefficient": 0.01600000075995922,
                         "__type": "AbilityResourceByCoefficientCalculationPart"
                     }
                 ],
@@ -767006,6 +767006,11 @@
                 "mName": "NashorADValue",
                 "mValue": 0.33000001311302185,
                 "__type": "ItemDataValue"
+            },
+            {
+                "mName": "NashorHSPValue",
+                "mValue": 1.5,
+                "__type": "ItemDataValue"
             }
         ],
         "mItemCalculations": {
@@ -767017,6 +767022,11 @@
                     },
                     {
                         "mDataValue": "NashorsAPValue",
+                        "__type": "StatByNamedDataValueCalculationPart"
+                    },
+                    {
+                        "mStat": 34,
+                        "mDataValue": "{346dfb2a}",
                         "__type": "StatByNamedDataValueCalculationPart"
                     }
                 ],
@@ -1085097,7 +1085107,7 @@
                     "__type": "ValueFloat"
                 },
                 "CustomMaterial": {
-                    "Material": "Items/3116/Particles/IceMat",
+                    "Material": "{464be137}",
                     "materialDrivers": {
                         "AlphaGlobal": {
                             "frequency": 1,
@@ -1323508,6 +1323518,12 @@
                         "mStatFormula": 1,
                         "mDataValue": "SpellbladeMultiplier",
                         "__type": "StatByNamedDataValueCalculationPart"
+                    },
+                    {
+                        "mStat": 1,
+                        "mStatFormula": 2,
+                        "mCoefficient": 0.25,
+                        "__type": "StatByCoefficientCalculationPart"
                     }
                 ],
                 "__type": "GameCalculation"
@@ -1337376,6 +1337392,12 @@
                     },
                     {
                         "mDataValue": "APRatio",
+                        "__type": "StatByNamedDataValueCalculationPart"
+                    },
+                    {
+                        "mStat": 2,
+                        "mStatFormula": 2,
+                        "mDataValue": "ADRatio",
                         "__type": "StatByNamedDataValueCalculationPart"
                     }
                 ],
@@ -1392073,6 +1392095,7 @@
         "mPercentMagicPenetrationMod": 0.30000001192092896,
         "mFlatMagicDamageMod": 60.0,
         "sellBackModifier": 0.5,
+        "percentBaseMPRegenMod": 5.0,
         "mCategories": [
             "SpellDamage",
             "CooldownReduction",
@@ -1392118,6 +1392141,10 @@
                             },
                             {
                                 "type": "MagicPenPercent",
+                                "__type": "TooltipInstanceListElement"
+                            },
+                            {
+                                "type": "BaseManaRegen",
                                 "__type": "TooltipInstanceListElement"
                             }
                         ],

@@ -17989,16 +17989,18 @@
                         Viewport: n,
                         logger: o
                     } = t.default, l = n.getApiKey(s.PLUGIN_NAME), i = n.main().getScreenRoot(l, s.PLUGIN_NAME);
+                    i.on("hide", (() => {
+                        i.release()
+                    }));
                     let r = null;
-                    const c = i.getElement();
-                    let m = null;
-                    const d = "TENCENT" === window.RIOT?.CONSTANTS?.regionLocale?.region ? Promise.resolve(null) : (() => {
-                        try {
-                            return r = e.createJadeHomeComponent(), c.appendChild(r.domNode), r.emberAppInstancePromise ? r.emberAppInstancePromise.then((e => (e.__container__.lookup("router:main").transitionTo("home"), e))).catch((e => (o.error("[rcp-fe-lol-jade] Failed to preload home route", e), null))) : Promise.resolve(null)
-                        } catch (e) {
-                            return o.error("[rcp-fe-lol-jade] Failed to preload Jade app", e), r = null, Promise.resolve(null)
-                        }
-                    })();
+                    const c = i.getElement(),
+                        m = "TENCENT" === window.RIOT?.CONSTANTS?.regionLocale?.region ? Promise.resolve(null) : (() => {
+                            try {
+                                return r = e.createJadeHomeComponent(), c.appendChild(r.domNode), r.emberAppInstancePromise ? r.emberAppInstancePromise.then((e => (e.__container__.lookup("router:main").transitionTo("home"), e))).catch((e => (o.error("[rcp-fe-lol-jade] Failed to preload home route", e), null))) : Promise.resolve(null)
+                            } catch (e) {
+                                return o.error("[rcp-fe-lol-jade] Failed to preload Jade app", e), r = null, Promise.resolve(null)
+                            }
+                        })();
                     return {
                         JADE_QUEUE_IDS: a.JADE_QUEUE_IDS,
                         show(t) {
@@ -18025,7 +18027,7 @@
                                         !e || e.isDestroyed || e.isDestroying || e.send("openVotingSystem")
                                     }
                                 };
-                            return null !== m && (clearTimeout(m), m = null), r ? r.emberAppInstancePromise ? Promise.all([d, r.emberAppInstancePromise]).then((([, e]) => {
+                            return r ? r.emberAppInstancePromise ? Promise.all([m, r.emberAppInstancePromise]).then((([, e]) => {
                                 const t = e.__container__.lookup("router:main");
                                 return t.currentRouteName !== n && t.transitionTo(n), a(e), l(e), i.bump().then((() => e))
                             })).catch((e => {
@@ -18039,9 +18041,7 @@
                                 const t = e.__container__.lookup("controller:home");
                                 !t || t.isDestroyed || t.isDestroying || t.set("isTabVisible", !1)
                             }
-                        })), null !== m && clearTimeout(m), m = setTimeout((() => {
-                            m = null, i.release()
-                        }), 0), Promise.resolve())
+                        })), Promise.resolve())
                     }
                 })).catch((e => {
                     throw t.default.logger.error("[rcp-fe-lol-jade] Error during initialization", e), e

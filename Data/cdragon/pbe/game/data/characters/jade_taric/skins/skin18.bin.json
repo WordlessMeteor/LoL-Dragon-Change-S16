@@ -507,6 +507,331 @@
         ],
         "__type": "StaticMaterialDef"
     },
+    "Characters/Jade_Taric/Skins/Skin18/Materials/HKG_MatCap_Translucent_Jelly_inst": {
+        "name": "Characters/Jade_Taric/Skins/Skin18/Materials/HKG_MatCap_Translucent_Jelly_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/characters/jade_taric/skins/skin18/particles/jade_taric_skin18_idle_pet02.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "MatCap_Tex",
+                "texturePath": "assets/characters/jade_taric/skins/skin18/particles/jade_taric_skin18_idle_petjelly01.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Trans_Color_Tex",
+                "texturePath": "assets/shared/materials/default_gradient.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Jelly_Diff_Mask",
+                "texturePath": "assets/characters/jade_taric/skins/skin18/particles/jade_taric_skin18_idle_petalpha01.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Matcap_Alpha",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BlendMod",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    0.0010000000474974513,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Translucent_Val",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Nor_Direction",
+                "value": [
+                    0.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Nor_Distortion",
+                "value": [
+                    0.8500000238418579,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Nor_Lambert",
+                "value": [
+                    0.8999999761581421,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_MATCAP_AS_ALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLEND_ALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/HKG_MatCap_Translucent_Jelly",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/Jade_Taric/Skins/Skin18/Materials/HKG_MatCap_Dissolve_inst": {
+        "name": "Characters/Jade_Taric/Skins/Skin18/Materials/HKG_MatCap_Dissolve_inst",
+        "samplerValues": [
+            {
+                "TextureName": "MatCap_Tex",
+                "texturePath": "assets/characters/jade_taric/skins/skin18/particles/jade_taric_skin18_idle_petjelly01.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Dissolve_Texture",
+                "texturePath": "assets/shared/materials/lava_mask.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Biasa",
+                "value": [
+                    -1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/HKG_MatCap_Dissolve",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Dissolve_Biasa",
+                    "Enabled": false,
+                    "driver": {
+                        "mBoolDriver": {
+                            "mScriptName": "Jade_TaricWSelfBuff",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        "mOnValue": -1.0,
+                        "mOffValue": 1.0,
+                        "mTurnOffTimeSec": 0.5,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
     "Characters/Jade_Taric/Skins/Skin18/Particles/Jade_Taric_Skin18_R_Ray": {
         "complexEmitterDefinitionData": [
             {
@@ -6225,7 +6550,7 @@
                     "__type": "ValueFloat"
                 },
                 "CustomMaterial": {
-                    "Material": "Characters/Jade_Taric/Skins/Skin18/Materials/HKG_MatCap_Dissolve_inst",
+                    "Material": "{ab7c5efa}",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 0,
@@ -6668,7 +6993,7 @@
                     "__type": "VfxFlexShapeDefinitionData"
                 },
                 "CustomMaterial": {
-                    "Material": "Characters/Jade_Taric/Skins/Skin18/Materials/HKG_MatCap_Dissolve_inst",
+                    "Material": "{ab7c5efa}",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 0,
@@ -15473,7 +15798,7 @@
                     "__type": "VfxFlexShapeDefinitionData"
                 },
                 "CustomMaterial": {
-                    "Material": "Characters/Jade_Taric/Skins/Skin18/Materials/HKG_MatCap_Translucent_Jelly_inst",
+                    "Material": "{a93a2413}",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 0,
@@ -17491,7 +17816,7 @@
                     "__type": "ValueFloat"
                 },
                 "CustomMaterial": {
-                    "Material": "Characters/Jade_Taric/Skins/Skin18/Materials/HKG_MatCap_Dissolve_inst",
+                    "Material": "{ab7c5efa}",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 0,
@@ -17886,7 +18211,7 @@
                     "__type": "ValueFloat"
                 },
                 "CustomMaterial": {
-                    "Material": "Characters/Jade_Taric/Skins/Skin18/Materials/HKG_MatCap_Dissolve_inst",
+                    "Material": "{ab7c5efa}",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 0,
@@ -19105,7 +19430,7 @@
                     "__type": "ValueVector3"
                 },
                 "CustomMaterial": {
-                    "Material": "Characters/Jade_Taric/Skins/Skin18/Materials/HKG_MatCap_Translucent_Jelly_inst",
+                    "Material": "{a93a2413}",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 0,
