@@ -34807,7 +34807,7 @@
         "objectPath": "Shaders/StaticMesh/ENV_UVGradientColorMapping",
         "__type": "CustomShaderDef"
     },
-    "{570bfb79}": {
+    "Shaders/Particles/ShaderPreset/VFX_Uber_Quad_Unlit": {
         "parameters": [
             {
                 "name": "CameraOffset",
@@ -74394,7 +74394,7 @@
         "objectPath": "Shaders/StaticMesh/DefaultEnv_Flat_ColorMult_Overlay",
         "__type": "CustomShaderDef"
     },
-    "{b8e4b8d7}": {
+    "Shaders/Particles/ShaderPreset/VFX_Uber_TrailBeam_Unlit": {
         "parameters": [
             {
                 "name": "CameraOffset",
@@ -100204,6 +100204,40 @@
                     {
                         "name": "FoamColor",
                         "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ShoreColorBleedContrast",
+                "data": [
+                    0.800000011920929,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ShoreColorBleedContrast",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ShoreColorBleedInfluence",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ShoreColorBleedInfluence",
+                        "fields": 1,
                         "__type": "ShaderLogicalParameter"
                     }
                 ],
