@@ -28401,7 +28401,8 @@
                         storeId: this.get("catalogItem.storeId"),
                         contentId: this.get("catalogItem").purchaseUnits[0]?.fulfillment.itemId,
                         itemName: this.get("catalogItem").purchaseUnits[0]?.fulfillment.name,
-                        inventoryTypeId: this.get("catalogItem.inventoryTypeId")
+                        inventoryTypeId: this.get("catalogItem.inventoryTypeId"),
+                        modelReference: this.get("catalogItem.modelReference") || ""
                     };
                     r.Telemetry.sendCustomData(o.TELEMETRY_EVENTS.TABLE_NAME, e), r.datadogRum.proxy.addAction(`${o.TELEMETRY_EVENTS.TABLE_NAME}-${o.TELEMETRY_EVENTS.eventName.ITEM_CLICK}`, e)
                 },
@@ -28416,7 +28417,8 @@
                         storeId: this.get("catalogItem.storeId"),
                         contentId: this.get("catalogItem").purchaseUnits[0]?.fulfillment.itemId,
                         itemName: this.get("catalogItem").purchaseUnits[0]?.fulfillment.name,
-                        inventoryTypeId: this.get("catalogItem.inventoryTypeId")
+                        inventoryTypeId: this.get("catalogItem.inventoryTypeId"),
+                        modelReference: this.get("catalogItem.modelReference") || ""
                     };
                     r.Telemetry.sendCustomData(o.TELEMETRY_EVENTS.TABLE_NAME, n), e.get("sentImpressionItems").add(t)
                 },
@@ -29016,6 +29018,7 @@
                             catalogPrice: n?.paymentOptions?.[0]?.payments?.[0]?.finalDelta,
                             currency: n?.paymentOptions?.[0]?.payments?.[0]?.name,
                             inventoryTypeId: n?.fulfillment.itemTypeId,
+                            modelReference: this.get("item.modelReference") || "",
                             success: t
                         };
                     r.Telemetry.sendCustomData(i.TELEMETRY_EVENTS.TABLE_NAME, a), r.datadogRum.proxy.addAction(`${i.TELEMETRY_EVENTS.TABLE_NAME}-${i.TELEMETRY_EVENTS.eventName.ITEM_PURCHASE}`, a)
@@ -29766,14 +29769,21 @@
                             if (t?.length > 0) {
                                 const e = t.map((async e => {
                                     const t = this.get("catalogItemEnricher"),
-                                        n = await t.enrichItems(e.catalogEntries);
-                                    if (e.catalogEntries = n?.filter((e => null !== e)), !e.prerequisiteCatalogEntries?.length > 0) return;
-                                    const a = await t.enrichItems(e.prerequisiteCatalogEntries);
-                                    e.prerequisiteCatalogEntries = a?.filter((e => null !== e));
-                                    const r = new Map(e.prerequisiteCatalogEntries.map((e => [e.id, e])));
+                                        n = e.analytics?.modelRef || "",
+                                        a = await t.enrichItems(e.catalogEntries.map((e => ({
+                                            ...e,
+                                            modelReference: n
+                                        }))));
+                                    if (e.catalogEntries = a?.filter((e => null !== e)), !e.prerequisiteCatalogEntries?.length > 0) return;
+                                    const r = await t.enrichItems(e.prerequisiteCatalogEntries.map((e => ({
+                                        ...e,
+                                        modelReference: n
+                                    }))));
+                                    e.prerequisiteCatalogEntries = r?.filter((e => null !== e));
+                                    const s = new Map(e.prerequisiteCatalogEntries.map((e => [e.id, e])));
                                     for (const t of e.catalogEntries) t.prerequisites = (t.prerequisites || []).map((e => ({
                                         ...e,
-                                        catalogEntry: r.get(e.catalogEntryId)
+                                        catalogEntry: s.get(e.catalogEntryId)
                                     })))
                                 }));
                                 await Promise.all(e), this.set("stores", a.Ember.A(t)), this.debounceTask("queueNextRefresh", t, 1e3)

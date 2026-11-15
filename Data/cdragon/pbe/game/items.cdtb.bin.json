@@ -767009,12 +767009,13 @@
             },
             {
                 "mName": "NashorHSPValue",
-                "mValue": 1.5,
+                "mValue": 150.0,
                 "__type": "ItemDataValue"
             }
         ],
         "mItemCalculations": {
             "TotalOnHitDamage": {
+                "mExpandedTooltipCalculationDisplay": 0,
                 "mFormulaParts": [
                     {
                         "mDataValue": "NashorsBaseValue",
@@ -767026,8 +767027,9 @@
                     },
                     {
                         "mStat": 34,
-                        "mDataValue": "{346dfb2a}",
-                        "__type": "StatByNamedDataValueCalculationPart"
+                        "statType": 3,
+                        "mCoefficient": 150.0,
+                        "__type": "StatByCoefficientCalculationPart"
                     }
                 ],
                 "__type": "GameCalculation"
