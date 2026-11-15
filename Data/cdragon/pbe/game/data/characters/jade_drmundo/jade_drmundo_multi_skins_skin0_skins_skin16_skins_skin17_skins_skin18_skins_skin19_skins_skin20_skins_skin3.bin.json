@@ -1,0 +1,2190 @@
+{
+    "Characters/Jade_DrMundo/Skins/Skin0/Particles/Jade_DrMundo_Base_Q_mis_01": {
+        "complexEmitterDefinitionData": [
+            {
+                "timeBeforeFirstEmission": 0.10999999940395355,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "childParticleSetDefinition": {
+                    "childrenIdentifiers": [
+                        {
+                            "effectKey": "Jade_DrMundo_Q_ChildTrail",
+                            "__type": "VfxChildIdentifier"
+                        }
+                    ],
+                    "boneToSpawnAt": [
+                        "TrailSlot"
+                    ],
+                    "__type": "VfxChildParticleSetDefinitionData"
+                },
+                "emitterName": "cleaver",
+                "birthOrbitalVelocity": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.5
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Q_BoneSaw_Rigged.skn",
+                        "mMeshSkeletonName": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Q_BoneSaw_Rigged.skl",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 3,
+                "pass": 43,
+                "miscRenderFlags": 1,
+                "isFollowingTerrain": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        25.0,
+                        180.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        -1100.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        1.25,
+                        1.25,
+                        1.25
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Jade_DrMundo_Base_Weapon_TX_CM.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.11999999731779099,
+                "rate": {
+                    "constantValue": 50.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.15000000596046448,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.5,
+                "emitterName": "side streaks",
+                "EmitterPosition": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mTrail": {
+                        "mMode": 1,
+                        "mCutoff": 1000.0,
+                        "mBirthTilingSize": {
+                            "constantValue": [
+                                600.0,
+                                0.0,
+                                0.0
+                            ],
+                            "__type": "ValueVector3"
+                        },
+                        "__type": "VfxTrailDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveArbitraryTrail"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.14000152051448822
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10000000149011612,
+                            0.30000001192092896,
+                            0.6000000238418579,
+                            0.800000011920929,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.12156862765550613,
+                                0.13725490868091583,
+                                0.16078431904315948,
+                                0.0
+                            ],
+                            [
+                                0.5499961972236633,
+                                0.8599984645843506,
+                                1.0,
+                                0.9700007438659668
+                            ],
+                            [
+                                0.27450981736183167,
+                                0.364705890417099,
+                                0.3921568691730499,
+                                0.5607843399047852
+                            ],
+                            [
+                                0.0800030529499054,
+                                0.14999619126319885,
+                                0.14999619126319885,
+                                0.10000763088464737
+                            ],
+                            [
+                                0.06999313086271286,
+                                0.08999770879745483,
+                                0.11999695003032684,
+                                0.02999923750758171
+                            ],
+                            [
+                                0.18039216101169586,
+                                0.07450980693101883,
+                                0.13725490868091583,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "alphaRef": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        50.0,
+                        10.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.2000000476837158,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_R_ClothRing.tex",
+                "emitterUvScrollRate": [
+                    0.20000000298023224,
+                    0.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.11999999731779099,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.20000000298023224,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 11.0,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "cast mesh",
+                "birthVelocity": {
+                    "constantValue": [
+                        0.0,
+                        900.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        0.0,
+                        6.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -100.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Q_Cas_Radial_Mesh.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.2899976968765259
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "constantValue": [
+                        0.30980393290519714,
+                        0.42352941632270813,
+                        0.5098039507865906,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10000000149011612,
+                            0.15000000596046448,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.30980393290519714,
+                                0.42352941632270813,
+                                0.5098039507865906,
+                                0.0
+                            ],
+                            [
+                                0.30980393290519714,
+                                0.42352941632270813,
+                                0.5098039507865906,
+                                1.0
+                            ],
+                            [
+                                0.23326413333415985,
+                                0.3188927471637726,
+                                0.38385236263275146,
+                                1.0
+                            ],
+                            [
+                                0.21066761016845703,
+                                0.28800129890441895,
+                                0.34666821360588074,
+                                0.330006867647171
+                            ],
+                            [
+                                0.057101115584373474,
+                                0.07806228846311569,
+                                0.0939638614654541,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 40,
+                "disableBackfaceCull": true,
+                "isRotationEnabled": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        1.0,
+                        4.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.12999999523162842,
+                            0.20000000298023224,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                3.0,
+                                0.0
+                            ],
+                            [
+                                2.0,
+                                10.0,
+                                2.0
+                            ],
+                            [
+                                1.25,
+                                1.2999999523162842,
+                                1.25
+                            ],
+                            [
+                                2.0,
+                                0.0,
+                                2.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Q_Air_swoosh.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "uvScale": {
+                    "constantValue": [
+                        3.0,
+                        -1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.11999999731779099,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 5.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.20000000298023224,
+                "lifetime": 4.0,
+                "isSingleParticle": 1,
+                "emitterName": "missileHead",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "birthColor": {
+                    "constantValue": [
+                        0.6899977326393127,
+                        0.7799954414367676,
+                        0.9600061178207397,
+                        0.06999313086271286
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "constantValue": [
+                        0.6666666865348816,
+                        0.5882353186607361,
+                        0.545098066329956,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": -20,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "isRotationEnabled": 1,
+                "isFollowingTerrain": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        90.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        150.0,
+                        100.0,
+                        10.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Aura_Self.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.11999999731779099,
+                "rate": {
+                    "constantValue": 50.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.4000000059604645,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.5,
+                "emitterName": "dark trail",
+                "EmitterPosition": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mTrail": {
+                        "mMode": 1,
+                        "mCutoff": 1000.0,
+                        "mBirthTilingSize": {
+                            "constantValue": [
+                                600.0,
+                                0.0,
+                                0.0
+                            ],
+                            "__type": "ValueVector3"
+                        },
+                        "__type": "VfxTrailDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveArbitraryTrail"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.42000457644462585,
+                        0.3199969530105591,
+                        0.5100023150444031,
+                        0.20000000298023224
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.05000000074505806,
+                            0.10000000149011612,
+                            0.30000001192092896,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.9725490212440491,
+                                0.6509804129600525,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.9686274528503418,
+                                0.843137264251709,
+                                0.0
+                            ],
+                            [
+                                0.5300068855285645,
+                                0.4899977147579193,
+                                0.4299992322921753,
+                                1.0
+                            ],
+                            [
+                                0.330006867647171,
+                                0.3199969530105591,
+                                0.28000304102897644,
+                                1.0
+                            ],
+                            [
+                                0.36000609397888184,
+                                0.34000152349472046,
+                                0.2899976968765259,
+                                0.17999541759490967
+                            ],
+                            [
+                                0.13000686466693878,
+                                0.0800030529499054,
+                                0.17999541759490967,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -10,
+                "alphaRef": 0,
+                "miscRenderFlags": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        100.0,
+                        100.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Q_Mis_Air_Trail.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        0.699999988079071,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.11999999731779099,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 11.0,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "cast mesh2",
+                "birthVelocity": {
+                    "constantValue": [
+                        0.0,
+                        -900.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        0.0,
+                        7.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -100.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Q_Cas_Radial_Mesh.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.10000763088464737
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10000000149011612,
+                            0.15000000596046448,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.7529411911964417,
+                                0.7529411911964417,
+                                0.7529411911964417,
+                                1.0
+                            ],
+                            [
+                                0.6800030469894409,
+                                0.6800030469894409,
+                                0.6800030469894409,
+                                0.330006867647171
+                            ],
+                            [
+                                0.18431372940540314,
+                                0.18431372940540314,
+                                0.18431372940540314,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 40,
+                "disableBackfaceCull": true,
+                "isRotationEnabled": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        1.0,
+                        4.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.12999999523162842,
+                            0.25,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.25,
+                                0.0
+                            ],
+                            [
+                                1.25,
+                                1.2999999523162842,
+                                1.25
+                            ],
+                            [
+                                2.0,
+                                1.0,
+                                2.0
+                            ],
+                            [
+                                4.0,
+                                1.0,
+                                4.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Q_Air_swoosh.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "uvScale": {
+                    "constantValue": [
+                        3.0,
+                        -1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.10000000149011612,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.20000000298023224,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.75,
+                "lifetime": 1.2999999523162842,
+                "isSingleParticle": 1,
+                "emitterName": "distot_activate",
+                "birthVelocity": {
+                    "constantValue": [
+                        0.0,
+                        -300.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        0.0,
+                        2.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "emissionMeshScale": 0.0,
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -60.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "particleColorTexture": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_R_Mark_distort_RGBA.tex",
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.3700007498264313
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            0.75,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 60,
+                "distortionDefinition": {
+                    "distortion": 0.03999999910593033,
+                    "normalMapTexture": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_R_glow_distort.tex",
+                    "__type": "VfxDistortionDefinitionData"
+                },
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        40.0,
+                        200.0,
+                        300.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.20000000298023224,
+                                0.20000000298023224
+                            ],
+                            [
+                                3.0,
+                                1.7000000476837158,
+                                0.5
+                            ],
+                            [
+                                4.0,
+                                2.0,
+                                0.5
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/color-hold.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.11999999731779099,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 5.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.20000000298023224,
+                "lifetime": 4.0,
+                "isSingleParticle": 1,
+                "emitterName": "missileHead1",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.36000609397888184,
+                        0.36000609397888184,
+                        0.36000609397888184,
+                        0.4299992322921753
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "constantValue": [
+                        0.6666666865348816,
+                        0.5882353186607361,
+                        0.545098066329956,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": -20,
+                "isRotationEnabled": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        90.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        70.0,
+                        100.0,
+                        10.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Aura_Self.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.11999999731779099,
+                "rate": {
+                    "constantValue": 50.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.30000001192092896,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.5,
+                "emitterName": "side streaks2",
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        -50.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mTrail": {
+                        "mMode": 1,
+                        "mCutoff": 1000.0,
+                        "mBirthTilingSize": {
+                            "constantValue": [
+                                700.0,
+                                0.0,
+                                0.0
+                            ],
+                            "__type": "ValueVector3"
+                        },
+                        "__type": "VfxTrailDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveArbitraryTrail"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.2500038146972656
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "constantValue": [
+                        0.18039216101169586,
+                        0.13725490868091583,
+                        0.1882352977991104,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10000000149011612,
+                            0.30000001192092896,
+                            0.6000000238418579,
+                            0.800000011920929,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0219300277531147,
+                                0.01883890852332115,
+                                0.030265282839536667,
+                                0.0
+                            ],
+                            [
+                                0.09921500086784363,
+                                0.11803900450468063,
+                                0.1882352977991104,
+                                0.9700007438659668
+                            ],
+                            [
+                                0.04951941967010498,
+                                0.05005767196416855,
+                                0.07381776720285416,
+                                0.5607843399047852
+                            ],
+                            [
+                                0.014148404821753502,
+                                0.019915418699383736,
+                                0.027312573045492172,
+                                0.38823530077934265
+                            ],
+                            [
+                                0.01262621209025383,
+                                0.012352626770734787,
+                                0.02258766070008278,
+                                0.0
+                            ],
+                            [
+                                0.03254133090376854,
+                                0.010226836428046227,
+                                0.025836218148469925,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -5,
+                "alphaRef": 0,
+                "miscRenderFlags": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        120.0,
+                        10.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.2000000476837158,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_P_steam_trail.tex",
+                "emitterUvScrollRate": [
+                    5.0,
+                    0.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 3.0,
+                "isSingleParticle": 1,
+                "emitterName": "Temp_GroundGlow3",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        -100.0,
+                        -40.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.6800030469894409
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "constantValue": [
+                        0.35686275362968445,
+                        0.30588236451148987,
+                        0.5137255191802979,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.15000000596046448,
+                            0.75,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.35686275362968445,
+                                0.30588236451148987,
+                                0.5137255191802979,
+                                0.0
+                            ],
+                            [
+                                0.35686275362968445,
+                                0.30588236451148987,
+                                0.5137255191802979,
+                                1.0
+                            ],
+                            [
+                                0.35686275362968445,
+                                0.30588236451148987,
+                                0.5137255191802979,
+                                1.0
+                            ],
+                            [
+                                0.35686275362968445,
+                                0.30588236451148987,
+                                0.5137255191802979,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 23,
+                "miscRenderFlags": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        90.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        300.0,
+                        160.0,
+                        180.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Olaf/Skins/Base/Particles/Olaf_Q_Shape.tex",
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Cape_Nebula.tex",
+                    "uvScaleMult": {
+                        "constantValue": [
+                            2.0,
+                            1.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            0.0,
+                            -1.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "birthUVOffsetMult": {
+                        "constantValue": [
+                            0.0,
+                            4.0
+                        ],
+                        "dynamics": {
+                            "probabilityTables": [
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        -1.0,
+                                        1.0
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                }
+                            ],
+                            "times": [
+                                0.0
+                            ],
+                            "values": [
+                                [
+                                    0.0,
+                                    4.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector2fVariableData"
+                        },
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 3.0,
+                "isSingleParticle": 1,
+                "emitterName": "Temp_GroundGlow4",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        -100.0,
+                        -40.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.609994649887085,
+                        0.6899977326393127,
+                        0.7499961853027344,
+                        0.20000000298023224
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.15000000596046448,
+                            0.75,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 22,
+                "miscRenderFlags": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        90.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        300.0,
+                        160.0,
+                        180.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Olaf/Skins/Base/Particles/Olaf_Q_Shape.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.10000000149011612,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 3.0,
+                "isSingleParticle": 1,
+                "emitterName": "WeaponTrail_Outer4",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "dynamics": {
+                            "probabilityTables": [
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                }
+                            ],
+                            "times": [
+                                0.0
+                            ],
+                            "values": [
+                                [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector3fVariableData"
+                        },
+                        "__type": "ValueVector3"
+                    },
+                    "__type": "VfxShapeLegacy"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Q_Fill_Circle.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.22999924421310425
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "constantValue": [
+                        0.6313725709915161,
+                        0.6705882549285889,
+                        0.7568627595901489,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.12999999523162842,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.6313725709915161,
+                                0.5767048597335815,
+                                0.7568627595901489,
+                                0.0
+                            ],
+                            [
+                                0.4357708692550659,
+                                0.5049135088920593,
+                                0.6262668371200562,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 20,
+                "colorLookUpTypeY": 3,
+                "disableBackfaceCull": true,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "useNavmeshMask": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        25.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        -1100.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        -11.0,
+                        3.0,
+                        8.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Q_Swipes_Mult.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.20000000298023224,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "uvRotation": {
+                    "constantValue": 90.0,
+                    "__type": "ValueFloat"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.10000000149011612,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 3.0,
+                "isSingleParticle": 1,
+                "emitterName": "WeaponTrail_Outer5",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "dynamics": {
+                            "probabilityTables": [
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                }
+                            ],
+                            "times": [
+                                0.0
+                            ],
+                            "values": [
+                                [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector3fVariableData"
+                        },
+                        "__type": "ValueVector3"
+                    },
+                    "__type": "VfxShapeLegacy"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Q_Fill_Circle.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.45000380277633667
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "constantValue": [
+                        0.07450980693101883,
+                        0.09803921729326248,
+                        0.11764705926179886,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.07450980693101883,
+                                0.0845828503370285,
+                                0.11718569695949554,
+                                1.0
+                            ],
+                            [
+                                0.03564782813191414,
+                                0.04229142516851425,
+                                0.0562860444188118,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 10,
+                "colorLookUpTypeY": 3,
+                "disableBackfaceCull": true,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "useNavmeshMask": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        140.0,
+                        25.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        -1100.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        -11.0,
+                        3.0,
+                        8.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Q_Swipes_Mult.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        -2.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "uvRotation": {
+                    "constantValue": 90.0,
+                    "__type": "ValueFloat"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_E_Gradient.tex",
+                    "uvScrollClampMult": 1,
+                    "birthUVOffsetMult": {
+                        "constantValue": [
+                            0.0,
+                            -0.20000000298023224
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.11999999731779099,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 3.0,
+                "isSingleParticle": 1,
+                "emitterName": "WeaponTrail_Outer6",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "dynamics": {
+                            "probabilityTables": [
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                }
+                            ],
+                            "times": [
+                                0.0
+                            ],
+                            "values": [
+                                [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector3fVariableData"
+                        },
+                        "__type": "ValueVector3"
+                    },
+                    "__type": "VfxShapeLegacy"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Q_Fill_Circle.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.8299992084503174
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "constantValue": [
+                        0.7215686440467834,
+                        0.3607843220233917,
+                        0.9019607901573181,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.12999999523162842,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.7215686440467834,
+                                0.3102739453315735,
+                                0.9019607901573181,
+                                0.0
+                            ],
+                            [
+                                0.5234909653663635,
+                                0.33956170082092285,
+                                0.9019607901573181,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 20,
+                "colorLookUpTypeY": 3,
+                "disableBackfaceCull": true,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "isFollowingTerrain": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        25.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        -1100.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        -11.0,
+                        3.0,
+                        8.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Q_Throw_Sparks.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        -0.30000001192092896,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texAddressModeBase": 2,
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Q_Shield_Inner_Mult.tex",
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.10999999940395355,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.6499999761581421,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.25,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "Temp_Mesh3",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        40.0,
+                        -60.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Q_AirStreak_Mesh.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.8078431487083435,
+                        0.843137264251709,
+                        0.9647058844566345,
+                        0.6313725709915161
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.12999999523162842,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "disableBackfaceCull": true,
+                "miscRenderFlags": 1,
+                "isRandomStartFrame": 1,
+                "isFollowingTerrain": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        1.0,
+                        8.0,
+                        -4.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.15000000596046448,
+                            0.30000001192092896
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.2000000476837158,
+                                0.23999999463558197
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.75
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Olaf/Skins/Base/Particles/Olaf_Base_Q_GroundSmoke02.tex",
+                "numFrames": 2,
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        -2.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texDiv": [
+                    1.0,
+                    2.0
+                ],
+                "uvScale": {
+                    "constantValue": [
+                        -0.5,
+                        1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/common_slow_fade_in_out_prgba_02.tex",
+                    "uvScaleMult": {
+                        "constantValue": [
+                            -1.0,
+                            1.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.10999999940395355,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.6499999761581421,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.25,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "Temp_Mesh4",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        40.0,
+                        -60.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Q_AirStreak_Mesh.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.43921568989753723,
+                        0.5176470875740051,
+                        0.5647059082984924,
+                        0.20000000298023224
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "disableBackfaceCull": true,
+                "miscRenderFlags": 1,
+                "isFollowingTerrain": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        1.5,
+                        0.0,
+                        -4.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Q_Dash_DirtTrail.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        2.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "uvScale": {
+                    "constantValue": [
+                        0.5,
+                        1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/common_slow_fade_in_out_prgba_02.tex",
+                    "uvScaleMult": {
+                        "constantValue": [
+                            -1.0,
+                            1.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.10999999940395355,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "cleaver1",
+                "birthOrbitalVelocity": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.5
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Q_BoneSaw_Rigged.skn",
+                        "mMeshSkeletonName": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Q_BoneSaw_Rigged.skl",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "birthColor": {
+                    "constantValue": [
+                        0.880003035068512,
+                        0.17999541759490967,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 43,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        25.0,
+                        180.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        -1100.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        1.25,
+                        1.25,
+                        1.25
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Q_Bonesaw_Glow.tex",
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Jade_DrMundo/Skins/Base/Particles/Jade_DrMundo_Base_Cape_Nebula.tex",
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            1.0,
+                            0.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Jade_DrMundo_Base_Q_mis_01",
+        "particlePath": "Characters/Jade_DrMundo/Skins/Skin0/Particles/Jade_DrMundo_Base_Q_mis_01",
+        "objectPath": "Characters/Jade_DrMundo/Skins/Skin0/Particles/Jade_DrMundo_Base_Q_mis_01",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "__linked": []
+}

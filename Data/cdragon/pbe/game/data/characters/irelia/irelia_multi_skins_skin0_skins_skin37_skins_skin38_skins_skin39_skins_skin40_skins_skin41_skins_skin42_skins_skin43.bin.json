@@ -1,0 +1,375 @@
+{
+    "Characters/Irelia/Skins/Skin0/Materials/Irelia_Blades_Passive_inst": {
+        "name": "Characters/Irelia/Skins/Skin0/Materials/Irelia_Blades_Passive_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/characters/irelia/skins/base/particles/irelia_base_blades_passive_4_texture.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask_Texture",
+                "texturePath": "assets/characters/irelia/skins/base/particles/irelia_base_mat_blades_tex_grey.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Color1",
+                "value": [
+                    0.34117648005485535,
+                    0.2235294133424759,
+                    0.2862745225429535,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel1_Bias",
+                "value": [
+                    -0.4099999964237213,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel1_Size",
+                "value": [
+                    3.960752487182617,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Num_Steps",
+                "value": [
+                    3.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "stepValue",
+                "value": [
+                    -3.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "value": [
+                    0.574999988079071,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Color",
+                "value": [
+                    0.07450980693101883,
+                    0.0,
+                    0.6666666865348816,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ENV_Map_Contribution",
+                "value": [
+                    0.699999988079071,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Color2",
+                "value": [
+                    0.32156863808631897,
+                    0.7882353067398071,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ENV_Fresnel_Masking",
+                "value": [
+                    20.800838470458984,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Reflection_Tint",
+                "value": [
+                    0.7058823704719543,
+                    0.6666666865348816,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel2_Size",
+                "value": [
+                    2.440847396850586,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel2_Bias",
+                "value": [
+                    -0.375,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Bias",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_FRESNEL_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Glow_TextureSteps",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "stepValue",
+                    "driver": {
+                        "mDriver": {
+                            "mScriptName": "IreliaPassiveStacks",
+                            "__type": "BuffCounterDynamicMaterialFloatDriver"
+                        },
+                        "mMaxValue": 3.0,
+                        "mOutputMinValue": -3.0,
+                        "mOutputMaxValue": 0.0,
+                        "__type": "RemapFloatMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Fresnel_Color2",
+                    "driver": {
+                        "driver": {
+                            "mOperator": 2,
+                            "mValueA": {
+                                "mScriptName": "IreliaPassiveStacks",
+                                "__type": "BuffCounterDynamicMaterialFloatDriver"
+                            },
+                            "mValueB": {
+                                "mValue": 4.0,
+                                "__type": "FloatLiteralMaterialDriver"
+                            },
+                            "__type": "FloatComparisonMaterialDriver"
+                        },
+                        "colors": {
+                            "times": [
+                                0.004410143475979567,
+                                1.0
+                            ],
+                            "values": [
+                                [
+                                    0.5743905901908875,
+                                    0.6575505137443542,
+                                    1.0,
+                                    1.0
+                                ],
+                                [
+                                    0.2844827473163605,
+                                    0.2844827473163605,
+                                    0.6114001274108887,
+                                    1.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedColorVariableData"
+                        },
+                        "__type": "ColorGraphMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Bloom_Color",
+                    "driver": {
+                        "driver": {
+                            "mOperator": 2,
+                            "mValueA": {
+                                "mScriptName": "IreliaPassiveStacks",
+                                "__type": "BuffCounterDynamicMaterialFloatDriver"
+                            },
+                            "mValueB": {
+                                "mValue": 4.0,
+                                "__type": "FloatLiteralMaterialDriver"
+                            },
+                            "__type": "FloatComparisonMaterialDriver"
+                        },
+                        "colors": {
+                            "times": [
+                                0.0,
+                                0.9955898523330688
+                            ],
+                            "values": [
+                                [
+                                    0.0,
+                                    0.0,
+                                    1.0,
+                                    1.0
+                                ],
+                                [
+                                    1.0,
+                                    0.6206896305084229,
+                                    0.0,
+                                    1.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedColorVariableData"
+                        },
+                        "__type": "ColorGraphMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "textures": [
+                {
+                    "name": "Diffuse_Texture",
+                    "options": [
+                        {
+                            "driver": {
+                                "mOperator": 4,
+                                "mValueA": {
+                                    "mScriptName": "IreliaPassiveStacks",
+                                    "__type": "BuffCounterDynamicMaterialFloatDriver"
+                                },
+                                "mValueB": {
+                                    "mValue": 3.0,
+                                    "__type": "FloatLiteralMaterialDriver"
+                                },
+                                "__type": "FloatComparisonMaterialDriver"
+                            },
+                            "TextureName": "assets/characters/irelia/skins/base/irelia_base_blades_tx_cm.tex",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        }
+                    ],
+                    "__type": "DynamicMaterialTextureSwapDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "__linked": []
+}

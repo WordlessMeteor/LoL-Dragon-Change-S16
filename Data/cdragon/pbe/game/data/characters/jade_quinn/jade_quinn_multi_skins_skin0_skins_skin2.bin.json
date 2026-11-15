@@ -1,0 +1,1110 @@
+{
+    "Characters/Jade_Quinn/Skins/Skin0/Particles/Jade_Quinn_Base_R_channel_beam_child": {
+        "particleName": "Jade_Quinn_Base_R_channel_beam_child",
+        "particlePath": "Characters/Jade_Quinn/Skins/Skin0/Particles/Jade_Quinn_Base_R_channel_beam_child",
+        "flags": 134,
+        "objectPath": "Characters/Jade_Quinn/Skins/Skin0/Particles/Jade_Quinn_Base_R_channel_beam_child",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/Jade_Quinn/Skins/Skin0/Particles/Jade_Quinn_Base_W_Arrow_Child": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "BG1",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        -50.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.9962310194969177,
+                        0.7727473974227905,
+                        0.269062340259552,
+                        0.250980406999588
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 100,
+                "alphaRef": 0,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        50.0,
+                        150.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Quinn/Skins/Base/Particles/Quinn_Base_Glow.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "bolt1",
+                "birthVelocity": {
+                    "constantValue": [
+                        0.0,
+                        5.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        -40.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.6500037908554077
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "constantValue": [
+                        1.0,
+                        0.8899977207183838,
+                        0.5100023150444031,
+                        0.6500037908554077
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 1,
+                "alphaRef": 0,
+                "miscRenderFlags": 1,
+                "isDirectionOriented": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        90.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        50.0,
+                        45.0,
+                        2.5
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Quinn/Skins/Base/Particles/Quinn_Base_BA_Glow_Arrow.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 40.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.3499999940395355,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.20000000298023224,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            0.3499999940395355
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.3499999940395355,
+                "lifetime": 1.0,
+                "emitterName": "Cast_Sparkles1",
+                "birthOrbitalVelocity": {
+                    "constantValue": [
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.5,
+                                0.5,
+                                0.5
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthVelocity": {
+                    "constantValue": [
+                        100.0,
+                        100.0,
+                        500.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                100.0,
+                                100.0,
+                                500.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "SpawnShape": {
+                    "flags": 1,
+                    "Size": [
+                        20.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "VfxShapeBox"
+                },
+                "Color": {
+                    "constantValue": [
+                        1.0,
+                        0.7439841032028198,
+                        0.2081788331270218,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.7439841032028198,
+                                0.2081788331270218,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.7439841032028198,
+                                0.2081788331270218,
+                                1.0
+                            ],
+                            [
+                                0.4000000059604645,
+                                0.355945348739624,
+                                0.2081788331270218,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 4,
+                "isDirectionOriented": 1,
+                "isRandomStartFrame": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        90.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "directionVelocityMinScale": 0.0,
+                "birthScale0": {
+                    "constantValue": [
+                        20.0,
+                        17.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.25,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.5,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                0.5,
+                                1.25,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Quinn/Skins/Base/Particles/Quinn_Base_Sparkles01.tex",
+                "numFrames": 4,
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "BG4",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        -20.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.46999314427375793,
+                        0.0,
+                        0.3000076413154602
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": -1,
+                "alphaRef": 0,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        100.0,
+                        200.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Quinn/Skins/Base/Particles/Quinn_Base_Glow.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Jade_Quinn_Base_W_Arrow_Child",
+        "particlePath": "Characters/Jade_Quinn/Skins/Skin0/Particles/Jade_Quinn_Base_W_Arrow_Child",
+        "objectPath": "Characters/Jade_Quinn/Skins/Skin0/Particles/Jade_Quinn_Base_W_Arrow_Child",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/Jade_Quinn/Skins/Skin0/Particles/Jade_Quinn_Base_R_tar_01": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.30000001192092896,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.0,
+                "lifetime": 1.0,
+                "emitterName": "blastring",
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        40.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "particleColorTexture": "ASSETS/Characters/Quinn/Skins/Base/Particles/common_globalhit_orange.tex",
+                "meshRenderFlags": 0,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        45.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        130.0,
+                        130.0,
+                        130.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.7789999842643738,
+                                0.7789999842643738,
+                                0.7789999842643738
+                            ],
+                            [
+                                1.0010000467300415,
+                                1.0010000467300415,
+                                1.0010000467300415
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Quinn/Skins/Base/Particles/common_GlobalTargetHit01.tex",
+                "numFrames": 6,
+                "texDiv": [
+                    2.0,
+                    3.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.20000000298023224,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.0,
+                "lifetime": 1.0,
+                "emitterName": "star",
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        40.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "particleColorTexture": "ASSETS/Characters/Quinn/Skins/Base/Particles/common_globalhit_yellow.tex",
+                "meshRenderFlags": 0,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        45.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        150.0,
+                        150.0,
+                        150.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.7789999842643738,
+                                0.7789999842643738,
+                                0.7789999842643738
+                            ],
+                            [
+                                1.2234439849853516,
+                                1.2234439849853516,
+                                1.2234439849853516
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Quinn/Skins/Base/Particles/common_GlobalTargetHit01.tex",
+                "numFrames": 6,
+                "startFrame": 1,
+                "texDiv": [
+                    2.0,
+                    3.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.20000000298023224,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.0,
+                "lifetime": 1.0,
+                "emitterName": "star2",
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        40.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "particleColorTexture": "ASSETS/Characters/Quinn/Skins/Base/Particles/common_globalhit_orange.tex",
+                "meshRenderFlags": 0,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -45.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        120.0,
+                        120.0,
+                        120.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.7789999842643738,
+                                0.7789999842643738,
+                                0.7789999842643738
+                            ],
+                            [
+                                1.2234439849853516,
+                                1.2234439849853516,
+                                1.2234439849853516
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Quinn/Skins/Base/Particles/common_GlobalTargetHit01.tex",
+                "numFrames": 6,
+                "startFrame": 1,
+                "texDiv": [
+                    2.0,
+                    3.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.0,
+                "lifetime": 1.0,
+                "emitterName": "outerring",
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        40.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "particleColorTexture": "ASSETS/Characters/Quinn/Skins/Base/Particles/common_globalhit_orange.tex",
+                "meshRenderFlags": 0,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        45.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        90.0,
+                        90.0,
+                        90.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.7789999842643738,
+                                0.7789999842643738,
+                                0.7789999842643738
+                            ],
+                            [
+                                1.1863700151443481,
+                                1.1863700151443481,
+                                1.1863700151443481
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Quinn/Skins/Base/Particles/common_GlobalTargetHit01.tex",
+                "numFrames": 6,
+                "startFrame": 4,
+                "texDiv": [
+                    2.0,
+                    3.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.20000000298023224,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.0,
+                "lifetime": 1.0,
+                "emitterName": "innerring",
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        40.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "particleColorTexture": "ASSETS/Characters/Quinn/Skins/Base/Particles/common_globalhit_orange.tex",
+                "meshRenderFlags": 0,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        45.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        130.0,
+                        130.0,
+                        130.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.7789999842643738,
+                                0.7789999842643738,
+                                0.7789999842643738
+                            ],
+                            [
+                                1.0010000467300415,
+                                1.0010000467300415,
+                                1.0010000467300415
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Quinn/Skins/Base/Particles/common_GlobalTargetHit01.tex",
+                "numFrames": 6,
+                "startFrame": 3,
+                "texDiv": [
+                    2.0,
+                    3.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Jade_Quinn_Base_R_tar_01",
+        "particlePath": "Characters/Jade_Quinn/Skins/Skin0/Particles/Jade_Quinn_Base_R_tar_01",
+        "flags": 132,
+        "objectPath": "Characters/Jade_Quinn/Skins/Skin0/Particles/Jade_Quinn_Base_R_tar_01",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/Jade_Quinn/Skins/Skin0/Particles/Jade_Quinn_Base_Quinn_Miss": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.20000000298023224,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.20000000298023224,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "Flash",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "dynamics": {
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            0.0,
+                            100.0,
+                            0.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "__type": "VfxShapeLegacy"
+                },
+                "FlexShapeDefinition": {
+                    "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
+                    "scaleEmitOffsetByBoundObjectSize": 0.004999999888241291,
+                    "__type": "VfxFlexShapeDefinitionData"
+                },
+                "particleColorTexture": "ASSETS/Characters/Jade_Quinn/Skins/Base/Particles/color-rampdown.tex",
+                "meshRenderFlags": 0,
+                "colorLookUpTypeY": 2,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        170.0,
+                        170.0,
+                        170.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.10000000149011612,
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Quinn/Skins/Base/Particles/FlareBlue.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.5,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "Blind",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            0.0,
+                            100.0,
+                            0.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "__type": "VfxShapeLegacy"
+                },
+                "FlexShapeDefinition": {
+                    "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
+                    "scaleEmitOffsetByBoundObjectSize": 0.004999999888241291,
+                    "__type": "VfxFlexShapeDefinitionData"
+                },
+                "particleColorTexture": "ASSETS/Characters/Jade_Quinn/Skins/Base/Particles/color-white32.tex",
+                "blendMode": 1,
+                "pass": 1,
+                "meshRenderFlags": 0,
+                "isUniformScale": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0,
+                            0.15000000596046448,
+                            0.1599999964237213,
+                            0.17000000178813934
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.2000000476837158,
+                                1.2000000476837158,
+                                1.2000000476837158
+                            ],
+                            [
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Quinn/Skins/Base/Particles/global_blind.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Jade_Quinn_Base_Quinn_Miss",
+        "particlePath": "Characters/Jade_Quinn/Skins/Skin0/Particles/Jade_Quinn_Base_Quinn_Miss",
+        "flags": 196,
+        "objectPath": "Characters/Jade_Quinn/Skins/Skin0/Particles/Jade_Quinn_Base_Quinn_Miss",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "__linked": []
+}

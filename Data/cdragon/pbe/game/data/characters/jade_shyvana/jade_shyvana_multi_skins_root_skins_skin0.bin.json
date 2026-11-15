@@ -1,0 +1,2282 @@
+{
+    "Characters/Jade_Shyvana/CAC/Jade_Shyvana_Base": {
+        "mCooldown": 15.0,
+        "mSituations": {
+            "AttackChampion2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "(Dragon) Attack - Champion",
+                        "mConditions": [
+                            {
+                                "mChildConditions": [
+                                    {
+                                        "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                        "__type": "ContextualConditionCharacterHasSpellBuff"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Dragon_Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Attack - Champion",
+                        "mConditions": [
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackMinion2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "(Dragon) Attack - Minion",
+                        "mConditions": [
+                            {
+                                "mChildConditions": [
+                                    {
+                                        "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                        "__type": "ContextualConditionCharacterHasSpellBuff"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Dragon_Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Attack - Minion",
+                        "mConditions": [
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackNeutral2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "(Dragon) Attack - Neutral",
+                        "mConditions": [
+                            {
+                                "mChildConditions": [
+                                    {
+                                        "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                        "__type": "ContextualConditionCharacterHasSpellBuff"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Dragon_Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Baron",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/SRU_Baron/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mRuleCooldown": 30.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Attack2DBaron",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Elder Dragon",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/sru_dragon_elder/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Attack2DElderDragon",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Elemental Dragons",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCategory": "monstertype",
+                                        "mData": "dragon",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Attack2DDragon",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Attack - Neutral",
+                        "mConditions": [
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "MoveOrder2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Move - Standard",
+                        "mConditions": [
+                            {
+                                "mDistance": 2000.0,
+                                "mCompareOp": 3,
+                                "__type": "ContextualConditionMoveDistance"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Move2DLong",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Move - Standard",
+                        "mConditions": [
+                            {
+                                "mDistance": 400.0,
+                                "mCompareOp": 3,
+                                "__type": "ContextualConditionMoveDistance"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Move2DStandard",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "FirstMove2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Ally Jaran",
+                        "mConditions": [
+                            {
+                                "mChildConditions": [
+                                    {
+                                        "mIsAlly": true,
+                                        "__type": "ContextualConditionIsAlly"
+                                    },
+                                    {
+                                        "mCharacters": [
+                                            "Characters/JarvanIV/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionAnyOtherHero"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Move2DFirstAllyJarvanIV",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Ally Quinn",
+                        "mConditions": [
+                            {
+                                "mChildConditions": [
+                                    {
+                                        "mIsAlly": true,
+                                        "__type": "ContextualConditionIsAlly"
+                                    },
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Quinn/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionAnyOtherHero"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Move2DFirstAllyQuinn",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Ally Demacia",
+                        "mConditions": [
+                            {
+                                "mChildConditions": [
+                                    {
+                                        "mIsAlly": true,
+                                        "__type": "ContextualConditionIsAlly"
+                                    },
+                                    {
+                                        "mCategory": "faction",
+                                        "mData": "demacia",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionAnyOtherHero"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Move2DFirstAllyDemacia",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "First Move",
+                        "mConditions": [
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Move2DFirst",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "SpellCast": {
+                "mRules": [
+                    {
+                        "mRuleName": "Basic Attack 1",
+                        "mConditions": [
+                            {
+                                "mSpell": "{162b12d7}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DBasic",
+                            "mAllyEventName": "Spell3DBasic",
+                            "mEnemyEventName": "Spell3DBasic",
+                            "mSpectatorEventName": "Spell3DBasic",
+                            "mWaitTimeout": -1.0,
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": -10,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Basic Attack 2",
+                        "mConditions": [
+                            {
+                                "mSpell": "{cacebe7f}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DBasic",
+                            "mAllyEventName": "Spell3DBasic",
+                            "mEnemyEventName": "Spell3DBasic",
+                            "mSpectatorEventName": "Spell3DBasic",
+                            "mWaitTimeout": -1.0,
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": -10,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Crit Attack",
+                        "mConditions": [
+                            {
+                                "mSpell": "{b06d958f}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DBasic",
+                            "mAllyEventName": "Spell3DBasic",
+                            "mEnemyEventName": "Spell3DBasic",
+                            "mSpectatorEventName": "Spell3DBasic",
+                            "mWaitTimeout": -1.0,
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": -10,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Q Attack",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaQAbility/Jade_ShyvanaQAttack",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 50,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DQ1Cast",
+                            "mAllyEventName": "Spell3DQ1Cast",
+                            "mEnemyEventName": "Spell3DQ1Cast",
+                            "mSpectatorEventName": "Spell3DQ1Cast",
+                            "mWaitTimeout": -1.0,
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "E",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaEAbility/Jade_ShyvanaE",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 50,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DECast",
+                            "mAllyEventName": "Spell3DECast",
+                            "mEnemyEventName": "Spell3DECast",
+                            "mSpectatorEventName": "Spell3DECast",
+                            "mWaitTimeout": -1.0,
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "R (Just to stomp human VO)",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaR",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DRCast",
+                            "mAllyEventName": "Spell3DRCast",
+                            "mEnemyEventName": "Spell3DRCast",
+                            "mSpectatorEventName": "Spell3DRCast",
+                            "mWaitTimeout": -1.0,
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 100,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Joke": {
+                "mRules": [
+                    {
+                        "mRuleName": "(Dragon) Joke",
+                        "mConditions": [
+                            {
+                                "mChildConditions": [
+                                    {
+                                        "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                        "__type": "ContextualConditionCharacterHasSpellBuff"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Dragon_Joke3DGeneral",
+                            "mAllyEventName": "Dragon_Joke3DGeneral",
+                            "mEnemyEventName": "Dragon_Joke3DGeneral",
+                            "mSpectatorEventName": "Dragon_Joke3DGeneral",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Joke",
+                        "mConditions": [
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Joke3DGeneral",
+                            "mAllyEventName": "Joke3DGeneral",
+                            "mEnemyEventName": "Joke3DGeneral",
+                            "mSpectatorEventName": "Joke3DGeneral",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Taunt": {
+                "mRules": [
+                    {
+                        "mRuleName": "(Dragon) Taunt",
+                        "mConditions": [
+                            {
+                                "mChildConditions": [
+                                    {
+                                        "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                        "__type": "ContextualConditionCharacterHasSpellBuff"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Dragon_Taunt3DGeneral",
+                            "mAllyEventName": "Dragon_Taunt3DGeneral",
+                            "mEnemyEventName": "Dragon_Taunt3DGeneral",
+                            "mSpectatorEventName": "Dragon_Taunt3DGeneral",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Taunt",
+                        "mConditions": [
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Taunt3DGeneral",
+                            "mAllyEventName": "Taunt3DGeneral",
+                            "mEnemyEventName": "Taunt3DGeneral",
+                            "mSpectatorEventName": "Taunt3DGeneral",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Laugh": {
+                "mRules": [
+                    {
+                        "mRuleName": "Laugh",
+                        "mConditions": [
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Laugh3DGeneral",
+                            "mAllyEventName": "Laugh3DGeneral",
+                            "mEnemyEventName": "Laugh3DGeneral",
+                            "mSpectatorEventName": "Laugh3DGeneral",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "JokeEndedNearby": {
+                "mRules": [
+                    {
+                        "mRuleName": "Joke Response",
+                        "mConditions": [
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "JokeResponse3DGeneral",
+                            "mAllyEventName": "JokeResponse3DGeneral",
+                            "mEnemyEventName": "JokeResponse3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Respawn2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Respawn",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 75,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Respawn2DGeneral",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "RecallLeadIn": {
+                "mRules": [
+                    {
+                        "mRuleName": "Recall",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 75,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 10.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Recall3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "TauntEndedNearby": {
+                "mRules": [
+                    {
+                        "mRuleName": "Taunt Response",
+                        "mConditions": [
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "TauntResponse3DGeneral",
+                            "mAllyEventName": "TauntResponse3DGeneral",
+                            "mEnemyEventName": "TauntResponse3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "EnemyEncounter": {
+                "mRules": [
+                    {
+                        "mRuleName": "Aurelion Sol",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/AurelionSol/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DAurelionSol",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Jarvan",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/JarvanIV/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DJarvanIV",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Milio",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Milio/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DMilio",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Poppy",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Poppy/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DPoppy",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Quinn",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Quinn/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DQuinn",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Smolder",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Smolder/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DSmolder",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Demacia",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCategory": "faction",
+                                        "mData": "demacia",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    },
+                                    {
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DDemacia",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "General",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "__type": "ContextualConditionEnemyEncounterNumber"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "KillChampion": {
+                "mRules": [
+                    {
+                        "mRuleName": "(Dragon) Pentakill",
+                        "mConditions": [
+                            {
+                                "mMultikillSize": 5,
+                                "__type": "ContextualConditionMultikillSize"
+                            },
+                            {
+                                "mChildConditions": [
+                                    {
+                                        "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                        "__type": "ContextualConditionCharacterHasSpellBuff"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Dragon_Kill3DPenta",
+                            "mAllyEventName": "Kill3DPenta",
+                            "mEnemyEventName": "Dragon_Kill3DPenta",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 200,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Pentakill",
+                        "mConditions": [
+                            {
+                                "mMultikillSize": 5,
+                                "__type": "ContextualConditionMultikillSize"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Kill3DPenta",
+                            "mAllyEventName": "Kill3DPenta",
+                            "mEnemyEventName": "Kill3DPenta",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 200,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "(Dragon) General",
+                        "mConditions": [
+                            {
+                                "mChildConditions": [
+                                    {
+                                        "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                        "__type": "ContextualConditionCharacterHasSpellBuff"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Dragon_Kill3DGeneral",
+                            "mEnemyEventName": "Dragon_Kill3DGeneral",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Aurelion Sol",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/AurelionSol/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DAurelionSol",
+                            "mEnemyEventName": "Kill3DAurelionSol",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Jarvan",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/JarvanIV/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DJarvanIV",
+                            "mEnemyEventName": "Kill3DJarvanIV",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Milio",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Milio/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DMilio",
+                            "mEnemyEventName": "Kill3DMilio",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Poppy",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Poppy/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DPoppy",
+                            "mEnemyEventName": "Kill3DPoppy",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Quinn",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Quinn/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DQuinn",
+                            "mEnemyEventName": "Kill3DQuinn",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Smolder",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Smolder/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DSmolder",
+                            "mEnemyEventName": "Kill3DSmolder",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Demacia",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCategory": "faction",
+                                        "mData": "demacia",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DDemacia",
+                            "mEnemyEventName": "Kill3DDemacia",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "General",
+                        "mConditions": [
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Kill3DGeneral",
+                            "mEnemyEventName": "Kill3DGeneral",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "GotFirstBlood": {
+                "mRules": [
+                    {
+                        "mRuleName": "First Blood",
+                        "mConditions": [
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DFirst",
+                            "mEnemyEventName": "Kill3DFirst",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 130,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "SpellLevelUp": {
+                "mRules": [
+                    {
+                        "mRuleName": "Learn R",
+                        "mConditions": [
+                            {
+                                "mSpellLevel": 1,
+                                "__type": "ContextualConditionSpellLevel"
+                            },
+                            {
+                                "mSpellSlot": 3,
+                                "__type": "ContextualConditionSpellSlot"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Spell2DRRankOne",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Level Up",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 4,
+                            "mSelfEventName": "Spell2DRankUpGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "ObjectiveTakeByMyTeam": {
+                "mRules": [
+                    {
+                        "mRuleName": "Ally team kill dragon while ahead on dragons",
+                        "mConditions": [
+                            {
+                                "{49e47ecd}": {
+                                    "objectives": 8,
+                                    "__type": "{e46a1cdb}"
+                                },
+                                "CompareOp": 2,
+                                "{b95ee9e0}": {
+                                    "{df38ac45}": 1,
+                                    "objectives": 8,
+                                    "__type": "{e46a1cdb}"
+                                },
+                                "__type": "ContextualConditionObjectiveCountComparison"
+                            },
+                            {
+                                "mTakenObjective": 8,
+                                "__type": "ContextualConditionObjectiveTakeByMyTeam"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Kill3DEpicMonsterAheadAllyTeam",
+                            "mAllyEventName": "Kill3DEpicMonsterAheadAllyTeam",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 200,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Ally team kill dragon while behind on dragons",
+                        "mConditions": [
+                            {
+                                "{49e47ecd}": {
+                                    "objectives": 8,
+                                    "__type": "{e46a1cdb}"
+                                },
+                                "CompareOp": 5,
+                                "{b95ee9e0}": {
+                                    "{df38ac45}": 1,
+                                    "objectives": 8,
+                                    "__type": "{e46a1cdb}"
+                                },
+                                "__type": "ContextualConditionObjectiveCountComparison"
+                            },
+                            {
+                                "mTakenObjective": 8,
+                                "__type": "ContextualConditionObjectiveTakeByMyTeam"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Kill3DEpicMonsterBehindAllyTeam",
+                            "mAllyEventName": "Kill3DEpicMonsterBehindAllyTeam",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 200,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "ObjectiveTakeByEnemyTeam": {
+                "mRules": [
+                    {
+                        "mRuleName": "Enemy kill dragon",
+                        "mConditions": [
+                            {
+                                "mTakenObjective": 8,
+                                "__type": "ContextualConditionObjectiveTakeByMyTeam"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "EnemyTeamKill3DEpicMonster",
+                            "mAllyEventName": "EnemyTeamKill3DEpicMonster",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "PingAssistMe": {
+                "mRules": [
+                    {
+                        "mRuleName": "Ping",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 30.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Ping2DAssistMe",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "PingDanger": {
+                "mRules": [
+                    {
+                        "mRuleName": "Ping",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 30.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Ping2DDanger",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "PingMissing": {
+                "mRules": [
+                    {
+                        "mRuleName": "Ping",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 30.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Ping2DEnemyMissing",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "PingOnMyWay": {
+                "mRules": [
+                    {
+                        "mRuleName": "Ping",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 30.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Ping2DOnMyWay",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "PingTarget": {
+                "mRules": [
+                    {
+                        "mRuleName": "Ping",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 30.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Ping2DTarget",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "MaxResource": {
+                "mRules": [
+                    {
+                        "mRuleName": "Q Max",
+                        "mConditions": [
+                            {
+                                "__type": "ContextualConditionAbilityResourceSlot"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Illaoi/Spells/IllaoiEAbility/IllaoiESpirit",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            },
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DPMax",
+                            "mAllyEventName": "Spell3DPMax",
+                            "mEnemyEventName": "Spell3DPMax",
+                            "mSpectatorEventName": "Spell3DPMax",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "OwnerDeath": {
+                "mRules": [
+                    {
+                        "mRuleName": "Death",
+                        "mConditions": [
+                            {
+                                "mChildCondition": {
+                                    "mChildConditions": [
+                                        {
+                                            "SpellBuff": "Characters/Jade_Shyvana/Spells/Jade_ShyvanaRAbility/Jade_ShyvanaRTransform",
+                                            "__type": "ContextualConditionCharacterHasSpellBuff"
+                                        }
+                                    ],
+                                    "__type": "ContextualConditionCharacter"
+                                },
+                                "__type": "ContextualConditionNegation"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Death3DHuman",
+                            "mAllyEventName": "Death3DHuman",
+                            "mEnemyEventName": "Death3DHuman",
+                            "mSpectatorEventName": "Death3DHuman",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 500,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            }
+        },
+        "mObjectPath": "Characters/Jade_Shyvana/CAC/Jade_Shyvana_Base",
+        "__type": "ContextualActionData"
+    },
+    "__linked": []
+}

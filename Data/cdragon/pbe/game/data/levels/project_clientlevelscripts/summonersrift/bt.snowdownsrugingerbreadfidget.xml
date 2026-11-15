@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BehaviorTrees>
+  <BehaviorTree Name="SummonersRift.SnowdownSRUGingerbreadFidget" StaticName="">
+    <Node Type="Selector" Name="SnowdownSRUGingerbreadFidget" Enabled="true">
+      <Parameters />
+      <Children>
+        <Node Type="Sequence" Name="Initialization" Enabled="true">
+          <Parameters />
+          <Children>
+            <Node Type="EqualBool" Name="__IsFirstRun==True" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="__IsFirstRun" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="RightHandSide" Value="True" VariableType="Value" />
+              </Parameters>
+            </Node>
+            <Node Type="SetVarBool" Name="GingerbreadPropsPresent=False" Enabled="true">
+              <Parameters>
+                <Parameter Name="Input" Value="False" VariableType="Value" />
+                <OutParameter Name="Output" Value="GingerbreadPropsPresent" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="Sequence" Name="GetGingerbreadProps" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="GetPropByName" Name="LevelProp_SRU_SnowDown_Gingerbread" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropByName" Name="LevelProp_SRU_SnowDown_Gingerbread2" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread2" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread2" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropByName" Name="LevelProp_SRU_SnowDown_Gingerbread3" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread3" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread3" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropByName" Name="LevelProp_SRU_SnowDown_Gingerbread4" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread4" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread4" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropByName" Name="LevelProp_SRU_SnowDown_Gingerbread5" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread5" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread5" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropByName" Name="LevelProp_SRU_SnowDown_Gingerbread7" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread7" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread7" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropByName" Name="LevelProp_SRU_SnowDown_Gingerbread8" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread8" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread8" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropByName" Name="LevelProp_SRU_SnowDown_Gingerbread9" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread9" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread9" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropByName" Name="LevelProp_SRU_SnowDown_Gingerbread10" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread10" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread10" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropByName" Name="LevelProp_SRU_SnowDown_Gingerbread11" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread11" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread11" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropByName" Name="LevelProp_SRU_SnowDown_Gingerbread12" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread12" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread12" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropPositionByName" Name="LevelProp_SRU_SnowDown_Gingerbread_Pos" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread_Pos" ReferenceType="Vector" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropPositionByName" Name="LevelProp_SRU_SnowDown_Gingerbread2_Pos" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread2" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread2_Pos" ReferenceType="Vector" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropPositionByName" Name="LevelProp_SRU_SnowDown_Gingerbread3_Pos" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread3" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread3_Pos" ReferenceType="Vector" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropPositionByName" Name="LevelProp_SRU_SnowDown_Gingerbread4_Pos" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread4" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread4_Pos" ReferenceType="Vector" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropPositionByName" Name="LevelProp_SRU_SnowDown_Gingerbread5_Pos" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread5" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread5_Pos" ReferenceType="Vector" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropPositionByName" Name="LevelProp_SRU_SnowDown_Gingerbread7_Pos" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread7" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread7_Pos" ReferenceType="Vector" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropPositionByName" Name="LevelProp_SRU_SnowDown_Gingerbread8_Pos" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread8" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread8_Pos" ReferenceType="Vector" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropPositionByName" Name="LevelProp_SRU_SnowDown_Gingerbread9_Pos" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread9" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread9_Pos" ReferenceType="Vector" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropPositionByName" Name="LevelProp_SRU_SnowDown_Gingerbread10_Pos" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread10" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread10_Pos" ReferenceType="Vector" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropPositionByName" Name="LevelProp_SRU_SnowDown_Gingerbread11_Pos" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread11" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread11_Pos" ReferenceType="Vector" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropPositionByName" Name="LevelProp_SRU_SnowDown_Gingerbread12_Pos" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_SnowDown_Gingerbread12" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread12_Pos" ReferenceType="Vector" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarBool" Name="LevelProp_SRU_SnowDown_Gingerbread_InProximityAnim=False" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="False" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread_InProximityAnim" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarBool" Name="LevelProp_SRU_SnowDown_Gingerbread2_InProximityAnim=False" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="False" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread2_InProximityAnim" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarBool" Name="LevelProp_SRU_SnowDown_Gingerbread3_InProximityAnim=False" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="False" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread3_InProximityAnim" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarBool" Name="LevelProp_SRU_SnowDown_Gingerbread4_InProximityAnim=False" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="False" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread4_InProximityAnim" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarBool" Name="LevelProp_SRU_SnowDown_Gingerbread5_InProximityAnim=False" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="False" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread5_InProximityAnim" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarBool" Name="LevelProp_SRU_SnowDown_Gingerbread7_InProximityAnim=False" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="False" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread7_InProximityAnim" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarBool" Name="LevelProp_SRU_SnowDown_Gingerbread8_InProximityAnim=False" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="False" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread8_InProximityAnim" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarBool" Name="LevelProp_SRU_SnowDown_Gingerbread9_InProximityAnim=False" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="False" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread9_InProximityAnim" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarBool" Name="LevelProp_SRU_SnowDown_Gingerbread10_InProximityAnim=False" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="False" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread10_InProximityAnim" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarBool" Name="LevelProp_SRU_SnowDown_Gingerbread11_InProximityAnim=False" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="False" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread11_InProximityAnim" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarBool" Name="LevelProp_SRU_SnowDown_Gingerbread12_InProximityAnim=False" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="False" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread12_InProximityAnim" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;LevelProp_SRU_SnowDown_Gingerbread" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                    <Parameter Name="Loop" Value="True" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;LevelProp_SRU_SnowDown_Gingerbread2" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread2" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                    <Parameter Name="Loop" Value="True" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;LevelProp_SRU_SnowDown_Gingerbread3" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread3" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                    <Parameter Name="Loop" Value="True" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;LevelProp_SRU_SnowDown_Gingerbread4" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread4" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                    <Parameter Name="Loop" Value="True" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;LevelProp_SRU_SnowDown_Gingerbread5" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread5" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                    <Parameter Name="Loop" Value="True" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;LevelProp_SRU_SnowDown_Gingerbread7" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread7" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                    <Parameter Name="Loop" Value="True" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;LevelProp_SRU_SnowDown_Gingerbread8" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread8" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                    <Parameter Name="Loop" Value="True" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;LevelProp_SRU_SnowDown_Gingerbread9" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread9" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                    <Parameter Name="Loop" Value="True" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;LevelProp_SRU_SnowDown_Gingerbread10" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread10" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                    <Parameter Name="Loop" Value="True" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;LevelProp_SRU_SnowDown_Gingerbread11" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread11" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                    <Parameter Name="Loop" Value="True" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;LevelProp_SRU_SnowDown_Gingerbread12" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread12" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                    <Parameter Name="Loop" Value="True" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_SRU_SnowDown_Gingerbread_LastTimePlayed=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread_LastTimePlayed" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_SRU_SnowDown_Gingerbread2_LastTimePlayed=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread2_LastTimePlayed" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_SRU_SnowDown_Gingerbread3_LastTimePlayed=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread3_LastTimePlayed" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_SRU_SnowDown_Gingerbread4_LastTimePlayed=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread4_LastTimePlayed" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_SRU_SnowDown_Gingerbread5_LastTimePlayed=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread5_LastTimePlayed" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_SRU_SnowDown_Gingerbread7_LastTimePlayed=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread7_LastTimePlayed" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_SRU_SnowDown_Gingerbread8_LastTimePlayed=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread8_LastTimePlayed" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_SRU_SnowDown_Gingerbread9_LastTimePlayed=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread9_LastTimePlayed" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_SRU_SnowDown_Gingerbread10_LastTimePlayed=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread10_LastTimePlayed" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_SRU_SnowDown_Gingerbread11_LastTimePlayed=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread11_LastTimePlayed" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_SRU_SnowDown_Gingerbread12_LastTimePlayed=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_SRU_SnowDown_Gingerbread12_LastTimePlayed" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarBool" Name="GingerbreadPropsPresent=True" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="True" VariableType="Value" />
+                    <OutParameter Name="Output" Value="GingerbreadPropsPresent" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+          </Children>
+        </Node>
+        <Node Type="Sequence" Name="AnimLogic_OnlyRunIfGingerbreadPropsFound" Enabled="true">
+          <Parameters />
+          <Children>
+            <Node Type="EqualBool" Name="GingerbreadPropsPresent==True" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="GingerbreadPropsPresent" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="RightHandSide" Value="True" VariableType="Value" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayProximityAnimation_OneShot(LevelProp_SRU_SnowDown_Gingerbread)" Enabled="true" TreeQualifiedName="_Common.PlayProximityAnimation_OneShot">
+              <Parameters>
+                <Parameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread_InProximityAnim" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="PropPosition" Value="LevelProp_SRU_SnowDown_Gingerbread_Pos" VariableType="Reference" ReferenceType="Vector" />
+                <Parameter Name="ProximityDistanceForAnim" Value="500" VariableType="Value" />
+                <Parameter Name="AnimName_Proximity" Value="Fidget" VariableType="Value" />
+                <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread" VariableType="Reference" ReferenceType="GameObject" />
+                <Parameter Name="AnimationCooldown" Value="4" VariableType="Value" />
+                <Parameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread_LastTimePlayed" VariableType="Reference" ReferenceType="Float" />
+                <OutParameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread_InProximityAnim" ReferenceType="Bool" />
+                <OutParameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread_LastTimePlayed" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayProximityAnimation_OneShot(LevelProp_SRU_SnowDown_Gingerbread2)" Enabled="true" TreeQualifiedName="_Common.PlayProximityAnimation_OneShot">
+              <Parameters>
+                <Parameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread2_InProximityAnim" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="PropPosition" Value="LevelProp_SRU_SnowDown_Gingerbread2_Pos" VariableType="Reference" ReferenceType="Vector" />
+                <Parameter Name="ProximityDistanceForAnim" Value="500" VariableType="Value" />
+                <Parameter Name="AnimName_Proximity" Value="Fidget" VariableType="Value" />
+                <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread2" VariableType="Reference" ReferenceType="GameObject" />
+                <Parameter Name="AnimationCooldown" Value="4" VariableType="Value" />
+                <Parameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread2_LastTimePlayed" VariableType="Reference" ReferenceType="Float" />
+                <OutParameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread2_InProximityAnim" ReferenceType="Bool" />
+                <OutParameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread2_LastTimePlayed" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayProximityAnimation_OneShot(LevelProp_SRU_SnowDown_Gingerbread3)" Enabled="true" TreeQualifiedName="_Common.PlayProximityAnimation_OneShot">
+              <Parameters>
+                <Parameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread3_InProximityAnim" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="PropPosition" Value="LevelProp_SRU_SnowDown_Gingerbread3_Pos" VariableType="Reference" ReferenceType="Vector" />
+                <Parameter Name="ProximityDistanceForAnim" Value="500" VariableType="Value" />
+                <Parameter Name="AnimName_Proximity" Value="Fidget" VariableType="Value" />
+                <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread3" VariableType="Reference" ReferenceType="GameObject" />
+                <Parameter Name="AnimationCooldown" Value="4" VariableType="Value" />
+                <Parameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread3_LastTimePlayed" VariableType="Reference" ReferenceType="Float" />
+                <OutParameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread3_InProximityAnim" ReferenceType="Bool" />
+                <OutParameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread3_LastTimePlayed" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayProximityAnimation_OneShot(LevelProp_SRU_SnowDown_Gingerbread4)" Enabled="true" TreeQualifiedName="_Common.PlayProximityAnimation_OneShot">
+              <Parameters>
+                <Parameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread4_InProximityAnim" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="PropPosition" Value="LevelProp_SRU_SnowDown_Gingerbread4_Pos" VariableType="Reference" ReferenceType="Vector" />
+                <Parameter Name="ProximityDistanceForAnim" Value="500" VariableType="Value" />
+                <Parameter Name="AnimName_Proximity" Value="Fidget" VariableType="Value" />
+                <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread4" VariableType="Reference" ReferenceType="GameObject" />
+                <Parameter Name="AnimationCooldown" Value="4" VariableType="Value" />
+                <Parameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread4_LastTimePlayed" VariableType="Reference" ReferenceType="Float" />
+                <OutParameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread4_InProximityAnim" ReferenceType="Bool" />
+                <OutParameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread4_LastTimePlayed" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayProximityAnimation_OneShot(LevelProp_SRU_SnowDown_Gingerbread5)" Enabled="true" TreeQualifiedName="_Common.PlayProximityAnimation_OneShot">
+              <Parameters>
+                <Parameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread5_InProximityAnim" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="PropPosition" Value="LevelProp_SRU_SnowDown_Gingerbread5_Pos" VariableType="Reference" ReferenceType="Vector" />
+                <Parameter Name="ProximityDistanceForAnim" Value="500" VariableType="Value" />
+                <Parameter Name="AnimName_Proximity" Value="Fidget" VariableType="Value" />
+                <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread5" VariableType="Reference" ReferenceType="GameObject" />
+                <Parameter Name="AnimationCooldown" Value="4" VariableType="Value" />
+                <Parameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread5_LastTimePlayed" VariableType="Reference" ReferenceType="Float" />
+                <OutParameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread5_InProximityAnim" ReferenceType="Bool" />
+                <OutParameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread5_LastTimePlayed" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayProximityAnimation_OneShot(LevelProp_SRU_SnowDown_Gingerbread7)" Enabled="true" TreeQualifiedName="_Common.PlayProximityAnimation_OneShot">
+              <Parameters>
+                <Parameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread7_InProximityAnim" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="PropPosition" Value="LevelProp_SRU_SnowDown_Gingerbread7_Pos" VariableType="Reference" ReferenceType="Vector" />
+                <Parameter Name="ProximityDistanceForAnim" Value="500" VariableType="Value" />
+                <Parameter Name="AnimName_Proximity" Value="Fidget" VariableType="Value" />
+                <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread7" VariableType="Reference" ReferenceType="GameObject" />
+                <Parameter Name="AnimationCooldown" Value="4" VariableType="Value" />
+                <Parameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread7_LastTimePlayed" VariableType="Reference" ReferenceType="Float" />
+                <OutParameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread7_InProximityAnim" ReferenceType="Bool" />
+                <OutParameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread7_LastTimePlayed" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayProximityAnimation_OneShot(LevelProp_SRU_SnowDown_Gingerbread8)" Enabled="true" TreeQualifiedName="_Common.PlayProximityAnimation_OneShot">
+              <Parameters>
+                <Parameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread8_InProximityAnim" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="PropPosition" Value="LevelProp_SRU_SnowDown_Gingerbread8_Pos" VariableType="Reference" ReferenceType="Vector" />
+                <Parameter Name="ProximityDistanceForAnim" Value="500" VariableType="Value" />
+                <Parameter Name="AnimName_Proximity" Value="Fidget" VariableType="Value" />
+                <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread8" VariableType="Reference" ReferenceType="GameObject" />
+                <Parameter Name="AnimationCooldown" Value="4" VariableType="Value" />
+                <Parameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread8_LastTimePlayed" VariableType="Reference" ReferenceType="Float" />
+                <OutParameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread8_InProximityAnim" ReferenceType="Bool" />
+                <OutParameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread8_LastTimePlayed" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayProximityAnimation_OneShot(LevelProp_SRU_SnowDown_Gingerbread9)" Enabled="true" TreeQualifiedName="_Common.PlayProximityAnimation_OneShot">
+              <Parameters>
+                <Parameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread9_InProximityAnim" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="PropPosition" Value="LevelProp_SRU_SnowDown_Gingerbread9_Pos" VariableType="Reference" ReferenceType="Vector" />
+                <Parameter Name="ProximityDistanceForAnim" Value="500" VariableType="Value" />
+                <Parameter Name="AnimName_Proximity" Value="Fidget" VariableType="Value" />
+                <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread9" VariableType="Reference" ReferenceType="GameObject" />
+                <Parameter Name="AnimationCooldown" Value="4" VariableType="Value" />
+                <Parameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread9_LastTimePlayed" VariableType="Reference" ReferenceType="Float" />
+                <OutParameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread9_InProximityAnim" ReferenceType="Bool" />
+                <OutParameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread9_LastTimePlayed" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayProximityAnimation_OneShot(LevelProp_SRU_SnowDown_Gingerbread10)" Enabled="true" TreeQualifiedName="_Common.PlayProximityAnimation_OneShot">
+              <Parameters>
+                <Parameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread10_InProximityAnim" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="PropPosition" Value="LevelProp_SRU_SnowDown_Gingerbread10_Pos" VariableType="Reference" ReferenceType="Vector" />
+                <Parameter Name="ProximityDistanceForAnim" Value="500" VariableType="Value" />
+                <Parameter Name="AnimName_Proximity" Value="Fidget" VariableType="Value" />
+                <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread10" VariableType="Reference" ReferenceType="GameObject" />
+                <Parameter Name="AnimationCooldown" Value="4" VariableType="Value" />
+                <Parameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread10_LastTimePlayed" VariableType="Reference" ReferenceType="Float" />
+                <OutParameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread10_InProximityAnim" ReferenceType="Bool" />
+                <OutParameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread10_LastTimePlayed" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayProximityAnimation_OneShot(LevelProp_SRU_SnowDown_Gingerbread11)" Enabled="true" TreeQualifiedName="_Common.PlayProximityAnimation_OneShot">
+              <Parameters>
+                <Parameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread11_InProximityAnim" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="PropPosition" Value="LevelProp_SRU_SnowDown_Gingerbread11_Pos" VariableType="Reference" ReferenceType="Vector" />
+                <Parameter Name="ProximityDistanceForAnim" Value="500" VariableType="Value" />
+                <Parameter Name="AnimName_Proximity" Value="Fidget" VariableType="Value" />
+                <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread11" VariableType="Reference" ReferenceType="GameObject" />
+                <Parameter Name="AnimationCooldown" Value="4" VariableType="Value" />
+                <Parameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread11_LastTimePlayed" VariableType="Reference" ReferenceType="Float" />
+                <OutParameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread11_InProximityAnim" ReferenceType="Bool" />
+                <OutParameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread11_LastTimePlayed" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayProximityAnimation_OneShot(LevelProp_SRU_SnowDown_Gingerbread12)" Enabled="true" TreeQualifiedName="_Common.PlayProximityAnimation_OneShot">
+              <Parameters>
+                <Parameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread12_InProximityAnim" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="PropPosition" Value="LevelProp_SRU_SnowDown_Gingerbread12_Pos" VariableType="Reference" ReferenceType="Vector" />
+                <Parameter Name="ProximityDistanceForAnim" Value="500" VariableType="Value" />
+                <Parameter Name="AnimName_Proximity" Value="Fidget" VariableType="Value" />
+                <Parameter Name="LevelProp" Value="LevelProp_SRU_SnowDown_Gingerbread12" VariableType="Reference" ReferenceType="GameObject" />
+                <Parameter Name="AnimationCooldown" Value="4" VariableType="Value" />
+                <Parameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread12_LastTimePlayed" VariableType="Reference" ReferenceType="Float" />
+                <OutParameter Name="InProximityAnim" Value="LevelProp_SRU_SnowDown_Gingerbread12_InProximityAnim" ReferenceType="Bool" />
+                <OutParameter Name="LastTimePlayed" Value="LevelProp_SRU_SnowDown_Gingerbread12_LastTimePlayed" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+          </Children>
+        </Node>
+      </Children>
+    </Node>
+  </BehaviorTree>
+</BehaviorTrees>

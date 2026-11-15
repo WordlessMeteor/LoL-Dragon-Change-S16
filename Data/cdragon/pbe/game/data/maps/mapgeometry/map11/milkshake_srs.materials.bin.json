@@ -19108,67 +19108,6 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Maps/KitPieces/SRS/Base/Materials/Default/Chaos_Spawn_B_MAT": {
-        "name": "Maps/KitPieces/SRS/Base/Materials/Default/Chaos_Spawn_B_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/base/textures/chaos_spawn_b_1bitalpha.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "AlphaTestValue",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "MULTIPLY_ALPHA",
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1",
-            "PREMULTIPLIED_ALPHA": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
-                        "blendEnable": true,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
     "Maps/KitPieces/SRS/Base/Materials/Default/Order_Dragon_Chemtech_C_MAT": {
         "name": "Maps/KitPieces/SRS/Base/Materials/Default/Order_Dragon_Chemtech_C_MAT",
         "type": 0,
@@ -38379,7 +38318,6 @@
             "{d4386834}": null,
             "{e337ce53}": null,
             "{7c005243}": null,
-            "{bf94bdb5}": null,
             "{ad7bccd9}": null,
             "{c7955e56}": null,
             "{7c03ca30}": null,
@@ -92656,7 +92594,7 @@
                 "name": "SRU_MSI_Winner1",
                 "system": "Maps/Shipping/Map11/Particles/HOL_26/HoL_26_CubeGrid",
                 "eyeCandy": true,
-                "VisibilityController": "{8f1ab207}",
+                "VisibilityController": "{76c50391}",
                 "__type": "MapParticle"
             },
             "{44b63467}": {
@@ -100899,7 +100837,7 @@
                 "name": "SRU_MSI_Winner2",
                 "system": "Maps/Shipping/Map11/Particles/HOL_26/HoL_26_CubeGrid_02",
                 "eyeCandy": true,
-                "VisibilityController": "{8f1ab207}",
+                "VisibilityController": "{76c50391}",
                 "__type": "MapParticle"
             }
         },
@@ -139714,11 +139652,6 @@
         ],
         "ParentMode": 1,
         "__type": "ChildMapVisibilityController"
-    },
-    "{8f1ab207}": {
-        "PathHash": "{8f1ab207}",
-        "MutatorName": "MSITrophy",
-        "__type": "MutatorMapVisibilityController"
     },
     "{a7b30f31}": {
         "PathHash": "{a7b30f31}",

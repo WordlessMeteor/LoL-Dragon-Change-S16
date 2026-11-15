@@ -1,0 +1,471 @@
+{
+    "Characters/Jade_Sion/Skins/Skin0/Particles/Jade_Sion_Base_Passive_Ax": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.9900000095367432,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "ShieldLeftAnim",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        -5.0,
+                        5.0,
+                        -5.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Sion/Skins/Base/Particles/Jade_Sion_passive_death_ax.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 3,
+                "Color": {
+                    "constantValue": [
+                        0.75,
+                        0.75,
+                        0.75,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.019999999552965164,
+                            0.05000000074505806,
+                            0.15000000596046448,
+                            0.30000001192092896,
+                            0.4000000059604645,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.75,
+                                0.75,
+                                0.75,
+                                1.0
+                            ],
+                            [
+                                0.75,
+                                0.75,
+                                0.75,
+                                1.0
+                            ],
+                            [
+                                0.75,
+                                0.75,
+                                0.75,
+                                1.0
+                            ],
+                            [
+                                0.75,
+                                0.75,
+                                0.75,
+                                0.6000000238418579
+                            ],
+                            [
+                                0.75,
+                                0.75,
+                                0.75,
+                                0.30000001192092896
+                            ],
+                            [
+                                0.75,
+                                0.75,
+                                0.75,
+                                0.10000000149011612
+                            ],
+                            [
+                                0.375,
+                                0.375,
+                                0.375,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "alphaRef": 14,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        180.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Sion/Skins/Base/Particles/Jade_Sion_Base_Passive_Weapon.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 50.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            1.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 11.0,
+                "lifetime": 0.4000000059604645,
+                "emitterName": "dust",
+                "birthDrag": {
+                    "constantValue": [
+                        2.0,
+                        4.0,
+                        2.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "worldAcceleration": {
+                    "constantValue": [
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.800000011920929,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    450.0,
+                                    850.0,
+                                    1200.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "SpawnShape": {
+                    "flags": 1,
+                    "Size": [
+                        1.0,
+                        1.0,
+                        120.0
+                    ],
+                    "__type": "VfxShapeBox"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        -130.0,
+                        0.0,
+                        -50.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            0.4000000059604645,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.6666669845581055,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.33333298563957214,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.6000000238418579
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 50,
+                "alphaRef": 50,
+                "miscRenderFlags": 1,
+                "isRandomStartFrame": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        10.0,
+                        40.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.10000000149011612,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.20000000298023224,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                10.0,
+                                40.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10000000149011612,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                5.0,
+                                2.0,
+                                0.0
+                            ],
+                            [
+                                3.0,
+                                5.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Sion/Skins/Base/Particles/Jade_Sion_Base_Passive_Axe_shards.tex",
+                "numFrames": 4,
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 11.5,
+                "lifetime": 5.099999904632568,
+                "isSingleParticle": 1,
+                "emitterName": "shadow",
+                "EmitterPosition": {
+                    "constantValue": [
+                        -130.0,
+                        0.0,
+                        -50.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
+                "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.009999999776482582,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                0.23137299716472626,
+                                0.23137299716472626,
+                                0.23137299716472626,
+                                1.0
+                            ],
+                            [
+                                0.3882350027561188,
+                                0.3882350027561188,
+                                0.3882350027561188,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -4,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -90.0,
+                        90.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        180.0,
+                        150.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Sion/Skins/Base/Particles/Jade_Sion_Base_Passive_weaponshadow.tex",
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Jade_Sion/Skins/Base/Particles/Jade_Sion_Base_Q_Hit2_groundsmoke.tex",
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Jade_Sion_Base_Passive_Ax",
+        "particlePath": "Characters/Jade_Sion/Skins/Skin0/Particles/Jade_Sion_Base_Passive_Ax",
+        "flags": 198,
+        "objectPath": "Characters/Jade_Sion/Skins/Skin0/Particles/Jade_Sion_Base_Passive_Ax",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/Jade_Sion/Skins/Skin0/Particles/Jade_Sion_Base_Passive_Skin": {
+        "complexEmitterDefinitionData": [
+            {
+                "timeBeforeFirstEmission": 0.20000000298023224,
+                "particleLinger": 13.0,
+                "emitterName": "Mattoverride",
+                "importance": 3,
+                "particleColorTexture": "ASSETS/Characters/Jade_Sion/Skins/Base/Particles/common_alpha_16.tex",
+                "blendMode": 4,
+                "pass": 2,
+                "materialOverrideDefinitions": [
+                    {
+                        "priority": 1,
+                        "baseTexture": "assets/characters/jade_sion/skins/base/jade_sion_base_tx_cm.tex",
+                        "transitionTexture": "assets/characters/jade_sion/skins/base/particles/jade_sion_base_passive_body_tx.tex",
+                        "__type": "VfxMaterialOverrideDefinitionData"
+                    },
+                    {
+                        "priority": 1,
+                        "baseTexture": "assets/characters/jade_sion/skins/base/jade_sion_base_tx_em.tex",
+                        "__type": "VfxMaterialOverrideDefinitionData"
+                    }
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Jade_Sion_Base_Passive_Skin",
+        "particlePath": "Characters/Jade_Sion/Skins/Skin0/Particles/Jade_Sion_Base_Passive_Skin",
+        "flags": 198,
+        "objectPath": "Characters/Jade_Sion/Skins/Skin0/Particles/Jade_Sion_Base_Passive_Skin",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "__linked": []
+}

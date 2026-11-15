@@ -1,0 +1,1045 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BehaviorTrees>
+  <BehaviorTree Name="ARAM.ClientScripts" StaticName="">
+    <Parameters>
+      <Parameter Name="HasRevived" VariableType="Reference" ParameterType="Bool" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="HasOpened" VariableType="Reference" ParameterType="Bool" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <OutParameter Name="HasRevived" ParameterType="Bool">
+        <Description></Description>
+      </OutParameter>
+      <OutParameter Name="HasOpened" ParameterType="Bool">
+        <Description></Description>
+      </OutParameter>
+    </Parameters>
+    <Node Type="Selector" Name="ClientScripts" Enabled="true">
+      <Parameters />
+      <Children>
+        <Node Type="Sequence" Name="Initialization" Enabled="true">
+          <Parameters />
+          <Children>
+            <Node Type="EqualBool" Name="__IsFirstRun = True" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="__IsFirstRun" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="RightHandSide" Value="True" VariableType="Value" />
+              </Parameters>
+            </Node>
+            <Node Type="SetVarBool" Name="HasRevived = True" Enabled="true">
+              <Parameters>
+                <Parameter Name="Input" Value="True" VariableType="Value" />
+                <OutParameter Name="Output" Value="HasRevived" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="SetVarBool" Name="HasOpened = False" Enabled="true">
+              <Parameters>
+                <Parameter Name="Input" Value="False" VariableType="Value" />
+                <OutParameter Name="Output" Value="HasOpened" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="SetVarBool" Name="TutorialShopStart = False" Enabled="true">
+              <Parameters>
+                <Parameter Name="Input" Value="False" VariableType="Value" />
+                <OutParameter Name="Output" Value="TutorialShopStart" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="GetPlayerChampion" Name="Hero" Enabled="true">
+              <Parameters>
+                <OutParameter Name="Output" Value="Hero" ReferenceType="AttackableUnit" />
+              </Parameters>
+            </Node>
+            <Node Type="GetUnitTeam" Name="HeroTeam" Enabled="true">
+              <Parameters>
+                <Parameter Name="Unit" Value="Hero" VariableType="Reference" ReferenceType="AttackableUnit" />
+                <OutParameter Name="Output" Value="HeroTeam" ReferenceType="TeamEnum" />
+              </Parameters>
+            </Node>
+            <Node Type="SetVarString" Name="ShopSouthStatus = Open" Enabled="true">
+              <Parameters>
+                <Parameter Name="Input" Value="Open" VariableType="Value" />
+                <OutParameter Name="Output" Value="ShopSouthStatus" ReferenceType="String" />
+              </Parameters>
+            </Node>
+            <Node Type="SetVarString" Name="ShopNorthStatus = Open" Enabled="true">
+              <Parameters>
+                <Parameter Name="Input" Value="Open" VariableType="Value" />
+                <OutParameter Name="Output" Value="ShopNorthStatus" ReferenceType="String" />
+              </Parameters>
+            </Node>
+            <Node Type="SetVarBool" Name="IsButchersBridge=False" Enabled="true">
+              <Parameters>
+                <Parameter Name="Input" Value="False" VariableType="Value" />
+                <OutParameter Name="Output" Value="IsButchersBridge" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="GetPropByName" Name="LevelProp_HA_AP_ShpSouth" Enabled="true">
+              <Parameters>
+                <Parameter Name="PropName" Value="LevelProp_HA_AP_ShpSouth" VariableType="Value" />
+                <OutParameter Name="Output" Value="ShopSouth" ReferenceType="GameObject" />
+              </Parameters>
+            </Node>
+            <Node Type="GetPropByName" Name="LevelProp_HA_AP_ShpNorth" Enabled="true">
+              <Parameters>
+                <Parameter Name="PropName" Value="LevelProp_HA_AP_ShpNorth" VariableType="Value" />
+                <OutParameter Name="Output" Value="ShopNorth" ReferenceType="GameObject" />
+              </Parameters>
+            </Node>
+            <Node Type="Selector" Name="ShopPropsByMap" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Sequence" Name="HowlingAbyssShops" Enabled="true">
+                  <Parameters />
+                  <Children>
+                    <Node Type="GetPropByName" Name="LevelProp_HA_AP_Viking" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="PropName" Value="LevelProp_HA_AP_Viking" VariableType="Value" />
+                        <OutParameter Name="Output" Value="Viking" ReferenceType="GameObject" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="GetPropByName" Name="LevelProp_HA_AP_Hermit" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="PropName" Value="LevelProp_HA_AP_Hermit" VariableType="Value" />
+                        <OutParameter Name="Output" Value="Hermit" ReferenceType="GameObject" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="GetPropByName" Name="LevelProp_HA_AP_Hermit_Robot1" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="PropName" Value="LevelProp_HA_AP_Hermit_Robot1" VariableType="Value" />
+                        <OutParameter Name="Output" Value="Robot" ReferenceType="GameObject" />
+                      </Parameters>
+                    </Node>
+                  </Children>
+                </Node>
+                <Node Type="Sequence" Name="ButchersBridge" Enabled="true">
+                  <Parameters />
+                  <Children>
+                    <Node Type="SetVarBool" Name="IsButchersBridge=True" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="Input" Value="True" VariableType="Value" />
+                        <OutParameter Name="Output" Value="IsButchersBridge" ReferenceType="Bool" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="GetPropByName" Name="LevelProp_BW_AP_Bubbs" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="PropName" Value="LevelProp_BW_AP_Bubbs" VariableType="Value" />
+                        <OutParameter Name="Output" Value="Bubbs" ReferenceType="GameObject" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="GetPropByName" Name="LevelProp_BW_AP_Finn" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="PropName" Value="LevelProp_BW_AP_Finn" VariableType="Value" />
+                        <OutParameter Name="Output" Value="Finn" ReferenceType="GameObject" />
+                      </Parameters>
+                    </Node>
+                  </Children>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="GetNexus" Name="OrderNexus" Enabled="true">
+              <Parameters>
+                <Parameter Name="Team" Value="TEAM_ORDER,0" VariableType="Value" />
+                <OutParameter Name="Nexus" Value="OrderNexus" ReferenceType="AttackableUnit" />
+              </Parameters>
+            </Node>
+            <Node Type="GetNexus" Name="ChaosNexus" Enabled="true">
+              <Parameters>
+                <Parameter Name="Team" Value="TEAM_CHAOS,0" VariableType="Value" />
+                <OutParameter Name="Nexus" Value="ChaosNexus" ReferenceType="AttackableUnit" />
+              </Parameters>
+            </Node>
+            <Node Type="MakeVector" Name="SouthSpawn" Enabled="true">
+              <Parameters>
+                <Parameter Name="X" Value="497.1" VariableType="Value" />
+                <Parameter Name="Y" Value="-39.9" VariableType="Value" />
+                <Parameter Name="Z" Value="1932.7" VariableType="Value" />
+                <OutParameter Name="Vector" Value="SouthSpawn" ReferenceType="Vector" />
+              </Parameters>
+            </Node>
+            <Node Type="MakeVector" Name="NorthSpawn" Enabled="true">
+              <Parameters>
+                <Parameter Name="X" Value="11065.5" VariableType="Value" />
+                <Parameter Name="Y" Value="-185.1" VariableType="Value" />
+                <Parameter Name="Z" Value="12306.5" VariableType="Value" />
+                <OutParameter Name="Vector" Value="NorthSpawn" ReferenceType="Vector" />
+              </Parameters>
+            </Node>
+            <Node Type="MaskFailure" Name="SouthShop(Order)" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Sequence" Name="Sequence" Enabled="true">
+                  <Parameters />
+                  <Children>
+                    <Node Type="EqualUnitTeam" Name="HeroTeam==TEAM_ORDER" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="LeftHandSide" Value="HeroTeam" VariableType="Reference" ReferenceType="TeamEnum" />
+                        <Parameter Name="RightHandSide" Value="TEAM_ORDER,0" VariableType="Value" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="Selector" Name="AnimatePropsByMapSkin" Enabled="true">
+                      <Parameters />
+                      <Children>
+                        <Node Type="Sequence" Name="HowlingAbyss" Enabled="true">
+                          <Parameters />
+                          <Children>
+                            <Node Type="EqualBool" Name="IsButchersBridge==False" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LeftHandSide" Value="IsButchersBridge" VariableType="Reference" ReferenceType="Bool" />
+                                <Parameter Name="RightHandSide" Value="False" VariableType="Value" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;ShopSouth" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="ShopSouth" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="closed-&gt;ShopNorth" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="ShopNorth" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="closed" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;Viking" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="Viking" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="HIDING-&gt;Hermit" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="Hermit" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="HIDING" VariableType="Value" />
+                                <Parameter Name="Loop" Value="False" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="HIDING-&gt;Robot" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="Robot" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="HIDING" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                          </Children>
+                        </Node>
+                        <Node Type="Sequence" Name="ButchersBridge" Enabled="true">
+                          <Parameters />
+                          <Children>
+                            <Node Type="EqualBool" Name="IsButchersBridge==True" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LeftHandSide" Value="IsButchersBridge" VariableType="Reference" ReferenceType="Bool" />
+                                <Parameter Name="RightHandSide" Value="True" VariableType="Value" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;ShopSouth" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="ShopSouth" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="closed-&gt;ShopNorth" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="ShopNorth" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="closed" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;Bubbs" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="Bubbs" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="Inside-&gt;Finn" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="Finn" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="Inside" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                          </Children>
+                        </Node>
+                      </Children>
+                    </Node>
+                  </Children>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="NorthShop(Chaos)" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Sequence" Name="Sequence" Enabled="true">
+                  <Parameters />
+                  <Children>
+                    <Node Type="EqualUnitTeam" Name="HeroTeam==TEAM_CHAOS" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="LeftHandSide" Value="HeroTeam" VariableType="Reference" ReferenceType="TeamEnum" />
+                        <Parameter Name="RightHandSide" Value="TEAM_CHAOS,0" VariableType="Value" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="Selector" Name="AnimatePropsByMapSkin" Enabled="true">
+                      <Parameters />
+                      <Children>
+                        <Node Type="Sequence" Name="HowlingAbyss" Enabled="true">
+                          <Parameters />
+                          <Children>
+                            <Node Type="EqualBool" Name="IsButchersBridge==False" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LeftHandSide" Value="IsButchersBridge" VariableType="Reference" ReferenceType="Bool" />
+                                <Parameter Name="RightHandSide" Value="False" VariableType="Value" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="OPENING-&gt;ShopNorth" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="ShopNorth" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="OPENING" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="closed-&gt;ShopSouth" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="ShopSouth" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="closed" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;Hermit" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="Hermit" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="SEQ_ENTERING-&gt;Robot" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="Robot" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="SEQ_ENTERING" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="SEQ_LEAVING-&gt;Viking" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="Viking" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="SEQ_LEAVING" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                          </Children>
+                        </Node>
+                        <Node Type="Sequence" Name="ButchersBridge" Enabled="true">
+                          <Parameters />
+                          <Children>
+                            <Node Type="EqualBool" Name="IsButchersBridge==True" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LeftHandSide" Value="IsButchersBridge" VariableType="Reference" ReferenceType="Bool" />
+                                <Parameter Name="RightHandSide" Value="True" VariableType="Value" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;ShopNorth" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="ShopNorth" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="closed-&gt;ShopSouth" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="ShopSouth" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="closed" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;Finn" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="Finn" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="Inside-&gt;Bubbs" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="Bubbs" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="Inside" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                          </Children>
+                        </Node>
+                      </Children>
+                    </Node>
+                  </Children>
+                </Node>
+              </Children>
+            </Node>
+          </Children>
+        </Node>
+        <Node Type="Sequence" Name="SouthShop" Enabled="true">
+          <Parameters />
+          <Children>
+            <Node Type="EqualBool" Name="HasRevived==True" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="HasRevived" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="RightHandSide" Value="True" VariableType="Value" />
+              </Parameters>
+            </Node>
+            <Node Type="EqualUnitTeam" Name="HeroTeam==TEAM_ORDER" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="HeroTeam" VariableType="Reference" ReferenceType="TeamEnum" />
+                <Parameter Name="RightHandSide" Value="TEAM_ORDER,0" VariableType="Value" />
+              </Parameters>
+            </Node>
+            <Node Type="Selector" Name="OpenOrCloseShop" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Sequence" Name="CloseShop" Enabled="true">
+                  <Parameters />
+                  <Children>
+                    <Node Type="EqualString" Name="ShopSouthStatus==&quot;Open&quot;" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="LeftHandSide" Value="ShopSouthStatus" VariableType="Reference" ReferenceType="String" />
+                        <Parameter Name="RightHandSide" Value="Open" VariableType="Value" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="GetPlayerBuffCount" Name="ARAMShopDisablePlayer" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="BuffName" Value="ARAMShopDisablePlayer" VariableType="Value" />
+                        <OutParameter Name="Output" Value="BuffCount" ReferenceType="Int" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="GreaterEqualInt" Name="BuffCount&gt;1" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="LeftHandSide" Value="BuffCount" VariableType="Reference" ReferenceType="Int" />
+                        <Parameter Name="RightHandSide" Value="1" VariableType="Value" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="SetVarString" Name="ShopSouthStatus = Closed" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="Input" Value="Closed" VariableType="Value" />
+                        <OutParameter Name="Output" Value="ShopSouthStatus" ReferenceType="String" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="SetVarBool" Name="HasRevived = False" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="Input" Value="False" VariableType="Value" />
+                        <OutParameter Name="Output" Value="HasRevived" ReferenceType="Bool" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="Selector" Name="AnimatePropsByMap" Enabled="true">
+                      <Parameters />
+                      <Children>
+                        <Node Type="Sequence" Name="HowlingAbyss" Enabled="true">
+                          <Parameters />
+                          <Children>
+                            <Node Type="EqualBool" Name="IsButchersBridge==False" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LeftHandSide" Value="IsButchersBridge" VariableType="Reference" ReferenceType="Bool" />
+                                <Parameter Name="RightHandSide" Value="False" VariableType="Value" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="closing-&gt;SouthShop" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="ShopSouth" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="closing" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="SEQ_LEAVING-&gt;Viking" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="Viking" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="SEQ_LEAVING" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                          </Children>
+                        </Node>
+                        <Node Type="Sequence" Name="ButchersBridge" Enabled="true">
+                          <Parameters />
+                          <Children>
+                            <Node Type="EqualBool" Name="IsButchersBridge==True" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LeftHandSide" Value="IsButchersBridge" VariableType="Reference" ReferenceType="Bool" />
+                                <Parameter Name="RightHandSide" Value="True" VariableType="Value" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="closing-&gt;SouthShop" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="ShopSouth" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="closing" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="Leaving-&gt;Bubbs" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="Bubbs" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="Leaving" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                          </Children>
+                        </Node>
+                      </Children>
+                    </Node>
+                  </Children>
+                </Node>
+                <Node Type="Sequence" Name="OpenShop" Enabled="true">
+                  <Parameters />
+                  <Children>
+                    <Node Type="EqualString" Name="ShopSouthStatus = Closed" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="LeftHandSide" Value="ShopSouthStatus" VariableType="Reference" ReferenceType="String" />
+                        <Parameter Name="RightHandSide" Value="Closed" VariableType="Value" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="EqualBool" Name="HasOpened = False" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="LeftHandSide" Value="HasOpened" VariableType="Reference" ReferenceType="Bool" />
+                        <Parameter Name="RightHandSide" Value="False" VariableType="Value" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="SetVarString" Name="ShopSouthStatus = Open" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="Input" Value="Open" VariableType="Value" />
+                        <OutParameter Name="Output" Value="ShopSouthStatus" ReferenceType="String" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="SetVarBool" Name="HasOpened = True" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="Input" Value="True" VariableType="Value" />
+                        <OutParameter Name="Output" Value="HasOpened" ReferenceType="Bool" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="Selector" Name="AnimatePropsByMap" Enabled="true">
+                      <Parameters />
+                      <Children>
+                        <Node Type="Sequence" Name="HowlingAbyss" Enabled="true">
+                          <Parameters />
+                          <Children>
+                            <Node Type="EqualBool" Name="IsButchersBridge==False" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LeftHandSide" Value="IsButchersBridge" VariableType="Reference" ReferenceType="Bool" />
+                                <Parameter Name="RightHandSide" Value="False" VariableType="Value" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;ShopSouth" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="ShopSouth" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;Viking" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="Viking" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                          </Children>
+                        </Node>
+                        <Node Type="Sequence" Name="ButchersBridge" Enabled="true">
+                          <Parameters />
+                          <Children>
+                            <Node Type="EqualBool" Name="IsButchersBridge==True" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LeftHandSide" Value="IsButchersBridge" VariableType="Reference" ReferenceType="Bool" />
+                                <Parameter Name="RightHandSide" Value="True" VariableType="Value" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;ShopSouth" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="ShopSouth" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;Bubbs" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="Bubbs" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                          </Children>
+                        </Node>
+                      </Children>
+                    </Node>
+                  </Children>
+                </Node>
+              </Children>
+            </Node>
+          </Children>
+        </Node>
+        <Node Type="Sequence" Name="NorthShop" Enabled="true">
+          <Parameters />
+          <Children>
+            <Node Type="EqualBool" Name="HasRevived==True" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="HasRevived" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="RightHandSide" Value="True" VariableType="Value" />
+              </Parameters>
+            </Node>
+            <Node Type="EqualUnitTeam" Name="HeroTeam==TEAM_CHAOS" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="HeroTeam" VariableType="Reference" ReferenceType="TeamEnum" />
+                <Parameter Name="RightHandSide" Value="TEAM_CHAOS,0" VariableType="Value" />
+              </Parameters>
+            </Node>
+            <Node Type="Selector" Name="OpenOrCloseShop" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Sequence" Name="OpenShop" Enabled="true">
+                  <Parameters />
+                  <Children>
+                    <Node Type="EqualString" Name="ShopNorthStatus = Closed" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="LeftHandSide" Value="ShopNorthStatus" VariableType="Reference" ReferenceType="String" />
+                        <Parameter Name="RightHandSide" Value="Closed" VariableType="Value" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="EqualBool" Name="HasOpened = False" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="LeftHandSide" Value="HasOpened" VariableType="Reference" ReferenceType="Bool" />
+                        <Parameter Name="RightHandSide" Value="False" VariableType="Value" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="SetVarString" Name="ShopNorthStatus = Open" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="Input" Value="Open" VariableType="Value" />
+                        <OutParameter Name="Output" Value="ShopNorthStatus" ReferenceType="String" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="SetVarBool" Name="HasOpened = True" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="Input" Value="True" VariableType="Value" />
+                        <OutParameter Name="Output" Value="HasOpened" ReferenceType="Bool" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="Selector" Name="AnimatePropsByMap" Enabled="true">
+                      <Parameters />
+                      <Children>
+                        <Node Type="Sequence" Name="HowlingAbyss" Enabled="true">
+                          <Parameters />
+                          <Children>
+                            <Node Type="EqualBool" Name="IsButchersBridge==False" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LeftHandSide" Value="IsButchersBridge" VariableType="Reference" ReferenceType="Bool" />
+                                <Parameter Name="RightHandSide" Value="False" VariableType="Value" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="OPENING-&gt;ShopNorth" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="ShopNorth" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="OPENING" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;Hermit" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="Hermit" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="SEQ_ENTERING-&gt;Robot" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="Robot" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="SEQ_ENTERING" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                          </Children>
+                        </Node>
+                        <Node Type="Sequence" Name="ButchersBridge" Enabled="true">
+                          <Parameters />
+                          <Children>
+                            <Node Type="EqualBool" Name="IsButchersBridge==True" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LeftHandSide" Value="IsButchersBridge" VariableType="Reference" ReferenceType="Bool" />
+                                <Parameter Name="RightHandSide" Value="True" VariableType="Value" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;ShopNorth" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="ShopNorth" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="Idle1-&gt;Finn" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="Finn" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                          </Children>
+                        </Node>
+                      </Children>
+                    </Node>
+                  </Children>
+                </Node>
+                <Node Type="Sequence" Name="CloseShop" Enabled="true">
+                  <Parameters />
+                  <Children>
+                    <Node Type="EqualString" Name="ShopNorthStatus = Open" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="LeftHandSide" Value="ShopNorthStatus" VariableType="Reference" ReferenceType="String" />
+                        <Parameter Name="RightHandSide" Value="Open" VariableType="Value" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="GetPlayerBuffCount" Name="ARAMShopDisablePlayer" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="BuffName" Value="ARAMShopDisablePlayer" VariableType="Value" />
+                        <OutParameter Name="Output" Value="BuffCount" ReferenceType="Int" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="GreaterEqualInt" Name="BuffCount &gt; 1" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="LeftHandSide" Value="BuffCount" VariableType="Reference" ReferenceType="Int" />
+                        <Parameter Name="RightHandSide" Value="1" VariableType="Value" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="SetVarString" Name="ShopNorthStatus = Closed" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="Input" Value="Closed" VariableType="Value" />
+                        <OutParameter Name="Output" Value="ShopNorthStatus" ReferenceType="String" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="SetVarBool" Name="HasRevived = False" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="Input" Value="False" VariableType="Value" />
+                        <OutParameter Name="Output" Value="HasRevived" ReferenceType="Bool" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="Selector" Name="AnimatePropsByMap" Enabled="true">
+                      <Parameters />
+                      <Children>
+                        <Node Type="Sequence" Name="HowlingAbyss" Enabled="true">
+                          <Parameters />
+                          <Children>
+                            <Node Type="EqualBool" Name="IsButchersBridge==False" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LeftHandSide" Value="IsButchersBridge" VariableType="Reference" ReferenceType="Bool" />
+                                <Parameter Name="RightHandSide" Value="False" VariableType="Value" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="GenerateRandomInt" Name="AnnoyedChance 1-100" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="MinValue" Value="1" VariableType="Value" />
+                                <Parameter Name="MaxValue" Value="100" VariableType="Value" />
+                                <OutParameter Name="Output" Value="AnnoyedChance" ReferenceType="Int" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="Selector" Name="AnnoyedOrNot" Enabled="true">
+                              <Parameters />
+                              <Children>
+                                <Node Type="Sequence" Name="Annoyed" Enabled="true">
+                                  <Parameters />
+                                  <Children>
+                                    <Node Type="GreaterEqualInt" Name="AnnoyedChance &gt;= 50" Enabled="true">
+                                      <Parameters>
+                                        <Parameter Name="LeftHandSide" Value="AnnoyedChance" VariableType="Reference" ReferenceType="Int" />
+                                        <Parameter Name="RightHandSide" Value="50" VariableType="Value" />
+                                      </Parameters>
+                                    </Node>
+                                    <Node Type="PlayAnimationOnProp" Name="CLOSING_ANNOYED-&gt;ShopNorth" Enabled="true">
+                                      <Parameters>
+                                        <Parameter Name="LevelProp" Value="ShopNorth" VariableType="Reference" ReferenceType="GameObject" />
+                                        <Parameter Name="Animation" Value="CLOSING_ANNOYED" VariableType="Value" />
+                                        <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                        <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                        <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                                      </Parameters>
+                                    </Node>
+                                    <Node Type="PlayAnimationOnProp" Name="SEQ_ANNOYED-&gt;Robot" Enabled="true">
+                                      <Parameters>
+                                        <Parameter Name="LevelProp" Value="Robot" VariableType="Reference" ReferenceType="GameObject" />
+                                        <Parameter Name="Animation" Value="SEQ_ANNOYED" VariableType="Value" />
+                                        <Parameter Name="Loop" Value="False" VariableType="Value" />
+                                        <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                        <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                                      </Parameters>
+                                    </Node>
+                                    <Node Type="PlayAnimationOnProp" Name="SEQ_LEAVING_ANNOYED-&gt;Hermit" Enabled="true">
+                                      <Parameters>
+                                        <Parameter Name="LevelProp" Value="Hermit" VariableType="Reference" ReferenceType="GameObject" />
+                                        <Parameter Name="Animation" Value="SEQ_LEAVING_ANNOYED" VariableType="Value" />
+                                        <Parameter Name="Loop" Value="False" VariableType="Value" />
+                                        <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                        <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                                      </Parameters>
+                                    </Node>
+                                  </Children>
+                                </Node>
+                                <Node Type="Sequence" Name="Not" Enabled="true">
+                                  <Parameters />
+                                  <Children>
+                                    <Node Type="PlayAnimationOnProp" Name="CLOSING-&gt;ShopNorth" Enabled="true">
+                                      <Parameters>
+                                        <Parameter Name="LevelProp" Value="ShopNorth" VariableType="Reference" ReferenceType="GameObject" />
+                                        <Parameter Name="Animation" Value="CLOSING" VariableType="Value" />
+                                        <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                        <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                        <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                                      </Parameters>
+                                    </Node>
+                                    <Node Type="PlayAnimationOnProp" Name="SEQ_LEAVING-&gt;Robot" Enabled="true">
+                                      <Parameters>
+                                        <Parameter Name="LevelProp" Value="Robot" VariableType="Reference" ReferenceType="GameObject" />
+                                        <Parameter Name="Animation" Value="SEQ_LEAVING" VariableType="Value" />
+                                        <Parameter Name="Loop" Value="False" VariableType="Value" />
+                                        <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                        <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                                      </Parameters>
+                                    </Node>
+                                    <Node Type="PlayAnimationOnProp" Name="SEL_LEAVING-&gt;Hermit" Enabled="true">
+                                      <Parameters>
+                                        <Parameter Name="LevelProp" Value="Hermit" VariableType="Reference" ReferenceType="GameObject" />
+                                        <Parameter Name="Animation" Value="SEL_LEAVING" VariableType="Value" />
+                                        <Parameter Name="Loop" Value="False" VariableType="Value" />
+                                        <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                        <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                                      </Parameters>
+                                    </Node>
+                                  </Children>
+                                </Node>
+                              </Children>
+                            </Node>
+                          </Children>
+                        </Node>
+                        <Node Type="Sequence" Name="ButchersBridge" Enabled="true">
+                          <Parameters />
+                          <Children>
+                            <Node Type="EqualBool" Name="IsButchersBridge==True" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LeftHandSide" Value="IsButchersBridge" VariableType="Reference" ReferenceType="Bool" />
+                                <Parameter Name="RightHandSide" Value="True" VariableType="Value" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="Closing-&gt;ShopNorth" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="ShopNorth" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="Closing" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                            <Node Type="PlayAnimationOnProp" Name="Leaving-&gt;Finn" Enabled="true">
+                              <Parameters>
+                                <Parameter Name="LevelProp" Value="Finn" VariableType="Reference" ReferenceType="GameObject" />
+                                <Parameter Name="Animation" Value="Leaving" VariableType="Value" />
+                                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                              </Parameters>
+                            </Node>
+                          </Children>
+                        </Node>
+                      </Children>
+                    </Node>
+                  </Children>
+                </Node>
+              </Children>
+            </Node>
+          </Children>
+        </Node>
+        <Node Type="Sequence" Name="Tutorial Initialization" Enabled="true">
+          <Parameters />
+          <Children>
+            <Node Type="EqualBool" Name="TutorialShopStart = False" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="TutorialShopStart" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="RightHandSide" Value="False" VariableType="Value" />
+              </Parameters>
+            </Node>
+            <Node Type="GetPlayerBuffCount" Name="TutorialPlayerBuff2" Enabled="true">
+              <Parameters>
+                <Parameter Name="BuffName" Value="TutorialPlayerBuff2" VariableType="Value" />
+                <OutParameter Name="Output" Value="IsTutorial" ReferenceType="Int" />
+              </Parameters>
+            </Node>
+            <Node Type="GreaterEqualInt" Name="IsTutorial &gt;= 1" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="IsTutorial" VariableType="Reference" ReferenceType="Int" />
+                <Parameter Name="RightHandSide" Value="1" VariableType="Value" />
+              </Parameters>
+            </Node>
+            <Node Type="PlayAnimationOnProp" Name="HIDING" Enabled="true">
+              <Parameters>
+                <Parameter Name="LevelProp" Value="Hermit" VariableType="Reference" ReferenceType="GameObject" />
+                <Parameter Name="Animation" Value="HIDING" VariableType="Value" />
+                <Parameter Name="Loop" Value="False" VariableType="Value" />
+                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="PlayAnimationOnProp" Name="HIDING" Enabled="true">
+              <Parameters>
+                <Parameter Name="LevelProp" Value="Robot" VariableType="Reference" ReferenceType="GameObject" />
+                <Parameter Name="Animation" Value="HIDING" VariableType="Value" />
+                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="PlayAnimationOnProp" Name="closed" Enabled="true">
+              <Parameters>
+                <Parameter Name="LevelProp" Value="ShopNorth" VariableType="Reference" ReferenceType="GameObject" />
+                <Parameter Name="Animation" Value="closed" VariableType="Value" />
+                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="PlayAnimationOnProp" Name="closed" Enabled="true">
+              <Parameters>
+                <Parameter Name="LevelProp" Value="ShopSouth" VariableType="Reference" ReferenceType="GameObject" />
+                <Parameter Name="Animation" Value="closed" VariableType="Value" />
+                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="PlayAnimationOnProp" Name="SEQ_LEAVING" Enabled="true">
+              <Parameters>
+                <Parameter Name="LevelProp" Value="Viking" VariableType="Reference" ReferenceType="GameObject" />
+                <Parameter Name="Animation" Value="SEQ_LEAVING" VariableType="Value" />
+                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="SetVarBool" Name="TutorialShopStart = True" Enabled="true">
+              <Parameters>
+                <Parameter Name="Input" Value="True" VariableType="Value" />
+                <OutParameter Name="Output" Value="TutorialShopStart" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+          </Children>
+        </Node>
+        <Node Type="Sequence" Name="Tutorial" Enabled="true">
+          <Parameters />
+          <Children>
+            <Node Type="EqualBool" Name="TutorialShopStart = True" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="TutorialShopStart" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="RightHandSide" Value="True" VariableType="Value" />
+              </Parameters>
+            </Node>
+            <Node Type="EqualBool" Name="HasOpened = False" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="HasOpened" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="RightHandSide" Value="False" VariableType="Value" />
+              </Parameters>
+            </Node>
+            <Node Type="GetPlayerBuffCount" Name="TutorialShoppingTime" Enabled="true">
+              <Parameters>
+                <Parameter Name="BuffName" Value="TutorialShoppingTime2" VariableType="Value" />
+                <OutParameter Name="Output" Value="IsShoppingTime" ReferenceType="Int" />
+              </Parameters>
+            </Node>
+            <Node Type="GreaterEqualInt" Name="IsShoppingTime &gt; 1" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="IsShoppingTime" VariableType="Reference" ReferenceType="Int" />
+                <Parameter Name="RightHandSide" Value="1" VariableType="Value" />
+              </Parameters>
+            </Node>
+            <Node Type="PlayAnimationOnProp" Name="Idle1" Enabled="true">
+              <Parameters>
+                <Parameter Name="LevelProp" Value="ShopSouth" VariableType="Reference" ReferenceType="GameObject" />
+                <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="PlayAnimationOnProp" Name="Idle1" Enabled="true">
+              <Parameters>
+                <Parameter Name="LevelProp" Value="Viking" VariableType="Reference" ReferenceType="GameObject" />
+                <Parameter Name="Animation" Value="Idle1" VariableType="Value" />
+                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="SetVarBool" Name="HasOpened = True" Enabled="true">
+              <Parameters>
+                <Parameter Name="Input" Value="True" VariableType="Value" />
+                <OutParameter Name="Output" Value="HasOpened" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+          </Children>
+        </Node>
+      </Children>
+    </Node>
+  </BehaviorTree>
+</BehaviorTrees>

@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BehaviorTrees>
+  <BehaviorTree Name="PROJECTMap.PROJECTMap_PropIdleAnimations" StaticName="">
+    <Node Type="Selector" Name="PROJECTMap_PropIdleAnimations" Enabled="true">
+      <Parameters />
+      <Children>
+        <Node Type="Sequence" Name="Initialization" Enabled="true">
+          <Parameters />
+          <Children>
+            <Node Type="EqualBool" Name="__IsFirstRun==True" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="__IsFirstRun" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="RightHandSide" Value="True" VariableType="Value" />
+              </Parameters>
+            </Node>
+            <Node Type="Sequence" Name="LevelProp_Prj_CuteBot7 (Back right corner on big power pipe)" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="GetPropByName" Name="LevelProp_Prj_CuteBot7" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CuteBot7" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot7" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_Prj_CuteBot7_LastPlayedTime=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot7_LastPlayedTime" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_Prj_CuteBot7_RandomInterval=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot7_RandomInterval" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="Sequence" Name="LevelProp_Prj_CuteBot8 (On pipe between right side spawn and arena)" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="GetPropByName" Name="LevelProp_Prj_CuteBot8" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CuteBot8" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot8" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_Prj_CuteBot8_LastPlayedTime=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot8_LastPlayedTime" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_Prj_CuteBot8_RandomInterval=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot8_RandomInterval" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="Sequence" Name="LevelProp_Prj_CuteBot9 (On pipe between left side spawn and arena)" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="GetPropByName" Name="LevelProp_Prj_CuteBot9" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CuteBot9" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot9" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_Prj_CuteBot9_LastPlayedTime=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot9_LastPlayedTime" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_Prj_CuteBot9_RandomInterval=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot9_RandomInterval" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="Sequence" Name="LevelProp_Prj_CuteBot10+11 (Bottom middle, synced animation)" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="GetPropByName" Name="LevelProp_Prj_CuteBot10" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CuteBot10" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot10" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropByName" Name="LevelProp_Prj_CuteBot11" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CuteBot11" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot11" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_Prj_CuteBot10_11_LastPlayedTime=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot10_11_LastPlayedTime" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_Prj_CuteBot10_11_RandomInterval=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot10_11_RandomInterval" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="Sequence" Name="LevelProp_Prj_CuteBot_Hatch1 (Bot right side)" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="GetPropByName" Name="LevelProp_Prj_CuteBot_Hatch1" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CuteBot_Hatch1" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot_Hatch1" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_Prj_CuteBot_Hatch1_LastPlayedTime=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot_Hatch1_LastPlayedTime" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_Prj_CuteBot_Hatch1_RandomInterval=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot_Hatch1_RandomInterval" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="Sequence" Name="LevelProp_Prj_CuteBot_Hatch2 (Top right side)" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="GetPropByName" Name="LevelProp_Prj_CuteBot_Hatch2" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CuteBot_Hatch2" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot_Hatch2" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_Prj_CuteBot_Hatch2_LastPlayedTime=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot_Hatch2_LastPlayedTime" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_Prj_CuteBot_Hatch2_RandomInterval=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot_Hatch2_RandomInterval" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="Sequence" Name="LevelProp_Prj_CuteBot_Hatch3 (Bot mid left)" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="GetPropByName" Name="LevelProp_Prj_CuteBot_Hatch3" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CuteBot_Hatch3" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot_Hatch3" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_Prj_CuteBot_Hatch3_LastPlayedTime=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot_Hatch3_LastPlayedTime" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_Prj_CuteBot_Hatch3_RandomInterval=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot_Hatch3_RandomInterval" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="Sequence" Name="LevelProp_Prj_CuteBot_Hatch4 (Top left)" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="GetPropByName" Name="LevelProp_Prj_CuteBot_Hatch4" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CuteBot_Hatch4" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot_Hatch4" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_Prj_CuteBot_Hatch4_LastPlayedTime=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot_Hatch4_LastPlayedTime" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_Prj_CuteBot_Hatch4_RandomInterval=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot_Hatch4_RandomInterval" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="Sequence" Name="LevelProp_Prj_CarChase1" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="GetPropByName" Name="LevelProp_Prj_CarChase1" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CarChase1" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CarChase1" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_Prj_CarChase1_LastPlayedTime=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CarChase1_LastPlayedTime" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_Prj_CarChase1_RandomInterval=0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="0" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CarChase1_RandomInterval" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+          </Children>
+        </Node>
+        <Node Type="Sequence" Name="RunAnims" Enabled="true">
+          <Parameters />
+          <Children>
+            <Node Type="GetGameTime" Name="GameTime" Enabled="true">
+              <Parameters>
+                <OutParameter Name="Output" Value="GameTime" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayPeriodicIdleAnimation(LevelProp_Prj_CuteBot7)" Enabled="true" TreeQualifiedName="_Common.PlayPeriodicIdleAnimation">
+              <Parameters>
+                <Parameter Name="LastPlayedTime" Value="LevelProp_Prj_CuteBot7_LastPlayedTime" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="RandomInterval" Value="LevelProp_Prj_CuteBot7_RandomInterval" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="IntervalMin" Value="5" VariableType="Value" />
+                <Parameter Name="IntervalMax" Value="15" VariableType="Value" />
+                <Parameter Name="AnimName" Value="PipeWalk3" VariableType="Value" />
+                <Parameter Name="GameTime" Value="GameTime" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot7" VariableType="Reference" ReferenceType="GameObject" />
+                <OutParameter Name="LastPlayedTime" Value="LevelProp_Prj_CuteBot7_LastPlayedTime" ReferenceType="Float" />
+                <OutParameter Name="RandomInterval" Value="LevelProp_Prj_CuteBot7_RandomInterval" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayPeriodicIdleAnimation(LevelProp_Prj_CuteBot8)" Enabled="true" TreeQualifiedName="_Common.PlayPeriodicIdleAnimation">
+              <Parameters>
+                <Parameter Name="LastPlayedTime" Value="LevelProp_Prj_CuteBot8_LastPlayedTime" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="RandomInterval" Value="LevelProp_Prj_CuteBot8_RandomInterval" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="IntervalMin" Value="5" VariableType="Value" />
+                <Parameter Name="IntervalMax" Value="15" VariableType="Value" />
+                <Parameter Name="AnimName" Value="PipeWalk2" VariableType="Value" />
+                <Parameter Name="GameTime" Value="GameTime" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot8" VariableType="Reference" ReferenceType="GameObject" />
+                <OutParameter Name="LastPlayedTime" Value="LevelProp_Prj_CuteBot8_LastPlayedTime" ReferenceType="Float" />
+                <OutParameter Name="RandomInterval" Value="LevelProp_Prj_CuteBot8_RandomInterval" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayPeriodicIdleAnimation(LevelProp_Prj_CuteBot9)" Enabled="true" TreeQualifiedName="_Common.PlayPeriodicIdleAnimation">
+              <Parameters>
+                <Parameter Name="LastPlayedTime" Value="LevelProp_Prj_CuteBot9_LastPlayedTime" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="RandomInterval" Value="LevelProp_Prj_CuteBot9_RandomInterval" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="IntervalMin" Value="5" VariableType="Value" />
+                <Parameter Name="IntervalMax" Value="15" VariableType="Value" />
+                <Parameter Name="AnimName" Value="PipeWalk1" VariableType="Value" />
+                <Parameter Name="GameTime" Value="GameTime" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot9" VariableType="Reference" ReferenceType="GameObject" />
+                <OutParameter Name="LastPlayedTime" Value="LevelProp_Prj_CuteBot9_LastPlayedTime" ReferenceType="Float" />
+                <OutParameter Name="RandomInterval" Value="LevelProp_Prj_CuteBot9_RandomInterval" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayPeriodicIdleAnimation(LevelProp_Prj_CuteBot_Hatch1)" Enabled="true" TreeQualifiedName="_Common.PlayPeriodicIdleAnimation">
+              <Parameters>
+                <Parameter Name="LastPlayedTime" Value="LevelProp_Prj_CuteBot_Hatch1_LastPlayedTime" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="RandomInterval" Value="LevelProp_Prj_CuteBot_Hatch1_RandomInterval" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="IntervalMin" Value="15" VariableType="Value" />
+                <Parameter Name="IntervalMax" Value="25" VariableType="Value" />
+                <Parameter Name="AnimName" Value="Idle1" VariableType="Value" />
+                <Parameter Name="GameTime" Value="GameTime" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot_Hatch1" VariableType="Reference" ReferenceType="GameObject" />
+                <OutParameter Name="LastPlayedTime" Value="LevelProp_Prj_CuteBot_Hatch1_LastPlayedTime" ReferenceType="Float" />
+                <OutParameter Name="RandomInterval" Value="LevelProp_Prj_CuteBot_Hatch1_RandomInterval" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayPeriodicIdleAnimation(LevelProp_Prj_CuteBot_Hatch2)" Enabled="true" TreeQualifiedName="_Common.PlayPeriodicIdleAnimation">
+              <Parameters>
+                <Parameter Name="LastPlayedTime" Value="LevelProp_Prj_CuteBot_Hatch2_LastPlayedTime" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="RandomInterval" Value="LevelProp_Prj_CuteBot_Hatch2_RandomInterval" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="IntervalMin" Value="15" VariableType="Value" />
+                <Parameter Name="IntervalMax" Value="25" VariableType="Value" />
+                <Parameter Name="AnimName" Value="Idle1" VariableType="Value" />
+                <Parameter Name="GameTime" Value="GameTime" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot_Hatch2" VariableType="Reference" ReferenceType="GameObject" />
+                <OutParameter Name="LastPlayedTime" Value="LevelProp_Prj_CuteBot_Hatch2_LastPlayedTime" ReferenceType="Float" />
+                <OutParameter Name="RandomInterval" Value="LevelProp_Prj_CuteBot_Hatch2_RandomInterval" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayPeriodicIdleAnimation(LevelProp_Prj_CuteBot_Hatch3)" Enabled="true" TreeQualifiedName="_Common.PlayPeriodicIdleAnimation">
+              <Parameters>
+                <Parameter Name="LastPlayedTime" Value="LevelProp_Prj_CuteBot_Hatch3_LastPlayedTime" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="RandomInterval" Value="LevelProp_Prj_CuteBot_Hatch3_RandomInterval" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="IntervalMin" Value="15" VariableType="Value" />
+                <Parameter Name="IntervalMax" Value="25" VariableType="Value" />
+                <Parameter Name="AnimName" Value="Idle1" VariableType="Value" />
+                <Parameter Name="GameTime" Value="GameTime" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot_Hatch3" VariableType="Reference" ReferenceType="GameObject" />
+                <OutParameter Name="LastPlayedTime" Value="LevelProp_Prj_CuteBot_Hatch3_LastPlayedTime" ReferenceType="Float" />
+                <OutParameter Name="RandomInterval" Value="LevelProp_Prj_CuteBot_Hatch3_RandomInterval" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayPeriodicIdleAnimation(LevelProp_Prj_CuteBot_Hatch4)" Enabled="true" TreeQualifiedName="_Common.PlayPeriodicIdleAnimation">
+              <Parameters>
+                <Parameter Name="LastPlayedTime" Value="LevelProp_Prj_CuteBot_Hatch4_LastPlayedTime" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="RandomInterval" Value="LevelProp_Prj_CuteBot_Hatch4_RandomInterval" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="IntervalMin" Value="15" VariableType="Value" />
+                <Parameter Name="IntervalMax" Value="25" VariableType="Value" />
+                <Parameter Name="AnimName" Value="Idle1" VariableType="Value" />
+                <Parameter Name="GameTime" Value="GameTime" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot_Hatch4" VariableType="Reference" ReferenceType="GameObject" />
+                <OutParameter Name="LastPlayedTime" Value="LevelProp_Prj_CuteBot_Hatch4_LastPlayedTime" ReferenceType="Float" />
+                <OutParameter Name="RandomInterval" Value="LevelProp_Prj_CuteBot_Hatch4_RandomInterval" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayPeriodicIdleAnimation(LevelProp_Prj_CarChase1)" Enabled="true" TreeQualifiedName="_Common.PlayPeriodicIdleAnimation">
+              <Parameters>
+                <Parameter Name="LastPlayedTime" Value="LevelProp_Prj_CarChase1_LastPlayedTime" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="RandomInterval" Value="LevelProp_Prj_CarChase1_RandomInterval" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="IntervalMin" Value="10" VariableType="Value" />
+                <Parameter Name="IntervalMax" Value="20" VariableType="Value" />
+                <Parameter Name="AnimName" Value="Idle1" VariableType="Value" />
+                <Parameter Name="GameTime" Value="GameTime" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="LevelProp" Value="LevelProp_Prj_CarChase1" VariableType="Reference" ReferenceType="GameObject" />
+                <OutParameter Name="LastPlayedTime" Value="LevelProp_Prj_CarChase1_LastPlayedTime" ReferenceType="Float" />
+                <OutParameter Name="RandomInterval" Value="LevelProp_Prj_CarChase1_RandomInterval" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="Sequence" Name="SadBuddySyncedAnimation" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="AddFloat" Name="ExpectedAnimTime=LevelProp_Prj_CuteBot10_11_LastPlayedTime+LevelProp_Prj_CuteBot10_11_RandomInterval" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LeftHandSide" Value="LevelProp_Prj_CuteBot10_11_LastPlayedTime" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="RightHandSide" Value="LevelProp_Prj_CuteBot10_11_RandomInterval" VariableType="Reference" ReferenceType="Float" />
+                    <OutParameter Name="Output" Value="ExpectedAnimTime" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="GreaterFloat" Name="GameTime&gt;ExpectedAnimTime" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LeftHandSide" Value="GameTime" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="RightHandSide" Value="ExpectedAnimTime" VariableType="Reference" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Sad_Buddy1-&gt;LevelProp_Prj_CuteBot10(ClearPreviousAnim)" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot10" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Sad_Buddy1" VariableType="Value" />
+                    <Parameter Name="Loop" Value="True" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Sad_Buddy2-&gt;LevelProp_Prj_CuteBot11(ClearPreviousAnim)" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot11" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Sad_Buddy2" VariableType="Value" />
+                    <Parameter Name="Loop" Value="True" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Sad_Buddy1-&gt;LevelProp_Prj_CuteBot10" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot10" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Sad_Buddy1" VariableType="Value" />
+                    <Parameter Name="Loop" Value="False" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Sad_Buddy2-&gt;LevelProp_Prj_CuteBot11" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot11" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Sad_Buddy2" VariableType="Value" />
+                    <Parameter Name="Loop" Value="False" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarFloat" Name="LevelProp_Prj_CuteBot10_11_LastPlayedTime=GameTime" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="GameTime" VariableType="Reference" ReferenceType="Float" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot10_11_LastPlayedTime" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="GenerateRandomFloat" Name="LevelProp_Prj_CuteBot10_11_RandomInterval=rand(30,40)" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="MinValue" Value="30" VariableType="Value" />
+                    <Parameter Name="MaxValue" Value="40" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot10_11_RandomInterval" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+          </Children>
+        </Node>
+      </Children>
+    </Node>
+  </BehaviorTree>
+</BehaviorTrees>

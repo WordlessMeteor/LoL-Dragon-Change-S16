@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BehaviorTrees>
+  <BehaviorTree Name="SummonersRift.SnowdownSRUPropAnims" StaticName="">
+    <Node Type="Selector" Name="SnowdownSRUPropAnims" Enabled="true">
+      <Parameters />
+      <Children>
+        <Node Type="Sequence" Name="Init" Enabled="true">
+          <Parameters />
+          <Children>
+            <Node Type="EqualBool" Name="__IsFirstRun=True" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="__IsFirstRun" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="RightHandSide" Value="True" VariableType="Value" />
+              </Parameters>
+            </Node>
+            <Node Type="SetVarBool" Name="SnowdownSRUAnimsSet=False" Enabled="true">
+              <Parameters>
+                <Parameter Name="Input" Value="False" VariableType="Value" />
+                <OutParameter Name="Output" Value="SnowdownSRUAnimsSet" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+          </Children>
+        </Node>
+        <Node Type="Sequence" Name="SnowdownSRUPropAnims" Enabled="true">
+          <Parameters />
+          <Children>
+            <Node Type="EqualBool" Name="SnowdownSRUAnimsSet==False" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="SnowdownSRUAnimsSet" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="RightHandSide" Value="False" VariableType="Value" />
+              </Parameters>
+            </Node>
+            <Node Type="GetGameTime" Name="GameTime" Enabled="true">
+              <Parameters>
+                <OutParameter Name="Output" Value="GameTime" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="GreaterFloat" Name="GameTime&gt;1" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="GameTime" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="RightHandSide" Value="1" VariableType="Value" />
+              </Parameters>
+            </Node>
+            <Node Type="SetVarBool" Name="SnowdownSRUAnimsSet=True" Enabled="true">
+              <Parameters>
+                <Parameter Name="Input" Value="True" VariableType="Value" />
+                <OutParameter Name="Output" Value="SnowdownSRUAnimsSet" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="MaskFailure" Name="Wake up one large poro" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Selector" Name="Selector" Enabled="true">
+                  <Parameters />
+                  <Children>
+                    <Node Type="Sequence" Name="Sequence" Enabled="true">
+                      <Parameters />
+                      <Children>
+                        <Node Type="GenerateRandomInt" Name="SleepChance 1-100" Enabled="true">
+                          <Parameters>
+                            <Parameter Name="MinValue" Value="1" VariableType="Value" />
+                            <Parameter Name="MaxValue" Value="100" VariableType="Value" />
+                            <OutParameter Name="Output" Value="PoroSleepChance" ReferenceType="Int" />
+                          </Parameters>
+                        </Node>
+                        <Node Type="GreaterInt" Name="PoroSleepChance &gt; 50" Enabled="true">
+                          <Parameters>
+                            <Parameter Name="LeftHandSide" Value="PoroSleepChance" VariableType="Reference" ReferenceType="Int" />
+                            <Parameter Name="RightHandSide" Value="50" VariableType="Value" />
+                          </Parameters>
+                        </Node>
+                        <Node Type="GetPropByName" Name="LevelProp_HA_AP_Poro_Large1" Enabled="true">
+                          <Parameters>
+                            <Parameter Name="PropName" Value="LevelProp_HA_AP_Poro_Large1" VariableType="Value" />
+                            <OutParameter Name="Output" Value="Prop" ReferenceType="GameObject" />
+                          </Parameters>
+                        </Node>
+                        <Node Type="PlayAnimationOnProp" Name="Idle2-&gt;LevelProp_HA_AP_Poro_Large1" Enabled="true">
+                          <Parameters>
+                            <Parameter Name="LevelProp" Value="Prop" VariableType="Reference" ReferenceType="GameObject" />
+                            <Parameter Name="Animation" Value="Idle2" VariableType="Value" />
+                            <Parameter Name="Loop" Value="True" VariableType="Value" />
+                            <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                            <Parameter Name="DestroyPropAfterAnimation" Value="False" VariableType="Value" />
+                          </Parameters>
+                        </Node>
+                      </Children>
+                    </Node>
+                    <Node Type="Sequence" Name="Sequence" Enabled="true">
+                      <Parameters />
+                      <Children>
+                        <Node Type="GetPropByName" Name="LevelProp_HA_AP_Poro_Large2" Enabled="true">
+                          <Parameters>
+                            <Parameter Name="PropName" Value="LevelProp_HA_AP_Poro_Large2" VariableType="Value" />
+                            <OutParameter Name="Output" Value="Prop" ReferenceType="GameObject" />
+                          </Parameters>
+                        </Node>
+                        <Node Type="PlayAnimationOnProp" Name="Idle2-&gt;LevelProp_HA_AP_Poro_Large2" Enabled="true">
+                          <Parameters>
+                            <Parameter Name="LevelProp" Value="Prop" VariableType="Reference" ReferenceType="GameObject" />
+                            <Parameter Name="Animation" Value="Idle2" VariableType="Value" />
+                            <Parameter Name="Loop" Value="True" VariableType="Value" />
+                            <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                            <Parameter Name="DestroyPropAfterAnimation" Value="False" VariableType="Value" />
+                          </Parameters>
+                        </Node>
+                      </Children>
+                    </Node>
+                  </Children>
+                </Node>
+              </Children>
+            </Node>
+          </Children>
+        </Node>
+      </Children>
+    </Node>
+  </BehaviorTree>
+</BehaviorTrees>

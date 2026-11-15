@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BehaviorTrees>
+  <BehaviorTree Name="ARAM.ClientOnRevive" StaticName="">
+    <Parameters>
+      <OutParameter Name="HasRevived" ParameterType="Bool">
+        <Description></Description>
+      </OutParameter>
+      <OutParameter Name="HasOpened" ParameterType="Bool">
+        <Description></Description>
+      </OutParameter>
+    </Parameters>
+    <Node Type="Sequence" Name="Sequence" Enabled="true">
+      <Parameters />
+      <Children>
+        <Node Type="SetVarBool" Name="HasRevived = True" Enabled="true">
+          <Parameters>
+            <Parameter Name="Input" Value="True" VariableType="Value" />
+            <OutParameter Name="Output" Value="HasRevived" ReferenceType="Bool" />
+          </Parameters>
+        </Node>
+        <Node Type="SetVarBool" Name="HasOpened = False" Enabled="true">
+          <Parameters>
+            <Parameter Name="Input" Value="False" VariableType="Value" />
+            <OutParameter Name="Output" Value="HasOpened" ReferenceType="Bool" />
+          </Parameters>
+        </Node>
+      </Children>
+    </Node>
+  </BehaviorTree>
+</BehaviorTrees>

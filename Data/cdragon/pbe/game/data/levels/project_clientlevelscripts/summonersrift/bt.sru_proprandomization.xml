@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BehaviorTrees>
+  <BehaviorTree Name="SummonersRift.SRU_PropRandomization" StaticName="">
+    <Parameters>
+      <Parameter Name="MaxRandom" VariableType="Reference, Value" ParameterType="Int" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="PropName" VariableType="Reference, Value" ParameterType="String" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+    </Parameters>
+    <Node Type="MaskFailure" Name="SRU_PropRandomization" Enabled="true">
+      <Parameters />
+      <Children>
+        <Node Type="Sequence" Name="SRU_PropRandomization" Enabled="true">
+          <Parameters />
+          <Children>
+            <Node Type="GetPropByName" Name="GetPropByName" Enabled="true">
+              <Parameters>
+                <Parameter Name="PropName" Value="PropName" VariableType="Reference" ReferenceType="String" />
+                <OutParameter Name="Output" Value="Prop" ReferenceType="GameObject" />
+              </Parameters>
+            </Node>
+            <Node Type="GenerateRandomInt" Name="RandomInt = [1,MaxRandom]" Enabled="true">
+              <Parameters>
+                <Parameter Name="MinValue" Value="1" VariableType="Value" />
+                <Parameter Name="MaxValue" Value="MaxRandom" VariableType="Reference" ReferenceType="Int" />
+                <OutParameter Name="Output" Value="RandomInt" ReferenceType="Int" />
+              </Parameters>
+            </Node>
+            <Node Type="EqualInt" Name="RandomInt == 1" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="RandomInt" VariableType="Reference" ReferenceType="Int" />
+                <Parameter Name="RightHandSide" Value="1" VariableType="Value" />
+              </Parameters>
+            </Node>
+            <Node Type="PlayAnimationOnProp" Name="destroy-&gt;Prop" Enabled="true">
+              <Parameters>
+                <Parameter Name="LevelProp" Value="Prop" VariableType="Reference" ReferenceType="GameObject" />
+                <Parameter Name="Animation" Value="destroy" VariableType="Value" />
+                <Parameter Name="Loop" Value="False" VariableType="Value" />
+                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="DestroyPropAfterAnimation" Value="True" VariableType="Value" />
+              </Parameters>
+            </Node>
+          </Children>
+        </Node>
+      </Children>
+    </Node>
+  </BehaviorTree>
+</BehaviorTrees>

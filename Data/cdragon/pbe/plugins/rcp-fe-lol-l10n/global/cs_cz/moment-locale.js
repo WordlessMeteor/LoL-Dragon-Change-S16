@@ -2,10 +2,10 @@
     "object" == typeof exports && "undefined" != typeof module && "function" == typeof require ? n(require("../moment")) : "function" == typeof define && define.amd ? define(["../moment"], n) : n(e.moment)
 }(this, (function(e) {
     "use strict";
-    var n = "leden_첬nor_b힂ezen_duben_kv휎ten_훾erven_훾ervenec_srpen_z찼힂챠_힂챠jen_listopad_prosinec".split("_"),
-        r = "led_첬no_b힂e_dub_kv휎_훾vn_훾vc_srp_z찼힂_힂챠j_lis_pro".split("_"),
-        t = [/^led/i, /^첬no/i, /^b힂e/i, /^dub/i, /^kv휎/i, /^(훾vn|훾erven$|훾ervna)/i, /^(훾vc|훾ervenec|훾ervence)/i, /^srp/i, /^z찼힂/i, /^힂챠j/i, /^lis/i, /^pro/i],
-        s = /^(leden|첬nor|b힂ezen|duben|kv휎ten|훾ervenec|훾ervence|훾erven|훾ervna|srpen|z찼힂챠|힂챠jen|listopad|prosinec|led|첬no|b힂e|dub|kv휎|훾vn|훾vc|srp|z찼힂|힂챠j|lis|pro)/i;
+    var n = "leden_únor_březen_duben_květen_červen_červenec_srpen_září_říjen_listopad_prosinec".split("_"),
+        r = "led_úno_bře_dub_kvě_čvn_čvc_srp_zář_říj_lis_pro".split("_"),
+        t = [/^led/i, /^úno/i, /^bře/i, /^dub/i, /^kvě/i, /^(čvn|červen$|června)/i, /^(čvc|červenec|července)/i, /^srp/i, /^zář/i, /^říj/i, /^lis/i, /^pro/i],
+        s = /^(leden|únor|březen|duben|květen|červenec|července|červen|června|srpen|září|říjen|listopad|prosinec|led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro)/i;
 
     function d(e) {
         return e > 1 && e < 5 && 1 != ~~(e / 10)
@@ -15,7 +15,7 @@
         var s = e + " ";
         switch (r) {
             case "s":
-                return n || t ? "p찼r sekund" : "p찼r sekundami";
+                return n || t ? "pár sekund" : "pár sekundami";
             case "ss":
                 return n || t ? s + (d(e) ? "sekundy" : "sekund") : s + "sekundami";
             case "m":
@@ -29,11 +29,11 @@
             case "d":
                 return n || t ? "den" : "dnem";
             case "dd":
-                return n || t ? s + (d(e) ? "dny" : "dn챠") : s + "dny";
+                return n || t ? s + (d(e) ? "dny" : "dní") : s + "dny";
             case "M":
-                return n || t ? "m휎s챠c" : "m휎s챠cem";
+                return n || t ? "měsíc" : "měsícem";
             case "MM":
-                return n || t ? s + (d(e) ? "m휎s챠ce" : "m휎s챠c킁") : s + "m휎s챠ci";
+                return n || t ? s + (d(e) ? "měsíce" : "měsíců") : s + "měsíci";
             case "y":
                 return n || t ? "rok" : "rokem";
             case "yy":
@@ -45,14 +45,14 @@
         monthsShort: r,
         monthsRegex: s,
         monthsShortRegex: s,
-        monthsStrictRegex: /^(leden|ledna|첬nora|첬nor|b힂ezen|b힂ezna|duben|dubna|kv휎ten|kv휎tna|훾ervenec|훾ervence|훾erven|훾ervna|srpen|srpna|z찼힂챠|힂챠jen|힂챠jna|listopadu|listopad|prosinec|prosince)/i,
-        monthsShortStrictRegex: /^(led|첬no|b힂e|dub|kv휎|훾vn|훾vc|srp|z찼힂|힂챠j|lis|pro)/i,
+        monthsStrictRegex: /^(leden|ledna|února|únor|březen|března|duben|dubna|květen|května|červenec|července|červen|června|srpen|srpna|září|říjen|října|listopadu|listopad|prosinec|prosince)/i,
+        monthsShortStrictRegex: /^(led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro)/i,
         monthsParse: t,
         longMonthsParse: t,
         shortMonthsParse: t,
-        weekdays: "ned휎le_pond휎l챠_첬ter첵_st힂eda_훾tvrtek_p찼tek_sobota".split("_"),
-        weekdaysShort: "ne_po_첬t_st_훾t_p찼_so".split("_"),
-        weekdaysMin: "ne_po_첬t_st_훾t_p찼_so".split("_"),
+        weekdays: "neděle_pondělí_úterý_středa_čtvrtek_pátek_sobota".split("_"),
+        weekdaysShort: "ne_po_út_st_čt_pá_so".split("_"),
+        weekdaysMin: "ne_po_út_st_čt_pá_so".split("_"),
         longDateFormat: {
             LT: "H:mm",
             LTS: "H:mm:ss",
@@ -64,37 +64,37 @@
         },
         calendar: {
             sameDay: "[dnes v] LT",
-            nextDay: "[z챠tra v] LT",
+            nextDay: "[zítra v] LT",
             nextWeek: function() {
                 switch (this.day()) {
                     case 0:
-                        return "[v ned휎li v] LT";
+                        return "[v neděli v] LT";
                     case 1:
                     case 2:
                         return "[v] dddd [v] LT";
                     case 3:
-                        return "[ve st힂edu v] LT";
+                        return "[ve středu v] LT";
                     case 4:
-                        return "[ve 훾tvrtek v] LT";
+                        return "[ve čtvrtek v] LT";
                     case 5:
-                        return "[v p찼tek v] LT";
+                        return "[v pátek v] LT";
                     case 6:
                         return "[v sobotu v] LT"
                 }
             },
-            lastDay: "[v훾era v] LT",
+            lastDay: "[včera v] LT",
             lastWeek: function() {
                 switch (this.day()) {
                     case 0:
-                        return "[minulou ned휎li v] LT";
+                        return "[minulou neděli v] LT";
                     case 1:
                     case 2:
-                        return "[minul챕] dddd [v] LT";
+                        return "[minulé] dddd [v] LT";
                     case 3:
-                        return "[minulou st힂edu v] LT";
+                        return "[minulou středu v] LT";
                     case 4:
                     case 5:
-                        return "[minul첵] dddd [v] LT";
+                        return "[minulý] dddd [v] LT";
                     case 6:
                         return "[minulou sobotu v] LT"
                 }
@@ -103,7 +103,7 @@
         },
         relativeTime: {
             future: "za %s",
-            past: "p힂ed %s",
+            past: "před %s",
             s: i,
             ss: i,
             m: i,

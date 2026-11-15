@@ -1,0 +1,130 @@
+{
+    "Characters/TFT_ImmortalJourney_Props/Skins/Skin13/Materials/water_distortion": {
+        "name": "Characters/TFT_ImmortalJourney_Props/Skins/Skin13/Materials/water_distortion",
+        "type": 4,
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/loadouts/tftmapskins/water_distortion2.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Distortion_Intensity",
+                "value": [
+                    0.04500000178813934,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_ScrollRate",
+                "value": [
+                    0.30000001192092896,
+                    0.6000000238418579,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Distortion_Scale",
+                "value": [
+                    1.5,
+                    2.299999952316284,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Inner_Color",
+                "value": [
+                    0.9647058844566345,
+                    0.9921568632125854,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Outer_Color",
+                "value": [
+                    0.6784313917160034,
+                    0.9882352948188782,
+                    0.9647058844566345,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Vignette_Size",
+                "value": [
+                    0.0010000000474974513,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Desaturation_Blend",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "DISTORT",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/PostProcess/Distortion_Simple",
+                        "depthEnable": false,
+                        "cullEnable": false,
+                        "writeMask": 15,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "death",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "DEATH_EFFECT": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            },
+            {
+                "name": "normal_blend",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "BLEND": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            },
+            {
+                "name": "death_blend",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "DEATH_EFFECT": "1",
+                    "BLEND": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "__linked": []
+}

@@ -1,0 +1,211 @@
+{
+    "Characters/Camille/Skins/Skin0/Particles/Camille_Base_Q_2_cas_child": {
+        "complexEmitterDefinitionData": [
+            {
+                "timeBeforeFirstEmission": 0.20000000298023224,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.6000000238418579,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.600000381469727,
+                "lifetime": 0.30000001192092896,
+                "isSingleParticle": 1,
+                "emitterName": "swipe_circuits_mesh",
+                "importance": 3,
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Camille/skins/base/Particles/Camille_Base_Q_2_swipe_bits.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.25,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.2862749993801117,
+                                1.0,
+                                1.0,
+                                0.7450979948043823
+                            ],
+                            [
+                                0.137254998087883,
+                                0.5254899859428406,
+                                1.0,
+                                0.49799299240112305
+                            ],
+                            [
+                                0.4549019932746887,
+                                0.6000000238418579,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -20,
+                "disableBackfaceCull": true,
+                "miscRenderFlags": 1,
+                "uvScrollClamp": 1,
+                "isGroundLayer": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        1.2999999523162842,
+                        1.2999999523162842,
+                        1.2999999523162842
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Camille/skins/base/Particles/Camille_Base_W_Swipe_Circuits.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        -1.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.75,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texAddressModeBase": 2,
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Camille/skins/base/Particles/Camille_Base_W_Swipe_Circuits_mult.tex",
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            -0.75,
+                            0.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "birthUVOffsetMult": {
+                        "constantValue": [
+                            -0.25,
+                            0.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Camille_Base_Q_2_cas_child",
+        "particlePath": "Characters/Camille/Skins/Skin0/Particles/Camille_Base_Q_2_cas_child",
+        "objectPath": "Characters/Camille/Skins/Skin0/Particles/Camille_Base_Q_2_cas_child",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/Camille/Skins/Skin0/Particles/Camille_Base_E_indicator_range": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.75,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 100000.0,
+                "emitterName": "Ring2",
+                "importance": 3,
+                "Filtering": {
+                    "spectatorPolicy": 1,
+                    "__type": "VfxEmitterFiltering"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
+                "blendMode": 4,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.25,
+                            0.75,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                0.2941179871559143,
+                                0.5137249827384949,
+                                0.5137249827384949,
+                                1.0
+                            ],
+                            [
+                                0.34902000427246094,
+                                0.49411800503730774,
+                                0.5098040103912354,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        450.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Camille/skins/base/Particles/Camille_Base_E_Ring.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Camille_Base_E_indicator_range",
+        "particlePath": "Characters/Camille/Skins/Skin0/Particles/Camille_Base_E_indicator_range",
+        "flags": 132,
+        "objectPath": "Characters/Camille/Skins/Skin0/Particles/Camille_Base_E_indicator_range",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "__linked": []
+}

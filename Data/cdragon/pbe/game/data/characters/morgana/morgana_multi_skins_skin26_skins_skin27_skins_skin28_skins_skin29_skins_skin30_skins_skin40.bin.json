@@ -1,0 +1,340 @@
+{
+    "Characters/Morgana/Skins/Skin26/Particles/Morgana_Skin26_Z_HandTrails": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 50.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.5,
+                "rateByVelocityFunction": {
+                    "constantValue": [
+                        0.10000000149011612,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "MaximumRateByVelocity": 50.0,
+                "emitterName": "trail",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 0.20000000298023224,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mTrail": {
+                        "mMode": 1,
+                        "mCutoff": 150.0,
+                        "mBirthTilingSize": {
+                            "constantValue": [
+                                150.0,
+                                0.0,
+                                0.0
+                            ],
+                            "__type": "ValueVector3"
+                        },
+                        "mMaxAddedPerFrame": 60,
+                        "__type": "VfxTrailDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveCameraTrail"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.125490203499794,
+                        0.14901961386203766,
+                        0.23529411852359772,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.25,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.3000076413154602
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "alphaErosionDefinition": {
+                    "erosionDriveCurve": {
+                        "dynamics": {
+                            "times": [
+                                0.25,
+                                1.0
+                            ],
+                            "values": [
+                                0.0,
+                                1.0
+                            ],
+                            "__type": "VfxAnimatedFloatVariableData"
+                        },
+                        "__type": "ValueFloat"
+                    },
+                    "erosionMapName": "ASSETS/Characters/Morgana/Skins/Skin26/Particles/Morgana_Skin26_SmokeB.tex",
+                    "erosionMapChannelMixer": {
+                        "constantValue": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "__type": "ValueColor"
+                    },
+                    "__type": "VfxAlphaErosionDefinitionData"
+                },
+                "isUniformScale": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        15.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.5,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Morgana/Skins/Skin26/Particles/Morgana_Skin26_Noise06.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 40.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.20000000298023224,
+                "emitterName": "Trail1",
+                "birthVelocity": {
+                    "constantValue": [
+                        0.0,
+                        200.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "worldAcceleration": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 0.20000000298023224,
+                    "__type": "ValueFloat"
+                },
+                "emissionMeshScale": 0.0,
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -10.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mTrail": {
+                        "mCutoff": 150.0,
+                        "mBirthTilingSize": {
+                            "constantValue": [
+                                800.0,
+                                0.0,
+                                0.0
+                            ],
+                            "__type": "ValueVector3"
+                        },
+                        "mSmoothingMode": 1,
+                        "mMaxAddedPerFrame": 60,
+                        "__type": "VfxTrailDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveArbitraryTrail"
+                },
+                "blendMode": 1,
+                "Color": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.7490196228027344
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10000000149011612,
+                            0.4000000059604645,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.330006867647171,
+                                0.330006867647171,
+                                0.330006867647171,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.5215686559677124,
+                                0.529411792755127,
+                                0.7490196228027344
+                            ],
+                            [
+                                0.125490203499794,
+                                0.16470588743686676,
+                                0.23529411852359772,
+                                0.7490196228027344
+                            ],
+                            [
+                                0.0470588244497776,
+                                0.07058823853731155,
+                                0.10980392247438431,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -10,
+                "censorModulateValue": [
+                    0.30000001192092896,
+                    2.0,
+                    2.0,
+                    1.0
+                ],
+                "uvScrollClamp": 1,
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        25.0,
+                        20.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.009999999776482582,
+                            0.30000001192092896,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.5,
+                                0.5,
+                                0.5
+                            ],
+                            [
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Morgana/Skins/Skin26/Particles/Morgana_Skin26_W_Smoke.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.5,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texDiv": [
+                    3.0,
+                    1.0
+                ],
+                "emitterUvScrollRate": [
+                    -0.15000000596046448,
+                    0.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Morgana_Skin26_Z_HandTrails",
+        "particlePath": "Characters/Morgana/Skins/Skin26/Particles/Morgana_Skin26_Z_HandTrails",
+        "objectPath": "Characters/Morgana/Skins/Skin26/Particles/Morgana_Skin26_Z_HandTrails",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "__linked": []
+}

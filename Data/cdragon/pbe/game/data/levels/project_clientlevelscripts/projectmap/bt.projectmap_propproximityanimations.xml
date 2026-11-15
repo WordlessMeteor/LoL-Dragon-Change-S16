@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BehaviorTrees>
+  <BehaviorTree Name="PROJECTMap.PROJECTMap_PropProximityAnimations" StaticName="">
+    <Node Type="Selector" Name="PROJECTMap_PropProximityAnimations" Enabled="true">
+      <Parameters />
+      <Children>
+        <Node Type="Sequence" Name="Initialization" Enabled="true">
+          <Parameters />
+          <Children>
+            <Node Type="EqualBool" Name="__IsFirstRun==True" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="__IsFirstRun" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="RightHandSide" Value="True" VariableType="Value" />
+              </Parameters>
+            </Node>
+            <Node Type="Sequence" Name="LevelProp_Prj_CuteBot6 (Left side center triangle)" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="GetPropByName" Name="LevelProp_Prj_CuteBot6" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CuteBot6" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot6" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropPositionByName" Name="LevelProp_Prj_CuteBot6_Pos" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CuteBot6" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot6_Pos" ReferenceType="Vector" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarBool" Name="LevelProp_Prj_CuteBot6_InProximityAnim=False" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="False" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot6_InProximityAnim" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Ground_Idle-&gt;LevelProp_Prj_CuteBot6" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot6" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Ground_Idle" VariableType="Value" />
+                    <Parameter Name="Loop" Value="True" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="Sequence" Name="LevelProp_Prj_CuteBot12 (Top left building)" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="GetPropByName" Name="LevelProp_Prj_CuteBot12" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CuteBot12" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot12" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropPositionByName" Name="LevelProp_Prj_CuteBot12_Pos" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CuteBot12" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot12_Pos" ReferenceType="Vector" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarBool" Name="LevelProp_Prj_CuteBot12_InProximityAnim=False" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="False" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot12_InProximityAnim" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Ground_Idle-&gt;LevelProp_Prj_CuteBot12" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot12" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Ground_Idle" VariableType="Value" />
+                    <Parameter Name="Loop" Value="True" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="Sequence" Name="LevelProp_Prj_CuteBot13 (Middle right building)" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="GetPropByName" Name="LevelProp_Prj_CuteBot13" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CuteBot13" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot13" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropPositionByName" Name="LevelProp_Prj_CuteBot13_Pos" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CuteBot13" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot13_Pos" ReferenceType="Vector" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarBool" Name="LevelProp_Prj_CuteBot13_InProximityAnim=False" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="False" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot13_InProximityAnim" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Ground_Idle-&gt;LevelProp_Prj_CuteBot13" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot13" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Ground_Idle" VariableType="Value" />
+                    <Parameter Name="Loop" Value="True" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="Sequence" Name="LevelProp_Prj_CuteBot14 (Middle island bottom)" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="GetPropByName" Name="LevelProp_Prj_CuteBot14" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CuteBot14" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot14" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropPositionByName" Name="LevelProp_Prj_CuteBot14_Pos" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CuteBot14" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot14_Pos" ReferenceType="Vector" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarBool" Name="LevelProp_Prj_CuteBot14_InProximityAnim=False" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="False" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot14_InProximityAnim" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Ground_Idle-&gt;LevelProp_Prj_CuteBot14" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot14" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Ground_Idle" VariableType="Value" />
+                    <Parameter Name="Loop" Value="True" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="Sequence" Name="LevelProp_Prj_CuteBot_Hatch5 (Vent by left shop)" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="GetPropByName" Name="LevelProp_Prj_CuteBot_Hatch5" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CuteBot_Hatch5" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot_Hatch5" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropPositionByName" Name="LevelProp_Prj_CuteBot_Hatch5_Pos" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CuteBot_Hatch5" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot_Hatch5_Pos" ReferenceType="Vector" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarBool" Name="LevelProp_Prj_CuteBot_Hatch5_InProximityAnim=False" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="False" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot_Hatch5_InProximityAnim" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Hatch_Hover_PreDeploy-&gt;LevelProp_Prj_CuteBot_Hatch5" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot_Hatch5" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Hatch_Hover_PreDeploy" VariableType="Value" />
+                    <Parameter Name="Loop" Value="True" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="Sequence" Name="LevelProp_Prj_CuteBot_Hatch6 (vent by right shop)" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="GetPropByName" Name="LevelProp_Prj_CuteBot_Hatch6" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CuteBot_Hatch6" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot_Hatch6" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropPositionByName" Name="LevelProp_Prj_CuteBot_Hatch6_Pos" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_Prj_CuteBot_Hatch6" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot_Hatch6_Pos" ReferenceType="Vector" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarBool" Name="LevelProp_Prj_CuteBot_Hatch6_InProximityAnim=False" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="False" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_Prj_CuteBot_Hatch6_InProximityAnim" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Hatch_Hover_PreDeploy-&gt;LevelProp_Prj_CuteBot_Hatch6" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot_Hatch6" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Hatch_Hover_PreDeploy" VariableType="Value" />
+                    <Parameter Name="Loop" Value="True" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="Sequence" Name="LevelProp_PRJ_StoreSigns1 (Left shop)" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="GetPropByName" Name="LevelProp_PRJ_StoreSigns1" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_PRJ_StoreSigns1" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_PRJ_StoreSigns1" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropPositionByName" Name="LevelProp_PRJ_StoreSigns1_Pos" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_PRJ_StoreSigns1" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_PRJ_StoreSigns1_Pos" ReferenceType="Vector" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarBool" Name="LevelProp_PRJ_StoreSigns1_InProximityAnim=False" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="False" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_PRJ_StoreSigns1_InProximityAnim" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Closed-&gt;LevelProp_PRJ_StoreSigns1" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_PRJ_StoreSigns1" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Closed" VariableType="Value" />
+                    <Parameter Name="Loop" Value="True" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="Sequence" Name="LevelProp_PRJ_StoreSigns2 (Right shop)" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="GetPropByName" Name="LevelProp_PRJ_StoreSigns2" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_PRJ_StoreSigns2" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_PRJ_StoreSigns2" ReferenceType="GameObject" />
+                  </Parameters>
+                </Node>
+                <Node Type="GetPropPositionByName" Name="LevelProp_PRJ_StoreSigns2_Pos" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_PRJ_StoreSigns2" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_PRJ_StoreSigns2_Pos" ReferenceType="Vector" />
+                  </Parameters>
+                </Node>
+                <Node Type="SetVarBool" Name="LevelProp_PRJ_StoreSigns2_InProximityAnim=False" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Input" Value="False" VariableType="Value" />
+                    <OutParameter Name="Output" Value="LevelProp_PRJ_StoreSigns2_InProximityAnim" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="PlayAnimationOnProp" Name="Closed-&gt;LevelProp_PRJ_StoreSigns2" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LevelProp" Value="LevelProp_PRJ_StoreSigns2" VariableType="Reference" ReferenceType="GameObject" />
+                    <Parameter Name="Animation" Value="Closed" VariableType="Value" />
+                    <Parameter Name="Loop" Value="True" VariableType="Value" />
+                    <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+          </Children>
+        </Node>
+        <Node Type="Sequence" Name="RunAnims" Enabled="true">
+          <Parameters />
+          <Children>
+            <Node Type="Procedure" Name="PlayProximityAnimation(LevelProp_Prj_CuteBot6)" Enabled="true" TreeQualifiedName="_Common.PlayProximityAnimation">
+              <Parameters>
+                <Parameter Name="InProximityAnim" Value="LevelProp_Prj_CuteBot6_InProximityAnim" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="PropPosition" Value="LevelProp_Prj_CuteBot6_Pos" VariableType="Reference" ReferenceType="Vector" />
+                <Parameter Name="ProximityDistanceForAnim" Value="650" VariableType="Value" />
+                <Parameter Name="AnimName_Proximity" Value="Hide_Idle" VariableType="Value" />
+                <Parameter Name="AnimName_Default" Value="Ground_Idle" VariableType="Value" />
+                <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot6" VariableType="Reference" ReferenceType="GameObject" />
+                <OutParameter Name="InProximityAnim" Value="LevelProp_Prj_CuteBot6_InProximityAnim" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayProximityAnimation(LevelProp_Prj_CuteBot12)" Enabled="true" TreeQualifiedName="_Common.PlayProximityAnimation">
+              <Parameters>
+                <Parameter Name="InProximityAnim" Value="LevelProp_Prj_CuteBot12_InProximityAnim" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="PropPosition" Value="LevelProp_Prj_CuteBot12_Pos" VariableType="Reference" ReferenceType="Vector" />
+                <Parameter Name="ProximityDistanceForAnim" Value="650" VariableType="Value" />
+                <Parameter Name="AnimName_Proximity" Value="Hide_Idle" VariableType="Value" />
+                <Parameter Name="AnimName_Default" Value="Ground_Idle" VariableType="Value" />
+                <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot12" VariableType="Reference" ReferenceType="GameObject" />
+                <OutParameter Name="InProximityAnim" Value="LevelProp_Prj_CuteBot12_InProximityAnim" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayProximityAnimation(LevelProp_Prj_CuteBot13)" Enabled="true" TreeQualifiedName="_Common.PlayProximityAnimation">
+              <Parameters>
+                <Parameter Name="InProximityAnim" Value="LevelProp_Prj_CuteBot13_InProximityAnim" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="PropPosition" Value="LevelProp_Prj_CuteBot13_Pos" VariableType="Reference" ReferenceType="Vector" />
+                <Parameter Name="ProximityDistanceForAnim" Value="650" VariableType="Value" />
+                <Parameter Name="AnimName_Proximity" Value="Hide_Idle" VariableType="Value" />
+                <Parameter Name="AnimName_Default" Value="Ground_Idle" VariableType="Value" />
+                <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot13" VariableType="Reference" ReferenceType="GameObject" />
+                <OutParameter Name="InProximityAnim" Value="LevelProp_Prj_CuteBot13_InProximityAnim" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayProximityAnimation(LevelProp_Prj_CuteBot14)" Enabled="true" TreeQualifiedName="_Common.PlayProximityAnimation">
+              <Parameters>
+                <Parameter Name="InProximityAnim" Value="LevelProp_Prj_CuteBot14_InProximityAnim" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="PropPosition" Value="LevelProp_Prj_CuteBot14_Pos" VariableType="Reference" ReferenceType="Vector" />
+                <Parameter Name="ProximityDistanceForAnim" Value="650" VariableType="Value" />
+                <Parameter Name="AnimName_Proximity" Value="Hide_Idle" VariableType="Value" />
+                <Parameter Name="AnimName_Default" Value="Ground_Idle" VariableType="Value" />
+                <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot14" VariableType="Reference" ReferenceType="GameObject" />
+                <OutParameter Name="InProximityAnim" Value="LevelProp_Prj_CuteBot14_InProximityAnim" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayProximityAnimation(LevelProp_Prj_CuteBot_Hatch5)" Enabled="true" TreeQualifiedName="_Common.PlayProximityAnimation">
+              <Parameters>
+                <Parameter Name="InProximityAnim" Value="LevelProp_Prj_CuteBot_Hatch5_InProximityAnim" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="PropPosition" Value="LevelProp_Prj_CuteBot_Hatch5_Pos" VariableType="Reference" ReferenceType="Vector" />
+                <Parameter Name="ProximityDistanceForAnim" Value="1300" VariableType="Value" />
+                <Parameter Name="AnimName_Proximity" Value="Hatch_Hover_Idle_Base" VariableType="Value" />
+                <Parameter Name="AnimName_Default" Value="Hatch_Hover_PreDeploy" VariableType="Value" />
+                <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot_Hatch5" VariableType="Reference" ReferenceType="GameObject" />
+                <OutParameter Name="InProximityAnim" Value="LevelProp_Prj_CuteBot_Hatch5_InProximityAnim" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="PlayProximityAnimation(LevelProp_Prj_CuteBot_Hatch6)" Enabled="true" TreeQualifiedName="_Common.PlayProximityAnimation">
+              <Parameters>
+                <Parameter Name="InProximityAnim" Value="LevelProp_Prj_CuteBot_Hatch6_InProximityAnim" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="PropPosition" Value="LevelProp_Prj_CuteBot_Hatch6_Pos" VariableType="Reference" ReferenceType="Vector" />
+                <Parameter Name="ProximityDistanceForAnim" Value="1300" VariableType="Value" />
+                <Parameter Name="AnimName_Proximity" Value="Hatch_Hover_Idle_Base" VariableType="Value" />
+                <Parameter Name="AnimName_Default" Value="Hatch_Hover_PreDeploy" VariableType="Value" />
+                <Parameter Name="LevelProp" Value="LevelProp_Prj_CuteBot_Hatch6" VariableType="Reference" ReferenceType="GameObject" />
+                <OutParameter Name="InProximityAnim" Value="LevelProp_Prj_CuteBot_Hatch6_InProximityAnim" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="Sequence" Name="DelayShopOpeningAnims" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="GetGameTime" Name="GameTime" Enabled="true">
+                  <Parameters>
+                    <OutParameter Name="Output" Value="GameTime" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="GreaterFloat" Name="GameTime&gt;15" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LeftHandSide" Value="GameTime" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="RightHandSide" Value="15" VariableType="Value" />
+                  </Parameters>
+                </Node>
+                <Node Type="Procedure" Name="PlayProximityAnimation(LevelProp_PRJ_StoreSigns1)" Enabled="true" TreeQualifiedName="_Common.PlayProximityAnimation">
+                  <Parameters>
+                    <Parameter Name="InProximityAnim" Value="LevelProp_PRJ_StoreSigns1_InProximityAnim" VariableType="Reference" ReferenceType="Bool" />
+                    <Parameter Name="PropPosition" Value="LevelProp_PRJ_StoreSigns1_Pos" VariableType="Reference" ReferenceType="Vector" />
+                    <Parameter Name="ProximityDistanceForAnim" Value="1300" VariableType="Value" />
+                    <Parameter Name="AnimName_Proximity" Value="Idle1" VariableType="Value" />
+                    <Parameter Name="AnimName_Default" Value="Closed" VariableType="Value" />
+                    <Parameter Name="LevelProp" Value="LevelProp_PRJ_StoreSigns1" VariableType="Reference" ReferenceType="GameObject" />
+                    <OutParameter Name="InProximityAnim" Value="LevelProp_PRJ_StoreSigns1_InProximityAnim" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+                <Node Type="Procedure" Name="PlayProximityAnimation(LevelProp_PRJ_StoreSigns2)" Enabled="true" TreeQualifiedName="_Common.PlayProximityAnimation">
+                  <Parameters>
+                    <Parameter Name="InProximityAnim" Value="LevelProp_PRJ_StoreSigns2_InProximityAnim" VariableType="Reference" ReferenceType="Bool" />
+                    <Parameter Name="PropPosition" Value="LevelProp_PRJ_StoreSigns2_Pos" VariableType="Reference" ReferenceType="Vector" />
+                    <Parameter Name="ProximityDistanceForAnim" Value="1300" VariableType="Value" />
+                    <Parameter Name="AnimName_Proximity" Value="Idle1" VariableType="Value" />
+                    <Parameter Name="AnimName_Default" Value="Closed" VariableType="Value" />
+                    <Parameter Name="LevelProp" Value="LevelProp_PRJ_StoreSigns2" VariableType="Reference" ReferenceType="GameObject" />
+                    <OutParameter Name="InProximityAnim" Value="LevelProp_PRJ_StoreSigns2_InProximityAnim" ReferenceType="Bool" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+          </Children>
+        </Node>
+      </Children>
+    </Node>
+  </BehaviorTree>
+</BehaviorTrees>

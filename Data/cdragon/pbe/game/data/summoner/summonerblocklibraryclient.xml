@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BlockDefinitions>
+  <Block Name="GetPlayerChampion" Category="Action\Unit" SubCategory="" CanHaveChildren="false" NumberOfChildren="-1">
+    <Description>Returns the champion associated with the client player.</Description>
+    <Label>{Out:Output}=CurrentPlayerChampion</Label>
+    <Parameters>
+      <OutParameter Name="Output" Type="AttackableUnit">
+        <Description>The player champion.</Description>
+      </OutParameter>
+    </Parameters>
+  </Block>
+  <Block Name="GetPlayerBuffCount" Category="Action\Buff" SubCategory="" CanHaveChildren="false" NumberOfChildren="-1">
+    <Description>Returns the number of instances of a given buff, regardless of caster, on the Player. Buffs that do not exist will return 0, but empty buff names will cause the node to return FAILURE. Note, INTERNAL buffs don't get sent down to the client, so this will not find them.</Description>
+    <Label>{Out:Output}=Count({BuffName})</Label>
+    <Parameters>
+      <Parameter Name="BuffName" Type="String" Default="" VariableType="Reference,Value">
+        <Description>Name of the buff to look for.</Description>
+      </Parameter>
+      <OutParameter Name="Output" Type="Int">
+        <Description>Destination reference; contains the number of stacks of the polled buff</Description>
+      </OutParameter>
+    </Parameters>
+  </Block>
+</BlockDefinitions>
+

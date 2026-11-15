@@ -1,0 +1,445 @@
+{
+    "Characters/PetCapybara/Themes/Base/Root/Particles/PetCapybara_Base_Emote_Joke_water": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Wave",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "EmitterPosition": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/PetCapybara/Skins/Skin1/Particles/PetCapybara_Skin1_Emote_Wave.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.4000000059604645,
+                        1.0,
+                        0.9400015473365784,
+                        0.14999619126319885
+                    ],
+                    "__type": "ValueColor"
+                },
+                "alphaRef": 0,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "isRotationEnabled": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        0.25,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/PetCapybara/Skins/Skin1/Particles/PetCapybara_Skin1_Emote_Base_AlphaSlice_1.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        0.30000001192092896,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/PetCapybara/Skins/Skin1/Particles/PetCapybara_Skin1_Emote_Yone_Base_Mask_Edge_Vertical_Flip.tex",
+                    "UvRotationMult": {
+                        "constantValue": 90.0,
+                        "__type": "ValueFloat"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 4.0,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "Ripples_DIST",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        2.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
+                "particleColorTexture": "ASSETS/Characters/PetCapybara/Skins/Skin1/Particles/PetCapybara_Skin1_Emote_Gradient_01.tex",
+                "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10202475637197495,
+                            0.3141714632511139,
+                            0.4198150634765625,
+                            0.5308930277824402,
+                            0.6429178714752197,
+                            0.8664006590843201,
+                            0.9781420826911926
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.006410256493836641
+                            ],
+                            [
+                                0.9983532428741455,
+                                0.9983532428741455,
+                                0.9983532428741455,
+                                0.1680200695991516
+                            ],
+                            [
+                                0.9949289560317993,
+                                0.9949289560317993,
+                                0.9949289560317993,
+                                0.8269230723381042
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.9935897588729858,
+                                0.9935897588729858,
+                                0.9935897588729858,
+                                0.848886251449585
+                            ],
+                            [
+                                0.9935897588729858,
+                                0.9935897588729858,
+                                0.9935897588729858,
+                                0.24517782032489777
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 100,
+                "meshRenderFlags": 0,
+                "distortionDefinition": {
+                    "distortion": 0.004999999888241291,
+                    "normalMapTexture": "ASSETS/Characters/PetCapybara/Skins/Skin1/Particles/PetCapybara_Skin1_Emote_RippleDistortion_01.tex",
+                    "__type": "VfxDistortionDefinitionData"
+                },
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "isRotationEnabled": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -90.0,
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                -90.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        50.0,
+                        1.0,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.800000011920929,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                50.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        1.25,
+                        0.8500000238418579,
+                        0.8500000238418579
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0033112582750618458,
+                            0.1950480043888092,
+                            0.3961094617843628,
+                            0.6309489011764526,
+                            0.7741107940673828,
+                            0.9834437370300293
+                        ],
+                        "values": [
+                            [
+                                0.17412292957305908,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.34135347604751587,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.6458229422569275,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.073276400566101,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.17279052734375,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.23046875,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/PetCapybara/Skins/Skin1/Particles/PetCapybara_Skin1_Emote_common_Aura_Self_02.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Wave1",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "EmitterPosition": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/PetCapybara/Skins/Skin1/Particles/PetCapybara_Skin1_Emote_Wave.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.5336385369300842,
+                        0.7111314535140991,
+                        0.739711582660675,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": -10,
+                "alphaRef": 0,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "isRotationEnabled": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        0.18000000715255737,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/PetCapybara/Skins/Skin1/Particles/PetCapybara_Skin1_Emote_TFT_Boom_BucketYeet_tex02.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        0.05000000074505806,
+                        0.019999999552965164
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "uvScale": {
+                    "constantValue": [
+                        0.3499999940395355,
+                        1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "PetCapybara_Base_Emote_Joke_water",
+        "particlePath": "Characters/PetCapybara/Themes/Base/Root/Particles/PetCapybara_Base_Emote_Joke_water",
+        "overrideScaleCap": -1.0,
+        "scaleDynamicallyWithAttachedBone": true,
+        "objectPath": "Characters/PetCapybara/Themes/Base/Root/Particles/PetCapybara_Base_Emote_Joke_water",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "__linked": []
+}

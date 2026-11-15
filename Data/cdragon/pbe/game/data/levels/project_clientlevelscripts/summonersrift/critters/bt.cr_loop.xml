@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BehaviorTrees>
+  <BehaviorTree Name="SummonersRift.Critters.CR_Loop" StaticName="">
+    <Parameters>
+      <Parameter Name="LevelProp_SRU_AntlerMouse1B" VariableType="Reference" ParameterType="Bool" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="LevelProp_sru_gromp_prop10B" VariableType="Reference" ParameterType="Bool" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="LevelProp_SRU_AntlerMouse6B" VariableType="Reference" ParameterType="Bool" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="LevelProp_SRU_AntlerMouse8B" VariableType="Reference" ParameterType="Bool" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="LevelProp_sru_snail1B" VariableType="Reference" ParameterType="Bool" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="LevelProp_sru_snailB" VariableType="Reference" ParameterType="Bool" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="LevelProp_SRU_AntlerMouseB" VariableType="Reference" ParameterType="Bool" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="LevelProp_sru_snailF" VariableType="Reference" ParameterType="Float" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="LevelProp_SRU_AntlerMouse1F" VariableType="Reference" ParameterType="Float" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="LevelProp_SRU_AntlerMouse6F" VariableType="Reference" ParameterType="Float" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="LevelProp_SRU_AntlerMouse8F" VariableType="Reference" ParameterType="Float" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="LevelProp_SRU_AntlerMouseF" VariableType="Reference" ParameterType="Float" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="LevelProp_sru_snail1F" VariableType="Reference" ParameterType="Float" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="LevelProp_sru_gromp_prop10F" VariableType="Reference" ParameterType="Float" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <OutParameter Name="LevelProp_SRU_AntlerMouse1B" ParameterType="Bool">
+        <Description></Description>
+      </OutParameter>
+      <OutParameter Name="LevelProp_sru_gromp_prop10B" ParameterType="Bool">
+        <Description></Description>
+      </OutParameter>
+      <OutParameter Name="LevelProp_SRU_AntlerMouse6B" ParameterType="Bool">
+        <Description></Description>
+      </OutParameter>
+      <OutParameter Name="LevelProp_SRU_AntlerMouse8B" ParameterType="Bool">
+        <Description></Description>
+      </OutParameter>
+      <OutParameter Name="LevelProp_sru_snail1B" ParameterType="Bool">
+        <Description></Description>
+      </OutParameter>
+      <OutParameter Name="LevelProp_sru_snailB" ParameterType="Bool">
+        <Description></Description>
+      </OutParameter>
+      <OutParameter Name="LevelProp_SRU_AntlerMouseB" ParameterType="Bool">
+        <Description></Description>
+      </OutParameter>
+      <OutParameter Name="LevelProp_sru_snailF" ParameterType="Float">
+        <Description></Description>
+      </OutParameter>
+      <OutParameter Name="LevelProp_SRU_AntlerMouse1F" ParameterType="Float">
+        <Description></Description>
+      </OutParameter>
+      <OutParameter Name="LevelProp_SRU_AntlerMouse6F" ParameterType="Float">
+        <Description></Description>
+      </OutParameter>
+      <OutParameter Name="LevelProp_SRU_AntlerMouse8F" ParameterType="Float">
+        <Description></Description>
+      </OutParameter>
+      <OutParameter Name="LevelProp_SRU_AntlerMouseF" ParameterType="Float">
+        <Description></Description>
+      </OutParameter>
+      <OutParameter Name="LevelProp_sru_snail1F" ParameterType="Float">
+        <Description></Description>
+      </OutParameter>
+      <OutParameter Name="LevelProp_sru_gromp_prop10F" ParameterType="Float">
+        <Description></Description>
+      </OutParameter>
+    </Parameters>
+    <Node Type="Selector" Name="Selector" Enabled="true">
+      <Parameters />
+      <Children>
+        <Node Type="Sequence" Name="Sequence" Enabled="true">
+          <Parameters />
+          <Children>
+            <Node Type="EqualBool" Name="__IsFirstRun == True" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="__IsFirstRun" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="RightHandSide" Value="True" VariableType="Value" />
+              </Parameters>
+            </Node>
+            <Node Type="SetVarFloat" Name="CurrentTime = 1" Enabled="true">
+              <Parameters>
+                <Parameter Name="Input" Value="1" VariableType="Value" />
+                <OutParameter Name="Output" Value="CurrentTime" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="SetVarFloat" Name="LevelProp_sru_snail" Enabled="true">
+              <Parameters>
+                <Parameter Name="Input" Value="CurrentTime" VariableType="Reference" ReferenceType="Float" />
+                <OutParameter Name="Output" Value="LevelProp_sru_snailF" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="SetVarFloat" Name="LevelProp_sru_snail1" Enabled="true">
+              <Parameters>
+                <Parameter Name="Input" Value="CurrentTime" VariableType="Reference" ReferenceType="Float" />
+                <OutParameter Name="Output" Value="LevelProp_sru_snail1F" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="SetVarBool" Name="LevelProp_sru_snail" Enabled="true">
+              <Parameters>
+                <Parameter Name="Input" Value="False" VariableType="Value" />
+                <OutParameter Name="Output" Value="LevelProp_sru_snailB" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="SetVarBool" Name="LevelProp_sru_snail1" Enabled="true">
+              <Parameters>
+                <Parameter Name="Input" Value="False" VariableType="Value" />
+                <OutParameter Name="Output" Value="LevelProp_sru_snail1B" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+          </Children>
+        </Node>
+        <Node Type="Sequence" Name="Sequence" Enabled="true">
+          <Parameters />
+          <Children>
+            <Node Type="SetVarString" Name="LevelProp_sru_snail" Enabled="true">
+              <Parameters>
+                <Parameter Name="Input" Value="LevelProp_sru_snail" VariableType="Value" />
+                <OutParameter Name="Output" Value="LevelProp_sru_snail" ReferenceType="String" />
+              </Parameters>
+            </Node>
+            <Node Type="SetVarString" Name="LevelProp_sru_snail1" Enabled="true">
+              <Parameters>
+                <Parameter Name="Input" Value="LevelProp_sru_snail1" VariableType="Value" />
+                <OutParameter Name="Output" Value="LevelProp_sru_snail1" ReferenceType="String" />
+              </Parameters>
+            </Node>
+            <Node Type="SetVarString" Name="hide" Enabled="true">
+              <Parameters>
+                <Parameter Name="Input" Value="hide" VariableType="Value" />
+                <OutParameter Name="Output" Value="hide" ReferenceType="String" />
+              </Parameters>
+            </Node>
+            <Node Type="GetNexus" Name="OrderNexus" Enabled="true">
+              <Parameters>
+                <Parameter Name="Team" Value="TEAM_ORDER,0" VariableType="Value" />
+                <OutParameter Name="Nexus" Value="OrderNexus" ReferenceType="AttackableUnit" />
+              </Parameters>
+            </Node>
+            <Node Type="Sequence" Name="Run Procedures" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+                  <Parameters />
+                  <Children>
+                    <Node Type="Procedure" Name="LevelProp_sru_snail" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_LoopDetect">
+                      <Parameters>
+                        <Parameter Name="PropName" Value="LevelProp_sru_snail" VariableType="Reference" ReferenceType="String" />
+                        <Parameter Name="PropAnim" Value="hide" VariableType="Reference" ReferenceType="String" />
+                        <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                        <Parameter Name="TriggerTime" Value="LevelProp_sru_snailF" VariableType="Reference" ReferenceType="Float" />
+                        <Parameter Name="Triggered" Value="LevelProp_sru_snailB" VariableType="Reference" ReferenceType="Bool" />
+                        <OutParameter Name="TriggerTime" Value="LevelProp_sru_snailF" ReferenceType="Float" />
+                        <OutParameter Name="Triggered" Value="LevelProp_sru_snailB" ReferenceType="Bool" />
+                      </Parameters>
+                    </Node>
+                  </Children>
+                </Node>
+                <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+                  <Parameters />
+                  <Children>
+                    <Node Type="Procedure" Name="LevelProp_sru_snail1" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_LoopDetect">
+                      <Parameters>
+                        <Parameter Name="PropName" Value="LevelProp_sru_snail1" VariableType="Reference" ReferenceType="String" />
+                        <Parameter Name="PropAnim" Value="hide" VariableType="Reference" ReferenceType="String" />
+                        <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                        <Parameter Name="TriggerTime" Value="LevelProp_sru_snail1F" VariableType="Reference" ReferenceType="Float" />
+                        <Parameter Name="Triggered" Value="LevelProp_sru_snail1B" VariableType="Reference" ReferenceType="Bool" />
+                        <OutParameter Name="TriggerTime" Value="LevelProp_sru_snail1F" ReferenceType="Float" />
+                        <OutParameter Name="Triggered" Value="LevelProp_sru_snail1B" ReferenceType="Bool" />
+                      </Parameters>
+                    </Node>
+                  </Children>
+                </Node>
+              </Children>
+            </Node>
+          </Children>
+        </Node>
+      </Children>
+    </Node>
+  </BehaviorTree>
+</BehaviorTrees>

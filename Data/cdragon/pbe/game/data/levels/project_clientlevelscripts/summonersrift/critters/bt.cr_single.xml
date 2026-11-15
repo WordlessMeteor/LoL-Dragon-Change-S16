@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BehaviorTrees>
+  <BehaviorTree Name="SummonersRift.Critters.CR_Single" StaticName="">
+    <Node Type="Selector" Name="CR_Single" Enabled="true">
+      <Parameters />
+      <Children>
+        <Node Type="Sequence" Name="Initialization" Enabled="true">
+          <Parameters />
+          <Children>
+            <Node Type="EqualBool" Name="__IsFirstRun == True" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="__IsFirstRun" VariableType="Reference" ReferenceType="Bool" />
+                <Parameter Name="RightHandSide" Value="True" VariableType="Value" />
+              </Parameters>
+            </Node>
+            <Node Type="GetNexus" Name="OrderNexus" Enabled="true">
+              <Parameters>
+                <Parameter Name="Team" Value="TEAM_ORDER,0" VariableType="Value" />
+                <OutParameter Name="Nexus" Value="OrderNexus" ReferenceType="AttackableUnit" />
+              </Parameters>
+            </Node>
+            <Node Type="Procedure" Name="SRU_PropInitialization" Enabled="true" TreeQualifiedName="SummonersRift.SRU_PropInitialization">
+              <Parameters />
+            </Node>
+          </Children>
+        </Node>
+        <Node Type="Sequence" Name="Run Procedures" Enabled="true">
+          <Parameters />
+          <Children>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_snail4" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_snail4" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="Run" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_snail5" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_snail5" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="Run" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_snail7" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_snail7" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="BaseRun" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_snail11" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_snail11" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="Run" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_snail12" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_snail12" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="Run" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_snail13" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_snail13" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="Run" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_snail15" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_snail15" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="Run" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_SRU_AntlerMouse2" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_AntlerMouse2" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="RunRgt" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_SRU_AntlerMouse3" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_AntlerMouse3" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="RunLft" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_SRU_AntlerMouse4" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_AntlerMouse4" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="RunFwdRgt" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_SRU_AntlerMouse5" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_AntlerMouse5" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="RunFwd" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_SRU_AntlerMouse9" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_AntlerMouse9" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="baseRunHide" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_SRU_AntlerMouse10" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_AntlerMouse10" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="baseRunHide2" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_SRU_AntlerMouse11" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_AntlerMouse11" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="midLaneHide" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_SRU_AntlerMouse12" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_AntlerMouse12" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="RunFwdRgt" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_SRU_AntlerMouse13" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_AntlerMouse13" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="RunFwdRgt" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_gromp_prop" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_gromp_prop" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="RunFwd" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_gromp_prop6" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_gromp_prop6" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="RunFwd" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_gromp_prop7" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_gromp_prop7" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="RunLft" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_gromp_prop8" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_gromp_prop8" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="RunFwd" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_gromp_prop9" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_gromp_prop9" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="RunFwd" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_gromp_prop11" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_gromp_prop11" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="BaseRun" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_gromp_prop13" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_gromp_prop13" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="LaneRun" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_gromp_prop14" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_gromp_prop14" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="RunFwd" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_gromp_prop15" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_gromp_prop15" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="RunFwd" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_lizard2" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_lizard2" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="RunRgt" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_lizard3" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_lizard3" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="RunHide" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_lizard4" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_lizard4" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="RunLft" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_lizard6" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_lizard6" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="RunFwd" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_lizard9" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_lizard9" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="BaseHide" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_sru_lizard10" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_sru_lizard10" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="BaseRun" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_SRU_Duck1" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_Duck1" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="flyright" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Procedure" Name="LevelProp_SRU_Duckie" Enabled="true" TreeQualifiedName="SummonersRift.Critters.CR_SingleDetect">
+                  <Parameters>
+                    <Parameter Name="PropName" Value="LevelProp_SRU_Duck2" VariableType="Value" />
+                    <Parameter Name="PropAnim" Value="death" VariableType="Value" />
+                    <Parameter Name="OrderNexus" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+          </Children>
+        </Node>
+      </Children>
+    </Node>
+  </BehaviorTree>
+</BehaviorTrees>

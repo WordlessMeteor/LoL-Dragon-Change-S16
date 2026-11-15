@@ -1,0 +1,1129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ParameterDefinitions>
+    <ParameterDefinition SupportedType="Collection" Name="VariantList" SubType="String" />
+    <ParameterDefinition SupportedType="Int" Name="Int" SubType="" ByValueSupported="True" />
+    <ParameterDefinition SupportedType="UnsignedInt" Name="UnsignedInt" SubType="" ByValueSupported="True" />
+    <ParameterDefinition SupportedType="UnsignedInt" Name="DWORD" SubType="" ByValueSupported="True" />
+    <ParameterDefinition SupportedType="UnsignedInt" Name="ToUnsignedInt" SubType="" ByValueSupported="True" />
+    <ParameterDefinition SupportedType="Float" Name="Float" SubType="" ByValueSupported="True" />
+    <ParameterDefinition SupportedType="Float" Name="ToFloat" SubType="" ByValueSupported="True" />
+    <ParameterDefinition SupportedType="Bool" Name="Bool" SubType="" ByValueSupported="True" />
+    <ParameterDefinition SupportedType="Double" Name="Double" SubType="" ByValueSupported="True" />
+    <ParameterDefinition SupportedType="String" Name="Variant" SubType="" ByValueSupported="True" />
+    <ParameterDefinition SupportedType="String" Name="String" SubType="" ByValueSupported="True" />
+    <ParameterDefinition SupportedType="String" Name="ToString" SubType="" ByValueSupported="True" />
+
+    <ParameterDefinition SupportedType="Flags" Name="HeatMapFlagEnum" SubType="">
+        <Options>
+            <Option Value="CONSIDER_TURRETS" />
+            <Option Value="CONSIDER_HEROES" />
+            <Option Value="CONSIDER_MINIONS" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="String" Name="DynamicProcedure" SubType="" />
+    <ParameterDefinition SupportedType="Collection" Name="TemplatedCollection" SubType="Templated" />
+    <ParameterDefinition SupportedType="Templated" Name="Templated" SubType="" />
+    <ParameterDefinition SupportedType="Complex" Name="OutputVar" SubType="">
+        <ComplexParameters>
+            <ComplexParameter Name="Variable" SupportedType="String" SubType="" />
+            <ComplexParameter Name="Table" SupportedType="Enum" SubType="TableEnum" />
+        </ComplexParameters>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="String" Name="Function" SubType="" />
+    <ParameterDefinition SupportedType="Complex" Name="InputVar" SubType="">
+        <ComplexParameters>
+            <ComplexParameter Name="Variable" SupportedType="String" SubType="" />
+            <ComplexParameter Name="Table" SupportedType="Enum" SubType="TableEnum" />
+        </ComplexParameters>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Complex" Name="Vector" SubType="">
+        <ComplexParameters>
+            <ComplexParameter Name="X" SupportedType="Float" SubType="" />
+            <ComplexParameter Name="Y" SupportedType="Float" SubType="" />
+            <ComplexParameter Name="Z" SupportedType="Float" SubType="" />
+        </ComplexParameters>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Complex" Name="Color" SubType="">
+        <ComplexParameters>
+            <ComplexParameter Name="R" SupportedType="Int" SubType="" />
+            <ComplexParameter Name="G" SupportedType="Int" SubType="" />
+            <ComplexParameter Name="B" SupportedType="Int" SubType="" />
+            <ComplexParameter Name="A" SupportedType="Int" SubType="" />
+        </ComplexParameters>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="SpellbookTypeEnum" SubType="">
+        <Options>
+            <Option Value="SPELLBOOK_CHAMPION" />
+            <Option Value="SPELLBOOK_SUMMONER" />
+            <Option Value="SPELLBOOK_UNKNOWN" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="BehaveResult" SubType="">
+        <Options>
+            <Option Value="SUCCESS" />
+            <Option Value="FAILURE" />
+            <Option Value="RUNNING" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="BTInstanceType" SubType="">
+        <Options>
+            <Option Value="DELETE_SELF" />
+            <Option Value="DISABLE_SELF" />
+            <Option Value="ALWAYS_RUN" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="SlotTypeEnum" SubType="">
+        <Options>
+            <Option Value="SpellSlots" />
+            <Option Value="InventorySlots" />
+            <Option Value="ExtraSlots" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="OwnerAttackerTargetEnum" SubType="">
+        <Options>
+            <Option Value="Owner" />
+            <Option Value="Target" />
+            <Option Value="Attacker" />
+            <Option Value="Caster" />
+            <Option Value="Unit" />
+            <Option Value="Other1" />
+            <Option Value="Other2" />
+            <Option Value="Other3" />
+            <Option Value="Nothing" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="GetSlotSpellEnum" SubType="">
+        <Options>
+            <Option Value="GetSlotSpellLevel" />
+            <Option Value="GetSlotSpellName" />
+            <Option Value="GetSlotSpellCooldownTime" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="CompareOpEnum" SubType="">
+        <Options>
+            <Option Value="CO_EQUAL" />
+            <Option Value="CO_NOT_EQUAL" />
+            <Option Value="CO_LESS_THAN" />
+            <Option Value="CO_GREATER_THAN" />
+            <Option Value="CO_LESS_THAN_OR_EQUAL" />
+            <Option Value="CO_GREATER_THAN_OR_EQUAL" />
+            <Option Value="CO_SAME_TEAM" />
+            <Option Value="CO_DIFFERENT_TEAM" />
+            <Option Value="CO_DAMAGE_SOURCETYPE_IS" />
+            <Option Value="CO_DAMAGE_SOURCETYPE_IS_NOT" />
+            <Option Value="CO_IS_GAME_OBJECT" />
+            <Option Value="CO_IS_TYPE_AI" />
+            <Option Value="CO_IS_NOT_AI" />
+            <Option Value="CO_IS_TYPE_HERO" />
+            <Option Value="CO_IS_NOT_HERO" />
+            <Option Value="CO_IS_MELEE" />
+            <Option Value="CO_IS_RANGED" />
+            <Option Value="CO_RANDOM_CHANCE_LESS_THAN" />
+            <Option Value="CO_IS_TYPE_TURRET" />
+            <Option Value="CO_IS_NOT_TURRET" />
+            <Option Value="CO_IS_DEAD" />
+            <Option Value="CO_IS_NOT_DEAD" />
+            <Option Value="CO_IS_TARGET_IN_FRONT_OF_ME" />
+            <Option Value="CO_IS_TARGET_BEHIND_ME" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="BuffType" SubType="">
+        <Options>
+            <Option Value="BUFF_Internal" />
+            <Option Value="BUFF_Aura" />
+            <Option Value="BUFF_CombatEnchancer" />
+            <Option Value="BUFF_CombatDehancer" />
+            <Option Value="BUFF_SpellShield" />
+            <Option Value="BUFF_Stun" />
+            <Option Value="BUFF_Invisibility" />
+            <Option Value="BUFF_Silence" />
+            <Option Value="BUFF_Taunt" />
+            <Option Value="BUFF_Berserk" />
+            <Option Value="BUFF_Polymorph" />
+            <Option Value="BUFF_Slow" />
+            <Option Value="BUFF_Snare" />
+            <Option Value="BUFF_Damage" />
+            <Option Value="BUFF_Heal" />
+            <Option Value="BUFF_Haste" />
+            <Option Value="BUFF_SpellImmunity" />
+            <Option Value="BUFF_PhysicalImmunity" />
+            <Option Value="BUFF_Invulnerability" />
+            <Option Value="BUFF_AttackSpeedSlow" />
+            <Option Value="BUFF_NearSight" />
+            <Option Value="BUFF_Frenzy" />
+            <Option Value="BUFF_Fear" />
+            <Option Value="BUFF_Charm" />
+            <Option Value="BUFF_Poison" />
+            <Option Value="BUFF_Suppression" />
+            <Option Value="BUFF_Blind" />
+            <Option Value="BUFF_Counter" />
+            <Option Value="BUFF_Shred" />
+            <Option Value="BUFF_Flee" />
+            <Option Value="BUFF_Knockup" />
+            <Option Value="BUFF_Knockback" />
+            <Option Value="BUFF_Disarm" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="String" Name="BuffName" SubType="" />
+    <ParameterDefinition SupportedType="Enum" Name="PrimaryAbilityResourceType" SubType="">
+        <Options>
+            <Option Value="PAR_MANA" />
+            <Option Value="PAR_ENERGY" />
+            <Option Value="PAR_NONE" />
+            <Option Value="PAR_SHIELD" />
+            <Option Value="PAR_BATTLEFURY" />
+            <Option Value="PAR_DRAGONFURY" />
+            <Option Value="PAR_RAGE" />
+            <Option Value="PAR_HEAT" />
+            <Option Value="PAR_FEROCITY" />
+            <Option Value="PAR_BLOODWELL" />
+            <Option Value="PAR_WIND" />
+            <Option Value="PAR_OTHER" />
+            <Option Value="PAR_MAX" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="MathOpEnum" SubType="">
+        <Options>
+            <Option Value="MO_MULTIPLY" />
+            <Option Value="MO_ADD" />
+            <Option Value="MO_SUBTRACT" />
+            <Option Value="MO_DIVIDE" />
+            <Option Value="MO_MIN" />
+            <Option Value="MO_MAX" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Collection" Name="FloatList" SubType="Float" />
+    <ParameterDefinition SupportedType="Enum" Name="IncStatEnum" SubType="">
+        <Options>
+            <Option Value="IncBaseAttackDamage" />
+            <Option Value="IncMoveSpeedFloorMod" />
+            <Option Value="IncMoveSpeedCeilMod" />
+            <Option Value="IncFlatArmorMod" />
+            <Option Value="IncFlatArmorPenetrationMod" />
+            <Option Value="IncFlatAttackRangeMod" />
+            <Option Value="IncFlatBubbleRadiusMod" />
+            <Option Value="IncFlatCastRangeMod" />
+            <Option Value="IncFlatCooldownMod" />
+            <Option Value="IncFlatCritChanceMod" />
+            <Option Value="IncFlatCritDamageMod" />
+            <Option Value="IncFlatDodgeMod" />
+            <Option Value="IncFlatHPPoolMod" />
+            <Option Value="IncFlatHPRegenMod" />
+            <Option Value="IncFlatMagicDamageMod" />
+            <Option Value="IncFlatMagicPenetrationMod" />
+            <Option Value="IncFlatMagicReduction" />
+            <Option Value="IncFlatMissChanceMod" />
+            <Option Value="IncFlatMovementSpeedMod" />
+            <Option Value="IncFlatPhysicalDamageMod" />
+            <Option Value="IncFlatPhysicalReduction" />
+            <Option Value="IncFlatSpellBlockMod" />
+            <Option Value="IncPercentArmorMod" />
+            <Option Value="IncPercentArmorPenetrationMod" />
+            <Option Value="IncPercentAttackRangeMod" />
+            <Option Value="IncPercentAttackSpeedMod" />
+            <Option Value="IncPercentBubbleRadiusMod" />
+            <Option Value="IncPercentCastRangeMod" />
+            <Option Value="IncPercentCooldownMod" />
+            <Option Value="IncPercentCritDamageMod" />
+            <Option Value="IncPercentEXPBonus" />
+            <Option Value="IncPercentHPPoolMod" />
+            <Option Value="IncPercentHPRegenMod" />
+            <Option Value="IncPercentHealingAmountMod" />
+            <Option Value="IncPercentLifeStealMod" />
+            <Option Value="IncPercentMagicDamageMod" />
+            <Option Value="IncPercentMagicPenetrationMod" />
+            <Option Value="IncPercentMagicReduction" />
+            <Option Value="IncPercentMovementSpeedMod" />
+            <Option Value="IncPercentMultiplicativeAttackSpeedMod" />
+            <Option Value="IncPercentMultiplicativeMovementSpeedMod" />
+            <Option Value="IncPercentPhysicalDamageMod" />
+            <Option Value="IncPercentPhysicalReduction" />
+            <Option Value="IncPercentSpellBlockMod" />
+            <Option Value="IncPercentSpellVampMod" />
+            <Option Value="IncPercentRespawnTimeMod" />
+            <Option Value="IncPercentGoldLostOnDeathMod" />
+            <Option Value="IncFlatGoldPer10Mod" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="IncPermanentStatEnum" SubType="">
+        <Options>
+            <Option Value="IncPermanentBaseAttackDamage" />
+            <Option Value="IncPermanentFlatArmorMod" />
+            <Option Value="IncPermanentFlatArmorPenetrationMod" />
+            <Option Value="IncPermanentFlatAttackRangeMod" />
+            <Option Value="IncPermanentFlatBubbleRadiusMod" />
+            <Option Value="IncPermanentFlatCastRangeMod" />
+            <Option Value="IncPermanentFlatCooldownMod" />
+            <Option Value="IncPermanentFlatCritChanceMod" />
+            <Option Value="IncPermanentFlatCritDamageMod" />
+            <Option Value="IncPermanentFlatDodgeMod" />
+            <Option Value="IncPermanentFlatHPPoolMod" />
+            <Option Value="IncPermanentFlatHPRegenMod" />
+            <Option Value="IncPermanentFlatMagicDamageMod" />
+            <Option Value="IncPermanentFlatMagicPenetrationMod" />
+            <Option Value="IncPermanentFlatMagicReduction" />
+            <Option Value="IncPermanentFlatMissChanceMod" />
+            <Option Value="IncPermanentFlatMovementSpeedMod" />
+            <Option Value="IncPermanentFlatPhysicalDamageMod" />
+            <Option Value="IncPermanentFlatPhysicalReduction" />
+            <Option Value="IncPermanentFlatSpellBlockMod" />
+            <Option Value="IncPermanentPercentArmorMod" />
+            <Option Value="IncPermanentPercentAttackRangeMod" />
+            <Option Value="IncPermanentPercentAttackSpeedMod" />
+            <Option Value="IncPermanentPercentBubbleRadiusMod" />
+            <Option Value="IncPermanentPercentCastRangeMod" />
+            <Option Value="IncPermanentPercentCooldownMod" />
+            <Option Value="IncPermanentPercentCritDamageMod" />
+            <Option Value="IncPermanentPercentEXPBonus" />
+            <Option Value="IncPermanentPercentHPPoolMod" />
+            <Option Value="IncPermanentPercentHPRegenMod" />
+            <Option Value="IncPermanentPercentHealingAmountMod" />
+            <Option Value="IncPermanentPercentLifeStealMod" />
+            <Option Value="IncPermanentPercentMagicDamageMod" />
+            <Option Value="IncPermanentPercentMagicReduction" />
+            <Option Value="IncPermanentPercentMovementSpeedMod" />
+            <Option Value="IncPermanentPercentPhysicalDamageMod" />
+            <Option Value="IncPermanentPercentPhysicalReduction" />
+            <Option Value="IncPermanentPercentSpellBlockMod" />
+            <Option Value="IncPermanentPercentRespawnTimeMod" />
+            <Option Value="IncPermanentPercentGoldLostOnDeathMod" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="GetStatEnum" SubType="">
+        <Options>
+            <Option Value="GetAttackSpeedMod" />
+            <Option Value="GetBaseAttackDamage" />
+            <Option Value="GetDodge" />
+            <Option Value="GetFlatArmorMod" />
+            <Option Value="GetFlatAttackRangeMod" />
+            <Option Value="GetFlatCastRangeMod" />
+            <Option Value="GetFlatCooldownMod" />
+            <Option Value="GetFlatCritChanceMod" />
+            <Option Value="GetFlatCritDamageMod" />
+            <Option Value="GetFlatHPPoolMod" />
+            <Option Value="GetFlatHPRegenMod" />
+            <Option Value="GetFlatMagicDamageMod" />
+            <Option Value="GetFlatMagicReduction" />
+            <Option Value="GetFlatMovementSpeedMod" />
+            <Option Value="GetFlatPhysicalDamageMod" />
+            <Option Value="GetFlatPhysicalReduction" />
+            <Option Value="GetFlatBubbleRadiusMod" />
+            <Option Value="GetFlatSpellBlockMod" />
+            <Option Value="GetMissChance" />
+            <Option Value="GetMovementSpeed" />
+            <Option Value="GetPercentArmorMod" />
+            <Option Value="GetPercentArmorPenetrationMod" />
+            <Option Value="GetPercentAttackRangeMod" />
+            <Option Value="GetPercentAttackSpeedMod" />
+            <Option Value="GetPercentCastRangeMod" />
+            <Option Value="GetPercentCooldownMod" />
+            <Option Value="GetPercentCritDamageMod" />
+            <Option Value="GetPercentEXPBonus" />
+            <Option Value="GetPercentHPPoolMod" />
+            <Option Value="GetPercentHPRegenMod" />
+            <Option Value="GetPercentHealingAmountMod" />
+            <Option Value="GetPercentLifeStealMod" />
+            <Option Value="GetPercentMagicDamageMod" />
+            <Option Value="GetPercentMagicPenetrationMod" />
+            <Option Value="GetPercentMagicReduction" />
+            <Option Value="GetPercentMovementSpeedMod" />
+            <Option Value="GetPercentPhysicalDamageMod" />
+            <Option Value="GetPercentPhysicalReduction" />
+            <Option Value="GetPercentRespawnTimeMod" />
+            <Option Value="GetPercentSpellBlockMod" />
+            <Option Value="GetPercentSpellVampMod" />
+            <Option Value="GetPercentGoldLostOnDeathMod" />
+            <Option Value="GetPercentBubbleRadiusMod" />
+            <Option Value="GetFlatGoldPer10Mod" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="GetStatusEnum" SubType="">
+        <Options>
+            <Option Value="GetCanAttack" />
+            <Option Value="GetCanCast" />
+            <Option Value="GetCanMove" />
+            <Option Value="GetFeared" />
+            <Option Value="GetGhosted" />
+            <Option Value="GetGhostProof" />
+            <Option Value="GetDisableAmbientGold" />
+            <Option Value="GetInvulnerable" />
+            <Option Value="GetTargetable" />
+            <Option Value="GetMagicImmune" />
+            <Option Value="GetNearSight" />
+            <Option Value="GetNoRender" />
+            <Option Value="GetForceRenderParticles" />
+            <Option Value="GetPhysicalImmune" />
+            <Option Value="GetLifestealImmune" />
+            <Option Value="GetSleep" />
+            <Option Value="GetStealthed" />
+            <Option Value="GetRevealSpecificUnit" />
+            <Option Value="GetTaunted" />
+            <Option Value="GetCharmed" />
+            <Option Value="GetSuppressCallForHelp" />
+            <Option Value="GetIgnoreCallForHelp" />
+            <Option Value="GetCallForHelpSuppresser" />
+            <Option Value="IsMoving" />
+            <Option Value="IsAutoCastOn" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="ChannelingStopCondition" SubType="">
+        <Options>
+            <Option Value="ChannelingStopCondition_NotCancelled" />
+            <Option Value="ChannelingStopCondition_Success" />
+            <Option Value="ChannelingStopCondition_Cancel" />
+            <Option Value="ChannelingStopCondition_NumbOf" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="ChannelingStopSource" SubType="">
+        <Options>
+            <Option Value="ChannelingStopSource_NotCancelled" />
+            <Option Value="ChannelingStopSource_TimeCompleted" />
+            <Option Value="ChannelingStopSource_Animation" />
+            <Option Value="ChannelingStopSource_LostTarget" />
+            <Option Value="ChannelingStopSource_StunnedOrSilencedOrTaunted" />
+            <Option Value="ChannelingStopSource_ChannelingCondition" />
+            <Option Value="ChannelingStopSource_Die" />
+            <Option Value="ChannelingStopSource_HeroReincarnate" />
+            <Option Value="ChannelingStopSource_Move" />
+            <Option Value="ChannelingStopSource_Attack" />
+            <Option Value="ChannelingStopSource_Casting" />
+            <Option Value="ChannelingStopSource_Unknown" />
+            <Option Value="ChannelingStopSource_NumbOf" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="ForceMovementType" SubType="">
+        <Options>
+            <Option Value="FURTHEST_WITHIN_RANGE" />
+            <Option Value="FIRST_COLLISION_HIT" />
+            <Option Value="GET_NEAREST_IN_RANGE" />
+            <Option Value="GET_NEAREST_IN_RANGE_INCLUDE_UNITS" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="ForceMovementOrdersType" SubType="">
+        <Options>
+            <Option Value="CANCEL_ORDER" />
+            <Option Value="POSTPONE_CURRENT_ORDER" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="GetCastInfoEnum" SubType="">
+        <Options>
+            <Option Value="GetCastSpellLevelPlusOne" />
+            <Option Value="GetPARCost" />
+            <Option Value="GetCastSpellTargetsHitPlusOne" />
+            <Option Value="GetCastSpellLuaInfo" />
+            <Option Value="GetSpellName" />
+            <Option Value="GetSpellSlot" />
+            <Option Value="GetIsAttackOverride" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="TableEnum" SubType="">
+        <Options>
+            <Option Value="PassThroughParams" />
+            <Option Value="InstanceVars" />
+            <Option Value="CharVars" />
+            <Option Value="NextBuffVars" />
+            <Option Value="TempTable1" />
+            <Option Value="TempTable2" />
+            <Option Value="TempTable3" />
+            <Option Value="AvatarVars" />
+            <Option Value="SpellVars" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="SetStatusEnum" SubType="">
+        <Options>
+            <Option Value="SetDisableAmbientGold" />
+            <Option Value="SetCanAttack" />
+            <Option Value="SetCanCast" />
+            <Option Value="SetCanMove" />
+            <Option Value="SetFeared" />
+            <Option Value="SetGhosted" />
+            <Option Value="SetGhostProof" />
+            <Option Value="SetInvulnerable" />
+            <Option Value="SetTargetable" />
+            <Option Value="SetMagicImmune" />
+            <Option Value="SetNearSight" />
+            <Option Value="SetPhysicalImmune" />
+            <Option Value="SetLifestealImmune" />
+            <Option Value="SetRooted" />
+            <Option Value="SetSilenced" />
+            <Option Value="SetSleep" />
+            <Option Value="SetStealthed" />
+            <Option Value="SetRevealSpecificUnit" />
+            <Option Value="SetStunned" />
+            <Option Value="SetPacified" />
+            <Option Value="SetNetted" />
+            <Option Value="SetDisarmed" />
+            <Option Value="SetTaunted" />
+            <Option Value="SetCharmed" />
+            <Option Value="SetNoRender" />
+            <Option Value="SetForceRenderParticles" />
+            <Option Value="SetSuppressCallForHelp" />
+            <Option Value="SetIgnoreCallForHelp" />
+            <Option Value="SetCallForHelpSuppresser" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="DamageType" SubType="">
+        <Options>
+            <Option Value="PHYSICAL_DAMAGE" />
+            <Option Value="MAGIC_DAMAGE" />
+            <Option Value="TRUE_DAMAGE" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="FloatTextTypeEnum" SubType="">
+        <Options>
+            <Option Value="FLOATTEXT_Invulnerable" />
+            <Option Value="FLOATTEXT_Special" />
+            <Option Value="FLOATTEXT_Heal" />
+            <Option Value="FLOATTEXT_ManaHeal" />
+            <Option Value="FLOATTEXT_ManaDamage" />
+            <Option Value="FLOATTEXT_Dodge" />
+            <Option Value="FLOATTEXT_PhysicalDamageCritical" />
+            <Option Value="FLOATTEXT_MagicalDamageCritical" />
+            <Option Value="FLOATTEXT_TrueDamageCritical" />
+            <Option Value="FLOATTEXT_Experience" />
+            <Option Value="FLOATTEXT_Gold" />
+            <Option Value="FLOATTEXT_Level" />
+            <Option Value="FLOATTEXT_Disable" />
+            <Option Value="FLOATTEXT_QuestReceived" />
+            <Option Value="FLOATTEXT_QuestComplete" />
+            <Option Value="FLOATTEXT_Score" />
+            <Option Value="FLOATTEXT_PhysicalDamage" />
+            <Option Value="FLOATTEXT_MagicalDamage" />
+            <Option Value="FLOATTEXT_TrueDamage" />
+            <Option Value="FLOATTEXT_PhysicalDamageEnhanced" />
+            <Option Value="FLOATTEXT_MagicalDamageEnhanced" />
+            <Option Value="FLOATTEXT_TrueDamageEnhanced" />
+            <Option Value="FLOATTEXT_EnemyPhysicalDamage" />
+            <Option Value="FLOATTEXT_EnemyMagicalDamage" />
+            <Option Value="FLOATTEXT_EnemyTrueDamage" />
+            <Option Value="FLOATTEXT_EnemyPhysicalDamageCritical" />
+            <Option Value="FLOATTEXT_EnemyMagicalDamageCritical" />
+            <Option Value="FLOATTEXT_EnemyTrueDamageCritical" />
+            <Option Value="FLOATTEXT_EnemyPhysicalDamageEnhanced" />
+            <Option Value="FLOATTEXT_EnemyMagicalDamageEnhanced" />
+            <Option Value="FLOATTEXT_EnemyTrueDamageEnhanced" />
+            <Option Value="FLOATTEXT_Countdown" />
+            <Option Value="FLOATTEXT_OMW" />
+            <Option Value="FLOATTEXT_Absorbed" />
+            <Option Value="FLOATTEXT_Debug" />
+            <Option Value="FLOATTEXT_PracticeToolTotal" />
+            <Option Value="FLOATTEXT_PracticeToolLastHit" />
+            <Option Value="FLOATTEXT_PracticeToolDPS" />
+            <Option Value="FLOATTEXT_ScoreDarkStar" />
+            <Option Value="FLOATTEXT_ScoreProject0" />
+            <Option Value="FLOATTEXT_ScoreProject1" />
+            <Option Value="FLOATTEXT_ShieldBonusDamage" />
+            <Option Value="FLOATTEXT_TFTUnitLabel" />
+            <Option Value="FLOATTEXT_Dialogue1" />
+            <Option Value="FLOATTEXT_Dialogue2" />
+            <Option Value="FLOATTEXT_AugmentReroll" />
+            <Option Value="FLOATTEXT_Bravery" />
+			<Option Value="FLOATTEXT_TFTSilverSerpent" />
+			<Option Value="FLOATTEXT_RoleBoundQuestXP" />
+		</Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="BuffAddType" SubType="">
+        <Options>
+            <Option Value="BUFF_REPLACE_EXISTING" />
+            <Option Value="BUFF_RENEW_EXISTING" />
+            <Option Value="BUFF_STACKS_AND_RENEWS" />
+            <Option Value="BUFF_STACKS_AND_OVERLAPS" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Flags" Name="SpellFlags" SubType="">
+        <Options>
+            <Option Value="AffectImportantBotTargets" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Flags" Name="SpellAffectsType" SubType="">
+        <Options>
+            <Option Value="AlliedChampions" />
+            <Option Value="EnemyChampions" />
+            <Option Value="AlliedBarracksMinions" />
+            <Option Value="EnemyBarracksMinions" />
+            <Option Value="AlliedWards" />
+            <Option Value="EnemyWards" />
+            <Option Value="AlliedTurrets" />
+            <Option Value="EnemyTurrets" />
+            <Option Value="AlliedInhibsAndNexus" />
+            <Option Value="EnemyInhibsAndNexus" />
+            <Option Value="AlliedNonBarracksMinions" />
+            <Option Value="NeutralNonBarracksMinions" />
+            <Option Value="EnemyNonBarracksMinions" />
+            <Option Value="AlwaysSelf" />
+            <Option Value="NeverSelf" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Flags" Name="SpellAffectsStatus" SubType="">
+        <Options>
+            <Option Value="IgnoreClones" />
+            <Option Value="IgnoreZombies" />
+            <Option Value="IgnorePet" />
+            <Option Value="AllowDead" />
+            <Option Value="AllowUntargetableUseable" />
+            <Option Value="AllowUntargetable" />
+            <Option Value="IgnoreClickproof" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="TeamEnum" SubType="">
+        <Options>
+            <Option Value="TEAM_UNKNOWN" />
+            <Option Value="TEAM_ORDER" />
+            <Option Value="TEAM_CHAOS" />
+            <Option Value="TEAM_NEUTRAL" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="DamageWindowLength" SubType="">
+        <Options>
+            <Option Value="SHORT" />
+            <Option Value="LONG" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="SpellParameterFloat" SubType="">
+        <Options>
+            <Option Value="SPELLPARAM_COOLDOWN" />
+            <Option Value="SPELLPARAM_MANACOST" />
+            <Option Value="SPELLPARAM_CASTRANGE" />
+            <Option Value="SPELLPARAM_COEFFICIENT" />
+            <Option Value="SPELLPARAM_COEFFICIENT2" />
+            <Option Value="SPELLPARAM_LOCATIONTARGETTINGWIDTH" />
+            <Option Value="SPELLPARAM_LOCATIONTARGETTINGLENGTH" />
+            <Option Value="SPELLPARAM_CASTRANGEDISPLAYOVERRIDE" />
+            <Option Value="SPELLPARAM_CASTRADIUS" />
+            <Option Value="SPELLPARAM_CASTRADIUSSECONDARY" />
+            <Option Value="SPELLPARAM_CASTCONEDISTANCE" />
+            <Option Value="SPELLPARAM_CASTCONEANGLE" />
+            <Option Value="SPELLPARAM_LINEWIDTH" />
+            <Option Value="SPELLPARAM_LINEDRAGLENGTH" />
+            <Option Value="SPELLPARAM_CASTRANGEGROWTHMAX" />
+            <Option Value="SPELLPARAM_CASTRANGEGROWTHDURATION" />
+            <Option Value="SPELLPARAM_OVERRIDECASTTIME" />
+            <Option Value="SPELLPARAM_CHANNELDURATION" />
+            <Option Value="SPELLPARAM_CASTFRAME" />
+            <Option Value="SPELLPARAM_MISSILESPEED" />
+            <Option Value="SPELLPARAM_CHARGEUPDATEINTERVAL" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="SpellParameterInt" SubType="">
+        <Options>
+            <Option Value="SPELLPARAM_TARGETTINGTYPE" />
+            <Option Value="SPELLPARAM_MAXAMMOCOUNT" />
+            <Option Value="SPELLPARAM_CASTTYPE" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="CharacterRecordParameterFloat" SubType="">
+        <Options>
+            <Option Value="CHARACTER_RECORD_PARAM_ATTACK_DELAY_CASTOFFSETPRECENT" />
+            <Option Value="CHARACTER_RECORD_PARAM_BASE_PHYSICAL_DAMAGE" />
+            <Option Value="CHARACTER_RECORD_PARAM_DAMAGE_PER_LEVEL" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="CharacterRecordParameterInt" SubType="">
+        <Options>
+            <Option Value="CHARACTER_RECORD_PARAM_ABILITY_SLOT_0_CC" />
+            <Option Value="CHARACTER_RECORD_PARAM_ABILITY_SLOT_1_CC" />
+            <Option Value="CHARACTER_RECORD_PARAM_ABILITY_SLOT_2_CC" />
+            <Option Value="CHARACTER_RECORD_PARAM_ABILITY_SLOT_3_CC" />
+            <Option Value="CHARACTER_RECORD_PARAM_SKILL_ORDER" />
+            <Option Value="CHARACTER_RECORD_PARAM_FIRST_ITEM" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="CharacterRecordParameterString" SubType="">
+        <Options>
+            <Option Value="CHARACTER_RECORD_PARAM_FIRST_ITEM" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="TooltipVariableEnum" SubType="">
+        <Options>
+            <Option Value="F1" />
+            <Option Value="F2" />
+            <Option Value="F3" />
+            <Option Value="F4" />
+            <Option Value="F5" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="RoundingStrategy" SubType="">
+        <Options>
+            <Option Value="NEAREST" />
+            <Option Value="FLOOR" />
+            <Option Value="CEIL" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="EventsNamesEnum" SubType="">
+        <Options>
+            <Option Value="EVENT_ON_CHAMPION_KILL" />
+            <Option Value="EVENT_ON_CHAMPION_KILL_BLIND" />
+            <Option Value="EVENT_Numof" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="SpawnTypeEnum" SubType="">
+        <Options>
+            <Option Value="SPAWN_HQ" />
+            <Option Value="SPAWN_LOCATION" />
+            <Option Value="SPAWN_BARRACKS_LANE_R" />
+            <Option Value="SPAWN_BARRACKS_LANE_C" />
+            <Option Value="SPAWN_BARRACKS_LANE_L" />
+            <Option Value="SPAWN_Numof" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="OutputOwnerAttackerTargetEnum" SubType="">
+        <Options>
+            <Option Value="Owner" />
+            <Option Value="Target" />
+            <Option Value="Attacker" />
+            <Option Value="Caster" />
+            <Option Value="Unit" />
+            <Option Value="Other1" />
+            <Option Value="Other2" />
+            <Option Value="Other3" />
+            <Option Value="Nothing" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="UnitScanEnum" SubType="">
+        <Options>
+            <Option Value="UNITSCAN_Enemies" />
+            <Option Value="UNITSCAN_Friends" />
+            <Option Value="UNITSCAN_Buildings" />
+            <Option Value="UNITSCAN_Dead" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="GetPAROrHealthEnum" SubType="">
+        <Options>
+            <Option Value="GetHealth" />
+            <Option Value="GetMaxHealth" />
+            <Option Value="GetPAR" />
+            <Option Value="GetMaxPAR" />
+            <Option Value="GetPARPercent" />
+            <Option Value="GetHealthPercent" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="orders_e" SubType="">
+        <Options>
+            <Option Value="ORDERS_START_OF_LIST" />
+            <Option Value="AI_ORDER_NONE" />
+            <Option Value="AI_HOLD" />
+            <Option Value="AI_MOVETO" />
+            <Option Value="AI_ATTACKTO" />
+            <Option Value="AI_TEMP_CASTSPELL" />
+            <Option Value="AI_PETHARDATTACK" />
+            <Option Value="AI_PETHARDMOVE" />
+            <Option Value="AI_ATTACKMOVE" />
+            <Option Value="AI_TAUNT" />
+            <Option Value="AI_PETHARDRETURN" />
+            <Option Value="AI_STOP" />
+            <Option Value="AI_PETHARDSTOP" />
+            <Option Value="ORDERS_END_OF_LIST" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="ttype_e" SubType="">
+        <Options>
+            <Option Value="TTYPE_Invalid" />
+            <Option Value="TTYPE_Self" />
+            <Option Value="TTYPE_Target" />
+            <Option Value="TTYPE_Area" />
+            <Option Value="TTYPE_Cone" />
+            <Option Value="TTYPE_SelfAOE" />
+            <Option Value="TTYPE_TargetOrLocation" />
+            <Option Value="TTYPE_Location" />
+            <Option Value="TTYPE_FORCEDWORD" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="UnitEnum" SubType="">
+        <Options>
+            <Option Value="None" />
+            <Option Value="Creep" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="String" Name="FuzzyFunctor" SubType="" />
+    <ParameterDefinition SupportedType="Enum" Name="CreatureType" SubType="">
+        <Options>
+            <Option Value="HEALER_CREATURE" />
+            <Option Value="BRAWLER_CREATURE" />
+            <Option Value="UNKNOWN_CREATURE" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="LogicResultType" SubType="">
+        <Options>
+            <Option Value="COMPLETE" />
+            <Option Value="FAILURE" />
+            <Option Value="INVALID" />
+            <Option Value="RUNNING" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="String" Name="AISquad" SubType="" />
+    <ParameterDefinition SupportedType="String" Name="AISquadCollection" SubType="" />
+    <ParameterDefinition SupportedType="String" Name="AITask" SubType="" />
+    <ParameterDefinition SupportedType="String" Name="AITaskCollection" SubType="" />
+    <ParameterDefinition SupportedType="Enum" Name="AITaskTopicType" SubType="">
+        <Options>
+            <Option Value="PUSHLANE" />
+            <Option Value="GOTO" />
+            <Option Value="DEFEND" />
+            <Option Value="SUPPORT" />
+            <Option Value="KILL" />
+            <Option Value="WAIT" />
+            <Option Value="DOMINION_GOTO" />
+            <Option Value="NINJA_CAPTURE_POINT" />
+            <Option Value="DEFEND_CAPTURE_POINT" />
+            <Option Value="PUSH_TO_CAPTURE_POINT" />
+            <Option Value="ASSAULT_CAPTURE_POINT" />
+            <Option Value="GANKAT_CAPTURE_POINT" />
+            <Option Value="CAPTURE_POINT" />
+            <Option Value="DOMINION_WAIT" />
+            <Option Value="DOMINION_RETURN_TO_BASE" />
+            <Option Value="ASSIST" />
+            <Option Value="ALTAR" />
+            <Option Value="CHAT_GREETING" />
+            <Option Value="CHAT_ENDING" />
+            <Option Value="CHAT_VICTORY" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="String" Name="AIMission" SubType="" />
+    <ParameterDefinition SupportedType="String" Name="AIMissionCollection" SubType="" />
+    <ParameterDefinition SupportedType="Enum" Name="AIMissionTopicType" SubType="">
+        <Options>
+            <Option Value="BARON" />
+            <Option Value="BOSS" />
+            <Option Value="DEFEND" />
+            <Option Value="SUPPORT" />
+            <Option Value="KILL" />
+            <Option Value="PUSH" />
+            <Option Value="ALTAR" />
+            <Option Value="CHAT" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="UnitType" SubType="">
+        <Options>
+            <Option Value="MINION_UNIT" />
+            <Option Value="HERO_UNIT" />
+            <Option Value="TURRET_UNIT" />
+            <Option Value="INHIBITOR_UNIT" />
+            <Option Value="HQ_UNIT" />
+            <Option Value="CAPTURE_POINT_UNIT" />
+            <Option Value="UNKNOWN_UNIT" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="UnitTeam" SubType="">
+        <Options>
+            <Option Value="ALLY_TEAM" />
+            <Option Value="ENEMY_TEAM" />
+            <Option Value="NEUTRAL_TEAM" />
+            <Option Value="UNKNOWN_TEAM" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="SpellbookType" SubType="">
+        <Options>
+            <Option Value="AVATAR_BOOK" />
+            <Option Value="SUMMONER_BOOK" />
+            <Option Value="UNKNOWN_BOOK" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="QuestType" SubType="">
+        <Options>
+            <Option Value="PRIMARY_QUEST" />
+            <Option Value="SECONDARY_QUEST" />
+            <Option Value="OBJECTIVE" />
+            <Option Value="CHARACTER_QUEST_CORKI" />
+            <Option Value="NEW_CONTENT_NOTIFICATION" />
+            <Option Value="SCORE_QUEST_DISPLAY" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="AIDifficultyType" SubType="">
+        <Options>
+            <Option Value="DIFFICULTY_TUTORIAL" />
+            <Option Value="DIFFICULTY_NEWBIE" />
+            <Option Value="DIFFICULTY_INTERMEDIATE" />
+            <Option Value="DIFFICULTY_ADVANCED" />
+            <Option Value="DIFFICULTY_UBER" />
+            <Option Value="DIFFICULTY_INTRO" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="GameDifficultyType" SubType="">
+        <Options>
+            <Option Value="GAME_DIFFICULTY_TUTORIAL" />
+            <Option Value="GAME_DIFFICULTY_NEWBIE" />
+            <Option Value="GAME_DIFFICULTY_INTERMEDIATE" />
+            <Option Value="GAME_DIFFICULTY_ADVANCED" />
+            <Option Value="GAME_DIFFICULTY_UBER" />
+            <Option Value="GAME_DIFFICULTY_INTRO" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="UIElement" SubType="">
+        <Options>
+            <Option Value="UI_MINIMAP" />
+            <Option Value="UI_QUESTS" />
+            <Option Value="UI_TIPS" />
+            <Option Value="UI_CHARACTER_INFO" />
+            <Option Value="UI_BUFFS" />
+            <Option Value="UI_ABILITY_4" />
+            <Option Value="UI_RECALL" />
+            <Option Value="UI_SHOP" />
+            <Option Value="UI_SKILLPOINT1" />
+            <Option Value="UI_GOLD" />
+            <Option Value="UI_ASSISTS" />
+            <Option Value="UI_PASSIVE" />
+            <Option Value="UI_SKILLPOINT2" />
+            <Option Value="UI_SKILLPOINT3" />
+            <Option Value="UI_SKILLPOINT4" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="StatEvent" SubType="">
+        <Options>
+            <Option Value="NODE_CAPTURE" />
+            <Option Value="NODE_NEUTRALIZE" />
+            <Option Value="NODE_KILL_OFFENSE" />
+            <Option Value="TEAM_OBJECTIVE" />
+            <Option Value="DEFEND_POINT_NEUTRALIZE" />
+            <Option Value="NODE_KILL_DEFENSE" />
+            <Option Value="NODE_TIME_DEFENSE" />
+            <Option Value="LAST_STAND" />
+            <Option Value="NODE_CAPTURE_ASSIST" />
+            <Option Value="NODE_NEUTRALIZE_ASSIST" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="InputLockType" SubType="">
+        <Options>
+            <Option Value="CAMERLOCKING" />
+            <Option Value="MOVEMENT" />
+            <Option Value="ABILTIES" />
+            <Option Value="SUMMONERSPELLS" />
+            <Option Value="SHOP" />
+            <Option Value="CHAT" />
+            <Option Value="MINIMAPMOVEMENT" />
+            <Option Value="CAMERAMOVEMENT" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition Name="PackageType" SupportedType="Enum" SubType="">
+        <Options>
+            <Option Value="PACKAGE_SHARED" />
+            <Option Value="PACKAGE_CHARACTER" />
+            <Option Value="PACKAGE_ITEM" />
+            <Option Value="PACKAGE_MASTERY" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition Name="GameObject" SupportedType="String" SubType="" />
+    <ParameterDefinition Name="AttackableUnit" SupportedType="String" SubType="" />
+    <ParameterDefinition Name="AttackableUnitCollection" SupportedType="String" SubType="" />
+    <ParameterDefinition Name="Obj_AI_BaseCollection" SupportedType="String" SubType="" />
+    <ParameterDefinition Name="Obj_AI_Hero" SupportedType="String" SubType="" />
+    <ParameterDefinition Name="Obj_AI_HeroCollection" SupportedType="String" SubType="" />
+    <ParameterDefinition Name="Obj_AI_TurretCollection" SupportedType="String" SubType="" />
+    <ParameterDefinition Name="Obj_AI_PetCollection" SupportedType="String" SubType="" />
+    <ParameterDefinition Name="Building" SupportedType="String" SubType="" />
+    <ParameterDefinition Name="CollectionItem" SupportedType="String" SubType="" />
+    <ParameterDefinition Name="GenericCollection" SupportedType="String" SubType="" />
+    <ParameterDefinition Name="FloatCollection" SupportedType="String" SubType="" />
+    <ParameterDefinition Name="IntCollection" SupportedType="String" SubType="" />
+    <ParameterDefinition SupportedType="Enum" Name="FloatBlackboardKey" SubType="">
+        <Options>
+            <Option Value="FLOAT_SCRATCH_1" />
+            <Option Value="FLOAT_SCRATCH_2" />
+            <Option Value="FLOAT_SCRATCH_3" />
+            <Option Value="FLOAT_SCRATCH_4" />
+            <Option Value="HARASS_LAST_SAFE_TIME" />
+            <Option Value="HARASS_TIMER" />
+            <Option Value="MAX_HARASS_TIME" />
+            <Option Value="DAMAGE_SLOT0" />
+            <Option Value="DAMAGE_SLOT1" />
+            <Option Value="DAMAGE_SLOT2" />
+            <Option Value="DAMAGE_SLOT3" />
+            <Option Value="PREV_KILLSCORE_CHANGE_TIME" />
+            <Option Value="INTRO_BOT_AGGRO_START_TIME" />
+            <Option Value="INTRO_BOT_AGGRO_LAST_ERTB_TIME" />
+            <Option Value="INTRO_BOT_AGGRO_ERTB_RANGE" />
+            <Option Value="INTRO_BOT_AGGRO_END_TIME" />
+            <Option Value="INTRO_BOT_AGGRO_RANGE" />
+            <Option Value="INTRO_BOT_AGGRO_BEHAVIOR_RNG" />
+            <Option Value="INTRO_BOT_ATTACK_DEAGGRO_END_TIME" />
+            <Option Value="INTRO_BOT_ATTACK_DEAGGRO_RANGE" />
+            <Option Value="INTRO_BOT_LAST_TIP_TIME" />
+            <Option Value="INTRO_BOT_TIP_RNG" />
+            <Option Value="INTRO_BOT_LAST_QUEST_TIME" />
+            <Option Value="INTRO_BOT_RED_ZONE_TIP_TIME" />
+            <Option Value="INTRO_BOT_MINION_TIP_TIME" />
+            <Option Value="KILLSCORE_CONFIDENCE" />
+            <Option Value="KILLSCORE_TOWERSCORE" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="IntBlackboardKey" SubType="">
+        <Options>
+            <Option Value="SUMMONER_BARRIER_SLOT" />
+            <Option Value="SUMMONER_CLAIRVOYANCE_SLOT" />
+            <Option Value="SUMMONER_CLARITY_SLOT" />
+            <Option Value="SUMMONER_CLEANSE_SLOT" />
+            <Option Value="SUMMONER_EXHAUST_SLOT" />
+            <Option Value="SUMMONER_FLASH_SLOT" />
+            <Option Value="SUMMONER_GARRISON_SLOT" />
+            <Option Value="SUMMONER_GHOST_SLOT" />
+            <Option Value="SUMMONER_HEAL_SLOT" />
+            <Option Value="SUMMONER_IGNITE_SLOT" />
+            <Option Value="SUMMONER_REVIVE_SLOT" />
+            <Option Value="SUMMONER_SMITE_SLOT" />
+            <Option Value="SUMMONER_TELEPORT_SLOT" />
+            <Option Value="TICKS_IN_HTM" />
+            <Option Value="TICKS_IN_FARM" />
+            <Option Value="TICKS_IN_HARRASS" />
+            <Option Value="TICKS_IN_KILLCHAMP" />
+            <Option Value="PREVIOUS_THREAT_STATE" />
+            <Option Value="LANE_ID" />
+            <Option Value="KILLCHAMPSCORE" />
+            <Option Value="BEGINNERBOTSTICKSTOSTALL" />
+            <Option Value="COMBOFLAG" />
+            <Option Value="CHASE_IN_TOWER_BEHAVIOR" />
+            <Option Value="LAST_KNOWN_POS_INVESTIGATED" />
+            <Option Value="IS_LANE_SWAPPING" />
+            <Option Value="TIMEOUT_ID" />
+            <Option Value="ABILITY_USAGE_TRIGGER" />
+            <Option Value="LEARNING_QUEST_PROGRESSION" />
+            <Option Value="QUEST_COUNTER_HEALTH_POT" />
+            <Option Value="QUEST_COUNTER_LEVEL_ABILITY" />
+            <Option Value="QUEST_COUNTER_USE_ABILITY" />
+            <Option Value="PREV_LANEID" />
+            <Option Value="JUST_WARDED" />
+            <Option Value="INTRO_BOT_AGGRO_STATE" />
+            <Option Value="INTRO_BOT_AGGRO_DEBUG_CIRCLE_ID" />
+            <Option Value="INTRO_BOT_TIP_READING_ABILITY" />
+            <Option Value="INTRO_BOT_TIP_DEPTH_RED_ZONE" />
+            <Option Value="INTRO_BOT_TIP_DEPTH_MINIONS" />
+            <Option Value="INTRO_BOT_TIP_ID_RED_ZONE" />
+            <Option Value="INTRO_BOT_TIP_ID_MINIONS" />
+            <Option Value="INTRO_BOT_QUEST_UNLOCK_CAMERA_QUEST_ID" />
+            <Option Value="INTRO_BOT_QUEST_LEVEL_UP_UNSPENT_POINTS" />
+            <Option Value="INTRO_BOT_QUEST_LEVEL_UP_CHAMP_LEVEL" />
+            <Option Value="INTRO_BOT_QUEST_LEVEL_UP_REC_SKILL_ID" />
+            <Option Value="INTRO_BOT_QUEST_LEVEL_UP_REC_SKILL_LEVEL" />
+            <Option Value="BEGINNER_INTERMEDIATE_BOT_LOCK_CAMERA_QUEST_ID" />
+            <Option Value="LEARNING_QUEST_SUMMONER_HEAL_SLOT" />
+            <Option Value="RTB_RETREATING" />
+            <Option Value="CHAMP_VISION_ABILITY" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="UnsignedIntBlackboardKey" SubType="">
+        <Options>
+            <Option Value="PARTICLE_SCRATCH_1" />
+			<Option Value="INTRO_BOT_AGGRO_PARTICLE_PLAYER_1" />
+			<Option Value="INTRO_BOT_AGGRO_PARTICLE_PLAYER_2" />
+			<Option Value="INTRO_BOT_AGGRO_PARTICLE_PLAYER_3" />
+			<Option Value="INTRO_BOT_AGGRO_PARTICLE_PLAYER_4" />
+			<Option Value="INTRO_BOT_AGGRO_PARTICLE_PLAYER_5" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="StringBlackboardKey" SubType="">
+        <Options>
+            <Option Value="CURRENT_ACTION" />
+			<Option Value="CURRENT_OBJECTIVE" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="UnitBlackboardKey" SubType="">
+        <Options>
+            <Option Value="CURRENT_TARGET" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="VectorBlackboardKey" SubType="">
+        <Options>
+            <Option Value="MY_FAVORITE_VECTOR" />
+            <Option Value="RETREAT_POS" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="MinionRoamState" SubType="">
+        <Options>
+            <Option Value="INACTIVE" />
+            <Option Value="HOSTILE" />
+            <Option Value="RUN_IN_FEAR" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="SpawnLocationType" SubType="">
+        <Options>
+            <Option Value="SPAWN_HQ" />
+            <Option Value="SPAWN_LOCATION" />
+            <Option Value="SPAWN_BARRACKS_LANE_R" />
+            <Option Value="SPAWN_BARRACKS_LANE_C" />
+            <Option Value="SPAWN_BARRACKS_LANE_L" />
+            <Option Value="SPAWN_DAMPENER_LANE_R" />
+            <Option Value="SPAWN_DAMPENER_LANE_C" />
+            <Option Value="SPAWN_DAMPENER_LANE_L" />
+            <Option Value="SPAWN_SHOP" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterDefinition SupportedType="Enum" Name="AnnouncementEvent" SubType="">
+        <Options>
+            <Option Value="GAME_MODE_ANNOUNCEMENT1" />
+            <Option Value="GAME_MODE_ANNOUNCEMENT2" />
+            <Option Value="GAME_MODE_ANNOUNCEMENT3" />
+            <Option Value="GAME_MODE_ANNOUNCEMENT4" />
+            <Option Value="GAME_MODE_ANNOUNCEMENT5" />
+            <Option Value="GAME_MODE_ANNOUNCEMENT6" />
+            <Option Value="GAME_MODE_ANNOUNCEMENT7" />
+            <Option Value="GAME_MODE_ANNOUNCEMENT8" />
+            <Option Value="GAME_MODE_ANNOUNCEMENT9" />
+            <Option Value="GAME_MODE_ANNOUNCEMENT10" />
+            <Option Value="GAME_MODE_ANNOUNCEMENT11" />
+            <Option Value="GAME_MODE_ANNOUNCEMENT12" />
+            <Option Value="GAME_MODE_ANNOUNCEMENT13" />
+            <Option Value="GAME_MODE_ANNOUNCEMENT14" />
+            <Option Value="GAME_MODE_ANNOUNCEMENT15" />
+            <Option Value="GAME_MODE_ANNOUNCEMENT16" />
+            <Option Value="START_GAME_MESSAGE1" />
+            <Option Value="START_GAME_MESSAGE2" />
+            <Option Value="START_GAME_MESSAGE3" />
+            <Option Value="START_GAME_MESSAGE4" />
+            <Option Value="START_GAME_MESSAGE5" />
+            <Option Value="VICTORY_POINT_THRESHOLD1" />
+            <Option Value="VICTORY_POINT_THRESHOLD2" />
+            <Option Value="VICTORY_POINT_THRESHOLD3" />
+            <Option Value="VICTORY_POINT_THRESHOLD4" />
+        </Options>
+    </ParameterDefinition>
+    <ParameterFamilies>
+        <Family>
+            <Member Type="CollectionItem">
+                <Member Type="GameObject">
+                    <Member Type="AttackableUnit">
+                        <Member Type="Building" />
+                    </Member>
+                </Member>
+                <Member Type="AIMission" />
+                <Member Type="String" />
+                <Member Type="Int" />
+                <Member Type="Float" />
+                <Member Type="UnsignedInt" />
+            </Member>
+        </Family>
+        <Family>
+            <Member Type="GenericCollection">
+                <Member Type="AttackableUnitCollection">
+                    <Member Type="Obj_AI_BaseCollection">
+                        <Member Type="Obj_AI_HeroCollection" />
+                        <Member Type="Obj_AI_TurretCollection" />
+                    </Member>
+                </Member>
+                <Member Type="FloatCollection" />
+                <Member Type="IntCollection" />
+                <Member Type="AIMissionCollection" />
+                <Member Type="AISquadCollection" />
+                <Member Type="AITaskCollection" />
+            </Member>
+        </Family>
+        <Family>
+            <Member Type="ToString">
+                <Member Type="String" />
+                <Member Type="Int" />
+                <Member Type="Float" />
+                <Member Type="UnsignedInt" />
+                <Member Type="DWORD" />
+            </Member>
+        </Family>
+        <Family>
+            <Member Type="ToFloat">
+                <Member Type="Int" />
+                <Member Type="Float" />
+            </Member>
+        </Family>
+        <Family>
+            <Member Type="ToUnsignedInt">
+                <Member Type="UnsignedInt" />
+                <Member Type="DWORD" />
+            </Member>
+        </Family>
+    </ParameterFamilies>
+</ParameterDefinitions>

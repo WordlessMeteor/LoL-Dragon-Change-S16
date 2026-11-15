@@ -2943,5 +2943,15 @@
 			<td style="text-align:center;">1</td>
 			<td>Debug Local Data Checking Program: Restrict the range of data resource to compare</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-11-15 21-52-47</td>
+			<td style="text-align:center;">2</td>
+			<td>
+				CDragon: <br>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>PBE: 16.23.837.7539 -> 16.23.837.9578 (Partial)</li>
+					</ul>
+			</td>
+		</tr>
 	</tbody>
 </table>

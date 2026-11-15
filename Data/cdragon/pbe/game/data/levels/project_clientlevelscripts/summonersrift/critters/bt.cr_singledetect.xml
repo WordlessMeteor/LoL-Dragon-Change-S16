@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BehaviorTrees>
+  <BehaviorTree Name="SummonersRift.Critters.CR_SingleDetect" StaticName="">
+    <Parameters>
+      <Parameter Name="PropName" VariableType="Reference, Value" ParameterType="String" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="PropAnim" VariableType="Reference, Value" ParameterType="String" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="OrderNexus" VariableType="Reference" ParameterType="AttackableUnit" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+    </Parameters>
+    <Node Type="Sequence" Name="Sequence" Enabled="true">
+      <Parameters />
+      <Children>
+        <Node Type="GetPropByName" Name="GetPropByName" Enabled="true">
+          <Parameters>
+            <Parameter Name="PropName" Value="PropName" VariableType="Reference" ReferenceType="String" />
+            <OutParameter Name="Output" Value="Prop" ReferenceType="GameObject" />
+          </Parameters>
+        </Node>
+        <Node Type="GetPropPositionByName" Name="GetPropPositionByName" Enabled="true">
+          <Parameters>
+            <Parameter Name="PropName" Value="PropName" VariableType="Reference" ReferenceType="String" />
+            <OutParameter Name="Output" Value="Vec_Trigger" ReferenceType="Vector" />
+          </Parameters>
+        </Node>
+        <Node Type="Selector" Name="Selector" Enabled="true">
+          <Parameters />
+          <Children>
+            <Node Type="Sequence" Name="Sequence" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="CountUnitsInTargetArea" Name="UnitCount" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="Unit" Value="OrderNexus" VariableType="Reference" ReferenceType="AttackableUnit" />
+                    <Parameter Name="TargetLocation" Value="Vec_Trigger" VariableType="Reference" ReferenceType="Vector" />
+                    <Parameter Name="Radius" Value="400" VariableType="Value" />
+                    <Parameter Name="SpellAffectsTypeFlags" Value="AlliedChampions,0;EnemyChampions,0;AlliedBarracksMinions,0;EnemyBarracksMinions,0;EnemyNonBarracksMinions,0;AlliedNonBarracksMinions,0;NeverSelf,0" VariableType="Value" />
+                    <Parameter Name="SpellAffectsStatusFlags" Value="" VariableType="Value" />
+                    <Parameter Name="BuffName" Value="" VariableType="Reference" ReferenceType="String" />
+                    <Parameter Name="RequiredUnitTags" Value="" VariableType="Value" />
+                    <Parameter Name="ExcludedUnitTags" Value="" VariableType="Value" />
+                    <OutParameter Name="Output" Value="UnitCount" ReferenceType="Int" />
+                  </Parameters>
+                </Node>
+                <Node Type="GreaterInt" Name="UnitCount &gt; 0" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LeftHandSide" Value="UnitCount" VariableType="Reference" ReferenceType="Int" />
+                    <Parameter Name="RightHandSide" Value="0" VariableType="Value" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+            <Node Type="Sequence" Name="Sequence" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="GetGameTime" Name="CurrentTime" Enabled="true">
+                  <Parameters>
+                    <OutParameter Name="Output" Value="CurrentTime" ReferenceType="Float" />
+                  </Parameters>
+                </Node>
+                <Node Type="GreaterFloat" Name="CurrentTime &gt; 90" Enabled="true">
+                  <Parameters>
+                    <Parameter Name="LeftHandSide" Value="CurrentTime" VariableType="Reference" ReferenceType="Float" />
+                    <Parameter Name="RightHandSide" Value="90" VariableType="Value" />
+                  </Parameters>
+                </Node>
+              </Children>
+            </Node>
+          </Children>
+        </Node>
+        <Node Type="PlayAnimationOnProp" Name="PlayAnimationOnProp" Enabled="true">
+          <Parameters>
+            <Parameter Name="LevelProp" Value="Prop" VariableType="Reference" ReferenceType="GameObject" />
+            <Parameter Name="Animation" Value="PropAnim" VariableType="Reference" ReferenceType="String" />
+            <Parameter Name="Loop" Value="False" VariableType="Value" />
+            <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+            <Parameter Name="DestroyPropAfterAnimation" Value="True" VariableType="Value" />
+          </Parameters>
+        </Node>
+      </Children>
+    </Node>
+  </BehaviorTree>
+</BehaviorTrees>

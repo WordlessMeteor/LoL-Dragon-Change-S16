@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script SettingsName="Quest" Type="LevelScript" SubType="">
+  <Solution StaticName="SRScriptsClient" QualifiedName="SummonersRift.SRScriptsClient" SolutionType="Quest" Validity="Valid" />
+  <BTInstance Type="SecondaryQuest" Name="CR_Single">
+    <BehaviorTreeParameters>
+      <Parameter Name="BehaviorTree" Value="SummonersRift.Critters.CR_Single" />
+      <Parameter Name="Enabled" Value="True" />
+    </BehaviorTreeParameters>
+    <MetaData />
+    <Parameters />
+  </BTInstance>
+  <BTInstance Type="SecondaryQuest" Name="CR_Loop">
+    <BehaviorTreeParameters>
+      <Parameter Name="BehaviorTree" Value="SummonersRift.Critters.CR_Loop" />
+      <Parameter Name="Enabled" Value="True" />
+    </BehaviorTreeParameters>
+    <MetaData />
+    <Parameters>
+      <Parameter Name="LevelProp_SRU_AntlerMouse1B" Value="LevelProp_SRU_AntlerMouse1B" VariableType="Reference" ReferenceType="Bool" />
+      <Parameter Name="LevelProp_sru_gromp_prop10B" Value="LevelProp_sru_gromp_prop10B" VariableType="Reference" ReferenceType="Bool" />
+      <Parameter Name="LevelProp_SRU_AntlerMouse6B" Value="LevelProp_SRU_AntlerMouse6B" VariableType="Reference" ReferenceType="Bool" />
+      <Parameter Name="LevelProp_SRU_AntlerMouse8B" Value="LevelProp_SRU_AntlerMouse8B" VariableType="Reference" ReferenceType="Bool" />
+      <Parameter Name="LevelProp_sru_snail1B" Value="LevelProp_sru_snail1B" VariableType="Reference" ReferenceType="Bool" />
+      <Parameter Name="LevelProp_sru_snailB" Value="LevelProp_sru_snailB" VariableType="Reference" ReferenceType="Bool" />
+      <Parameter Name="LevelProp_SRU_AntlerMouseB" Value="LevelProp_SRU_AntlerMouseB" VariableType="Reference" ReferenceType="Bool" />
+      <Parameter Name="LevelProp_sru_snailF" Value="LevelProp_sru_snailF" VariableType="Reference" ReferenceType="Float" />
+      <Parameter Name="LevelProp_SRU_AntlerMouse1F" Value="LevelProp_SRU_AntlerMouse1F" VariableType="Reference" ReferenceType="Float" />
+      <Parameter Name="LevelProp_SRU_AntlerMouse6F" Value="LevelProp_SRU_AntlerMouse6F" VariableType="Reference" ReferenceType="Float" />
+      <Parameter Name="LevelProp_SRU_AntlerMouse8F" Value="LevelProp_SRU_AntlerMouse8F" VariableType="Reference" ReferenceType="Float" />
+      <Parameter Name="LevelProp_SRU_AntlerMouseF" Value="LevelProp_SRU_AntlerMouseF" VariableType="Reference" ReferenceType="Float" />
+      <Parameter Name="LevelProp_sru_snail1F" Value="LevelProp_sru_snail1F" VariableType="Reference" ReferenceType="Float" />
+      <Parameter Name="LevelProp_sru_gromp_prop10F" Value="LevelProp_sru_gromp_prop10F" VariableType="Reference" ReferenceType="Float" />
+      <OutParameter Name="LevelProp_SRU_AntlerMouse1B" Value="LevelProp_SRU_AntlerMouse1B" ReferenceType="Bool" />
+      <OutParameter Name="LevelProp_sru_gromp_prop10B" Value="LevelProp_sru_gromp_prop10B" ReferenceType="Bool" />
+      <OutParameter Name="LevelProp_SRU_AntlerMouse6B" Value="LevelProp_SRU_AntlerMouse6B" ReferenceType="Bool" />
+      <OutParameter Name="LevelProp_SRU_AntlerMouse8B" Value="LevelProp_SRU_AntlerMouse8B" ReferenceType="Bool" />
+      <OutParameter Name="LevelProp_sru_snail1B" Value="LevelProp_sru_snail1B" ReferenceType="Bool" />
+      <OutParameter Name="LevelProp_sru_snailB" Value="LevelProp_sru_snailB" ReferenceType="Bool" />
+      <OutParameter Name="LevelProp_SRU_AntlerMouseB" Value="LevelProp_SRU_AntlerMouseB" ReferenceType="Bool" />
+      <OutParameter Name="LevelProp_sru_snailF" Value="LevelProp_sru_snailF" ReferenceType="Float" />
+      <OutParameter Name="LevelProp_SRU_AntlerMouse1F" Value="LevelProp_SRU_AntlerMouse1F" ReferenceType="Float" />
+      <OutParameter Name="LevelProp_SRU_AntlerMouse6F" Value="LevelProp_SRU_AntlerMouse6F" ReferenceType="Float" />
+      <OutParameter Name="LevelProp_SRU_AntlerMouse8F" Value="LevelProp_SRU_AntlerMouse8F" ReferenceType="Float" />
+      <OutParameter Name="LevelProp_SRU_AntlerMouseF" Value="LevelProp_SRU_AntlerMouseF" ReferenceType="Float" />
+      <OutParameter Name="LevelProp_sru_snail1F" Value="LevelProp_sru_snail1F" ReferenceType="Float" />
+      <OutParameter Name="LevelProp_sru_gromp_prop10F" Value="LevelProp_sru_gromp_prop10F" ReferenceType="Float" />
+    </Parameters>
+  </BTInstance>
+  <BTInstance Type="SecondaryQuest" Name="SnowdownSRUPropAnims">
+    <BehaviorTreeParameters>
+      <Parameter Name="BehaviorTree" Value="SummonersRift.SnowdownSRUPropAnims" />
+      <Parameter Name="Enabled" Value="True" />
+    </BehaviorTreeParameters>
+    <MetaData />
+    <Parameters />
+  </BTInstance>
+  <BTInstance Type="SecondaryQuest" Name="SnowdownSRUGingerbreadFidget">
+    <BehaviorTreeParameters>
+      <Parameter Name="BehaviorTree" Value="SummonersRift.SnowdownSRUGingerbreadFidget" />
+      <Parameter Name="Enabled" Value="True" />
+    </BehaviorTreeParameters>
+    <MetaData />
+    <Parameters />
+  </BTInstance>
+  <BTInstance Type="LevelScriptResetGame" Name="SRU_OnLevelReset">
+    <BehaviorTreeParameters>
+      <Parameter Name="BehaviorTree" Value="SummonersRift.SRU_PropInitialization" />
+      <Parameter Name="Enabled" Value="True" />
+    </BehaviorTreeParameters>
+    <MetaData />
+    <Parameters />
+  </BTInstance>
+</Script>

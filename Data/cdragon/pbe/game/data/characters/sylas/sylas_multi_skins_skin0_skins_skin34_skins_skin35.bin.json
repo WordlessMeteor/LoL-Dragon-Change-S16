@@ -1,0 +1,225 @@
+{
+    "Characters/Sylas/Skins/Skin0/Materials/Sylas_Base_Mat_inst": {
+        "name": "Characters/Sylas/Skins/Skin0/Materials/Sylas_Base_Mat_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/characters/sylas/skins/base/sylas_base_tx_cm.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Overlay_Texture",
+                "texturePath": "assets/characters/sylas/skins/base/particles/sylas_base_body_tattoo.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Scroll_Texture",
+                "texturePath": "assets/characters/sylas/skins/base/particles/sylas_base_body_tatto_mult2.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Overlay_Texture_Ult",
+                "texturePath": "assets/characters/sylas/skins/base/particles/sylas_base_body_tattoo_ult.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Ult_Scroll_Texture",
+                "texturePath": "assets/characters/sylas/skins/base/particles/sylas_base_w_white_rgb.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Speed",
+                "value": [
+                    0.0,
+                    0.800000011920929,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Frequency",
+                "value": [
+                    1.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Amplitude",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Offset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Speed_Body",
+                "value": [
+                    0.0,
+                    -0.800000011920929,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ULT_Scroll_Speed",
+                "value": [
+                    3.0,
+                    3.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ULTIMATE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Sylas_Base_Mat",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "textures": [
+                {
+                    "name": "Overlay_Texture",
+                    "options": [
+                        {
+                            "driver": {
+                                "mScriptName": "SylasRBuff",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "TextureName": "assets/characters/sylas/skins/base/particles/sylas_base_body_tattoo_ult.tex",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        }
+                    ],
+                    "__type": "DynamicMaterialTextureSwapDef"
+                },
+                {
+                    "name": "Scroll_Texture",
+                    "options": [
+                        {
+                            "driver": {
+                                "mScriptName": "SylasRBuff",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "TextureName": "assets/characters/sylas/skins/base/particles/sylas_base_body_tatto_mult2_ult.tex",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        }
+                    ],
+                    "__type": "DynamicMaterialTextureSwapDef"
+                }
+            ],
+            "staticSwitch": {
+                "name": "ULTIMATE",
+                "driver": {
+                    "mScriptName": "sylasrspellbuffexperimental",
+                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                },
+                "__type": "DynamicMaterialStaticSwitch"
+            },
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "__linked": []
+}

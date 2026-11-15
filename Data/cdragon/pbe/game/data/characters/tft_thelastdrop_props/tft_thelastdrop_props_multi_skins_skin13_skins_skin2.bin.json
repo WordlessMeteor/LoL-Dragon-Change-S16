@@ -1,0 +1,1195 @@
+{
+    "Characters/TFT_TheLastDrop_Props/Skins/Skin2/TheLastDrop_Skin2_Idle": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 0.4000000059604645,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 2.0,
+                "emitterName": "Light_B_A",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Set13_ThelastDrop/TheLastDrop_Idle_Slot_01.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.5254902243614197,
+                        0.003921568859368563,
+                        0.6313725709915161,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -9000,
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "miscRenderFlags": 1,
+                "stencilMode": 3,
+                "StencilReferenceId": "{3b5cc210}",
+                "texture": "ASSETS/Maps/Particles/TFT/TheLastDrop/TheLastDrop_Mask02.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 1.25,
+                "rate": {
+                    "constantValue": 0.4000000059604645,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 2.0,
+                "emitterName": "Light_B_A1",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Set13_ThelastDrop/TheLastDrop_Idle_Slot_02.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.1411764770746231,
+                        0.6470588445663452,
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -9000,
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "miscRenderFlags": 1,
+                "stencilMode": 3,
+                "StencilReferenceId": "{3b5cc210}",
+                "texture": "ASSETS/Maps/Particles/TFT/TheLastDrop/TheLastDrop_Mask02.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "visibilityRadius": 1500.0,
+        "particleName": "TheLastDrop_Skin2_Idle",
+        "particlePath": "Characters/TFT_TheLastDrop_Props/Skins/Skin2/TheLastDrop_Skin2_Idle",
+        "transform": [
+            [
+                0.9999999403953552,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.9999999403953552,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                0.9999998807907104,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                1.0,
+                1.0
+            ]
+        ],
+        "objectPath": "Characters/TFT_TheLastDrop_Props/Skins/Skin2/TheLastDrop_Skin2_Idle",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/TFT_TheLastDrop_Props/Skins/Skin2/TheLastDrop_Skin2_Click": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 5.0,
+                "isSingleParticle": 1,
+                "emitterName": "Fresnel",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "SlotMachineA"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "UseAvatarSpecificSubmeshMask": true,
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10527066141366959,
+                            0.1834862232208252,
+                            0.28652268648147583,
+                            0.36959370970726013,
+                            0.46002620458602905,
+                            0.7221494317054749,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "reflectionDefinition": {
+                    "reflectionFresnelColor": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "fresnel": 0.009999999776482582,
+                    "fresnelColor": [
+                        1.0,
+                        0.5843137502670288,
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
+                "{cb13aff1}": -5.0,
+                "stencilMode": 3,
+                "StencilReferenceId": "{3b5cc210}",
+                "texture": "ASSETS/Maps/Particles/TFT/Set12_BloodMoon/TFT_ArenaSkin_BloodMoon_mask_bai_01.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 5.0,
+                "isSingleParticle": 1,
+                "emitterName": "Light_B_A2",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Set13_ThelastDrop/TheLastDrop_Idle_Slot_01.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.8509804010391235,
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10527066141366959,
+                            0.1834862232208252,
+                            0.28652268648147583,
+                            0.36959370970726013,
+                            0.46002620458602905,
+                            0.8453473448753357,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -8999,
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "miscRenderFlags": 1,
+                "stencilMode": 3,
+                "StencilReferenceId": "{3b5cc210}",
+                "texture": "ASSETS/Maps/Particles/TFT/TheLastDrop/TheLastDrop_Mask02.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 5.0,
+                "isSingleParticle": 1,
+                "emitterName": "Light_B_A3",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Set13_ThelastDrop/TheLastDrop_Idle_Slot_02.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        0.8509804010391235,
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.10527066141366959,
+                            0.1834862232208252,
+                            0.28652268648147583,
+                            0.36959370970726013,
+                            0.46002620458602905,
+                            0.899082601070404,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -8999,
+                "meshRenderFlags": 0,
+                "alphaRef": 0,
+                "miscRenderFlags": 1,
+                "stencilMode": 3,
+                "StencilReferenceId": "{3b5cc210}",
+                "texture": "ASSETS/Maps/Particles/TFT/TheLastDrop/TheLastDrop_Mask02.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 4.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "lifetime": 5.0,
+                "isSingleParticle": 1,
+                "emitterName": "Fresnel_Coin",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "GoldA"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "UseAvatarSpecificSubmeshMask": true,
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.8999999761581421,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "meshRenderFlags": 0,
+                "reflectionDefinition": {
+                    "reflectionFresnelColor": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "fresnel": 0.10000000149011612,
+                    "fresnelColor": [
+                        1.0,
+                        0.5843137502670288,
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
+                "{cb13aff1}": -5.0,
+                "stencilMode": 3,
+                "StencilReferenceId": "{3b5cc210}",
+                "texture": "ASSETS/Maps/Particles/TFT/Set12_BloodMoon/TFT_ArenaSkin_BloodMoon_mask_bai_01.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 4.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "lifetime": 5.0,
+                "isSingleParticle": 1,
+                "emitterName": "Fresnel_Coin1",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "GoldA"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "UseAvatarSpecificSubmeshMask": true,
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.8999999761581421,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": -9000,
+                "meshRenderFlags": 0,
+                "{cb13aff1}": -5.0,
+                "stencilMode": 3,
+                "StencilReferenceId": "{3b5cc210}",
+                "texture": "ASSETS/Characters/TFT_Template_AnimProp/Skins/Base/TFT_Template_AnimProp_TX_CM.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 10.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.6000000238418579,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            3.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.5,
+                "lifetime": 1.0,
+                "fieldCollectionDefinition": {
+                    "fieldNoiseDefinitions": [
+                        {
+                            "radius": {
+                                "constantValue": 1000.0,
+                                "__type": "ValueFloat"
+                            },
+                            "frequency": {
+                                "constantValue": 10.0,
+                                "__type": "ValueFloat"
+                            },
+                            "velocityDelta": {
+                                "constantValue": 10.0,
+                                "__type": "ValueFloat"
+                            },
+                            "axisFraction": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "__type": "VfxFieldNoiseDefinitionData"
+                        }
+                    ],
+                    "__type": "VfxFieldCollectionDefinitionData"
+                },
+                "emitterName": "paper1",
+                "birthVelocity": {
+                    "constantValue": [
+                        -10.0,
+                        -110.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "worldAcceleration": {
+                    "constantValue": [
+                        0.0,
+                        -50.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -50.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "SpawnShape": {
+                    "flags": 1,
+                    "Size": [
+                        300.0,
+                        50.0,
+                        200.0
+                    ],
+                    "__type": "VfxShapeBox"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        400.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Set13_ThelastDrop/TheLastDrop_Ribbon.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    0.6000000238418579
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 500,
+                "meshRenderFlags": 0,
+                "disableBackfaceCull": true,
+                "stencilMode": 3,
+                "StencilReferenceId": "{3b5cc210}",
+                "isRotationEnabled": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        180.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                180.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "rotation0": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        2.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                2.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        1.5,
+                        3.0,
+                        2.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.49000000953674316,
+                                    0.5,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    -0.8999999761581421,
+                                    0.8999999761581421,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.49900001287460327,
+                                    0.5,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    -0.8999999761581421,
+                                    0.8999999761581421,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.5,
+                                3.0,
+                                2.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            0.800000011920929,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/Set13_ThelastDrop/TheLastDrop_Ribbon.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texAddressModeBase": 2,
+                "particleUVScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.03431952744722366,
+                            0.06863905489444733,
+                            0.10769230872392654,
+                            0.14915163815021515,
+                            0.23707853257656097,
+                            0.28899267315864563,
+                            0.3469122350215912,
+                            0.4096046984195709,
+                            0.4497433602809906,
+                            0.49228808283805847,
+                            0.5361045002937317,
+                            0.6544476747512817,
+                            0.6828794479370117,
+                            0.7228318452835083,
+                            0.7712740898132324,
+                            0.8184937238693237,
+                            0.8738895654678345,
+                            0.9282980561256409,
+                            0.9917159676551819
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.9189515113830566
+                            ],
+                            [
+                                0.0,
+                                0.7268799543380737
+                            ],
+                            [
+                                0.0,
+                                0.3167043626308441
+                            ],
+                            [
+                                0.0,
+                                0.1597965508699417
+                            ],
+                            [
+                                0.0,
+                                -0.007598227821290493
+                            ],
+                            [
+                                -0.0,
+                                -0.3667317032814026
+                            ],
+                            [
+                                -0.0,
+                                -0.9561732411384583
+                            ],
+                            [
+                                -0.0,
+                                -1.1350958347320557
+                            ],
+                            [
+                                -0.0,
+                                -0.8457719087600708
+                            ],
+                            [
+                                -0.0,
+                                -0.390624076128006
+                            ],
+                            [
+                                -0.0,
+                                -0.15546183288097382
+                            ],
+                            [
+                                -0.0,
+                                0.008093398995697498
+                            ],
+                            [
+                                0.0,
+                                0.1898507922887802
+                            ],
+                            [
+                                0.0,
+                                0.4311968684196472
+                            ],
+                            [
+                                0.0,
+                                0.6263582110404968
+                            ],
+                            [
+                                0.0,
+                                0.611581027507782
+                            ],
+                            [
+                                0.0,
+                                0.41795241832733154
+                            ],
+                            [
+                                0.0,
+                                0.33556854724884033
+                            ],
+                            [
+                                -0.0,
+                                -0.02661435306072235
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "uvScale": {
+                    "constantValue": [
+                        1.0,
+                        3.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Maps/Particles/TFT/Set13_ThelastDrop/TheLastDrop_Idle_Gradient_02.tex",
+                    "uvScaleMult": {
+                        "constantValue": [
+                            0.10000000149011612,
+                            1.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            0.05000000074505806,
+                            0.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "birthUVOffsetMult": {
+                        "constantValue": [
+                            1.0,
+                            0.0
+                        ],
+                        "dynamics": {
+                            "probabilityTables": [
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                }
+                            ],
+                            "times": [
+                                0.0
+                            ],
+                            "values": [
+                                [
+                                    1.0,
+                                    0.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector2fVariableData"
+                        },
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "visibilityRadius": 1500.0,
+        "particleName": "TheLastDrop_Skin2_Click",
+        "particlePath": "Characters/TFT_TheLastDrop_Props/Skins/Skin2/TheLastDrop_Skin2_Click",
+        "objectPath": "Characters/TFT_TheLastDrop_Props/Skins/Skin2/TheLastDrop_Skin2_Click",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "__linked": []
+}

@@ -1,0 +1,167 @@
+{
+    "Characters/TFT_AprilFool_Props/Skins/Skin2/Materials/Diffuse_Color_B_Mat": {
+        "name": "Characters/TFT_AprilFool_Props/Skins/Skin2/Materials/Diffuse_Color_B_Mat",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/maps/particles/tft/aprilfool/tft_aprilfool_boardgun_tx.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Tint_Color",
+                "value": [
+                    0.8812848329544067,
+                    0.8344396352767944,
+                    0.8344396352767944,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Diffuse_Tint",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Tint_Color",
+                    "driver": {
+                        "mElements": [
+                            {
+                                "mCondition": {
+                                    "mAnimationNames": [
+                                        "{0354e3f7}"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "driver": {
+                                        "mAnimationName": "{0354e3f7}",
+                                        "__type": "AnimationFractionDynamicMaterialFloatDriver"
+                                    },
+                                    "colors": {
+                                        "times": [
+                                            0.0,
+                                            0.9959183931350708
+                                        ],
+                                        "values": [
+                                            [
+                                                0.6627451181411743,
+                                                0.6392157077789307,
+                                                0.8015170097351074,
+                                                1.0
+                                            ],
+                                            [
+                                                0.6627451181411743,
+                                                0.6392157077789307,
+                                                0.7977192997932434,
+                                                1.0
+                                            ]
+                                        ],
+                                        "__type": "VfxAnimatedColorVariableData"
+                                    },
+                                    "__type": "ColorGraphMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            }
+                        ],
+                        "mDefaultValue": {
+                            "value": [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "__type": "Float4LiteralMaterialDriver"
+                        },
+                        "__type": "SwitchMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "__linked": []
+}

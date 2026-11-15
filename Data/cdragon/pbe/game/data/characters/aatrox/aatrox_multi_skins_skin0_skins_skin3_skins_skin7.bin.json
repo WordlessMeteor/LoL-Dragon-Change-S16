@@ -1,0 +1,176 @@
+{
+    "Characters/Aatrox/Skins/Skin0/Particles/Aatrox_Base_P_Attack_trail": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.30000001192092896,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.20000000298023224,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "Temp_Mesh",
+                "SpawnShape": {
+                    "emitOffset": [
+                        -25.0,
+                        115.0,
+                        -25.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "FlexShapeDefinition": {
+                    "scaleBirthScaleByBoundObjectSize": 0.004000000189989805,
+                    "scaleEmitOffsetByBoundObjectSize": 0.004000000189989805,
+                    "__type": "VfxFlexShapeDefinitionData"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Aatrox/Skins/Base/Particles/Aatrox_Base_E_dash_half_sphere.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "particleColorTexture": "ASSETS/Characters/Aatrox/Skins/Base/Particles/Aatrox_Base_W_distort_RGBA.tex",
+                "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.4000000059604645,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.3333333432674408,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "alphaErosionDefinition": {
+                    "erosionDriveCurve": {
+                        "dynamics": {
+                            "times": [
+                                0.0,
+                                1.0
+                            ],
+                            "values": [
+                                0.0,
+                                1.4119999408721924
+                            ],
+                            "__type": "VfxAnimatedFloatVariableData"
+                        },
+                        "__type": "ValueFloat"
+                    },
+                    "erosionFeatherOut": 0.5,
+                    "erosionSliceWidth": 1.7000000476837158,
+                    "erosionMapName": "ASSETS/Characters/Aatrox/Skins/Base/Particles/Aatrox_Base_E_dash_burst.tex",
+                    "erosionMapChannelMixer": {
+                        "constantValue": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "__type": "ValueColor"
+                    },
+                    "__type": "VfxAlphaErosionDefinitionData"
+                },
+                "disableBackfaceCull": true,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        180.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        1.5,
+                        4.0,
+                        1.5
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.8999999761581421,
+                                1.0,
+                                0.8999999761581421
+                            ],
+                            [
+                                1.0,
+                                2.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Aatrox/Skins/Base/Particles/Aatrox_Base_E_dash_burst.tex",
+                "paletteDefinition": {
+                    "paletteTexture": "ASSETS/Characters/Aatrox/Skins/Base/Particles/Aatrox_Base_AA_Gradient_RGB.tex",
+                    "palleteSrcMixColor": {
+                        "constantValue": [
+                            0.800000011920929,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "__type": "ValueColor"
+                    },
+                    "paletteCount": 8,
+                    "__type": "VfxPaletteDefinitionData"
+                },
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        5.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        -0.5
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Aatrox_Base_P_Attack_trail",
+        "particlePath": "Characters/Aatrox/Skins/Skin0/Particles/Aatrox_Base_P_Attack_trail",
+        "objectPath": "Characters/Aatrox/Skins/Skin0/Particles/Aatrox_Base_P_Attack_trail",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "__linked": []
+}

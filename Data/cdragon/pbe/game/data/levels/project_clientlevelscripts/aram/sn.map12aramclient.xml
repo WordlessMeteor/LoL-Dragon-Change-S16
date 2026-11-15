@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script SettingsName="Quest" Type="LevelScript" SubType="">
+  <Solution StaticName="Map12ARAMClient" QualifiedName="ARAM.Map12ARAMClient" SolutionType="Quest" Validity="Valid" />
+  <BTInstance Type="SecondaryQuest" Name="ClientScripts">
+    <BehaviorTreeParameters>
+      <Parameter Name="BehaviorTree" Value="ARAM.ClientScripts" />
+      <Parameter Name="Enabled" Value="True" />
+    </BehaviorTreeParameters>
+    <MetaData />
+    <Parameters>
+      <Parameter Name="HasRevived" Value="HasRevived" VariableType="Reference" ReferenceType="Bool" />
+      <Parameter Name="HasOpened" Value="HasOpened" VariableType="Reference" ReferenceType="Bool" />
+      <OutParameter Name="HasRevived" Value="HasRevived" ReferenceType="Bool" />
+      <OutParameter Name="HasOpened" Value="HasOpened" ReferenceType="Bool" />
+    </Parameters>
+  </BTInstance>
+  <BTInstance Type="ClientChampionRevive" Name="ClientOnRevive">
+    <BehaviorTreeParameters>
+      <Parameter Name="BehaviorTree" Value="ARAM.ClientOnRevive" />
+      <Parameter Name="Enabled" Value="True" />
+    </BehaviorTreeParameters>
+    <MetaData />
+    <Parameters>
+      <OutParameter Name="HasRevived" Value="HasRevived" ReferenceType="Bool" />
+      <OutParameter Name="HasOpened" Value="HasOpened" ReferenceType="Bool" />
+    </Parameters>
+  </BTInstance>
+</Script>

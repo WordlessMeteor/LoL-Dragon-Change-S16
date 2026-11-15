@@ -1,0 +1,277 @@
+{
+    "{8a7059ce}": {
+        "mGearData": {
+            "skinMeshProperties": {
+                "initialSubmeshToHide": "Mat_Phoenix Mat_Tiger Mat_Turtle",
+                "__type": "SkinMeshDataProperties"
+            },
+            "mVFXResourceResolver": {
+                "__type": "ResourceResolver"
+            },
+            "mCharacterSubmeshesToHide": [
+                "{30817ead}",
+                "{a22f53a9}",
+                "{cfb97b64}"
+            ],
+            "mCharacterSubmeshesToShow": [
+                "{6542f9e4}"
+            ],
+            "__type": "GearData"
+        },
+        "__type": "GearSkinUpgrade"
+    },
+    "{a269fa13}": {
+        "mGearData": {
+            "mVFXResourceResolver": {
+                "__type": "ResourceResolver"
+            },
+            "mCharacterSubmeshesToHide": [
+                "{6542f9e4}",
+                "{a22f53a9}",
+                "{cfb97b64}"
+            ],
+            "mCharacterSubmeshesToShow": [
+                "{30817ead}"
+            ],
+            "__type": "GearData"
+        },
+        "__type": "GearSkinUpgrade"
+    },
+    "{a569fecc}": {
+        "mGearData": {
+            "mVFXResourceResolver": {
+                "__type": "ResourceResolver"
+            },
+            "mCharacterSubmeshesToHide": [
+                "{30817ead}",
+                "{6542f9e4}",
+                "{cfb97b64}"
+            ],
+            "mCharacterSubmeshesToShow": [
+                "{a22f53a9}"
+            ],
+            "__type": "GearData"
+        },
+        "__type": "GearSkinUpgrade"
+    },
+    "{a76a01f2}": {
+        "mGearData": {
+            "mVFXResourceResolver": {
+                "__type": "ResourceResolver"
+            },
+            "mCharacterSubmeshesToHide": [
+                "{cfb97b64}",
+                "{30817ead}",
+                "{a22f53a9}"
+            ],
+            "mCharacterSubmeshesToShow": [
+                "{6542f9e4}"
+            ],
+            "__type": "GearData"
+        },
+        "__type": "GearSkinUpgrade"
+    },
+    "{a86a0385}": {
+        "mGearData": {
+            "mVFXResourceResolver": {
+                "__type": "ResourceResolver"
+            },
+            "mCharacterSubmeshesToHide": [
+                "{6542f9e4}",
+                "{a22f53a9}",
+                "{30817ead}"
+            ],
+            "mCharacterSubmeshesToShow": [
+                "{cfb97b64}"
+            ],
+            "__type": "GearData"
+        },
+        "__type": "GearSkinUpgrade"
+    },
+    "Characters/Jade_Udyr/CAC/Jade_Udyr_Skin301": {
+        "mCooldown": 15.0,
+        "mSituations": {
+            "AttackChampion2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Champion",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackMinion2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Minion",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackNeutral2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Neutral",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Joke": {
+                "mRules": [
+                    {
+                        "mRuleName": "Joke",
+                        "mAudioAction": {
+                            "mSelfEventName": "Joke3DGeneral",
+                            "mAllyEventName": "Joke3DGeneral",
+                            "mEnemyEventName": "Joke3DGeneral",
+                            "mSpectatorEventName": "Joke3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Laugh": {
+                "mRules": [
+                    {
+                        "mRuleName": "Laugh",
+                        "mAudioAction": {
+                            "mSelfEventName": "Laugh3DGeneral",
+                            "mAllyEventName": "Laugh3DGeneral",
+                            "mEnemyEventName": "Laugh3DGeneral",
+                            "mSpectatorEventName": "Laugh3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "MoveOrder2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Standard",
+                        "mConditions": [
+                            {
+                                "mDistance": 400.0,
+                                "mCompareOp": 3,
+                                "__type": "ContextualConditionMoveDistance"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Move2DStandard",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "SpellCast": {
+                "mRules": [
+                    {
+                        "mRuleName": "Basic",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Jade_Udyr/Spells/Jade_UdyrBasicAttack",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DBasic",
+                            "mAllyEventName": "Spell3DBasic",
+                            "mEnemyEventName": "Spell3DBasic",
+                            "mSpectatorEventName": "Spell3DBasic",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Basic",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Jade_Udyr/Spells/Jade_UdyrBasicAttack2",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DBasic",
+                            "mAllyEventName": "Spell3DBasic",
+                            "mEnemyEventName": "Spell3DBasic",
+                            "mSpectatorEventName": "Spell3DBasic",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Taunt": {
+                "mRules": [
+                    {
+                        "mRuleName": "Taunt",
+                        "mAudioAction": {
+                            "mSelfEventName": "Taunt3DGeneral",
+                            "mAllyEventName": "Taunt3DGeneral",
+                            "mEnemyEventName": "Taunt3DGeneral",
+                            "mSpectatorEventName": "Taunt3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            }
+        },
+        "mObjectPath": "Characters/Jade_Udyr/CAC/Jade_Udyr_Skin301",
+        "__type": "ContextualActionData"
+    },
+    "__linked": []
+}

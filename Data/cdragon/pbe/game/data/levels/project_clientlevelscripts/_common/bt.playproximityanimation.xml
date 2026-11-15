@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BehaviorTrees>
+  <BehaviorTree Name="_Common.PlayProximityAnimation" StaticName="">
+    <Parameters>
+      <Parameter Name="InProximityAnim" VariableType="Reference" ParameterType="Bool" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="PropPosition" VariableType="Reference" ParameterType="Vector" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="ProximityDistanceForAnim" VariableType="Reference, Value" ParameterType="Float" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="AnimName_Proximity" VariableType="Reference, Value" ParameterType="String" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="AnimName_Default" VariableType="Reference, Value" ParameterType="String" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="LevelProp" VariableType="Reference" ParameterType="GameObject" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <OutParameter Name="InProximityAnim" ParameterType="Bool">
+        <Description></Description>
+      </OutParameter>
+    </Parameters>
+    <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+      <Parameters />
+      <Children>
+        <Node Type="Sequence" Name="PlayProximityAnimation" Enabled="true">
+          <Parameters />
+          <Children>
+            <Node Type="GetPlayerChampion" Name="PlayerChampion" Enabled="true">
+              <Parameters>
+                <OutParameter Name="Output" Value="PlayerChampion" ReferenceType="AttackableUnit" />
+              </Parameters>
+            </Node>
+            <Node Type="DistanceBetweenObjectAndPoint" Name="DistanceToProp" Enabled="true">
+              <Parameters>
+                <Parameter Name="Unit" Value="PlayerChampion" VariableType="Reference" ReferenceType="AttackableUnit" />
+                <Parameter Name="Point" Value="PropPosition" VariableType="Reference" ReferenceType="Vector" />
+                <OutParameter Name="Output" Value="DistanceToProp" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="Selector" Name="AnimToPlay" Enabled="true">
+              <Parameters />
+              <Children>
+                <Node Type="Sequence" Name="ProximityAnimation" Enabled="true">
+                  <Parameters />
+                  <Children>
+                    <Node Type="EqualBool" Name="InProximityAnim==False" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="LeftHandSide" Value="InProximityAnim" VariableType="Reference" ReferenceType="Bool" />
+                        <Parameter Name="RightHandSide" Value="False" VariableType="Value" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="LessFloat" Name="DistanceToProp&lt;ProximityDistanceForAnim" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="LeftHandSide" Value="DistanceToProp" VariableType="Reference" ReferenceType="Float" />
+                        <Parameter Name="RightHandSide" Value="ProximityDistanceForAnim" VariableType="Reference" ReferenceType="Float" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="PlayAnimationOnProp" Name="AnimName_Proximity-&gt;LevelProp" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="LevelProp" Value="LevelProp" VariableType="Reference" ReferenceType="GameObject" />
+                        <Parameter Name="Animation" Value="AnimName_Proximity" VariableType="Reference" ReferenceType="String" />
+                        <Parameter Name="Loop" Value="True" VariableType="Value" />
+                        <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                        <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="SetVarBool" Name="InProximityAnim=True" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="Input" Value="True" VariableType="Value" />
+                        <OutParameter Name="Output" Value="InProximityAnim" ReferenceType="Bool" />
+                      </Parameters>
+                    </Node>
+                  </Children>
+                </Node>
+                <Node Type="Sequence" Name="DefaultAnimation" Enabled="true">
+                  <Parameters />
+                  <Children>
+                    <Node Type="EqualBool" Name="InProximityAnim==True" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="LeftHandSide" Value="InProximityAnim" VariableType="Reference" ReferenceType="Bool" />
+                        <Parameter Name="RightHandSide" Value="True" VariableType="Value" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="GreaterFloat" Name="DistanceToProp&gt;ProximityDistanceForAnim" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="LeftHandSide" Value="DistanceToProp" VariableType="Reference" ReferenceType="Float" />
+                        <Parameter Name="RightHandSide" Value="ProximityDistanceForAnim" VariableType="Reference" ReferenceType="Float" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="PlayAnimationOnProp" Name="AnimName_Default-&gt;LevelProp" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="LevelProp" Value="LevelProp" VariableType="Reference" ReferenceType="GameObject" />
+                        <Parameter Name="Animation" Value="AnimName_Default" VariableType="Reference" ReferenceType="String" />
+                        <Parameter Name="Loop" Value="True" VariableType="Value" />
+                        <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                        <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+                      </Parameters>
+                    </Node>
+                    <Node Type="SetVarBool" Name="InProximityAnim=False" Enabled="true">
+                      <Parameters>
+                        <Parameter Name="Input" Value="False" VariableType="Value" />
+                        <OutParameter Name="Output" Value="InProximityAnim" ReferenceType="Bool" />
+                      </Parameters>
+                    </Node>
+                  </Children>
+                </Node>
+              </Children>
+            </Node>
+          </Children>
+        </Node>
+      </Children>
+    </Node>
+  </BehaviorTree>
+</BehaviorTrees>

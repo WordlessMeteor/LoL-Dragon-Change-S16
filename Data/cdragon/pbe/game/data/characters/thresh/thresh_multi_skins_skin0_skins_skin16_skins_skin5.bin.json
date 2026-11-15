@@ -1,0 +1,151 @@
+{
+    "Characters/Thresh/Skins/Skin0/Particles/Thresh_Base_Death_Soul": {
+        "complexEmitterDefinitionData": [
+            {
+                "timeBeforeFirstEmission": 1.5,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.7000000476837158,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 5.0,
+                "isSingleParticle": 1,
+                "childParticleSetDefinition": {
+                    "childrenIdentifiers": [
+                        {
+                            "effectKey": "Thresh_Death_Soul_Trail",
+                            "__type": "VfxChildIdentifier"
+                        }
+                    ],
+                    "__type": "VfxChildParticleSetDefinitionData"
+                },
+                "emitterName": "soul",
+                "birthVelocity": {
+                    "constantValue": [
+                        -20.0,
+                        -150.0,
+                        130.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        0.0,
+                        -30.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        350.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "particleColorTexture": "ASSETS/Characters/Thresh/Skins/Base/Particles/common_color-plateau-ramp.tex",
+                "pass": 100,
+                "colorLookUpScales": [
+                    0.699999988079071,
+                    1.0
+                ],
+                "colorLookUpOffsets": [
+                    0.20000000298023224,
+                    0.0
+                ],
+                "miscRenderFlags": 1,
+                "isRandomStartFrame": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        60.0,
+                        60.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Thresh/Skins/Base/Particles/soul_drops.tex",
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.7999999523162842,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "childParticleSetDefinition": {
+                    "childrenIdentifiers": [
+                        {
+                            "effectKey": "Thresh_SoulMist",
+                            "__type": "VfxChildIdentifier"
+                        }
+                    ],
+                    "boneToSpawnAt": [
+                        "Spine1"
+                    ],
+                    "__type": "VfxChildParticleSetDefinitionData"
+                },
+                "emitterName": "Dead_Thresh",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        100.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mMeshName": "ASSETS/Characters/Thresh/Skins/Base/Thresh.skn",
+                        "mMeshSkeletonName": "ASSETS/Characters/Thresh/Skins/Base/Thresh.skl",
+                        "mAnimationName": "ASSETS/Characters/Thresh/Skins/Base/Particles/Thresh_death_ghost.anm",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "particleColorTexture": "ASSETS/Characters/Thresh/Skins/Base/Particles/common_color-plateau-ramp.tex",
+                "pass": -1,
+                "colorLookUpScales": [
+                    1.0,
+                    0.6000000238418579
+                ],
+                "texture": "ASSETS/Characters/Thresh/Skins/Base/Particles/Thresh_Base_Ghost.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Thresh_Base_Death_Soul",
+        "particlePath": "Characters/Thresh/Skins/Skin0/Particles/Thresh_Base_Death_Soul",
+        "flags": 198,
+        "objectPath": "Characters/Thresh/Skins/Skin0/Particles/Thresh_Base_Death_Soul",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "__linked": []
+}

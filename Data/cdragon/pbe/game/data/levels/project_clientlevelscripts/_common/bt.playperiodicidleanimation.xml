@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BehaviorTrees>
+  <BehaviorTree Name="_Common.PlayPeriodicIdleAnimation" StaticName="">
+    <Parameters>
+      <Parameter Name="LastPlayedTime" VariableType="Reference" ParameterType="Float" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="RandomInterval" VariableType="Reference" ParameterType="Float" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="IntervalMin" VariableType="Reference, Value" ParameterType="Float" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="IntervalMax" VariableType="Reference, Value" ParameterType="Float" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="AnimName" VariableType="Reference, Value" ParameterType="String" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="GameTime" VariableType="Reference" ParameterType="Float" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <Parameter Name="LevelProp" VariableType="Reference" ParameterType="GameObject" Default="" Optional="false">
+        <Description></Description>
+      </Parameter>
+      <OutParameter Name="LastPlayedTime" ParameterType="Float">
+        <Description></Description>
+      </OutParameter>
+      <OutParameter Name="RandomInterval" ParameterType="Float">
+        <Description></Description>
+      </OutParameter>
+    </Parameters>
+    <Node Type="MaskFailure" Name="MaskFailure" Enabled="true">
+      <Parameters />
+      <Children>
+        <Node Type="Sequence" Name="PlayPeriodicIdleAnimation" Enabled="true">
+          <Parameters />
+          <Children>
+            <Node Type="AddFloat" Name="ExpectedAnimTime=LastPlayedTime+RandomInterval" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="LastPlayedTime" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="RightHandSide" Value="RandomInterval" VariableType="Reference" ReferenceType="Float" />
+                <OutParameter Name="Output" Value="ExpectedAnimTime" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="GreaterFloat" Name="GameTime&gt;ExpectedAnimTime" Enabled="true">
+              <Parameters>
+                <Parameter Name="LeftHandSide" Value="GameTime" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="RightHandSide" Value="ExpectedAnimTime" VariableType="Reference" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="PlayAnimationOnProp" Name="AnimName-&gt;LevelProp(ClearPreviousAnim)" Enabled="true">
+              <Parameters>
+                <Parameter Name="LevelProp" Value="LevelProp" VariableType="Reference" ReferenceType="GameObject" />
+                <Parameter Name="Animation" Value="AnimName" VariableType="Reference" ReferenceType="String" />
+                <Parameter Name="Loop" Value="True" VariableType="Value" />
+                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="PlayAnimationOnProp" Name="AnimName-&gt;LevelProp" Enabled="true">
+              <Parameters>
+                <Parameter Name="LevelProp" Value="LevelProp" VariableType="Reference" ReferenceType="GameObject" />
+                <Parameter Name="Animation" Value="AnimName" VariableType="Reference" ReferenceType="String" />
+                <Parameter Name="Loop" Value="False" VariableType="Value" />
+                <Parameter Name="Duration" Value="" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="DestroyPropAfterAnimation" Value="" VariableType="Reference" ReferenceType="Bool" />
+              </Parameters>
+            </Node>
+            <Node Type="SetVarFloat" Name="LastPlayedTime=GameTime" Enabled="true">
+              <Parameters>
+                <Parameter Name="Input" Value="GameTime" VariableType="Reference" ReferenceType="Float" />
+                <OutParameter Name="Output" Value="LastPlayedTime" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+            <Node Type="GenerateRandomFloat" Name="RandomInterval=rand(IntervalMin,IntervalMax)" Enabled="true">
+              <Parameters>
+                <Parameter Name="MinValue" Value="IntervalMin" VariableType="Reference" ReferenceType="Float" />
+                <Parameter Name="MaxValue" Value="IntervalMax" VariableType="Reference" ReferenceType="Float" />
+                <OutParameter Name="Output" Value="RandomInterval" ReferenceType="Float" />
+              </Parameters>
+            </Node>
+          </Children>
+        </Node>
+      </Children>
+    </Node>
+  </BehaviorTree>
+</BehaviorTrees>

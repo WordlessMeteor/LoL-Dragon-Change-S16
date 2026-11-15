@@ -1,0 +1,199 @@
+{
+    "Characters/Diana/Skins/Skin0/Particles/Diana_Base_Q_Swipe_01": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.25,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.009999999776482582,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "WeaponTrail1",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Diana/Skins/Base/Particles/Diana_Q_Swipe.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "colorLookUpTypeY": 3,
+                "alphaRef": 0,
+                "disableBackfaceCull": true,
+                "particleIsLocalOrientation": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        1.0,
+                        0.800000011920929,
+                        1.2000000476837158
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Diana/Skins/Base/Particles/Diana_Base_BA_Swipe.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.8999999761581421,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texAddressModeBase": 2,
+                "particleUVScrollRate": {
+                    "constantValue": [
+                        -7.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.277372270822525,
+                            0.39416059851646423,
+                            0.5644769072532654,
+                            0.669099748134613,
+                            0.7834550142288208,
+                            0.8905109763145447,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                -7.0,
+                                0.0
+                            ],
+                            [
+                                -6.609302520751953,
+                                0.0
+                            ],
+                            [
+                                -6.186046600341797,
+                                0.0
+                            ],
+                            [
+                                -5.567441940307617,
+                                0.0
+                            ],
+                            [
+                                -4.199999809265137,
+                                0.0
+                            ],
+                            [
+                                -3.418604612350464,
+                                0.0
+                            ],
+                            [
+                                -3.0930233001708984,
+                                0.0
+                            ],
+                            [
+                                -2.4418604373931885,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Diana_Base_Q_Swipe_01",
+        "particlePath": "Characters/Diana/Skins/Skin0/Particles/Diana_Base_Q_Swipe_01",
+        "objectPath": "Characters/Diana/Skins/Skin0/Particles/Diana_Base_Q_Swipe_01",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/Diana/Skins/Skin0/Particles/Diana_Base_E_MeshOverlay": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.009999999776482582,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "Mesh",
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Diana/Skins/Base/Particles/Arrow01.SCB",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "particleColorTexture": "ASSETS/Characters/Diana/Skins/Base/Particles/Diana_Base_P_color-rampdown.tex",
+                "pass": 10,
+                "meshRenderFlags": 0,
+                "colorLookUpTypeY": 3,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        180.0,
+                        90.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        1.0299999713897705,
+                        1.0299999713897705,
+                        1.0299999713897705
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0499999523162842,
+                                1.0499999523162842,
+                                1.0499999523162842
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Diana/Skins/Base/Particles/Diana_Base_R_MeshSheen.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Diana_Base_E_MeshOverlay",
+        "particlePath": "Characters/Diana/Skins/Skin0/Particles/Diana_Base_E_MeshOverlay",
+        "objectPath": "Characters/Diana/Skins/Skin0/Particles/Diana_Base_E_MeshOverlay",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "__linked": []
+}
