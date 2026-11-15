@@ -28,10 +28,11 @@ LF: list[str] = [] #存储大小超过100 MB的文件位置（Stores paths of la
 LNF: list[str] = [] #存储文件名超过171个字符长度的文件位置（Stores paths of files with file name longer than 171 characters）
 for root, dirs, files in os.walk("Data"):
     for file in files:
+        filepath: str = os.path.join(root, file).replace("\\", "/")
         size = os.path.getsize(os.path.join(root, file))
         if size > 104857600: #100 * 1024 * 1024
             LF.append(os.path.join(root, file).replace("\\", "/"))
-        if len(file) > 171:
+        if len(filepath) > 171:
             LNF.append(os.path.join(root, file).replace("\\", "/"))
 
 logPrint("#Vscode个人配置文件（Stores paths of Vscode setting files）\n.vscode/*\n#日志文件（Log files）\nData/Update Logs/*", write_time = False)
