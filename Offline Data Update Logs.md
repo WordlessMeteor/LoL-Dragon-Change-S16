@@ -2904,7 +2904,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td style="text-align:center;">2026-11-12 12-14-53<br>2026-11-15 16-34-59</td>
+			<td style="text-align:center;">2026-11-12 12-14-53<br>2026-11-15 14-23-59<br>2026-11-15 16-34-59</td>
 			<td style="text-align:center;">CDragon: 1/2/1</td>
 			<td>
 				CDragon: <br>
@@ -2915,13 +2915,33 @@
 		</tr>
 		<tr>
 			<td style="text-align:center;">2026-11-15 16-16-15</td>
-			<td style="text-align:center;">CDragon: 1/2/1</td>
-			<td>Local Data Checking Program Debug</td>
+			<td style="text-align:center;">2</td>
+			<td>Debug Local Data Checking Program: Folders not found should make the loop `continue`</td>
 		</tr>
 		<tr>
 			<td style="text-align:center;">2026-11-15 16-19-16</td>
-			<td style="text-align:center;">CDragon: 1/2/1</td>
-			<td>Local Data Checking Program Debug</td>
+			<td style="text-align:center;">2</td>
+			<td>Debug Local Data Checking Program: Advance the creation of target folder</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-11-15 19-58-10</td>
+			<td style="text-align:center;">1</td>
+			<td>Debug Local Data Checking Program: Fix the issue that folders were considered as file to be compared</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-11-15 20-13-50</td>
+			<td style="text-align:center;">1</td>
+			<td>Debug Local Data Checking Program: Fix the issue that folders were considered as file to be compared</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-11-15 20-55-35</td>
+			<td style="text-align:center;">1</td>
+			<td>Debug Local Data Checking Program: Fix the BUG that `cdragon_folders` doesn't store relative paths in global check mode</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-11-15 21-19-29</td>
+			<td style="text-align:center;">1</td>
+			<td>Debug Local Data Checking Program: Restrict the range of data resource to compare</td>
 		</tr>
 	</tbody>
 </table>

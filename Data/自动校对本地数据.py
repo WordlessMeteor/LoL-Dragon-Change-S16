@@ -136,12 +136,14 @@ if step == 5:
     files_to_delete: list[str] = [] #只收录在提取文件夹中不存在但是在对应的目标文件夹中存在的文件（Only collects the files that don't exist in the extract directory but do in the corresponding target folder）
     if mode == "1":
         cdragon_folders: list[str] = []
-        for root, dirs, files in os.walk(source_prefix):
-            cdragon_folders.append(root.replace("\\", "/"))
+        for root, dirs, files in os.walk(os.path.join(source_prefix, "Game/DATA/FINAL/")):
+            cdragon_folders.append(os.path.relpath(root, source_prefix).replace("\\", "/") + "/")
+        for root, dirs, files in os.walk(os.path.join(source_prefix, "Plugins/")):
+            cdragon_folders.append(os.path.relpath(root, source_prefix).replace("\\", "/") + "/")
     else:
         cdragon_folders = manual_folders
     for i, folder in enumerate(cdragon_folders):
-        src_folder: str = os.path.join(source_prefix, folder).replace("\\", "/")
+        src_folder: str = source_prefix if folder == "./" else os.path.join(source_prefix, folder).replace("\\", "/")
         folder_norm: str = re.sub("^Game/DATA/FINAL/", "game/", folder)
         folder_norm = re.sub("^Plugins/", "plugins/", folder_norm)
         dst_folder: str = os.path.join(target_prefix, folder_norm).replace("\\", "/")
@@ -150,8 +152,8 @@ if step == 5:
             logPrint(f"文件夹{src_folder}不存在！\nFolder {src_folder} not found!", write_time = False)
             continue
         os.makedirs(dst_folder, exist_ok = True)
-        src_files: list[str] = os.listdir(src_folder)
-        dst_files: list[str] = os.listdir(dst_folder)
+        src_files: list[str] = [file for file in os.listdir(src_folder) if os.path.isfile(os.path.join(src_folder, file))]
+        dst_files: list[str] = [file for file in os.listdir(dst_folder) if os.path.isfile(os.path.join(dst_folder, file))]
         for file in dst_files:
             if file.endswith(TEXT_EXTENSIONS) and not file in src_files:
                 files_to_delete.append(os.path.join(dst_folder, file).replace("\\", "/"))
@@ -163,8 +165,12 @@ if step == 5:
             added: bool = False
             if dst_file_path in files_to_delete:
                 files_to_delete.remove(dst_file_path)
-            with open(src_file_path, "r", encoding = "utf-8") as fp:
-                src: str = fp.read()
+            try:
+                with open(src_file_path, "r", encoding = "utf-8") as fp:
+                    src: str = fp.read()
+            except UnicodeDecodeError:
+                logPrint("编码错误。程序跳过该文件。\nA UnicodeDecodeError occurs. The program will skip this file.")
+                continue
             if not file in os.listdir(dst_folder):
                 update = added = True
             else:
