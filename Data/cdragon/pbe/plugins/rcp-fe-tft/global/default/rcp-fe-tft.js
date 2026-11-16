@@ -617,7 +617,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.setFullLaunchProxy = function(e) {
-                h = e
+                p = e
             };
             const s = n(1),
                 i = "/lol-client-config/v3/client-config/",
@@ -631,33 +631,30 @@
                     descriptionFallback: "Launch Teamfight Tactics in Spectator Mode."
                 },
                 r = i + "lol.client_settings.tft.new_tab.overrideUrl",
-                c = "/deep-links/v1/settings",
-                d = i + "lol.client_settings.tft.set17_extension_config",
-                u = "/telemetry/v1/common-data",
-                m = "/riotclient/region-locale";
-            let h = null;
+                c = i + "lol.client_settings.tft.launch_url",
+                d = "/deep-links/v1/settings",
+                u = i + "lol.client_settings.tft.set17_extension_config",
+                m = "/telemetry/v1/common-data",
+                h = "/riotclient/region-locale";
+            let p = null;
             t.default = s.Ember.Service.extend({
                 homeOverrideUrl: "",
                 init: function() {
-                    this._super(...arguments), h && (h._registerLaunchTFTCallback(this.launchTFT.bind(this)), h._registerIsFullLaunchEnabledCallback(this.isFullLaunchEnabled.bind(this)), h._registerIsHextechTFTQueueCallback(this.isHextechTFTQueue.bind(this))), this.set("fullLaunchEnabled", !1), this.set("showTFTSpectator", !1), this.set("directLaunchEnabled", !0), this.set("TFTNewTabVisible", !1), this.set("isTencentRegion", !1), this.set("launchLink", ""), this.set("externalClientScheme", ""), this.set("leagueSessionId", ""), s.dataBinding.observe(a, this, (e => {
+                    this._super(...arguments), p && (p._registerLaunchTFTCallback(this.launchTFT.bind(this)), p._registerIsFullLaunchEnabledCallback(this.isFullLaunchEnabled.bind(this)), p._registerIsHextechTFTQueueCallback(this.isHextechTFTQueue.bind(this))), this.set("fullLaunchEnabled", !1), this.set("showTFTSpectator", !1), this.set("directLaunchEnabled", !0), this.set("TFTNewTabVisible", !1), this.set("isTencentRegion", !1), this.set("launchLink", ""), this.set("externalClientScheme", ""), this.set("leagueSessionId", ""), s.dataBinding.observe(a, this, (e => {
                         this.set("fullLaunchEnabled", e)
                     })), s.dataBinding.observe(l, this, (e => {
                         this.set("showTFTSpectator", !0 === e)
                     })), s.dataBinding.observe(r, this, (e => {
                         this.set("homeOverrideUrl", e)
-                    })), this.sharedAudioManager = s.navigation?.activityCenter?.getHomeHubsSharedAudioManager(), s.dataBinding.observe(m, this, (e => {
+                    })), this.sharedAudioManager = s.navigation?.activityCenter?.getHomeHubsSharedAudioManager(), s.dataBinding.observe(h, this, (e => {
                         this.set("isTencentRegion", "TENCENT" === e?.region)
-                    })), s.dataBinding.observe(c, this, (e => {
-                        e ? (this.set("externalClientScheme", e.externalClientScheme), s.logger.info(`Saves externalClientScheme as ${this.get("externalClientScheme")}`)) : s.logger.warning("No external link settings received.")
-                    })), s.dataBinding.observe("/lol-patch/v1/product-dependency", this, (e => {
-                        if (e && Object.prototype.hasOwnProperty.call(e, "product_id") && Object.prototype.hasOwnProperty.call(e, "patchline_id")) {
-                            const t = e.product_id,
-                                n = e.patchline_id;
-                            this.set("launchLink", `product/launch/v1/${t}/${n}?directLaunch=true`), s.logger.info(`Saves launchLink product with link: ${this.get("launchLink")}`)
-                        }
                     })), s.dataBinding.observe(d, this, (e => {
-                        e ? this.set("set17ExtensionConfig", e) : s.logger.warning("No set17 extension config received.")
+                        e ? (this.set("externalClientScheme", e.externalClientScheme), s.logger.info(`Saves externalClientScheme as ${this.get("externalClientScheme")}`)) : s.logger.warning("No external link settings received.")
+                    })), s.dataBinding.observe(c, this, (e => {
+                        e ? (s.logger.info(`Saving launchUrl product with link: ${e}`), this.set("launchLink", e)) : s.logger.warning(`${c} not recieved, not configure, or set to empty.`)
                     })), s.dataBinding.observe(u, this, (e => {
+                        e ? this.set("set17ExtensionConfig", e) : s.logger.warning("No set17 extension config received.")
+                    })), s.dataBinding.observe(m, this, (e => {
                         if (!e) return;
                         const t = e["common.session_id"];
                         t ? this.set("leagueSessionId", t) : this.set("leagueSessionId", "")
@@ -670,7 +667,7 @@
                     return this.get("directLaunchEnabled")
                 },
                 willDestroy: function() {
-                    this._super(...arguments), s.dataBinding.unobserve(a, this), s.dataBinding.unobserve(l, this), s.dataBinding.unobserve(r, this), s.dataBinding.unobserve(m, this), s.dataBinding.unobserve(c, this), s.dataBinding.unobserve(d, this), s.dataBinding.unobserve(u, this), h && h._unregisterCallbacks()
+                    this._super(...arguments), s.dataBinding.unobserve(a, this), s.dataBinding.unobserve(l, this), s.dataBinding.unobserve(r, this), s.dataBinding.unobserve(h, this), s.dataBinding.unobserve(d, this), s.dataBinding.unobserve(u, this), s.dataBinding.unobserve(m, this), p && p._unregisterCallbacks()
                 },
                 launchTFT: function(e, t) {
                     if (t === o.id) {
