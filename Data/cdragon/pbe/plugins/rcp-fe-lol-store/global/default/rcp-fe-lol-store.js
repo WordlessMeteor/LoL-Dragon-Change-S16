@@ -1586,43 +1586,42 @@
             }), t.default = void 0;
             const n = "RANKED_SOLO_5x5",
                 a = "RANKED_FLEX_SR",
-                r = "RANKED_FLEX_TT",
-                o = "RANKED_PREMADE_5x5",
-                i = "JADE_RANKED_SOLO_5x5",
-                E = "CHERRY",
-                _ = "RANKED_TFT",
-                s = "RANKED_TFT_DOUBLE_UP",
-                T = "RANKED_TFT_TURBO",
-                l = "RANKED_TFT_PAIRS",
-                R = [n, a, o, i],
-                u = [...R, r],
-                I = [E],
-                A = [_, s],
-                c = [T, l],
-                d = [...A, ...c],
-                S = [...u, ...A],
-                N = [...c, ...I];
-            var O = {
+                r = "RANKED_PREMADE_5x5",
+                o = "JADE_RANKED_SOLO_5x5",
+                i = "CHERRY",
+                E = "RANKED_TFT",
+                _ = "RANKED_TFT_DOUBLE_UP",
+                s = "RANKED_TFT_TURBO",
+                T = "RANKED_TFT_PAIRS",
+                l = [n, a, r, o],
+                R = [...l],
+                u = [i],
+                I = [E, _],
+                A = [s, T],
+                c = [...I, ...A],
+                d = [...R, ...I],
+                S = [...A, ...u];
+            var N = {
                 RANKED_SOLO_5x5_QUEUE_TYPE: n,
                 RANKED_FLEX_SR_QUEUE_TYPE: a,
-                RANKED_PREMADE_5X5_QUEUE_TYPE: o,
-                JADE_RANKED_SOLO_5x5: i,
-                RANKED_FLEX_TT_QUEUE_TYPE: r,
-                RANKED_CHERRY_QUEUE_TYPE: E,
-                RANKED_TFT_QUEUE_TYPE: _,
-                RANKED_TFT_DOUBLE_UP_QUEUE_TYPE: s,
-                RANKED_TFT_TURBO_QUEUE_TYPE: T,
-                RANKED_TFT_PAIRS_QUEUE_TYPE: l,
-                RANKED_LOL_QUEUE_TYPES: u,
-                RANKED_SR_QUEUE_TYPES: R,
-                RANKED_TFT_QUEUE_TYPES: A,
-                RATED_TFT_QUEUE_TYPES: c,
-                RANKED_AND_RATED_TFT_QUEUE_TYPES: d,
-                ALL_RANKED_QUEUE_TYPES: S,
-                ALL_RATED_QUEUE_TYPES: N,
-                ALL_RANKED_AND_RATED_QUEUE_TYPES: [...S, ...N]
+                RANKED_PREMADE_5X5_QUEUE_TYPE: r,
+                JADE_RANKED_SOLO_5x5: o,
+                RANKED_FLEX_TT_QUEUE_TYPE: "RANKED_FLEX_TT",
+                RANKED_CHERRY_QUEUE_TYPE: i,
+                RANKED_TFT_QUEUE_TYPE: E,
+                RANKED_TFT_DOUBLE_UP_QUEUE_TYPE: _,
+                RANKED_TFT_TURBO_QUEUE_TYPE: s,
+                RANKED_TFT_PAIRS_QUEUE_TYPE: T,
+                RANKED_LOL_QUEUE_TYPES: R,
+                RANKED_SR_QUEUE_TYPES: l,
+                RANKED_TFT_QUEUE_TYPES: I,
+                RATED_TFT_QUEUE_TYPES: A,
+                RANKED_AND_RATED_TFT_QUEUE_TYPES: c,
+                ALL_RANKED_QUEUE_TYPES: d,
+                ALL_RATED_QUEUE_TYPES: S,
+                ALL_RANKED_AND_RATED_QUEUE_TYPES: [...d, ...S]
             };
-            t.default = O
+            t.default = N
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1829,8 +1828,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "G8PgQycK",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.23\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.23\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.23\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-full-page-backdrop",[]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-dialog-frame",[]],["flush-element"],["text","\\n    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","dialog-medium"],["flush-element"],["text","\\n"],["block",["if"],[["get",["transferring"]]],null,4,3],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","disabled",["unknown",["quitDisabled"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"quit"],null],null],["flush-element"],["text","\\n      "],["append",["unknown",["tra","account_transfer_restart"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","account_transferred_out"]],false],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["block",["if"],[["get",["transferred"]]],null,0]],"locals":[]},{"statements":[["text","        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","account_transfer_failed"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["transferFailed"]]],null,2,1]],"locals":[]},{"statements":[["text","        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","account_transferring_out"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","transferring-spinner"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "aCuNij6N",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-full-page-backdrop",[]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-dialog-frame",[]],["flush-element"],["text","\\n    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","dialog-medium"],["flush-element"],["text","\\n"],["block",["if"],[["get",["transferring"]]],null,4,3],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","disabled",["unknown",["quitDisabled"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"quit"],null],null],["flush-element"],["text","\\n      "],["append",["unknown",["tra","account_transfer_restart"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","account_transferred_out"]],false],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["block",["if"],[["get",["transferred"]]],null,0]],"locals":[]},{"statements":[["text","        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","account_transfer_failed"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["transferFailed"]]],null,2,1]],"locals":[]},{"statements":[["text","        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","account_transferring_out"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","transferring-spinner"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1848,8 +1847,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "CaKbQqoD",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.23\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-conditions\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.23\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-conditions\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount-Releases\\\\16.23\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-conditions\\\\index.js\\" "],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h1"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p1"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h2"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p2"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h3"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p3"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h4"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p4"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h5"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p5"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h6"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p6"]],true],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "83nUVeQs",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-conditions\\\\layout.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-conditions\\\\style.styl\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-conditions\\\\index.js\\" "],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h1"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p1"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h2"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p2"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h3"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p3"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h4"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p4"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h5"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p5"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h6"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p6"]],true],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }],

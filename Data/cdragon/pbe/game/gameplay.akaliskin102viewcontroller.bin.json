@@ -23,8 +23,20 @@
                             "{c59f0757}"
                         ],
                         "EnableCondition": {
-                            "mScriptName": "AkaliWStealth",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                            "mDrivers": [
+                                {
+                                    "mScriptName": "AkaliWStealth",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "option": 49,
+                                        "__type": "IsOptionEnabledBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                }
+                            ],
+                            "__type": "AllTrueMaterialDriver"
                         },
                         "__type": "LogicDriverConditionalElementsEntry"
                     },
@@ -45,8 +57,20 @@
                             "{b169481e}"
                         ],
                         "EnableCondition": {
-                            "Spell": "Characters/Akali/Spells/AkaliWAbility/AkaliW",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                            "mDrivers": [
+                                {
+                                    "Spell": "Characters/Akali/Spells/AkaliWAbility/AkaliW",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                {
+                                    "mDriver": {
+                                        "option": 49,
+                                        "__type": "IsOptionEnabledBoolDriver"
+                                    },
+                                    "__type": "NotMaterialDriver"
+                                }
+                            ],
+                            "__type": "AllTrueMaterialDriver"
                         },
                         "__type": "LogicDriverConditionalElementsEntry"
                     },
@@ -139,6 +163,7 @@
         ],
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "mEyeCandy": true,
         "objectPath": "ClientStates/Gameplay/UX/LoL/Skins/AkaliSkin102ViewController/Particles/Akali_Skin102_W_BottomRight_Start",
         "__type": "VfxSystemDefinitionData"
     },
@@ -1052,6 +1077,7 @@
         ],
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "mEyeCandy": true,
         "objectPath": "ClientStates/Gameplay/UX/LoL/Skins/AkaliSkin102ViewController/Particles/Akali_Skin102_W_Holograph_Right",
         "__type": "VfxSystemDefinitionData"
     },
@@ -1090,6 +1116,7 @@
         ],
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "mEyeCandy": true,
         "objectPath": "ClientStates/Gameplay/UX/LoL/Skins/AkaliSkin102ViewController/Particles/Akali_Skin102_W_Light_Mid",
         "__type": "VfxSystemDefinitionData"
     },
@@ -2590,6 +2617,7 @@
         ],
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "mEyeCandy": true,
         "objectPath": "ClientStates/Gameplay/UX/LoL/Skins/AkaliSkin102ViewController/Particles/Akali_Skin102_W_Top_Start",
         "__type": "VfxSystemDefinitionData"
     },
@@ -4123,6 +4151,7 @@
         ],
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "mEyeCandy": true,
         "objectPath": "ClientStates/Gameplay/UX/LoL/Skins/AkaliSkin102ViewController/Particles/Akali_Skin102_W_BottomRight",
         "__type": "VfxSystemDefinitionData"
     },
@@ -4577,6 +4606,7 @@
         ],
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "mEyeCandy": true,
         "objectPath": "ClientStates/Gameplay/UX/LoL/Skins/AkaliSkin102ViewController/Particles/Akali_Skin102_W_TopLeft_Start",
         "__type": "VfxSystemDefinitionData"
     },
@@ -5490,6 +5520,7 @@
         ],
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "mEyeCandy": true,
         "objectPath": "ClientStates/Gameplay/UX/LoL/Skins/AkaliSkin102ViewController/Particles/Akali_Skin102_W_Holograph_Right_Down",
         "__type": "VfxSystemDefinitionData"
     },
@@ -6721,6 +6752,7 @@
         ],
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "mEyeCandy": true,
         "objectPath": "ClientStates/Gameplay/UX/LoL/Skins/AkaliSkin102ViewController/Particles/Akali_Skin102_W_Light",
         "__type": "VfxSystemDefinitionData"
     },
@@ -7862,6 +7894,7 @@
         ],
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "mEyeCandy": true,
         "objectPath": "ClientStates/Gameplay/UX/LoL/Skins/AkaliSkin102ViewController/Particles/Akali_Skin102_W_BottomLeft",
         "__type": "VfxSystemDefinitionData"
     },
@@ -8961,6 +8994,7 @@
         ],
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "mEyeCandy": true,
         "objectPath": "ClientStates/Gameplay/UX/LoL/Skins/AkaliSkin102ViewController/Particles/Akali_Skin102_W_TopRight",
         "__type": "VfxSystemDefinitionData"
     },
@@ -9872,6 +9906,7 @@
         ],
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "mEyeCandy": true,
         "objectPath": "ClientStates/Gameplay/UX/LoL/Skins/AkaliSkin102ViewController/Particles/Akali_Skin102_W_Holograph_Left",
         "__type": "VfxSystemDefinitionData"
     },
@@ -10241,6 +10276,7 @@
         "flags": 201,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "mEyeCandy": true,
         "objectPath": "ClientStates/Gameplay/UX/LoL/Skins/AkaliSkin102ViewController/Particles/Akali_Skin102_W_FireWork",
         "__type": "VfxSystemDefinitionData"
     },
@@ -12499,6 +12535,7 @@
         "flags": 201,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "mEyeCandy": true,
         "objectPath": "ClientStates/Gameplay/UX/LoL/Skins/AkaliSkin102ViewController/Particles/Akali_Skin102_W_Fire_L",
         "__type": "VfxSystemDefinitionData"
     },
@@ -15181,6 +15218,7 @@
         "flags": 201,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "mEyeCandy": true,
         "objectPath": "ClientStates/Gameplay/UX/LoL/Skins/AkaliSkin102ViewController/Particles/Akali_Skin102_W_Fire_R",
         "__type": "VfxSystemDefinitionData"
     },
@@ -15219,6 +15257,7 @@
         ],
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "mEyeCandy": true,
         "objectPath": "ClientStates/Gameplay/UX/LoL/Skins/AkaliSkin102ViewController/Particles/Akali_Skin102_W_Spotlight",
         "__type": "VfxSystemDefinitionData"
     },
@@ -17535,6 +17574,7 @@
         ],
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "mEyeCandy": true,
         "objectPath": "ClientStates/Gameplay/UX/LoL/Skins/AkaliSkin102ViewController/Particles/Akali_Skin102_W_Top",
         "__type": "VfxSystemDefinitionData"
     },
@@ -18632,6 +18672,7 @@
         ],
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "mEyeCandy": true,
         "objectPath": "ClientStates/Gameplay/UX/LoL/Skins/AkaliSkin102ViewController/Particles/Akali_Skin102_W_TopLeft",
         "__type": "VfxSystemDefinitionData"
     },
@@ -18670,6 +18711,7 @@
         ],
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "mEyeCandy": true,
         "objectPath": "ClientStates/Gameplay/UX/LoL/Skins/AkaliSkin102ViewController/Particles/Akali_Skin102_W_TopRight_Start",
         "__type": "VfxSystemDefinitionData"
     },
@@ -18708,6 +18750,7 @@
         ],
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "mEyeCandy": true,
         "objectPath": "ClientStates/Gameplay/UX/LoL/Skins/AkaliSkin102ViewController/Particles/Akali_Skin102_W_BottomLeft_Start",
         "__type": "VfxSystemDefinitionData"
     },
@@ -19621,6 +19664,7 @@
         ],
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "mEyeCandy": true,
         "objectPath": "ClientStates/Gameplay/UX/LoL/Skins/AkaliSkin102ViewController/Particles/Akali_Skin102_W_Holograph_Left_Down",
         "__type": "VfxSystemDefinitionData"
     },

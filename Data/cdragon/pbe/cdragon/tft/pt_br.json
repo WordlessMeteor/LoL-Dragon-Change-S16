@@ -535,7 +535,7 @@
                 "TFT13_Ambusher"
             ],
             "composition": [],
-            "desc": "Abates de Emboscadores têm chance de conceder espólio que escala com a Chance de Acerto Crítico. O valor do espólio concedido também tem Chance de Acerto Crítico, resultando em ainda mais espólios. Recebe uma Camille e uma Powder.",
+            "desc": "Abates realizados por Emboscadores têm chance de conceder espólio. A chance escala com a Chance de Acerto Crítico. O valor do espólio concedido também tem Chance de Acerto Crítico, resultando em ainda mais espólios. Recebe uma Camille e uma Powder.",
             "effects": {
                 "{51972fee}": 2.0,
                 "{a59e2760}": 0.5,
@@ -14930,7 +14930,7 @@
                 "TFT15_Destroyer"
             ],
             "composition": [],
-            "desc": "Abates de Carrascos têm chance de conceder espólio. A chance escala com a Chance de Acerto Crítico. O valor do espólio concedido também tem Chance de Acerto Crítico, resultando em ainda mais espólios. Recebe uma Katarina e uma Kalista.",
+            "desc": "Abates realizados por Carrascos têm chance de conceder espólio. A chance escala com a Chance de Acerto Crítico. O valor do espólio concedido também tem Chance de Acerto Crítico, resultando em ainda mais espólios. Recebe uma Katarina e uma Kalista.",
             "effects": {
                 "{51972fee}": 2.0,
                 "{a59e2760}": 0.5,
@@ -43906,7 +43906,7 @@
             "apiName": "TFT_Item_Artifact_EternalPact",
             "associatedTraits": [],
             "composition": [],
-            "desc": "Início do combate: forma um pacto com o Campeão aliado com mais Vida. Se ele morre, recebe @ManaRegenToGrant@ de Regeneração de Mana e @APToGrant@% de Poder de Habilidade.<br><br>Quando o aliado usa a habilidade, recebe @ManaToGrant@ de Mana. A cada @ShieldCadence@s, dá ao aliado um Escudo com @PercentAPShield*100@% do Poder de Habilidade do usuário.",
+            "desc": "Início do combate: forma um pacto com o Campeão aliado com mais Vida. Se ele morrer, o usuário receberá @ManaRegenToGrant@ de Regeneração de Mana e @APToGrant@% de Poder de Habilidade.<br><br>Quando o aliado conjura a habilidade dele, o usuário recebe @ManaToGrant@ de Mana. A cada @ShieldCadence@s, concede ao aliado um Escudo equivalente a @PercentAPShield*100@% do Poder de Habilidade do usuário.",
             "effects": {
                 "AP": 40.0,
                 "APToGrant": 40.0,
@@ -49746,7 +49746,7 @@
             "apiName": "TFT_Item_Artifact_BlightingJewel",
             "associatedTraits": [],
             "composition": [],
-            "desc": "Causar Dano Mágico reduz a Resistência Mágica do alvo em @MRReduction@. Se a Resistência Mágica do alvo for 0, em vez disso concede ao usuário @ManaGain@ de Mana.<br><br><rules>O dano de habilidade aciona em um inimigo apenas uma vez a cada @ICD@s. </rules>",
+            "desc": "Causar Dano Mágico reduz a Resistência Mágica do alvo em @MRReduction@. Se a Resistência Mágica do alvo for 0, em vez disso concederá ao usuário @ManaGain@ de Mana.<br><br><rules>O dano de habilidades só pode se aplicar a cada inimigo uma vez a cada @ICD@s. </rules>",
             "effects": {
                 "AP": 60.0,
                 "ICD": 0.5,
@@ -75210,7 +75210,7 @@
             "apiName": "TFT_Augment_FeelingLucky",
             "associatedTraits": [],
             "composition": [],
-            "desc": "Recebe @BaseGold@ de ouro e joga uma moeda. Se der cara, ganha @GoldForHeads@ de ouro a mais.<br><br>@TFTUnitProperty.item:TFT_Augment_FeelingLucky_Tooltip@",
+            "desc": "Recebe @BaseGold@ de ouro e joga uma moeda. Se der cara, ganha mais @GoldForHeads@ de ouro.<br><br>@TFTUnitProperty.item:TFT_Augment_FeelingLucky_Tooltip@",
             "effects": {
                 "BaseGold": 12.0,
                 "GoldForHeads": 4.0
@@ -83031,7 +83031,7 @@
             "id": null,
             "incompatibleTraits": [],
             "isAugment": true,
-            "name": "Lâminas Fatais",
+            "name": "Lâminas Mais Mortais",
             "tags": [
                 "{b72bd3bf}",
                 "{d22ae649}",
@@ -85468,7 +85468,7 @@
             "apiName": "DA_FeelingLucky",
             "associatedTraits": [],
             "composition": [],
-            "desc": "Recebe @GoldUpFront@ de ouro e joga uma moeda. Se der cara, ganha @GoldIfHeads@ de ouro a mais.",
+            "desc": "Recebe @GoldUpFront@ de ouro e joga uma moeda. Se der cara, ganha mais @GoldIfHeads@ de ouro.",
             "effects": {
                 "{b198bbbb}": 4.0,
                 "{be75f5e1}": 12.0
@@ -87214,7 +87214,7 @@
             "id": null,
             "incompatibleTraits": [],
             "isAugment": true,
-            "name": "Lâminas Fatais",
+            "name": "Lâminas Mais Mortais",
             "tags": [
                 "{cf1fd3af}"
             ],
