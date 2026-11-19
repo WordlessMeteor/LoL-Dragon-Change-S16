@@ -20,7 +20,6 @@
             "Shaders/SharedData/ConstantBuffers/ParticleDecalVS",
             "Shaders/SharedData/ConstantBuffers/GameplayConstantsPixel",
             "Shaders/SharedData/ConstantBuffers/MantisSharedMapParameters",
-            "Shaders/SharedData/ConstantBuffers/IBL_CUBEMAP_SCALES",
             "Shaders/SharedData/ConstantBuffers/UIToolsDebugScale",
             "Shaders/SharedData/ConstantBuffers/ClusterData",
             "Shaders/SharedData/ConstantBuffers/VFXDynamicPerParticleVS",
@@ -105,12 +104,6 @@
             },
             {
                 "name": "IBL_CUBEMAP",
-                "type": 2,
-                "{a1d375b5}": 1,
-                "__type": "X3DSharedTextureDef"
-            },
-            {
-                "name": "IBL_CUBEMAP",
                 "type": 7,
                 "{a1d375b5}": 2,
                 "__type": "X3DSharedTextureDef"
@@ -167,7 +160,6 @@
             {
                 "name": "POINT_SHADOW_MAP_DEPTH_PCF",
                 "type": 4,
-                "PlatformMask": 26,
                 "DefaultValue": [
                     1.0,
                     1.0,
@@ -347,6 +339,20 @@
                 "{52fc6665}": 14,
                 "StructureLink": "{6a4adf05}",
                 "__type": "{4bcf438a}"
+            },
+            {
+                "name": "IBL_CUBEMAP_SCALES",
+                "{a1d375b5}": 2,
+                "{52fc6665}": 0,
+                "__type": "{4bcf438a}"
+            },
+            {
+                "name": "ParticleQuadInstanceInfo",
+                "BindLocation": 0,
+                "{a1d375b5}": 2,
+                "{52fc6665}": 14,
+                "StructureLink": "{9cee70b7}",
+                "__type": "{4bcf438a}"
             }
         ],
         "__type": "X3DSharedData"
@@ -406,10 +412,6 @@
     "{c63393ed}": {
         "objectPath": "{c63393ed}",
         "__type": "EnvironmentPbrShadingModel"
-    },
-    "{c907a128}": {
-        "objectPath": "{c907a128}",
-        "__type": "SkinnedPbrShadingModel"
     },
     "{e3f0ccbe}": {
         "objectPath": "{e3f0ccbe}",
@@ -792,11 +794,6 @@
             {
                 "name": "SHADOW_SAMPLE_OFFSETS",
                 "type": 3,
-                "__type": "X3DSharedConstantDef"
-            },
-            {
-                "name": "IBL_CUBEMAP_SCALE",
-                "{a1d375b5}": 1,
                 "__type": "X3DSharedConstantDef"
             },
             {
@@ -1212,20 +1209,6 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "Shaders/SharedData/ConstantBuffers/IBL_CUBEMAP_SCALES": {
-        "name": "IBL_CUBEMAP_SCALES_BUFFER",
-        "type": 1,
-        "constants": [
-            {
-                "name": "IBL_CUBEMAP_SCALES",
-                "type": 3,
-                "Count": 64,
-                "__type": "X3DSharedConstantDef"
-            }
-        ],
-        "{a1d375b5}": 2,
-        "__type": "X3DSharedConstantBufferDef"
-    },
     "Shaders/SharedData/ConstantBuffers/FontRendering": {
         "name": "FontVertexCB",
         "frequency": 1,
@@ -1363,19 +1346,9 @@
             {
                 "name": "BONES",
                 "type": 8,
-                "Count": 68,
-                "register": 0,
-                "SetManually": true,
-                "PlatformMask": 3,
-                "__type": "X3DSharedConstantDef"
-            },
-            {
-                "name": "BONES",
-                "type": 8,
                 "Count": 256,
                 "register": 0,
                 "SetManually": true,
-                "PlatformMask": 24,
                 "__type": "X3DSharedConstantDef"
             }
         ],

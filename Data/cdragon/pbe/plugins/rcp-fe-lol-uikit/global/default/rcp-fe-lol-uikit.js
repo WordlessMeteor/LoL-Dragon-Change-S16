@@ -4763,20 +4763,24 @@
                     }
                 }
                 processName() {
-                    const e = this.getAttribute(o);
-                    this.shadowRoot.querySelector(".name").textContent = e || ""
+                    const e = this.getAttribute(o),
+                        t = this.shadowRoot.querySelector(".name");
+                    t && (t.textContent = e || "")
                 }
                 processTitle() {
-                    const e = this.getAttribute(i);
-                    this.shadowRoot.querySelector(".title").textContent = e || ""
+                    const e = this.getAttribute(i),
+                        t = this.shadowRoot.querySelector(".title");
+                    t && (t.textContent = e || "")
                 }
                 processScore() {
-                    const e = this.getAttribute(a);
-                    this.shadowRoot.querySelector(".score").textContent = e || ""
+                    const e = this.getAttribute(a),
+                        t = this.shadowRoot.querySelector(".score");
+                    t && (t.textContent = e || "")
                 }
                 processChestStatus() {
-                    const e = this.getAttribute(l);
-                    this.shadowRoot.querySelector(".chest > .status").textContent = e || ""
+                    const e = this.getAttribute(l),
+                        t = this.shadowRoot.querySelector(".chest > .status");
+                    t && (t.textContent = e || "")
                 }
                 processChestAsCore() {
                     const e = this.getAttribute(s),
@@ -10378,7 +10382,8 @@
                     const r = this.shadowRoot.querySelector(d);
                     if (e === o) {
                         null === r.getAttribute("theme") && (this._theme = this._getThemeFromLevel(n), r.setAttribute("theme", this._theme));
-                        this.shadowRoot.querySelector(".level-text").textContent = n
+                        const e = this.shadowRoot.querySelector(".level-text");
+                        e && (e.textContent = n)
                     } else e === i ? (this._percent = Number(n), this.shadowRoot.querySelector(".middle.regular").setAttribute("percent", this._percent)) : e === a ? (this._freshPercent = Number(n), this.shadowRoot.querySelector(".middle.fresh").setAttribute("percent", this._freshPercent), null !== n ? r.classList.add(c) : r.classList.remove(c)) : e === l ? (this._theme = n, r.setAttribute("theme", this._theme)) : e === s && (this._theme = this._getThemeFromLevel(n), r.setAttribute("theme", this._theme))
                 }
                 animateFill(e) {
@@ -10565,7 +10570,8 @@
                         }
                         this._tooltip = e
                     }
-                    return this._tooltip.querySelector("p").textContent = e, this._tooltip
+                    const t = this._tooltip.querySelector("p");
+                    return t && (t.textContent = e), this._tooltip
                 }
             }
             a.tagName = "lol-uikit-tooltipped-keyword";

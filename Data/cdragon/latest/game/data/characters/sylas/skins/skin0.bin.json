@@ -308,6 +308,538 @@
         "objectPath": "Characters/Sylas/Skins/Skin0",
         "__type": "SkinCharacterDataProperties"
     },
+    "Characters/Sylas/Skins/Skin0/Materials/Sylas_R_Absorbed_Gradient_inst": {
+        "name": "Characters/Sylas/Skins/Skin0/Materials/Sylas_R_Absorbed_Gradient_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/shared/materials/black.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Noise_Masks",
+                "texturePath": "assets/shared/materials/white.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Gradient_Texture",
+                "texturePath": "assets/shared/materials/default_doublegradient.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Base_Texture",
+                "texturePath": "assets/characters/sylas/skins/base/sylas_base_tx_cm.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Speed_X",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Speed_Y",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Size_Outer",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Bias_Outer",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaBias",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/GradientMappedFresnel",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/Sylas/Skins/Skin0/Materials/Sylas_Chains_inst": {
+        "name": "Characters/Sylas/Skins/Skin0/Materials/Sylas_Chains_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/characters/sylas/skins/base/sylas_base_shackles_tx_cm.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "texture_scroll",
+                "texturePath": "assets/characters/sylas/skins/base/particles/sylas_base_r_scrolltexture.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Color",
+                "value": [
+                    1.0,
+                    0.6666666865348816,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelColor_Size",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelColor_Bias",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "fresnel_color_ult",
+                "value": [
+                    0.3450980484485626,
+                    0.27450981736183167,
+                    0.7058823704719543,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Color",
+                "value": [
+                    0.6941176652908325,
+                    0.6313725709915161,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollRate",
+                "value": [
+                    0.0,
+                    -0.20000000298023224,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_size_ult",
+                "value": [
+                    12.15999984741211,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelColor_Bias_ult",
+                "value": [
+                    0.6949999928474426,
+                    0.20000000298023224,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollRate_ult",
+                "value": [
+                    0.5,
+                    -0.699999988079071,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ULTIMATE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Sylas_Chains",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "textures": [
+                {
+                    "name": "Diffuse_Texture",
+                    "options": [
+                        {
+                            "driver": {
+                                "mScriptName": "SylasRBuff",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "TextureName": "assets/characters/sylas/skins/base/sylas_base_shackles_ult.tex",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        }
+                    ],
+                    "__type": "DynamicMaterialTextureSwapDef"
+                }
+            ],
+            "staticSwitch": {
+                "name": "ULTIMATE",
+                "driver": {
+                    "mScriptName": "SylasRBuff",
+                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                },
+                "__type": "DynamicMaterialStaticSwitch"
+            },
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/Sylas/Skins/Skin0/Materials/Sylas_R_Clone": {
+        "name": "Characters/Sylas/Skins/Skin0/Materials/Sylas_R_Clone",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/shared/materials/black.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Size",
+                "value": [
+                    6.4008002281188965,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Bias",
+                "value": [
+                    -0.14499999582767487,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Diffuse_Alpha_Override",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Color",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelColor_Size",
+                "value": [
+                    1.3209174871444702,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Color",
+                "value": [
+                    0.687739372253418,
+                    0.6489204168319702,
+                    0.9357595443725586,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelColor_Bias",
+                "value": [
+                    -0.04500000178813934,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "INVERT_FRESNEL",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/FresnelAlpha_Basic",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
     "Characters/Sylas/Skins/Skin0/Particles/Sylas_Base_Q_Test_beam": {
         "complexEmitterDefinitionData": [
             {
@@ -23010,7 +23542,7 @@
                     "__type": "ValueFloat"
                 },
                 "CustomMaterial": {
-                    "Material": "Characters/Sylas/Skins/Skin0/Materials/Sylas_R_Absorbed_Gradient_inst",
+                    "Material": "{02015eb7}",
                     "materialDrivers": {
                         "AlphaBias": {
                             "frequency": 1,
@@ -30370,7 +30902,7 @@
                     "__type": "ValueFloat"
                 },
                 "CustomMaterial": {
-                    "Material": "Characters/Sylas/Skins/Skin0/Materials/Sylas_R_Clone",
+                    "Material": "{f8d8e0da}",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 0,
@@ -41491,7 +42023,7 @@
                     "__type": "ValueFloat"
                 },
                 "CustomMaterial": {
-                    "Material": "Characters/Sylas/Skins/Skin0/Materials/Sylas_R_Absorbed_Gradient_inst",
+                    "Material": "{02015eb7}",
                     "materialDrivers": {
                         "AlphaBias": {
                             "frequency": 1,
@@ -41558,7 +42090,7 @@
                     "__type": "ValueFloat"
                 },
                 "CustomMaterial": {
-                    "Material": "Characters/Sylas/Skins/Skin0/Materials/Sylas_R_Absorbed_Gradient_inst",
+                    "Material": "{02015eb7}",
                     "materialDrivers": {
                         "AlphaBias": {
                             "frequency": 1,
@@ -47880,227 +48412,6 @@
         "objectPath": "Characters/Sylas/Skins/Skin0/Particles/Sylas_Base_R_Hand_Buff",
         "__type": "VfxSystemDefinitionData"
     },
-    "Characters/Sylas/Skins/Skin0/Materials/Sylas_Chains_inst": {
-        "name": "Characters/Sylas/Skins/Skin0/Materials/Sylas_Chains_inst",
-        "samplerValues": [
-            {
-                "TextureName": "Diffuse_Texture",
-                "texturePath": "assets/characters/sylas/skins/base/sylas_base_shackles_tx_cm.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "texture_scroll",
-                "texturePath": "assets/characters/sylas/skins/base/particles/sylas_base_r_scrolltexture.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "modelHeight",
-                "value": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "rimOffset",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMax",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMin",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Fresnel_Color",
-                "value": [
-                    1.0,
-                    0.6666666865348816,
-                    0.0,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "FresnelColor_Size",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "FresnelColor_Bias",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Bloom_Intensity",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "fresnel_color_ult",
-                "value": [
-                    0.3450980484485626,
-                    0.27450981736183167,
-                    0.7058823704719543,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Bloom_Color",
-                "value": [
-                    0.6941176652908325,
-                    0.6313725709915161,
-                    1.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollRate",
-                "value": [
-                    0.0,
-                    -0.20000000298023224,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Fresnel_size_ult",
-                "value": [
-                    12.15999984741211,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "FresnelColor_Bias_ult",
-                "value": [
-                    0.6949999928474426,
-                    0.20000000298023224,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollRate_ult",
-                "value": [
-                    0.5,
-                    -0.699999988079071,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_RIM",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "ULTIMATE",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NUM_BLEND_WEIGHTS": "4"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/SkinnedMesh/Sylas_Chains",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "childTechniques": [
-            {
-                "name": "transition",
-                "parentName": "normal",
-                "shaderMacros": {
-                    "TRANSITION": "1"
-                },
-                "__type": "StaticMaterialChildTechniqueDef"
-            }
-        ],
-        "dynamicMaterial": {
-            "textures": [
-                {
-                    "name": "Diffuse_Texture",
-                    "options": [
-                        {
-                            "driver": {
-                                "mScriptName": "SylasRBuff",
-                                "__type": "HasBuffDynamicMaterialBoolDriver"
-                            },
-                            "TextureName": "assets/characters/sylas/skins/base/sylas_base_shackles_ult.tex",
-                            "__type": "DynamicMaterialTextureSwapOption"
-                        }
-                    ],
-                    "__type": "DynamicMaterialTextureSwapDef"
-                }
-            ],
-            "staticSwitch": {
-                "name": "ULTIMATE",
-                "driver": {
-                    "mScriptName": "SylasRBuff",
-                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                },
-                "__type": "DynamicMaterialStaticSwitch"
-            },
-            "__type": "DynamicMaterialDef"
-        },
-        "__type": "StaticMaterialDef"
-    },
     "Characters/Sylas/Skins/Skin0/Resources": {
         "resourceMap": {
             "Sylas_E_Root": "Characters/Sylas/Skins/Skin0/Particles/Sylas_Base_E_Root",
@@ -48177,13 +48488,11 @@
         "DATA/Characters/Sylas/Sylas_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin3_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
         "DATA/Characters/Sylas/Sylas_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin3_Skins_Skin4_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin5_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
         "DATA/Characters/Sylas/Sylas_Multi_Skins_Skin0_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin8_Skins_Skin9.bin",
-        "DATA/Characters/Sylas/Sylas_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin2_Skins_Skin3_Skins_Skin34_Skins_Skin35_Skins_Skin4_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin5_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
         "DATA/Characters/Sylas/Sylas_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin2_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin3_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7.bin",
         "DATA/Characters/Sylas/Sylas_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin2_Skins_Skin3_Skins_Skin4_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin5_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin6_Skins_Skin7.bin",
         "DATA/Characters/Sylas/Sylas_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin2_Skins_Skin3_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
         "DATA/Characters/Sylas/Sylas_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin2_Skins_Skin3_Skins_Skin34_Skins_Skin35_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7.bin",
         "DATA/Characters/Sylas/Sylas_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin2_Skins_Skin3_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7.bin",
-        "DATA/Characters/Sylas/Sylas_Multi_Skins_Skin0_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin8_Skins_Skin9.bin",
         "DATA/Characters/Sylas/Sylas_Multi_Skins_Skin0_Skins_Skin34_Skins_Skin35.bin"
     ]
 }

@@ -1,0 +1,589 @@
+{
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene",
+        "Layer": 7,
+        "Elements": [
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/Background",
+            "{f540cb55}",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/ItemsGroup"
+        ],
+        "__type": "UISceneData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/HeaderPressKeyToRevive": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/HeaderPressKeyToRevive",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1339.0,
+                    86.0
+                ],
+                "Size": [
+                    256.0,
+                    20.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "Kiwi_ArcadeGoHTrackerHeaderPressKeyToRevive",
+        "FontDescription": "UX/Fonts/Descriptions/HUD_Kiwi_Beaufort_Bold_9_0_0_Grey4",
+        "TextAlignmentHorizontal": 2,
+        "__type": "UiElementTextData"
+    },
+    "{f540cb55}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/CardTemplate",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene",
+        "Elements": [
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/CardTemplate/UnobtainedCard",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/CardTemplate/ObtainedCard",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/CardTemplate/VFX_OnCollect"
+        ],
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1275.0,
+                    126.0
+                ],
+                "Size": [
+                    60.0,
+                    64.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "{8ffd7c61}"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/CardTemplate/UnobtainedCard": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/CardTemplate/UnobtainedCard",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene",
+        "Layer": 4,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    2.0,
+                    0.0
+                ],
+                "Size": [
+                    64.0,
+                    64.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "{0a567dbd}": 2,
+                "{0be0de52}": 2,
+                "__type": "{f090d2e7}"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/CardTemplate/VFX_OnCollect": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/CardTemplate/VFX_OnCollect",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene",
+        "Layer": 4,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    2.0,
+                    0.0
+                ],
+                "Size": [
+                    64.0,
+                    64.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "{0a567dbd}": 2,
+                "{0be0de52}": 2,
+                "__type": "{f090d2e7}"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/Particles/Kiwi_S3_GoH_Arcade_UI_CoinCollection",
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/CardTemplate/ObtainedCard": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/CardTemplate/ObtainedCard",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene",
+        "Layer": 4,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    2.0,
+                    0.0
+                ],
+                "Size": [
+                    64.0,
+                    64.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "{0a567dbd}": 2,
+                "{0be0de52}": 2,
+                "__type": "{f090d2e7}"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/RewardIcon": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/RewardIcon",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1530.0,
+                    118.0
+                ],
+                "Size": [
+                    58.0,
+                    58.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "{f7636b62502ae76c}",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/VFX_CollectionCompletion_Loop": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/VFX_CollectionCompletion_Loop",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene",
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1260.0,
+                    85.0
+                ],
+                "Size": [
+                    340.0,
+                    126.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/Particles/Kiwi_S3_GoH_Arcade_UI_CoinCollectionCompletion_Loop",
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/Divider": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/Divider",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1516.0,
+                    118.0
+                ],
+                "Size": [
+                    2.0,
+                    80.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "{06a0e7537f289cdf}",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/VFX_CollectionOnComplete": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/VFX_CollectionOnComplete",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene",
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1260.0,
+                    85.0
+                ],
+                "Size": [
+                    340.0,
+                    126.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/Particles/Kiwi_S3_GoH_Arcade_UI_CoinCollectionCompletion",
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/HeaderCollect": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/HeaderCollect",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1339.0,
+                    86.0
+                ],
+                "Size": [
+                    256.0,
+                    20.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "Kiwi_ArcadeGoHTrackerHeaderCollect",
+        "FontDescription": "UX/Fonts/Descriptions/HUD_Kiwi_Beaufort_Bold_9_0_0_Grey4",
+        "TextAlignmentHorizontal": 2,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/HeaderReviveReady": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/HeaderReviveReady",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1339.0,
+                    86.0
+                ],
+                "Size": [
+                    256.0,
+                    20.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "Kiwi_ArcadeGoHTrackerHeaderReviveReady",
+        "FontDescription": "UX/Fonts/Descriptions/HUD_Kiwi_Beaufort_Bold_9_0_0_Grey4",
+        "TextAlignmentHorizontal": 2,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/HeaderComplete": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/HeaderComplete",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene",
+        "Layer": 1,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1172.0,
+                    59.0
+                ],
+                "Size": [
+                    512.0,
+                    64.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "{7dc13bc6b3496ad1}",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/ItemsGroup": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/ItemsGroup",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene",
+        "Elements": [
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/ItemsGroup/Region"
+        ],
+        "Region": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/ItemsGroup/Region",
+        "LayoutStyle": {
+            "VerticalJustification": 1,
+            "RowVerticalAlignment": 1,
+            "__type": "LayoutStyleHorizontalList"
+        },
+        "__type": "UiElementGroupManagedLayoutData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/RewardRegion": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/RewardRegion",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1530.0,
+                    118.0
+                ],
+                "Size": [
+                    58.0,
+                    58.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/RewardLabel": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/RewardLabel",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 3,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1522.0,
+                    176.0
+                ],
+                "Size": [
+                    74.0,
+                    22.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "Kiwi_KDAGoHTrackerRewardLabel",
+        "FontDescription": "UX/Fonts/Descriptions/HUD_Kiwi_Beaufort_Bold_8_0_0_Grey1",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/Background": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/Background",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 1,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1260.0,
+                    105.0
+                ],
+                "Size": [
+                    340.0,
+                    106.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "{12a7111a3b76f3bc}",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/ItemsGroup/Region": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/ItemsGroup/Region",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1270.0,
+                    115.0
+                ],
+                "Size": [
+                    240.0,
+                    83.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/HeaderIncomplete": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/HeaderIncomplete",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene",
+        "Enabled": true,
+        "Layer": 1,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1172.0,
+                    56.0
+                ],
+                "Size": [
+                    512.0,
+                    64.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "{4aaa3347cd999c1a}",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/VFX_CollectionCompletion_DeathLoop": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene/VFX_CollectionCompletion_DeathLoop",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/UIBase/Scene",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1260.0,
+                    85.0
+                ],
+                "Size": [
+                    340.0,
+                    126.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    1.0,
+                    0.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiGoHArcadeTracker/Particles/Kiwi_S3_GoH_Arcade_UI_CoinCollectionCompletion_DeathLoop",
+        "__type": "UiElementParticleSystemData"
+    },
+    "__linked": []
+}

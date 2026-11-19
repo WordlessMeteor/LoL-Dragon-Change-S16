@@ -161410,12 +161410,12 @@
         "mDataValues": [
             {
                 "mName": "PercentCurrentHPMelee",
-                "mValue": 9.0,
+                "mValue": 8.0,
                 "__type": "ItemDataValue"
             },
             {
                 "mName": "PercentCurrentHPRanged",
-                "mValue": 7.0,
+                "mValue": 6.0,
                 "__type": "ItemDataValue"
             },
             {
@@ -251776,7 +251776,7 @@
             "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/223069_Kiwi_VoidImmolation.png",
             "InventoryIconLarge": "ASSETS/Items/Icons2D/AutoAtlas/LargeIcons/223069_Kiwi_VoidImmolation.png",
             "epicness": 6,
-            "effectRadius": 400.0,
+            "effectRadius": 375.0,
             "__type": "ItemDataClient"
         },
         "mVFXResourceResolver": {
@@ -297132,7 +297132,7 @@
                         "__type": "StatByCoefficientCalculationPart"
                     },
                     {
-                        "mCoefficient": 0.07999999821186066,
+                        "mCoefficient": 0.07000000029802322,
                         "__type": "StatByCoefficientCalculationPart"
                     },
                     {
@@ -318964,7 +318964,7 @@
             },
             {
                 "mName": "PickupHealthGain",
-                "mValue": 0.20000000298023224,
+                "mValue": 0.1599999964237213,
                 "__type": "ItemDataValue"
             },
             {
@@ -626827,7 +626827,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/common_Aura_Self.tex",
+                "texture": "ASSETS/Shared/Particles/White.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -632329,7 +632329,7 @@
                     "scaleEmitOffsetByBoundObjectSize": 0.004999999888241291,
                     "__type": "VfxFlexShapeDefinitionData"
                 },
-                "particleColorTexture": "ASSETS/Shared/Particles/color-rampdown32_03_2.tex",
+                "particleColorTexture": "ASSETS/Shared/Particles/TFT/alpha_20_2.tex",
                 "blendMode": 1,
                 "birthColor": {
                     "constantValue": [
@@ -632343,11 +632343,13 @@
                 "pass": 2,
                 "meshRenderFlags": 0,
                 "colorLookUpTypeY": 3,
+                "alphaRef": 0,
                 "distortionDefinition": {
                     "distortion": 0.0020000000949949026,
                     "normalMapTexture": "ASSETS/Characters/Garen/Skins/Skin24/Particles/common_distort-pinch.tex",
                     "__type": "VfxDistortionDefinitionData"
                 },
+                "miscRenderFlags": 1,
                 "isUniformScale": 1,
                 "birthScale0": {
                     "constantValue": [
@@ -632379,7 +632381,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/common_Aura_Self.tex",
+                "texture": "ASSETS/Shared/Particles/White.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -664918,7 +664920,7 @@
             "ManaToHeal": {
                 "mFormulaParts": [
                     {
-                        "mCoefficient": 0.00800000037997961,
+                        "mCoefficient": 0.01600000075995922,
                         "__type": "AbilityResourceByCoefficientCalculationPart"
                     }
                 ],
@@ -718234,8 +718236,8 @@
             "mDescription": "GeneratedTip_Item_2138_Description",
             "mDynamicTooltip": "GeneratedTip_Item_2138_TooltipInventory",
             "mShopTooltip": "GeneratedTip_Item_2138_TooltipShop",
-            "inventoryIcon": "assets/items/icons2d/2138_class_elixirofiron.dds",
-            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/2138_Class_ElixirOfIron.png",
+            "inventoryIcon": "assets/items/icons2d/autoatlas/smallicons/2138_elixirofiron_64px.dds",
+            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/2138_ElixirofIron_44px.png",
             "epicness": 7,
             "__type": "ItemDataClient"
         },
@@ -754231,8 +754233,8 @@
             "mDescription": "GeneratedTip_Item_2139_Description",
             "mDynamicTooltip": "GeneratedTip_Item_2139_TooltipInventory",
             "mShopTooltip": "GeneratedTip_Item_2139_TooltipShop",
-            "inventoryIcon": "assets/items/icons2d/2139_class_t1_elixirofsorcery.dds",
-            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/2139_Class_T1_ElixirOfSorcery.png",
+            "inventoryIcon": "assets/items/icons2d/autoatlas/smallicons/2139_elixirofsorcery_64px.dds",
+            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/2139_ElixirofSorcery_44px.png",
             "epicness": 7,
             "__type": "ItemDataClient"
         },
@@ -767004,10 +767006,16 @@
                 "mName": "NashorADValue",
                 "mValue": 0.33000001311302185,
                 "__type": "ItemDataValue"
+            },
+            {
+                "mName": "NashorHSPValue",
+                "mValue": 150.0,
+                "__type": "ItemDataValue"
             }
         ],
         "mItemCalculations": {
             "TotalOnHitDamage": {
+                "mExpandedTooltipCalculationDisplay": 0,
                 "mFormulaParts": [
                     {
                         "mDataValue": "NashorsBaseValue",
@@ -767016,6 +767024,12 @@
                     {
                         "mDataValue": "NashorsAPValue",
                         "__type": "StatByNamedDataValueCalculationPart"
+                    },
+                    {
+                        "mStat": 34,
+                        "statType": 3,
+                        "mCoefficient": 150.0,
+                        "__type": "StatByCoefficientCalculationPart"
                     }
                 ],
                 "__type": "GameCalculation"
@@ -894923,8 +894937,8 @@
             "mDescription": "GeneratedTip_Item_2031_Description",
             "mDynamicTooltip": "GeneratedTip_Item_2031_TooltipInventory",
             "mShopTooltip": "GeneratedTip_Item_2031_TooltipShop",
-            "inventoryIcon": "assets/items/icons2d/2031_class_t1_refillablepotion.dds",
-            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/2031_Class_T1_RefillablePotion.png",
+            "inventoryIcon": "assets/items/icons2d/autoatlas/smallicons/2031_refillablepotion_64px.dds",
+            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/2031_RefillablePotion_44px.png",
             "epicness": 0,
             "__type": "ItemDataClient"
         },
@@ -1085095,7 +1085109,7 @@
                     "__type": "ValueFloat"
                 },
                 "CustomMaterial": {
-                    "Material": "Items/3116/Particles/IceMat",
+                    "Material": "{464be137}",
                     "materialDrivers": {
                         "AlphaGlobal": {
                             "frequency": 1,
@@ -1302858,8 +1302872,8 @@
             "mDescription": "GeneratedTip_Item_2140_Description",
             "mDynamicTooltip": "GeneratedTip_Item_2140_TooltipInventory",
             "mShopTooltip": "GeneratedTip_Item_2140_TooltipShop",
-            "inventoryIcon": "assets/items/icons2d/2140_class_t0_elixirofwrath.dds",
-            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/2140_Class_T0_ElixirOfWrath.png",
+            "inventoryIcon": "assets/items/icons2d/autoatlas/smallicons/2140_elixirofwrath_64px.dds",
+            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/2140_ElixirofWrath_44px.png",
             "epicness": 7,
             "__type": "ItemDataClient"
         },
@@ -1323506,6 +1323520,12 @@
                         "mStatFormula": 1,
                         "mDataValue": "SpellbladeMultiplier",
                         "__type": "StatByNamedDataValueCalculationPart"
+                    },
+                    {
+                        "mStat": 1,
+                        "mStatFormula": 2,
+                        "mCoefficient": 0.25,
+                        "__type": "StatByCoefficientCalculationPart"
                     }
                 ],
                 "__type": "GameCalculation"
@@ -1336760,7 +1336780,7 @@
             "mDescription": "GeneratedTip_Item_773161_Description",
             "mDynamicTooltip": "GeneratedTip_Item_773161_TooltipInventory",
             "mShopTooltip": "GeneratedTip_Item_773161_TooltipShop",
-            "inventoryIcon": "{dcac49c18650d322}",
+            "inventoryIcon": "assets/items/icons2d/3170_moonflair_spellblade.tex",
             "epicness": 5,
             "__type": "ItemDataClient"
         },
@@ -1337374,6 +1337394,12 @@
                     },
                     {
                         "mDataValue": "APRatio",
+                        "__type": "StatByNamedDataValueCalculationPart"
+                    },
+                    {
+                        "mStat": 2,
+                        "mStatFormula": 2,
+                        "mDataValue": "ADRatio",
                         "__type": "StatByNamedDataValueCalculationPart"
                     }
                 ],
@@ -1342525,8 +1342551,8 @@
             "mDescription": "GeneratedTip_Item_2003_Description",
             "mDynamicTooltip": "GeneratedTip_Item_2003_TooltipInventory",
             "mShopTooltip": "GeneratedTip_Item_2003_TooltipShop",
-            "inventoryIcon": "assets/items/icons2d/2003_class_t1_healthpotion.dds",
-            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/2003_Class_T1_HealthPotion.png",
+            "inventoryIcon": "assets/items/icons2d/autoatlas/smallicons/2003_healthpotion_64px.dds",
+            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/2003_HealthPotion_44px.png",
             "epicness": 0,
             "__type": "ItemDataClient"
         },
@@ -1344468,8 +1344494,8 @@
             "mDescription": "GeneratedTip_Item_2010_Description",
             "mDynamicTooltip": "GeneratedTip_Item_2010_TooltipInventory",
             "mShopTooltip": "GeneratedTip_Item_2010_TooltipShop",
-            "inventoryIcon": "assets/items/icons2d/2010_class_t1_totalbiscuitofeverlastingwill.dds",
-            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/2010_Class_T1_TotalBiscuitofEverlastingWill.png",
+            "inventoryIcon": "assets/items/icons2d/autoatlas/smallicons/2010_totalbiscuitofeverlastingwill_64px.dds",
+            "InventoryIconSmall": "ASSETS/Items/Icons2D/AutoAtlas/SmallIcons/2010_TotalBiscuitofEverlastingWill_44px.png",
             "epicness": 0,
             "__type": "ItemDataClient"
         },
@@ -1378553,6 +1378579,46 @@
                     }
                 ],
                 "__type": "ItemDataValues"
+            },
+            "Kiwi": {
+                "DataValues": [
+                    {
+                        "mName": "BulwarkResists",
+                        "mValue": 60.0,
+                        "__type": "ItemDataValue"
+                    },
+                    {
+                        "mName": "BulwarkResistsPerAdditionalChampion",
+                        "mValue": 5.0,
+                        "__type": "ItemDataValue"
+                    },
+                    {
+                        "mName": "BulwarkDuration",
+                        "mValue": 20.0,
+                        "__type": "ItemDataValue"
+                    },
+                    {
+                        "mName": "Tier1SRPalisadeCount",
+                        "mValue": 3.0,
+                        "__type": "ItemDataValue"
+                    },
+                    {
+                        "mName": "Tier2PalisadeCount",
+                        "mValue": 3.0,
+                        "__type": "ItemDataValue"
+                    },
+                    {
+                        "mName": "Tier1PalisadeGold",
+                        "mValue": 100.0,
+                        "__type": "ItemDataValue"
+                    },
+                    {
+                        "mName": "Tier2PalisadeValue",
+                        "mValue": 100.0,
+                        "__type": "ItemDataValue"
+                    }
+                ],
+                "__type": "ItemDataValues"
             }
         },
         "mCategories": [
@@ -1392031,6 +1392097,7 @@
         "mPercentMagicPenetrationMod": 0.30000001192092896,
         "mFlatMagicDamageMod": 60.0,
         "sellBackModifier": 0.5,
+        "percentBaseMPRegenMod": 5.0,
         "mCategories": [
             "SpellDamage",
             "CooldownReduction",
@@ -1392076,6 +1392143,10 @@
                             },
                             {
                                 "type": "MagicPenPercent",
+                                "__type": "TooltipInstanceListElement"
+                            },
+                            {
+                                "type": "BaseManaRegen",
                                 "__type": "TooltipInstanceListElement"
                             }
                         ],

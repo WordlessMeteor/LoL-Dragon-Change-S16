@@ -458,13 +458,13 @@
                 {
                     "name": "OnHitMultiplier",
                     "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
+                        0.6700000166893005,
+                        0.6700000166893005,
+                        0.6700000166893005,
+                        0.6700000166893005,
+                        0.6700000166893005,
+                        0.6700000166893005,
+                        0.6700000166893005
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -616,6 +616,42 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                }
+            },
+            "{66185ec4}": {
+                "cherry": {
+                    "Calculations": {
+                        "TotalDamage": {
+                            "mFormulaParts": [
+                                {
+                                    "mDataValue": "BaseDamage",
+                                    "__type": "NamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mBreakpoints": [
+                                        {
+                                            "mLevel": 10,
+                                            "mBonusPerLevelAtAndAfter": 8.0,
+                                            "__type": "Breakpoint"
+                                        }
+                                    ],
+                                    "__type": "ByCharLevelBreakpointsCalculationPart"
+                                },
+                                {
+                                    "mDataValue": "APRatio",
+                                    "__type": "StatByNamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mStat": 2,
+                                    "mStatFormula": 2,
+                                    "mCoefficient": 0.30000001192092896,
+                                    "__type": "StatByCoefficientCalculationPart"
+                                }
+                            ],
+                            "__type": "GameCalculation"
+                        }
+                    },
+                    "__type": "{4acf67d2}"
                 }
             },
             "mCoefficient2": 0.4000000059604645,
@@ -4122,7 +4158,7 @@
             "__type": "ModifiableFloat"
         },
         "attackRangeModifiable": {
-            "baseValue": 525.0,
+            "baseValue": 550.0,
             "__type": "ModifiableFloat"
         },
         "attackSpeedModifiable": {
@@ -4252,6 +4288,8 @@
             ],
             "searchTags": "mage",
             "searchTagsSecondary": "marksman",
+            "{d1df3c3f}": "mage",
+            "{f693457b}": "marksman",
             "championId": 268,
             "roles": "ATTACKER",
             "magicRank": 8,

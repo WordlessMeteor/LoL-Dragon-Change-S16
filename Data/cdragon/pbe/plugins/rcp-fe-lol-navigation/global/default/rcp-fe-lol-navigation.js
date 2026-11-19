@@ -15727,9 +15727,9 @@
                     if (this.get("applicationExisted") && e) {
                         const t = this.get("isOverrideReadyCheckComplete"),
                             n = this.get("overrideUrl");
-                        t && n && this._sendMessageToIframe(c.AC_IFRAME_MESSAGES.ROUTE_ACTIVITY_CENTER, {
+                        t && n ? this._sendMessageToIframe(c.AC_IFRAME_MESSAGES.ROUTE_ACTIVITY_CENTER, {
                             pageId: e
-                        })
+                        }) : this.get("navConfig")?.length > 0 && this.get("validTabs")?.has(e) && this.get("selectedTabId") !== e && this.handleSelectTab(e)
                     }
                 })),
                 ACTIVITY_TEMPLATE_TYPES: c.ACTIVITY_TEMPLATE_TYPES,
@@ -32787,7 +32787,7 @@
                     i = parseInt(r / 1e3, 10);
                 let a = t.buttonShutdown;
                 const s = t.lockoutText.replace(/\{\{lockoutTimeRemaining\}\}/, i);
-                r > 0 && (a += ` ${s}`), n.textContent = a
+                r > 0 && (a += ` ${s}`), n && (n.textContent = a)
             }
             n(608)
         }, e => {

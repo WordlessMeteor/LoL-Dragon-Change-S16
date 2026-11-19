@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "full",
-    "version": "16.22.1",
+    "version": "16.23.1",
     "data": {
         "Jade_Aatrox": {
             "id": "Jade_Aatrox",
@@ -53260,6 +53260,630 @@
             },
             "recommended": []
         },
+        "Jade_Talon": {
+            "id": "Jade_Talon",
+            "key": "60091",
+            "name": "刀锋之影",
+            "title": "泰隆",
+            "image": {
+                "full": "Jade_Talon.png",
+                "sprite": "champion2.png",
+                "group": "champion",
+                "x": 0,
+                "y": 48,
+                "w": 48,
+                "h": 48
+            },
+            "skins": [
+                {
+                    "id": "60091000",
+                    "num": 0,
+                    "name": "default",
+                    "chromas": false
+                }
+            ],
+            "lore": "- 被动技能重大更新：攻击对被控制的敌人造成更高伤害。<br>- Q技能将强化泰隆的下一次攻击，造成额外伤害，并附带流血效果。<br>- E技能将进行一次闪现，对敌人造成沉默并提升对其造成的伤害。",
+            "blurb": "- 被动技能重大更新：攻击对被控制的敌人造成更高伤害。<br>- Q技能将强化泰隆的下一次攻击，造成额外伤害，并附带流血效果。<br>- E技能将进行一次闪现，对敌人造成沉默并提升对其造成的伤害。",
+            "allytips": [],
+            "enemytips": [],
+            "tags": [
+                "Assassin",
+                "Fighter"
+            ],
+            "partype": "法力",
+            "info": {
+                "attack": 9,
+                "defense": 3,
+                "magic": 1,
+                "difficulty": 6
+            },
+            "stats": {
+                "hp": 525,
+                "hpperlevel": 85,
+                "mp": 300,
+                "mpperlevel": 40,
+                "movespeed": 350,
+                "armor": 24.5,
+                "armorperlevel": 3.5,
+                "spellblock": 31.25,
+                "spellblockperlevel": 1.25,
+                "attackrange": 125,
+                "hpregen": 8,
+                "hpregenperlevel": 0.75,
+                "mpregen": 7.25,
+                "mpregenperlevel": 0.5,
+                "crit": 0,
+                "critperlevel": 0,
+                "attackdamage": 53.1,
+                "attackdamageperlevel": 0,
+                "attackspeedperlevel": 2.7,
+                "attackspeed": 0.6684
+            },
+            "spells": [
+                {
+                    "id": "Jade_TalonQ",
+                    "name": "诺克萨斯式外交",
+                    "description": "泰隆的下一次攻击会造成额外伤害，使敌方英雄流血，并使其显形。",
+                    "tooltip": "泰隆在{{ readyduration }}秒内的下一次普攻将造成<physicalDamage>{{ totalattackdamage }}物理伤害</physicalDamage>。<br /><br />命中一名英雄时，还会在{{ bleedduration }}秒内持续造成<physicalDamage>{{ totalbleeddamage }}物理伤害</physicalDamage> ，并将其显形{{ revealduration }}秒。{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "伤害",
+                            "流血伤害",
+                            "冷却时间",
+                            "@AbilityResourceName@消耗"
+                        ],
+                        "effect": [
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ bleedbasedamage }} -> {{ bleedbasedamageNL }}",
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ basecost }} -> {{ basecostNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        8,
+                        7,
+                        6,
+                        5,
+                        4
+                    ],
+                    "cooldownBurn": "8/7/6/5/4",
+                    "cost": [
+                        40,
+                        45,
+                        50,
+                        55,
+                        60
+                    ],
+                    "costBurn": "40/45/50/55/60",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        300,
+                        300,
+                        300,
+                        300,
+                        300
+                    ],
+                    "rangeBurn": "300",
+                    "image": {
+                        "full": "Jade_TalonQ.png",
+                        "sprite": "spell7.png",
+                        "group": "spell",
+                        "x": 288,
+                        "y": 48,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                },
+                {
+                    "id": "Jade_TalonW",
+                    "name": "斩草除根",
+                    "description": "泰隆掷出随后会返回的刀刃，对去程和返程中命中的敌人造成伤害并减速。",
+                    "tooltip": "泰隆掷出可快速返回的刀刃，对去程和返程中命中的敌人各造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>，并使其<status>减速</status><scaleBonus>{{ slowamount.0*100 }}%</scaleBonus>，持续{{ wslowduration }}秒。{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "伤害",
+                            "减速",
+                            "@AbilityResourceName@消耗"
+                        ],
+                        "effect": [
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ slowamount*100.000000 }}% -> {{ slowamountnl*100.000000 }}%",
+                            "{{ basecost }} -> {{ basecostNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        10,
+                        10,
+                        10,
+                        10,
+                        10
+                    ],
+                    "cooldownBurn": "10",
+                    "cost": [
+                        60,
+                        65,
+                        70,
+                        75,
+                        80
+                    ],
+                    "costBurn": "60/65/70/75/80",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        650,
+                        650,
+                        650,
+                        650,
+                        650
+                    ],
+                    "rangeBurn": "650",
+                    "image": {
+                        "full": "Jade_TalonW.png",
+                        "sprite": "spell7.png",
+                        "group": "spell",
+                        "x": 336,
+                        "y": 48,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                },
+                {
+                    "id": "Jade_TalonE",
+                    "name": "割喉之战",
+                    "description": "泰隆闪烁到目标身后。沉默敌人，并对其造成更高伤害。",
+                    "tooltip": "泰隆闪烁到目标身后。如果目标是敌人，则将其<status>沉默</status>{{ silenceduration }}秒，并可在{{ ampduration }}秒内对其额外造成<scaleBonus>{{ damageamp.0*100 }}%</scaleBonus>伤害。{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "伤害提升",
+                            "冷却时间",
+                            "@AbilityResourceName@消耗"
+                        ],
+                        "effect": [
+                            "{{ damageamp*100.000000 }}% -> {{ damageampnl*100.000000 }}%",
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ basecost }} -> {{ basecostNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        18,
+                        16,
+                        14,
+                        12,
+                        10
+                    ],
+                    "cooldownBurn": "18/16/14/12/10",
+                    "cost": [
+                        35,
+                        40,
+                        45,
+                        50,
+                        55
+                    ],
+                    "costBurn": "35/40/45/50/55",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        600,
+                        600,
+                        600,
+                        600,
+                        600
+                    ],
+                    "rangeBurn": "600",
+                    "image": {
+                        "full": "Jade_TalonE.png",
+                        "sprite": "spell7.png",
+                        "group": "spell",
+                        "x": 384,
+                        "y": 48,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                },
+                {
+                    "id": "Jade_TalonR",
+                    "name": "暗影突袭",
+                    "description": "泰隆散射刀刃，进入隐形状态并提升移动速度。他重新现身时，刀刃会回到他身边。",
+                    "tooltip": "泰隆散射刀刃，造成<physicalDamage>{{ spell.jade_talonr:totaldamage }}物理伤害</physicalDamage>，进入<keywordStealth>隐形</keywordStealth>状态并获得<speed>{{ spell.jade_talonr:movespeed.0*100 }}%移动速度</speed> ，持续{{ spell.jade_talonr:rstealthduration }}秒。<br /><br />隐形结束时，刀刃返回，再次造成<physicalDamage>{{ spell.jade_talonr:totaldamage }}物理伤害</physicalDamage>。<br /><br /><recast>再次施放</recast>、攻击或使用技能可提前结束隐形状态。{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "伤害",
+                            "冷却时间",
+                            "@AbilityResourceName@消耗"
+                        ],
+                        "effect": [
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ basecost }} -> {{ basecostNL }}"
+                        ]
+                    },
+                    "maxrank": 3,
+                    "cooldown": [
+                        75,
+                        65,
+                        55
+                    ],
+                    "cooldownBurn": "75/65/55",
+                    "cost": [
+                        80,
+                        90,
+                        100
+                    ],
+                    "costBurn": "80/90/100",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        600,
+                        600,
+                        600
+                    ],
+                    "rangeBurn": "600",
+                    "image": {
+                        "full": "Jade_TalonR.png",
+                        "sprite": "spell7.png",
+                        "group": "spell",
+                        "x": 432,
+                        "y": 48,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                }
+            ],
+            "passive": {
+                "name": "仁慈",
+                "description": "泰隆的普攻对受到特定控制效果影响的敌人造成更多伤害。",
+                "image": {
+                    "full": "Jade_TalonP.png",
+                    "sprite": "passive2.png",
+                    "group": "passive",
+                    "x": 0,
+                    "y": 48,
+                    "w": 48,
+                    "h": 48
+                }
+            },
+            "recommended": []
+        },
         "Jade_Taric": {
             "id": "Jade_Taric",
             "key": "60044",
@@ -53269,7 +53893,7 @@
                 "full": "Jade_Taric.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 0,
+                "x": 48,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -53639,8 +54263,8 @@
                         "full": "Jade_TaricQ.png",
                         "sprite": "spell7.png",
                         "group": "spell",
-                        "x": 288,
-                        "y": 48,
+                        "x": 0,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -53782,8 +54406,8 @@
                         "full": "Jade_TaricW.png",
                         "sprite": "spell7.png",
                         "group": "spell",
-                        "x": 336,
-                        "y": 48,
+                        "x": 48,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -53925,8 +54549,8 @@
                         "full": "Jade_TaricE.png",
                         "sprite": "spell7.png",
                         "group": "spell",
-                        "x": 384,
-                        "y": 48,
+                        "x": 96,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -54042,8 +54666,8 @@
                         "full": "Jade_TaricR.png",
                         "sprite": "spell7.png",
                         "group": "spell",
-                        "x": 432,
-                        "y": 48,
+                        "x": 144,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -54057,7 +54681,7 @@
                     "full": "Jade_Taric_Passive.png",
                     "sprite": "passive2.png",
                     "group": "passive",
-                    "x": 0,
+                    "x": 48,
                     "y": 48,
                     "w": 48,
                     "h": 48
@@ -54074,7 +54698,7 @@
                 "full": "Jade_Teemo.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 48,
+                "x": 96,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -54490,7 +55114,7 @@
                         "full": "Jade_TeemoQ.png",
                         "sprite": "spell7.png",
                         "group": "spell",
-                        "x": 0,
+                        "x": 192,
                         "y": 96,
                         "w": 48,
                         "h": 48
@@ -54631,7 +55255,7 @@
                         "full": "Jade_TeemoW.png",
                         "sprite": "spell7.png",
                         "group": "spell",
-                        "x": 48,
+                        "x": 240,
                         "y": 96,
                         "w": 48,
                         "h": 48
@@ -54772,7 +55396,7 @@
                         "full": "Jade_TeemoE.png",
                         "sprite": "spell7.png",
                         "group": "spell",
-                        "x": 96,
+                        "x": 288,
                         "y": 96,
                         "w": 48,
                         "h": 48
@@ -54891,7 +55515,7 @@
                         "full": "Jade_TeemoR.png",
                         "sprite": "spell7.png",
                         "group": "spell",
-                        "x": 144,
+                        "x": 336,
                         "y": 96,
                         "w": 48,
                         "h": 48
@@ -54906,7 +55530,7 @@
                     "full": "Jade_TeemoPassive.png",
                     "sprite": "passive2.png",
                     "group": "passive",
-                    "x": 48,
+                    "x": 96,
                     "y": 48,
                     "w": 48,
                     "h": 48
@@ -54923,7 +55547,7 @@
                 "full": "Jade_Tristana.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 96,
+                "x": 144,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -55346,7 +55970,7 @@
                         "full": "Jade_TristanaQ.png",
                         "sprite": "spell7.png",
                         "group": "spell",
-                        "x": 192,
+                        "x": 384,
                         "y": 96,
                         "w": 48,
                         "h": 48
@@ -55487,7 +56111,7 @@
                         "full": "Jade_TristanaW.png",
                         "sprite": "spell7.png",
                         "group": "spell",
-                        "x": 240,
+                        "x": 432,
                         "y": 96,
                         "w": 48,
                         "h": 48
@@ -55630,8 +56254,8 @@
                         "full": "Jade_TristanaE.png",
                         "sprite": "spell7.png",
                         "group": "spell",
-                        "x": 288,
-                        "y": 96,
+                        "x": 0,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -55745,8 +56369,8 @@
                         "full": "Jade_TristanaR.png",
                         "sprite": "spell7.png",
                         "group": "spell",
-                        "x": 336,
-                        "y": 96,
+                        "x": 48,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -55760,7 +56384,7 @@
                     "full": "Jade_Tristana_Passive.png",
                     "sprite": "passive2.png",
                     "group": "passive",
-                    "x": 96,
+                    "x": 144,
                     "y": 48,
                     "w": 48,
                     "h": 48
@@ -55777,7 +56401,7 @@
                 "full": "Jade_Tryndamere.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 144,
+                "x": 192,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -56167,8 +56791,8 @@
                         "full": "Jade_TryndamereQ.png",
                         "sprite": "spell7.png",
                         "group": "spell",
-                        "x": 384,
-                        "y": 96,
+                        "x": 96,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -56308,8 +56932,8 @@
                         "full": "Jade_TryndamereW.png",
                         "sprite": "spell7.png",
                         "group": "spell",
-                        "x": 432,
-                        "y": 96,
+                        "x": 144,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -56449,7 +57073,7 @@
                         "full": "Jade_TryndamereE.png",
                         "sprite": "spell7.png",
                         "group": "spell",
-                        "x": 0,
+                        "x": 192,
                         "y": 144,
                         "w": 48,
                         "h": 48
@@ -56564,7 +57188,7 @@
                         "full": "Jade_TryndamereUndyingRage.png",
                         "sprite": "spell7.png",
                         "group": "spell",
-                        "x": 48,
+                        "x": 240,
                         "y": 144,
                         "w": 48,
                         "h": 48
@@ -56579,7 +57203,7 @@
                     "full": "Jade_Tryndamere_Passive.png",
                     "sprite": "passive2.png",
                     "group": "passive",
-                    "x": 144,
+                    "x": 192,
                     "y": 48,
                     "w": 48,
                     "h": 48
@@ -56596,7 +57220,7 @@
                 "full": "Jade_TwistedFate.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 192,
+                "x": 240,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -56963,7 +57587,7 @@
                         "full": "Jade_TwistedFateWildCards.png",
                         "sprite": "spell7.png",
                         "group": "spell",
-                        "x": 96,
+                        "x": 288,
                         "y": 144,
                         "w": 48,
                         "h": 48
@@ -57114,7 +57738,7 @@
                         "full": "Jade_TwistedFatePickACard.png",
                         "sprite": "spell7.png",
                         "group": "spell",
-                        "x": 144,
+                        "x": 336,
                         "y": 144,
                         "w": 48,
                         "h": 48
@@ -57253,7 +57877,7 @@
                         "full": "Jade_TwistedFateE.png",
                         "sprite": "spell7.png",
                         "group": "spell",
-                        "x": 192,
+                        "x": 384,
                         "y": 144,
                         "w": 48,
                         "h": 48
@@ -57370,7 +57994,7 @@
                         "full": "Jade_TwistedFateDestiny.png",
                         "sprite": "spell7.png",
                         "group": "spell",
-                        "x": 240,
+                        "x": 432,
                         "y": 144,
                         "w": 48,
                         "h": 48
@@ -57385,7 +58009,7 @@
                     "full": "Cardmaster_SealFate.png",
                     "sprite": "passive2.png",
                     "group": "passive",
-                    "x": 192,
+                    "x": 240,
                     "y": 48,
                     "w": 48,
                     "h": 48
@@ -57402,7 +58026,7 @@
                 "full": "Jade_Twitch.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 240,
+                "x": 288,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -57830,10 +58454,10 @@
                     "rangeBurn": "20",
                     "image": {
                         "full": "Jade_TwitchQ.png",
-                        "sprite": "spell7.png",
+                        "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 288,
-                        "y": 144,
+                        "x": 0,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -57971,10 +58595,10 @@
                     "rangeBurn": "950",
                     "image": {
                         "full": "Jade_TwitchW.png",
-                        "sprite": "spell7.png",
+                        "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 336,
-                        "y": 144,
+                        "x": 48,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -58116,10 +58740,10 @@
                     "rangeBurn": "1200",
                     "image": {
                         "full": "Jade_TwitchE.png",
-                        "sprite": "spell7.png",
+                        "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 384,
-                        "y": 144,
+                        "x": 96,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -58233,10 +58857,10 @@
                     "rangeBurn": "1200",
                     "image": {
                         "full": "Jade_TwitchR.png",
-                        "sprite": "spell7.png",
+                        "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 432,
-                        "y": 144,
+                        "x": 144,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -58250,7 +58874,1301 @@
                     "full": "Jade_Twitch_Passive.png",
                     "sprite": "passive2.png",
                     "group": "passive",
-                    "x": 240,
+                    "x": 288,
+                    "y": 48,
+                    "w": 48,
+                    "h": 48
+                }
+            },
+            "recommended": []
+        },
+        "Jade_Udyr": {
+            "id": "Jade_Udyr",
+            "key": "60077",
+            "name": "野兽之灵",
+            "title": "乌迪尔",
+            "image": {
+                "full": "Jade_Udyr.png",
+                "sprite": "champion2.png",
+                "group": "champion",
+                "x": 336,
+                "y": 48,
+                "w": 48,
+                "h": 48
+            },
+            "skins": [
+                {
+                    "id": "60077000",
+                    "num": 0,
+                    "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "60077001",
+                    "num": 1,
+                    "name": "武力全开 乌迪尔",
+                    "chromas": false
+                },
+                {
+                    "id": "60077002",
+                    "num": 2,
+                    "name": "四神之力 乌迪尔",
+                    "chromas": false
+                }
+            ],
+            "lore": "- 他的所有技能似乎完全相同，但其实有所不同。阅读说明文本。",
+            "blurb": "- 他的所有技能似乎完全相同，但其实有所不同。阅读说明文本。",
+            "allytips": [],
+            "enemytips": [],
+            "tags": [
+                "Fighter",
+                "Tank"
+            ],
+            "partype": "法力",
+            "info": {
+                "attack": 8,
+                "defense": 7,
+                "magic": 4,
+                "difficulty": 7
+            },
+            "stats": {
+                "hp": 526,
+                "hpperlevel": 99,
+                "mp": 250,
+                "mpperlevel": 30,
+                "movespeed": 345,
+                "armor": 18.75,
+                "armorperlevel": 4,
+                "spellblock": 31.25,
+                "spellblockperlevel": 1.25,
+                "attackrange": 125,
+                "hpregen": 8.2,
+                "hpregenperlevel": 0.75,
+                "mpregen": 7.2,
+                "mpregenperlevel": 0.45,
+                "crit": 0,
+                "critperlevel": 0,
+                "attackdamage": 56.11,
+                "attackdamageperlevel": 0,
+                "attackspeedperlevel": 2.67,
+                "attackspeed": 0.658
+            },
+            "spells": [
+                {
+                    "id": "Jade_UdyrQ",
+                    "name": "猛虎姿态",
+                    "description": "乌迪尔获得攻击速度。在猛虎姿态下，他的攻击造成额外伤害，且首次攻击会留下伤口。",
+                    "tooltip": "<spellPassive>姿态：</spellPassive>乌迪尔的攻击造成<physicalDamage>{{ totalattackdamage }}物理伤害</physicalDamage>。首次攻击会在{{ dotduration }}秒内额外造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>。<br /><br /><spellActive>激活：</spellActive>乌迪尔获得<attackSpeed>{{ attackspeed*100 }}%攻击速度</attackSpeed>，持续{{ attackspeedduration }}秒。{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "伤害",
+                            "攻击速度",
+                            "攻击力收益",
+                            "法力消耗"
+                        ],
+                        "effect": [
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ attackspeed*100.000000 }}% -> {{ attackspeednl*100.000000 }}%",
+                            "{{ adratio*100.000000 }}% -> {{ adrationl*100.000000 }}%",
+                            "{{ cost }} -> {{ costNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        6,
+                        6,
+                        6,
+                        6,
+                        6
+                    ],
+                    "cooldownBurn": "6",
+                    "cost": [
+                        47,
+                        44,
+                        41,
+                        38,
+                        35
+                    ],
+                    "costBurn": "47/44/41/38/35",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        600,
+                        600,
+                        600,
+                        600,
+                        600
+                    ],
+                    "rangeBurn": "600",
+                    "image": {
+                        "full": "Jade_UdyrQ.png",
+                        "sprite": "spell8.png",
+                        "group": "spell",
+                        "x": 192,
+                        "y": 0,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                },
+                {
+                    "id": "Jade_UdyrW",
+                    "name": "灵龟姿态",
+                    "description": "乌迪尔获得护盾。在灵龟姿态下，他获得生命偷取。",
+                    "tooltip": "<spellPassive>姿态：</spellPassive>乌迪尔获得<healing>{{ lifesteal*100 }}%生命偷取</healing>。<br /><br /><spellActive>激活：</spellActive>乌迪尔获得持续{{ shieldduration }}秒的<shield>{{ totalshield }}护盾</shield>。{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "法力消耗",
+                            "护盾值",
+                            "生命偷取"
+                        ],
+                        "effect": [
+                            "{{ cost }} -> {{ costNL }}",
+                            "{{ baseshield }} -> {{ baseshieldNL }}",
+                            "{{ lifesteal*100.000000 }}% -> {{ lifestealnl*100.000000 }}%"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        6,
+                        6,
+                        6,
+                        6,
+                        6
+                    ],
+                    "cooldownBurn": "6",
+                    "cost": [
+                        47,
+                        44,
+                        41,
+                        38,
+                        35
+                    ],
+                    "costBurn": "47/44/41/38/35",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        600,
+                        600,
+                        600,
+                        600,
+                        600
+                    ],
+                    "rangeBurn": "600",
+                    "image": {
+                        "full": "Jade_UdyrW.png",
+                        "sprite": "spell8.png",
+                        "group": "spell",
+                        "x": 240,
+                        "y": 0,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                },
+                {
+                    "id": "Jade_UdyrE",
+                    "name": "巨熊姿态",
+                    "description": "乌迪尔获得移动速度并无视单位的碰撞体积。在巨熊姿态下，他的攻击会使敌人晕眩。",
+                    "tooltip": "<spellPassive>姿态：</spellPassive>乌迪尔的攻击会使目标<status>晕眩</status>{{ stunduration }}秒。敌人每{{ stunlockout }}秒只能被<status>晕眩</status>一次。<br /><br /><spellActive>激活：</spellActive>乌迪尔获得<speed>{{ movespeed*100 }}%移动速度</speed>和<status>幽灵</status>状态，持续{{ movespeedduration }}秒。{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "移动速度",
+                            "持续时间",
+                            "法力消耗"
+                        ],
+                        "effect": [
+                            "{{ movespeed*100.000000 }}% -> {{ movespeednl*100.000000 }}%",
+                            "{{ movespeedduration }} -> {{ movespeeddurationNL }}",
+                            "{{ cost }} -> {{ costNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        6,
+                        6,
+                        6,
+                        6,
+                        6
+                    ],
+                    "cooldownBurn": "6",
+                    "cost": [
+                        47,
+                        44,
+                        41,
+                        38,
+                        35
+                    ],
+                    "costBurn": "47/44/41/38/35",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        600,
+                        600,
+                        600,
+                        600,
+                        600
+                    ],
+                    "rangeBurn": "600",
+                    "image": {
+                        "full": "Jade_UdyrE.png",
+                        "sprite": "spell8.png",
+                        "group": "spell",
+                        "x": 288,
+                        "y": 0,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                },
+                {
+                    "id": "Jade_UdyrR",
+                    "name": "火凤姿态",
+                    "description": "乌迪尔灼烧附近的敌人。在火凤姿态下，他的首次攻击和后续攻击都会喷吐火焰。",
+                    "tooltip": "<spellPassive>姿态：</spellPassive>乌迪尔的首次攻击和之后的每第{{ attackspercone }}次攻击会灼烧他面前的敌人，造成<magicDamage>{{ conedamage }}魔法伤害</magicDamage>。<br /><br /><spellActive>激活：</spellActive>乌迪尔灼烧附近的敌人，每{{ auratickinterval }}秒造成<magicDamage>{{ damagepertick }}魔法伤害</magicDamage>，持续{{ auraduration }}秒(最高造成<magicDamage>{{ totalauradamage }}伤害</magicDamage>)。{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "伤害",
+                            "每秒伤害",
+                            "法力消耗"
+                        ],
+                        "effect": [
+                            "{{ baseconedamage }} -> {{ baseconedamageNL }}",
+                            "{{ baseauradamage*0.200000 }} -> {{ baseauradamagenl*0.200000 }}",
+                            "{{ cost }} -> {{ costNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        6,
+                        6,
+                        6,
+                        6,
+                        6
+                    ],
+                    "cooldownBurn": "6",
+                    "cost": [
+                        47,
+                        44,
+                        41,
+                        38,
+                        35
+                    ],
+                    "costBurn": "47/44/41/38/35",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        600,
+                        600,
+                        600,
+                        600,
+                        600
+                    ],
+                    "rangeBurn": "600",
+                    "image": {
+                        "full": "Jade_UdyrR.png",
+                        "sprite": "spell8.png",
+                        "group": "spell",
+                        "x": 336,
+                        "y": 0,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                }
+            ],
+            "passive": {
+                "name": "灵猴敏捷",
+                "description": "转换姿态时会短暂获得可叠加的攻击速度和移动速度。",
+                "image": {
+                    "full": "Jade_Udyr_P.png",
+                    "sprite": "passive2.png",
+                    "group": "passive",
+                    "x": 336,
+                    "y": 48,
+                    "w": 48,
+                    "h": 48
+                }
+            },
+            "recommended": []
+        },
+        "Jade_Urgot": {
+            "id": "Jade_Urgot",
+            "key": "60006",
+            "name": "首领之傲",
+            "title": "厄加特",
+            "image": {
+                "full": "Jade_Urgot.png",
+                "sprite": "champion2.png",
+                "group": "champion",
+                "x": 384,
+                "y": 48,
+                "w": 48,
+                "h": 48
+            },
+            "skins": [
+                {
+                    "id": "60006000",
+                    "num": 0,
+                    "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "60006001",
+                    "num": 1,
+                    "name": "深渊巨蟹 厄加特",
+                    "chromas": false
+                },
+                {
+                    "id": "60006002",
+                    "num": 2,
+                    "name": "电锯狂人 厄加特",
+                    "chromas": false
+                }
+            ],
+            "lore": "- 他的所有技能都焕然一新，且更加炫酷。阅读说明文本。",
+            "blurb": "- 他的所有技能都焕然一新，且更加炫酷。阅读说明文本。",
+            "allytips": [],
+            "enemytips": [],
+            "tags": [
+                "Fighter",
+                "Tank"
+            ],
+            "partype": "法力",
+            "info": {
+                "attack": 8,
+                "defense": 5,
+                "magic": 3,
+                "difficulty": 8
+            },
+            "stats": {
+                "hp": 526,
+                "hpperlevel": 89,
+                "mp": 275,
+                "mpperlevel": 55,
+                "movespeed": 335,
+                "armor": 22.3,
+                "armorperlevel": 3.3,
+                "spellblock": 30,
+                "spellblockperlevel": 0,
+                "attackrange": 425,
+                "hpregen": 6.1,
+                "hpregenperlevel": 0.6,
+                "mpregen": 8.15,
+                "mpregenperlevel": 0.65,
+                "crit": 0,
+                "critperlevel": 0,
+                "attackdamage": 51.6,
+                "attackdamageperlevel": 0,
+                "attackspeedperlevel": 2.9,
+                "attackspeed": 0.644
+            },
+            "spells": [
+                {
+                    "id": "Jade_UrgotQ",
+                    "name": "酸蚀猎手",
+                    "description": "厄加特发射一枚【酸蚀猎手】导弹，对命中的第一个敌人造成伤害。【酸蚀猎手】会锁定受到【诺克萨斯腐蚀电荷】影响的敌人。",
+                    "tooltip": "厄加特发射一枚导弹，造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>。<br /><br />瞄准受到<spellName>诺克萨斯腐蚀电荷</spellName>影响的目标时，发射的导弹会锁定目标。{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "基础伤害"
+                        ],
+                        "effect": [
+                            "{{ basedamage }} -> {{ basedamageNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        2,
+                        2,
+                        2,
+                        2,
+                        2
+                    ],
+                    "cooldownBurn": "2",
+                    "cost": [
+                        40,
+                        40,
+                        40,
+                        40,
+                        40
+                    ],
+                    "costBurn": "40",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        1000,
+                        1000,
+                        1000,
+                        1000,
+                        1000
+                    ],
+                    "rangeBurn": "1000",
+                    "image": {
+                        "full": "Jade_UrgotQ.png",
+                        "sprite": "spell8.png",
+                        "group": "spell",
+                        "x": 384,
+                        "y": 0,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                },
+                {
+                    "id": "Jade_UrgotW",
+                    "name": "恐怖电容",
+                    "description": "厄加特激活他的电容以获得一个护盾。护盾激活期间，厄加特的攻击和【酸蚀猎手】会使目标减速。",
+                    "tooltip": "厄加特获得持续{{ duration }}秒的<shield>{{ totalshield }}护盾</shield>。护盾存在期间，厄加特的攻击和<spellName>酸蚀猎手</spellName>会对目标造成持续{{ slowduration }}秒的{{ movespeedmodifier }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "护盾值",
+                            "减速",
+                            "冷却时间",
+                            "@AbilityResourceName@消耗"
+                        ],
+                        "effect": [
+                            "{{ shieldamount }} -> {{ shieldamountNL }}",
+                            "{{ movespeedmodifier }}% -> {{ movespeedmodifierNL }}%",
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ cost }} -> {{ costNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        16,
+                        15,
+                        14,
+                        13,
+                        12
+                    ],
+                    "cooldownBurn": "16/15/14/13/12",
+                    "cost": [
+                        55,
+                        60,
+                        65,
+                        70,
+                        75
+                    ],
+                    "costBurn": "55/60/65/70/75",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        490,
+                        490,
+                        490,
+                        490,
+                        490
+                    ],
+                    "rangeBurn": "490",
+                    "image": {
+                        "full": "Jade_UrgotW.png",
+                        "sprite": "spell8.png",
+                        "group": "spell",
+                        "x": 432,
+                        "y": 0,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                },
+                {
+                    "id": "Jade_UrgotE",
+                    "name": "诺克萨斯腐蚀电荷",
+                    "description": "厄加特发射一枚腐蚀电荷，对区域内的敌人造成伤害并削减其护甲。",
+                    "tooltip": "厄加特发射一枚腐蚀电荷，使敌人的护甲降低{{ armourreduction*-100 }}%，并在{{ duration }}秒内造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>。{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "基础伤害",
+                            "减少护甲百分比",
+                            "@AbilityResourceName@消耗",
+                            "冷却时间"
+                        ],
+                        "effect": [
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ armourreduction*-100.000000 }}% -> {{ armourreductionnl*-100.000000 }}%",
+                            "{{ cost }} -> {{ costNL }}",
+                            "{{ cooldown }} -> {{ cooldownNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        15,
+                        14,
+                        13,
+                        12,
+                        11
+                    ],
+                    "cooldownBurn": "15/14/13/12/11",
+                    "cost": [
+                        50,
+                        55,
+                        60,
+                        65,
+                        70
+                    ],
+                    "costBurn": "50/55/60/65/70",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        1000,
+                        1000,
+                        1000,
+                        1000,
+                        1000
+                    ],
+                    "rangeBurn": "1000",
+                    "image": {
+                        "full": "Jade_UrgotE.png",
+                        "sprite": "spell8.png",
+                        "group": "spell",
+                        "x": 0,
+                        "y": 48,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                },
+                {
+                    "id": "Jade_UrgotR",
+                    "name": "超动力定位转换器",
+                    "description": "厄加特启动他的【超动力定位转换器】，从而与目标交换位置。在技能引导期间，目标会被压制。厄加特在交换位置后获得护甲和魔法抗性。",
+                    "tooltip": "厄加特<status>压制</status>一名敌方英雄，在引导{{ channelduration }}秒后与目标交换位置，如果成功交换，还会对目标造成持续{{ slowduration }}秒的{{ slowamount*100 }}%<status>减速</status>。<br /><br />厄加特在引导开始时获得<scaleArmor>{{ defenseincrease }}护甲</scaleArmor>和<scaleMR>魔法抗性</scaleMR>，持续{{ defenseduration }}秒。{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "距离",
+                            "护甲和魔法抗性"
+                        ],
+                        "effect": [
+                            "{{ castrange }} -> {{ castrangeNL }}",
+                            "{{ defenseincrease }} -> {{ defenseincreaseNL }}"
+                        ]
+                    },
+                    "maxrank": 3,
+                    "cooldown": [
+                        120,
+                        120,
+                        120
+                    ],
+                    "cooldownBurn": "120",
+                    "cost": [
+                        120,
+                        120,
+                        120
+                    ],
+                    "costBurn": "120",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        550,
+                        700,
+                        850
+                    ],
+                    "rangeBurn": "550/700/850",
+                    "image": {
+                        "full": "Jade_UrgotR.png",
+                        "sprite": "spell8.png",
+                        "group": "spell",
+                        "x": 48,
+                        "y": 48,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                }
+            ],
+            "passive": {
+                "name": "祖安产螺栓增压器",
+                "description": "厄加特的普通攻击和【酸蚀猎手】会暂时降低目标造成的伤害。",
+                "image": {
+                    "full": "Jade_Urgot_Passive.png",
+                    "sprite": "passive2.png",
+                    "group": "passive",
+                    "x": 384,
                     "y": 48,
                     "w": 48,
                     "h": 48
@@ -58267,7 +60185,7 @@
                 "full": "Jade_Vayne.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 288,
+                "x": 432,
                 "y": 48,
                 "w": 48,
                 "h": 48
@@ -58552,8 +60470,8 @@
                         "full": "Jade_VayneQ.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 0,
-                        "y": 0,
+                        "x": 96,
+                        "y": 48,
                         "w": 48,
                         "h": 48
                     },
@@ -58693,8 +60611,8 @@
                         "full": "Jade_VayneW.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 48,
-                        "y": 0,
+                        "x": 144,
+                        "y": 48,
                         "w": 48,
                         "h": 48
                     },
@@ -58834,8 +60752,8 @@
                         "full": "Jade_VayneE.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 96,
-                        "y": 0,
+                        "x": 192,
+                        "y": 48,
                         "w": 48,
                         "h": 48
                     },
@@ -58951,8 +60869,8 @@
                         "full": "Jade_VayneR.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 144,
-                        "y": 0,
+                        "x": 240,
+                        "y": 48,
                         "w": 48,
                         "h": 48
                     },
@@ -58966,7 +60884,7 @@
                     "full": "Jade_Vayne_NightHunter.png",
                     "sprite": "passive2.png",
                     "group": "passive",
-                    "x": 288,
+                    "x": 432,
                     "y": 48,
                     "w": 48,
                     "h": 48
@@ -58983,8 +60901,8 @@
                 "full": "Jade_Veigar.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 336,
-                "y": 48,
+                "x": 0,
+                "y": 96,
                 "w": 48,
                 "h": 48
             },
@@ -59314,8 +61232,8 @@
                         "full": "Jade_VeigarBalefulStrike.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 192,
-                        "y": 0,
+                        "x": 288,
+                        "y": 48,
                         "w": 48,
                         "h": 48
                     },
@@ -59455,8 +61373,8 @@
                         "full": "Jade_VeigarDarkMatter.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 240,
-                        "y": 0,
+                        "x": 336,
+                        "y": 48,
                         "w": 48,
                         "h": 48
                     },
@@ -59598,8 +61516,8 @@
                         "full": "Jade_VeigarEventHorizon.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 288,
-                        "y": 0,
+                        "x": 384,
+                        "y": 48,
                         "w": 48,
                         "h": 48
                     },
@@ -59715,8 +61633,8 @@
                         "full": "Jade_VeigarR.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 336,
-                        "y": 0,
+                        "x": 432,
+                        "y": 48,
                         "w": 48,
                         "h": 48
                     },
@@ -59730,8 +61648,8 @@
                     "full": "Jade_VeigarEntropy.png",
                     "sprite": "passive2.png",
                     "group": "passive",
-                    "x": 336,
-                    "y": 48,
+                    "x": 0,
+                    "y": 96,
                     "w": 48,
                     "h": 48
                 }
@@ -59747,8 +61665,8 @@
                 "full": "Jade_Volibear.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 384,
-                "y": 48,
+                "x": 48,
+                "y": 96,
                 "w": 48,
                 "h": 48
             },
@@ -59950,8 +61868,8 @@
                         "full": "Jade_VolibearQ.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 384,
-                        "y": 0,
+                        "x": 0,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -60091,8 +62009,8 @@
                         "full": "Jade_VolibearW.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 432,
-                        "y": 0,
+                        "x": 48,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -60234,8 +62152,8 @@
                         "full": "Jade_VolibearE.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 0,
-                        "y": 48,
+                        "x": 96,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -60349,8 +62267,8 @@
                         "full": "Jade_VolibearR.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 48,
-                        "y": 48,
+                        "x": 144,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -60364,8 +62282,8 @@
                     "full": "Jade_Volibear_Icon_P.png",
                     "sprite": "passive2.png",
                     "group": "passive",
-                    "x": 384,
-                    "y": 48,
+                    "x": 48,
+                    "y": 96,
                     "w": 48,
                     "h": 48
                 }
@@ -60381,8 +62299,8 @@
                 "full": "Jade_Warwick.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 432,
-                "y": 48,
+                "x": 96,
+                "y": 96,
                 "w": 48,
                 "h": 48
             },
@@ -60793,8 +62711,8 @@
                         "full": "Jade_WarwickQ.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 96,
-                        "y": 48,
+                        "x": 192,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -60934,8 +62852,8 @@
                         "full": "Jade_WarwickW.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 144,
-                        "y": 48,
+                        "x": 240,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -61075,8 +62993,8 @@
                         "full": "Jade_WarwickE.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 192,
-                        "y": 48,
+                        "x": 288,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -61192,8 +63110,8 @@
                         "full": "Jade_WarwickR.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 240,
-                        "y": 48,
+                        "x": 336,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -61207,8 +63125,8 @@
                     "full": "Jade_WarwickP.png",
                     "sprite": "passive2.png",
                     "group": "passive",
-                    "x": 432,
-                    "y": 48,
+                    "x": 96,
+                    "y": 96,
                     "w": 48,
                     "h": 48
                 }
@@ -61224,7 +63142,7 @@
                 "full": "Jade_Wukong.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 0,
+                "x": 144,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -61552,8 +63470,8 @@
                         "full": "Jade_WukongQ.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 288,
-                        "y": 48,
+                        "x": 384,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -61695,8 +63613,8 @@
                         "full": "Jade_WukongW.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 336,
-                        "y": 48,
+                        "x": 432,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -61838,8 +63756,8 @@
                         "full": "Jade_WukongE.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 384,
-                        "y": 48,
+                        "x": 0,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -61953,8 +63871,8 @@
                         "full": "Jade_WukongR.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 432,
-                        "y": 48,
+                        "x": 48,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -61968,7 +63886,627 @@
                     "full": "Jade_WukongStoneSkin.png",
                     "sprite": "passive2.png",
                     "group": "passive",
-                    "x": 0,
+                    "x": 144,
+                    "y": 96,
+                    "w": 48,
+                    "h": 48
+                }
+            },
+            "recommended": []
+        },
+        "Jade_Xerath": {
+            "id": "Jade_Xerath",
+            "key": "60101",
+            "name": "远古巫灵",
+            "title": "泽拉斯",
+            "image": {
+                "full": "Jade_Xerath.png",
+                "sprite": "champion2.png",
+                "group": "champion",
+                "x": 192,
+                "y": 96,
+                "w": 48,
+                "h": 48
+            },
+            "skins": [
+                {
+                    "id": "60101000",
+                    "num": 0,
+                    "name": "default",
+                    "chromas": false
+                }
+            ],
+            "lore": "- 被动技能会根据法术强度提供额外护甲。<br>- Q技能不再需要引导。<br>- W变为新技能：原地锚定以获得额外距离和法术穿透。<br>- E变为新技能：对敌人造成伤害并将其标记，下一次技能命中时可令其晕眩。<br>- R技能不再让泽拉斯在全部三次施放期间都定在原地无法移动。",
+            "blurb": "- 被动技能会根据法术强度提供额外护甲。<br>- Q技能不再需要引导。<br>- W变为新技能：原地锚定以获得额外距离和法术穿透。<br>- E变为新技能：对敌人造成伤害并将其标记，下一次技能命中时可令其晕眩。<br>- R技能不再让泽拉斯在全部三次施放期间都定在原地无法移动。",
+            "allytips": [],
+            "enemytips": [],
+            "tags": [
+                "Mage",
+                "Support"
+            ],
+            "partype": "法力",
+            "info": {
+                "attack": 1,
+                "defense": 3,
+                "magic": 10,
+                "difficulty": 8
+            },
+            "stats": {
+                "hp": 460,
+                "hpperlevel": 80,
+                "mp": 295,
+                "mpperlevel": 45,
+                "movespeed": 340,
+                "armor": 15.5,
+                "armorperlevel": 3.5,
+                "spellblock": 30,
+                "spellblockperlevel": 0,
+                "attackrange": 550,
+                "hpregen": 5.05,
+                "hpregenperlevel": 0.55,
+                "mpregen": 7.6,
+                "mpregenperlevel": 0.6,
+                "crit": 0,
+                "critperlevel": 0,
+                "attackdamage": 54.66,
+                "attackdamageperlevel": 0,
+                "attackspeedperlevel": 1.36,
+                "attackspeed": 0.625
+            },
+            "spells": [
+                {
+                    "id": "Jade_XerathQ",
+                    "name": "奥能脉冲",
+                    "description": "泽拉斯聚集能量，随后发射出一道超远射程能量光束，对命中的所有敌人造成伤害。",
+                    "tooltip": "泽拉斯聚集能量，随后发射出一道超远射程能量光束，对所有命中的敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "伤害",
+                            "冷却时间",
+                            "@AbilityResourceName@消耗"
+                        ],
+                        "effect": [
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ cost }} -> {{ costNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        7,
+                        6.5,
+                        6,
+                        5.5,
+                        5
+                    ],
+                    "cooldownBurn": "7/6.5/6/5.5/5",
+                    "cost": [
+                        65,
+                        70,
+                        75,
+                        80,
+                        85
+                    ],
+                    "costBurn": "65/70/75/80/85",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "0",
+                    "range": [
+                        1000,
+                        1000,
+                        1000,
+                        1000,
+                        1000
+                    ],
+                    "rangeBurn": "1000",
+                    "image": {
+                        "full": "Jade_XerathQ.png",
+                        "sprite": "spell8.png",
+                        "group": "spell",
+                        "x": 96,
+                        "y": 144,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                },
+                {
+                    "id": "Jade_XerathW",
+                    "name": "能量之座",
+                    "description": "泽拉斯定身自己，提高所有技能的距离，并获得额外法术穿透。效果结束时，泽拉斯的移动速度短暂提升。",
+                    "tooltip": "泽拉斯定身自己最多{{ rootduration }}秒，提高所有技能的距离，并获得<magicPen>{{ magicpenvalue }}%法术穿透</magicPen>。他可再次释放该技能，或进行移动，提前取消效果。<br /><br />效果结束时，泽拉斯获得持续{{ movementspeedduration }}秒的<speed>{{ movementspeedvalue*100 }}%移动速度</speed>。{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "法术穿透",
+                            "冷却时间"
+                        ],
+                        "effect": [
+                            "{{ magicpenvalue }}% -> {{ magicpenvalueNL }}%",
+                            "{{ cooldown }} -> {{ cooldownNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        20,
+                        16,
+                        12,
+                        8,
+                        4
+                    ],
+                    "cooldownBurn": "20/16/12/8/4",
+                    "cost": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "costBurn": "0",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": "无消耗",
+                    "maxammo": "0",
+                    "range": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "rangeBurn": "0",
+                    "image": {
+                        "full": "Jade_XerathW.png",
+                        "sprite": "spell8.png",
+                        "group": "spell",
+                        "x": 144,
+                        "y": 144,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "无消耗"
+                },
+                {
+                    "id": "Jade_XerathE",
+                    "name": "法师锁链",
+                    "description": "泽拉斯对单个敌人造成魔法伤害，并为其添加不稳定魔法标记。泽拉斯的下一个技能命中该敌人时，会使其晕眩。",
+                    "tooltip": "泽拉斯对单个敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>，并为其施加<keywordMajor>不稳定魔法</keywordMajor>标记。泽拉斯的下一个技能命中该敌人时，会使其<status>晕眩</status>{{ stunduration }}秒。{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "伤害",
+                            "冷却时间",
+                            "@AbilityResourceName@消耗"
+                        ],
+                        "effect": [
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ cost }} -> {{ costNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        12,
+                        11,
+                        10,
+                        9,
+                        8
+                    ],
+                    "cooldownBurn": "12/11/10/9/8",
+                    "cost": [
+                        70,
+                        75,
+                        80,
+                        85,
+                        90
+                    ],
+                    "costBurn": "70/75/80/85/90",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "0",
+                    "range": [
+                        650,
+                        650,
+                        650,
+                        650,
+                        650
+                    ],
+                    "rangeBurn": "650",
+                    "image": {
+                        "full": "Jade_XerathE.png",
+                        "sprite": "spell8.png",
+                        "group": "spell",
+                        "x": 192,
+                        "y": 144,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                },
+                {
+                    "id": "Jade_XerathR",
+                    "name": "奥术弹幕",
+                    "description": "泽拉斯向目标区域轰击奥术能量，对区域内的所有敌人造成魔法伤害。在进入冷却以前可被施放最多三次。",
+                    "tooltip": "泽拉斯向目标区域轰击奥术能量，对区域内的所有敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。在进入冷却以前可被施放最多{{ availablecasts }}次。{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "伤害",
+                            "冷却时间",
+                            "@AbilityResourceName@消耗"
+                        ],
+                        "effect": [
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ cost }} -> {{ costNL }}"
+                        ]
+                    },
+                    "maxrank": 3,
+                    "cooldown": [
+                        80,
+                        70,
+                        60
+                    ],
+                    "cooldownBurn": "80/70/60",
+                    "cost": [
+                        150,
+                        180,
+                        210
+                    ],
+                    "costBurn": "150/180/210",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        1100,
+                        1100,
+                        1100
+                    ],
+                    "rangeBurn": "1100",
+                    "image": {
+                        "full": "Jade_XerathR.png",
+                        "sprite": "spell8.png",
+                        "group": "spell",
+                        "x": 240,
+                        "y": 144,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                }
+            ],
+            "passive": {
+                "name": "飞升形态",
+                "description": "泽拉斯汲取奥术能量，基于自身法术强度获得额外护甲。",
+                "image": {
+                    "full": "Jade_Xerath_Passive1.png",
+                    "sprite": "passive2.png",
+                    "group": "passive",
+                    "x": 192,
                     "y": 96,
                     "w": 48,
                     "h": 48
@@ -61985,7 +64523,7 @@
                 "full": "Jade_XinZhao.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 48,
+                "x": 240,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -62311,8 +64849,8 @@
                         "full": "Jade_XinZhaoQ.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 0,
-                        "y": 96,
+                        "x": 288,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -62454,8 +64992,8 @@
                         "full": "Jade_XinZhaoW.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 48,
-                        "y": 96,
+                        "x": 336,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -62597,8 +65135,8 @@
                         "full": "Jade_XinZhaoE.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 96,
-                        "y": 96,
+                        "x": 384,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -62712,8 +65250,8 @@
                         "full": "Jade_XinZhaoR.png",
                         "sprite": "spell8.png",
                         "group": "spell",
-                        "x": 144,
-                        "y": 96,
+                        "x": 432,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -62727,7 +65265,7 @@
                     "full": "Jade_XinZhaoReworkP.png",
                     "sprite": "passive2.png",
                     "group": "passive",
-                    "x": 48,
+                    "x": 240,
                     "y": 96,
                     "w": 48,
                     "h": 48
@@ -62744,7 +65282,7 @@
                 "full": "Jade_Yorick.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 96,
+                "x": 288,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -62943,10 +65481,10 @@
                     "rangeBurn": "0",
                     "image": {
                         "full": "Jade_YorickQ.png",
-                        "sprite": "spell8.png",
+                        "sprite": "spell9.png",
                         "group": "spell",
-                        "x": 192,
-                        "y": 96,
+                        "x": 0,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -63088,10 +65626,10 @@
                     "rangeBurn": "550",
                     "image": {
                         "full": "Jade_YorickW.png",
-                        "sprite": "spell8.png",
+                        "sprite": "spell9.png",
                         "group": "spell",
-                        "x": 240,
-                        "y": 96,
+                        "x": 48,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -63231,10 +65769,10 @@
                     "rangeBurn": "550",
                     "image": {
                         "full": "Jade_YorickE.png",
-                        "sprite": "spell8.png",
+                        "sprite": "spell9.png",
                         "group": "spell",
-                        "x": 288,
-                        "y": 96,
+                        "x": 96,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -63346,10 +65884,10 @@
                     "rangeBurn": "850",
                     "image": {
                         "full": "Jade_YorickR.png",
-                        "sprite": "spell8.png",
+                        "sprite": "spell9.png",
                         "group": "spell",
-                        "x": 336,
-                        "y": 96,
+                        "x": 144,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -63363,7 +65901,7 @@
                     "full": "Jade_Yorick_P.png",
                     "sprite": "passive2.png",
                     "group": "passive",
-                    "x": 96,
+                    "x": 288,
                     "y": 96,
                     "w": 48,
                     "h": 48
@@ -63380,7 +65918,7 @@
                 "full": "Jade_Zilean.png",
                 "sprite": "champion2.png",
                 "group": "champion",
-                "x": 144,
+                "x": 336,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -63755,10 +66293,10 @@
                     "rangeBurn": "650",
                     "image": {
                         "full": "Jade_ZileanQ.png",
-                        "sprite": "spell8.png",
+                        "sprite": "spell9.png",
                         "group": "spell",
-                        "x": 384,
-                        "y": 96,
+                        "x": 192,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -63894,10 +66432,10 @@
                     "rangeBurn": "600",
                     "image": {
                         "full": "Jade_ZileanW.png",
-                        "sprite": "spell8.png",
+                        "sprite": "spell9.png",
                         "group": "spell",
-                        "x": 432,
-                        "y": 96,
+                        "x": 240,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -64033,10 +66571,10 @@
                     "rangeBurn": "650",
                     "image": {
                         "full": "Jade_ZileanE.png",
-                        "sprite": "spell8.png",
+                        "sprite": "spell9.png",
                         "group": "spell",
-                        "x": 0,
-                        "y": 144,
+                        "x": 288,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -64148,10 +66686,10 @@
                     "rangeBurn": "900",
                     "image": {
                         "full": "Jade_ZileanR.png",
-                        "sprite": "spell8.png",
+                        "sprite": "spell9.png",
                         "group": "spell",
-                        "x": 48,
-                        "y": 144,
+                        "x": 336,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -64165,7 +66703,7 @@
                     "full": "Jade_Zilean_Passive.png",
                     "sprite": "passive2.png",
                     "group": "passive",
-                    "x": 144,
+                    "x": 336,
                     "y": 96,
                     "w": 48,
                     "h": 48
@@ -64245,17 +66783,21 @@
         "60037": "Jade_Sona",
         "60016": "Jade_Soraka",
         "60050": "Jade_Swain",
+        "60091": "Jade_Talon",
         "60044": "Jade_Taric",
         "60017": "Jade_Teemo",
         "60018": "Jade_Tristana",
         "60023": "Jade_Tryndamere",
         "60004": "Jade_TwistedFate",
         "60029": "Jade_Twitch",
+        "60077": "Jade_Udyr",
+        "60006": "Jade_Urgot",
         "60067": "Jade_Vayne",
         "60045": "Jade_Veigar",
         "60106": "Jade_Volibear",
         "60019": "Jade_Warwick",
         "60062": "Jade_Wukong",
+        "60101": "Jade_Xerath",
         "60005": "Jade_XinZhao",
         "60083": "Jade_Yorick",
         "60026": "Jade_Zilean"

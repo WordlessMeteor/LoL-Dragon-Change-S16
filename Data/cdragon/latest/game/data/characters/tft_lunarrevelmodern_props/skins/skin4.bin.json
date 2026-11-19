@@ -10547,7 +10547,7 @@
                     "__type": "ValueFloat"
                 },
                 "CustomMaterial": {
-                    "Material": "Characters/TFT_LunarRevelModern_Props/Skins/Skin2/Materials/LunarRevelModern_Skin2_Mat",
+                    "Material": "{c8bb3e4a}",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "primitive": {
@@ -16172,7 +16172,7 @@
                     "__type": "ValueFloat"
                 },
                 "CustomMaterial": {
-                    "Material": "Characters/TFT_LunarRevelModern_Props/Skins/Skin2/Materials/LunarRevelModern_Skin2_Mat",
+                    "Material": "{c8bb3e4a}",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "primitive": {
@@ -17998,209 +17998,6 @@
             "{836059fd}": "Characters/TFT_LunarRevelModern_Props/Skins/Skin4/Particles/TFT_LunarRevel_Modern_Skin4_Intro_Horse"
         },
         "__type": "ResourceResolver"
-    },
-    "Characters/TFT_LunarRevelModern_Props/Skins/Skin2/Materials/LunarRevelModern_Skin2_Mat": {
-        "name": "Characters/TFT_LunarRevelModern_Props/Skins/Skin2/Materials/LunarRevelModern_Skin2_Mat",
-        "samplerValues": [
-            {
-                "TextureName": "Diffuse_Texture",
-                "texturePath": "assets/characters/tft_lunarrevelmodern_props/skins/skin02/level1_lunarrevel_modern_horse_tx.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "SS_Texture",
-                "texturePath": "assets/characters/tft_lunarrevelmodern_props/skins/skin02/level1_lunarrevel_modern_horse_star_a_tx.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Mask1",
-                "texturePath": "assets/characters/fiddlesticks/skins/skin27/particles/fiddlesticks_skin27_p_wave_erode.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Mask2",
-                "texturePath": "assets/characters/tft_lulu/skins/base/particles/tft_lulu_base_einstein_04_mult.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "modelHeight",
-                "value": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "rimOffset",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMax",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMin",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "SS_Scale",
-                "value": [
-                    8.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "SS_rate",
-                "value": [
-                    -0.004999999888241291,
-                    0.05000000074505806,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Color",
-                "value": [
-                    3.0,
-                    2.370016098022461,
-                    0.4800183176994324,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Blue_Scale",
-                "value": [
-                    5.0,
-                    5.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Blue_Rate",
-                "value": [
-                    -0.05999999865889549,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "BloomIntensity",
-                "value": [
-                    0.18000000715255737,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Fresnel_Size",
-                "value": [
-                    0.20000000298023224,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Dodge_Bias",
-                "value": [
-                    0.4050000011920929,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_RIM",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_LOCAL_SPACE",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NUM_BLEND_WEIGHTS": "4"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/SkinnedMesh/Darkstar",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "childTechniques": [
-            {
-                "name": "transition",
-                "parentName": "normal",
-                "shaderMacros": {
-                    "TRANSITION": "1"
-                },
-                "__type": "StaticMaterialChildTechniqueDef"
-            }
-        ],
-        "dynamicMaterial": {
-            "__type": "DynamicMaterialDef"
-        },
-        "__type": "StaticMaterialDef"
     },
     "__linked": [
         "DATA/Characters/TFT_LunarRevelModern_Props/TFT_LunarRevelModern_Props.bin",

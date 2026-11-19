@@ -1,0 +1,676 @@
+{
+    "id": 60091,
+    "contentId": "99a24d27-61a4-4760-9136-afd6b639dafb",
+    "relatedPrimeContentId": "b6447476-7126-4fa8-b6f3-6d1550801b0a",
+    "relatedPrimeItemId": 91,
+    "name": "تالون",
+    "alias": "Jade_Talon",
+    "title": "ظل النصل",
+    "shortBio": "- إعادة تصميم التأثير الكامن: تلحق الهجمات ضررًا إضافيًا بالأعداء الخاضعين لتأثيرات إعاقة التحكم.<br>- تعزز قدرة Q هجوم تالون التالي بإلحاق ضرر إضافي وتسبب تأثير نزيف.<br>- تتيح قدرة E الانتقال بومضة وإسكات الأعداء وتضخيم الضرر الملحق بهم.",
+    "isVisibleInClient": true,
+    "tacticalInfo": {
+        "style": 7,
+        "difficulty": 2,
+        "damageType": "kPhysical",
+        "attackType": "melee"
+    },
+    "playstyleInfo": {
+        "damage": 3,
+        "durability": 1,
+        "crowdControl": 1,
+        "mobility": 2,
+        "utility": 1
+    },
+    "championTagInfo": {
+        "championTagPrimary": "حركة رشيقة",
+        "championTagSecondary": "دفقات ضرر"
+    },
+    "squarePortraitPath": "/lol-game-data/assets/v1/champion-icons/60091.png",
+    "stingerSfxPath": "/lol-game-data/assets/v1/champion-sfx-audios/60091.ogg",
+    "chooseVoPath": "/lol-game-data/assets/v1/champion-choose-vo/60091.ogg",
+    "banVoPath": "/lol-game-data/assets/v1/champion-ban-vo/60091.ogg",
+    "roles": [
+        "assassin",
+        "fighter"
+    ],
+    "recommendedItemDefaults": [],
+    "skins": [
+        {
+            "id": 60091000,
+            "contentId": "d290e6b6-6f37-4e84-8eec-9ced50c918f2",
+            "relatedPrimeContentId": "d7ffba76-4ff5-412d-820c-d47f4898c02c",
+            "relatedPrimeItemId": 91000,
+            "isBase": true,
+            "name": "تالون",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/Skins/Base/Images/Jade_Talon_splash_centered_0.project_jade_talon.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/Skins/Base/Images/Jade_Talon_splash_uncentered_0.project_jade_talon.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/Skins/Base/Images/Jade_Talon_splash_tile_0.project_jade_talon.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/Skins/Base/Jade_TalonLoadScreen_0.project_jade_talon.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/Skins/Base/Jade_TalonLoadScreen_0_LE.project_jade_talon.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": null
+        }
+    ],
+    "passive": {
+        "name": "الرحمة",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/HUD/Icons2D/Jade_TalonP.project_jade_talon.png",
+        "abilityVideoPath": "",
+        "abilityVideoImagePath": "",
+        "description": "تلحق هجمات تالون  ضررًا إضافيًا بالأعداء الخاضعين لتأثيرات إعاقة تحكم معينة."
+    },
+    "spells": [
+        {
+            "spellKey": "q",
+            "name": "دبلوماسية نوكسوس",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/HUD/Icons2D/Jade_TalonQ.project_jade_talon.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@Cost@ @AbilityResourceName@",
+            "cooldown": "@Cooldown@ %i:cooldown%",
+            "description": "يلحق هجوم تالون التالي ضررًا إضافيًا ويتسبب في إصابة أبطال العدو بالنزيف ويكشفهم.",
+            "dynamicDescription": "يلحق هجوم تالون التالي خلال @ReadyDuration@ث <physicalDamage>@TotalAttackDamage@ ضرر مادي</physicalDamage>.<br><br>تلحق إصابة بطل أيضًا <physicalDamage>@TotalBleedDamage@ ضرر مادي</physicalDamage> لمدة @BleedDuration@ث وتكشفه لمدة @RevealDuration@ث.@SpellModifierDescriptionAppend@",
+            "range": [
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0
+            ],
+            "costCoefficients": [
+                40.0,
+                45.0,
+                50.0,
+                55.0,
+                60.0,
+                65.0
+            ],
+            "cooldownCoefficients": [
+                8.0,
+                7.0,
+                6.0,
+                5.0,
+                4.0,
+                3.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "w",
+            "name": "الكنس",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/HUD/Icons2D/Jade_TalonW.project_jade_talon.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@Cost@ @AbilityResourceName@",
+            "cooldown": "@Cooldown@ %i:cooldown%",
+            "description": "يرمي تالون نصالًا تعود إليه، فيلحق الضرر بالأعداء ويبطئهم في كلا الاتجاهين.",
+            "dynamicDescription": "يرمي تالون نصالًا تعود إليه بسرعة، فيلحق <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage> في كلا الاتجاهين و<status>يبطئ</status> الأعداء بنسبة <scaleBonus>@SlowAmount.0*100@%</scaleBonus> لمدة @WSlowDuration@ث.@SpellModifierDescriptionAppend@",
+            "range": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "costCoefficients": [
+                60.0,
+                65.0,
+                70.0,
+                75.0,
+                80.0,
+                85.0
+            ],
+            "cooldownCoefficients": [
+                10.0,
+                10.0,
+                10.0,
+                10.0,
+                10.0,
+                10.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "e",
+            "name": "السفّاك",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/HUD/Icons2D/Jade_TalonE.project_jade_talon.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@Cost@ @AbilityResourceName@",
+            "cooldown": "@Cooldown@ %i:cooldown%",
+            "description": "ينتقل تالون بومضة خلف هدف. يسكت الأعداء ويلحق بهم ضررًا إضافيًا.",
+            "dynamicDescription": "ينتقل تالون بومضة خلف هدف. إذا كان الهدف عدوًا، <status>يسكته</status> لمدة @SilenceDuration@ث ويلحق به <scaleBonus>@DamageAmp.0*100@%</scaleBonus> ضرر إضافي لمدة @AmpDuration@ث.@SpellModifierDescriptionAppend@",
+            "range": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "costCoefficients": [
+                35.0,
+                40.0,
+                45.0,
+                50.0,
+                55.0,
+                60.0
+            ],
+            "cooldownCoefficients": [
+                18.0,
+                16.0,
+                14.0,
+                12.0,
+                10.0,
+                8.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "r",
+            "name": "هجوم الشبح",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/HUD/Icons2D/Jade_TalonR.project_jade_talon.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@Cost@ @AbilityResourceName@",
+            "cooldown": "@Cooldown@ %i:cooldown%",
+            "description": "ينثر تالون النصال ويدخل في طور التخفي ويكسب سرعة حركة إضافية. تعود النصال عند ظهوره مجددًا.",
+            "dynamicDescription": "ينثر تالون النصال فيلحق <physicalDamage>@spell.Jade_TalonR:TotalDamage@ ضرر مادي</physicalDamage> ويدخل في طور <keywordStealth>التخفي</keywordStealth> ويكسب <speed>@spell.Jade_TalonR:MoveSpeed.0*100@% سرعة حركة</speed> لمدة @spell.Jade_TalonR:RStealthDuration@ث.<br><br>عند انتهاء طور التخفي، تعود النصال وتلحق <physicalDamage>@spell.Jade_TalonR:TotalDamage@ ضرر مادي</physicalDamage> مرة أخرى.<br><br><recast>أعد الإلقاء</recast> أو نفذ هجومًا أو استخدم قدرة لإنهاء التخفي مبكرًا.@SpellModifierDescriptionAppend@",
+            "range": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "costCoefficients": [
+                80.0,
+                90.0,
+                100.0,
+                110.0,
+                120.0,
+                130.0
+            ],
+            "cooldownCoefficients": [
+                75.0,
+                65.0,
+                55.0,
+                45.0,
+                35.0,
+                25.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        }
+    ]
+}

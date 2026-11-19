@@ -173,6 +173,7 @@
             "__type": "CharacterHealthBarDataRecord"
         },
         "mResourceResolver": "Characters/Rumble/Skins/Skin13/Resources",
+        "{55d3758e}": "ASSETS/Characters/Rumble/Skins/Skin13/ChromaPreview.tex",
         "objectPath": "Characters/Rumble/Skins/Skin13",
         "__type": "SkinCharacterDataProperties"
     },
@@ -734,6 +735,140 @@
         ],
         "__type": "StaticMaterialDef"
     },
+    "Characters/Rumble/Skins/Skin13/Materials/HKG_MatCap_Dissolve_inst": {
+        "name": "Characters/Rumble/Skins/Skin13/Materials/HKG_MatCap_Dissolve_inst",
+        "samplerValues": [
+            {
+                "TextureName": "MatCap_Tex",
+                "texturePath": "assets/characters/rumble/skins/skin13/particles/rumble_skin13_w_material3.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Dissolve_Texture",
+                "texturePath": "assets/shared/materials/lava_mask.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Biasa",
+                "value": [
+                    -1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/HKG_MatCap_Dissolve",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Dissolve_Biasa",
+                    "Enabled": false,
+                    "driver": {
+                        "mBoolDriver": {
+                            "mScriptName": "RumbleShield",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        "mOnValue": -1.0,
+                        "mOffValue": 1.0,
+                        "mTurnOffTimeSec": 0.5,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
     "Characters/Rumble/Skins/Skin13/Materials/MatCap_Yellow_inst_VFX": {
         "name": "Characters/Rumble/Skins/Skin13/Materials/MatCap_Yellow_inst_VFX",
         "samplerValues": [
@@ -1198,6 +1333,113 @@
                 "passes": [
                     {
                         "shader": "Shaders/SkinnedMesh/HKG_Jelly",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/Rumble/Skins/Skin13/Materials/HKG_MatCap_Only_inst2_VFX": {
+        "name": "Characters/Rumble/Skins/Skin13/Materials/HKG_MatCap_Only_inst2_VFX",
+        "samplerValues": [
+            {
+                "TextureName": "MatCap_Tex",
+                "texturePath": "assets/characters/rumble/skins/skin13/particles/rumble_skin13_w_material1_1.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/HKG_MatCap_Only",
                         "blendEnable": true,
                         "srcColorBlendFactor": 6,
                         "srcAlphaBlendFactor": 6,
@@ -16027,7 +16269,7 @@
                     "__type": "VfxFlexShapeDefinitionData"
                 },
                 "CustomMaterial": {
-                    "Material": "Characters/Rumble/Skins/Skin13/Materials/MatCap_Yellow_inst_VFX",
+                    "Material": "{b8b3bfbf}",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 0,

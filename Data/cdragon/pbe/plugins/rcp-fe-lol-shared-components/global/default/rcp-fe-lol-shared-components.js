@@ -12465,7 +12465,8 @@
                 _fillInData() {
                     return a.tra.ready().then((() => {
                         this._nextButtonText = a.tra.get("eternals_vignette_dismiss_button_text"), this._titleText = a.tra.get("eternals_vignette_mastery_title"), this._masteryFlairText = a.tra.get("eternals_vignette_mastery_flair_unlocked");
-                        this.shadowRoot.querySelector(this._selectors.masteryFlairText).textContent = this._masteryFlairText
+                        const e = this.shadowRoot.querySelector(this._selectors.masteryFlairText);
+                        e && (e.textContent = this._masteryFlairText)
                     }))
                 }
                 _sendTelemetryEvent(e, t) {

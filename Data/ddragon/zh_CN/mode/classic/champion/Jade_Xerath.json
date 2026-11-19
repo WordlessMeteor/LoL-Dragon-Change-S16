@@ -1,0 +1,627 @@
+{
+    "type": "champion",
+    "format": "standAloneComplex",
+    "version": "16.23.1",
+    "data": {
+        "Jade_Xerath": {
+            "id": "Jade_Xerath",
+            "key": "60101",
+            "name": "远古巫灵",
+            "title": "泽拉斯",
+            "image": {
+                "full": "Jade_Xerath.png",
+                "sprite": "champion2.png",
+                "group": "champion",
+                "x": 192,
+                "y": 96,
+                "w": 48,
+                "h": 48
+            },
+            "skins": [
+                {
+                    "id": "60101000",
+                    "num": 0,
+                    "name": "default",
+                    "chromas": false
+                }
+            ],
+            "lore": "- 被动技能会根据法术强度提供额外护甲。<br>- Q技能不再需要引导。<br>- W变为新技能：原地锚定以获得额外距离和法术穿透。<br>- E变为新技能：对敌人造成伤害并将其标记，下一次技能命中时可令其晕眩。<br>- R技能不再让泽拉斯在全部三次施放期间都定在原地无法移动。",
+            "blurb": "- 被动技能会根据法术强度提供额外护甲。<br>- Q技能不再需要引导。<br>- W变为新技能：原地锚定以获得额外距离和法术穿透。<br>- E变为新技能：对敌人造成伤害并将其标记，下一次技能命中时可令其晕眩。<br>- R技能不再让泽拉斯在全部三次施放期间都定在原地无法移动。",
+            "allytips": [],
+            "enemytips": [],
+            "tags": [
+                "Mage",
+                "Support"
+            ],
+            "partype": "法力",
+            "info": {
+                "attack": 1,
+                "defense": 3,
+                "magic": 10,
+                "difficulty": 8
+            },
+            "stats": {
+                "hp": 460,
+                "hpperlevel": 80,
+                "mp": 295,
+                "mpperlevel": 45,
+                "movespeed": 340,
+                "armor": 15.5,
+                "armorperlevel": 3.5,
+                "spellblock": 30,
+                "spellblockperlevel": 0,
+                "attackrange": 550,
+                "hpregen": 5.05,
+                "hpregenperlevel": 0.55,
+                "mpregen": 7.6,
+                "mpregenperlevel": 0.6,
+                "crit": 0,
+                "critperlevel": 0,
+                "attackdamage": 54.66,
+                "attackdamageperlevel": 0,
+                "attackspeedperlevel": 1.36,
+                "attackspeed": 0.625
+            },
+            "spells": [
+                {
+                    "id": "Jade_XerathQ",
+                    "name": "奥能脉冲",
+                    "description": "泽拉斯聚集能量，随后发射出一道超远射程能量光束，对命中的所有敌人造成伤害。",
+                    "tooltip": "泽拉斯聚集能量，随后发射出一道超远射程能量光束，对所有命中的敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "伤害",
+                            "冷却时间",
+                            "@AbilityResourceName@消耗"
+                        ],
+                        "effect": [
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ cost }} -> {{ costNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        7,
+                        6.5,
+                        6,
+                        5.5,
+                        5
+                    ],
+                    "cooldownBurn": "7/6.5/6/5.5/5",
+                    "cost": [
+                        65,
+                        70,
+                        75,
+                        80,
+                        85
+                    ],
+                    "costBurn": "65/70/75/80/85",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "0",
+                    "range": [
+                        1000,
+                        1000,
+                        1000,
+                        1000,
+                        1000
+                    ],
+                    "rangeBurn": "1000",
+                    "image": {
+                        "full": "Jade_XerathQ.png",
+                        "sprite": "spell8.png",
+                        "group": "spell",
+                        "x": 96,
+                        "y": 144,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                },
+                {
+                    "id": "Jade_XerathW",
+                    "name": "能量之座",
+                    "description": "泽拉斯定身自己，提高所有技能的距离，并获得额外法术穿透。效果结束时，泽拉斯的移动速度短暂提升。",
+                    "tooltip": "泽拉斯定身自己最多{{ rootduration }}秒，提高所有技能的距离，并获得<magicPen>{{ magicpenvalue }}%法术穿透</magicPen>。他可再次释放该技能，或进行移动，提前取消效果。<br /><br />效果结束时，泽拉斯获得持续{{ movementspeedduration }}秒的<speed>{{ movementspeedvalue*100 }}%移动速度</speed>。{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "法术穿透",
+                            "冷却时间"
+                        ],
+                        "effect": [
+                            "{{ magicpenvalue }}% -> {{ magicpenvalueNL }}%",
+                            "{{ cooldown }} -> {{ cooldownNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        20,
+                        16,
+                        12,
+                        8,
+                        4
+                    ],
+                    "cooldownBurn": "20/16/12/8/4",
+                    "cost": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "costBurn": "0",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": "无消耗",
+                    "maxammo": "0",
+                    "range": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "rangeBurn": "0",
+                    "image": {
+                        "full": "Jade_XerathW.png",
+                        "sprite": "spell8.png",
+                        "group": "spell",
+                        "x": 144,
+                        "y": 144,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "无消耗"
+                },
+                {
+                    "id": "Jade_XerathE",
+                    "name": "法师锁链",
+                    "description": "泽拉斯对单个敌人造成魔法伤害，并为其添加不稳定魔法标记。泽拉斯的下一个技能命中该敌人时，会使其晕眩。",
+                    "tooltip": "泽拉斯对单个敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>，并为其施加<keywordMajor>不稳定魔法</keywordMajor>标记。泽拉斯的下一个技能命中该敌人时，会使其<status>晕眩</status>{{ stunduration }}秒。{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "伤害",
+                            "冷却时间",
+                            "@AbilityResourceName@消耗"
+                        ],
+                        "effect": [
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ cost }} -> {{ costNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        12,
+                        11,
+                        10,
+                        9,
+                        8
+                    ],
+                    "cooldownBurn": "12/11/10/9/8",
+                    "cost": [
+                        70,
+                        75,
+                        80,
+                        85,
+                        90
+                    ],
+                    "costBurn": "70/75/80/85/90",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "0",
+                    "range": [
+                        650,
+                        650,
+                        650,
+                        650,
+                        650
+                    ],
+                    "rangeBurn": "650",
+                    "image": {
+                        "full": "Jade_XerathE.png",
+                        "sprite": "spell8.png",
+                        "group": "spell",
+                        "x": 192,
+                        "y": 144,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                },
+                {
+                    "id": "Jade_XerathR",
+                    "name": "奥术弹幕",
+                    "description": "泽拉斯向目标区域轰击奥术能量，对区域内的所有敌人造成魔法伤害。在进入冷却以前可被施放最多三次。",
+                    "tooltip": "泽拉斯向目标区域轰击奥术能量，对区域内的所有敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。在进入冷却以前可被施放最多{{ availablecasts }}次。{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "伤害",
+                            "冷却时间",
+                            "@AbilityResourceName@消耗"
+                        ],
+                        "effect": [
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ cost }} -> {{ costNL }}"
+                        ]
+                    },
+                    "maxrank": 3,
+                    "cooldown": [
+                        80,
+                        70,
+                        60
+                    ],
+                    "cooldownBurn": "80/70/60",
+                    "cost": [
+                        150,
+                        180,
+                        210
+                    ],
+                    "costBurn": "150/180/210",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        1100,
+                        1100,
+                        1100
+                    ],
+                    "rangeBurn": "1100",
+                    "image": {
+                        "full": "Jade_XerathR.png",
+                        "sprite": "spell8.png",
+                        "group": "spell",
+                        "x": 240,
+                        "y": 144,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                }
+            ],
+            "passive": {
+                "name": "飞升形态",
+                "description": "泽拉斯汲取奥术能量，基于自身法术强度获得额外护甲。",
+                "image": {
+                    "full": "Jade_Xerath_Passive1.png",
+                    "sprite": "passive2.png",
+                    "group": "passive",
+                    "x": 192,
+                    "y": 96,
+                    "w": 48,
+                    "h": 48
+                }
+            },
+            "recommended": []
+        }
+    }
+}

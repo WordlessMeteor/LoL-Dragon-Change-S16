@@ -1864,7 +1864,7 @@
                         s = [];
                     let l = [];
                     const o = this.get("gameData.gameMode");
-                    this.get("isGameModeWithSubteams") && (l = this.get("subteamGameModeData")[o].disabledSections), e = n.Lodash.sortBy(e, ["priority"]);
+                    this.get("isGameModeWithSubteams") ? l = this.get("subteamGameModeData")[o].disabledSections : r.GAME_MODES_DISABLED_SECTIONS[o] && (l = r.GAME_MODES_DISABLED_SECTIONS[o]), e = n.Lodash.sortBy(e, ["priority"]);
                     let i = !1;
                     return e.forEach((e => {
                         const o = n.Ember.Object.create({}),
@@ -2452,7 +2452,7 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.TEAM_ID = t.GAME_MODES_WITH_SUBTEAMS = void 0;
+            }), t.TEAM_ID = t.GAME_MODES_WITH_SUBTEAMS = t.GAME_MODES_DISABLED_SECTIONS = void 0;
             t.TEAM_ID = {
                 BLUE: 100,
                 RED: 200
@@ -2461,6 +2461,9 @@
                 CHERRY: {
                     disabledSections: ["overview", "runes"]
                 }
+            };
+            t.GAME_MODES_DISABLED_SECTIONS = {
+                KIWI: ["runes"]
             }
         }, (e, t) => {
             "use strict";

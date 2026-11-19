@@ -1,13 +1,52 @@
+.team-voice-hotkey-updates-table th {
+    font-family: var(--font-display)
+}
+
+.team-voice-hotkey-updates-blocked .team-voice-hotkey-updates-footer,
 .team-voice-hotkey-updates-footer,
+.team-voice-hotkey-updates-intro,
+.team-voice-hotkey-updates-table td {
+    font-family: var(--font-body)
+}
+
+.team-voice-hotkey-updates-blocked .team-voice-hotkey-updates-footer,
+.team-voice-hotkey-updates-footer,
+.team-voice-hotkey-updates-intro,
 .team-voice-hotkey-updates-table td,
 .team-voice-hotkey-updates-table th {
-    font-family: var(--font-body);
     -webkit-font-feature-settings: "kern" 1;
     font-kerning: normal;
     -webkit-user-select: none;
     -webkit-font-smoothing: antialiased
 }
 
+.team-voice-hotkey-updates-table th {
+    text-transform: uppercase
+}
+
+.team-voice-hotkey-updates-table th:lang(el-gr),
+.team-voice-hotkey-updates-table th:lang(ja-jp),
+.team-voice-hotkey-updates-table th:lang(ko-kr),
+.team-voice-hotkey-updates-table th:lang(th-th),
+.team-voice-hotkey-updates-table th:lang(tr-tr),
+.team-voice-hotkey-updates-table th:lang(zh-tw) {
+    text-transform: none
+}
+
+.team-voice-hotkey-updates-table th {
+    color: #f0e6d2;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 18px
+}
+
+.team-voice-hotkey-updates-table th:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.team-voice-hotkey-updates-blocked .team-voice-hotkey-updates-footer,
+.team-voice-hotkey-updates-intro,
 .team-voice-hotkey-updates-table td {
     color: #a09b8c;
     font-size: 14px;
@@ -17,6 +56,8 @@
     -webkit-font-smoothing: subpixel-antialiased
 }
 
+.team-voice-hotkey-updates-blocked .team-voice-hotkey-updates-footer:lang(ar-ae),
+.team-voice-hotkey-updates-intro:lang(ar-ae),
 .team-voice-hotkey-updates-table td:lang(ar-ae) {
     letter-spacing: 0
 }
@@ -24,7 +65,6 @@
 .team-voice-hotkey-updates-footer {
     color: #a09b8c;
     font-size: 12px;
-    font-weight: 400;
     letter-spacing: .025em;
     line-height: 16px;
     -webkit-font-smoothing: subpixel-antialiased
@@ -38,49 +78,68 @@
     letter-spacing: 0
 }
 
-.team-voice-hotkey-updates-table th {
-    color: #a09b8c;
-    font-size: 12px;
-    font-weight: 900;
-    letter-spacing: .1em;
-    line-height: 16px;
-    -webkit-font-smoothing: subpixel-antialiased
+.team-voice-hotkey-updates-footer {
+    font-weight: 400;
+    letter-spacing: .05em
 }
 
-.team-voice-hotkey-updates-table th:lang(ja-jp) {
-    font-size: 13px
+.team-voice-hotkey-updates-blocked .team-voice-hotkey-updates-footer,
+.team-voice-hotkey-updates-intro,
+.team-voice-hotkey-updates-table td {
+    letter-spacing: .03em;
+    line-height: 24px
 }
 
-.team-voice-hotkey-updates-table th:lang(ar-ae) {
-    letter-spacing: 0
+lol-uikit-content-block.team-voice-hotkey-updates-dialog {
+    padding: 16px 16px 48px;
+    width: 540px
+}
+
+lol-uikit-content-block.team-voice-hotkey-updates-dialog>h4 {
+    line-height: 24px
+}
+
+lol-uikit-content-block.team-voice-hotkey-updates-dialog>hr.heading-spacer {
+    height: 16px
 }
 
 .team-voice-hotkey-updates {
     text-align: center
 }
 
+.team-voice-hotkey-updates-intro:after {
+    background-color: #3c3c41;
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 16px auto 0;
+    width: 71px
+}
+
 .team-voice-hotkey-updates-table {
     border-collapse: collapse;
-    margin: 16px auto
+    margin: 29px auto
 }
 
+.team-voice-hotkey-updates-table td,
 .team-voice-hotkey-updates-table th {
-    padding: 0 24px 6px;
-    text-align: left
-}
-
-.team-voice-hotkey-updates-table td {
-    padding: 2px 24px;
+    min-width: 132px;
+    padding: 3px 4px;
     text-align: left;
     white-space: nowrap
 }
 
-.team-voice-hotkey-updates-unbound {
-    color: #ff2345
+.team-voice-hotkey-updates-table td:last-child,
+.team-voice-hotkey-updates-table th:last-child {
+    text-align: right
 }
 
-.team-voice-hotkey-updates-footer {
-    margin-top: 8px
+.team-voice-hotkey-updates-table th {
+    line-height: 24px
+}
+
+.team-voice-hotkey-updates-table td.team-voice-hotkey-updates-unbound {
+    color: #be1e37
 }
 
 /*# sourceMappingURL=rcp-fe-lol-premade-voice.css.map*/

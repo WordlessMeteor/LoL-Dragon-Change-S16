@@ -251,6 +251,7 @@
         },
         "mResourceResolver": "Characters/Ornn/Skins/Skin11/Resources",
         "ExtraActionButtonCount": 5,
+        "{55d3758e}": "ASSETS/Characters/Ornn/Skins/Skin11/ChromaPreview.tex",
         "objectPath": "Characters/Ornn/Skins/Skin11",
         "__type": "SkinCharacterDataProperties"
     },
@@ -1441,6 +1442,293 @@
         ],
         "__type": "StaticMaterialDef"
     },
+    "Characters/Ornn/Skins/Skin11/Materials/HKG_MatCap_VFX_Alpha_inst": {
+        "name": "Characters/Ornn/Skins/Skin11/Materials/HKG_MatCap_VFX_Alpha_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/characters/ornn/skins/skin11/particles/ornn_skin11_e_feet_spin_002.tex",
+                "uncensoredTextures": {
+                    "": "{ef46db3751d8e999}"
+                },
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "MatCap_Tex",
+                "texturePath": "assets/characters/ornn/skins/skin11/particles/ornn_skin11_matcap_bubble_04.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask_Texture",
+                "texturePath": "assets/shared/materials/white.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha",
+                "value": [
+                    0.7749999761581421,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BlendMod",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_TEX_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLEND_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MASK_MATCAP",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/HKG_MatCap_Diff_Alpha",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/Ornn/Skins/Skin11/Materials/HKG_MatCap_VFX_Alpha02_inst": {
+        "name": "Characters/Ornn/Skins/Skin11/Materials/HKG_MatCap_VFX_Alpha02_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/characters/ornn/skins/skin11/particles/ornn_skin11_e_feet_spin_00.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "MatCap_Tex",
+                "texturePath": "assets/characters/ornn/skins/skin11/particles/ornn_skin11_matcap_bubble_04.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask_Texture",
+                "texturePath": "assets/shared/materials/white.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha",
+                "value": [
+                    0.7749999761581421,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BlendMod",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_TEX_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLEND_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MASK_MATCAP",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/HKG_MatCap_Diff_Alpha",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
     "Characters/Ornn/Skins/Skin11/Materials/HKG_RM_LavaLamp_0_inst": {
         "name": "Characters/Ornn/Skins/Skin11/Materials/HKG_RM_LavaLamp_0_inst",
         "samplerValues": [
@@ -2385,7 +2673,7 @@
                     "__type": "ValueVector3"
                 },
                 "CustomMaterial": {
-                    "Material": "Characters/Ornn/Skins/Skin11/Materials/HKG_MatCap_Pet_inst",
+                    "Material": "{15e175a6}",
                     "materialDrivers": {
                         "Alpha": {
                             "graph": {
@@ -15498,7 +15786,7 @@
                     "__type": "{ee39916f}"
                 },
                 "CustomMaterial": {
-                    "Material": "Characters/Ornn/Skins/Skin11/Materials/HKG_MatCap_VFX_R01_inst",
+                    "Material": "{b445979b}",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 0,
@@ -27496,7 +27784,7 @@
                     "__type": "{ee39916f}"
                 },
                 "CustomMaterial": {
-                    "Material": "Characters/Ornn/Skins/Skin11/Materials/HKG_MatCap_VFX_R02_inst",
+                    "Material": "{953a9c20}",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 0,

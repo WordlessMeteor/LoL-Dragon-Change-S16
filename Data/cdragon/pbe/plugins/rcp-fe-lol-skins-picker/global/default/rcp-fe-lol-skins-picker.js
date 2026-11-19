@@ -1807,7 +1807,8 @@
                         })), i.style.backgroundImage = o.join(","), n.dataset.skinAugments = e.join(",")
                     }
                     e.dataset.skinId = t.id;
-                    n.querySelector(".tile-label").textContent = t.name
+                    const o = n.querySelector(".tile-label");
+                    o && (o.textContent = t.name)
                 }
                 _resetSkinTile(e) {
                     const t = e.querySelector(".skin-tile");
@@ -1815,7 +1816,8 @@
                     t.querySelector(".tile-image").setAttribute("src", "");
                     const n = t.querySelector(".overlay-tile");
                     n && (n.style.backgroundImage = "");
-                    t.querySelector(".tile-label").textContent = ""
+                    const i = t.querySelector(".tile-label");
+                    i && (i.textContent = "")
                 }
                 _onSkinTileClick(e) {
                     const t = e.currentTarget;
@@ -1870,10 +1872,13 @@
                     return t.appendChild(o), e.appendChild(t), e
                 }
                 updateRow(e, t) {
-                    const n = e.data;
-                    t.querySelector(".universe-title span").textContent = n ? n.name : "";
-                    t.querySelector(".universe-subtitle").textContent = n ? n.description : "";
-                    t.querySelector(".universe-background").style.backgroundImage = n && n.imagePath ? `url(${n.imagePath})` : "none"
+                    const n = e.data,
+                        i = t.querySelector(".universe-title span");
+                    i && (i.textContent = n ? n.name : "");
+                    const o = t.querySelector(".universe-subtitle");
+                    o && (o.textContent = n ? n.description : "");
+                    const r = t.querySelector(".universe-background");
+                    r && (r.style.backgroundImage = n && n.imagePath ? `url(${n.imagePath})` : "none")
                 }
                 _createArrowIcon() {
                     const e = document.createElement("img");

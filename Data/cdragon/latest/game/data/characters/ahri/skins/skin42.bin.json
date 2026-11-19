@@ -379,6 +379,7 @@
                 "__type": "PersistentEffectConditionData"
             }
         ],
+        "{55d3758e}": "ASSETS/Characters/Ahri/Skins/Skin42/ChromaPreview.tex",
         "objectPath": "Characters/Ahri/Skins/Skin42",
         "__type": "SkinCharacterDataProperties"
     },
@@ -12786,6 +12787,153 @@
                         "mOnValue": 10.0,
                         "mOffValue": 0.25,
                         "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/Ahri/Skins/Skin42/Materials/Diffuse_Alpha_inst_P": {
+        "name": "Characters/Ahri/Skins/Skin42/Materials/Diffuse_Alpha_inst_P",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/characters/ahri/skins/skin42/ahri_skin42_wolf_skull_tx_cm_3.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Diffuse_Alpha",
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Alpha",
+                    "driver": {
+                        "mElements": [
+                            {
+                                "mCondition": {
+                                    "mAnimationNames": [
+                                        "Recall"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "mBoolDriver": {
+                                        "mAnimationNames": [
+                                            "Recall"
+                                        ],
+                                        "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                    },
+                                    "mOnValue": 0.0,
+                                    "mOffValue": 3.0,
+                                    "mTurnOnTimeSec": 7.0,
+                                    "mTurnOffTimeSec": 0.0,
+                                    "__type": "LerpMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            }
+                        ],
+                        "mDefaultValue": {
+                            "mValue": 1.0,
+                            "__type": "FloatLiteralMaterialDriver"
+                        },
+                        "__type": "SwitchMaterialDriver"
                     },
                     "__type": "DynamicMaterialParameterDef"
                 }

@@ -20663,7 +20663,10 @@
             "evtPracticeToolDec10Resistance": "[]",
             "evtChatModeReturnPressed": "[]",
             "evtOpenChat": "[]",
-            "evtOpenChatAll": "[]"
+            "evtOpenChatAll": "[]",
+            "evtPushToTalk": "[]",
+            "evtPushToTalkTeam": "[]",
+            "evtShowVoicePanel": "[]"
         },
         "{911d1120}": true,
         "__type": "{5a92b195}"
@@ -20958,7 +20961,10 @@
                 "evtNormalCastRoleBound": "[]",
                 "evtChatModeReturnPressed": "[]",
                 "evtOpenChat": "[]",
-                "evtOpenChatAll": "[]"
+                "evtOpenChatAll": "[]",
+                "evtPushToTalk": "[]",
+                "evtPushToTalkTeam": "[]",
+                "evtShowVoicePanel": "[]"
             },
             "__type": "{5a92b195}"
         },
@@ -23243,11 +23249,13 @@
             "Characters/Jade_Shyvana",
             "Characters/Jade_XinZhao",
             "{110c9a15}",
+            "{e9a0a873}",
             "{bedf231f}",
             "Characters/Jade_Graves",
             "Characters/Jade_Nami",
             "Characters/Jade_Nautilus",
             "Characters/Jade_Fizz",
+            "{12616560}",
             "{a8009f85}",
             "{8cdcd387}",
             "{0bda2162}",
@@ -23257,7 +23265,9 @@
             "{e8ae00fa}",
             "{69dc7521}",
             "{f727914b}",
-            "{1240ac8f}"
+            "{1240ac8f}",
+            "{b5340d57}",
+            "{4a348237}"
         ],
         "__type": "GameModeChampionList"
     },
@@ -25435,7 +25445,10 @@
                 "evtNormalCastRoleBound": "[]",
                 "evtChatModeReturnPressed": "[]",
                 "evtOpenChat": "[]",
-                "evtOpenChatAll": "[]"
+                "evtOpenChatAll": "[]",
+                "evtPushToTalk": "[]",
+                "evtPushToTalkTeam": "[]",
+                "evtShowVoicePanel": "[]"
             },
             "__type": "{5a92b195}"
         },
@@ -25691,7 +25704,10 @@
             "evtPracticeToolDec10Resistance": "[]",
             "evtChatModeReturnPressed": "[]",
             "evtOpenChat": "[]",
-            "evtOpenChatAll": "[]"
+            "evtOpenChatAll": "[]",
+            "evtPushToTalk": "[]",
+            "evtPushToTalkTeam": "[]",
+            "evtShowVoicePanel": "[]"
         },
         "{911d1120}": true,
         "__type": "{5a92b195}"
@@ -28104,6 +28120,37 @@
                     "Play_sfx_Emotes_Happy_Poro_01",
                     "Play_sfx_Emotes_Happy_Poro_02",
                     "Play_sfx_Emotes_Taunt_Poro_01"
+                ],
+                "__type": "BankUnit"
+            },
+            {
+                "name": "HUD_VoiceChat",
+                "bankPath": [
+                    "ASSETS/Sounds/Wwise2016/SFX/Shared/HUD_VoiceChat_audio.bnk",
+                    "ASSETS/Sounds/Wwise2016/SFX/Shared/HUD_VoiceChat_events.bnk"
+                ],
+                "events": [
+                    "Play_sfx_HUD_voicechat_connect",
+                    "Play_sfx_HUD_voicechat_disconnect",
+                    "Play_sfx_HUD_voicechat_mute",
+                    "Play_sfx_HUD_voicechat_party_channel_connect",
+                    "Play_sfx_HUD_voicechat_party_channel_disconnect",
+                    "Play_sfx_HUD_voicechat_party_ptt",
+                    "Play_sfx_HUD_voicechat_party_ptt_denied",
+                    "Play_sfx_HUD_voicechat_party_ptt_release",
+                    "Play_sfx_HUD_voicechat_team_channel_connect",
+                    "Play_sfx_HUD_voicechat_team_channel_disconnect",
+                    "Play_sfx_HUD_voicechat_team_ptt",
+                    "Play_sfx_HUD_voicechat_team_ptt_denied",
+                    "Play_sfx_HUD_voicechat_team_ptt_release",
+                    "Play_sfx_HUD_voicechat_toggle_off_click",
+                    "Play_sfx_HUD_voicechat_toggle_on_click",
+                    "Play_sfx_HUD_voicechat_unmute",
+                    "Play_sfx_HUD_voicechat_volume_bar_click",
+                    "Play_sfx_HUD_voicechat_volume_click",
+                    "Play_sfx_HUD_voicechat_volume_release",
+                    "Play_sfx_HUD_voicechat_window_close",
+                    "Play_sfx_HUD_voicechat_window_open"
                 ],
                 "__type": "BankUnit"
             }
@@ -91525,7 +91572,7 @@
                     "__type": "ValueFloat"
                 },
                 "CustomMaterial": {
-                    "Material": "Shared/Materials/Squid_Ink_Exploration/Squid_Ink_Chaos",
+                    "Material": "{a7e1c7d8}",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 5,
@@ -91931,157 +91978,6 @@
         "flags": 215,
         "objectPath": "Shared/Particles/Squid_Ink_Chaos",
         "__type": "VfxSystemDefinitionData"
-    },
-    "Shared/Materials/Squid_Ink_Exploration/Squid_Ink_Chaos": {
-        "name": "Shared/Materials/Squid_Ink_Exploration/Squid_Ink_Chaos",
-        "type": 2,
-        "samplerValues": [
-            {
-                "TextureName": "Diffuse_Mask_Multiply",
-                "texturePath": "assets/shared/materials/void_test/corruption_diffuse_mask.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Edge_Texture",
-                "texturePath": "assets/shared/materials/cloudnoise.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Diffuse_Texture",
-                "texturePath": "assets/characters/srt_2024_void_pool/srt_2024_void_pool_ground_main_inverted.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Edge_Texture",
-                "texturePath": "assets/characters/srt_2024_void_pool/srt_void_pool_circle_base.tex",
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "EdgeLength",
-                "value": [
-                    0.4000000059604645,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "MinAlpha",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollUV",
-                "value": [
-                    0.004000000189989805,
-                    0.0024999999441206455,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "UVScale",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Alpha",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "MaskControl",
-                "value": [
-                    0.0,
-                    0.0,
-                    1.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "UVScale",
-                "value": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Alpha",
-                "value": [
-                    0.5,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "MinAlpha",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "ScrollUV",
-                "value": [
-                    0.20000000298023224,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "EdgeLength",
-                "value": [
-                    0.4000000059604645,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "WORLD_SPACE_UV",
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/Particles/Void_Pool_Test",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "writeMask": 15,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
     },
     "{2943bce0}": {
         "{d29457ab}": 2.0,

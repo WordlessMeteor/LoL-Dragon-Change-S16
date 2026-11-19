@@ -179,6 +179,7 @@
                 "__type": "PersistentEffectConditionData"
             }
         ],
+        "{55d3758e}": "ASSETS/Characters/Malphite/Skins/Skin48/ChromaPreview.tex",
         "objectPath": "Characters/Malphite/Skins/Skin48",
         "__type": "SkinCharacterDataProperties"
     },
@@ -19908,6 +19909,140 @@
         "soundOnCreateDefault": "Play_sfx_Malphite_UFSlash_land",
         "objectPath": "Characters/Malphite/Skins/Skin48/Particles/Malphite_Skin48_R_HitAoe",
         "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/Malphite/Skins/Skin48/Materials/HKG_MatCap_Dissolve_inst": {
+        "name": "Characters/Malphite/Skins/Skin48/Materials/HKG_MatCap_Dissolve_inst",
+        "samplerValues": [
+            {
+                "TextureName": "MatCap_Tex",
+                "texturePath": "assets/characters/malphite/skins/skin48/particles/malphite_skin48_p_bubble_shield2.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Dissolve_Texture",
+                "texturePath": "assets/shared/materials/lava_mask.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Biasa",
+                "value": [
+                    -1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/HKG_MatCap_Dissolve",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Dissolve_Biasa",
+                    "Enabled": false,
+                    "driver": {
+                        "mBoolDriver": {
+                            "mScriptName": "RumbleShield",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        "mOnValue": -1.0,
+                        "mOffValue": 1.0,
+                        "mTurnOffTimeSec": 0.5,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
     },
     "Characters/Malphite/Skins/Skin48/Materials/Malphite_Skin37_FlowMap3_Bloom_inst": {
         "name": "Characters/Malphite/Skins/Skin48/Materials/Malphite_Skin37_FlowMap3_Bloom_inst",

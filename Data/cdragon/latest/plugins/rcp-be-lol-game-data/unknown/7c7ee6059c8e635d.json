@@ -1,0 +1,676 @@
+{
+    "id": 60091,
+    "contentId": "99a24d27-61a4-4760-9136-afd6b639dafb",
+    "relatedPrimeContentId": "b6447476-7126-4fa8-b6f3-6d1550801b0a",
+    "relatedPrimeItemId": 91,
+    "name": "塔隆",
+    "alias": "Jade_Talon",
+    "title": "神影刺客",
+    "shortBio": "- P重制：攻击对被控制的敌人造成更高伤害。<br>- Q会强化塔隆的下一次攻击，造成额外伤害并附带流血效果。<br>- E为一次闪现，会沉默敌人并使其受到的伤害提升。",
+    "isVisibleInClient": true,
+    "tacticalInfo": {
+        "style": 7,
+        "difficulty": 2,
+        "damageType": "kPhysical",
+        "attackType": "melee"
+    },
+    "playstyleInfo": {
+        "damage": 3,
+        "durability": 1,
+        "crowdControl": 1,
+        "mobility": 2,
+        "utility": 1
+    },
+    "championTagInfo": {
+        "championTagPrimary": "机动型",
+        "championTagSecondary": "爆发型"
+    },
+    "squarePortraitPath": "/lol-game-data/assets/v1/champion-icons/60091.png",
+    "stingerSfxPath": "/lol-game-data/assets/v1/champion-sfx-audios/60091.ogg",
+    "chooseVoPath": "/lol-game-data/assets/v1/champion-choose-vo/60091.ogg",
+    "banVoPath": "/lol-game-data/assets/v1/champion-ban-vo/60091.ogg",
+    "roles": [
+        "assassin",
+        "fighter"
+    ],
+    "recommendedItemDefaults": [],
+    "skins": [
+        {
+            "id": 60091000,
+            "contentId": "d290e6b6-6f37-4e84-8eec-9ced50c918f2",
+            "relatedPrimeContentId": "d7ffba76-4ff5-412d-820c-d47f4898c02c",
+            "relatedPrimeItemId": 91000,
+            "isBase": true,
+            "name": "塔隆",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/Skins/Base/Images/Jade_Talon_splash_centered_0.project_jade_talon.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/Skins/Base/Images/Jade_Talon_splash_uncentered_0.project_jade_talon.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/Skins/Base/Images/Jade_Talon_splash_tile_0.project_jade_talon.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/Skins/Base/Jade_TalonLoadScreen_0.project_jade_talon.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/Skins/Base/Jade_TalonLoadScreen_0_LE.project_jade_talon.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": null
+        }
+    ],
+    "passive": {
+        "name": "怜悯",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/HUD/Icons2D/Jade_TalonP.project_jade_talon.png",
+        "abilityVideoPath": "",
+        "abilityVideoImagePath": "",
+        "description": "塔隆的攻击对受到特定控制效果影响的敌人造成更多伤害。"
+    },
+    "spells": [
+        {
+            "spellKey": "q",
+            "name": "诺城王道",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/HUD/Icons2D/Jade_TalonQ.project_jade_talon.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@Cost@ @AbilityResourceName@",
+            "cooldown": "@Cooldown@ 秒 %i:cooldown%",
+            "description": "塔隆的下一次攻击会造成额外伤害，并让敌方英雄流血，使其现形。",
+            "dynamicDescription": "塔隆在@ReadyDuration@秒内的下一次攻击会造成<physicalDamage>@TotalAttackDamage@物理伤害</physicalDamage>。<br><br>命中一名英雄时，还会在@BleedDuration@秒内造成<physicalDamage>@TotalBleedDamage@物理伤害</physicalDamage>，并在@RevealDuration@秒内显现该目标。@SpellModifierDescriptionAppend@",
+            "range": [
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0
+            ],
+            "costCoefficients": [
+                40.0,
+                45.0,
+                50.0,
+                55.0,
+                60.0,
+                65.0
+            ],
+            "cooldownCoefficients": [
+                8.0,
+                7.0,
+                6.0,
+                5.0,
+                4.0,
+                3.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "w",
+            "name": "回力匕首",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/HUD/Icons2D/Jade_TalonW.project_jade_talon.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@Cost@ @AbilityResourceName@",
+            "cooldown": "@Cooldown@ 秒 %i:cooldown%",
+            "description": "塔隆投掷刀刃，刀刃会返回，对路径上的敌人造成伤害并减速。",
+            "dynamicDescription": "塔隆投掷刀刃并在回旋时快速返回，对来回路径上的敌人造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>，并使其<status>减速</status><scaleBonus>@SlowAmount.0*100@%</scaleBonus> ，持续@WSlowDuration@秒。@SpellModifierDescriptionAppend@",
+            "range": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "costCoefficients": [
+                60.0,
+                65.0,
+                70.0,
+                75.0,
+                80.0,
+                85.0
+            ],
+            "cooldownCoefficients": [
+                10.0,
+                10.0,
+                10.0,
+                10.0,
+                10.0,
+                10.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "e",
+            "name": "割喉",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/HUD/Icons2D/Jade_TalonE.project_jade_talon.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@Cost@ @AbilityResourceName@",
+            "cooldown": "@Cooldown@ 秒 %i:cooldown%",
+            "description": "塔隆闪现到目标身后。他会让敌人沉默，并对他们造成更高伤害。",
+            "dynamicDescription": "塔隆闪现到目标身后。如果目标是敌人，他会使其<status>沉默</status>@SilenceDuration@秒，并在@AmpDuration@秒内对其造成<scaleBonus>@DamageAmp.0*100@%</scaleBonus>额外伤害。@SpellModifierDescriptionAppend@",
+            "range": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "costCoefficients": [
+                35.0,
+                40.0,
+                45.0,
+                50.0,
+                55.0,
+                60.0
+            ],
+            "cooldownCoefficients": [
+                18.0,
+                16.0,
+                14.0,
+                12.0,
+                10.0,
+                8.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "r",
+            "name": "暗影突袭",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Talon/HUD/Icons2D/Jade_TalonR.project_jade_talon.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@Cost@ @AbilityResourceName@",
+            "cooldown": "@Cooldown@ 秒 %i:cooldown%",
+            "description": "塔隆散射刀刃并进入隐身状态，提升移动速度。他重新现身时，刀刃会归来。",
+            "dynamicDescription": "塔隆散射刀刃，造成<physicalDamage>@spell.Jade_TalonR:TotalDamage@物理伤害</physicalDamage>，并获得<keywordStealth>隐形</keywordStealth>和<speed>@spell.Jade_TalonR:MoveSpeed.0*100@%移动速度</speed>，持续@spell.Jade_TalonR:RStealthDuration@ 秒。<br><br>隐身结束时，刀刃会返回，再次造成<physicalDamage>@spell.Jade_TalonR:TotalDamage@物理伤害</physicalDamage>。<br><br><recast>再次施放</recast>、攻击或使用技能可提前结束隐形。@SpellModifierDescriptionAppend@",
+            "range": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "costCoefficients": [
+                80.0,
+                90.0,
+                100.0,
+                110.0,
+                120.0,
+                130.0
+            ],
+            "cooldownCoefficients": [
+                75.0,
+                65.0,
+                55.0,
+                45.0,
+                35.0,
+                25.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        }
+    ]
+}

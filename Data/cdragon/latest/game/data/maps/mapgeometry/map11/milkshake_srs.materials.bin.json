@@ -19108,67 +19108,6 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Maps/KitPieces/SRS/Base/Materials/Default/Chaos_Spawn_B_MAT": {
-        "name": "Maps/KitPieces/SRS/Base/Materials/Default/Chaos_Spawn_B_MAT",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "assets/maps/kitpieces/srs/base/textures/chaos_spawn_b_1bitalpha.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.501960813999176,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "AlphaTestValue",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "MULTIPLY_ALPHA",
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NO_BAKED_LIGHTING": "1",
-            "DISABLE_DEPTH_FOG": "1",
-            "PREMULTIPLIED_ALPHA": "1"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
-                        "blendEnable": true,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
     "Maps/KitPieces/SRS/Base/Materials/Default/Order_Dragon_Chemtech_C_MAT": {
         "name": "Maps/KitPieces/SRS/Base/Materials/Default/Order_Dragon_Chemtech_C_MAT",
         "type": 0,
@@ -32696,6 +32635,46 @@
         ],
         "__type": "StaticMaterialDef"
     },
+    "Maps/KitPieces/SRS/Worlds/Materials/Default/Worlds_Trophy_2025_MAT": {
+        "name": "Maps/KitPieces/SRS/Worlds/Materials/Default/Worlds_Trophy_2025_MAT",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "assets/maps/kitpieces/srs/worlds/textures/worlds_trophy_2025_tx_cm.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TintColor",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "shaderMacros": {
+            "NO_BAKED_LIGHTING": "1"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
     "Maps/KitPieces/SRX/Materials/Default/Ocean_WaterLily_A_back_MAT": {
         "name": "Maps/KitPieces/SRX/Materials/Default/Ocean_WaterLily_A_back_MAT",
         "type": 0,
@@ -38339,7 +38318,6 @@
             "{d4386834}": null,
             "{e337ce53}": null,
             "{7c005243}": null,
-            "{bf94bdb5}": null,
             "{ad7bccd9}": null,
             "{c7955e56}": null,
             "{7c03ca30}": null,
@@ -92616,7 +92594,7 @@
                 "name": "SRU_MSI_Winner1",
                 "system": "Maps/Shipping/Map11/Particles/HOL_26/HoL_26_CubeGrid",
                 "eyeCandy": true,
-                "VisibilityController": "{8f1ab207}",
+                "VisibilityController": "{76c50391}",
                 "__type": "MapParticle"
             },
             "{44b63467}": {
@@ -100859,7 +100837,7 @@
                 "name": "SRU_MSI_Winner2",
                 "system": "Maps/Shipping/Map11/Particles/HOL_26/HoL_26_CubeGrid_02",
                 "eyeCandy": true,
-                "VisibilityController": "{8f1ab207}",
+                "VisibilityController": "{76c50391}",
                 "__type": "MapParticle"
             }
         },
@@ -126734,6 +126712,44 @@
         },
         "__type": "MapPlaceableContainer"
     },
+    "Maps/MapGeometry/Map11/Chunks/Worlds_Trophies": {
+        "items": {
+            "{7d41dee8}": null,
+            "{137b1472}": {
+                "transform": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    [
+                        6258.67626953125,
+                        605.3875732421875,
+                        14539.24609375,
+                        1.0
+                    ]
+                ],
+                "name": "SRU_Worlds_Winner_2026_Spotlight",
+                "system": "Maps/Shipping/Map11/Particles/Worlds/SRU_Worlds_Winner",
+                "VisibilityController": "{6d9e7ec9}",
+                "__type": "MapParticle"
+            }
+        },
+        "__type": "MapPlaceableContainer"
+    },
     "Maps/MapGeometry/Map11/Chunks/SRX_VFX_Ocean": {
         "items": {
             "{9a7e6d5e}": {
@@ -139382,6 +139398,13 @@
         "ParentMode": 3,
         "__type": "ChildMapVisibilityController"
     },
+    "{1804e2e4}": {
+        "PathHash": "{1804e2e4}",
+        "name": "{215400aa}",
+        "DefaultVisible": false,
+        "{27639032}": 4,
+        "__type": "{c406a533}"
+    },
     "{189a3295}": {
         "PathHash": "{189a3295}",
         "name": "{2978241b}",
@@ -139418,6 +139441,14 @@
         "{27639032}": 4,
         "__type": "{c406a533}"
     },
+    "{4aefd282}": {
+        "PathHash": "{4aefd282}",
+        "Parents": [
+            "{daa88f8e}",
+            "{6f187e01}"
+        ],
+        "__type": "ChildMapVisibilityController"
+    },
     "{4f0b2a3e}": {
         "PathHash": "{4f0b2a3e}",
         "name": "{699b9ac4}",
@@ -139437,6 +139468,11 @@
         ],
         "ParentMode": 3,
         "__type": "ChildMapVisibilityController"
+    },
+    "{6d9e7ec9}": {
+        "PathHash": "{6d9e7ec9}",
+        "MutatorName": "SR_Worlds_Trophies",
+        "__type": "MutatorMapVisibilityController"
     },
     "{6f187e01}": {
         "PathHash": "{6f187e01}",
@@ -139512,6 +139548,14 @@
         "{27639032}": 2,
         "__type": "{c406a533}"
     },
+    "{a8951ff3}": {
+        "PathHash": "{a8951ff3}",
+        "Parents": [
+            "{daa88f8e}",
+            "{5e652742}"
+        ],
+        "__type": "ChildMapVisibilityController"
+    },
     "{ca63c5fe}": {
         "PathHash": "{ca63c5fe}",
         "name": "{021ceb04}",
@@ -139523,6 +139567,11 @@
         "DefaultVisible": false,
         "{27639032}": 2,
         "__type": "{c406a533}"
+    },
+    "{daa88f8e}": {
+        "PathHash": "{daa88f8e}",
+        "name": "{738c8da8}",
+        "__type": "{e07edfa4}"
     },
     "{e94a0c8c}": {
         "PathHash": "{e94a0c8c}",
@@ -139603,11 +139652,6 @@
         ],
         "ParentMode": 1,
         "__type": "ChildMapVisibilityController"
-    },
-    "{8f1ab207}": {
-        "PathHash": "{8f1ab207}",
-        "MutatorName": "MSITrophy",
-        "__type": "MutatorMapVisibilityController"
     },
     "{a7b30f31}": {
         "PathHash": "{a7b30f31}",
@@ -139694,6 +139738,11 @@
                         "chunk": "Maps/MapGeometry/Map11/Chunks/Hall_Of_Legends",
                         "VisibilityController": "{76c50391}",
                         "__type": "{6355dd6f}"
+                    },
+                    {
+                        "chunk": "Maps/MapGeometry/Map11/Chunks/Worlds_Trophies",
+                        "VisibilityController": "{6d9e7ec9}",
+                        "__type": "{6355dd6f}"
                     }
                 ],
                 "__type": "{cdb1c8f6}"
@@ -139740,6 +139789,7 @@
             "SRX_Faerie_Lights": "Maps/MapGeometry/Map11/Chunks/SRX_Faerie_Lights",
             "HomeguardsMarkers": "Maps/MapGeometry/Map11/Chunks/HomeguardsMarkers",
             "Test": "{a3047a68}",
+            "Worlds_Trophies": "Maps/MapGeometry/Map11/Chunks/Worlds_Trophies",
             "{eb39ad51}": "{0a31530c}",
             "{9fbf38ae}": "Maps/MapGeometry/Map11/Chunks/Milkshake_SRS/Milkshake_VFX",
             "{4185f7ea}": "{183e98d5}",
@@ -366208,6 +366258,1171 @@
         "CampName": "Order Small Golems",
         "__type": "NeutralCampIdentifier"
     },
+    "Maps/Shipping/Map11/Particles/Worlds/SRU_Worlds_Winner": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 50.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.800000011920929,
+                                    1.25
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            1.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 11.0,
+                "emitterName": "Motes",
+                "worldAcceleration": {
+                    "constantValue": [
+                        0.0,
+                        50.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                50.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            300.0,
+                            200.0,
+                            300.0
+                        ],
+                        "dynamics": {
+                            "probabilityTables": [
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        -1.0,
+                                        1.0
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        -1.0,
+                                        1.0
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        -1.0,
+                                        1.0
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                }
+                            ],
+                            "times": [
+                                0.0
+                            ],
+                            "values": [
+                                [
+                                    300.0,
+                                    200.0,
+                                    300.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector3fVariableData"
+                        },
+                        "__type": "ValueVector3"
+                    },
+                    "emitRotationAngles": [
+                        {
+                            "constantValue": 1.0,
+                            "dynamics": {
+                                "probabilityTables": [
+                                    {
+                                        "keyTimes": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "keyValues": [
+                                            0.0,
+                                            360.0
+                                        ],
+                                        "__type": "VfxProbabilityTableData"
+                                    }
+                                ],
+                                "times": [
+                                    0.0
+                                ],
+                                "values": [
+                                    1.0
+                                ],
+                                "__type": "VfxAnimatedFloatVariableData"
+                            },
+                            "__type": "ValueFloat"
+                        },
+                        {
+                            "constantValue": 1.0,
+                            "dynamics": {
+                                "probabilityTables": [
+                                    {
+                                        "keyTimes": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "keyValues": [
+                                            0.0,
+                                            360.0
+                                        ],
+                                        "__type": "VfxProbabilityTableData"
+                                    }
+                                ],
+                                "times": [
+                                    0.0
+                                ],
+                                "values": [
+                                    1.0
+                                ],
+                                "__type": "VfxAnimatedFloatVariableData"
+                            },
+                            "__type": "ValueFloat"
+                        }
+                    ],
+                    "emitRotationAxes": [
+                        [
+                            1.0000001192092896,
+                            0.0,
+                            0.0
+                        ],
+                        [
+                            0.0,
+                            1.0000001192092896,
+                            0.0
+                        ]
+                    ],
+                    "__type": "VfxShapeLegacy"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.3294117748737335,
+                        0.6313725709915161,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        10.0,
+                        10.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Shared/Particles/Skin32_Mote.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 0.6499999761581421,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 4.0,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "lightBeamCenter",
+                "importance": 3,
+                "worldAcceleration": {
+                    "constantValue": [
+                        0.0,
+                        -40.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -40.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -750.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveRay"
+                },
+                "birthColor": {
+                    "constantValue": [
+                        0.2399939000606537,
+                        0.34000152349472046,
+                        1.0,
+                        0.7000076174736023
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "colorLookUpTypeY": 3,
+                "softParticleParams": {
+                    "deltaIn": 75.0,
+                    "__type": "VfxSoftParticleDefinitionData"
+                },
+                "birthRotation0": {
+                    "constantValue": [
+                        -90.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        600.0,
+                        1500.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.699999988079071,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                600.0,
+                                1500.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.800000011920929,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Items/3107/Particles/MSI_Trophy_LightBeam.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 0.6499999761581421,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 4.0,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "lightBeamOuter",
+                "importance": 3,
+                "worldAcceleration": {
+                    "constantValue": [
+                        0.0,
+                        -40.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -40.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -350.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveRay"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.22000457346439362,
+                        0.39000535011291504,
+                        1.0,
+                        0.5000076293945312
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "colorLookUpTypeY": 3,
+                "alphaRef": 0,
+                "softParticleParams": {
+                    "deltaIn": 75.0,
+                    "__type": "VfxSoftParticleDefinitionData"
+                },
+                "birthRotation0": {
+                    "constantValue": [
+                        -90.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        1000.0,
+                        1350.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.5,
+                                    0.5009999871253967,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.800000011920929,
+                                    1.0,
+                                    -0.800000011920929,
+                                    -1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1000.0,
+                                1350.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.800000011920929,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Shared/Particles/light_rays_01.tex",
+                "uvRotation": {
+                    "constantValue": 180.0,
+                    "__type": "ValueFloat"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 0.30000001192092896,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.30000001192092896,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            0.30000001192092896
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 11.0,
+                "emitterName": "Basic",
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            50.0,
+                            0.0,
+                            0.0
+                        ],
+                        "dynamics": {
+                            "probabilityTables": [
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        0.5,
+                                        1.0
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                }
+                            ],
+                            "times": [
+                                0.0
+                            ],
+                            "values": [
+                                [
+                                    50.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector3fVariableData"
+                        },
+                        "__type": "ValueVector3"
+                    },
+                    "emitRotationAngles": [
+                        {
+                            "constantValue": 1.0,
+                            "dynamics": {
+                                "probabilityTables": [
+                                    {
+                                        "keyTimes": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "keyValues": [
+                                            0.0,
+                                            360.0
+                                        ],
+                                        "__type": "VfxProbabilityTableData"
+                                    }
+                                ],
+                                "times": [
+                                    0.0
+                                ],
+                                "values": [
+                                    1.0
+                                ],
+                                "__type": "VfxAnimatedFloatVariableData"
+                            },
+                            "__type": "ValueFloat"
+                        },
+                        {
+                            "__type": "ValueFloat"
+                        }
+                    ],
+                    "emitRotationAxes": [
+                        [
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    "__type": "VfxShapeLegacy"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        20.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.6627451181411743,
+                        0.7921568751335144,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 5,
+                "birthScale0": {
+                    "constantValue": [
+                        50.0,
+                        50.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                50.0,
+                                50.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Shared/Particles/3026_Items_LensFlare01.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 0.699999988079071,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.30000001192092896,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            0.30000001192092896
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 11.0,
+                "emitterName": "Basic1",
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            50.0,
+                            0.0,
+                            0.0
+                        ],
+                        "dynamics": {
+                            "probabilityTables": [
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        0.5,
+                                        1.0
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                }
+                            ],
+                            "times": [
+                                0.0
+                            ],
+                            "values": [
+                                [
+                                    50.0,
+                                    0.0,
+                                    0.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector3fVariableData"
+                        },
+                        "__type": "ValueVector3"
+                    },
+                    "emitRotationAngles": [
+                        {
+                            "constantValue": 1.0,
+                            "dynamics": {
+                                "probabilityTables": [
+                                    {
+                                        "keyTimes": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "keyValues": [
+                                            0.0,
+                                            360.0
+                                        ],
+                                        "__type": "VfxProbabilityTableData"
+                                    }
+                                ],
+                                "times": [
+                                    0.0
+                                ],
+                                "values": [
+                                    1.0
+                                ],
+                                "__type": "VfxAnimatedFloatVariableData"
+                            },
+                            "__type": "ValueFloat"
+                        },
+                        {
+                            "__type": "ValueFloat"
+                        }
+                    ],
+                    "emitRotationAxes": [
+                        [
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    "__type": "VfxShapeLegacy"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        100.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.5803921818733215,
+                        0.6784313917160034,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 5,
+                "birthScale0": {
+                    "constantValue": [
+                        50.0,
+                        50.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                50.0,
+                                50.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Shared/Particles/3026_Items_LensFlare01.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 3.5,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "Experiment",
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -600.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.14999619126319885,
+                        0.4899977147579193,
+                        1.0,
+                        0.4000000059604645
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "alphaRef": 0,
+                "depthBiasFactors": [
+                    -1.0,
+                    -50.0
+                ],
+                "miscRenderFlags": 1,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -90.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        10.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                10.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        400.0,
+                        100.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.75,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                400.0,
+                                100.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Shared/Particles/3026_Items_ball32_02.tex",
+                "birthFrameRate": {
+                    "constantValue": 4.0,
+                    "__type": "ValueFloat"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "visibilityRadius": 10000.0,
+        "particleName": "SRU_Worlds_Winner",
+        "particlePath": "Maps/Shipping/Map11/Particles/Worlds/SRU_Worlds_Winner",
+        "soundPersistentDefault": "Play_sfx_Env_Map11_Emitter_firebig",
+        "objectPath": "Maps/Shipping/Map11/Particles/Worlds/SRU_Worlds_Winner",
+        "__type": "VfxSystemDefinitionData"
+    },
     "Maps/Shipping/Map11/Particles/Milkshake/Milkshake_Order_BaseDoor_Shield_Top": {
         "complexEmitterDefinitionData": [
             {
@@ -385485,1100 +386700,6 @@
     "Maps/Shipping/Map11/Particles/HOL_26/HoL_26_CubeGrid": {
         "complexEmitterDefinitionData": [
             {
-                "emitterName": "CubeGridMesh",
-                "disabled": true,
-                "alphaRef": 0,
-                "VfxComponents": {
-                    "LifetimeComponent": {
-                        "SpawnBehavior": {
-                            "{0f0e454c}": {
-                                "{a6c45d85}": {
-                                    "__type": "{1d04cfa7}"
-                                },
-                                "__type": "{afe1d569}"
-                            },
-                            "{10498eed}": {
-                                "{a6c45d85}": {
-                                    "{a6c45d85}": 1.0,
-                                    "__type": "{ceeafc35}"
-                                },
-                                "__type": "{afe1d569}"
-                            },
-                            "__type": "{31beb841}"
-                        },
-                        "{986002d8}": {
-                            "{7fa67a85}": {
-                                "{a6c45d85}": {
-                                    "{a6c45d85}": -1.0,
-                                    "__type": "{ceeafc35}"
-                                },
-                                "__type": "{afe1d569}"
-                            },
-                            "particleLifetime": {
-                                "{a6c45d85}": {
-                                    "{a6c45d85}": -1.0,
-                                    "__type": "{ceeafc35}"
-                                },
-                                "__type": "{afe1d569}"
-                            },
-                            "__type": "{7015f762}"
-                        },
-                        "__type": "VfxLifetimeComponent"
-                    },
-                    "{73276a01}": {
-                        "Modifiers": [
-                            {
-                                "{ea0b5c3b}": {
-                                    "{27188523}": {
-                                        "{27188523}": [
-                                            1.0,
-                                            1.0,
-                                            1.0
-                                        ],
-                                        "__type": "{55d35477}"
-                                    },
-                                    "__type": "{67104c43}"
-                                },
-                                "__type": "{0edbe61b}"
-                            }
-                        ],
-                        "__type": "VfxModularPhysicsComponent"
-                    },
-                    "RenderComponent": {
-                        "MaterialContainer": {
-                            "Material": {
-                                "name": "{4c5c3643cca38a9f}",
-                                "type": 2,
-                                "samplerValues": [
-                                    {
-                                        "TextureName": "TextureMain",
-                                        "texturePath": "assets/maps/particles/sr/hol/particles/hol2026_top_z_gridlines_01.tex",
-                                        "__type": "StaticMaterialShaderSamplerDef"
-                                    },
-                                    {
-                                        "TextureName": "TextureMult",
-                                        "texturePath": "assets/shared/fx/textures/noisedissolve/shared_nd_spikeyhair.tex",
-                                        "__type": "StaticMaterialShaderSamplerDef"
-                                    },
-                                    {
-                                        "TextureName": "AlphaErosion",
-                                        "texturePath": "assets/shared/fx/textures/noisedissolve/shared_nd_voidhairb.tex",
-                                        "__type": "StaticMaterialShaderSamplerDef"
-                                    },
-                                    {
-                                        "TextureName": "ColorGradient",
-                                        "texturePath": "assets/shared/materials/default_doublegradient.tex",
-                                        "addressU": 1,
-                                        "addressV": 1,
-                                        "__type": "StaticMaterialShaderSamplerDef"
-                                    },
-                                    {
-                                        "TextureName": "UV_Dist",
-                                        "texturePath": "assets/shared/fx/textures/normal/shared_normal_flowmapc.tex",
-                                        "__type": "StaticMaterialShaderSamplerDef"
-                                    }
-                                ],
-                                "paramValues": [
-                                    {
-                                        "name": "SoftParticle_Multiply",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "SoftParticle_Power",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorFresnel_Multiply",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorFresnel_Power",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "UV_Dist_UV_Skew",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_UV_Skew",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_UV_Skew",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_Skew",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "CameraOffset",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "OpacityClip",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_Alpha_Channel",
-                                        "value": [
-                                            0.0,
-                                            1.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_Alpha_Active",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_Color_Active",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorFresnel_Invert",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "AlphaFresnel_Invert",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "BloomThreshold",
-                                        "value": [
-                                            3.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_Alpha_Channel",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_Alpha_Active",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_Color_Active",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_Color_Channel",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_Texture_Packing",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_Power_Color",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Mid_B",
-                                        "value": [
-                                            1.0,
-                                            0.4299992322921753,
-                                            0.4299992322921753,
-                                            1.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Base_B",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            1.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Highlight_B",
-                                        "value": [
-                                            1.0,
-                                            1.0,
-                                            1.0,
-                                            1.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_UV_FB_Rows_Colums",
-                                        "value": [
-                                            4.0,
-                                            4.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_UV_FB_Rows_Colums",
-                                        "value": [
-                                            4.0,
-                                            4.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_FromBaseTexture",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_FromBaseTexture_Main_or_Mult",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_FromBaseTexture_Channel",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_Use_BaseTexture_Main_or_Mult",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_UV_Offset_DP_Active",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_UV_Offset_DP_Active",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "SoftParticle_Invert_FadeDistance",
-                                        "value": [
-                                            25.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "SoftParticle_Invert_Power",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "SoftParticle_Invert_Multiply",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_Multiply_Alpha",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorGradient_V_Offset",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_Power_Alpha",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_Power_Alpha",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_Multiply_Alpha",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_FromBaseTexture_Power",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_FromBaseTexture_Multiply",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Highlight_Main_Power_A",
-                                        "value": [
-                                            3.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Highlight_Main_Multiply_A",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Highlight_Mult_Power_A",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Highlight_Mult_Multiply_A",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Highlight_Main_Power_B",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Highlight_Main_Multiply_B",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Highlight_Mult_Power_B",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Highlight_Mult_Multiply_B",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "FOW_Intensity_RGBA",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "FOW_Intensity_Bloom",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_UV_FB_Rows_Colums",
-                                        "value": [
-                                            4.0,
-                                            4.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "SplineThicken_WidthTip",
-                                        "value": [
-                                            25.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "SplineThicken_WidthMultiply",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "SplineThicken_WidthBase",
-                                        "value": [
-                                            25.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_UseSubtractMethod",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "AlphaFresnel_Multiply",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "AlphaFresnel_Power",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "SoftParticle_FadeDistance",
-                                        "value": [
-                                            25.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Highlight_A",
-                                        "value": [
-                                            26.249866485595703,
-                                            17.850080490112305,
-                                            35.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Base_A",
-                                        "value": [
-                                            1.0499732494354248,
-                                            0.0,
-                                            35.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Mid_A",
-                                        "value": [
-                                            0.2899976968765259,
-                                            0.0,
-                                            1.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_Sharpness",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_Static",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_Multiply",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_UV_RotationRate",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_UV_Tile",
-                                        "value": [
-                                            1.0,
-                                            1.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_Power",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_Channel",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_UV_Offset",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_UV_Dist_Strength",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_UV_Speed",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_UV_Rotation",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_Multiply_Color",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_UV_Dist_Strength",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_UV_Offset",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_UV_Tile",
-                                        "value": [
-                                            1.0,
-                                            0.5,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_UV_Rotation",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_UV_Speed",
-                                        "value": [
-                                            0.0,
-                                            -0.10000000149011612,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_UV_RotationRate",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_Multiply_Color",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_Power_Color",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_UV_Dist_Strength",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_Texture_Packing",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_UV_RotationRate",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_UV_Rotation",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_UV_Speed",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_UV_Tile",
-                                        "value": [
-                                            1.0,
-                                            1.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_Color_Channel",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_UV_Offset",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "UV_Dist_UV_Speed",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "UV_Dist_UV_Rotate",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "UV_Dist_UV_Tile",
-                                        "value": [
-                                            1.0,
-                                            1.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "UV_Dist_UV_Offset",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "UV_Dist_UV_RotationRate",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "UV_Dist_Strength",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    }
-                                ],
-                                "switches": [
-                                    {
-                                        "name": "SPLINETHICKEN_ACTIVE",
-                                        "on": false,
-                                        "Group": "WPO",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "EROSION_FLIPBOOK",
-                                        "on": false,
-                                        "Group": "Alpha Erosion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "EROSION_UV_SCREENSPACE",
-                                        "on": false,
-                                        "Group": "Alpha Erosion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "MULT_UV_SCREENSPACE",
-                                        "on": false,
-                                        "Group": "Texture Mult",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "MAIN_UV_SCREENSPACE",
-                                        "on": false,
-                                        "Group": "Texture Main",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "UV_DIST_UV_SCREENSPACE",
-                                        "on": false,
-                                        "Group": "UV Distortion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "SOFT_PARTICLE_INVERT_ACTIVE",
-                                        "on": false,
-                                        "Group": "Soft Particle Invert",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "EROSION_USE_BASE_TEXTURE",
-                                        "on": false,
-                                        "Group": "Alpha Erosion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "PARTICLE_COLOR_ACTIVE",
-                                        "Group": "Render",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "NAVMESH_MASK_ACTIVE",
-                                        "on": false,
-                                        "Group": "Render",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "MAIN_FLIPBOOK",
-                                        "on": false,
-                                        "Group": "Texture Main",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "MULT_FLIPBOOK",
-                                        "on": false,
-                                        "Group": "Texture Mult",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "EROSION_ACTIVE",
-                                        "on": false,
-                                        "Group": "Alpha Erosion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "COLORBLIND_SUPPORT",
-                                        "Group": "Render",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "COLOR_FRESNEL_ACTIVE",
-                                        "on": false,
-                                        "Group": "Color Fresnel",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "UV_DIST_ACTIVE",
-                                        "on": false,
-                                        "Group": "UV Distortion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "ALPHA_FRESNEL_ACTIVE",
-                                        "on": false,
-                                        "Group": "Alpha Fresnel",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "SOFT_PARTICLE_ACTIVE",
-                                        "on": false,
-                                        "Group": "Soft Particle",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "COLOR_GRADIENT_ACTIVE",
-                                        "on": false,
-                                        "Group": "Color Gradient",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "COLOR_LERP_ACTIVE",
-                                        "Group": "Color Lerp",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "EROSION_POLAR_UV",
-                                        "on": false,
-                                        "Group": "Alpha Erosion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "EROSION_UV_TWO",
-                                        "on": false,
-                                        "Group": "Alpha Erosion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "MULT_ACTIVE",
-                                        "Group": "Texture Mult",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "MULT_POLAR_UV",
-                                        "on": false,
-                                        "Group": "Texture Mult",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "MULT_UV_TWO",
-                                        "on": false,
-                                        "Group": "Texture Mult",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "MAIN_POLAR_UV",
-                                        "on": false,
-                                        "Group": "Texture Main",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "MAIN_UV_TWO",
-                                        "on": false,
-                                        "Group": "Texture Main",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "UV_DIST_UV_NORMALMAP",
-                                        "on": false,
-                                        "Group": "UV Distortion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "UV_DIST_POLAR_UV",
-                                        "on": false,
-                                        "Group": "UV Distortion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "UV_DIST_UV_TWO",
-                                        "on": false,
-                                        "Group": "UV Distortion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    }
-                                ],
-                                "techniques": [
-                                    {
-                                        "name": "normal",
-                                        "passes": [
-                                            {
-                                                "shader": "Shaders/Particles/ShaderPreset/VFX_Uber_StaticMesh_Unlit",
-                                                "blendEnable": true,
-                                                "srcColorBlendFactor": 6,
-                                                "srcAlphaBlendFactor": 6,
-                                                "dstColorBlendFactor": 7,
-                                                "dstAlphaBlendFactor": 7,
-                                                "__type": "StaticMaterialPassDef"
-                                            }
-                                        ],
-                                        "__type": "StaticMaterialTechniqueDef"
-                                    }
-                                ],
-                                "__type": "StaticMaterialDef"
-                            },
-                            "__type": "VfxEmbeddedMaterial"
-                        },
-                        "blendMode": 1,
-                        "Color": {
-                            "{1d2e3b42}": {
-                                "{2c188d02}": {
-                                    "colors": {
-                                        "constantValue": [
-                                            1.0,
-                                            1.0,
-                                            1.0,
-                                            0.6899977326393127
-                                        ],
-                                        "__type": "ValueColor"
-                                    },
-                                    "__type": "{7cc5a312}"
-                                },
-                                "__type": "{d2221304}"
-                            },
-                            "__type": "{c06dcfdd}"
-                        },
-                        "__type": "VfxMaterialRenderComponent"
-                    },
-                    "GeometryComponent": {
-                        "primitive": {
-                            "Mesh": {
-                                "mSimpleMeshName": "ASSETS/Maps/Particles/SR/HoL/Particles/HOL26_MapAccents_Z_CubeMesh_01.gmesh",
-                                "__type": "VfxMeshDefinitionData"
-                            },
-                            "__type": "{710b2bc2}"
-                        },
-                        "__type": "VfxGeometryComponent"
-                    },
-                    "__type": "VfxComponents"
-                },
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
                 "emitterName": "CubeGridMesh1",
                 "alphaRef": 0,
                 "VfxComponents": {
@@ -386640,7 +386761,7 @@
                     "RenderComponent": {
                         "MaterialContainer": {
                             "Material": {
-                                "name": "{090dbb4ad004b9ea}",
+                                "name": "{4c5c3643cca38a9f}",
                                 "type": 2,
                                 "samplerValues": [
                                     {
@@ -387716,7 +387837,7 @@
                     "RenderComponent": {
                         "MaterialContainer": {
                             "Material": {
-                                "name": "{6aa559d5ceb0937f}",
+                                "name": "{090dbb4ad004b9ea}",
                                 "type": 2,
                                 "samplerValues": [
                                     {
@@ -388756,1072 +388877,6 @@
             }
         ],
         "{eb0aabeb}": [
-            {
-                "VfxComponents": {
-                    "LifetimeComponent": {
-                        "SpawnBehavior": {
-                            "{0f0e454c}": {
-                                "{a6c45d85}": {
-                                    "{a6c45d85}": {
-                                        "constantValue": 3.0,
-                                        "__type": "ValueFloat"
-                                    },
-                                    "__type": "{1d04cfa7}"
-                                },
-                                "__type": "{afe1d569}"
-                            },
-                            "__type": "{31beb841}"
-                        },
-                        "{986002d8}": {
-                            "{7fa67a85}": {
-                                "{a6c45d85}": {
-                                    "{a6c45d85}": -1.0,
-                                    "__type": "{ceeafc35}"
-                                },
-                                "__type": "{afe1d569}"
-                            },
-                            "__type": "{7015f762}"
-                        },
-                        "__type": "VfxLifetimeComponent"
-                    },
-                    "{73276a01}": {
-                        "Modifiers": [
-                            {
-                                "{d7dec099}": {
-                                    "{27188523}": {
-                                        "{27188523}": [
-                                            0.0,
-                                            100.0,
-                                            0.0
-                                        ],
-                                        "__type": "{55d35477}"
-                                    },
-                                    "__type": "{67104c43}"
-                                },
-                                "__type": "{9e7a207e}"
-                            },
-                            {
-                                "{ea0b5c3b}": {
-                                    "{27188523}": {
-                                        "{27188523}": [
-                                            10.0,
-                                            10.0,
-                                            10.0
-                                        ],
-                                        "__type": "{55d35477}"
-                                    },
-                                    "__type": "{67104c43}"
-                                },
-                                "__type": "{0edbe61b}"
-                            }
-                        ],
-                        "__type": "VfxModularPhysicsComponent"
-                    },
-                    "RenderComponent": {
-                        "MaterialContainer": {
-                            "Material": {
-                                "name": "{6c5901cb25735193}",
-                                "type": 2,
-                                "samplerValues": [
-                                    {
-                                        "TextureName": "TextureMain",
-                                        "texturePath": "assets/shared/fx/textures/noisedissolve/shared_nd_uvchecker.tex",
-                                        "__type": "StaticMaterialShaderSamplerDef"
-                                    },
-                                    {
-                                        "TextureName": "TextureMult",
-                                        "texturePath": "assets/shared/fx/textures/noisedissolve/shared_nd_uvchecker.tex",
-                                        "__type": "StaticMaterialShaderSamplerDef"
-                                    },
-                                    {
-                                        "TextureName": "AlphaErosion",
-                                        "texturePath": "assets/shared/fx/textures/noisedissolve/shared_nd_voidhairb.tex",
-                                        "__type": "StaticMaterialShaderSamplerDef"
-                                    },
-                                    {
-                                        "TextureName": "ColorGradient",
-                                        "texturePath": "assets/shared/materials/default_doublegradient.tex",
-                                        "addressU": 1,
-                                        "addressV": 1,
-                                        "__type": "StaticMaterialShaderSamplerDef"
-                                    },
-                                    {
-                                        "TextureName": "UV_Dist",
-                                        "texturePath": "assets/shared/fx/textures/normal/shared_normal_flowmapc.tex",
-                                        "__type": "StaticMaterialShaderSamplerDef"
-                                    }
-                                ],
-                                "paramValues": [
-                                    {
-                                        "name": "SoftParticle_Multiply",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "SoftParticle_Power",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorFresnel_Multiply",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorFresnel_Power",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "UV_Dist_UV_Skew",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_UV_Skew",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_UV_Skew",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_Skew",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "CameraOffset",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "OpacityClip",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_Alpha_Channel",
-                                        "value": [
-                                            0.0,
-                                            0.0,
-                                            0.0,
-                                            1.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_Alpha_Active",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_Color_Active",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorFresnel_Invert",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "AlphaFresnel_Invert",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "BloomThreshold",
-                                        "value": [
-                                            3.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_Alpha_Channel",
-                                        "value": [
-                                            0.0,
-                                            0.0,
-                                            0.0,
-                                            1.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_Alpha_Active",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_Color_Active",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_Color_Channel",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_Texture_Packing",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_Power_Color",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Mid_B",
-                                        "value": [
-                                            1.0,
-                                            0.4299992322921753,
-                                            0.4299992322921753,
-                                            1.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Base_B",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            1.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Highlight_B",
-                                        "value": [
-                                            1.0,
-                                            1.0,
-                                            1.0,
-                                            1.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_UV_FB_Rows_Colums",
-                                        "value": [
-                                            4.0,
-                                            4.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_UV_FB_Rows_Colums",
-                                        "value": [
-                                            4.0,
-                                            4.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_FromBaseTexture",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_FromBaseTexture_Main_or_Mult",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_FromBaseTexture_Channel",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_Use_BaseTexture_Main_or_Mult",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_UV_Offset_DP_Active",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_UV_Offset_DP_Active",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "SoftParticle_Invert_FadeDistance",
-                                        "value": [
-                                            25.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "SoftParticle_Invert_Power",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "SoftParticle_Invert_Multiply",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_Multiply_Alpha",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorGradient_V_Offset",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_Power_Alpha",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_Power_Alpha",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_Multiply_Alpha",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_FromBaseTexture_Power",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_FromBaseTexture_Multiply",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Highlight_Main_Power_A",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Highlight_Main_Multiply_A",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Highlight_Mult_Power_A",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Highlight_Mult_Multiply_A",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Highlight_Main_Power_B",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Highlight_Main_Multiply_B",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Highlight_Mult_Power_B",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Highlight_Mult_Multiply_B",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "FOW_Intensity_RGBA",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "FOW_Intensity_Bloom",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_UV_FB_Rows_Colums",
-                                        "value": [
-                                            4.0,
-                                            4.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "SplineThicken_WidthTip",
-                                        "value": [
-                                            25.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "SplineThicken_WidthMultiply",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "SplineThicken_WidthBase",
-                                        "value": [
-                                            25.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_UseSubtractMethod",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "AlphaFresnel_Multiply",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "AlphaFresnel_Power",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "SoftParticle_FadeDistance",
-                                        "value": [
-                                            25.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Highlight_A",
-                                        "value": [
-                                            1.0,
-                                            1.0,
-                                            1.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Base_A",
-                                        "value": [
-                                            0.0,
-                                            0.2216678112745285,
-                                            1.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "ColorLerp_Mid_A",
-                                        "value": [
-                                            0.0,
-                                            0.9089952111244202,
-                                            1.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_Sharpness",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_Static",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_Multiply",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_UV_RotationRate",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_UV_Tile",
-                                        "value": [
-                                            1.0,
-                                            1.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_Power",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_Channel",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_UV_Offset",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_UV_Dist_Strength",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_UV_Speed",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Erosion_UV_Rotation",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_Multiply_Color",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_UV_Dist_Strength",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_UV_Offset",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_UV_Tile",
-                                        "value": [
-                                            1.0,
-                                            1.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_UV_Rotation",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_UV_Speed",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Mult_UV_RotationRate",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_Multiply_Color",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_Power_Color",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_UV_Dist_Strength",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_Texture_Packing",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_UV_RotationRate",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_UV_Rotation",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_UV_Speed",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_UV_Tile",
-                                        "value": [
-                                            1.0,
-                                            1.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_Color_Channel",
-                                        "value": [
-                                            1.0,
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "Main_UV_Offset",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "UV_Dist_UV_Speed",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "UV_Dist_UV_Rotate",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "UV_Dist_UV_Tile",
-                                        "value": [
-                                            1.0,
-                                            1.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "UV_Dist_UV_Offset",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "UV_Dist_UV_RotationRate",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    },
-                                    {
-                                        "name": "UV_Dist_Strength",
-                                        "__type": "StaticMaterialShaderParamDef"
-                                    }
-                                ],
-                                "switches": [
-                                    {
-                                        "name": "SPLINETHICKEN_ACTIVE",
-                                        "on": false,
-                                        "Group": "WPO",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "EROSION_FLIPBOOK",
-                                        "on": false,
-                                        "Group": "Alpha Erosion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "EROSION_UV_SCREENSPACE",
-                                        "on": false,
-                                        "Group": "Alpha Erosion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "MULT_UV_SCREENSPACE",
-                                        "on": false,
-                                        "Group": "Texture Mult",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "MAIN_UV_SCREENSPACE",
-                                        "on": false,
-                                        "Group": "Texture Main",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "UV_DIST_UV_SCREENSPACE",
-                                        "on": false,
-                                        "Group": "UV Distortion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "SOFT_PARTICLE_INVERT_ACTIVE",
-                                        "on": false,
-                                        "Group": "Soft Particle Invert",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "EROSION_USE_BASE_TEXTURE",
-                                        "on": false,
-                                        "Group": "Alpha Erosion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "PARTICLE_COLOR_ACTIVE",
-                                        "Group": "Render",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "NAVMESH_MASK_ACTIVE",
-                                        "on": false,
-                                        "Group": "Render",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "MAIN_FLIPBOOK",
-                                        "on": false,
-                                        "Group": "Texture Main",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "MULT_FLIPBOOK",
-                                        "on": false,
-                                        "Group": "Texture Mult",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "EROSION_ACTIVE",
-                                        "on": false,
-                                        "Group": "Alpha Erosion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "COLORBLIND_SUPPORT",
-                                        "Group": "Render",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "COLOR_FRESNEL_ACTIVE",
-                                        "on": false,
-                                        "Group": "Color Fresnel",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "UV_DIST_ACTIVE",
-                                        "on": false,
-                                        "Group": "UV Distortion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "ALPHA_FRESNEL_ACTIVE",
-                                        "on": false,
-                                        "Group": "Alpha Fresnel",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "SOFT_PARTICLE_ACTIVE",
-                                        "on": false,
-                                        "Group": "Soft Particle",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "COLOR_GRADIENT_ACTIVE",
-                                        "on": false,
-                                        "Group": "Color Gradient",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "COLOR_LERP_ACTIVE",
-                                        "on": false,
-                                        "Group": "Color Lerp",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "EROSION_POLAR_UV",
-                                        "on": false,
-                                        "Group": "Alpha Erosion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "EROSION_UV_TWO",
-                                        "on": false,
-                                        "Group": "Alpha Erosion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "MULT_ACTIVE",
-                                        "on": false,
-                                        "Group": "Texture Mult",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "MULT_POLAR_UV",
-                                        "on": false,
-                                        "Group": "Texture Mult",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "MULT_UV_TWO",
-                                        "on": false,
-                                        "Group": "Texture Mult",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "MAIN_POLAR_UV",
-                                        "on": false,
-                                        "Group": "Texture Main",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "MAIN_UV_TWO",
-                                        "on": false,
-                                        "Group": "Texture Main",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "UV_DIST_UV_NORMALMAP",
-                                        "on": false,
-                                        "Group": "UV Distortion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "UV_DIST_POLAR_UV",
-                                        "on": false,
-                                        "Group": "UV Distortion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    },
-                                    {
-                                        "name": "UV_DIST_UV_TWO",
-                                        "on": false,
-                                        "Group": "UV Distortion",
-                                        "__type": "StaticMaterialSwitchDef"
-                                    }
-                                ],
-                                "techniques": [
-                                    {
-                                        "name": "normal",
-                                        "passes": [
-                                            {
-                                                "shader": "Shaders/Particles/ShaderPreset/VFX_Uber_StaticMesh_Unlit",
-                                                "blendEnable": true,
-                                                "srcColorBlendFactor": 6,
-                                                "srcAlphaBlendFactor": 6,
-                                                "dstColorBlendFactor": 7,
-                                                "dstAlphaBlendFactor": 7,
-                                                "writeMask": 15,
-                                                "__type": "StaticMaterialPassDef"
-                                            }
-                                        ],
-                                        "__type": "StaticMaterialTechniqueDef"
-                                    }
-                                ],
-                                "__type": "StaticMaterialDef"
-                            },
-                            "__type": "VfxEmbeddedMaterial"
-                        },
-                        "blendMode": 1,
-                        "__type": "VfxMaterialRenderComponent"
-                    },
-                    "GeometryComponent": {
-                        "primitive": {
-                            "__type": "{576d0010}"
-                        },
-                        "__type": "VfxGeometryComponent"
-                    },
-                    "__type": "VfxComponents"
-                },
-                "emitterName": "CubeGridMeshShimmer",
-                "disabled": true,
-                "__type": "{94be93d1}"
-            },
             {
                 "VfxComponents": {
                     "LifetimeComponent": {

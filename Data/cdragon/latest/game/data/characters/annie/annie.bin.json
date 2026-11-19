@@ -502,26 +502,26 @@
                 {
                     "name": "AuraDamage",
                     "values": [
-                        4.0,
-                        8.0,
-                        12.0,
-                        16.0,
+                        5.0,
+                        10.0,
+                        15.0,
                         20.0,
-                        24.0,
-                        28.0
+                        25.0,
+                        30.0,
+                        35.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "TibbersAttackDamage",
                     "values": [
-                        15.0,
+                        10.0,
                         30.0,
-                        45.0,
-                        60.0,
-                        75.0,
+                        50.0,
+                        70.0,
                         90.0,
-                        105.0
+                        110.0,
+                        130.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -686,19 +686,6 @@
                             "__type": "SpellDataValue"
                         },
                         {
-                            "name": "AuraDamage",
-                            "values": [
-                                10.0,
-                                15.0,
-                                20.0,
-                                25.0,
-                                30.0,
-                                35.0,
-                                40.0
-                            ],
-                            "__type": "SpellDataValue"
-                        },
-                        {
                             "name": "TibbersModeSpecificHPMod",
                             "values": [
                                 0.5,
@@ -759,21 +746,21 @@
                     "mFormulaParts": [
                         {
                             "mPart1": {
-                                "mLevel1Value": 1150.0,
+                                "mLevel1Value": 1275.0,
                                 "mBreakpoints": [
                                     {
                                         "mLevel": 7,
-                                        "mBonusPerLevelAtAndAfter": 50.0,
+                                        "mBonusPerLevelAtAndAfter": 75.0,
                                         "__type": "Breakpoint"
                                     },
                                     {
                                         "mLevel": 11,
-                                        "mBonusPerLevelAtAndAfter": 250.0,
+                                        "mBonusPerLevelAtAndAfter": 275.0,
                                         "__type": "Breakpoint"
                                     },
                                     {
                                         "mLevel": 16,
-                                        "mBonusPerLevelAtAndAfter": 300.0,
+                                        "mBonusPerLevelAtAndAfter": 350.0,
                                         "__type": "Breakpoint"
                                     }
                                 ],
@@ -787,6 +774,12 @@
                         },
                         {
                             "mCoefficient": 0.5,
+                            "__type": "StatByCoefficientCalculationPart"
+                        },
+                        {
+                            "mStat": 12,
+                            "mStatFormula": 2,
+                            "mCoefficient": 1.5,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -3682,6 +3675,8 @@
             ],
             "searchTags": "mage",
             "searchTagsSecondary": "support",
+            "{d1df3c3f}": "mage",
+            "{f693457b}": "support",
             "championId": 1,
             "roles": "MAGE",
             "magicRank": 10,

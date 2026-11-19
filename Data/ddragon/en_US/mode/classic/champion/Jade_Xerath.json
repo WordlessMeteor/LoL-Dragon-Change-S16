@@ -1,0 +1,627 @@
+{
+    "type": "champion",
+    "format": "standAloneComplex",
+    "version": "16.23.1",
+    "data": {
+        "Jade_Xerath": {
+            "id": "Jade_Xerath",
+            "key": "60101",
+            "name": "Xerath",
+            "title": "The Magus Ascendant",
+            "image": {
+                "full": "Jade_Xerath.png",
+                "sprite": "champion2.png",
+                "group": "champion",
+                "x": 192,
+                "y": 96,
+                "w": 48,
+                "h": 48
+            },
+            "skins": [
+                {
+                    "id": "60101000",
+                    "num": 0,
+                    "name": "default",
+                    "chromas": false
+                }
+            ],
+            "lore": "- Passive provides bonus armor based on Ability Power.<br>- Q no longer requires a channel.<br>- W is a new spell: Achor in place to gain bonus range and Magic Penetration.<br>- E is a new spell: Damage and mark an enemy, stunning them on your next ability hit.<br>- R no longer locks Xerath in place for all three casts.",
+            "blurb": "- Passive provides bonus armor based on Ability Power.<br>- Q no longer requires a channel.<br>- W is a new spell: Achor in place to gain bonus range and Magic Penetration.<br>- E is a new spell: Damage and mark an enemy, stunning them on your next...",
+            "allytips": [],
+            "enemytips": [],
+            "tags": [
+                "Mage",
+                "Support"
+            ],
+            "partype": "Mana",
+            "info": {
+                "attack": 1,
+                "defense": 3,
+                "magic": 10,
+                "difficulty": 8
+            },
+            "stats": {
+                "hp": 460,
+                "hpperlevel": 80,
+                "mp": 295,
+                "mpperlevel": 45,
+                "movespeed": 340,
+                "armor": 15.5,
+                "armorperlevel": 3.5,
+                "spellblock": 30,
+                "spellblockperlevel": 0,
+                "attackrange": 550,
+                "hpregen": 5.05,
+                "hpregenperlevel": 0.55,
+                "mpregen": 7.6,
+                "mpregenperlevel": 0.6,
+                "crit": 0,
+                "critperlevel": 0,
+                "attackdamage": 54.66,
+                "attackdamageperlevel": 0,
+                "attackspeedperlevel": 1.36,
+                "attackspeed": 0.625
+            },
+            "spells": [
+                {
+                    "id": "Jade_XerathQ",
+                    "name": "Arcanopulse",
+                    "description": "Xerath fires a long-range beam of energy, damaging all enemies hit.",
+                    "tooltip": "Xerath fires a long-range beam of energy, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> to all enemies hit.{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "Damage",
+                            "Cooldown",
+                            "@AbilityResourceName@ Cost"
+                        ],
+                        "effect": [
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ cost }} -> {{ costNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        7,
+                        6.5,
+                        6,
+                        5.5,
+                        5
+                    ],
+                    "cooldownBurn": "7/6.5/6/5.5/5",
+                    "cost": [
+                        65,
+                        70,
+                        75,
+                        80,
+                        85
+                    ],
+                    "costBurn": "65/70/75/80/85",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "0",
+                    "range": [
+                        1000,
+                        1000,
+                        1000,
+                        1000,
+                        1000
+                    ],
+                    "rangeBurn": "1000",
+                    "image": {
+                        "full": "Jade_XerathQ.png",
+                        "sprite": "spell8.png",
+                        "group": "spell",
+                        "x": 96,
+                        "y": 144,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                },
+                {
+                    "id": "Jade_XerathW",
+                    "name": "Locus of Power",
+                    "description": "Xerath immobilizes himself, increasing the range of all spells and gaining bonus Magic Penetration. When the effect ends, Xerath's Movement Speed is briefly increased.",
+                    "tooltip": "Xerath immobilizes himself for up to {{ rootduration }} seconds, increasing the range of all his spells and gaining <magicPen>{{ magicpenvalue }}% Magic Penetration</magicPen>. He can recast the ability or move to cancel the effect early.<br /><br />When the effect ends, Xerath gains <speed>{{ movementspeedvalue*100 }}% Move Speed</speed> for {{ movementspeedduration }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "Magic Penetration",
+                            "Cooldown"
+                        ],
+                        "effect": [
+                            "{{ magicpenvalue }}% -> {{ magicpenvalueNL }}%",
+                            "{{ cooldown }} -> {{ cooldownNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        20,
+                        16,
+                        12,
+                        8,
+                        4
+                    ],
+                    "cooldownBurn": "20/16/12/8/4",
+                    "cost": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "costBurn": "0",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": "No Cost",
+                    "maxammo": "0",
+                    "range": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "rangeBurn": "0",
+                    "image": {
+                        "full": "Jade_XerathW.png",
+                        "sprite": "spell8.png",
+                        "group": "spell",
+                        "x": 144,
+                        "y": 144,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "No Cost"
+                },
+                {
+                    "id": "Jade_XerathE",
+                    "name": "Mage Chains",
+                    "description": "Xerath damages an enemy and marks them with Unstable Magic. His next spell against this enemy stuns them.",
+                    "tooltip": "Xerath deals <magicDamage>{{ totaldamage }} magic damage</magicDamage> to an enemy and marks them with <keywordMajor>Unstable Magic</keywordMajor>. Xerath's next spell <status>Stuns</status> them for {{ stunduration }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "Damage",
+                            "Cooldown",
+                            "@AbilityResourceName@ Cost"
+                        ],
+                        "effect": [
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ cost }} -> {{ costNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        12,
+                        11,
+                        10,
+                        9,
+                        8
+                    ],
+                    "cooldownBurn": "12/11/10/9/8",
+                    "cost": [
+                        70,
+                        75,
+                        80,
+                        85,
+                        90
+                    ],
+                    "costBurn": "70/75/80/85/90",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "0",
+                    "range": [
+                        650,
+                        650,
+                        650,
+                        650,
+                        650
+                    ],
+                    "rangeBurn": "650",
+                    "image": {
+                        "full": "Jade_XerathE.png",
+                        "sprite": "spell8.png",
+                        "group": "spell",
+                        "x": 192,
+                        "y": 144,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                },
+                {
+                    "id": "Jade_XerathR",
+                    "name": "Arcane Barrage",
+                    "description": "Xerath calls down a blast of arcane energy, dealing magic damage to all enemies in an area. May be cast up to three times before going on cooldown.",
+                    "tooltip": "Xerath calls down a blast of arcane energy, dealing <magicDamage>{{ totaldamage }} magic damage</magicDamage> to all enemies in an area. May be cast up to {{ availablecasts }} times before going on cooldown.{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "Damage",
+                            "Cooldown",
+                            "@AbilityResourceName@ Cost"
+                        ],
+                        "effect": [
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ cost }} -> {{ costNL }}"
+                        ]
+                    },
+                    "maxrank": 3,
+                    "cooldown": [
+                        80,
+                        70,
+                        60
+                    ],
+                    "cooldownBurn": "80/70/60",
+                    "cost": [
+                        150,
+                        180,
+                        210
+                    ],
+                    "costBurn": "150/180/210",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        1100,
+                        1100,
+                        1100
+                    ],
+                    "rangeBurn": "1100",
+                    "image": {
+                        "full": "Jade_XerathR.png",
+                        "sprite": "spell8.png",
+                        "group": "spell",
+                        "x": 240,
+                        "y": 144,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                }
+            ],
+            "passive": {
+                "name": "Ascended Form",
+                "description": "Xerath feeds on arcane power, gaining Armor based on his Ability Power.",
+                "image": {
+                    "full": "Jade_Xerath_Passive1.png",
+                    "sprite": "passive2.png",
+                    "group": "passive",
+                    "x": 192,
+                    "y": 96,
+                    "w": 48,
+                    "h": 48
+                }
+            },
+            "recommended": []
+        }
+    }
+}

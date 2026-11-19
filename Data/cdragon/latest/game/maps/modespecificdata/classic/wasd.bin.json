@@ -1320,7 +1320,7 @@
         "name": "{d0ed784d}",
         "SourcesList": [
             {
-                "KeySequence": "[c]",
+                "KeySequence": "[Z]",
                 "BindInfo": {
                     "LogicalName": "evtShowCharacterMenu",
                     "GroupInfo": "{a47699ec}",
@@ -1440,7 +1440,7 @@
         "name": "{3c4749a6}",
         "SourcesList": [
             {
-                "KeySequence": "[z]",
+                "KeySequence": "[Ctrl][Z]",
                 "BindInfo": {
                     "LogicalName": "evtChatHistory",
                     "GroupInfo": "{a47699ec}",
@@ -3428,6 +3428,51 @@
                     "LogicalName": "evtOpenChatAll",
                     "GroupInfo": "{a47699ec}",
                     "__type": "{f07517b3}"
+                },
+                "__type": "KeyInputSourceBool"
+            }
+        ],
+        "__type": "InputEventBool"
+    },
+    "{1334a342}": {
+        "name": "{69804d2b}",
+        "SourcesList": [
+            {
+                "KeySequence": "[c]",
+                "BindInfo": {
+                    "LogicalName": "evtPushToTalkTeam",
+                    "GroupInfo": "{a47699ec}",
+                    "__type": "{c749aa30}"
+                },
+                "__type": "KeyInputSourceBool"
+            }
+        ],
+        "__type": "InputEventBool"
+    },
+    "{1fcd91ab}": {
+        "name": "{805083ca}",
+        "SourcesList": [
+            {
+                "KeySequence": "[ ]",
+                "BindInfo": {
+                    "LogicalName": "evtPushToTalk",
+                    "GroupInfo": "{a47699ec}",
+                    "__type": "{c749aa30}"
+                },
+                "__type": "KeyInputSourceBool"
+            }
+        ],
+        "__type": "InputEventBool"
+    },
+    "{3052ea19}": {
+        "name": "{9963ceb4}",
+        "SourcesList": [
+            {
+                "KeySequence": "[ ]",
+                "BindInfo": {
+                    "LogicalName": "evtShowVoicePanel",
+                    "GroupInfo": "{a47699ec}",
+                    "__type": "{c749aa30}"
                 },
                 "__type": "KeyInputSourceBool"
             }
@@ -5424,14 +5469,28 @@
                 "__type": "{4ec57116}"
             },
             {
+                "InputEvent": "{1fcd91ab}",
+                "__type": "{0367e5ca}"
+            },
+            {
                 "InputEvent": "{743cc8bf}",
                 "{bac86ec1}": 1,
                 "__type": "{4ec57116}"
             },
             {
+                "InputEvent": "{1334a342}",
+                "{a4aaab62}": 1,
+                "__type": "{0367e5ca}"
+            },
+            {
                 "InputEvent": "{498c06b5}",
                 "{a4aaab62}": 1,
                 "__type": "{b92b9eee}"
+            },
+            {
+                "InputEvent": "{3052ea19}",
+                "{a4aaab62}": 2,
+                "__type": "{0367e5ca}"
             }
         ],
         "{5ff6cd50}": [
@@ -8416,7 +8475,7 @@
         "name": "{ed8c1c0f}",
         "SourcesList": [
             {
-                "KeySequence": "[c]",
+                "KeySequence": "[z]",
                 "BindInfo": {
                     "LogicalName": "CancelCurrentActions",
                     "{8c87107c}": "ActiveSpell",
@@ -8442,6 +8501,51 @@
             }
         ],
         "{c43abb5a}": true,
+        "__type": "InputEventBool"
+    },
+    "{17092e8f}": {
+        "name": "{805083ca}",
+        "SourcesList": [
+            {
+                "KeySequence": "[ ]",
+                "BindInfo": {
+                    "LogicalName": "evtPushToTalk",
+                    "GroupInfo": "{a142e0b7}",
+                    "__type": "{c749aa30}"
+                },
+                "__type": "KeyInputSourceBool"
+            }
+        ],
+        "__type": "InputEventBool"
+    },
+    "{b0cb648e}": {
+        "name": "{69804d2b}",
+        "SourcesList": [
+            {
+                "KeySequence": "[c]",
+                "BindInfo": {
+                    "LogicalName": "evtPushToTalkTeam",
+                    "GroupInfo": "{a142e0b7}",
+                    "__type": "{c749aa30}"
+                },
+                "__type": "KeyInputSourceBool"
+            }
+        ],
+        "__type": "InputEventBool"
+    },
+    "{f3c12645}": {
+        "name": "{9963ceb4}",
+        "SourcesList": [
+            {
+                "KeySequence": "[ ]",
+                "BindInfo": {
+                    "LogicalName": "evtShowVoicePanel",
+                    "GroupInfo": "{a142e0b7}",
+                    "__type": "{c749aa30}"
+                },
+                "__type": "KeyInputSourceBool"
+            }
+        ],
         "__type": "InputEventBool"
     },
     "{20e01dc9}": {
@@ -9157,7 +9261,7 @@
         "name": "{3c4749a6}",
         "SourcesList": [
             {
-                "KeySequence": "[z]",
+                "KeySequence": "[Ctrl][z]",
                 "BindInfo": {
                     "LogicalName": "ChatHistory",
                     "GroupInfo": "{a142e0b7}",
@@ -11496,6 +11600,20 @@
                 "InputEvent": "{bcb1ca0b}",
                 "{bac86ec1}": 1,
                 "__type": "{4ec57116}"
+            },
+            {
+                "InputEvent": "{17092e8f}",
+                "__type": "{0367e5ca}"
+            },
+            {
+                "InputEvent": "{b0cb648e}",
+                "{a4aaab62}": 1,
+                "__type": "{0367e5ca}"
+            },
+            {
+                "InputEvent": "{f3c12645}",
+                "{a4aaab62}": 2,
+                "__type": "{0367e5ca}"
             }
         ],
         "{5ff6cd50}": [

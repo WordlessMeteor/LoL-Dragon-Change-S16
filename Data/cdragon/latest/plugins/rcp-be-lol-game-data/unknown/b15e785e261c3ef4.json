@@ -1,0 +1,676 @@
+{
+    "id": 60101,
+    "contentId": "51d5f896-b1c1-419a-b868-1a290b0ed381",
+    "relatedPrimeContentId": "72ed9e0c-570a-4d97-a9ef-15c8b488add7",
+    "relatedPrimeItemId": 101,
+    "name": "제라스",
+    "alias": "Jade_Xerath",
+    "title": "초월한 마법사",
+    "shortBio": "- 초월체(P)는 주문력에 비례하는 추가 방어력을 제공합니다.<br>- 비전 파동(Q)이 정신 집중을 필요로 하지 않습니다.<br>- 힘의 근원(W)은 사용 시 제자리에 고정되어 스킬 사거리와 마법 관통력을 얻습니다.<br>- 마법사의 사슬(E)은 대상에게 피해를 입히고 표식을 남겨, 다음 스킬을 맞히면 기절시킵니다.<br>- 비전 폭격(R)은 3회 사용하는 동안 제라스를 움직일 수 있습니다.",
+    "isVisibleInClient": true,
+    "tacticalInfo": {
+        "style": 9,
+        "difficulty": 1,
+        "damageType": "kMagic",
+        "attackType": "ranged"
+    },
+    "playstyleInfo": {
+        "damage": 3,
+        "durability": 1,
+        "crowdControl": 2,
+        "mobility": 1,
+        "utility": 1
+    },
+    "championTagInfo": {
+        "championTagPrimary": "장거리",
+        "championTagSecondary": "광역"
+    },
+    "squarePortraitPath": "/lol-game-data/assets/v1/champion-icons/60101.png",
+    "stingerSfxPath": "/lol-game-data/assets/v1/champion-sfx-audios/60101.ogg",
+    "chooseVoPath": "/lol-game-data/assets/v1/champion-choose-vo/60101.ogg",
+    "banVoPath": "/lol-game-data/assets/v1/champion-ban-vo/60101.ogg",
+    "roles": [
+        "mage",
+        "support"
+    ],
+    "recommendedItemDefaults": [],
+    "skins": [
+        {
+            "id": 60101000,
+            "contentId": "47afff63-079e-498c-8dc9-19f2f0a5606c",
+            "relatedPrimeContentId": "586c2161-018b-4a60-8f6b-e5410abe5690",
+            "relatedPrimeItemId": 101000,
+            "isBase": true,
+            "name": "제라스",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Xerath/Skins/Base/Images/jade_xerath_splash_centered_0.project_jade_xerath.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Xerath/Skins/Base/Images/jade_xerath_splash_uncentered_0.project_jade_xerath.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Xerath/Skins/Base/Images/jade_xerath_splash_tile_0.project_jade_xerath.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Xerath/Skins/Base/Jade_XerathLoadScreen_0.project_jade_xerath.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Xerath/Skins/Base/Jade_XerathLoadScreen_0_LE.project_jade_xerath.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": null
+        }
+    ],
+    "passive": {
+        "name": "초월체",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Xerath_AscendedForm.project_jade.png",
+        "abilityVideoPath": "",
+        "abilityVideoImagePath": "",
+        "description": "제라스가 비전 마력을 흡수하여, 주문력에 비례하는 방어력을 얻습니다."
+    },
+    "spells": [
+        {
+            "spellKey": "q",
+            "name": "비전 파동",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Xerath_Arcanopulse.project_jade_16_18.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@AbilityResourceName@ @Cost@",
+            "cooldown": "%i:cooldown% @Cooldown@초",
+            "description": "제라스가 긴 사거리를 지닌 에너지 광선을 발사해, 적중한 모든 적에게 피해를 입힙니다.",
+            "dynamicDescription": "제라스가 긴 사거리를 지닌 에너지 광선을 발사해, 적중한 모든 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
+            "range": [
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
+            ],
+            "costCoefficients": [
+                65.0,
+                70.0,
+                75.0,
+                80.0,
+                85.0,
+                85.0
+            ],
+            "cooldownCoefficients": [
+                7.0,
+                6.5,
+                6.0,
+                5.5,
+                5.0,
+                5.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    9.0,
+                    8.0,
+                    7.0,
+                    6.0,
+                    5.0,
+                    5.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "w",
+            "name": "힘의 근원",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Xerath_LocusOfPower.project_jade.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "소모값 없음",
+            "cooldown": "%i:cooldown% @Cooldown@초",
+            "description": "제라스가 스스로 이동 불가 상태에 돌입하는 대신, 모든 스킬의 사거리가 증가하고 추가 마법 관통력을 얻습니다. 효과가 종료되면 제라스의 이동 속도가 잠시 증가합니다.",
+            "dynamicDescription": "제라스가 최대 @RootDuration@초 동안 이동 불가 상태에 돌입하는 대신, 모든 스킬의 사거리가 증가하고 <magicPen>@MagicPenValue@%의 마법 관통력</magicPen>을 얻습니다. 스킬을 재사용하거나 이동하면 효과를 일찍 종료할 수 있습니다.<br><br>효과가 종료되면 제라스가 @MovementSpeedDuration@초간 <speed>@MovementSpeedValue*100@%의 이동 속도</speed>를 얻습니다.@SpellModifierDescriptionAppend@",
+            "range": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "costCoefficients": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "cooldownCoefficients": [
+                20.0,
+                16.0,
+                12.0,
+                8.0,
+                4.0,
+                4.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "e",
+            "name": "마법사의 사슬",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Xerath_MageChains.project_jade.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@AbilityResourceName@ @Cost@",
+            "cooldown": "%i:cooldown% @Cooldown@초",
+            "description": "제라스가 적에게 피해를 입히고 불안정한 마법 표식을 남깁니다. 대상에게 다음 스킬을 맞히면 기절시킵니다.",
+            "dynamicDescription": "제라스가 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 <keywordMajor>불안정한 마법</keywordMajor> 표식을 남깁니다. 대상에게 다음 스킬을 맞히면 @StunDuration@초 동안 <status>기절</status>시킵니다.@SpellModifierDescriptionAppend@",
+            "range": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "costCoefficients": [
+                70.0,
+                75.0,
+                80.0,
+                85.0,
+                90.0,
+                90.0
+            ],
+            "cooldownCoefficients": [
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                8.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "r",
+            "name": "비전 폭격",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Xerath_ArcaneBarrage.project_jade_16_18.png",
+            "abilityVideoPath": "",
+            "abilityVideoImagePath": "",
+            "cost": "@AbilityResourceName@ @Cost@",
+            "cooldown": "%i:cooldown% @Cooldown@초",
+            "description": "제라스가 목표 지점에 비전 마력으로 폭격을 가해, 범위 내의 모든 적에게 마법 피해를 입힙니다. 재사용 대기에 돌입하기 전까지 최대 3회 사용할 수 있습니다.",
+            "dynamicDescription": "제라스가 목표 지점에 비전 마력으로 폭격을 가해, 범위 내의 모든 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다. 재사용 대기에 돌입하기 전까지 최대 @AvailableCasts@회 사용할 수 있습니다.@SpellModifierDescriptionAppend@",
+            "range": [
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0
+            ],
+            "costCoefficients": [
+                150.0,
+                180.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "cooldownCoefficients": [
+                80.0,
+                70.0,
+                60.0,
+                60.0,
+                60.0,
+                60.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        }
+    ]
+}

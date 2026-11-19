@@ -2694,11 +2694,6 @@
                 "__type": "ShaderTexture"
             },
             {
-                "name": "Inner_Fresnel_Mask",
-                "defaultTexturePath": "assets/shared/materials/black.tex",
-                "__type": "ShaderTexture"
-            },
-            {
                 "name": "Screen_Space_Texture",
                 "defaultTexturePath": "assets/shared/materials/black.tex",
                 "samplerName": "Wrap_No_Mip",
@@ -34810,6 +34805,1347 @@
         },
         "featureMask": 4,
         "objectPath": "Shaders/StaticMesh/ENV_UVGradientColorMapping",
+        "__type": "CustomShaderDef"
+    },
+    "Shaders/Particles/ShaderPreset/VFX_Uber_Quad_Unlit": {
+        "parameters": [
+            {
+                "name": "CameraOffset",
+                "logicalParameters": [
+                    {
+                        "name": "CameraOffset",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorGradient_V_Offset",
+                "logicalParameters": [
+                    {
+                        "name": "ColorGradient_V_Offset",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_UV_RotationRate",
+                "logicalParameters": [
+                    {
+                        "name": "Main_UV_RotationRate",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_UV_Rotation",
+                "logicalParameters": [
+                    {
+                        "name": "Main_UV_Rotation",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_UV_Tile",
+                "data": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Main_UV_Tile",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_Skew",
+                "logicalParameters": [
+                    {
+                        "name": "Main_Skew",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_UV_Offset",
+                "logicalParameters": [
+                    {
+                        "name": "Main_UV_Offset",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_UV_Offset_DP_Active",
+                "logicalParameters": [
+                    {
+                        "name": "Main_UV_Offset_DP_Active",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_UV_Speed",
+                "logicalParameters": [
+                    {
+                        "name": "Main_UV_Speed",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_UV_Dist_Strength",
+                "logicalParameters": [
+                    {
+                        "name": "Main_UV_Dist_Strength",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "UV_Dist_UV_Rotation",
+                "logicalParameters": [
+                    {
+                        "name": "UV_Dist_UV_Rotation",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "UV_Dist_UV_RotationRate",
+                "logicalParameters": [
+                    {
+                        "name": "UV_Dist_UV_RotationRate",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "UV_Dist_UV_Tile",
+                "data": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "UV_Dist_UV_Tile",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "UV_Dist_UV_Skew",
+                "logicalParameters": [
+                    {
+                        "name": "UV_Dist_UV_Skew",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "UV_Dist_UV_Offset",
+                "logicalParameters": [
+                    {
+                        "name": "UV_Dist_UV_Offset",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "UV_Dist_UV_Offset_DP_Active",
+                "logicalParameters": [
+                    {
+                        "name": "UV_Dist_UV_Offset_DP_Active",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "UV_Dist_UV_Speed",
+                "logicalParameters": [
+                    {
+                        "name": "UV_Dist_UV_Speed",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "UV_Dist_Strength",
+                "logicalParameters": [
+                    {
+                        "name": "UV_Dist_Strength",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_Alpha_Channel",
+                "data": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Main_Alpha_Channel",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_Alpha_Active",
+                "logicalParameters": [
+                    {
+                        "name": "Main_Alpha_Active",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_Color_Active",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Main_Color_Active",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_Color_Channel",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Main_Color_Channel",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_Texture_Packing",
+                "logicalParameters": [
+                    {
+                        "name": "Main_Texture_Packing",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_Power_Color",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Main_Power_Color",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_Multiply_Color",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Main_Multiply_Color",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_Power_Alpha",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Main_Power_Alpha",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_Multiply_Alpha",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Main_Multiply_Alpha",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_UV_RotationRate",
+                "logicalParameters": [
+                    {
+                        "name": "Mult_UV_RotationRate",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_UV_Rotation",
+                "logicalParameters": [
+                    {
+                        "name": "Mult_UV_Rotation",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_UV_Tile",
+                "data": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Mult_UV_Tile",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_UV_Skew",
+                "logicalParameters": [
+                    {
+                        "name": "Mult_UV_Skew",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_UV_Offset",
+                "logicalParameters": [
+                    {
+                        "name": "Mult_UV_Offset",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_UV_Offset_DP_Active",
+                "logicalParameters": [
+                    {
+                        "name": "Mult_UV_Offset_DP_Active",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_UV_Speed",
+                "logicalParameters": [
+                    {
+                        "name": "Mult_UV_Speed",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_UV_Dist_Strength",
+                "logicalParameters": [
+                    {
+                        "name": "Mult_UV_Dist_Strength",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_Alpha_Channel",
+                "data": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Mult_Alpha_Channel",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_Alpha_Active",
+                "logicalParameters": [
+                    {
+                        "name": "Mult_Alpha_Active",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_Color_Active",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Mult_Color_Active",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_Color_Channel",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Mult_Color_Channel",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_Texture_Packing",
+                "logicalParameters": [
+                    {
+                        "name": "Mult_Texture_Packing",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_Power_Color",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Mult_Power_Color",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_Multiply_Color",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Mult_Multiply_Color",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_Power_Alpha",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Mult_Power_Alpha",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_Multiply_Alpha",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Mult_Multiply_Alpha",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_Use_BaseTexture_Main_or_Mult",
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_Use_BaseTexture_Main_or_Mult",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_UV_RotationRate",
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_UV_RotationRate",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_UV_Rotation",
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_UV_Rotation",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_UV_Tile",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_UV_Tile",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_UV_Skew",
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_UV_Skew",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_UV_Offset",
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_UV_Offset",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_UV_Speed",
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_UV_Speed",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_UV_Dist_Strength",
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_UV_Dist_Strength",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_Channel",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_Channel",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_Power",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_Power",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_Multiply",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_Multiply",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_Static",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_Static",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_FromBaseTexture_Main_or_Mult",
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_FromBaseTexture_Main_or_Mult",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_FromBaseTexture_Channel",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_FromBaseTexture_Channel",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_FromBaseTexture_Power",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_FromBaseTexture_Power",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_FromBaseTexture_Multiply",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_FromBaseTexture_Multiply",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_FromBaseTexture",
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_FromBaseTexture",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_UseSubtractMethod",
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_UseSubtractMethod",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_Sharpness",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_Sharpness",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Base_A",
+                "data": [
+                    0.0,
+                    0.22000457346439362,
+                    1.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Base_A",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Mid_A",
+                "data": [
+                    0.0,
+                    0.9100022912025452,
+                    1.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Mid_A",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Highlight_A",
+                "data": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Highlight_A",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Highlight_Mult_Power_A",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Highlight_Mult_Power_A",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Highlight_Mult_Multiply_A",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Highlight_Mult_Multiply_A",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Highlight_Main_Power_A",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Highlight_Main_Power_A",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Highlight_Main_Multiply_A",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Highlight_Main_Multiply_A",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Base_B",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Base_B",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Mid_B",
+                "data": [
+                    1.0,
+                    0.4299992322921753,
+                    0.4299992322921753,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Mid_B",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Highlight_B",
+                "data": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Highlight_B",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Highlight_Main_Power_B",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Highlight_Main_Power_B",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Highlight_Main_Multiply_B",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Highlight_Main_Multiply_B",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Highlight_Mult_Power_B",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Highlight_Mult_Power_B",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Highlight_Mult_Multiply_B",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Highlight_Mult_Multiply_B",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SoftParticle_FadeDistance",
+                "data": [
+                    25.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SoftParticle_FadeDistance",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SoftParticle_Invert",
+                "logicalParameters": [
+                    {
+                        "name": "SoftParticle_Invert",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SoftParticle_Power",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SoftParticle_Power",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SoftParticle_Multiply",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SoftParticle_Multiply",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "FOW_Intensity_RGBA",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "FOW_Intensity_RGBA",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "OpacityClip",
+                "logicalParameters": [
+                    {
+                        "name": "OpacityClip",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "BloomThreshold",
+                "data": [
+                    3.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "BloomThreshold",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "FOW_Intensity_Bloom",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "FOW_Intensity_Bloom",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            }
+        ],
+        "staticSwitches": [
+            {
+                "name": "MAIN_UV_SCREENSPACE",
+                "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "MAIN_POLAR_UV",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "UV_DIST_UV_SCREENSPACE",
+                "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "UV_DIST_POLAR_UV",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "UV_DIST_UV_NORMALMAP",
+                "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "UV_DIST_ACTIVE",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "MULT_UV_SCREENSPACE",
+                "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "MULT_POLAR_UV",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "MULT_ACTIVE",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "EROSION_UV_SCREENSPACE",
+                "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "EROSION_POLAR_UV",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "EROSION_USE_BASE_TEXTURE",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "EROSION_ACTIVE",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "COLOR_LERP_ACTIVE",
+                "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "COLOR_GRADIENT_ACTIVE",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "PARTICLE_COLOR_ACTIVE",
+                "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "SOFT_PARTICLE_ACTIVE",
+                "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "COLORBLIND_SUPPORT",
+                "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "NAVMESH_MASK_ACTIVE",
+                "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            }
+        ],
+        "textures": [
+            {
+                "name": "UV_Dist",
+                "defaultTexturePath": "assets/shared/fx/textures/normal/shared_normal_flowmap.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "TextureMain",
+                "defaultTexturePath": "assets/shared/fx/textures/noisedissolve/shared_nd_voidhaird.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "TextureMult",
+                "defaultTexturePath": "assets/shared/fx/textures/noisedissolve/shared_nd_voidhaird.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "AlphaErosion",
+                "defaultTexturePath": "assets/shared/fx/textures/noisedissolve/shared_nd_voidhairb.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "ColorGradient",
+                "defaultTexturePath": "assets/shared/materials/gradient_test_03.tex",
+                "__type": "ShaderTexture"
+            }
+        ],
+        "featureDefines": {
+            "FEATURE_BLOOM": "1",
+            "FEATURE_FOW": "1",
+            "FEATURE_MASKED": "1",
+            "FEATURE_NAVMESH_MASK": "1",
+            "FEATURE_SCREENSPACE_UV": "1",
+            "FEATURE_VERTEX_ID": "1"
+        },
+        "featureMask": 9,
+        "objectPath": "Shaders/Particles/ShaderPreset/VFX_Uber_Quad_Unlit",
         "__type": "CustomShaderDef"
     },
     "Shaders/SkinnedMesh/TFT_Sparkle": {
@@ -73058,6 +74394,1298 @@
         "objectPath": "Shaders/StaticMesh/DefaultEnv_Flat_ColorMult_Overlay",
         "__type": "CustomShaderDef"
     },
+    "Shaders/Particles/ShaderPreset/VFX_Uber_TrailBeam_Unlit": {
+        "parameters": [
+            {
+                "name": "CameraOffset",
+                "logicalParameters": [
+                    {
+                        "name": "CameraOffset",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorGradient_V_Offset",
+                "logicalParameters": [
+                    {
+                        "name": "ColorGradient_V_Offset",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_UV_Rotation",
+                "logicalParameters": [
+                    {
+                        "name": "Main_UV_Rotation",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_UV_RotationRate",
+                "logicalParameters": [
+                    {
+                        "name": "Main_UV_RotationRate",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_UV_Offset",
+                "logicalParameters": [
+                    {
+                        "name": "Main_UV_Offset",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_UV_Offset_DP_Active",
+                "logicalParameters": [
+                    {
+                        "name": "Main_UV_Offset_DP_Active",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_UV_Tile",
+                "data": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Main_UV_Tile",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_UV_Speed",
+                "logicalParameters": [
+                    {
+                        "name": "Main_UV_Speed",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_UV_Dist_Strength",
+                "logicalParameters": [
+                    {
+                        "name": "Main_UV_Dist_Strength",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "UV_Dist_UV_Rotation",
+                "logicalParameters": [
+                    {
+                        "name": "UV_Dist_UV_Rotation",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "UV_Dist_UV_RotationRate",
+                "logicalParameters": [
+                    {
+                        "name": "UV_Dist_UV_RotationRate",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "UV_Dist_UV_Offset",
+                "logicalParameters": [
+                    {
+                        "name": "UV_Dist_UV_Offset",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "UV_Dist_UV_Tile",
+                "data": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "UV_Dist_UV_Tile",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "UV_Dist_UV_Speed",
+                "logicalParameters": [
+                    {
+                        "name": "UV_Dist_UV_Speed",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "UV_Dist_Strength",
+                "logicalParameters": [
+                    {
+                        "name": "UV_Dist_Strength",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_Alpha_Channel",
+                "data": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Main_Alpha_Channel",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_Alpha_Active",
+                "logicalParameters": [
+                    {
+                        "name": "Main_Alpha_Active",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_Color_Active",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Main_Color_Active",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_Color_Channel",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Main_Color_Channel",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_Texture_Packing",
+                "logicalParameters": [
+                    {
+                        "name": "Main_Texture_Packing",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_Power_Color",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Main_Power_Color",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_Multiply_Color",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Main_Multiply_Color",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_Power_Alpha",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Main_Power_Alpha",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Main_Multiply_Alpha",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Main_Multiply_Alpha",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_UV_Rotation",
+                "logicalParameters": [
+                    {
+                        "name": "Mult_UV_Rotation",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_UV_RotationRate",
+                "logicalParameters": [
+                    {
+                        "name": "Mult_UV_RotationRate",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_UV_Offset",
+                "logicalParameters": [
+                    {
+                        "name": "Mult_UV_Offset",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_UV_Offset_DP_Active",
+                "logicalParameters": [
+                    {
+                        "name": "Mult_UV_Offset_DP_Active",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_UV_Tile",
+                "data": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Mult_UV_Tile",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_UV_Speed",
+                "logicalParameters": [
+                    {
+                        "name": "Mult_UV_Speed",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_UV_Dist_Strength",
+                "logicalParameters": [
+                    {
+                        "name": "Mult_UV_Dist_Strength",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_Alpha_Channel",
+                "data": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Mult_Alpha_Channel",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_Alpha_Active",
+                "logicalParameters": [
+                    {
+                        "name": "Mult_Alpha_Active",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_Color_Active",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Mult_Color_Active",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_Color_Channel",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Mult_Color_Channel",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_Texture_Packing",
+                "logicalParameters": [
+                    {
+                        "name": "Mult_Texture_Packing",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_Power_Color",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Mult_Power_Color",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_Multiply_Color",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Mult_Multiply_Color",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_Power_Alpha",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Mult_Power_Alpha",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Mult_Multiply_Alpha",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Mult_Multiply_Alpha",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_Use_BaseTexture_Main_or_Mult",
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_Use_BaseTexture_Main_or_Mult",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_UV_Rotation",
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_UV_Rotation",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_UV_RotationRate",
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_UV_RotationRate",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_UV_Offset",
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_UV_Offset",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_UV_Tile",
+                "data": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_UV_Tile",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_UV_Speed",
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_UV_Speed",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_UV_Dist_Strength",
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_UV_Dist_Strength",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_Channel",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_Channel",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_Power",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_Power",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_Multiply",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_Multiply",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_Static",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_Static",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_FromBaseTexture_Main_or_Mult",
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_FromBaseTexture_Main_or_Mult",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_FromBaseTexture_Channel",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_FromBaseTexture_Channel",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_FromBaseTexture_Power",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_FromBaseTexture_Power",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_FromBaseTexture_Multiply",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_FromBaseTexture_Multiply",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_FromBaseTexture",
+                "data": [
+                    -1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_FromBaseTexture",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Erosion_Sharpness",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Erosion_Sharpness",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Base_A",
+                "data": [
+                    0.0,
+                    0.22000457346439362,
+                    1.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Base_A",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Mid_A",
+                "data": [
+                    0.0,
+                    0.9100022912025452,
+                    1.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Mid_A",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Highlight_A",
+                "data": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Highlight_A",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Highlight_Main_Power_A",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Highlight_Main_Power_A",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Highlight_Main_Multiply_A",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Highlight_Main_Multiply_A",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Highlight_Mult_Power_A",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Highlight_Mult_Power_A",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Highlight_Mult_Multiply_A",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Highlight_Mult_Multiply_A",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Base_B",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Base_B",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Mid_B",
+                "data": [
+                    1.0,
+                    0.4299992322921753,
+                    0.4299992322921753,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Mid_B",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Highlight_B",
+                "data": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Highlight_B",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Highlight_Main_Power_B",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Highlight_Main_Power_B",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Highlight_Main_Multiply_B",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Highlight_Main_Multiply_B",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Highlight_Mult_Power_B",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Highlight_Mult_Power_B",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorLerp_Highlight_Mult_Multiply_B",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorLerp_Highlight_Mult_Multiply_B",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "AlphaMask_Front_MultiplyPower",
+                "data": [
+                    4.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "AlphaMask_Front_MultiplyPower",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "AlphaMask_Back_MultiplyPower",
+                "data": [
+                    4.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "AlphaMask_Back_MultiplyPower",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SoftParticle_FadeDistance",
+                "data": [
+                    25.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SoftParticle_FadeDistance",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SoftParticle_Power",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SoftParticle_Power",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SoftParticle_Multiply",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SoftParticle_Multiply",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "FOW_Intensity_RGBA",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "FOW_Intensity_RGBA",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "OpacityClip",
+                "logicalParameters": [
+                    {
+                        "name": "OpacityClip",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "BloomThreshold",
+                "data": [
+                    3.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "BloomThreshold",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "FOW_Intensity_Bloom",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "FOW_Intensity_Bloom",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            }
+        ],
+        "staticSwitches": [
+            {
+                "name": "CAMERAOFFSET_DP_ACTIVE",
+                "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "MAIN_WAKE_UV",
+                "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "UV_DIST_WAKE_UV",
+                "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "UV_DIST_UV_NORMALMAP",
+                "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "UV_DIST_ACTIVE",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "MULT_WAKE_UV",
+                "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "MULT_ACTIVE",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "EROSION_WAKE_UV",
+                "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "EROSION_USE_BASE_TEXTURE",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "EROSION_ACTIVE",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "COLOR_LERP_ACTIVE",
+                "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "COLOR_GRADIENT_ACTIVE",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "PARTICLE_COLOR_ACTIVE",
+                "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "SOFT_PARTICLE_ACTIVE",
+                "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "COLORBLIND_SUPPORT",
+                "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "NAVMESH_MASK_ACTIVE",
+                "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            }
+        ],
+        "textures": [
+            {
+                "name": "UV_Dist",
+                "defaultTexturePath": "assets/shared/fx/textures/normal/shared_normal_flowmap.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "TextureMain",
+                "defaultTexturePath": "assets/shared/fx/textures/noisedissolve/shared_nd_voidhaird.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "TextureMult",
+                "defaultTexturePath": "assets/shared/fx/textures/noisedissolve/shared_nd_voidhaird.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "AlphaErosion",
+                "defaultTexturePath": "assets/shared/fx/textures/noisedissolve/shared_nd_voidhairb.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "ColorGradient",
+                "defaultTexturePath": "assets/shared/materials/gradient_test_03.tex",
+                "__type": "ShaderTexture"
+            }
+        ],
+        "featureDefines": {
+            "FEATURE_BLOOM": "1",
+            "FEATURE_FOW": "1",
+            "FEATURE_MASKED": "1",
+            "FEATURE_NAVMESH_MASK": "1",
+            "FEATURE_VERTEX_ID": "1"
+        },
+        "featureMask": 9,
+        "objectPath": "Shaders/Particles/ShaderPreset/VFX_Uber_TrailBeam_Unlit",
+        "__type": "CustomShaderDef"
+    },
     "Shaders/StaticMesh/DefaultEnv_Flat": {
         "parameters": [
             {
@@ -97136,125 +99764,6 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
-                "name": "VoidTendrilNormalIntensity",
-                "data": [
-                    0.3499999940395355,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "VoidTendrilNormalIntensity",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "VoidTendrilSoftness",
-                "data": [
-                    0.15000000596046448,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "VoidTendrilSoftness",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "ShoreFoamTiling",
-                "data": [
-                    0.5,
-                    0.5,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "ShoreFoamTiling",
-                        "fields": 3,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "ShoreFoamPanner",
-                "data": [
-                    0.0,
-                    0.004999999888241291,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "ShoreFoamPanner",
-                        "fields": 3,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "ShoreFoamUVDistTile",
-                "data": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "ShoreFoamUVDistTile",
-                        "fields": 3,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "ShoreFoamUVDistPanner",
-                "data": [
-                    0.07000000029802322,
-                    0.07000000029802322,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "ShoreFoamUVDistPanner",
-                        "fields": 3,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "ShoreFoamUVDistStrength",
-                "data": [
-                    0.05000000074505806,
-                    0.05000000074505806,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "ShoreFoamUVDistStrength",
-                        "fields": 3,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
                 "name": "Refraction_Distortion_Strength",
                 "logicalParameters": [
                     {
@@ -97531,6 +100040,40 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "ShoreFoamTiling",
+                "data": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ShoreFoamTiling",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ShoreFoamPanner",
+                "data": [
+                    0.0,
+                    0.004999999888241291,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ShoreFoamPanner",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "ShoreFoamRippleDistortionTiling",
                 "data": [
                     0.5,
@@ -97559,6 +100102,57 @@
                     {
                         "name": "ShoreFoamRippleSpeed",
                         "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ShoreFoamUVDistTile",
+                "data": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ShoreFoamUVDistTile",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ShoreFoamUVDistPanner",
+                "data": [
+                    0.07000000029802322,
+                    0.07000000029802322,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ShoreFoamUVDistPanner",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ShoreFoamUVDistStrength",
+                "data": [
+                    0.05000000074505806,
+                    0.05000000074505806,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ShoreFoamUVDistStrength",
+                        "fields": 3,
                         "__type": "ShaderLogicalParameter"
                     }
                 ],
@@ -97616,10 +100210,16 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
-                "name": "WaterRoughness",
+                "name": "ShoreColorBleedContrast",
+                "data": [
+                    0.800000011920929,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
                 "logicalParameters": [
                     {
-                        "name": "WaterRoughness",
+                        "name": "ShoreColorBleedContrast",
                         "fields": 1,
                         "__type": "ShaderLogicalParameter"
                     }
@@ -97627,7 +100227,7 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
-                "name": "SpecBase",
+                "name": "ShoreColorBleedInfluence",
                 "data": [
                     1.0,
                     0.0,
@@ -97636,7 +100236,7 @@
                 ],
                 "logicalParameters": [
                     {
-                        "name": "SpecBase",
+                        "name": "ShoreColorBleedInfluence",
                         "fields": 1,
                         "__type": "ShaderLogicalParameter"
                     }
@@ -97644,50 +100244,10 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
-                "name": "SpecThreshold",
-                "data": [
-                    0.9990000128746033,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
+                "name": "WaterRoughness",
                 "logicalParameters": [
                     {
-                        "name": "SpecThreshold",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "SpecEdgeSize",
-                "data": [
-                    0.003000000026077032,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "SpecEdgeSize",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "SpecIntensity",
-                "data": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "SpecIntensity",
+                        "name": "WaterRoughness",
                         "fields": 1,
                         "__type": "ShaderLogicalParameter"
                     }
@@ -97897,6 +100457,108 @@
                     }
                 ],
                 "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "VoidTendrilNormalIntensity",
+                "data": [
+                    0.3499999940395355,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "VoidTendrilNormalIntensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "VoidTendrilSoftness",
+                "data": [
+                    0.15000000596046448,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "VoidTendrilSoftness",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SpecBase",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SpecBase",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SpecThreshold",
+                "data": [
+                    0.9990000128746033,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SpecThreshold",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SpecEdgeSize",
+                "data": [
+                    0.003000000026077032,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SpecEdgeSize",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SpecIntensity",
+                "data": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SpecIntensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
             }
         ],
         "staticSwitches": [
@@ -97909,16 +100571,6 @@
                 "__type": "ShaderStaticSwitch"
             },
             {
-                "name": "USE_VOID_PREVIEW_IN_MM",
-                "{066e669c}": true,
-                "__type": "ShaderStaticSwitch"
-            },
-            {
-                "name": "USE_VOID",
-                "onByDefault": true,
-                "__type": "ShaderStaticSwitch"
-            },
-            {
                 "name": "USE_REFRACTION",
                 "__type": "ShaderStaticSwitch"
             },
@@ -97926,6 +100578,21 @@
                 "name": "USE_SHORE_SDF_FOR_SHALLOWS",
                 "onByDefault": true,
                 "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "USE_VOID_PREVIEW_IN_MM",
+                "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "USE_PROCEDURAL_VOID",
+                "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "USE_VOID",
+                "onByDefault": true,
                 "__type": "ShaderStaticSwitch"
             }
         ],
@@ -97949,27 +100616,9 @@
                 "__type": "ShaderTexture"
             },
             {
-                "name": "VoidNormal2",
-                "defaultTexturePath": "assets/maps/terrainpaint/paintlayers/mantis/visualspike/mantis_visualspike_voidtendrils_ab_nm.tex",
-                "samplerName": "EnvironmentWrap",
-                "__type": "ShaderTexture"
-            },
-            {
-                "name": "VoidHeight",
-                "defaultTexturePath": "assets/maps/terrainpaint/paintlayers/mantis/visualspike/mantis_visualspike_voidtendrils_ac_h.tex",
-                "samplerName": "EnvironmentWrap",
-                "__type": "ShaderTexture"
-            },
-            {
-                "name": "VoidAlbedo2",
-                "defaultTexturePath": "assets/maps/terrainpaint/paintlayers/mantis/visualspike/mantis_visualspike_voidtendrils_ab_alb.tex",
-                "samplerName": "EnvironmentWrap",
-                "__type": "ShaderTexture"
-            },
-            {
-                "name": "VoidNormal",
-                "defaultTexturePath": "assets/maps/terrainpaint/paintlayers/mantis/visualspike/mantis_visualspike_voidtendrils_ac_nm.tex",
-                "samplerName": "EnvironmentWrap",
+                "name": "BAKED_DIFFUSE_TEXTURE",
+                "defaultTexturePath": "assets/shared/materials/cobble_moss_albedo.tex",
+                "samplerName": "EnvironmentClamp",
                 "__type": "ShaderTexture"
             },
             {
@@ -97985,15 +100634,27 @@
                 "__type": "ShaderTexture"
             },
             {
-                "name": "BAKED_DIFFUSE_TEXTURE",
-                "defaultTexturePath": "assets/shared/materials/cobble_moss_albedo.tex",
+                "name": "BAKED_RMA_TEXTURE",
+                "defaultTexturePath": "assets/shared/materials/cobble_moss_rma.tex",
                 "samplerName": "EnvironmentClamp",
                 "__type": "ShaderTexture"
             },
             {
-                "name": "BAKED_RMA_TEXTURE",
-                "defaultTexturePath": "assets/shared/materials/cobble_moss_rma.tex",
-                "samplerName": "EnvironmentClamp",
+                "name": "VoidNormal",
+                "defaultTexturePath": "assets/maps/terrainpaint/paintlayers/mantis/visualspike/mantis_visualspike_voidtendrils_ac_nm.tex",
+                "samplerName": "EnvironmentWrap",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "VoidHeight",
+                "defaultTexturePath": "assets/maps/terrainpaint/paintlayers/mantis/visualspike/mantis_visualspike_voidtendrils_ac_h.tex",
+                "samplerName": "EnvironmentWrap",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "VoidAlb",
+                "defaultTexturePath": "{6035a78843a64681}",
+                "samplerName": "EnvironmentWrap",
                 "__type": "ShaderTexture"
             }
         ],

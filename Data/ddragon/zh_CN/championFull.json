@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "full",
-    "version": "16.22.1",
+    "version": "16.23.1",
     "data": {
         "Aatrox": {
             "id": "Aatrox",
@@ -13338,7 +13338,7 @@
                 "armorperlevel": 5,
                 "spellblock": 30,
                 "spellblockperlevel": 1.3,
-                "attackrange": 525,
+                "attackrange": 550,
                 "hpregen": 7,
                 "hpregenperlevel": 0.75,
                 "mpregen": 8,
@@ -67871,13 +67871,11 @@
                     "leveltip": {
                         "label": [
                             "伤害",
-                            "冷却时间",
-                            "@AbilityResourceName@消耗"
+                            "冷却时间"
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ cost }} -> {{ costNL }}"
+                            "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -67891,12 +67889,12 @@
                     "cooldownBurn": "14/13/12/11/10",
                     "cost": [
                         45,
-                        50,
-                        55,
-                        60,
-                        65
+                        45,
+                        45,
+                        45,
+                        45
                     ],
-                    "costBurn": "45/50/55/60/65",
+                    "costBurn": "45",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -82067,7 +82065,7 @@
                     "id": "MelW",
                     "name": "灵魂折镜",
                     "description": "梅尔发射一颗折射新星，摧毁碰到的敌方投射物，并射出魔法飞弹进行反击。<br><br>新星还会为梅尔及其队友提供护盾并提升移动速度。",
-                    "tooltip": "梅尔发射一颗折射新星，摧毁碰到的敌方投射物，并发动造成<magicDamage>{{ initialdamage }}魔法伤害</magicDamage>的反击。对同一敌人的后续反击改为造成<magicDamage>{{ subsequentdamage }}魔法伤害</magicDamage>。<br /><br />新星还会为梅尔及其队友提供持续{{ buffduration }}秒的<shield>{{ totalshield }}护盾</shield>和<speed>{{ totalms }}移动速度</speed>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "梅尔发射一颗折射新星，摧毁碰到的敌方投射物，并发动反击，造成<magicDamage>{{ initialdamage }}魔法伤害</magicDamage>。对同一敌人的后续反击改为造成<magicDamage>{{ subsequentdamage }}魔法伤害</magicDamage>。<br /><br />新星还会为梅尔及其队友提供持续{{ buffduration }}秒的<shield>{{ totalshield }}护盾</shield>和<speed>{{ totalms }}移动速度</speed>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "冷却时间",
@@ -91805,6 +91803,68 @@
                     "num": 49,
                     "name": "小蜜蜂 妮蔻",
                     "chromas": false
+                },
+                {
+                    "id": "518050",
+                    "num": 50,
+                    "name": "咖啡甜心 妮蔻",
+                    "chromas": true
+                },
+                {
+                    "id": "518051",
+                    "num": 51,
+                    "name": "咖啡甜心 妮蔻 草莓戚风",
+                    "chromas": false,
+                    "parentSkin": 50
+                },
+                {
+                    "id": "518052",
+                    "num": 52,
+                    "name": "咖啡甜心 妮蔻 蓝莓朱古力",
+                    "chromas": false,
+                    "parentSkin": 50
+                },
+                {
+                    "id": "518053",
+                    "num": 53,
+                    "name": "咖啡甜心 妮蔻 焦糖布丁",
+                    "chromas": false,
+                    "parentSkin": 50
+                },
+                {
+                    "id": "518054",
+                    "num": 54,
+                    "name": "咖啡甜心 妮蔻 核桃巴菲",
+                    "chromas": false,
+                    "parentSkin": 50
+                },
+                {
+                    "id": "518055",
+                    "num": 55,
+                    "name": "咖啡甜心 妮蔻 酒醉樱桃",
+                    "chromas": false,
+                    "parentSkin": 50
+                },
+                {
+                    "id": "518056",
+                    "num": 56,
+                    "name": "咖啡甜心 妮蔻 吉子芝士",
+                    "chromas": false,
+                    "parentSkin": 50
+                },
+                {
+                    "id": "518057",
+                    "num": 57,
+                    "name": "咖啡甜心 妮蔻 软心布朗尼",
+                    "chromas": false,
+                    "parentSkin": 50
+                },
+                {
+                    "id": "518058",
+                    "num": 58,
+                    "name": "咖啡甜心 妮蔻 姜汁香茅",
+                    "chromas": false,
+                    "parentSkin": 50
                 }
             ],
             "lore": "妮蔻来自一个早已迷失的瓦斯塔亚部落。她可以借用别人的外表来伪装自己，融入人群，甚至通过影响别人的情绪状态，一瞬间就能化敌为友。没人知道妮蔻到底在哪儿——或者到底是谁，但是想要为难她的人会立刻见识到她的本色，感受原始的精神魔法倾泻在自己身上的痛苦。",
@@ -126630,6 +126690,12 @@
                     "name": "至臻 安魂曲 娑娜 至强",
                     "chromas": false,
                     "parentSkin": 75
+                },
+                {
+                    "id": "37077",
+                    "num": 77,
+                    "name": "DJ 娑娜 终极混音",
+                    "chromas": false
                 }
             ],
             "lore": "作为德玛西亚一流的琴师，娑娜唯一的语言就是“叆华”优美的和声与多变的曲调。抚琴的才华让她深得上流社会的宠爱，不过也有人怀疑娑娜如魔咒一般的迷人的旋律，其实是在施放魔法——而这在德玛西亚可是大忌。对此娑娜始终一言不发，但她最亲密的盟友却能完全理解她。娑娜指间流淌的和声，不仅能够安抚受伤的盟友，还能打击掉以轻心的敌人。",
@@ -131166,29 +131232,31 @@
                     "tooltip": "辛德拉投出一道原力波，<status>击退</status>敌人们和<keywordMajor>暗黑法球</keywordMajor>并造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br />被推挤的<keywordMajor>暗黑法球</keywordMajor>会<status>晕眩</status>敌人{{ stunduration }}秒并造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br /><evolve>{{ spell.syndrapassive:eupgradethreshold }}块怒法碎晶</evolve>：这个技能的宽度得到提升并且还会对敌人们造成持续{{ upgradedslowduration }}秒的<status>{{ upgradedslowamount*100 }}%</status><status>减速</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "伤害"
+                            "伤害",
+                            "冷却时间"
                         ],
                         "effect": [
-                            "{{ basedamage }} -> {{ basedamageNL }}"
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
                     "maxrank": 5,
                     "cooldown": [
-                        15,
-                        15,
-                        15,
-                        15,
+                        17,
+                        16.5,
+                        16,
+                        15.5,
                         15
                     ],
-                    "cooldownBurn": "15",
+                    "cooldownBurn": "17/16.5/16/15.5/15",
                     "cost": [
-                        50,
-                        50,
-                        50,
-                        50,
-                        50
+                        60,
+                        60,
+                        60,
+                        60,
+                        60
                     ],
-                    "costBurn": "50",
+                    "costBurn": "60",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -147956,7 +148024,7 @@
                         [
                             450,
                             700,
-                            925
+                            950
                         ],
                         [
                             7,
@@ -148006,7 +148074,7 @@
                     ],
                     "effectBurn": [
                         null,
-                        "450/700/925",
+                        "450/700/950",
                         "7",
                         "20",
                         "40",
@@ -168705,6 +168773,68 @@
                     "name": "至臻 永恒星灵 佐伊 全开",
                     "chromas": false,
                     "parentSkin": 43
+                },
+                {
+                    "id": "142045",
+                    "num": 45,
+                    "name": "咖啡甜心 佐伊",
+                    "chromas": true
+                },
+                {
+                    "id": "142046",
+                    "num": 46,
+                    "name": "咖啡甜心 佐伊 草莓戚风",
+                    "chromas": false,
+                    "parentSkin": 45
+                },
+                {
+                    "id": "142047",
+                    "num": 47,
+                    "name": "咖啡甜心 佐伊 吉子芝士",
+                    "chromas": false,
+                    "parentSkin": 45
+                },
+                {
+                    "id": "142048",
+                    "num": 48,
+                    "name": "咖啡甜心 佐伊 抹茶巧克力",
+                    "chromas": false,
+                    "parentSkin": 45
+                },
+                {
+                    "id": "142049",
+                    "num": 49,
+                    "name": "咖啡甜心 佐伊 香草忌廉",
+                    "chromas": false,
+                    "parentSkin": 45
+                },
+                {
+                    "id": "142050",
+                    "num": 50,
+                    "name": "咖啡甜心 佐伊 海盐泡芙",
+                    "chromas": false,
+                    "parentSkin": 45
+                },
+                {
+                    "id": "142051",
+                    "num": 51,
+                    "name": "咖啡甜心 佐伊 酒醉樱桃",
+                    "chromas": false,
+                    "parentSkin": 45
+                },
+                {
+                    "id": "142052",
+                    "num": 52,
+                    "name": "咖啡甜心 佐伊 核桃巴菲",
+                    "chromas": false,
+                    "parentSkin": 45
+                },
+                {
+                    "id": "142053",
+                    "num": 53,
+                    "name": "咖啡甜心 佐伊 焦糖布丁",
+                    "chromas": false,
+                    "parentSkin": 45
                 }
             ],
             "lore": "调皮捣蛋、异想天开而且变化莫测，佐伊就是这一切的现实化身。作为巨神族的宇宙信使，她的出现就是惊天巨变的先兆。她甚至无需任何行为，只是单纯地出现在某个地方，就足以扭曲周围的奥术数学法则，从而扰乱现实的物理定律。有的时候还会带来浩劫与灾难，虽然她本身并无半点恶意。或许这就是为什么她对待自己的职责总是那么地漫不经心，给了她充足的时间用来玩游戏、捉弄凡人，或者自娱自乐。与佐伊的邂逅可能会给人带来欢乐与激励，但她的现身往往没这么简单，甚至常常意味着极大的危险。",

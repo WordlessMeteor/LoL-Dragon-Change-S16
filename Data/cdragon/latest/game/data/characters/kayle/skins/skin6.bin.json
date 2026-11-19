@@ -248,6 +248,7 @@
             }
         ],
         "mResourceResolver": "Characters/Kayle/Skins/Skin6/Resources",
+        "{55d3758e}": "ASSETS/Characters/Kayle/Skins/Skin06/ChromaPreview.tex",
         "objectPath": "Characters/Kayle/Skins/Skin6",
         "__type": "SkinCharacterDataProperties"
     },
@@ -329,6 +330,1725 @@
             "__type": "GearData"
         },
         "__type": "GearSkinUpgrade"
+    },
+    "Characters/Kayle/Skins/Skin6/Materials/Kayle_Skin06_transform_flash_inst": {
+        "name": "Characters/Kayle/Skins/Skin6/Materials/Kayle_Skin06_transform_flash_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/shared/materials/black.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Noise_Masks",
+                "texturePath": "assets/shared/materials/generic_noise.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Gradient_Texture",
+                "texturePath": "assets/shared/materials/default_doublegradient.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Base_Texture",
+                "texturePath": "assets/shared/materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Speed_X",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Speed_Y",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Size_Outer",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Bias_Outer",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaBias",
+                "value": [
+                    0.33500000834465027,
+                    0.0,
+                    0.0,
+                    0.5
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/GradientMappedFresnel",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/Kayle/Skins/Skin6/Materials/Kayle_Skin06_Wings_lvl16": {
+        "name": "Characters/Kayle/Skins/Skin6/Materials/Kayle_Skin06_Wings_lvl16",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/characters/kayle/skins/skin06/kayle_skin06_wings_lv16_tx_cm.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask_Texture",
+                "texturePath": "assets/characters/kayle/skins/skin06/particles/kayle_skin06_wings_lvl11_mask.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Gradient_Texture",
+                "texturePath": "assets/characters/kayle/skins/skin06/particles/kayle_skin06_wings_lvl1_gradient.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Mask_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "value": [
+                    0.4000000059604645,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scrolling_Scale",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scrolling_Rate",
+                "value": [
+                    0.10000000149011612,
+                    23.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Color",
+                "value": [
+                    0.1411764770746231,
+                    0.6000000238418579,
+                    0.6078431606292725,
+                    0.800000011920929
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Bias",
+                "value": [
+                    0.7099999785423279,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_SmoothStep",
+                "value": [
+                    0.0,
+                    0.20000000298023224,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Gradient_Sharpness",
+                "value": [
+                    14.080780029296875,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Sharpness",
+                "value": [
+                    0.0010000000474974513,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_COLORDODGE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ADDATIVE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_LERP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_DISSOLVE",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Scrolling_ColorDodge_Masked",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Dissolve_Bias",
+                    "Enabled": false,
+                    "driver": {
+                        "mBoolDriver": {
+                            "mScriptName": "KayleEnrage",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        "mOnValue": 0.800000011920929,
+                        "mTurnOnTimeSec": 0.5,
+                        "mTurnOffTimeSec": 2.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Bloom_Intensity",
+                    "Enabled": false,
+                    "driver": {
+                        "mElements": [
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KayleEnrage",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "mBoolDriver": {
+                                        "mScriptName": "KayleEnrage",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mOffValue": 1.0,
+                                    "__type": "LerpMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KaylePassiveCeremony",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "mBoolDriver": {
+                                        "mScriptName": "KaylePassiveCeremony",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mOnValue": 12.0,
+                                    "mOffValue": 2.0,
+                                    "__type": "LerpMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KaylePassiveRank3",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "mBoolDriver": {
+                                        "mScriptName": "KaylePassiveRank3",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mOnValue": 0.699999988079071,
+                                    "__type": "LerpMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            }
+                        ],
+                        "mDefaultValue": {
+                            "__type": "FloatLiteralMaterialDriver"
+                        },
+                        "__type": "SwitchMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Color",
+                    "Enabled": false,
+                    "driver": {
+                        "mBoolDriver": {
+                            "mScriptName": "KayleEnrage",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        "mColorOn": [
+                            0.9137254953384399,
+                            0.7803921699523926,
+                            0.09803921729326248,
+                            1.0
+                        ],
+                        "mColorOff": [
+                            0.007843137718737125,
+                            0.003921568859368563,
+                            0.003921568859368563,
+                            0.0
+                        ],
+                        "__type": "ColorChooserMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Scrolling_Rate",
+                    "driver": {
+                        "mDrivers": [
+                            {
+                                "mScriptName": "KayleEnrage",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            }
+                        ],
+                        "__type": "MaxMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Dissolve_SmoothStep",
+                    "Enabled": false,
+                    "driver": {
+                        "__type": "TimeMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Mask_Intensity",
+                    "Enabled": false,
+                    "driver": {
+                        "mElements": [
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KayleEnrage",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "mBoolDriver": {
+                                        "mScriptName": "KayleEnrage",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mOnValue": 0.800000011920929,
+                                    "__type": "LerpMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KaylePassiveRank3",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "mBoolDriver": {
+                                        "mScriptName": "KaylePassiveRank3",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mOnValue": 1.25,
+                                    "__type": "LerpMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KaylePassiveRank3",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "__type": "FloatLiteralMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            }
+                        ],
+                        "mDefaultValue": {
+                            "__type": "FloatLiteralMaterialDriver"
+                        },
+                        "__type": "SwitchMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/Kayle/Skins/Skin6/Materials/Kayle_Skin06_Wings_lvl11": {
+        "name": "Characters/Kayle/Skins/Skin6/Materials/Kayle_Skin06_Wings_lvl11",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/characters/kayle/skins/skin06/kayle_skin06_wings_lv11_tx_cm.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask_Texture",
+                "texturePath": "assets/characters/kayle/skins/skin06/particles/kayle_skin06_wings_lvl11_mask.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Gradient_Texture",
+                "texturePath": "assets/characters/kayle/skins/skin06/particles/kayle_skin06_wings_lvl1_gradient.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Mask_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "value": [
+                    3.0999999046325684,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scrolling_Scale",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scrolling_Rate",
+                "value": [
+                    0.10000000149011612,
+                    23.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Color",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Bias",
+                "value": [
+                    0.7099999785423279,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_SmoothStep",
+                "value": [
+                    0.0,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Gradient_Sharpness",
+                "value": [
+                    14.080780029296875,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Sharpness",
+                "value": [
+                    0.0010000000474974513,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_COLORDODGE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ADDATIVE",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_LERP",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_DISSOLVE",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Scrolling_ColorDodge_Masked",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Dissolve_Bias",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mScriptName": "KayleEnrage",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        "mOnValue": 0.800000011920929,
+                        "mTurnOnTimeSec": 0.5,
+                        "mTurnOffTimeSec": 2.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Bloom_Intensity",
+                    "driver": {
+                        "mElements": [
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KayleEnrage",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "mBoolDriver": {
+                                        "mScriptName": "KayleEnrage",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mOffValue": 1.0,
+                                    "__type": "LerpMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KaylePassiveCeremony",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "mBoolDriver": {
+                                        "mScriptName": "KaylePassiveCeremony",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mOnValue": 12.0,
+                                    "mOffValue": 2.0,
+                                    "__type": "LerpMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KaylePassiveRank3",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "mBoolDriver": {
+                                        "mScriptName": "KaylePassiveRank3",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mOnValue": 0.699999988079071,
+                                    "__type": "LerpMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            }
+                        ],
+                        "mDefaultValue": {
+                            "__type": "FloatLiteralMaterialDriver"
+                        },
+                        "__type": "SwitchMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Color",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mScriptName": "KayleEnrage",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        "mColorOn": [
+                            0.8274509906768799,
+                            0.9137254953384399,
+                            0.03529411926865578,
+                            1.0
+                        ],
+                        "mColorOff": [
+                            0.007843137718737125,
+                            0.003921568859368563,
+                            0.003921568859368563,
+                            0.0
+                        ],
+                        "__type": "ColorChooserMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Scrolling_Rate",
+                    "driver": {
+                        "mDrivers": [
+                            {
+                                "mScriptName": "KayleEnrage",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            }
+                        ],
+                        "__type": "MaxMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Dissolve_SmoothStep",
+                    "Enabled": false,
+                    "driver": {
+                        "__type": "TimeMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Mask_Intensity",
+                    "driver": {
+                        "mElements": [
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KayleEnrage",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "mBoolDriver": {
+                                        "mScriptName": "KayleEnrage",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mOnValue": 0.800000011920929,
+                                    "__type": "LerpMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KaylePassiveRank3",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "mBoolDriver": {
+                                        "mScriptName": "KaylePassiveRank3",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mOnValue": 1.25,
+                                    "__type": "LerpMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KaylePassiveRank3",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "__type": "FloatLiteralMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            }
+                        ],
+                        "mDefaultValue": {
+                            "__type": "FloatLiteralMaterialDriver"
+                        },
+                        "__type": "SwitchMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/Kayle/Skins/Skin6/Materials/Kayle_Skin06_Wings_Lvl6": {
+        "name": "Characters/Kayle/Skins/Skin6/Materials/Kayle_Skin06_Wings_Lvl6",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/characters/kayle/skins/skin06/kayle_skin06_wings_lv6_tx_cm.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask_Texture",
+                "texturePath": "assets/characters/kayle/skins/skin06/particles/kayle_skin06_wings_lvl6_mask.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Gradient_Texture",
+                "texturePath": "assets/characters/kayle/skins/skin06/particles/kayle_skin06_wings_lvl1_gradient.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Mask_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "value": [
+                    3.0999999046325684,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scrolling_Scale",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scrolling_Rate",
+                "value": [
+                    0.10000000149011612,
+                    23.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Color",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Bias",
+                "value": [
+                    0.7099999785423279,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_SmoothStep",
+                "value": [
+                    0.0,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Gradient_Sharpness",
+                "value": [
+                    14.080780029296875,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Sharpness",
+                "value": [
+                    0.0010000000474974513,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_COLORDODGE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ADDATIVE",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_LERP",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_DISSOLVE",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Scrolling_ColorDodge_Masked",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Dissolve_Bias",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mScriptName": "KayleEnrage",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        "mOnValue": 0.800000011920929,
+                        "mTurnOnTimeSec": 0.5,
+                        "mTurnOffTimeSec": 2.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Bloom_Intensity",
+                    "driver": {
+                        "mElements": [
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KayleEnrage",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "mBoolDriver": {
+                                        "mScriptName": "KayleEnrage",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mOffValue": 1.0,
+                                    "__type": "LerpMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KaylePassiveCeremony",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "mBoolDriver": {
+                                        "mScriptName": "KaylePassiveCeremony",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mOnValue": 12.0,
+                                    "mOffValue": 2.0,
+                                    "__type": "LerpMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KaylePassiveRank3",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "mBoolDriver": {
+                                        "mScriptName": "KaylePassiveRank3",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mOnValue": 0.699999988079071,
+                                    "__type": "LerpMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            }
+                        ],
+                        "mDefaultValue": {
+                            "__type": "FloatLiteralMaterialDriver"
+                        },
+                        "__type": "SwitchMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Color",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mScriptName": "KayleEnrage",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        "mColorOn": [
+                            0.8274509906768799,
+                            0.9137254953384399,
+                            0.03529411926865578,
+                            1.0
+                        ],
+                        "mColorOff": [
+                            0.007843137718737125,
+                            0.003921568859368563,
+                            0.003921568859368563,
+                            0.0
+                        ],
+                        "__type": "ColorChooserMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Scrolling_Rate",
+                    "driver": {
+                        "mDrivers": [
+                            {
+                                "mScriptName": "KayleEnrage",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            }
+                        ],
+                        "__type": "MaxMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Dissolve_SmoothStep",
+                    "Enabled": false,
+                    "driver": {
+                        "__type": "TimeMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Mask_Intensity",
+                    "driver": {
+                        "mElements": [
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KayleEnrage",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "mBoolDriver": {
+                                        "mScriptName": "KayleEnrage",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mOnValue": 0.800000011920929,
+                                    "__type": "LerpMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KaylePassiveRank3",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "mBoolDriver": {
+                                        "mScriptName": "KaylePassiveRank3",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mOnValue": 1.25,
+                                    "__type": "LerpMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KaylePassiveRank3",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "__type": "FloatLiteralMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            }
+                        ],
+                        "mDefaultValue": {
+                            "__type": "FloatLiteralMaterialDriver"
+                        },
+                        "__type": "SwitchMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/Kayle/Skins/Skin6/Materials/Kayle_SKin06_Wings_lvl1": {
+        "name": "Characters/Kayle/Skins/Skin6/Materials/Kayle_SKin06_Wings_lvl1",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/characters/kayle/skins/skin06/kayle_skin06_wings_lv1_tx_cm.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask_Texture",
+                "texturePath": "assets/characters/kayle/skins/skin06/particles/kayle_skin06_wings_lvl1_mask.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Gradient_Texture",
+                "texturePath": "assets/characters/kayle/skins/skin06/particles/kayle_skin06_wings_lvl1_gradient.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Mask_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "value": [
+                    3.0999999046325684,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scrolling_Scale",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scrolling_Rate",
+                "value": [
+                    0.10000000149011612,
+                    23.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Color",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Bias",
+                "value": [
+                    0.7099999785423279,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_SmoothStep",
+                "value": [
+                    0.0,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Gradient_Sharpness",
+                "value": [
+                    13.440790176391602,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Sharpness",
+                "value": [
+                    0.0010000000474974513,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_COLORDODGE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ADDATIVE",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_LERP",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_DISSOLVE",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Scrolling_ColorDodge_Masked",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Dissolve_Bias",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mScriptName": "KayleEnrage",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        "mOnValue": 0.8999999761581421,
+                        "mTurnOnTimeSec": 0.5,
+                        "mTurnOffTimeSec": 2.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Bloom_Intensity",
+                    "driver": {
+                        "mElements": [
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KayleEnrage",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "mBoolDriver": {
+                                        "mScriptName": "KayleEnrage",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mOffValue": 1.0,
+                                    "__type": "LerpMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KaylePassiveCeremony",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "mBoolDriver": {
+                                        "mScriptName": "KaylePassiveCeremony",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mOnValue": 12.0,
+                                    "mOffValue": 2.0,
+                                    "__type": "LerpMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KaylePassiveRank3",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "mBoolDriver": {
+                                        "mScriptName": "KaylePassiveRank3",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mOnValue": 0.699999988079071,
+                                    "__type": "LerpMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            }
+                        ],
+                        "mDefaultValue": {
+                            "__type": "FloatLiteralMaterialDriver"
+                        },
+                        "__type": "SwitchMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Color",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mScriptName": "KayleEnrage",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        "mColorOn": [
+                            0.9137254953384399,
+                            0.10588235408067703,
+                            0.10588235408067703,
+                            1.0
+                        ],
+                        "mColorOff": [
+                            0.007843137718737125,
+                            0.003921568859368563,
+                            0.003921568859368563,
+                            0.0
+                        ],
+                        "__type": "ColorChooserMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Scrolling_Rate",
+                    "driver": {
+                        "mDrivers": [
+                            {
+                                "mScriptName": "KayleEnrage",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            }
+                        ],
+                        "__type": "MaxMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Dissolve_SmoothStep",
+                    "Enabled": false,
+                    "driver": {
+                        "__type": "TimeMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Mask_Intensity",
+                    "driver": {
+                        "mElements": [
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KayleEnrage",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "mBoolDriver": {
+                                        "mScriptName": "KayleEnrage",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mOnValue": 0.800000011920929,
+                                    "__type": "LerpMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KaylePassiveRank3",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "mBoolDriver": {
+                                        "mScriptName": "KaylePassiveRank3",
+                                        "__type": "HasBuffDynamicMaterialBoolDriver"
+                                    },
+                                    "mOnValue": 1.25,
+                                    "__type": "LerpMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            },
+                            {
+                                "mCondition": {
+                                    "mScriptName": "KaylePassiveRank3",
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "__type": "FloatLiteralMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            }
+                        ],
+                        "mDefaultValue": {
+                            "__type": "FloatLiteralMaterialDriver"
+                        },
+                        "__type": "SwitchMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "textures": [
+                {
+                    "name": "Diffuse_Texture",
+                    "__type": "DynamicMaterialTextureSwapDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
     },
     "Characters/Kayle/Skins/Skin6/Resources": {
         "resourceMap": {
@@ -5435,1576 +7155,6 @@
         "particlePath": "Characters/Kayle/Skins/Skin6/Particles/Kayle_Skin06_Recall_jet_flame",
         "objectPath": "Characters/Kayle/Skins/Skin6/Particles/Kayle_Skin06_Recall_jet_flame",
         "__type": "VfxSystemDefinitionData"
-    },
-    "Characters/Kayle/Skins/Skin6/Materials/Kayle_Skin06_Wings_lvl16": {
-        "name": "Characters/Kayle/Skins/Skin6/Materials/Kayle_Skin06_Wings_lvl16",
-        "samplerValues": [
-            {
-                "TextureName": "Diffuse_Texture",
-                "texturePath": "assets/characters/kayle/skins/skin06/kayle_skin06_wings_lv16_tx_cm.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Mask_Texture",
-                "texturePath": "assets/characters/kayle/skins/skin06/particles/kayle_skin06_wings_lvl11_mask.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Gradient_Texture",
-                "texturePath": "assets/characters/kayle/skins/skin06/particles/kayle_skin06_wings_lvl1_gradient.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "modelHeight",
-                "value": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "rimOffset",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMax",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMin",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Mask_Intensity",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Bloom_Intensity",
-                "value": [
-                    0.4000000059604645,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Scrolling_Scale",
-                "value": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Scrolling_Rate",
-                "value": [
-                    0.10000000149011612,
-                    23.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Color",
-                "value": [
-                    0.1411764770746231,
-                    0.6000000238418579,
-                    0.6078431606292725,
-                    0.800000011920929
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Dissolve_Bias",
-                "value": [
-                    0.7099999785423279,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Dissolve_SmoothStep",
-                "value": [
-                    0.0,
-                    0.20000000298023224,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Gradient_Sharpness",
-                "value": [
-                    14.080780029296875,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Alpha_Sharpness",
-                "value": [
-                    0.0010000000474974513,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_RIM",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_COLORDODGE",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_ADDATIVE",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_LERP",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_DISSOLVE",
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NUM_BLEND_WEIGHTS": "4"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/SkinnedMesh/Scrolling_ColorDodge_Masked",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "childTechniques": [
-            {
-                "name": "transition",
-                "parentName": "normal",
-                "shaderMacros": {
-                    "TRANSITION": "1"
-                },
-                "__type": "StaticMaterialChildTechniqueDef"
-            }
-        ],
-        "dynamicMaterial": {
-            "parameters": [
-                {
-                    "name": "Dissolve_Bias",
-                    "Enabled": false,
-                    "driver": {
-                        "mBoolDriver": {
-                            "mScriptName": "KayleEnrage",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
-                        },
-                        "mOnValue": 0.800000011920929,
-                        "mTurnOnTimeSec": 0.5,
-                        "mTurnOffTimeSec": 2.0,
-                        "__type": "LerpMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Bloom_Intensity",
-                    "Enabled": false,
-                    "driver": {
-                        "mElements": [
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KayleEnrage",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "mBoolDriver": {
-                                        "mScriptName": "KayleEnrage",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "mOffValue": 1.0,
-                                    "__type": "LerpMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            },
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KaylePassiveCeremony",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "mBoolDriver": {
-                                        "mScriptName": "KaylePassiveCeremony",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "mOnValue": 12.0,
-                                    "mOffValue": 2.0,
-                                    "__type": "LerpMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            },
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KaylePassiveRank3",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "mBoolDriver": {
-                                        "mScriptName": "KaylePassiveRank3",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "mOnValue": 0.699999988079071,
-                                    "__type": "LerpMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            }
-                        ],
-                        "mDefaultValue": {
-                            "__type": "FloatLiteralMaterialDriver"
-                        },
-                        "__type": "SwitchMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Color",
-                    "Enabled": false,
-                    "driver": {
-                        "mBoolDriver": {
-                            "mScriptName": "KayleEnrage",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
-                        },
-                        "mColorOn": [
-                            0.9137254953384399,
-                            0.7803921699523926,
-                            0.09803921729326248,
-                            1.0
-                        ],
-                        "mColorOff": [
-                            0.007843137718737125,
-                            0.003921568859368563,
-                            0.003921568859368563,
-                            0.0
-                        ],
-                        "__type": "ColorChooserMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Scrolling_Rate",
-                    "driver": {
-                        "mDrivers": [
-                            {
-                                "mScriptName": "KayleEnrage",
-                                "__type": "HasBuffDynamicMaterialBoolDriver"
-                            }
-                        ],
-                        "__type": "MaxMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Dissolve_SmoothStep",
-                    "Enabled": false,
-                    "driver": {
-                        "__type": "TimeMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Mask_Intensity",
-                    "Enabled": false,
-                    "driver": {
-                        "mElements": [
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KayleEnrage",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "mBoolDriver": {
-                                        "mScriptName": "KayleEnrage",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "mOnValue": 0.800000011920929,
-                                    "__type": "LerpMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            },
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KaylePassiveRank3",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "mBoolDriver": {
-                                        "mScriptName": "KaylePassiveRank3",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "mOnValue": 1.25,
-                                    "__type": "LerpMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            },
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KaylePassiveRank3",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "__type": "FloatLiteralMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            }
-                        ],
-                        "mDefaultValue": {
-                            "__type": "FloatLiteralMaterialDriver"
-                        },
-                        "__type": "SwitchMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                }
-            ],
-            "__type": "DynamicMaterialDef"
-        },
-        "__type": "StaticMaterialDef"
-    },
-    "Characters/Kayle/Skins/Skin6/Materials/Kayle_Skin06_Wings_lvl11": {
-        "name": "Characters/Kayle/Skins/Skin6/Materials/Kayle_Skin06_Wings_lvl11",
-        "samplerValues": [
-            {
-                "TextureName": "Diffuse_Texture",
-                "texturePath": "assets/characters/kayle/skins/skin06/kayle_skin06_wings_lv11_tx_cm.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Mask_Texture",
-                "texturePath": "assets/characters/kayle/skins/skin06/particles/kayle_skin06_wings_lvl11_mask.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Gradient_Texture",
-                "texturePath": "assets/characters/kayle/skins/skin06/particles/kayle_skin06_wings_lvl1_gradient.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "modelHeight",
-                "value": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "rimOffset",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMax",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMin",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Mask_Intensity",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Bloom_Intensity",
-                "value": [
-                    3.0999999046325684,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Scrolling_Scale",
-                "value": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Scrolling_Rate",
-                "value": [
-                    0.10000000149011612,
-                    23.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Color",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Dissolve_Bias",
-                "value": [
-                    0.7099999785423279,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Dissolve_SmoothStep",
-                "value": [
-                    0.0,
-                    0.10000000149011612,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Gradient_Sharpness",
-                "value": [
-                    14.080780029296875,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Alpha_Sharpness",
-                "value": [
-                    0.0010000000474974513,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_RIM",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_COLORDODGE",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_ADDATIVE",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_LERP",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_DISSOLVE",
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NUM_BLEND_WEIGHTS": "4"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/SkinnedMesh/Scrolling_ColorDodge_Masked",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "childTechniques": [
-            {
-                "name": "transition",
-                "parentName": "normal",
-                "shaderMacros": {
-                    "TRANSITION": "1"
-                },
-                "__type": "StaticMaterialChildTechniqueDef"
-            }
-        ],
-        "dynamicMaterial": {
-            "parameters": [
-                {
-                    "name": "Dissolve_Bias",
-                    "driver": {
-                        "mBoolDriver": {
-                            "mScriptName": "KayleEnrage",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
-                        },
-                        "mOnValue": 0.800000011920929,
-                        "mTurnOnTimeSec": 0.5,
-                        "mTurnOffTimeSec": 2.0,
-                        "__type": "LerpMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Bloom_Intensity",
-                    "driver": {
-                        "mElements": [
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KayleEnrage",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "mBoolDriver": {
-                                        "mScriptName": "KayleEnrage",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "mOffValue": 1.0,
-                                    "__type": "LerpMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            },
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KaylePassiveCeremony",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "mBoolDriver": {
-                                        "mScriptName": "KaylePassiveCeremony",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "mOnValue": 12.0,
-                                    "mOffValue": 2.0,
-                                    "__type": "LerpMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            },
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KaylePassiveRank3",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "mBoolDriver": {
-                                        "mScriptName": "KaylePassiveRank3",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "mOnValue": 0.699999988079071,
-                                    "__type": "LerpMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            }
-                        ],
-                        "mDefaultValue": {
-                            "__type": "FloatLiteralMaterialDriver"
-                        },
-                        "__type": "SwitchMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Color",
-                    "driver": {
-                        "mBoolDriver": {
-                            "mScriptName": "KayleEnrage",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
-                        },
-                        "mColorOn": [
-                            0.8274509906768799,
-                            0.9137254953384399,
-                            0.03529411926865578,
-                            1.0
-                        ],
-                        "mColorOff": [
-                            0.007843137718737125,
-                            0.003921568859368563,
-                            0.003921568859368563,
-                            0.0
-                        ],
-                        "__type": "ColorChooserMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Scrolling_Rate",
-                    "driver": {
-                        "mDrivers": [
-                            {
-                                "mScriptName": "KayleEnrage",
-                                "__type": "HasBuffDynamicMaterialBoolDriver"
-                            }
-                        ],
-                        "__type": "MaxMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Dissolve_SmoothStep",
-                    "Enabled": false,
-                    "driver": {
-                        "__type": "TimeMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Mask_Intensity",
-                    "driver": {
-                        "mElements": [
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KayleEnrage",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "mBoolDriver": {
-                                        "mScriptName": "KayleEnrage",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "mOnValue": 0.800000011920929,
-                                    "__type": "LerpMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            },
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KaylePassiveRank3",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "mBoolDriver": {
-                                        "mScriptName": "KaylePassiveRank3",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "mOnValue": 1.25,
-                                    "__type": "LerpMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            },
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KaylePassiveRank3",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "__type": "FloatLiteralMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            }
-                        ],
-                        "mDefaultValue": {
-                            "__type": "FloatLiteralMaterialDriver"
-                        },
-                        "__type": "SwitchMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                }
-            ],
-            "__type": "DynamicMaterialDef"
-        },
-        "__type": "StaticMaterialDef"
-    },
-    "Characters/Kayle/Skins/Skin6/Materials/Kayle_Skin06_Wings_Lvl6": {
-        "name": "Characters/Kayle/Skins/Skin6/Materials/Kayle_Skin06_Wings_Lvl6",
-        "samplerValues": [
-            {
-                "TextureName": "Diffuse_Texture",
-                "texturePath": "assets/characters/kayle/skins/skin06/kayle_skin06_wings_lv6_tx_cm.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Mask_Texture",
-                "texturePath": "assets/characters/kayle/skins/skin06/particles/kayle_skin06_wings_lvl6_mask.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Gradient_Texture",
-                "texturePath": "assets/characters/kayle/skins/skin06/particles/kayle_skin06_wings_lvl1_gradient.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "modelHeight",
-                "value": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "rimOffset",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMax",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMin",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Mask_Intensity",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Bloom_Intensity",
-                "value": [
-                    3.0999999046325684,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Scrolling_Scale",
-                "value": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Scrolling_Rate",
-                "value": [
-                    0.10000000149011612,
-                    23.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Color",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Dissolve_Bias",
-                "value": [
-                    0.7099999785423279,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Dissolve_SmoothStep",
-                "value": [
-                    0.0,
-                    0.10000000149011612,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Gradient_Sharpness",
-                "value": [
-                    14.080780029296875,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Alpha_Sharpness",
-                "value": [
-                    0.0010000000474974513,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_RIM",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_COLORDODGE",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_ADDATIVE",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_LERP",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_DISSOLVE",
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NUM_BLEND_WEIGHTS": "4"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/SkinnedMesh/Scrolling_ColorDodge_Masked",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "childTechniques": [
-            {
-                "name": "transition",
-                "parentName": "normal",
-                "shaderMacros": {
-                    "TRANSITION": "1"
-                },
-                "__type": "StaticMaterialChildTechniqueDef"
-            }
-        ],
-        "dynamicMaterial": {
-            "parameters": [
-                {
-                    "name": "Dissolve_Bias",
-                    "driver": {
-                        "mBoolDriver": {
-                            "mScriptName": "KayleEnrage",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
-                        },
-                        "mOnValue": 0.800000011920929,
-                        "mTurnOnTimeSec": 0.5,
-                        "mTurnOffTimeSec": 2.0,
-                        "__type": "LerpMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Bloom_Intensity",
-                    "driver": {
-                        "mElements": [
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KayleEnrage",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "mBoolDriver": {
-                                        "mScriptName": "KayleEnrage",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "mOffValue": 1.0,
-                                    "__type": "LerpMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            },
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KaylePassiveCeremony",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "mBoolDriver": {
-                                        "mScriptName": "KaylePassiveCeremony",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "mOnValue": 12.0,
-                                    "mOffValue": 2.0,
-                                    "__type": "LerpMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            },
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KaylePassiveRank3",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "mBoolDriver": {
-                                        "mScriptName": "KaylePassiveRank3",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "mOnValue": 0.699999988079071,
-                                    "__type": "LerpMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            }
-                        ],
-                        "mDefaultValue": {
-                            "__type": "FloatLiteralMaterialDriver"
-                        },
-                        "__type": "SwitchMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Color",
-                    "driver": {
-                        "mBoolDriver": {
-                            "mScriptName": "KayleEnrage",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
-                        },
-                        "mColorOn": [
-                            0.8274509906768799,
-                            0.9137254953384399,
-                            0.03529411926865578,
-                            1.0
-                        ],
-                        "mColorOff": [
-                            0.007843137718737125,
-                            0.003921568859368563,
-                            0.003921568859368563,
-                            0.0
-                        ],
-                        "__type": "ColorChooserMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Scrolling_Rate",
-                    "driver": {
-                        "mDrivers": [
-                            {
-                                "mScriptName": "KayleEnrage",
-                                "__type": "HasBuffDynamicMaterialBoolDriver"
-                            }
-                        ],
-                        "__type": "MaxMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Dissolve_SmoothStep",
-                    "Enabled": false,
-                    "driver": {
-                        "__type": "TimeMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Mask_Intensity",
-                    "driver": {
-                        "mElements": [
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KayleEnrage",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "mBoolDriver": {
-                                        "mScriptName": "KayleEnrage",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "mOnValue": 0.800000011920929,
-                                    "__type": "LerpMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            },
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KaylePassiveRank3",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "mBoolDriver": {
-                                        "mScriptName": "KaylePassiveRank3",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "mOnValue": 1.25,
-                                    "__type": "LerpMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            },
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KaylePassiveRank3",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "__type": "FloatLiteralMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            }
-                        ],
-                        "mDefaultValue": {
-                            "__type": "FloatLiteralMaterialDriver"
-                        },
-                        "__type": "SwitchMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                }
-            ],
-            "__type": "DynamicMaterialDef"
-        },
-        "__type": "StaticMaterialDef"
-    },
-    "Characters/Kayle/Skins/Skin6/Materials/Kayle_SKin06_Wings_lvl1": {
-        "name": "Characters/Kayle/Skins/Skin6/Materials/Kayle_SKin06_Wings_lvl1",
-        "samplerValues": [
-            {
-                "TextureName": "Diffuse_Texture",
-                "texturePath": "assets/characters/kayle/skins/skin06/kayle_skin06_wings_lv1_tx_cm.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Mask_Texture",
-                "texturePath": "assets/characters/kayle/skins/skin06/particles/kayle_skin06_wings_lvl1_mask.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Gradient_Texture",
-                "texturePath": "assets/characters/kayle/skins/skin06/particles/kayle_skin06_wings_lvl1_gradient.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "modelHeight",
-                "value": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "rimOffset",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMax",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMin",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Mask_Intensity",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Bloom_Intensity",
-                "value": [
-                    3.0999999046325684,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Scrolling_Scale",
-                "value": [
-                    1.0,
-                    1.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Scrolling_Rate",
-                "value": [
-                    0.10000000149011612,
-                    23.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Color",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Dissolve_Bias",
-                "value": [
-                    0.7099999785423279,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Dissolve_SmoothStep",
-                "value": [
-                    0.0,
-                    0.10000000149011612,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Gradient_Sharpness",
-                "value": [
-                    13.440790176391602,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Alpha_Sharpness",
-                "value": [
-                    0.0010000000474974513,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_RIM",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_COLORDODGE",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_ADDATIVE",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_LERP",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_DISSOLVE",
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NUM_BLEND_WEIGHTS": "4"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/SkinnedMesh/Scrolling_ColorDodge_Masked",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "childTechniques": [
-            {
-                "name": "transition",
-                "parentName": "normal",
-                "shaderMacros": {
-                    "TRANSITION": "1"
-                },
-                "__type": "StaticMaterialChildTechniqueDef"
-            }
-        ],
-        "dynamicMaterial": {
-            "parameters": [
-                {
-                    "name": "Dissolve_Bias",
-                    "driver": {
-                        "mBoolDriver": {
-                            "mScriptName": "KayleEnrage",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
-                        },
-                        "mOnValue": 0.8999999761581421,
-                        "mTurnOnTimeSec": 0.5,
-                        "mTurnOffTimeSec": 2.0,
-                        "__type": "LerpMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Bloom_Intensity",
-                    "driver": {
-                        "mElements": [
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KayleEnrage",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "mBoolDriver": {
-                                        "mScriptName": "KayleEnrage",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "mOffValue": 1.0,
-                                    "__type": "LerpMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            },
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KaylePassiveCeremony",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "mBoolDriver": {
-                                        "mScriptName": "KaylePassiveCeremony",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "mOnValue": 12.0,
-                                    "mOffValue": 2.0,
-                                    "__type": "LerpMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            },
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KaylePassiveRank3",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "mBoolDriver": {
-                                        "mScriptName": "KaylePassiveRank3",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "mOnValue": 0.699999988079071,
-                                    "__type": "LerpMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            }
-                        ],
-                        "mDefaultValue": {
-                            "__type": "FloatLiteralMaterialDriver"
-                        },
-                        "__type": "SwitchMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Color",
-                    "driver": {
-                        "mBoolDriver": {
-                            "mScriptName": "KayleEnrage",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
-                        },
-                        "mColorOn": [
-                            0.9137254953384399,
-                            0.10588235408067703,
-                            0.10588235408067703,
-                            1.0
-                        ],
-                        "mColorOff": [
-                            0.007843137718737125,
-                            0.003921568859368563,
-                            0.003921568859368563,
-                            0.0
-                        ],
-                        "__type": "ColorChooserMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Scrolling_Rate",
-                    "driver": {
-                        "mDrivers": [
-                            {
-                                "mScriptName": "KayleEnrage",
-                                "__type": "HasBuffDynamicMaterialBoolDriver"
-                            }
-                        ],
-                        "__type": "MaxMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Dissolve_SmoothStep",
-                    "Enabled": false,
-                    "driver": {
-                        "__type": "TimeMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Mask_Intensity",
-                    "driver": {
-                        "mElements": [
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KayleEnrage",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "mBoolDriver": {
-                                        "mScriptName": "KayleEnrage",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "mOnValue": 0.800000011920929,
-                                    "__type": "LerpMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            },
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KaylePassiveRank3",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "mBoolDriver": {
-                                        "mScriptName": "KaylePassiveRank3",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "mOnValue": 1.25,
-                                    "__type": "LerpMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            },
-                            {
-                                "mCondition": {
-                                    "mScriptName": "KaylePassiveRank3",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "__type": "FloatLiteralMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            }
-                        ],
-                        "mDefaultValue": {
-                            "__type": "FloatLiteralMaterialDriver"
-                        },
-                        "__type": "SwitchMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                }
-            ],
-            "textures": [
-                {
-                    "name": "Diffuse_Texture",
-                    "__type": "DynamicMaterialTextureSwapDef"
-                }
-            ],
-            "__type": "DynamicMaterialDef"
-        },
-        "__type": "StaticMaterialDef"
     },
     "__linked": [
         "DATA/Characters/Kayle/Kayle.bin",

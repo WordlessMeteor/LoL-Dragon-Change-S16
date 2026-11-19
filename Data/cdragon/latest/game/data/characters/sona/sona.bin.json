@@ -793,6 +793,24 @@
                         }
                     ],
                     "__type": "SpellDataValueVector"
+                },
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "HealRatio",
+                            "values": [
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
                 }
             },
             "{f9c2333e}": {
@@ -2404,6 +2422,12 @@
             },
             "__type": "BuffData"
         },
+        "__type": "SpellObject"
+    },
+    "Characters/Sona/Spells/SonaSkin77Manager": {
+        "ObjectName": "SonaSkin77Manager",
+        "objectPath": "Characters/Sona/Spells/SonaSkin77Manager",
+        "mScriptName": "SonaSkin77Manager",
         "__type": "SpellObject"
     },
     "Characters/Sona/Spells/SonaBasicAttack2": {
@@ -4034,6 +4058,8 @@
             },
             "searchTags": "support",
             "searchTagsSecondary": "mage",
+            "{d1df3c3f}": "support",
+            "{f693457b}": "mage",
             "championId": 37,
             "roles": "SUPPORT",
             "magicRank": 8,
@@ -4064,6 +4090,16 @@
                 "SkinFilter": {
                     "skinIds": [
                         6
+                    ],
+                    "__type": "SkinFilterData"
+                },
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "Characters/Sona/Spells/SonaSkin77Manager",
+                "SkinFilter": {
+                    "skinIds": [
+                        77
                     ],
                     "__type": "SkinFilterData"
                 },

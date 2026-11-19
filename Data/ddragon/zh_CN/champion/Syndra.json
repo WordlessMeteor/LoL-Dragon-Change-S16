@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.22.1",
+    "version": "16.23.1",
     "data": {
         "Syndra": {
             "id": "Syndra",
@@ -859,29 +859,31 @@
                     "tooltip": "辛德拉投出一道原力波，<status>击退</status>敌人们和<keywordMajor>暗黑法球</keywordMajor>并造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br />被推挤的<keywordMajor>暗黑法球</keywordMajor>会<status>晕眩</status>敌人{{ stunduration }}秒并造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br /><evolve>{{ spell.syndrapassive:eupgradethreshold }}块怒法碎晶</evolve>：这个技能的宽度得到提升并且还会对敌人们造成持续{{ upgradedslowduration }}秒的<status>{{ upgradedslowamount*100 }}%</status><status>减速</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
-                            "伤害"
+                            "伤害",
+                            "冷却时间"
                         ],
                         "effect": [
-                            "{{ basedamage }} -> {{ basedamageNL }}"
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
                     "maxrank": 5,
                     "cooldown": [
-                        15,
-                        15,
-                        15,
-                        15,
+                        17,
+                        16.5,
+                        16,
+                        15.5,
                         15
                     ],
-                    "cooldownBurn": "15",
+                    "cooldownBurn": "17/16.5/16/15.5/15",
                     "cost": [
-                        50,
-                        50,
-                        50,
-                        50,
-                        50
+                        60,
+                        60,
+                        60,
+                        60,
+                        60
                     ],
-                    "costBurn": "50",
+                    "costBurn": "60",
                     "datavalues": {},
                     "effect": [
                         null,

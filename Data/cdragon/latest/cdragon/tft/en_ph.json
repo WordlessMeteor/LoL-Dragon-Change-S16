@@ -53363,7 +53363,7 @@
             "composition": [],
             "desc": "Your Casters have @MaxManaMultiplier*100@% reduced Max Mana.",
             "effects": {
-                "{24a482c1}": 0.1499999761581421
+                "{24a482c1}": 0.18000000715255737
             },
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -53588,7 +53588,7 @@
             "composition": [],
             "desc": "Your Casters have @MaxManaMultiplierUpgrade*100@% reduced Max Mana.",
             "effects": {
-                "{e475c01b}": 0.19999998807907104
+                "{e475c01b}": 0.25
             },
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -56071,7 +56071,7 @@
             "composition": [],
             "desc": "Your champions explode on death, dealing @maxHealthExplosionDamage*100@% Max Health magic damage.",
             "effects": {
-                "{8e1bf27f}": 0.15000000596046448
+                "{8e1bf27f}": 0.11999999731779099
             },
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -57793,7 +57793,7 @@
             "composition": [],
             "desc": "Open an item store. Items cost 0 to @TooltipMaxCostOfItem@ gold.",
             "effects": {
-                "{72eb58d9}": 15.0
+                "{72eb58d9}": 17.0
             },
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -58070,7 +58070,7 @@
             "desc": "Open an item store. Items cost 0 to @TooltipMaxCostOfItem@ gold. <Set18CharmUpgrade>Gain </Set18CharmUpgrade>@UpgradeGoldGain@<Set18CharmUpgrade> Gold.</Set18CharmUpgrade>",
             "effects": {
                 "{0fb627ae}": 1.0,
-                "{72eb58d9}": 15.0
+                "{72eb58d9}": 17.0
             },
             "from": null,
             "icon": "assets/ux/tft/hud/zaps/wands/set18_mechanicicon.tex",
@@ -83231,7 +83231,7 @@
             "desc": "When you level up, gain a number of Shop refreshes equal to your level +@BonusRollPerLevel@. Gain @GoldGain@ gold.",
             "effects": {
                 "BonusRollPerLevel": 1.0,
-                "GoldGain": 6.0
+                "GoldGain": 7.0
             },
             "from": null,
             "icon": "assets/maps/tft/icons/augments/hexcore/silver-ticket-iii.tex",
@@ -83860,6 +83860,23 @@
             "unique": false
         },
         {
+            "apiName": "DA_BranchingOut",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "Gain a random Emblem.",
+            "effects": {},
+            "from": null,
+            "icon": "assets/maps/tft/icons/augments/hexcore/branching-out-i.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": true,
+            "name": "Branching Out",
+            "tags": [
+                "{d11fd6d5}"
+            ],
+            "unique": false
+        },
+        {
             "apiName": "DA_InvestmentStrategy",
             "associatedTraits": [],
             "composition": [],
@@ -84074,25 +84091,6 @@
             "name": "Invested+",
             "tags": [
                 "{cf1fd3af}"
-            ],
-            "unique": false
-        },
-        {
-            "apiName": "DA_18_BigGrabBag",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "Gain 3 random components, @Gold@ gold, and 1 Reforger.",
-            "effects": {
-                "Gold": 2.0
-            },
-            "from": null,
-            "icon": "assets/maps/tft/icons/augments/hexcore/grab-bag-ii.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": true,
-            "name": "Big Grab Bag",
-            "tags": [
-                "{ce1fd21c}"
             ],
             "unique": false
         },
@@ -84715,25 +84713,6 @@
             "unique": false
         },
         {
-            "apiName": "DA_18_OneTwoFive",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "Gain 1 random component, @Gold@ gold, and 1 random 5-cost champion.",
-            "effects": {
-                "Gold": 2.0
-            },
-            "from": null,
-            "icon": "assets/maps/tft/icons/augments/hexcore/one-two-five-i.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": true,
-            "name": "One, Two, Five!",
-            "tags": [
-                "{d11fd6d5}"
-            ],
-            "unique": false
-        },
-        {
             "apiName": "DA_MaliciousMonetization",
             "associatedTraits": [],
             "composition": [],
@@ -85141,7 +85120,7 @@
             "desc": "Your team gains @ArmorInstant@ Armor and Magic Resist. After falling below @HealthDropThreshold*100@% Health, increase this to @ThresholdArmorBoostCombined@ for the rest of combat.",
             "effects": {
                 "{0735b729}": 40.0,
-                "{5705afa5}": 8.0,
+                "{5705afa5}": 10.0,
                 "{a6c6ae91}": 0.5
             },
             "from": null,
@@ -85152,6 +85131,26 @@
             "name": "Plot Armor",
             "tags": [
                 "{ce1fd21c}"
+            ],
+            "unique": false
+        },
+        {
+            "apiName": "DA_GoodForSomethingI",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "Champions that aren't holding items have a @ChangeDrop*100@% chance to drop @GoldReward@ gold on death.",
+            "effects": {
+                "GoldReward": 1.0,
+                "{f117ccd4}": 0.4000000059604645
+            },
+            "from": null,
+            "icon": "assets/maps/tft/icons/augments/hexcore/good-for-something-i.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": true,
+            "name": "Good For Something I",
+            "tags": [
+                "{d11fd6d5}"
             ],
             "unique": false
         },
@@ -85304,6 +85303,23 @@
             "unique": false
         },
         {
+            "apiName": "DA_OneTwoFive",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "Gain 1 random component, 2 gold, and 1 random 5-cost champion",
+            "effects": {},
+            "from": null,
+            "icon": "assets/maps/tft/icons/augments/hexcore/one-two-five-i.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": true,
+            "name": "One, Two, Five!",
+            "tags": [
+                "{d11fd6d5}"
+            ],
+            "unique": false
+        },
+        {
             "apiName": "DA_18_FaeTraitAugment",
             "associatedTraits": [
                 "DA_18_Fae"
@@ -85311,7 +85327,7 @@
             "composition": [],
             "desc": "Fae pixies are now larger and grant @BonusMultiplier*100@% more Attack Damage and Ability Power. Fae champions gain @UpfrontADAP*100@% Attack Damage and Ability Power immediately. Gain a Xayah and a Rakan.",
             "effects": {
-                "BonusMultiplier": 0.5,
+                "BonusMultiplier": 0.3499999940395355,
                 "{020fc56b}": 0.18000000715255737
             },
             "from": null,
@@ -85608,19 +85624,21 @@
             "unique": false
         },
         {
-            "apiName": "DA_18_BranchingOutPlus",
+            "apiName": "DA_BigGrabBag",
             "associatedTraits": [],
             "composition": [],
-            "desc": "Gain a random Emblem and a Reforger.",
-            "effects": {},
+            "desc": "Gain 3 random components, @Gold@ gold, and 1 Reforger.",
+            "effects": {
+                "Gold": 2.0
+            },
             "from": null,
-            "icon": "assets/maps/tft/icons/augments/hexcore/branching-out-i.tex",
+            "icon": "assets/maps/tft/icons/augments/hexcore/grab-bag-ii.tex",
             "id": null,
             "incompatibleTraits": [],
             "isAugment": true,
-            "name": "Branching Out+",
+            "name": "Big Grab Bag",
             "tags": [
-                "{d11fd6d5}"
+                "{ce1fd21c}"
             ],
             "unique": false
         },
@@ -86705,7 +86723,7 @@
             "composition": [],
             "desc": "Your team gains @AttackSpeed*100@% Attack Speed every @FrequencySeconds@ seconds in combat.",
             "effects": {
-                "AttackSpeed": 0.10000002384185791,
+                "AttackSpeed": 0.12000000476837158,
                 "{0810f00e}": 3.0
             },
             "from": null,
@@ -86832,6 +86850,23 @@
             "name": "Soul Awakening",
             "tags": [
                 "{cf1fd3af}"
+            ],
+            "unique": false
+        },
+        {
+            "apiName": "DA_BranchingOutPlus",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "Gain a random Emblem and a Reforger.",
+            "effects": {},
+            "from": null,
+            "icon": "assets/maps/tft/icons/augments/hexcore/branching-out-i.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": true,
+            "name": "Branching Out+",
+            "tags": [
+                "{d11fd6d5}"
             ],
             "unique": false
         },
@@ -87035,7 +87070,7 @@
             "apiName": "DA_Staffsmith",
             "associatedTraits": [],
             "composition": [],
-            "desc": "Gain  @ItemQuantity@ random completed items that build from Needlessly Large Rod.",
+            "desc": "Gain @ItemQuantity@ random completed items that build from Needlessly Large Rod.",
             "effects": {
                 "{2ce16abf}": 2.0
             },
@@ -87281,6 +87316,26 @@
             "name": "Celestial Blessing I",
             "tags": [
                 "{d11fd6d5}"
+            ],
+            "unique": false
+        },
+        {
+            "apiName": "DA_HeartOfSteel",
+            "associatedTraits": [],
+            "composition": [],
+            "desc": "Gain a Steadfast Heart. Every @SurvivePeriodInSeconds@ seconds of combat its holder survives, Steadfast Heart gains additional @MaxHealthGain@ permanent max Health.",
+            "effects": {
+                "MaxHealthGain": 18.0,
+                "{40e6f170}": 10.0
+            },
+            "from": null,
+            "icon": "assets/maps/tft/icons/augments/hexcore/healthygains_ii.tex",
+            "id": null,
+            "incompatibleTraits": [],
+            "isAugment": true,
+            "name": "Heart of Steel",
+            "tags": [
+                "{ce1fd21c}"
             ],
             "unique": false
         },
@@ -87607,23 +87662,6 @@
             "name": "One Buff Two Buff",
             "tags": [
                 "{cf1fd3af}"
-            ],
-            "unique": false
-        },
-        {
-            "apiName": "DA_18_BranchingOut",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "Gain a random Emblem.",
-            "effects": {},
-            "from": null,
-            "icon": "assets/maps/tft/icons/augments/hexcore/branching-out-i.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": true,
-            "name": "Branching Out",
-            "tags": [
-                "{d11fd6d5}"
             ],
             "unique": false
         },
@@ -87964,26 +88002,6 @@
             "name": "Baron's Lair",
             "tags": [
                 "{cf1fd3af}"
-            ],
-            "unique": false
-        },
-        {
-            "apiName": "DA_18_GoodForSomethingI",
-            "associatedTraits": [],
-            "composition": [],
-            "desc": "Champions that aren't holding items have a @ChangeDrop*100@% chance to drop @GoldReward@ gold on death.",
-            "effects": {
-                "GoldReward": 1.0,
-                "{f117ccd4}": 0.4000000059604645
-            },
-            "from": null,
-            "icon": "assets/maps/tft/icons/augments/hexcore/good-for-something-i.tex",
-            "id": null,
-            "incompatibleTraits": [],
-            "isAugment": true,
-            "name": "Good For Something I",
-            "tags": [
-                "{d11fd6d5}"
             ],
             "unique": false
         },
@@ -99886,10 +99904,7 @@
         },
         {
             "augments": [
-                "DA_18_BigGrabBag",
                 "DA_18_BlossomTraitAugment",
-                "DA_18_BranchingOut",
-                "DA_18_BranchingOutPlus",
                 "DA_18_CaretakersAlly",
                 "DA_18_CovenTraitAugment",
                 "DA_18_CovenTraitAugment_LootToAP",
@@ -99898,12 +99913,10 @@
                 "DA_18_FOURcing",
                 "DA_18_FaeTraitAugment",
                 "DA_18_FloraFatalisAugment",
-                "DA_18_GoodForSomethingI",
                 "DA_18_InfernoTraitAugment",
                 "DA_18_LunarTraitAugment",
                 "DA_18_LunarTraitAugmentPlus",
                 "DA_18_LuxAugmentII",
-                "DA_18_OneTwoFive",
                 "DA_18_OnesTwosThree",
                 "DA_18_PrimalAugmentPlus_Nidalee",
                 "DA_18_PrimalAugmentPlus_Sivir",
@@ -99932,6 +99945,7 @@
                 "DA_BandOfThievesIIPlusPlus",
                 "DA_BaronsLair",
                 "DA_BeltOverflow",
+                "DA_BigGrabBag",
                 "DA_BirthdayPresent",
                 "DA_BirthdayReunion",
                 "DA_BlackthornTraitAugment",
@@ -99942,6 +99956,8 @@
                 "DA_BoosterPackPlus",
                 "DA_BoosterPackPlusPlus",
                 "DA_BoxingLessons",
+                "DA_BranchingOut",
+                "DA_BranchingOutPlus",
                 "DA_BronzeForLifeI",
                 "DA_BronzeForLifeII",
                 "DA_BuildABud",
@@ -100014,6 +100030,7 @@
                 "DA_GoldenGamble",
                 "DA_GoldenGamblePlus",
                 "DA_GoldenGamblePlusPlus",
+                "DA_GoodForSomethingI",
                 "DA_GroupHugI",
                 "DA_GroupHugII",
                 "DA_HardBargain",
@@ -100063,6 +100080,7 @@
                 "DA_NestingAnvilsPlus",
                 "DA_NoScoutNoPivot",
                 "DA_OneBuffTwoBuff",
+                "DA_OneTwoFive",
                 "DA_PandorasBench",
                 "DA_PandorasItemsI",
                 "DA_PandorasItemsIII",
@@ -105460,7 +105478,7 @@
                             "minUnits": 7,
                             "style": 5,
                             "variables": {
-                                "ADAP": 0.5,
+                                "ADAP": 0.550000011920929,
                                 "BonusHealth": 0.10000002384185791,
                                 "{91925b8e}": 4.0
                             }
@@ -105470,7 +105488,7 @@
                             "minUnits": 9,
                             "style": 5,
                             "variables": {
-                                "ADAP": 0.550000011920929,
+                                "ADAP": 0.6499999761581421,
                                 "BonusHealth": 0.10000002384185791
                             }
                         },
@@ -523296,7 +523314,7 @@
                             "minUnits": 7,
                             "style": 5,
                             "variables": {
-                                "ADAP": 0.5,
+                                "ADAP": 0.550000011920929,
                                 "BonusHealth": 0.10000002384185791,
                                 "{91925b8e}": 4.0
                             }
@@ -523306,7 +523324,7 @@
                             "minUnits": 9,
                             "style": 5,
                             "variables": {
-                                "ADAP": 0.550000011920929,
+                                "ADAP": 0.6499999761581421,
                                 "BonusHealth": 0.10000002384185791
                             }
                         },

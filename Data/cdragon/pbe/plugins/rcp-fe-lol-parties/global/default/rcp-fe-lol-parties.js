@@ -18381,9 +18381,10 @@
                 hasInvites: o.Ember.computed.gt("invites.length", 0),
                 isNotCustom: o.Ember.computed.not("isCustom"),
                 isRanked: o.Ember.computed("selected.queue.isRanked", "queueType", (function() {
-                    const e = [r.QUEUE_TYPE.RANKED_PREMADE_5x5],
-                        t = this.get("queueType");
-                    return e.push(i.QUEUES.JADE_RANKED_SOLO_5x5), this.get("selected.queue.isRanked") && !e.includes(t)
+                    const e = [i.QUEUES.JADE_RANKED_SOLO_5x5];
+                    e.push(r.QUEUE_TYPE.RANKED_PREMADE_5x5);
+                    const t = this.get("queueType");
+                    return this.get("selected.queue.isRanked") && !e.includes(t)
                 })),
                 _tryingToViewProgression: !0,
                 viewingProgression: o.Ember.computed.and("_tryingToViewProgression", "progressionEnabled", "isTFT", "showingState.isInViewport"),

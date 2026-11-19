@@ -205,8 +205,274 @@
             }
         ],
         "mResourceResolver": "Characters/Ryze/Skins/Skin11/Resources",
+        "{55d3758e}": "ASSETS/Characters/Ryze/Skins/Skin11/ChromaPreview.tex",
         "objectPath": "Characters/Ryze/Skins/Skin11",
         "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/Ryze/Skins/Skin11/Materials/FresnelAlpha_inst": {
+        "name": "Characters/Ryze/Skins/Skin11/Materials/FresnelAlpha_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/characters/ryze/skins/skin11/particles/ryze_skin11_summonerpropmask.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask_Texture",
+                "texturePath": "assets/shared/materials/generic_noise.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Color",
+                "value": [
+                    0.6823529601097107,
+                    0.8274509906768799,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelColor_Size",
+                "value": [
+                    7.320542335510254,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelColor_Bias",
+                "value": [
+                    0.06499999761581421,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Size",
+                "value": [
+                    2.328549861907959,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Bias",
+                "value": [
+                    -0.44999998807907104,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Diffuse_Alpha_Override",
+                "value": [
+                    0.4424999952316284,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "value": [
+                    10.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Noise_Scale",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Color",
+                "value": [
+                    0.5960784554481506,
+                    0.7254902124404907,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Noise_ScrollSpeed",
+                "value": [
+                    0.0,
+                    0.20000000298023224,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Override",
+                "value": [
+                    0.8025000095367432,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "INVERT_FRESNEL",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ADDITIONAL_MASKING",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/FresnelAlpha_Scrolling",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Fresnel_Color",
+                    "Enabled": false,
+                    "driver": {
+                        "mBoolDriver": {
+                            "__type": "IsDeadDynamicMaterialBoolDriver"
+                        },
+                        "__type": "ColorChooserMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Alpha_Override",
+                    "driver": {
+                        "driver": {
+                            "mBoolDriver": {
+                                "__type": "IsDeadDynamicMaterialBoolDriver"
+                            },
+                            "mTurnOnTimeSec": 0.0,
+                            "mTurnOffTimeSec": -5.0,
+                            "__type": "LerpMaterialDriver"
+                        },
+                        "graph": {
+                            "times": [
+                                0.0,
+                                0.056910570710897446,
+                                0.857723593711853,
+                                1.0
+                            ],
+                            "values": [
+                                0.0,
+                                0.5,
+                                0.5,
+                                0.0
+                            ],
+                            "__type": "VfxAnimatedFloatVariableData"
+                        },
+                        "__type": "FloatGraphMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
     },
     "Characters/Ryze/Skins/Skin11/Resources": {
         "resourceMap": {
