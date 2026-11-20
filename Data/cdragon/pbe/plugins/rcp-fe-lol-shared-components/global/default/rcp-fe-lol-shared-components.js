@@ -485,15 +485,15 @@
                     const v = await s.get("/lol-chat/v1/is-discord-integration-enabled").then((e => e ? s.get("/lol-client-config/v3/client-config/lol.client_settings.discordIntegrationBeta.enabled") : Promise.resolve(!1))),
                         E = new Promise((e => setTimeout(e, 1500))).then((() => !1)),
                         A = await Promise.race([v, E]);
-                    a.getRuneSwapAndNotifyMessage = n(527).default, a.getDataBoundEmberService = n(528).default, a.getRewardTrackerEmberComponents = () => n(529).default, a.getRewardUtils = () => n(536).default, a.getRewardConstants = () => n(540).default, a.getPassProgressionWidgetComponents = () => n(551).default, a.getMultiPurchaseSliderEmberComponents = () => n(560).default;
-                    const x = new(0, n(565).default);
-                    a.getApi_SharedChallengesConstants = () => n(679).default, a.getApi_SharedChallengesComponents = () => n(680).default, a.getApi_SharedDiscordPopupComponents = () => n(687).getDiscordComponents(A), a.getApi_SharedChallengesApps = () => x, a.getApi_SharedRankedComponents = () => n(688).default;
-                    const k = new(0, n(704).default);
+                    a.getRuneSwapAndNotifyMessage = n(528).default, a.getDataBoundEmberService = n(529).default, a.getRewardTrackerEmberComponents = () => n(530).default, a.getRewardUtils = () => n(537).default, a.getRewardConstants = () => n(541).default, a.getPassProgressionWidgetComponents = () => n(552).default, a.getMultiPurchaseSliderEmberComponents = () => n(561).default;
+                    const x = new(0, n(566).default);
+                    a.getApi_SharedChallengesConstants = () => n(680).default, a.getApi_SharedChallengesComponents = () => n(681).default, a.getApi_SharedDiscordPopupComponents = () => n(688).getDiscordComponents(A), a.getApi_SharedChallengesApps = () => x, a.getApi_SharedRankedComponents = () => n(689).default;
+                    const k = new(0, n(705).default);
                     a.getApi_SharedReportModalApps = () => k;
-                    const C = new(0, n(713).default);
-                    a.getApi_SharedPlayerBehaviorApps = () => C, a.getShoppefrontComponents = () => n(771).default;
-                    const T = (0, n(821).default)();
-                    a.getApi_Payments = () => T, a.getApi_SharedChampionMasteryComponents = () => n(831).default, a.getApi_SharedChampionMasteryConstants = () => n(852).default, a.getApi_SfxUiAudioManager = () => n(864).default
+                    const C = new(0, n(714).default);
+                    a.getApi_SharedPlayerBehaviorApps = () => C, a.getShoppefrontComponents = () => n(772).default;
+                    const T = (0, n(822).default)();
+                    a.getApi_Payments = () => T, a.getApi_SharedChampionMasteryComponents = () => n(832).default, a.getApi_SharedChampionMasteryConstants = () => n(853).default, a.getApi_SfxUiAudioManager = () => n(865).default
                 },
                 privateApi: r,
                 publicApi: a
@@ -3022,15 +3022,7 @@
                 _bootstrapUXSettings() {
                     this._bootstrapUXSettingsPromise || (this._bootstrapUXSettingsPromise = Promise.all([l.get("/riotclient/system-info/v1/basic-info"), l.get("/lol-settings/v1/local/lol-user-experience"), l.get("/lol-platform-config/v1/namespaces/LcuUxSettings")]).then((e => {
                         const [t, n, a] = e;
-                        this._sysInfo = t, this._uxSettings = n, this._jmxConfig = a, this._currentMachineSpec = this._getCurrentMachineSpec(), this._recommendationBootstrapper = new r.default(this._initUXSettings.bind(this)), this._recommendationBootstrapper.performAudit(t, n ? n.data : {}, this._currentMachineSpec), this._addUxSettingsObservers();
-                        const {
-                            data: s,
-                            schemaVersion: i
-                        } = n;
-                        this._sendUxTelemetryEvent("user_experience_settings_loaded", {
-                            data: s,
-                            schemaVersion: i
-                        }), this._resolveInitialDataReceived(!0)
+                        this._sysInfo = t, this._uxSettings = n, this._jmxConfig = a, this._currentMachineSpec = this._getCurrentMachineSpec(), this._recommendationBootstrapper = new r.default(this._initUXSettings.bind(this)), this._recommendationBootstrapper.performAudit(t, n ? n.data : {}, this._currentMachineSpec), this._addUxSettingsObservers(), this._resolveInitialDataReceived(!0)
                     })), (0, s.default)(this))
                 }
                 _getCurrentMachineSpec() {
@@ -3147,7 +3139,7 @@
                         l = n === r.MACHINE_SPEC_UNRESOLVED,
                         c = n === r.MACHINE_SPEC_HIGH && !s,
                         d = e.potatoModeEnabled;
-                    return !(i || o || l || c || d) && (n === r.MACHINE_SPEC_LOW ? (this._autoEnableLowSpecMode(e, t), !0) : (this._promptToToggleLowSpecMode(e, t), !1))
+                    return !(i || o || l || c || d) && (n === r.MACHINE_SPEC_LOW ? (this._autoEnableLowSpecMode(t), !0) : (this._promptToToggleLowSpecMode(e, t), !1))
                 }
                 _handleUnloadUxSettings(e, t, n) {
                     if (!e) return a.logger.error("_handleUnloadUxSettings currentSettings is not defined"), !1;
@@ -3158,19 +3150,11 @@
                         c = !1 === e.closeLeagueClientDuringGame;
                     return !(i || !o || !l || !c) && (this._autoEnableUnloadUxMode(e), !0)
                 }
-                _autoEnableLowSpecMode(e, t) {
+                _autoEnableLowSpecMode(e) {
                     this._initialUXSettingsApplier({
-                        potatoModeEnabled: t,
+                        potatoModeEnabled: e,
                         hasBeenPromptedForPotatoMode: !0
-                    }, {
-                        eventType: "auto-enabled-low-spec-mode",
-                        fields: {
-                            previousSettings: e,
-                            recommendedSettings: {
-                                potatoModeEnabled: t
-                            }
-                        }
-                    })
+                    }, null)
                 }
                 _autoEnableUnloadUxMode(e) {
                     this._initialUXSettingsApplier({
@@ -12721,29 +12705,29 @@
                 E = K(n(423)),
                 A = K(n(427)),
                 x = K(n(430)),
-                k = K(n(434)),
-                C = K(n(437)),
-                T = K(n(443)),
-                w = K(n(447)),
-                S = K(n(450)),
-                I = K(n(453)),
-                R = K(n(456)),
-                L = K(n(459)),
-                P = K(n(462)),
-                N = K(n(465)),
-                M = K(n(468)),
-                O = K(n(471)),
-                D = K(n(479)),
-                $ = K(n(482)),
-                B = K(n(485)),
-                H = K(n(488)),
-                U = K(n(491)),
-                V = K(n(497)),
-                G = K(n(512)),
-                j = K(n(515)),
-                F = K(n(518)),
-                Y = K(n(521)),
-                z = K(n(524));
+                k = K(n(435)),
+                C = K(n(438)),
+                T = K(n(444)),
+                w = K(n(448)),
+                S = K(n(451)),
+                I = K(n(454)),
+                R = K(n(457)),
+                L = K(n(460)),
+                P = K(n(463)),
+                N = K(n(466)),
+                M = K(n(469)),
+                O = K(n(472)),
+                D = K(n(480)),
+                $ = K(n(483)),
+                B = K(n(486)),
+                H = K(n(489)),
+                U = K(n(492)),
+                V = K(n(498)),
+                G = K(n(513)),
+                j = K(n(516)),
+                F = K(n(519)),
+                Y = K(n(522)),
+                z = K(n(525));
 
             function K(e) {
                 return e && e.__esModule ? e : {
@@ -17455,39 +17439,46 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, r = n(1),
-                s = (a = n(431)) && a.__esModule ? a : {
-                    default: a
-                },
-                i = n(432);
-            n(433);
-            const o = "/lol-honor-v2/v1/profile",
-                l = "/lol-player-behavior/v1/chat-restriction",
-                c = "/lol-leaver-buster/v1/ranked-restriction",
-                d = "/lol-summoner-profiles/v1/get-restriction-view",
-                u = "/lol-client-config/v3/client-config/lol.client_settings.summoner.restrictions_integration.enabled",
-                m = "/lol-client-config/v3/client-config/lol.client_settings.social_panel_restriction.enabled",
-                p = "SR_RANKED_RESTRICTION",
-                h = new Set(["QUEUE_DELAY", "TEXT_CHAT_RESTRICTION", "REPUTATION_LIMIT", p]);
-            var g = r.Ember.Component.extend({
-                layout: s.default,
+            var a = n(1),
+                r = o(n(431)),
+                s = n(432),
+                i = o(n(433));
+
+            function o(e) {
+                return e && e.__esModule ? e : {
+                    default: e
+                }
+            }
+            n(434);
+            const l = "/lol-honor-v2/v1/profile",
+                c = "/lol-player-behavior/v1/chat-restriction",
+                d = "/lol-leaver-buster/v1/ranked-restriction",
+                u = "/lol-summoner-profiles/v1/get-restriction-view",
+                m = "/lol-client-config/v3/client-config/lol.client_settings.summoner.restrictions_integration.enabled",
+                p = "/lol-client-config/v3/client-config/lol.client_settings.social_panel_restriction.enabled",
+                h = "SR_RANKED_RESTRICTION",
+                g = new Set(["QUEUE_DELAY", "TEXT_CHAT_RESTRICTION", "REPUTATION_LIMIT", h]);
+            var f = a.Ember.Component.extend({
+                layout: r.default,
                 classNames: ["player-restriction-info-component"],
                 init() {
-                    this._super(...arguments), r.db.observe(m, this, (e => {
+                    this._super(...arguments), this._restrictionExpirationObserver = new i.default(((e, t) => {
+                        this._updateRestrictionDescriptions(e, t)
+                    })), a.db.observe(p, this, (e => {
                         this.set("isSocialPanelRestrictionEnabled", !!e)
-                    })), r.db.observe(u, this, (e => {
-                        if (this.set("isProfileRestrictionsIntegrationEnabled", e), !e) return r.db.observe(l, this, this.onChatRestrictionChange), r.db.observe(c, this, this.onRankedRestrictionChange), r.db.observe(o, this, this.onHonorChange), void r.db.unobserve(d, this);
-                        r.db.unobserve(l, this), r.db.unobserve(c, this), r.db.unobserve(o, this), r.db.observe(d, this, this.onRestrictionChange)
+                    })), a.db.observe(m, this, (e => {
+                        if (this.set("isProfileRestrictionsIntegrationEnabled", e), !e) return this._restrictionExpirationObserver.cancel(), a.db.observe(c, this, this.onChatRestrictionChange), a.db.observe(d, this, this.onRankedRestrictionChange), a.db.observe(l, this, this.onHonorChange), void a.db.unobserve(u, this);
+                        a.db.unobserve(c, this), a.db.unobserve(d, this), a.db.unobserve(l, this), a.db.observe(u, this, this.onRestrictionChange)
                     }))
                 },
                 willDestroy() {
-                    r.db.unobserve(m, this), r.db.unobserve(u, this), r.db.unobserve(l, this), r.db.unobserve(c, this), r.db.unobserve(o, this), r.db.unobserve(d, this)
+                    this._restrictionExpirationObserver.cancel(), a.db.unobserve(p, this), a.db.unobserve(m, this), a.db.unobserve(c, this), a.db.unobserve(d, this), a.db.unobserve(l, this), a.db.unobserve(u, this)
                 },
                 isProfileRestrictionsIntegrationEnabled: !1,
                 isSocialPanelRestrictionEnabled: !1,
-                hasRestrictions: r.Ember.computed.gt("restrictionDescriptions.length", 0),
-                hasRedemptionGamesRemaining: r.Ember.computed.gt("redemptionGamesRemaining", 0),
-                hasChatRestriction: r.Ember.computed.notEmpty("chatRestriction"),
+                hasRestrictions: a.Ember.computed.gt("restrictionDescriptions.length", 0),
+                hasRedemptionGamesRemaining: a.Ember.computed.gt("redemptionGamesRemaining", 0),
+                hasChatRestriction: a.Ember.computed.notEmpty("chatRestriction"),
                 onChatRestrictionChange: function(e) {
                     this.set("chatRestriction", e)
                 },
@@ -17495,30 +17486,28 @@
                     this.set("rankedRestriction", e)
                 },
                 onRestrictionChange: function(e) {
-                    if (!e || !e.restrictions) return;
-                    const {
-                        restrictions: t
-                    } = e;
-                    this.set("restrictions", t);
-                    const n = t.filter((e => h.has(e.restrictionType))).map((e => {
+                    const t = e && Array.isArray(e.restrictions) ? e.restrictions : [];
+                    this.set("restrictions", t), this._restrictionExpirationObserver.update(t.filter((e => e && g.has(e.restrictionType))))
+                },
+                _updateRestrictionDescriptions(e, t) {
+                    const n = e.map((e => {
                         const {
-                            restrictionType: t,
-                            expirationData: n
+                            restrictionType: n
                         } = e, {
                             expirationMillis: a,
                             redemptions: r
-                        } = n, s = {};
-                        if (null != a && a > 0 && (s.DATE = this.get("tra.moment")(a).format(this.get("tra.date_format")), s.TIME_REMAINING = (0, i.formatTimeRemaining)(this.get("tra"), a, Date.now())), null != r) {
+                        } = e.expirationData || {}, i = {};
+                        if (null != a && a > 0 && (i.DATE = this.get("tra.moment")(a).format(this.get("tra.date_format")), i.TIME_REMAINING = (0, s.formatTimeRemaining)(this.get("tra"), a, t)), null != r) {
                             r.forEach((e => {
-                                s[e.redemptionEventType] = e.redemptionCountRemaining
+                                i[e.redemptionEventType] = e.redemptionCountRemaining
                             }));
                             const e = r.find((e => e.redemptionCountRemaining > 0));
-                            e && (s.GAMES = e.redemptionCountRemaining)
+                            e && (i.GAMES = e.redemptionCountRemaining)
                         }
-                        let o = `${t.toLowerCase()}_restriction_description`;
-                        return t === p && (s.TIME_REMAINING ? o = "sr_ranked_restriction_restriction_time_description" : s.GAMES && (o = "sr_ranked_restriction_restriction_games_description")), {
-                            restrictionName: this.get("tra.formatString")(`${t.toLowerCase()}_restriction_name`, s),
-                            restrictionDescription: this.get("tra.formatString")(o, s)
+                        let o = `${n.toLowerCase()}_restriction_description`;
+                        return n === h && (i.TIME_REMAINING ? o = "sr_ranked_restriction_restriction_time_description" : i.GAMES && (o = "sr_ranked_restriction_restriction_games_description")), {
+                            restrictionName: this.get("tra.formatString")(`${n.toLowerCase()}_restriction_name`, i),
+                            restrictionDescription: this.get("tra.formatString")(o, i)
                         }
                     }));
                     this.set("restrictionDescriptions", n)
@@ -17526,28 +17515,28 @@
                 onHonorChange: function(e) {
                     this.set("honorRedemptions", e.redemptions)
                 },
-                rankedRestrictionGamesRemaining: r.Ember.computed.alias("rankedRestriction.punishedGamesRemaining"),
-                isWarningShown: r.Ember.computed("isSocialPanelRestrictionEnabled", "isProfileRestrictionsIntegrationEnabled", "hasChatRestriction", "hasRankedRestriction", "hasRedemptionGamesRemaining", "hasRestrictions", (function() {
+                rankedRestrictionGamesRemaining: a.Ember.computed.alias("rankedRestriction.punishedGamesRemaining"),
+                isWarningShown: a.Ember.computed("isSocialPanelRestrictionEnabled", "isProfileRestrictionsIntegrationEnabled", "hasChatRestriction", "hasRankedRestriction", "hasRedemptionGamesRemaining", "hasRestrictions", (function() {
                     return !this.get("isSocialPanelRestrictionEnabled") && (this.get("isProfileRestrictionsIntegrationEnabled") ? this.get("hasRestrictions") : this.get("hasChatRestriction") || this.get("hasRankedRestriction") || this.get("hasRedemptionGamesRemaining"))
                 })),
-                hasRankedRestriction: r.Ember.computed.gt("rankedRestrictionGamesRemaining", 0),
-                rankedRestrictionMessage: r.Ember.computed("rankedRestrictionGamesRemaining", (function() {
+                hasRankedRestriction: a.Ember.computed.gt("rankedRestrictionGamesRemaining", 0),
+                rankedRestrictionMessage: a.Ember.computed("rankedRestrictionGamesRemaining", (function() {
                     return this.get("tra").formatString("ranked_restriction_wins_required_tooltip", {
                         numRestrictedGames: this.get("rankedRestrictionGamesRemaining")
                     })
                 })),
-                redemptionGamesRemaining: r.Ember.computed("honorRedemptions", (function() {
+                redemptionGamesRemaining: a.Ember.computed("honorRedemptions", (function() {
                     const e = this.get("honorRedemptions"),
                         t = e ? e.find((e => "GAME_PLAYED" === e.eventType)) : null;
                     return t ? t.remaining : 0
                 })),
-                redemptionMessage: r.Ember.computed("redemptionGamesRemaining", (function() {
+                redemptionMessage: a.Ember.computed("redemptionGamesRemaining", (function() {
                     const e = this.get("redemptionGamesRemaining");
                     return this.get("tra").formatString("honor_redemption_tooltip", {
                         numGames: e
                     })
                 })),
-                chatRestrictionMessage: r.Ember.computed("chatRestriction.expirationMillis", (function() {
+                chatRestrictionMessage: a.Ember.computed("chatRestriction.expirationMillis", (function() {
                     const e = this.get("tra"),
                         t = this.get("chatRestriction.expirationMillis");
                     if (null != t) {
@@ -17559,7 +17548,7 @@
                     return ""
                 }))
             });
-            t.default = g
+            t.default = f
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
@@ -17612,6 +17601,37 @@
                     minutes: f
                 })
             }
+        }, (e, t) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            t.default = class {
+                constructor(e) {
+                    this._onChange = e, this._timerId = null
+                }
+                update(e) {
+                    this.cancel();
+                    const t = Date.now(),
+                        n = e.filter((e => e && function(e, t) {
+                            const {
+                                expirationMillis: n,
+                                redemptions: a
+                            } = e.expirationData || {}, r = Array.isArray(a) && a.length > 0;
+                            return !(!r || !a.some((e => e && e.redemptionCountRemaining > 0))) || (n > 0 ? n > t : !r)
+                        }(e, t))),
+                        a = n.reduce(((e, n) => {
+                            const a = n.expirationData && n.expirationData.expirationMillis;
+                            return a > t ? Math.min(e, a) : e
+                        }), 1 / 0);
+                    a !== 1 / 0 && (this._timerId = setTimeout((() => {
+                        this._timerId = null, this.update(e)
+                    }), Math.min(a - t, 864e5))), this._onChange(n, t)
+                }
+                cancel() {
+                    null !== this._timerId && (clearTimeout(this._timerId), this._timerId = null)
+                }
+            }
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -17621,8 +17641,8 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1);
-            n(435);
-            var r, s = (r = n(436)) && r.__esModule ? r : {
+            n(436);
+            var r, s = (r = n(437)) && r.__esModule ? r : {
                 default: r
             };
             const {
@@ -17766,8 +17786,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = s(n(438)),
-                r = s(n(441));
+            var a = s(n(439)),
+                r = s(n(442));
 
             function s(e) {
                 return e && e.__esModule ? e : {
@@ -17792,10 +17812,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(439)) && a.__esModule ? a : {
+                s = (a = n(440)) && a.__esModule ? a : {
                     default: a
                 };
-            n(440);
+            n(441);
             const i = "split",
                 o = "single",
                 l = [i, o],
@@ -18172,7 +18192,7 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(442)) && a.__esModule ? a : {
+                s = (a = n(443)) && a.__esModule ? a : {
                     default: a
                 };
             const {
@@ -18272,11 +18292,11 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = n(444),
-                i = (a = n(445)) && a.__esModule ? a : {
+                s = n(445),
+                i = (a = n(446)) && a.__esModule ? a : {
                     default: a
                 };
-            n(446);
+            n(447);
             const o = "/lol-client-config/v3/client-config/lol.client_settings.team_voice.enabled";
             var l = r.Ember.Component.extend({
                 layout: i.default,
@@ -18525,10 +18545,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(448)) && a.__esModule ? a : {
+                s = (a = n(449)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(449),
+                i = n(450),
                 o = n(31);
             var l = r.Ember.Component.extend({
                 layout: s.default,
@@ -18625,10 +18645,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(451)) && a.__esModule ? a : {
+                s = (a = n(452)) && a.__esModule ? a : {
                     default: a
                 };
-            n(452);
+            n(453);
             var i = r.Ember.Component.extend({
                 layout: s.default,
                 tagName: "",
@@ -18670,10 +18690,10 @@
             }), t.default = void 0;
             var a, r = n(1),
                 s = n(31),
-                i = (a = n(454)) && a.__esModule ? a : {
+                i = (a = n(455)) && a.__esModule ? a : {
                     default: a
                 };
-            n(455);
+            n(456);
             var o = r.Ember.Component.extend({
                 classNames: ["shared-reset-timer-component"],
                 layout: i.default,
@@ -18752,10 +18772,10 @@
             }), t.default = void 0;
             var a, r = n(1),
                 s = n(31),
-                i = (a = n(457)) && a.__esModule ? a : {
+                i = (a = n(458)) && a.__esModule ? a : {
                     default: a
                 };
-            n(458);
+            n(459);
             var o = r.Ember.Component.extend({
                 layout: i.default,
                 classNames: ["shared-skin-purchase-button"],
@@ -18796,10 +18816,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(460)) && a.__esModule ? a : {
+                s = (a = n(461)) && a.__esModule ? a : {
                     default: a
                 };
-            n(461);
+            n(462);
             var i = r.Ember.Component.extend({
                 layout: s.default,
                 classNames: ["shared-skin-chroma-button"],
@@ -18843,10 +18863,10 @@
             }), t.default = void 0;
             var a, r = n(1),
                 s = n(31),
-                i = (a = n(463)) && a.__esModule ? a : {
+                i = (a = n(464)) && a.__esModule ? a : {
                     default: a
                 };
-            n(464);
+            n(465);
             const o = r.UIKit.getFlyoutManager(),
                 l = r.SharedComponentsApi.getApi_UXSettings();
             var c = r.Ember.Component.extend({
@@ -18962,10 +18982,10 @@
             }), t.default = void 0;
             var a, r = n(1),
                 s = n(31),
-                i = (a = n(466)) && a.__esModule ? a : {
+                i = (a = n(467)) && a.__esModule ? a : {
                     default: a
                 };
-            n(467);
+            n(468);
             const o = r.UIKit.getFlyoutManager(),
                 l = r.SharedComponentsApi.getApi_UXSettings();
             var c = r.Ember.Component.extend({
@@ -19052,10 +19072,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(469)) && a.__esModule ? a : {
+                s = (a = n(470)) && a.__esModule ? a : {
                     default: a
                 };
-            n(470);
+            n(471);
             const i = ["kPrestige", "kMythic", "kLegendary", "kStandard"];
             var o = r.Ember.Component.extend({
                 layout: s.default,
@@ -19135,11 +19155,11 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(472)) && a.__esModule ? a : {
+                s = (a = n(473)) && a.__esModule ? a : {
                     default: a
                 };
-            n(473);
-            var i = n(474);
+            n(474);
+            var i = n(475);
             var o = r.Ember.Component.extend({
                 classNames: ["verbal-abuse-remedy-component"],
                 layout: s.default,
@@ -19185,21 +19205,18 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.TELEM_VERBAL_ABUSE_EVENT_NAME = t.TELEM_VERBAL_ABUSE_CHAT_CHANNEL_CHANGE_ID = t.TELEM_VERBAL_ABUSE_CHANGE_BLOCK_STATUS = t.PARTY_CHAT_CHANNEL = t.ENEMY_ICON_BORDER_PATH = t.CHECKMARK_ICON = t.BLOCKED_ICON_BORDER_PATH = t.ALL_CHAT_CHANNEL = t.ALLY_ICON_BORDER_PATH = t.ALLIED_CHAT_CHANNEL = void 0;
+            }), t.PARTY_CHAT_CHANNEL = t.ENEMY_ICON_BORDER_PATH = t.CHECKMARK_ICON = t.BLOCKED_ICON_BORDER_PATH = t.ALL_CHAT_CHANNEL = t.ALLY_ICON_BORDER_PATH = t.ALLIED_CHAT_CHANNEL = void 0;
             t.PARTY_CHAT_CHANNEL = "0";
             t.ALLIED_CHAT_CHANNEL = "1";
             t.ALL_CHAT_CHANNEL = "2";
-            const a = n(475);
+            const a = n(476);
             t.ALLY_ICON_BORDER_PATH = a;
-            const r = n(476);
+            const r = n(477);
             t.ENEMY_ICON_BORDER_PATH = r;
-            const s = n(477);
+            const s = n(478);
             t.BLOCKED_ICON_BORDER_PATH = s;
-            const i = n(478);
-            t.CHECKMARK_ICON = i;
-            t.TELEM_VERBAL_ABUSE_CHAT_CHANNEL_CHANGE_ID = "lol_verbal_abuse_chat_channel_change";
-            t.TELEM_VERBAL_ABUSE_CHANGE_BLOCK_STATUS = "lol_verbal_abuse_change_block_status";
-            t.TELEM_VERBAL_ABUSE_EVENT_NAME = "lol_remedy_verbal_abuse_event"
+            const i = n(479);
+            t.CHECKMARK_ICON = i
         }, (e, t, n) => {
             "use strict";
             e.exports = n.p + "ally-icon-border.svg"
@@ -19218,11 +19235,11 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(480)) && a.__esModule ? a : {
+                s = (a = n(481)) && a.__esModule ? a : {
                     default: a
                 };
-            n(481);
-            var i = n(474);
+            n(482);
+            var i = n(475);
             var o = r.Ember.Component.extend({
                 classNames: ["chat-channel-selector-component"],
                 layout: s.default,
@@ -19264,10 +19281,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(483)) && a.__esModule ? a : {
+                s = (a = n(484)) && a.__esModule ? a : {
                     default: a
                 };
-            n(484);
+            n(485);
             const i = "/lol-client-config/v3/client-config/lol.client_settings.team_voice.korea_compliance_enabled",
                 o = r.dataBinding.bindTo(r.socket);
             var l = r.Ember.Component.extend({
@@ -19347,10 +19364,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(486)) && a.__esModule ? a : {
+                s = (a = n(487)) && a.__esModule ? a : {
                     default: a
                 };
-            n(487);
+            n(488);
             var i = r.Ember.Component.extend({
                 classNames: ["player-block-selector-component"],
                 layout: s.default,
@@ -19375,11 +19392,11 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(489)) && a.__esModule ? a : {
+                s = (a = n(490)) && a.__esModule ? a : {
                     default: a
                 };
-            n(490);
-            var i = n(474);
+            n(491);
+            var i = n(475);
             var o = r.Ember.Component.extend({
                 classNames: ["player-block-selection-component"],
                 layout: s.default,
@@ -19418,13 +19435,13 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(492)) && a.__esModule ? a : {
+                s = (a = n(493)) && a.__esModule ? a : {
                     default: a
                 };
-            n(493);
-            const i = n(494),
-                o = n(495),
-                l = n(496);
+            n(494);
+            const i = n(495),
+                o = n(496),
+                l = n(497);
             var c = r.Ember.Component.extend({
                 classNames: ["honor-v3-explainer-modal-component"],
                 layout: s.default,
@@ -19462,22 +19479,22 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(498)) && a.__esModule ? a : {
+                s = (a = n(499)) && a.__esModule ? a : {
                     default: a
                 };
-            n(499);
-            const i = n(500),
-                o = n(501),
-                l = n(502),
-                c = n(503),
-                d = n(504),
-                u = n(505),
-                m = n(506),
-                p = n(507),
-                h = n(508),
-                g = n(509),
-                f = n(510),
-                _ = n(511);
+            n(500);
+            const i = n(501),
+                o = n(502),
+                l = n(503),
+                c = n(504),
+                d = n(505),
+                u = n(506),
+                m = n(507),
+                p = n(508),
+                h = n(509),
+                g = n(510),
+                f = n(511),
+                _ = n(512);
             var b = r.Ember.Component.extend({
                 classNames: ["honor-v3-level-explainer-carousel-component"],
                 layout: s.default,
@@ -19580,10 +19597,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(513)) && a.__esModule ? a : {
+                s = (a = n(514)) && a.__esModule ? a : {
                     default: a
                 };
-            n(514);
+            n(515);
             var i = r.Ember.Component.extend({
                 classNames: ["player-ready-state-block-component"],
                 layout: s.default,
@@ -19605,12 +19622,12 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(516);
+            n(517);
             const r = a.UIKit.getFlyoutManager(),
                 s = "/fe/lol-champ-select/sounds",
                 i = "sfx-ui";
             e.exports = a.Ember.Component.extend({
-                layout: n(517),
+                layout: n(518),
                 classNames: ["ward-skin-select-component"],
                 accountLoadout: {},
                 wardSkins: [],
@@ -19669,9 +19686,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(519);
+            n(520);
             const r = a.Ember.Component.extend({
-                layout: n(520),
+                layout: n(521),
                 classNames: ["ward-skin-popup-component"],
                 selectedWardSkin: {},
                 hoveredWardSkin: null,
@@ -19701,13 +19718,13 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(522);
+            n(523);
             const {
                 RunMixin: r
             } = a.EmberAddons.EmberLifeline;
             let s;
             e.exports = a.Ember.Component.extend(r, {
-                layout: n(523),
+                layout: n(524),
                 classNames: ["ward-skin-popup-button-component"],
                 classNameBindings: ["item.locked:disabled", "isSelectedItem:selected-item"],
                 attributeBindings: ["data-id"],
@@ -19753,13 +19770,13 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(525);
+            n(526);
             const {
                 RunMixin: r,
                 DomMixin: s
             } = a.EmberAddons.EmberLifeline, i = "/fe/lol-parties/sfx-uikit-grid-hover.ogg";
             e.exports = a.Ember.Component.extend(r, s, {
-                layout: n(526),
+                layout: n(527),
                 classNames: ["ward-skin-renderer-component"],
                 classNameBindings: ["disabled:disabled:enabled", "animateButton"],
                 disabled: !1,
@@ -19881,15 +19898,15 @@
                 value: !0
             }), t.default = void 0;
             var a = p(n(311)),
-                r = p(n(530)),
-                s = p(n(532)),
-                i = p(n(534)),
-                o = p(n(537)),
-                l = p(n(539)),
-                c = p(n(542)),
-                d = p(n(544)),
-                u = p(n(547)),
-                m = p(n(549));
+                r = p(n(531)),
+                s = p(n(533)),
+                i = p(n(535)),
+                o = p(n(538)),
+                l = p(n(540)),
+                c = p(n(543)),
+                d = p(n(545)),
+                u = p(n(548)),
+                m = p(n(550));
 
             function p(e) {
                 return e && e.__esModule ? e : {
@@ -19915,7 +19932,7 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(531)) && a.__esModule ? a : {
+                s = (a = n(532)) && a.__esModule ? a : {
                     default: a
                 };
             var i = r.Ember.Component.extend({
@@ -19975,7 +19992,7 @@
             }), t.default = void 0;
             var a, r = n(1),
                 s = n(31),
-                i = (a = n(533)) && a.__esModule ? a : {
+                i = (a = n(534)) && a.__esModule ? a : {
                     default: a
                 };
             const {
@@ -20144,8 +20161,8 @@
             }), t.default = void 0;
             var a = n(1),
                 r = n(31),
-                s = o(n(535)),
-                i = o(n(536));
+                s = o(n(536)),
+                i = o(n(537));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -20299,7 +20316,7 @@
             }), t.default = void 0;
             var a, r = n(1),
                 s = n(31),
-                i = (a = n(538)) && a.__esModule ? a : {
+                i = (a = n(539)) && a.__esModule ? a : {
                     default: a
                 };
             const {
@@ -20335,9 +20352,9 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = n(540),
+                s = n(541),
                 i = n(31),
-                o = (a = n(541)) && a.__esModule ? a : {
+                o = (a = n(542)) && a.__esModule ? a : {
                     default: a
                 };
             const {
@@ -20466,7 +20483,7 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(543)) && a.__esModule ? a : {
+                s = (a = n(544)) && a.__esModule ? a : {
                     default: a
                 },
                 i = n(31);
@@ -20498,7 +20515,7 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.default = void 0, n(545);
+            }), t.default = void 0, n(546);
             var a, r = function(e, t) {
                     if (!t && e && e.__esModule) return e;
                     if (null === e || "object" != typeof e && "function" != typeof e) return {
@@ -20516,7 +20533,7 @@
                     return a
                 }(n(1)),
                 s = n(31),
-                i = (a = n(546)) && a.__esModule ? a : {
+                i = (a = n(547)) && a.__esModule ? a : {
                     default: a
                 };
 
@@ -20815,7 +20832,7 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(548)) && a.__esModule ? a : {
+                s = (a = n(549)) && a.__esModule ? a : {
                     default: a
                 },
                 i = n(31);
@@ -20847,7 +20864,7 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(550)) && a.__esModule ? a : {
+                s = (a = n(551)) && a.__esModule ? a : {
                     default: a
                 };
             var i = r.Ember.Component.extend({
@@ -20869,9 +20886,9 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = i(n(552)),
-                r = i(n(555)),
-                s = i(n(557));
+            var a = i(n(553)),
+                r = i(n(556)),
+                s = i(n(558));
 
             function i(e) {
                 return e && e.__esModule ? e : {
@@ -20890,10 +20907,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(553)) && a.__esModule ? a : {
+                s = (a = n(554)) && a.__esModule ? a : {
                     default: a
                 };
-            n(554);
+            n(555);
             var i = r.Ember.Component.extend({
                 layout: s.default,
                 classNames: ["pass-progression-widget"],
@@ -20967,7 +20984,7 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(556)) && a.__esModule ? a : {
+                s = (a = n(557)) && a.__esModule ? a : {
                     default: a
                 };
             var i = r.Ember.Component.extend({
@@ -21008,10 +21025,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(558)) && a.__esModule ? a : {
+                s = (a = n(559)) && a.__esModule ? a : {
                     default: a
                 };
-            n(559);
+            n(560);
             var i = r.Ember.Component.extend({
                 layout: s.default,
                 classNames: ["single-mission-widget"],
@@ -21048,7 +21065,7 @@
                 value: !0
             }), t.default = void 0;
             var r = {
-                MultiPurchaseSliderComponent: ((a = n(561)) && a.__esModule ? a : {
+                MultiPurchaseSliderComponent: ((a = n(562)) && a.__esModule ? a : {
                     default: a
                 }).default
             };
@@ -21059,11 +21076,11 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(562)) && a.__esModule ? a : {
+                s = (a = n(563)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(563);
-            n(564);
+                i = n(564);
+            n(565);
             var o = r.Ember.Component.extend({
                 layout: s.default,
                 classNames: ["multi-purchase-slider"],
@@ -21196,7 +21213,7 @@
             }), t.default = void 0;
             t.default = class {
                 constructor() {
-                    this._privateApi = n(566).default
+                    this._privateApi = n(567).default
                 }
                 showIdentityCustomizer() {
                     this._privateApi.showIdentityCustomizer()
@@ -21214,22 +21231,22 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                r = v(n(567)),
-                s = v(n(571)),
-                i = v(n(574)),
-                o = v(n(577)),
-                l = v(n(580)),
-                c = v(n(584)),
-                d = v(n(587)),
-                u = v(n(590)),
-                m = v(n(593)),
-                p = v(n(596)),
-                h = v(n(597)),
-                g = v(n(600)),
-                f = v(n(601)),
-                _ = v(n(602)),
-                b = v(n(603)),
-                y = v(n(604));
+                r = v(n(568)),
+                s = v(n(572)),
+                i = v(n(575)),
+                o = v(n(578)),
+                l = v(n(581)),
+                c = v(n(585)),
+                d = v(n(588)),
+                u = v(n(591)),
+                m = v(n(594)),
+                p = v(n(597)),
+                h = v(n(598)),
+                g = v(n(601)),
+                f = v(n(602)),
+                _ = v(n(603)),
+                b = v(n(604)),
+                y = v(n(605));
 
             function v(e) {
                 return e && e.__esModule ? e : {
@@ -21248,19 +21265,19 @@
                         PlayerNameComponent: t
                     } = a.SharedComponentsApi.getSharedEmberComponents(), u = {
                         tra: a.traService,
-                        IdentityCustomizerComponent: n(605).extend({
+                        IdentityCustomizerComponent: n(606).extend({
                             privateApi: this
                         }),
-                        IdentityCustomizerEmptySearchComponent: n(610),
-                        IdentityCustomizerTabIconsComponent: n(613),
-                        IdentityCustomizerTabBordersComponent: n(616),
-                        IdentityCustomizerTabBannersComponent: n(619),
-                        IdentityCustomizerTabTokensComponent: n(623),
-                        IdentityCustomizerTabTitlesComponent: n(628),
-                        IdentityCustomizerTitleComponent: n(631),
-                        IdentityCustomizerTokenComponent: n(634),
-                        IdentityCustomizerIconComponent: n(637),
-                        IdentityIconTooltipComponent: n(640),
+                        IdentityCustomizerEmptySearchComponent: n(611),
+                        IdentityCustomizerTabIconsComponent: n(614),
+                        IdentityCustomizerTabBordersComponent: n(617),
+                        IdentityCustomizerTabBannersComponent: n(620),
+                        IdentityCustomizerTabTokensComponent: n(624),
+                        IdentityCustomizerTabTitlesComponent: n(629),
+                        IdentityCustomizerTitleComponent: n(632),
+                        IdentityCustomizerTokenComponent: n(635),
+                        IdentityCustomizerIconComponent: n(638),
+                        IdentityIconTooltipComponent: n(641),
                         ChallengeBannerTitleComponent: r.default,
                         ChallengeBannerTokenComponent: s.default,
                         ChallengeBannerTokenContainerComponent: i.default,
@@ -21288,20 +21305,20 @@
                         HextechLoadingAnimationComponent: t
                     } = a.SharedComponentsApi.getSharedEmberComponents(), r = {
                         tra: a.traService,
-                        CollectionRootComponent: n(643).extend({
+                        CollectionRootComponent: n(644).extend({
                             privateApi: this
                         }),
-                        CollectionCategoryTabsComponent: n(646),
-                        CollectionCategoryTooltipComponent: n(649),
-                        CollectionChallengesBreakdownComponent: n(652),
-                        CollectionCrystalComponent: n(655),
-                        CollectionGridStandardComponent: n(658),
-                        CollectionGridCapstoneComponent: n(661),
-                        CollectionGridRowCapstoneComponent: n(664),
-                        CollectionGridRowGroupComponent: n(667),
-                        CollectionGridRowGroupNoCapstoneComponent: n(670),
-                        CollectionGridRowCapstoneTokenComponent: n(673),
-                        CollectionIntroModalComponent: n(676),
+                        CollectionCategoryTabsComponent: n(647),
+                        CollectionCategoryTooltipComponent: n(650),
+                        CollectionChallengesBreakdownComponent: n(653),
+                        CollectionCrystalComponent: n(656),
+                        CollectionGridStandardComponent: n(659),
+                        CollectionGridCapstoneComponent: n(662),
+                        CollectionGridRowCapstoneComponent: n(665),
+                        CollectionGridRowGroupComponent: n(668),
+                        CollectionGridRowGroupNoCapstoneComponent: n(671),
+                        CollectionGridRowCapstoneTokenComponent: n(674),
+                        CollectionIntroModalComponent: n(677),
                         ChallengeCardHeaderComponent: o.default,
                         ChallengeCardComponent: l.default,
                         ChallengeItemFooterComponent: c.default,
@@ -21346,11 +21363,11 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(568)) && a.__esModule ? a : {
+                s = (a = n(569)) && a.__esModule ? a : {
                     default: a
                 };
-            n(569);
-            var i = n(570),
+            n(570);
+            var i = n(571),
                 o = n(124);
             var l = r.Ember.Component.extend({
                 layout: s.default,
@@ -21467,10 +21484,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(572)) && a.__esModule ? a : {
+                s = (a = n(573)) && a.__esModule ? a : {
                     default: a
                 };
-            n(573);
+            n(574);
             var i = r.Ember.Component.extend({
                 layout: s.default,
                 classNames: ["challenge-banner-token-component"],
@@ -21505,10 +21522,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(575)) && a.__esModule ? a : {
+                s = (a = n(576)) && a.__esModule ? a : {
                     default: a
                 };
-            n(576);
+            n(577);
             var i = n(124);
             const o = "/v1/challenges/local-player",
                 l = "/v1/namespaces/Challenges/ClientState";
@@ -21600,10 +21617,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(578)) && a.__esModule ? a : {
+                s = (a = n(579)) && a.__esModule ? a : {
                     default: a
                 };
-            n(579);
+            n(580);
             var i = r.Ember.Component.extend({
                 layout: s.default,
                 classNames: ["challenge-card-header-component"]
@@ -21625,11 +21642,11 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = n(581),
-                i = (a = n(582)) && a.__esModule ? a : {
+                s = n(582),
+                i = (a = n(583)) && a.__esModule ? a : {
                     default: a
                 };
-            n(583);
+            n(584);
             var o = n(124);
             var l = r.Ember.Component.extend({
                 layout: i.default,
@@ -21718,10 +21735,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(585)) && a.__esModule ? a : {
+                s = (a = n(586)) && a.__esModule ? a : {
                     default: a
                 };
-            n(586);
+            n(587);
             var i = n(124);
             var o = r.Ember.Component.extend({
                 layout: s.default,
@@ -21756,12 +21773,12 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(588)) && a.__esModule ? a : {
+                s = (a = n(589)) && a.__esModule ? a : {
                     default: a
                 };
-            n(589);
+            n(590);
             var i = n(124),
-                o = n(570);
+                o = n(571);
             const l = "ABOVE",
                 c = "BELOW",
                 d = "EQUAL";
@@ -22251,10 +22268,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(591)) && a.__esModule ? a : {
+                s = (a = n(592)) && a.__esModule ? a : {
                     default: a
                 };
-            n(592);
+            n(593);
             var i = n(124);
             const o = {
                 [i.ID_LIST_MAPPING_TYPES.champion]: {
@@ -22325,12 +22342,12 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(594)) && a.__esModule ? a : {
+                s = (a = n(595)) && a.__esModule ? a : {
                     default: a
                 };
-            n(595);
+            n(596);
             var i = n(124),
-                o = n(570);
+                o = n(571);
             var l = r.Ember.Component.extend({
                 layout: s.default,
                 classNames: ["challenge-item-component"],
@@ -22633,10 +22650,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(598)) && a.__esModule ? a : {
+                s = (a = n(599)) && a.__esModule ? a : {
                     default: a
                 };
-            n(599);
+            n(600);
             var i = n(125);
             var o = r.Ember.Component.extend({
                 layout: s.default,
@@ -22898,12 +22915,12 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(606);
+            n(607);
             var r = n(124),
-                s = n(570),
+                s = n(571),
                 i = n(105),
-                o = n(607),
-                l = n(608);
+                o = n(608),
+                l = n(609);
             const c = "riot",
                 d = "ICONS",
                 u = "BORDERS",
@@ -22942,7 +22959,7 @@
                     }
                 });
             e.exports = a.Ember.Component.extend(f, {
-                layout: n(609),
+                layout: n(610),
                 classNames: ["challenges-identity-customizer-root-component"],
                 selectedIconId: null,
                 challenges: {},
@@ -23519,10 +23536,10 @@
         }, (e, t, n) => {
             "use strict";
             var a, r = n(1),
-                s = (a = n(611)) && a.__esModule ? a : {
+                s = (a = n(612)) && a.__esModule ? a : {
                     default: a
                 };
-            n(612), e.exports = r.Ember.Component.extend({
+            n(613), e.exports = r.Ember.Component.extend({
                 layout: s.default,
                 classNames: ["identity-customizer-empty-search-component"],
                 actions: {
@@ -23544,7 +23561,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(614);
+            n(615);
             const r = "all",
                 s = "set",
                 i = "esports",
@@ -23552,7 +23569,7 @@
                 l = "acquisitionDate",
                 c = "mostRare";
             e.exports = a.Ember.Component.extend({
-                layout: n(615),
+                layout: n(616),
                 classNames: ["identity-customizer-tab-icons-component"],
                 icons: a.Ember.A(),
                 selectedIconId: null,
@@ -23735,14 +23752,14 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                r = n(607);
-            n(617);
+                r = n(608);
+            n(618);
             var s = n(124);
             const i = "ranked",
                 o = "prestige",
                 l = ["JADE_RANKED_SOLO_5x5"];
             e.exports = a.Ember.Component.extend({
-                layout: n(618),
+                layout: n(619),
                 classNames: ["identity-customizer-tab-borders-component"],
                 summonerLevel: null,
                 highestRankedEntry: null,
@@ -23903,11 +23920,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(620);
+            n(621);
             var r = n(124),
-                s = n(621);
+                s = n(622);
             e.exports = a.Ember.Component.extend({
-                layout: n(622),
+                layout: n(623),
                 classNames: ["identity-customizer-tab-banners-component"],
                 allBanners: {},
                 summonerLevel: null,
@@ -24057,12 +24074,12 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(624);
+            n(625);
             var r = n(124),
-                s = n(625),
-                i = n(626);
+                s = n(626),
+                i = n(627);
             e.exports = a.Ember.Component.extend({
-                layout: n(627),
+                layout: n(628),
                 classNames: ["challenges-identity-customizer-tab-tokens-component"],
                 summary: {},
                 challenges: {},
@@ -24256,7 +24273,7 @@
                 return e
             };
             var a = n(124),
-                r = n(608),
+                r = n(609),
                 s = n(125);
 
             function i(e, t) {
@@ -24428,10 +24445,10 @@
             var a = n(1),
                 r = n(124),
                 s = n(125),
-                i = n(626),
-                o = n(625);
-            n(629), e.exports = a.Ember.Component.extend({
-                layout: n(630),
+                i = n(627),
+                o = n(626);
+            n(630), e.exports = a.Ember.Component.extend({
+                layout: n(631),
                 classNames: ["challenges-identity-customizer-tab-titles-component"],
                 ownedTitles: [],
                 allTitles: {},
@@ -24630,10 +24647,10 @@
         }, (e, t, n) => {
             "use strict";
             var a, r = n(1),
-                s = (a = n(632)) && a.__esModule ? a : {
+                s = (a = n(633)) && a.__esModule ? a : {
                     default: a
                 };
-            n(633);
+            n(634);
             var i = n(124),
                 o = n(125);
             e.exports = r.Ember.Component.extend({
@@ -24704,10 +24721,10 @@
         }, (e, t, n) => {
             "use strict";
             var a, r = n(1),
-                s = (a = n(635)) && a.__esModule ? a : {
+                s = (a = n(636)) && a.__esModule ? a : {
                     default: a
                 };
-            n(636);
+            n(637);
             var i = n(124);
             e.exports = r.Ember.Component.extend({
                 layout: s.default,
@@ -24784,8 +24801,8 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(638);
-            var r, s = (r = n(639)) && r.__esModule ? r : {
+            n(639);
+            var r, s = (r = n(640)) && r.__esModule ? r : {
                 default: r
             };
             e.exports = a.Ember.Component.extend({
@@ -24834,8 +24851,8 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(641), e.exports = a.Ember.Component.extend({
-                layout: n(642),
+            n(642), e.exports = a.Ember.Component.extend({
+                layout: n(643),
                 classNames: ["identity-icon-tooltip-component"],
                 icon: null,
                 hasDateOrDesc: a.Ember.computed.or("icon.purchaseDate", "icon.desc"),
@@ -24868,10 +24885,10 @@
             "use strict";
             var a = n(1),
                 r = n(124);
-            n(644);
-            var s = n(608);
+            n(645);
+            var s = n(609);
             e.exports = a.Ember.Component.extend({
-                layout: n(645),
+                layout: n(646),
                 classNames: ["challenges-collection-component"],
                 challenges: {},
                 summary: {},
@@ -25001,9 +25018,9 @@
             "use strict";
             var a = n(1),
                 r = n(124),
-                s = n(581);
-            n(647), e.exports = a.Ember.Component.extend({
-                layout: n(648),
+                s = n(582);
+            n(648), e.exports = a.Ember.Component.extend({
+                layout: n(649),
                 classNames: ["challenges-collection-category-tabs-component"],
                 challenges: [],
                 categories: [],
@@ -25096,11 +25113,11 @@
             "use strict";
             var a = n(1),
                 r = n(124);
-            n(650);
+            n(651);
             const s = "CRYSTAL",
                 i = "CATEGORY";
             e.exports = a.Ember.Component.extend({
-                layout: n(651),
+                layout: n(652),
                 classNames: ["challenges-collection-category-tooltip-component"],
                 tooltipType: i,
                 tier: null,
@@ -25188,8 +25205,8 @@
             "use strict";
             var a = n(1),
                 r = n(124);
-            n(653), e.exports = a.Ember.Component.extend({
-                layout: n(654),
+            n(654), e.exports = a.Ember.Component.extend({
+                layout: n(655),
                 classNames: ["career-challenges-breakdown-component"],
                 challenges: [],
                 levelList: r.SORTED_CHALLENGE_LEVELS,
@@ -25243,10 +25260,10 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                r = n(581),
+                r = n(582),
                 s = n(124);
-            n(656), e.exports = a.Ember.Component.extend({
-                layout: n(657),
+            n(657), e.exports = a.Ember.Component.extend({
+                layout: n(658),
                 classNames: ["challenges-collection-crystal-component"],
                 currentPoints: 0,
                 nextPointsThreshold: 0,
@@ -25291,14 +25308,14 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(659);
-            var r = n(625),
+            n(660);
+            var r = n(626),
                 s = n(124),
-                i = n(626),
-                o = n(570),
-                l = n(608);
+                i = n(627),
+                o = n(571),
+                l = n(609);
             e.exports = a.Ember.Component.extend({
-                layout: n(660),
+                layout: n(661),
                 classNames: ["challenges-collection-grid-standard-component"],
                 challenges: {},
                 summary: {},
@@ -25453,12 +25470,12 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(662);
-            var r = n(625),
-                s = n(608);
+            n(663);
+            var r = n(626),
+                s = n(609);
             const i = 777;
             e.exports = a.Ember.Component.extend({
-                layout: n(663),
+                layout: n(664),
                 classNames: ["challenges-collection-grid-capstone-component"],
                 challenges: {},
                 summary: {},
@@ -25577,11 +25594,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(665);
-            var r = n(608),
+            n(666);
+            var r = n(609),
                 s = n(124);
             e.exports = a.Ember.Component.extend({
-                layout: n(666),
+                layout: n(667),
                 classNames: ["challenges-collection-grid-row-capstone-component"],
                 challenges: {},
                 challenge: {},
@@ -25644,12 +25661,12 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(668);
-            var r = n(608),
+            n(669);
+            var r = n(609),
                 s = n(124),
-                i = n(625);
+                i = n(626);
             e.exports = a.Ember.Component.extend({
-                layout: n(669),
+                layout: n(670),
                 classNames: ["challenges-collection-grid-row-group-component"],
                 challenges: {},
                 challenge: {},
@@ -25705,8 +25722,8 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(671), e.exports = a.Ember.Component.extend({
-                layout: n(672),
+            n(672), e.exports = a.Ember.Component.extend({
+                layout: n(673),
                 classNames: ["challenges-collection-grid-row-group-no-capstone-component"],
                 challenges: {},
                 challengesIdList: [],
@@ -25736,10 +25753,10 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(674);
-            var r = n(608);
+            n(675);
+            var r = n(609);
             e.exports = a.Ember.Component.extend({
-                layout: n(675),
+                layout: n(676),
                 classNames: ["challenges-collection-grid-row-capstone-token-component"],
                 challenges: {},
                 challenge: null,
@@ -25797,12 +25814,12 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(677);
+            n(678);
             const r = "/v2/account/LCUPreferences/lol-challenges",
                 s = "/v1/namespaces/Challenges/FeatureIntroEnabled",
                 i = "introCollectionModalShown";
             e.exports = a.Ember.Component.extend({
-                layout: n(678),
+                layout: n(679),
                 classNames: ["challenges-collection-intro-modal-component"],
                 showIntroModal: !1,
                 introEnabledState: !1,
@@ -25845,9 +25862,9 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(581),
+            var a = n(582),
                 r = n(124),
-                s = n(607),
+                s = n(608),
                 i = {
                     AUDIO_CHANNEL: a.AUDIO_CHANNEL,
                     AUDIO_TYPE: a.AUDIO_TYPE,
@@ -25873,23 +25890,23 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = v(n(567)),
-                r = v(n(571)),
-                s = v(n(574)),
-                i = v(n(577)),
-                o = v(n(580)),
-                l = v(n(584)),
-                c = v(n(587)),
-                d = v(n(593)),
-                u = v(n(590)),
-                m = v(n(681)),
-                p = v(n(684)),
-                h = v(n(596)),
-                g = v(n(597)),
-                f = v(n(600)),
-                _ = v(n(601)),
-                b = v(n(603)),
-                y = v(n(634));
+            var a = v(n(568)),
+                r = v(n(572)),
+                s = v(n(575)),
+                i = v(n(578)),
+                o = v(n(581)),
+                l = v(n(585)),
+                c = v(n(588)),
+                d = v(n(594)),
+                u = v(n(591)),
+                m = v(n(682)),
+                p = v(n(685)),
+                h = v(n(597)),
+                g = v(n(598)),
+                f = v(n(601)),
+                _ = v(n(602)),
+                b = v(n(604)),
+                y = v(n(635));
 
             function v(e) {
                 return e && e.__esModule ? e : {
@@ -25922,10 +25939,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(682)) && a.__esModule ? a : {
+                s = (a = n(683)) && a.__esModule ? a : {
                     default: a
                 };
-            n(683);
+            n(684);
             var i = r.Ember.Component.extend({
                 layout: s.default,
                 classNames: ["eternals-item-tooltip-component"],
@@ -25962,10 +25979,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(685)) && a.__esModule ? a : {
+                s = (a = n(686)) && a.__esModule ? a : {
                     default: a
                 };
-            n(686);
+            n(687);
             var i = r.Ember.Component.extend({
                 layout: s.default,
                 classNames: ["eternals-item-component"],
@@ -26071,12 +26088,12 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            const r = a(n(689)),
-                s = a(n(690)),
-                i = a(n(691)),
-                o = a(n(695)),
-                l = a(n(698)),
-                c = a(n(701));
+            const r = a(n(690)),
+                s = a(n(691)),
+                i = a(n(692)),
+                o = a(n(696)),
+                l = a(n(699)),
+                c = a(n(702));
             t.default = {
                 RankedAssetsService: r.default,
                 LolMissionsService: s.default,
@@ -26202,11 +26219,11 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(692)) && a.__esModule ? a : {
+                s = (a = n(693)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(693);
-            n(694);
+                i = n(694);
+            n(695);
             var o = r.Ember.Component.extend({
                 classNames: ["autofill-modal-component"],
                 layout: s.default,
@@ -26264,10 +26281,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(696)) && a.__esModule ? a : {
+                s = (a = n(697)) && a.__esModule ? a : {
                     default: a
                 };
-            n(697);
+            n(698);
             var i = r.Ember.Component.extend({
                 classNames: ["autofill-lp-desc-component"],
                 layout: s.default,
@@ -26290,15 +26307,15 @@
                 value: !0
             }), t.default = t.TELEMETRY = void 0;
             var a = n(1);
-            n(699);
-            var r = n(693);
+            n(700);
+            var r = n(694);
             const s = {
                 TABLE: "parties_lobby",
                 MISSION_CLICK_EVENT: "mission_click"
             };
             t.TELEMETRY = s;
             var i = a.Ember.Component.extend({
-                layout: n(700),
+                layout: n(701),
                 classNames: ["ranked-progression-panel-component"],
                 classNameBindings: ["isACLayout:layout-ac, isLobbyLayout:layout-lobby"],
                 clickCallback: null,
@@ -26345,11 +26362,11 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(702)) && a.__esModule ? a : {
+                s = (a = n(703)) && a.__esModule ? a : {
                     default: a
                 };
-            n(703);
-            var i = n(693);
+            n(704);
+            var i = n(694);
             const o = [10, 25, 50, 75, 100];
             var l = r.Ember.Component.extend({
                 classNames: ["ranked-progression-widget-component"],
@@ -26429,7 +26446,7 @@
             }), t.default = void 0;
             t.default = class {
                 constructor() {
-                    this._privateApi = n(705).default
+                    this._privateApi = n(706).default
                 }
                 showReportModal(e, t, n, a) {
                     this._privateApi.showReportModal(e, t, n, a)
@@ -26441,10 +26458,10 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                r = l(n(443)),
-                s = l(n(706)),
-                i = l(n(709)),
-                o = l(n(712));
+                r = l(n(444)),
+                s = l(n(707)),
+                i = l(n(710)),
+                o = l(n(713));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -26512,10 +26529,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(707)) && a.__esModule ? a : {
+                s = (a = n(708)) && a.__esModule ? a : {
                     default: a
                 };
-            n(708);
+            n(709);
             var i = r.Ember.Component.extend({
                 layout: s.default,
                 classNames: ["report-header"],
@@ -26538,10 +26555,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(710)) && a.__esModule ? a : {
+                s = (a = n(711)) && a.__esModule ? a : {
                     default: a
                 };
-            n(711);
+            n(712);
             var i = r.Ember.Component.extend({
                 layout: s.default,
                 classNames: ["report-category"],
@@ -26574,7 +26591,7 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                r = n(444);
+                r = n(445);
             e.exports = a.Ember.Service.extend({
                 inGameReportData: [],
                 endOfGameReportPath: "/v1/end-of-game-reports",
@@ -26616,7 +26633,7 @@
             var a = n(432);
             t.default = class {
                 constructor() {
-                    this._privateApi = n(714).default
+                    this._privateApi = n(715).default
                 }
                 formatDuration(e, t, n) {
                     return (0, a.formatDuration)(e, t, n)
@@ -26646,14 +26663,14 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                r = m(n(715)),
-                s = m(n(716)),
-                i = m(n(719)),
-                o = m(n(733)),
-                l = m(n(763)),
-                c = m(n(766)),
-                d = m(n(767)),
-                u = m(n(770));
+                r = m(n(716)),
+                s = m(n(717)),
+                i = m(n(720)),
+                o = m(n(734)),
+                l = m(n(764)),
+                c = m(n(767)),
+                d = m(n(768)),
+                u = m(n(771));
 
             function m(e) {
                 return e && e.__esModule ? e : {
@@ -26885,10 +26902,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(717)) && a.__esModule ? a : {
+                s = (a = n(718)) && a.__esModule ? a : {
                     default: a
                 };
-            n(718);
+            n(719);
             var i = r.Ember.Component.extend({
                 classNames: ["honor-panel-component"],
                 layout: s.default,
@@ -26919,13 +26936,13 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(720)) && a.__esModule ? a : {
+                s = (a = n(721)) && a.__esModule ? a : {
                     default: a
                 };
-            n(721);
-            const i = [n(722), n(723), n(724), n(725), n(726)],
-                o = [n(727), n(728), n(729), n(730), n(731)],
-                l = n(732);
+            n(722);
+            const i = [n(723), n(724), n(725), n(726), n(727)],
+                o = [n(728), n(729), n(730), n(731), n(732)],
+                l = n(733);
             var c = r.Ember.Component.extend({
                 classNames: ["honor-panel-header-component"],
                 layout: s.default,
@@ -27005,11 +27022,11 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(734)) && a.__esModule ? a : {
+                s = (a = n(735)) && a.__esModule ? a : {
                     default: a
                 };
-            n(735);
-            var i = n(736),
+            n(736);
+            var i = n(737),
                 o = n(432);
             var l = r.Ember.Component.extend({
                 classNames: ["honor-panel-restriction-component"],
@@ -27122,7 +27139,7 @@
                 const t = Math.max(1, Math.min(5, e || 3));
                 return l[t]
             };
-            const a = e => n(737)(`./${e}-icon.svg`),
+            const a = e => n(738)(`./${e}-icon.svg`),
                 r = {
                     honor_downgrade: {
                         icon: a("honor-downgrade"),
@@ -27198,7 +27215,7 @@
             }), {});
             t.RESTRICTION_TYPE_TO_KEY = s;
             t.RESTRICTION_KEYS = ["honor_downgrade", "ranked_suspension", "queue_lock", "queue_delay", "chat_restriction", "ping_restriction", "gameflow_chat_locked", "gameflow_voice_locked", "voice_chat_muted"];
-            const i = e => n(737)(`./${e}-icon.svg`),
+            const i = e => n(738)(`./${e}-icon.svg`),
                 o = {
                     ultra_pass_xp_drops: {
                         icon: i("pass-xp-drops"),
@@ -27235,38 +27252,38 @@
             t.REWARD_DEFINITIONS = o;
             t.REWARD_KEYS = ["ultra_pass_xp_drops", "honor_skins_unlocked", "honor_recall", "mega_pass_xp_drops", "pass_xp_drops", "ranked_rewards"];
             const l = {
-                    1: n(756),
-                    2: n(757),
-                    3: n(758),
-                    4: n(759),
-                    5: n(760)
+                    1: n(757),
+                    2: n(758),
+                    3: n(759),
+                    4: n(760),
+                    5: n(761)
                 },
-                c = n(761);
+                c = n(762);
             t.BADGE_GAMES_FLAG_ICON = c;
-            const d = n(762);
+            const d = n(763);
             t.BADGE_CLOCK_ICON = d
         }, (e, t, n) => {
             var a = {
-                "./all-chat-icon.svg": 738,
-                "./allied-chat-icon.svg": 739,
-                "./block-all-icon.svg": 740,
-                "./chat-restriction-icon.svg": 741,
-                "./communications-agreement-close-icon.svg": 742,
-                "./communications-agreement-info-icon.svg": 743,
-                "./honor-downgrade-icon.svg": 744,
-                "./honor-recall-icon.svg": 745,
-                "./honor-skins-icon.svg": 746,
-                "./honor-temporarily-reduced-icon.svg": 732,
-                "./party-chat-icon.svg": 747,
-                "./pass-xp-drops-icon.svg": 748,
-                "./ping-restriction-icon.svg": 749,
-                "./player-blocked-icon.svg": 477,
-                "./player-restriction-warning-icon.svg": 750,
-                "./queue-delay-icon.svg": 751,
-                "./queue-lock-icon.svg": 752,
-                "./ranked-rewards-icon.svg": 753,
-                "./ranked-suspension-icon.svg": 754,
-                "./voice-restriction-icon.svg": 755
+                "./all-chat-icon.svg": 739,
+                "./allied-chat-icon.svg": 740,
+                "./block-all-icon.svg": 741,
+                "./chat-restriction-icon.svg": 742,
+                "./communications-agreement-close-icon.svg": 743,
+                "./communications-agreement-info-icon.svg": 744,
+                "./honor-downgrade-icon.svg": 745,
+                "./honor-recall-icon.svg": 746,
+                "./honor-skins-icon.svg": 747,
+                "./honor-temporarily-reduced-icon.svg": 733,
+                "./party-chat-icon.svg": 748,
+                "./pass-xp-drops-icon.svg": 749,
+                "./ping-restriction-icon.svg": 750,
+                "./player-blocked-icon.svg": 478,
+                "./player-restriction-warning-icon.svg": 751,
+                "./queue-delay-icon.svg": 752,
+                "./queue-lock-icon.svg": 753,
+                "./ranked-rewards-icon.svg": 754,
+                "./ranked-suspension-icon.svg": 755,
+                "./voice-restriction-icon.svg": 756
             };
 
             function r(e) {
@@ -27283,7 +27300,7 @@
             }
             r.keys = function() {
                 return Object.keys(a)
-            }, r.resolve = s, e.exports = r, r.id = 737
+            }, r.resolve = s, e.exports = r, r.id = 738
         }, (e, t, n) => {
             "use strict";
             e.exports = n.p + "all-chat-icon.svg"
@@ -27365,11 +27382,11 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(764)) && a.__esModule ? a : {
+                s = (a = n(765)) && a.__esModule ? a : {
                     default: a
                 };
-            n(765);
-            var i = n(736);
+            n(766);
+            var i = n(737);
             var o = r.Ember.Component.extend({
                 classNames: ["honor-panel-reward-component"],
                 layout: s.default,
@@ -27417,7 +27434,7 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                r = n(736),
+                r = n(737),
                 s = n(432);
             const i = "/lol-summoner-profiles/v1/get-honor-view",
                 o = "/lol-summoner-profiles/v1/get-restriction-view";
@@ -27545,10 +27562,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(768)) && a.__esModule ? a : {
+                s = (a = n(769)) && a.__esModule ? a : {
                     default: a
                 };
-            n(769);
+            n(770);
             var i = r.Ember.Component.extend({
                 classNames: ["honor-panel-signal-category-component"],
                 classNameBindings: ["isExpanded:expanded"],
@@ -27573,12 +27590,11 @@
             n.r(t)
         }, (e, t, n) => {
             "use strict";
-            var a = n(1),
-                r = n(474);
-            const s = "HUD",
-                i = "ChatChannelVisibility",
-                o = "/lol-chat/v1/blocked-players",
-                l = "/lol-game-settings/v1/game-settings";
+            var a = n(1);
+            const r = "HUD",
+                s = "ChatChannelVisibility",
+                i = "/lol-chat/v1/blocked-players",
+                o = "/lol-game-settings/v1/game-settings";
             e.exports = a.Ember.Service.extend({
                 chatChannelOnLoad: null,
                 blockedPuuidsOnLoad: null,
@@ -27611,7 +27627,7 @@
                     this.removeObservers()
                 },
                 initObservers() {
-                    this.db.observe(o, this, this._handleBlockedPlayersUpdate), this.db.observe(l, this, this._handleGameSettingsUpdate)
+                    this.db.observe(i, this, this._handleBlockedPlayersUpdate), this.db.observe(o, this, this._handleGameSettingsUpdate)
                 },
                 getRequisiteModalData() {
                     this.db.get("/lol-end-of-game/v1/eog-stats-block").then((e => {
@@ -27619,25 +27635,17 @@
                     }))
                 },
                 removeObservers() {
-                    this.db.removeObserver(l, this), this.db.removeObserver(l, this)
+                    this.db.removeObserver(o, this), this.db.removeObserver(o, this)
                 },
                 togglePlayerBlock(e) {
-                    const t = this.get("blockedPuuids").includes(e);
-                    t ? this.db.delete(`${o}/${e}`) : this.db.post(o, {
-                        puuid: e
-                    }), a.Telemetry.sendCustomData(r.TELEM_VERBAL_ABUSE_EVENT_NAME, {
-                        id: r.TELEM_VERBAL_ABUSE_CHANGE_BLOCK_STATUS,
-                        didBlockPlayer: !t,
+                    this.get("blockedPuuids").includes(e) ? this.db.delete(`${i}/${e}`) : this.db.post(i, {
                         puuid: e
                     })
                 },
                 setSelectedChatChannel(e) {
-                    this.db.get(l).then((t => {
-                        t && t[s] && (t[s][i] = e, this.db.patch(l, t))
-                    })), a.Telemetry.sendCustomData(r.TELEM_VERBAL_ABUSE_EVENT_NAME, {
-                        id: r.TELEM_VERBAL_ABUSE_CHAT_CHANNEL_CHANGE_ID,
-                        chatChannelSelection: e
-                    })
+                    this.db.get(o).then((t => {
+                        t && t[r] && (t[r][s] = e, this.db.patch(o, t))
+                    }))
                 },
                 setCouldShowModalPreference(e) {
                     this.db.patch("/lol-settings/v2/account/LCUPreferences/lol-navigation", {
@@ -27652,8 +27660,8 @@
                     null === this.get("blockedPuuidsOnLoad") && this.set("blockedPuuidsOnLoad", t), this.set("blockedPuuids", t)
                 },
                 _handleGameSettingsUpdate(e) {
-                    if (!e || !e[s] || !e[s][i]) return;
-                    const t = `${e[s][i]}`;
+                    if (!e || !e[r] || !e[r][s]) return;
+                    const t = `${e[r][s]}`;
                     null === this.get("chatChannelOnLoad") && this.set("chatChannelOnLoad", t), this.set("selectedChatChannel", t)
                 }
             })
@@ -27662,39 +27670,39 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = I(n(772)),
-                r = I(n(776)),
-                s = I(n(778)),
-                i = I(n(780)),
-                o = I(n(783)),
-                l = I(n(785)),
-                c = I(n(787)),
-                d = I(n(789)),
-                u = I(n(792)),
-                m = I(n(794)),
-                p = I(n(796)),
-                h = I(n(798)),
-                g = I(n(800)),
-                f = I(n(802)),
-                _ = I(n(803)),
-                b = I(n(805)),
-                y = I(n(807)),
-                v = I(n(811)),
-                E = I(n(812)),
-                A = I(n(814)),
-                x = I(n(815)),
-                k = I(n(816)),
-                C = I(n(817)),
-                T = I(n(818)),
-                w = n(774),
-                S = n(775);
+            var a = I(n(773)),
+                r = I(n(777)),
+                s = I(n(779)),
+                i = I(n(781)),
+                o = I(n(784)),
+                l = I(n(786)),
+                c = I(n(788)),
+                d = I(n(790)),
+                u = I(n(793)),
+                m = I(n(795)),
+                p = I(n(797)),
+                h = I(n(799)),
+                g = I(n(801)),
+                f = I(n(803)),
+                _ = I(n(804)),
+                b = I(n(806)),
+                y = I(n(808)),
+                v = I(n(812)),
+                E = I(n(813)),
+                A = I(n(815)),
+                x = I(n(816)),
+                k = I(n(817)),
+                C = I(n(818)),
+                T = I(n(819)),
+                w = n(775),
+                S = n(776);
 
             function I(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(820);
+            n(821);
             var R = {
                 INVENTORY_TYPE_IDS: w.INVENTORY_TYPE_IDS,
                 CATEGORIES: S.CATEGORIES,
@@ -27731,11 +27739,11 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(773)) && a.__esModule ? a : {
+                s = (a = n(774)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(774),
-                o = n(775);
+                i = n(775),
+                o = n(776);
             const {
                 RunMixin: l
             } = r.EmberAddons.EmberLifeline;
@@ -28129,6 +28137,7 @@
                     SHOW_SEARCH_BAR: !0,
                     SHOW_HELP_BUTTON: !0,
                     SHOW_CATEGORIES: !0,
+                    ENRICH_FROM_STORE_CATALOG: !0,
                     PURCHASE_TIMEOUT_MS: 1e4
                 },
                 JADE_BP: {
@@ -28148,7 +28157,7 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(777)) && a.__esModule ? a : {
+                s = (a = n(778)) && a.__esModule ? a : {
                     default: a
                 };
             const {
@@ -28212,7 +28221,7 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(779)) && a.__esModule ? a : {
+                s = (a = n(780)) && a.__esModule ? a : {
                     default: a
                 };
             var i = r.Ember.Component.extend({
@@ -28238,11 +28247,11 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = n(781),
-                i = (a = n(782)) && a.__esModule ? a : {
+                s = n(782),
+                i = (a = n(783)) && a.__esModule ? a : {
                     default: a
                 },
-                o = n(774);
+                o = n(775);
             var l = r.Ember.Component.extend({
                 layout: i.default,
                 tagName: "",
@@ -28552,7 +28561,7 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(784)) && a.__esModule ? a : {
+                s = (a = n(785)) && a.__esModule ? a : {
                     default: a
                 };
             var i = r.Ember.Component.extend({
@@ -28574,10 +28583,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(786)) && a.__esModule ? a : {
+                s = (a = n(787)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(774);
+                i = n(775);
             var o = r.Ember.Component.extend({
                 classNames: ["shoppefront-categories-sidebar"],
                 layout: s.default,
@@ -28618,7 +28627,7 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(788)) && a.__esModule ? a : {
+                s = (a = n(789)) && a.__esModule ? a : {
                     default: a
                 };
             var i = r.Ember.Component.extend({
@@ -28649,10 +28658,10 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(790)) && a.__esModule ? a : {
+                s = (a = n(791)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(791);
+                i = n(792);
             var o = r.Ember.Component.extend({
                 classNames: ["shoppefront-currency-counter-root"],
                 layout: s.default,
@@ -28717,7 +28726,7 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(793)) && a.__esModule ? a : {
+                s = (a = n(794)) && a.__esModule ? a : {
                     default: a
                 };
             var i = r.Ember.Component.extend({
@@ -28756,7 +28765,7 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(795)) && a.__esModule ? a : {
+                s = (a = n(796)) && a.__esModule ? a : {
                     default: a
                 };
             var i = r.Ember.Component.extend({
@@ -28793,7 +28802,7 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(797)) && a.__esModule ? a : {
+                s = (a = n(798)) && a.__esModule ? a : {
                     default: a
                 };
             var i = r.Ember.Component.extend({
@@ -28825,11 +28834,11 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(799)) && a.__esModule ? a : {
+                s = (a = n(800)) && a.__esModule ? a : {
                     default: a
                 },
-                i = n(774),
-                o = n(781);
+                i = n(775),
+                o = n(782);
             const l = r.dataBinding.bindTo(r.socket),
                 c = [i.INVENTORY_TYPE_IDS.SUMMONER_ICON, i.INVENTORY_TYPE_IDS.WARD_SKIN, i.INVENTORY_TYPE_IDS.EMOTE, i.INVENTORY_TYPE_IDS.EVENT_PASS, i.INVENTORY_TYPE_IDS.REGALIA_BANNER];
             var d = r.Ember.Component.extend({
@@ -29075,7 +29084,7 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(801)) && a.__esModule ? a : {
+                s = (a = n(802)) && a.__esModule ? a : {
                     default: a
                 };
             var i = r.Ember.Component.extend({
@@ -29133,7 +29142,7 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = (a = n(801)) && a.__esModule ? a : {
+                s = (a = n(802)) && a.__esModule ? a : {
                     default: a
                 };
             var i = r.Ember.Component.extend({
@@ -29185,8 +29194,8 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = n(774),
-                i = (a = n(804)) && a.__esModule ? a : {
+                s = n(775),
+                i = (a = n(805)) && a.__esModule ? a : {
                     default: a
                 };
             var o = r.Ember.Component.extend({
@@ -29219,11 +29228,11 @@
                 value: !0
             }), t.default = void 0;
             var a, r = n(1),
-                s = n(775),
-                i = (a = n(806)) && a.__esModule ? a : {
+                s = n(776),
+                i = (a = n(807)) && a.__esModule ? a : {
                     default: a
                 },
-                o = n(774);
+                o = n(775);
             var l = r.Ember.Component.extend({
                 layout: i.default,
                 shoppefrontService: r.Ember.inject.service("shoppefront"),
@@ -29298,9 +29307,9 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                r = o(n(808)),
-                s = o(n(809)),
-                i = o(n(810));
+                r = o(n(809)),
+                s = o(n(810)),
+                i = o(n(811));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -29360,9 +29369,10 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                r = n(774),
-                s = n(813),
-                i = a.Ember.Service.extend({
+                r = n(775),
+                s = n(814),
+                i = n(776),
+                o = a.Ember.Service.extend({
                     lootService: a.Ember.inject.service("shoppefront-loot"),
                     shoppefrontService: a.Ember.inject.service("shoppefront"),
                     init() {
@@ -29458,7 +29468,7 @@
                     },
                     async enrichGenericItem(e) {
                         const t = await this.getGameDataItem(e),
-                            n = await this.getStoreCatalogItem(t),
+                            n = this.shouldEnrichFromStoreCatalog() ? await this.getStoreCatalogItem(t) : null,
                             a = this.isItemTomacco(e),
                             r = this.getParentSkinId(t, a),
                             s = this.isItemChroma(r, a),
@@ -29502,6 +29512,9 @@
                         if (r) return r;
                         a.logger.error(`Catalog item with id ${e.id} not Found in game data`)
                     },
+                    shouldEnrichFromStoreCatalog() {
+                        return !!i.STORES[this.get("shoppefrontService.shoppefrontId")]?.ENRICH_FROM_STORE_CATALOG
+                    },
                     async getStoreCatalogItem(e) {
                         const t = e?.gipInventoryType,
                             n = e?.gipItemId;
@@ -29537,7 +29550,7 @@
                         })) : this.set("lootItem", {})
                     }
                 });
-            t.default = i
+            t.default = o
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -29580,7 +29593,7 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                r = n(774),
+                r = n(775),
                 s = a.Ember.Service.extend({
                     shoppefrontService: a.Ember.inject.service("shoppefront"),
                     shoppefrontId: a.Ember.computed.alias("shoppefrontService.shoppefrontId"),
@@ -29647,15 +29660,16 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.default = void 0;
+            }), t.loadMeasuredShoppefrontIds = t.default = void 0;
             var a = n(1),
-                r = n(774),
-                s = n(775),
-                i = n(781);
+                r = n(775),
+                s = n(776),
+                i = n(782);
             const {
                 RunMixin: o
-            } = a.EmberAddons.EmberLifeline;
-            var l = a.Ember.Service.extend(o, {
+            } = a.EmberAddons.EmberLifeline, l = new Set;
+            t.loadMeasuredShoppefrontIds = l;
+            var c = a.Ember.Service.extend(o, {
                 catalogItemEnricher: a.Ember.inject.service("shoppefront-catalog-item-enricher"),
                 noStoresFound: !1,
                 searchText: "",
@@ -29667,7 +29681,7 @@
                     this._super(...arguments), this.set("sentImpressionItems", new Set), this.db = a.dataBinding.bindTo(a.socket), this.addPurchaseLimitsObserver()
                 },
                 willDestroy() {
-                    this._super(...arguments), this.updateLastViewed(), this.db.unobserve(this.get("activeStorePathRegistered"), this)
+                    this._super(...arguments), this.updateLastViewed(), this.db.unobserve(this.get("activeStorePathRegistered"), this), this.isMeasuringLoad && (a.datadogRum.stopOperationWithAbort(a.datadogRum.XP_STORE_SHOPPEFRONT_LOAD), this.isMeasuringLoad = !1)
                 },
                 addCustomizations(e, t) {
                     this.get("customizations").set(e, t)
@@ -29763,11 +29777,13 @@
                     this.set("shoppefrontId", e), this.get("sentImpressionItems").clear();
                     const t = `${r.SHOPPEFRONT_PATHS.GET_ACTIVE_STORES_PATH}/${e}`;
                     if (this.get("activeStorePathRegistered") !== t) {
-                        const e = this.get("activeStorePathRegistered");
-                        e && this.db.unobserve(e, this), this.db.addObserver(t, this, (async function(e) {
-                            const t = e || [];
-                            if (t?.length > 0) {
-                                const e = t.map((async e => {
+                        const n = this.get("activeStorePathRegistered");
+                        n && this.db.unobserve(n, this), this.isMeasuringLoad && (a.datadogRum.stopOperationWithAbort(a.datadogRum.XP_STORE_SHOPPEFRONT_LOAD), this.isMeasuringLoad = !1), l.has(e) || (l.add(e), a.datadogRum.startOperation(a.datadogRum.XP_STORE_SHOPPEFRONT_LOAD, {
+                            shoppefrontId: e
+                        }), this.isMeasuringLoad = !0), this.db.addObserver(t, this, (async function(t) {
+                            const n = t || [];
+                            if (n?.length > 0) {
+                                const e = n.map((async e => {
                                     const t = this.get("catalogItemEnricher"),
                                         n = e.analytics?.modelRef || "",
                                         a = await t.enrichItems(e.catalogEntries.map((e => ({
@@ -29786,12 +29802,22 @@
                                         catalogEntry: s.get(e.catalogEntryId)
                                     })))
                                 }));
-                                await Promise.all(e), this.set("stores", a.Ember.A(t)), this.debounceTask("queueNextRefresh", t, 1e3)
+                                await Promise.all(e), this.set("stores", a.Ember.A(n)), this.debounceTask("queueNextRefresh", n, 1e3)
                             }
-                            this.set("noStoresFound", 0 === t?.length)
+                            this.set("noStoresFound", 0 === n?.length), this.isMeasuringLoad && (a.datadogRum.stopOperationWithOk(a.datadogRum.XP_STORE_SHOPPEFRONT_LOAD, {
+                                shoppefrontId: e,
+                                storeCount: n.length,
+                                catalogEntryCount: n.reduce(((e, t) => e + (t.catalogEntries?.length || 0)), 0)
+                            }), this.isMeasuringLoad = !1)
                         })), this.set("activeStorePathRegistered", t)
                     }
-                    await this.db.post(r.SHOPPEFRONT_PATHS.STORE_DIGESTS_PATH)
+                    try {
+                        await this.db.post(r.SHOPPEFRONT_PATHS.STORE_DIGESTS_PATH)
+                    } catch (t) {
+                        throw this.isMeasuringLoad && (a.datadogRum.stopOperationWithError(a.datadogRum.XP_STORE_SHOPPEFRONT_LOAD, t, {
+                            shoppefrontId: e
+                        }), this.isMeasuringLoad = !1), t
+                    }
                 },
                 updateLastViewed() {
                     this.debounceTask("_debouncedUpdateLastViewed", (new Date).toISOString(), 1e3)
@@ -29859,7 +29885,7 @@
                     }
                 }
             });
-            t.default = l
+            t.default = c
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -29890,7 +29916,7 @@
                     ContextualNotificationManager: a.UIKit.getContextualNotificationManager(),
                     displayConfirmationToast: function(e, t) {
                         if (!e || !t) return;
-                        const r = n(819)({
+                        const r = n(820)({
                                 titleLoc: e,
                                 bodyLoc: this.get("tra").get("shoppefront_confirm_toast_body"),
                                 borderType: "permanent",
@@ -29968,10 +29994,10 @@
                 return new r.default(t, e)
             };
             var a = n(1);
-            n(822);
-            var r = o(n(823)),
-                s = o(n(824)),
-                i = o(n(830));
+            n(823);
+            var r = o(n(824)),
+                s = o(n(825)),
+                i = o(n(831));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -30038,11 +30064,11 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1),
-                r = c(n(825)),
-                s = c(n(826)),
-                i = c(n(827)),
-                o = n(828),
-                l = c(n(829));
+                r = c(n(826)),
+                s = c(n(827)),
+                i = c(n(828)),
+                o = n(829),
+                l = c(n(830));
 
             function c(e) {
                 return e && e.__esModule ? e : {
@@ -30417,12 +30443,12 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = c(n(832)),
-                r = c(n(847)),
-                s = c(n(850)),
-                i = c(n(854)),
-                o = c(n(857)),
-                l = c(n(861));
+            var a = c(n(833)),
+                r = c(n(848)),
+                s = c(n(851)),
+                i = c(n(855)),
+                o = c(n(858)),
+                l = c(n(862));
 
             function c(e) {
                 return e && e.__esModule ? e : {
@@ -30441,11 +30467,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(833);
-            var r = n(834);
+            n(834);
+            var r = n(835);
             e.exports = a.Ember.Component.extend({
                 classNames: ["mastery-grade-display"],
-                layout: n(846),
+                layout: n(847),
                 milestoneProgressMap: {},
                 gradeDisplaySize: r.GRADE_BOX_SIZE.LARGE,
                 isGradeListCentered: !1,
@@ -30560,19 +30586,19 @@
             };
             t.MASTERY_REWARD_TYPES = c;
             const d = {
-                [c.HEXTECH_CHEST]: n(835),
-                [c.MARK]: n(836),
-                [c.AURORA]: n(837),
-                [c.MASTERY_LEVEL]: n(838),
-                [c.TITLE]: n(839)
+                [c.HEXTECH_CHEST]: n(836),
+                [c.MARK]: n(837),
+                [c.AURORA]: n(838),
+                [c.MASTERY_LEVEL]: n(839),
+                [c.TITLE]: n(840)
             };
             t.REWARD_TO_ASSET_PATH = d;
             const u = {
-                [c.HEXTECH_CHEST]: n(840),
-                [c.MARK]: n(841),
-                [c.AURORA]: n(837),
-                [c.MASTERY_LEVEL]: n(838),
-                [c.TITLE]: n(839)
+                [c.HEXTECH_CHEST]: n(841),
+                [c.MARK]: n(842),
+                [c.AURORA]: n(838),
+                [c.MASTERY_LEVEL]: n(839),
+                [c.TITLE]: n(840)
             };
             t.TOOLTIP_REWARD_TO_ASSET_PATH = u;
             const m = 3,
@@ -30637,10 +30663,10 @@
                     10: 3
                 },
                 b = {
-                    0: n(842),
-                    1: n(843),
-                    2: n(844),
-                    3: n(845)
+                    0: n(843),
+                    1: n(844),
+                    2: n(845),
+                    3: n(846)
                 };
             t.MASTERY_SEASON_NAME = "ACTS"
         }, (e, t, n) => {
@@ -30686,11 +30712,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(848);
-            var r = n(834);
+            n(849);
+            var r = n(835);
             e.exports = a.Ember.Component.extend({
                 classNames: ["mastery-tooltip-component"],
-                layout: n(849),
+                layout: n(850),
                 championMasteryUpdateNotification: {},
                 customRewards: [],
                 hideTitle: !1,
@@ -30780,14 +30806,14 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(851);
-            var r, s = n(834),
-                i = (r = n(852)) && r.__esModule ? r : {
+            n(852);
+            var r, s = n(835),
+                i = (r = n(853)) && r.__esModule ? r : {
                     default: r
                 };
             e.exports = a.Ember.Component.extend({
                 classNames: ["milestone-tooltip-component"],
-                layout: n(853),
+                layout: n(854),
                 masteryRewardData: {},
                 milestoneProgressMap: {},
                 seasonMilestone: 0,
@@ -30886,7 +30912,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a = n(834),
+            var a = n(835),
                 r = {
                     NUMBER_TO_ROMAN_NUMERAL: a.NUMBER_TO_ROMAN_NUMERAL,
                     MINIMUM_MASTERY_LEVEL: a.MINIMUM_MASTERY_LEVEL,
@@ -30914,11 +30940,11 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(855);
-            var r = n(834);
+            n(856);
+            var r = n(835);
             e.exports = a.Ember.Component.extend({
                 classNames: ["mastery-crest-component"],
-                layout: n(856),
+                layout: n(857),
                 masteryLevel: 0,
                 isAuroraEnabled: !1,
                 isAnimationsEnabled: !1,
@@ -30943,9 +30969,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(858);
-            var r, s = n(834),
-                i = (r = n(859)) && r.__esModule ? r : {
+            n(859);
+            var r, s = n(835),
+                i = (r = n(860)) && r.__esModule ? r : {
                     default: r
                 };
             const o = {
@@ -30966,7 +30992,7 @@
                 };
             e.exports = a.Ember.Component.extend({
                 classNames: ["lcm-celebration-vignette-component"],
-                layout: n(860),
+                layout: n(861),
                 animationsEnabled: !0,
                 animationStarted: !1,
                 audioObject: null,
@@ -31106,8 +31132,8 @@
                 value: !0
             }), t.default = void 0;
             var a = n(1);
-            n(862);
-            var r, s = (r = n(852)) && r.__esModule ? r : {
+            n(863);
+            var r, s = (r = n(853)) && r.__esModule ? r : {
                 default: r
             };
             const i = a.Audio.getChannel("sfx-ui"),
@@ -31118,7 +31144,7 @@
             var u = a.Ember.Component.extend({
                 classNames: ["champion-sets-carousel"],
                 classNameBindings: ["isObjectivesView"],
-                layout: n(863),
+                layout: n(864),
                 isObjectivesView: !1,
                 isLeftArrowDisabled: !0,
                 isRightArrowDisabled: !0,

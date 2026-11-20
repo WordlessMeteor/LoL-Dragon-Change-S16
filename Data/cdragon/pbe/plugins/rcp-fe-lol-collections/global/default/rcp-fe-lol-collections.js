@@ -603,10 +603,10 @@
             }), t.default = void 0;
             var s = n(1),
                 o = n(41),
-                i = c(n(279)),
-                r = c(n(285)),
-                l = c(n(313)),
-                a = c(n(410));
+                i = c(n(278)),
+                r = c(n(284)),
+                l = c(n(312)),
+                a = c(n(409));
 
             function c(e) {
                 return e && e.__esModule ? e : {
@@ -686,7 +686,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.APP_NAME = void 0, t.createEmberApplication = function() {
-                return s.ComponentFactory.create(ft)
+                return s.ComponentFactory.create(gt)
             }, t.registerEmberApplication = function() {
                 const e = {
                     ComponentFactory: s.ComponentFactory,
@@ -707,10 +707,10 @@
                     SpellsController: y.default,
                     SummonerIconsController: b.default,
                     WardsController: k.default,
-                    ChromasController: E.default,
-                    FinishersController: _.default,
+                    ChromasController: S.default,
+                    FinishersController: E.default,
                     LegacyAppMountComponent: v.default,
-                    ChampionItemLcmComponent: S.default,
+                    ChampionItemLcmComponent: _.default,
                     InventoryItemComponent: I.default,
                     SkinItemHeaderComponent: A.default,
                     FinisherItemHeaderComponent: x.default,
@@ -718,23 +718,23 @@
                     CollectionsSubNavComponent: C.default,
                     CollectionCmHeaderComponent: T.default,
                     NumberFanfareComponent: P.default,
-                    RenderTelemetrySenderComponent: mt,
+                    RenderTelemetrySenderComponent: dt,
                     CollectionDetailsComponent: O.default,
                     CollectionControlsComponent: D.default,
-                    CollectionGroupHeaderComponent: R.default,
-                    ReplayButtonComponent: M.default,
+                    CollectionGroupHeaderComponent: M.default,
+                    ReplayButtonComponent: R.default,
                     VideoWrapperComponent: L.default,
-                    StyleFilterComponent: Ae.default,
-                    InventoryCardsComponent: Se.default,
-                    InventoryCardComponent: _e.default,
-                    InventoryPageComponent: ve.default,
-                    HextechLoadingAnimationComponent: dt,
-                    EmoteRootComponent: me.default,
-                    EmoteInventoryComponent: pe.default,
-                    EmoteWheelComponent: ue.default,
-                    EmoteWheelSlotComponent: he.default,
-                    EmoteDeleteSlotComponent: ge.default,
-                    EmoteReactionsComponent: fe.default,
+                    StyleFilterComponent: ve.default,
+                    InventoryCardsComponent: Ee.default,
+                    InventoryCardComponent: Se.default,
+                    InventoryPageComponent: _e.default,
+                    HextechLoadingAnimationComponent: ct,
+                    EmoteRootComponent: de.default,
+                    EmoteInventoryComponent: me.default,
+                    EmoteWheelComponent: pe.default,
+                    EmoteWheelSlotComponent: ue.default,
+                    EmoteDeleteSlotComponent: he.default,
+                    EmoteReactionsComponent: ge.default,
                     ChampionSelectorComponent: G.default,
                     CircleButtonComponent: Y.default,
                     ItemBuildTreeComponent: V.default,
@@ -748,208 +748,206 @@
                     ItemsRootComponent: ee.default,
                     PreferredSlotsMenuComponent: te.default,
                     RecommendedSetViewerComponent: ne.default,
-                    GradeDisplayComponent: pt,
+                    GradeDisplayComponent: mt,
                     MasteryFtuxComponent: B.default,
-                    MasteryCrestComponent: ut,
-                    MilestoneTooltipComponent: ht,
-                    MasterySetCarouselComponent: gt,
+                    MasteryCrestComponent: pt,
+                    MilestoneTooltipComponent: ut,
+                    MasterySetCarouselComponent: ht,
                     tra: s.traService,
                     ClientConfigService: N.default,
                     PipNotificationsService: F.default,
-                    PlatformConfigService: U.default,
-                    RiotclientService: j.default,
-                    SettingsPreferencesService: H.default,
-                    SummonerService: $.default,
-                    StoreService: Te.default,
-                    TutorialService: Pe.default,
-                    PlatformSettingsService: Ie.default,
-                    SettingsService: Ce.default,
-                    AudioService: we.default,
-                    EmotesService: ye.default,
+                    PlatformConfigService: j.default,
+                    RiotclientService: U.default,
+                    SettingsPreferencesService: $.default,
+                    SummonerService: H.default,
+                    StoreService: Ce.default,
+                    TutorialService: Te.default,
+                    PlatformSettingsService: we.default,
+                    SettingsService: Ie.default,
+                    AudioService: xe.default,
+                    EmotesService: fe.default,
                     LoadoutsService: W.default,
-                    ErrorsHandlerService: ke.default,
-                    EmoteSoundsService: be.default,
+                    ErrorsHandlerService: be.default,
+                    EmoteSoundsService: ye.default,
                     ItemSetsService: oe.default,
                     ExportItemSetHelper: se.default,
-                    EqHelper: xe.default,
-                    VirtualListHelper: Ee.default,
+                    EqHelper: Ae.default,
+                    VirtualListHelper: ke.default,
                     BlockEntity: ie.default,
                     ItemSetEntity: re.default,
                     ItemEntity: le.default,
                     KeyDisplaysEntity: re.default,
                     ModalMixin: ae.default,
                     SortableMixin: ce.default,
-                    TelemetryMixin: de.default,
                     TEMPLATES: {
-                        application: Oe.default,
-                        index: De.default,
-                        loading: Re.default,
-                        runes: Be.default,
+                        application: Pe.default,
+                        index: Oe.default,
+                        loading: De.default,
+                        runes: Le.default,
                         champions: Me.default,
-                        skins: Le.default,
-                        emotes: Ne.default,
-                        spells: Fe.default,
-                        items: Ue.default,
+                        skins: Re.default,
+                        emotes: Be.default,
+                        spells: Ne.default,
+                        items: Fe.default,
                         "summoner-icons": je.default,
-                        wards: He.default,
+                        wards: Ue.default,
                         chromas: $e.default,
-                        finishers: We.default,
-                        "components/champion-item-lcm": Ye.default,
-                        "components/legacy-app-mount": Ge.default,
-                        "components/inventory-item": Ve.default,
-                        "components/skin-item-header": Ke.default,
-                        "components/finisher-item-header": qe.default,
-                        "components/summoner-icon-header": Xe.default,
-                        "components/collection-cm-header": Qe.default,
-                        "components/collections-sub-nav": ze.default,
-                        "components/number-fanfare": Ze.default,
-                        "components/collection-details": Je.default,
-                        "components/collection-controls": et.default,
-                        "components/collection-group-header": tt.default,
-                        "components/replay-button": nt.default,
-                        "components/video-wrapper": st.default,
-                        "components/mastery-ftux": at.default,
-                        "components/style-filter": ot.default,
-                        "components/inventory-cards": it.default,
-                        "components/inventory-card": rt.default,
-                        "components/inventory-page": lt.default
+                        finishers: He.default,
+                        "components/champion-item-lcm": Ge.default,
+                        "components/legacy-app-mount": We.default,
+                        "components/inventory-item": Ye.default,
+                        "components/skin-item-header": Ve.default,
+                        "components/finisher-item-header": Ke.default,
+                        "components/summoner-icon-header": qe.default,
+                        "components/collection-cm-header": ze.default,
+                        "components/collections-sub-nav": Xe.default,
+                        "components/number-fanfare": Qe.default,
+                        "components/collection-details": Ze.default,
+                        "components/collection-controls": Je.default,
+                        "components/collection-group-header": et.default,
+                        "components/replay-button": tt.default,
+                        "components/video-wrapper": nt.default,
+                        "components/mastery-ftux": lt.default,
+                        "components/style-filter": st.default,
+                        "components/inventory-cards": ot.default,
+                        "components/inventory-card": it.default,
+                        "components/inventory-page": rt.default
                     }
                 };
                 s.SharedComponents.getSharedEmberComponents().EmberCollectionApi.registerToFactoryDefinition(e), !1;
-                s.EmberApplicationFactory.setFactoryDefinition(ft, e, {
+                s.EmberApplicationFactory.setFactoryDefinition(gt, e, {
                     EMBER_CLI_COMPAT: !0
                 })
             };
             var s = n(1),
-                o = ct(n(42)),
-                i = ct(n(43)),
-                r = ct(n(44)),
-                l = ct(n(45)),
-                a = ct(n(50)),
-                c = ct(n(51)),
-                d = ct(n(52)),
-                m = ct(n(54)),
-                p = ct(n(56)),
-                u = ct(n(58)),
-                h = ct(n(60)),
-                g = ct(n(62)),
-                f = ct(n(64)),
-                y = ct(n(89)),
-                b = ct(n(91)),
-                k = ct(n(92)),
-                E = ct(n(93)),
-                _ = ct(n(94)),
-                S = ct(n(95)),
-                v = ct(n(97)),
-                A = ct(n(98)),
-                x = ct(n(99)),
-                w = ct(n(101)),
-                I = ct(n(102)),
-                C = ct(n(103)),
-                T = ct(n(104)),
-                P = ct(n(106)),
-                O = ct(n(110)),
-                D = ct(n(111)),
-                R = ct(n(112)),
-                M = ct(n(113)),
-                L = ct(n(114)),
-                B = ct(n(115)),
-                N = ct(n(116)),
-                F = ct(n(117)),
-                U = ct(n(118)),
-                j = ct(n(119)),
-                H = ct(n(120)),
-                $ = ct(n(122)),
-                W = ct(n(123)),
-                G = ct(n(125)),
-                Y = ct(n(131)),
-                V = ct(n(134)),
-                K = ct(n(140)),
-                q = ct(n(143)),
-                X = ct(n(147)),
-                z = ct(n(158)),
-                Q = ct(n(161)),
-                Z = ct(n(164)),
-                J = ct(n(167)),
-                ee = ct(n(170)),
-                te = ct(n(174)),
-                ne = ct(n(177)),
-                se = ct(n(156)),
-                oe = ct(n(180)),
-                ie = ct(n(151)),
-                re = ct(n(152)),
-                le = ct(n(150)),
-                ae = ct(n(153)),
-                ce = ct(n(135)),
-                de = ct(n(154)),
-                me = ct(n(196)),
-                pe = ct(n(200)),
-                ue = ct(n(205)),
-                he = ct(n(208)),
-                ge = ct(n(211)),
-                fe = ct(n(214)),
-                ye = ct(n(217)),
-                be = ct(n(201)),
-                ke = ct(n(218)),
-                Ee = ct(n(219)),
-                _e = ct(n(221)),
-                Se = ct(n(222)),
-                ve = ct(n(223)),
-                Ae = ct(n(227)),
-                xe = ct(n(228)),
-                we = ct(n(229)),
-                Ie = ct(n(231)),
-                Ce = ct(n(233)),
-                Te = ct(n(234)),
-                Pe = ct(n(246)),
-                Oe = ct(n(247)),
-                De = ct(n(248)),
-                Re = ct(n(249)),
-                Me = ct(n(250)),
-                Le = ct(n(251)),
-                Be = ct(n(252)),
-                Ne = ct(n(253)),
-                Fe = ct(n(254)),
-                Ue = ct(n(255)),
-                je = ct(n(256)),
-                He = ct(n(257)),
-                $e = ct(n(258)),
-                We = ct(n(259)),
-                Ge = ct(n(260)),
-                Ye = ct(n(261)),
-                Ve = ct(n(262)),
-                Ke = ct(n(263)),
-                qe = ct(n(264)),
-                Xe = ct(n(265)),
-                ze = ct(n(266)),
-                Qe = ct(n(267)),
-                Ze = ct(n(268)),
-                Je = ct(n(269)),
-                et = ct(n(270)),
-                tt = ct(n(271)),
-                nt = ct(n(272)),
-                st = ct(n(273)),
-                ot = ct(n(274)),
-                it = ct(n(275)),
-                rt = ct(n(276)),
-                lt = ct(n(277)),
-                at = ct(n(278));
+                o = at(n(42)),
+                i = at(n(43)),
+                r = at(n(44)),
+                l = at(n(45)),
+                a = at(n(50)),
+                c = at(n(51)),
+                d = at(n(52)),
+                m = at(n(54)),
+                p = at(n(56)),
+                u = at(n(58)),
+                h = at(n(60)),
+                g = at(n(62)),
+                f = at(n(64)),
+                y = at(n(89)),
+                b = at(n(91)),
+                k = at(n(92)),
+                S = at(n(93)),
+                E = at(n(94)),
+                _ = at(n(95)),
+                v = at(n(97)),
+                A = at(n(98)),
+                x = at(n(99)),
+                w = at(n(101)),
+                I = at(n(102)),
+                C = at(n(103)),
+                T = at(n(104)),
+                P = at(n(106)),
+                O = at(n(110)),
+                D = at(n(111)),
+                M = at(n(112)),
+                R = at(n(113)),
+                L = at(n(114)),
+                B = at(n(115)),
+                N = at(n(116)),
+                F = at(n(117)),
+                j = at(n(118)),
+                U = at(n(119)),
+                $ = at(n(120)),
+                H = at(n(122)),
+                W = at(n(123)),
+                G = at(n(125)),
+                Y = at(n(131)),
+                V = at(n(134)),
+                K = at(n(140)),
+                q = at(n(143)),
+                X = at(n(147)),
+                z = at(n(157)),
+                Q = at(n(160)),
+                Z = at(n(163)),
+                J = at(n(166)),
+                ee = at(n(169)),
+                te = at(n(173)),
+                ne = at(n(176)),
+                se = at(n(155)),
+                oe = at(n(179)),
+                ie = at(n(151)),
+                re = at(n(152)),
+                le = at(n(150)),
+                ae = at(n(153)),
+                ce = at(n(135)),
+                de = at(n(195)),
+                me = at(n(199)),
+                pe = at(n(204)),
+                ue = at(n(207)),
+                he = at(n(210)),
+                ge = at(n(213)),
+                fe = at(n(216)),
+                ye = at(n(200)),
+                be = at(n(217)),
+                ke = at(n(218)),
+                Se = at(n(220)),
+                Ee = at(n(221)),
+                _e = at(n(222)),
+                ve = at(n(226)),
+                Ae = at(n(227)),
+                xe = at(n(228)),
+                we = at(n(230)),
+                Ie = at(n(232)),
+                Ce = at(n(233)),
+                Te = at(n(245)),
+                Pe = at(n(246)),
+                Oe = at(n(247)),
+                De = at(n(248)),
+                Me = at(n(249)),
+                Re = at(n(250)),
+                Le = at(n(251)),
+                Be = at(n(252)),
+                Ne = at(n(253)),
+                Fe = at(n(254)),
+                je = at(n(255)),
+                Ue = at(n(256)),
+                $e = at(n(257)),
+                He = at(n(258)),
+                We = at(n(259)),
+                Ge = at(n(260)),
+                Ye = at(n(261)),
+                Ve = at(n(262)),
+                Ke = at(n(263)),
+                qe = at(n(264)),
+                Xe = at(n(265)),
+                ze = at(n(266)),
+                Qe = at(n(267)),
+                Ze = at(n(268)),
+                Je = at(n(269)),
+                et = at(n(270)),
+                tt = at(n(271)),
+                nt = at(n(272)),
+                st = at(n(273)),
+                ot = at(n(274)),
+                it = at(n(275)),
+                rt = at(n(276)),
+                lt = at(n(277));
 
-            function ct(e) {
+            function at(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
             const {
-                HextechLoadingAnimationComponent: dt,
-                RenderTelemetrySenderComponent: mt
+                HextechLoadingAnimationComponent: ct,
+                RenderTelemetrySenderComponent: dt
             } = s.SharedComponents.getSharedEmberComponents(), {
-                GradeDisplayComponent: pt,
-                MasteryCrestComponent: ut,
-                MilestoneTooltipComponent: ht,
-                MasterySetCarouselComponent: gt
-            } = s.SharedComponents.getApi_SharedChampionMasteryComponents(), ft = "rcp-fe-lol-collections-ember";
-            t.APP_NAME = ft
+                GradeDisplayComponent: mt,
+                MasteryCrestComponent: pt,
+                MilestoneTooltipComponent: ut,
+                MasterySetCarouselComponent: ht
+            } = s.SharedComponents.getApi_SharedChampionMasteryComponents(), gt = "rcp-fe-lol-collections-ember";
+            t.APP_NAME = gt
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1020,12 +1018,12 @@
                             defaultChampionMastery: g,
                             customRewards: f,
                             championCountByMilestone: y
-                        } = n || {}, b = s.SharedChampionMasteryConstants.MINIMUM_MASTERY_MILESTONE_LEVEL + 1, k = h ? h[b] : {}, E = this.mapMasteryById(m), _ = this.mapPositionsById(a), S = this.mapEternalsById(i);
+                        } = n || {}, b = s.SharedChampionMasteryConstants.MINIMUM_MASTERY_MILESTONE_LEVEL + 1, k = h ? h[b] : {}, S = this.mapMasteryById(m), E = this.mapPositionsById(a), _ = this.mapEternalsById(i);
                         return {
-                            champions: this.combineLcmChampionData(Object.values(d), E, _, S, k, g),
+                            champions: this.combineLcmChampionData(Object.values(d), S, E, _, k, g),
                             renderEventName: o,
                             championMasteries: m,
-                            champIdToMasteriesMap: E,
+                            champIdToMasteriesMap: S,
                             championIdToChampionDataMap: d,
                             championSetData: p,
                             seasonData: r,
@@ -1178,16 +1176,16 @@
                             const [t, n, s, i, r, l, a, c, d, m, p, u] = e, h = this.getSkinsById(s, t), {
                                 championBySkinId: g,
                                 championsById: f
-                            } = this.getChampionsInfo(a), y = this.getOwnershipById(l), b = this.getCatalogDataById(d), k = this.getIsInBundleById(b), E = this.getLootItemSet(m), _ = this.getSkinAugmentsById(u);
-                            this.joinPurchaseData(h, b, k, E), this.joinOwnershipData(h, y), this.joinChampionData(h, g), this.joinSetData(h, i, r), this.joinSkinBorderData(h, p), this.joinSkinAugmentsData(h, _);
-                            const S = this.getSortableMasteries(c, f),
+                            } = this.getChampionsInfo(a), y = this.getOwnershipById(l), b = this.getCatalogDataById(d), k = this.getIsInBundleById(b), S = this.getLootItemSet(m), E = this.getSkinAugmentsById(u);
+                            this.joinPurchaseData(h, b, k, S), this.joinOwnershipData(h, y), this.joinChampionData(h, g), this.joinSetData(h, i, r), this.joinSkinBorderData(h, p), this.joinSkinAugmentsData(h, E);
+                            const _ = this.getSortableMasteries(c, f),
                                 v = this.getRarities(h),
                                 A = this.getNumOwnedChromas(h),
                                 x = n.data && n.data.lastVisitTime;
                             return this.joinLastVisitTime(h, x), {
                                 skinsById: h,
                                 rarities: v,
-                                sortableMasteries: S,
+                                sortableMasteries: _,
                                 numOwnedChromas: A,
                                 region: t,
                                 renderEventName: o.RENDER_EVENT_NAME
@@ -6768,7 +6766,7 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.TITLE_LENGTH_LIMIT = t.TELEMETRY_EVENT_SOURCE_ROOT = t.TELEMETRY_EVENT_SOURCE_PREFERRED_SLOT = t.TELEMETRY_EVENT_SOURCE_EDITOR_MATCH_HISTORY = t.TELEMETRY_EVENT_SOURCE_EDITOR_EOG = t.TELEMETRY_EVENT_SOURCE_EDITOR = t.TELEMETRY_EVENT_SOURCE_DATA_SERVICE = t.TELEMETRY_EVENT_SOURCE_BROWSER = t.TELEMETRY_EVENT_NAME = t.TELEMETRY_EVENT_ID_SAVE_PREFERRED_SLOTS = t.TELEMETRY_EVENT_ID_SAVE_FAILURE = t.TELEMETRY_EVENT_ID_SAVE = t.TELEMETRY_EVENT_ID_MAP_IMPORT = t.TELEMETRY_EVENT_ID_MAP_EXPORT = t.TELEMETRY_EVENT_ID_IMPORT = t.TELEMETRY_EVENT_ID_DUPLICATE_RECOMMENDED = t.TELEMETRY_EVENT_ID_DUPLICATE = t.TELEMETRY_EVENT_ID_DELETE = t.TELEMETRY_EVENT_ID_CREATE_NEW = t.TELEMETRY_EVENT_ID_CLOSE = t.SPECIAL_CHAMP_ALIAS_KEY_MAP = t.SORT_OPTIONS = t.SLOT_TO_DISPLAY_MAP = t.SCROLLABLE_ITEM_BLOCKS_RECT = t.SCROLLABLE_AUTO_SCROLL_STEP = t.SCROLLABLE_AUTO_SCROLL_SENSITIVITY = t.RESTRICTED_PAGE_NAMES_ENABLED = t.RECENT_CHAMPION_NUM = t.PREFERRED_SLOT_ID_MEDIA_TYPE = t.PREFERRED_SLOTS_SORTABLE_GROUP_NAME = t.MAX_ITEM_SETS_PER_PLAYER = t.MAX_ITEM_PER_PREFERRED_SLOT = t.MAX_ITEM_PER_BLOCK = t.MAX_CHAMPION_SELECTOR_DISPLAY = t.MAX_CHAMPION_ASSOCIATION_DISPLAY = t.MAX_BLOCKS_PER_ITEM_SET = t.MAP_ID_TO_RECOMMENDED_KEY_MAPPING = t.ITEM_SET_RENAMING_DISABLED = t.ITEM_SET_JSON_SCHEMA = t.ITEM_MEDIA_TYPE = t.ITEM_GRID_SORTABLE_GROUP_NAME = t.ITEM_EDITOR_BLOCKS_SORTABLE_GROUP_NAME = t.ITEM_CATEGORY_FILTER_GROUPS = t.ITEM_BUILD_PATH_SORTABLE_GROUP_NAME = t.IMPORT_FILE_SIZE_LIMIT = t.EMPTY_AREA_SORTABLE_GROUP_NAME = t.DEFAULT_ITEM_SLOTS = t.CHAMPION_ROLES = t.ASSOCIABLE_MAPS = void 0;
+            }), t.TITLE_LENGTH_LIMIT = t.SPECIAL_CHAMP_ALIAS_KEY_MAP = t.SORT_OPTIONS = t.SLOT_TO_DISPLAY_MAP = t.SCROLLABLE_ITEM_BLOCKS_RECT = t.SCROLLABLE_AUTO_SCROLL_STEP = t.SCROLLABLE_AUTO_SCROLL_SENSITIVITY = t.RESTRICTED_PAGE_NAMES_ENABLED = t.RECENT_CHAMPION_NUM = t.PREFERRED_SLOT_ID_MEDIA_TYPE = t.PREFERRED_SLOTS_SORTABLE_GROUP_NAME = t.MAX_ITEM_SETS_PER_PLAYER = t.MAX_ITEM_PER_PREFERRED_SLOT = t.MAX_ITEM_PER_BLOCK = t.MAX_CHAMPION_SELECTOR_DISPLAY = t.MAX_CHAMPION_ASSOCIATION_DISPLAY = t.MAX_BLOCKS_PER_ITEM_SET = t.MAP_ID_TO_RECOMMENDED_KEY_MAPPING = t.ITEM_SET_RENAMING_DISABLED = t.ITEM_SET_JSON_SCHEMA = t.ITEM_MEDIA_TYPE = t.ITEM_GRID_SORTABLE_GROUP_NAME = t.ITEM_EDITOR_BLOCKS_SORTABLE_GROUP_NAME = t.ITEM_CATEGORY_FILTER_GROUPS = t.ITEM_BUILD_PATH_SORTABLE_GROUP_NAME = t.IMPORT_FILE_SIZE_LIMIT = t.EMPTY_AREA_SORTABLE_GROUP_NAME = t.DEFAULT_ITEM_SLOTS = t.CHAMPION_ROLES = t.ASSOCIABLE_MAPS = void 0;
             t.ITEM_MEDIA_TYPE = "application/riot.item+json";
             t.PREFERRED_SLOT_ID_MEDIA_TYPE = "application/riot.preferred.slot.Id";
             t.ITEM_CATEGORY_FILTER_GROUPS = [{
@@ -6854,31 +6852,6 @@
                 FiddleSticks: "Fiddle",
                 MonkeyKing: "Wukong"
             };
-            t.TELEMETRY_EVENT_NAME = "item_sets__item_sets_event";
-            t.TELEMETRY_EVENT_ID_CREATE_NEW = "create";
-            t.TELEMETRY_EVENT_ID_IMPORT = "import";
-            t.TELEMETRY_EVENT_ID_DUPLICATE = "duplicate";
-            t.TELEMETRY_EVENT_ID_DUPLICATE_RECOMMENDED = "duplicate_recommended";
-            t.TELEMETRY_EVENT_ID_DELETE = "delete";
-            t.TELEMETRY_EVENT_ID_SAVE = "save";
-            t.TELEMETRY_EVENT_ID_SAVE_FAILURE = "save_failure";
-            t.TELEMETRY_EVENT_ID_CLOSE = "close";
-            t.TELEMETRY_EVENT_ID_SAVE_PREFERRED_SLOTS = "preferred_slot";
-            t.TELEMETRY_EVENT_ID_MAP_IMPORT = {
-                clipboard: "import_clipboard",
-                file: "import_file"
-            };
-            t.TELEMETRY_EVENT_ID_MAP_EXPORT = {
-                clipboard: "export_clipboard",
-                file: "export_file"
-            };
-            t.TELEMETRY_EVENT_SOURCE_ROOT = "root";
-            t.TELEMETRY_EVENT_SOURCE_DATA_SERVICE = "data_service";
-            t.TELEMETRY_EVENT_SOURCE_BROWSER = "browser";
-            t.TELEMETRY_EVENT_SOURCE_PREFERRED_SLOT = "preferred_slot";
-            t.TELEMETRY_EVENT_SOURCE_EDITOR = "editor";
-            t.TELEMETRY_EVENT_SOURCE_EDITOR_MATCH_HISTORY = "editor_match_history";
-            t.TELEMETRY_EVENT_SOURCE_EDITOR_EOG = "editor_eog";
             t.EMPTY_AREA_SORTABLE_GROUP_NAME = "empty-area";
             t.ITEM_GRID_SORTABLE_GROUP_NAME = "item-list";
             t.ITEM_EDITOR_BLOCKS_SORTABLE_GROUP_NAME = "item-section";
@@ -7199,21 +7172,21 @@
                 if ("undefined" == typeof window || !window.document) return function() {
                     throw new Error("Sortable.js requires a window with a document")
                 };
-                var e, t, n, s, o, i, r, l, a, c, d, m, p, u, h, g, f, y, b, k, E, _, S, v, A, x, w, I, C = [],
+                var e, t, n, s, o, i, r, l, a, c, d, m, p, u, h, g, f, y, b, k, S, E, _, v, A, x, w, I, C = [],
                     T = !1,
                     P = !1,
                     O = !1,
                     D = [],
-                    R = !1,
                     M = !1,
+                    R = !1,
                     L = [],
                     B = /\s+/g,
                     N = "Sortable" + (new Date).getTime(),
                     F = window,
-                    U = F.document,
-                    j = F.parseInt,
-                    H = F.setTimeout,
-                    $ = F.jQuery || F.Zepto,
+                    j = F.document,
+                    U = F.parseInt,
+                    $ = F.setTimeout,
+                    H = F.jQuery || F.Zepto,
                     W = F.Polymer,
                     G = {
                         capture: !1,
@@ -7225,10 +7198,10 @@
                     q = !(!navigator.userAgent.match(/safari/i) || navigator.userAgent.match(/chrome/i) || navigator.userAgent.match(/android/i)),
                     X = !!navigator.userAgent.match(/iP(ad|od|hone)/i),
                     z = V || Y ? "cssFloat" : "float",
-                    Q = "draggable" in U.createElement("div"),
+                    Q = "draggable" in j.createElement("div"),
                     Z = function() {
                         if (Y) return !1;
-                        var e = U.createElement("x");
+                        var e = j.createElement("x");
                         return e.style.cssText = "pointer-events:auto", "auto" === e.style.pointerEvents
                     }(),
                     J = !1,
@@ -7239,13 +7212,13 @@
                     oe = [],
                     ie = function(e, t) {
                         var n = ve(e),
-                            s = j(n.width) - j(n.paddingLeft) - j(n.paddingRight) - j(n.borderLeftWidth) - j(n.borderRightWidth),
+                            s = U(n.width) - U(n.paddingLeft) - U(n.paddingRight) - U(n.borderLeftWidth) - U(n.borderRightWidth),
                             o = Pe(e, 0, t),
                             i = Pe(e, 1, t),
                             r = o && ve(o),
                             l = i && ve(i),
-                            a = r && j(r.marginLeft) + j(r.marginRight) + He(o).width,
-                            c = l && j(l.marginLeft) + j(l.marginRight) + He(i).width;
+                            a = r && U(r.marginLeft) + U(r.marginRight) + $e(o).width,
+                            c = l && U(l.marginLeft) + U(l.marginRight) + $e(i).width;
                         if ("flex" === n.display) return "column" === n.flexDirection || "column-reverse" === n.flexDirection ? "vertical" : "horizontal";
                         if ("grid" === n.display) return n.gridTemplateColumns.split(" ").length <= 1 ? "vertical" : "horizontal";
                         if (o && "none" !== r.float) {
@@ -7262,7 +7235,7 @@
                             if (n.clientWidth < n.scrollWidth || n.clientHeight < n.scrollHeight) {
                                 var o = ve(n);
                                 if (n.clientWidth < n.scrollWidth && ("auto" == o.overflowX || "scroll" == o.overflowX) || n.clientHeight < n.scrollHeight && ("auto" == o.overflowY || "scroll" == o.overflowY)) {
-                                    if (!n || !n.getBoundingClientRect || n === U.body) return le();
+                                    if (!n || !n.getBoundingClientRect || n === j.body) return le();
                                     if (s || t) return n;
                                     s = !0
                                 }
@@ -7271,7 +7244,7 @@
                         return le()
                     },
                     le = function() {
-                        return Y ? U.documentElement : U.scrollingElement
+                        return Y ? j.documentElement : j.scrollingElement
                     },
                     ae = function(e, t, n) {
                         e.scrollLeft += t, e.scrollTop += n
@@ -7289,21 +7262,21 @@
                             var h = 0,
                                 g = l;
                             do {
-                                var f, y, b, k, _, S, v, A, x, w = g,
-                                    I = He(w),
+                                var f, y, b, k, E, _, v, A, x, w = g,
+                                    I = $e(w),
                                     P = I.top,
                                     O = I.bottom,
                                     D = I.left,
-                                    R = I.right,
-                                    M = I.width,
+                                    M = I.right,
+                                    R = I.width,
                                     L = I.height;
-                                if (f = w.scrollWidth, y = w.scrollHeight, b = ve(w), A = w.scrollLeft, x = w.scrollTop, w === p ? (S = M < f && ("auto" === b.overflowX || "scroll" === b.overflowX || "visible" === b.overflowX), v = L < y && ("auto" === b.overflowY || "scroll" === b.overflowY || "visible" === b.overflowY)) : (S = M < f && ("auto" === b.overflowX || "scroll" === b.overflowX), v = L < y && ("auto" === b.overflowY || "scroll" === b.overflowY)), k = S && (te(R - d) <= i && A + M < f) - (te(D - d) <= i && !!A), _ = v && (te(O - m) <= i && x + L < y) - (te(P - m) <= i && !!x), !C[h])
+                                if (f = w.scrollWidth, y = w.scrollHeight, b = ve(w), A = w.scrollLeft, x = w.scrollTop, w === p ? (_ = R < f && ("auto" === b.overflowX || "scroll" === b.overflowX || "visible" === b.overflowX), v = L < y && ("auto" === b.overflowY || "scroll" === b.overflowY || "visible" === b.overflowY)) : (_ = R < f && ("auto" === b.overflowX || "scroll" === b.overflowX), v = L < y && ("auto" === b.overflowY || "scroll" === b.overflowY)), k = _ && (te(M - d) <= i && A + R < f) - (te(D - d) <= i && !!A), E = v && (te(O - m) <= i && x + L < y) - (te(P - m) <= i && !!x), !C[h])
                                     for (var B = 0; B <= h; B++) C[B] || (C[B] = {});
-                                C[h].vx == k && C[h].vy == _ && C[h].el === w || (C[h].el = w, C[h].vx = k, C[h].vy = _, clearInterval(C[h].pid), !w || 0 == k && 0 == _ || (u = !0, C[h].pid = setInterval(function() {
-                                    s && 0 === this.layer && (ye.active._emulateDragOver(!0), ye.active._onTouchMove(E, !0));
+                                C[h].vx == k && C[h].vy == E && C[h].el === w || (C[h].el = w, C[h].vx = k, C[h].vy = E, clearInterval(C[h].pid), !w || 0 == k && 0 == E || (u = !0, C[h].pid = setInterval(function() {
+                                    s && 0 === this.layer && (ye.active._emulateDragOver(!0), ye.active._onTouchMove(S, !0));
                                     var t = C[this.layer].vy ? C[this.layer].vy * r : 0,
                                         n = C[this.layer].vx ? C[this.layer].vx * r : 0;
-                                    "function" == typeof c && "continue" !== c.call(o, n, t, e, E, C[this.layer].el) || ae(C[this.layer].el, n, t)
+                                    "function" == typeof c && "continue" !== c.call(o, n, t, e, S, C[this.layer].el) || ae(C[this.layer].el, n, t)
                                 }.bind({
                                     layer: h
                                 }), 24))), h++
@@ -7343,7 +7316,7 @@
                     he = function() {
                         !Z && n && ve(n, "display", "")
                     };
-                U.addEventListener("click", (function(e) {
+                j.addEventListener("click", (function(e) {
                     if (O) return e.preventDefault(), e.stopPropagation && e.stopPropagation(), e.stopImmediatePropagation && e.stopImmediatePropagation(), O = !1, !1
                 }), !0);
                 var ge, fe = function(t) {
@@ -7351,7 +7324,7 @@
                         var n = function(e, t) {
                             for (var n = 0; n < D.length; n++)
                                 if (!Oe(D[n])) {
-                                    var s = He(D[n]),
+                                    var s = $e(D[n]),
                                         o = D[n][N].options.emptyInsertThreshold,
                                         i = e >= s.left - o && e <= s.right + o,
                                         r = t >= s.top - o && t <= s.bottom + o;
@@ -7403,7 +7376,7 @@
                         dataIdAttr: "data-id",
                         delay: 0,
                         delayOnTouchOnly: !1,
-                        touchStartThreshold: j(window.devicePixelRatio, 10) || 1,
+                        touchStartThreshold: U(window.devicePixelRatio, 10) || 1,
                         forceFallback: !1,
                         fallbackClass: "sortable-fallback",
                         fallbackOnBody: !1,
@@ -7417,12 +7390,12 @@
                     };
                     for (var s in n) !(s in t) && (t[s] = n[s]);
                     for (var o in me(t), this) "_" === o.charAt(0) && "function" == typeof this[o] && (this[o] = this[o].bind(this));
-                    this.nativeDraggable = !t.forceFallback && Q, this.nativeDraggable && (this.options.touchStartThreshold = 1), t.supportPointer ? Ee(e, "pointerdown", this._onTapStart) : (Ee(e, "mousedown", this._onTapStart), Ee(e, "touchstart", this._onTapStart)), this.nativeDraggable && (Ee(e, "dragover", this), Ee(e, "dragenter", this)), D.push(this.el), t.store && t.store.get && this.sort(t.store.get(this) || [])
+                    this.nativeDraggable = !t.forceFallback && Q, this.nativeDraggable && (this.options.touchStartThreshold = 1), t.supportPointer ? Se(e, "pointerdown", this._onTapStart) : (Se(e, "mousedown", this._onTapStart), Se(e, "touchstart", this._onTapStart)), this.nativeDraggable && (Se(e, "dragover", this), Se(e, "dragenter", this)), D.push(this.el), t.store && t.store.get && this.sort(t.store.get(this) || [])
                 }
 
                 function be(e, t, n, s) {
                     if (e) {
-                        n = n || U;
+                        n = n || j;
                         do {
                             if (null != t && (">" === t[0] ? e.parentNode === n && Le(e, t) : Le(e, t)) || s && e === n) return e;
                             if (e === n) break
@@ -7432,18 +7405,18 @@
                 }
 
                 function ke(e) {
-                    return e.host && e !== U && e.host.nodeType ? e.host : e.parentNode
-                }
-
-                function Ee(e, t, n) {
-                    e.addEventListener(t, n, !Y && G)
-                }
-
-                function _e(e, t, n) {
-                    e.removeEventListener(t, n, !Y && G)
+                    return e.host && e !== j && e.host.nodeType ? e.host : e.parentNode
                 }
 
                 function Se(e, t, n) {
+                    e.addEventListener(t, n, !Y && G)
+                }
+
+                function Ee(e, t, n) {
+                    e.removeEventListener(t, n, !Y && G)
+                }
+
+                function _e(e, t, n) {
                     if (e && t)
                         if (e.classList) e.classList[n ? "add" : "remove"](t);
                         else {
@@ -7455,7 +7428,7 @@
                 function ve(e, t, n) {
                     var s = e && e.style;
                     if (s) {
-                        if (void 0 === n) return U.defaultView && U.defaultView.getComputedStyle ? n = U.defaultView.getComputedStyle(e, "") : e.currentStyle && (n = e.currentStyle), void 0 === t ? n : n[t];
+                        if (void 0 === n) return j.defaultView && j.defaultView.getComputedStyle ? n = j.defaultView.getComputedStyle(e, "") : e.currentStyle && (n = e.currentStyle), void 0 === t ? n : n[t];
                         t in s || -1 !== t.indexOf("webkit") || (t = "-webkit-" + t), s[t] = n + ("string" == typeof n ? "" : "px")
                     }
                 }
@@ -7484,7 +7457,7 @@
                 function we(e, t, n, o, i, r, l, a, c, d, m) {
                     var p, u = (e = e || t[N]).options,
                         h = "on" + n.charAt(0).toUpperCase() + n.substr(1);
-                    !window.CustomEvent || Y || V ? (p = U.createEvent("Event")).initEvent(n, !0, !0) : p = new CustomEvent(n, {
+                    !window.CustomEvent || Y || V ? (p = j.createEvent("Event")).initEvent(n, !0, !0) : p = new CustomEvent(n, {
                         bubbles: !0,
                         cancelable: !0
                     }), p.to = i || t, p.from = r || t, p.item = o || t, p.clone = s, p.oldIndex = l, p.newIndex = a, p.oldDraggableIndex = c, p.newDraggableIndex = d, p.originalEvent = m, p.pullMode = g ? g.lastPutMode : void 0, t && t.dispatchEvent(p), u[h] && u[h].call(e, p)
@@ -7493,10 +7466,10 @@
                 function Ie(e, t, n, s, o, i, r, l) {
                     var a, c, d = e[N],
                         m = d.options.onMove;
-                    return !window.CustomEvent || Y || V ? (a = U.createEvent("Event")).initEvent("move", !0, !0) : a = new CustomEvent("move", {
+                    return !window.CustomEvent || Y || V ? (a = j.createEvent("Event")).initEvent("move", !0, !0) : a = new CustomEvent("move", {
                         bubbles: !0,
                         cancelable: !0
-                    }), a.to = t, a.from = e, a.dragged = n, a.draggedRect = s, a.related = o || t, a.relatedRect = i || He(t), a.willInsertAfter = l, a.originalEvent = r, e.dispatchEvent(a), m && (c = m.call(d, a, r)), c
+                    }), a.to = t, a.from = e, a.dragged = n, a.draggedRect = s, a.related = o || t, a.relatedRect = i || $e(t), a.willInsertAfter = l, a.originalEvent = r, e.dispatchEvent(a), m && (c = m.call(d, a, r)), c
                 }
 
                 function Ce(e) {
@@ -7524,15 +7497,15 @@
                 }
 
                 function De(t) {
-                    return Me(e) < Me(t) ? 1 : -1
+                    return Re(e) < Re(t) ? 1 : -1
                 }
 
-                function Re(e) {
+                function Me(e) {
                     for (var t = e.tagName + e.className + e.src + e.href + e.textContent, n = t.length, s = 0; n--;) s += t.charCodeAt(n);
                     return s.toString(36)
                 }
 
-                function Me(e, t) {
+                function Re(e, t) {
                     var n = 0;
                     if (!e || !e.parentNode) return -1;
                     for (; e && (e = e.previousElementSibling);) "TEMPLATE" === e.nodeName.toUpperCase() || e === s || t && !Le(e, t) || n++;
@@ -7557,7 +7530,7 @@
                         if (!ge) {
                             var n = arguments,
                                 s = this;
-                            ge = H((function() {
+                            ge = $((function() {
                                 1 === n.length ? e.call(s, n[0]) : e.apply(s, n), ge = void 0
                             }), t)
                         }
@@ -7571,25 +7544,25 @@
                 }
 
                 function Fe(e) {
-                    return W && W.dom ? W.dom(e).cloneNode(!0) : $ ? $(e).clone(!0)[0] : e.cloneNode(!0)
-                }
-
-                function Ue(e) {
-                    return H(e, 0)
+                    return W && W.dom ? W.dom(e).cloneNode(!0) : H ? H(e).clone(!0)[0] : e.cloneNode(!0)
                 }
 
                 function je(e) {
+                    return $(e, 0)
+                }
+
+                function Ue(e) {
                     return clearTimeout(e)
                 }
 
-                function He(e, t, n, s) {
+                function $e(e, t, n, s) {
                     if (e.getBoundingClientRect || e === F) {
                         var o, i, r, l, a, c, d;
                         if (e !== F && e !== le() ? (i = (o = e.getBoundingClientRect()).top, r = o.left, l = o.bottom, a = o.right, c = o.height, d = o.width) : (i = 0, r = 0, l = window.innerHeight, a = window.innerWidth, c = window.innerHeight, d = window.innerWidth), s && e !== F && (n = n || e.parentNode, !Y))
                             do {
                                 if (n && n.getBoundingClientRect && "none" !== ve(n, "transform")) {
                                     var m = n.getBoundingClientRect();
-                                    i -= m.top + j(ve(n, "border-top-width")), r -= m.left + j(ve(n, "border-left-width")), l = i + o.height, a = r + o.width;
+                                    i -= m.top + U(ve(n, "border-top-width")), r -= m.left + U(ve(n, "border-left-width")), l = i + o.height, a = r + o.width;
                                     break
                                 }
                             } while (n = n.parentNode);
@@ -7610,9 +7583,9 @@
                     }
                 }
 
-                function $e(e, t) {
-                    for (var n = re(e, !0), s = He(e)[t]; n;) {
-                        var o = He(n)[t];
+                function He(e, t) {
+                    for (var n = re(e, !0), s = $e(e)[t]; n;) {
+                        var o = $e(n)[t];
                         if (!("top" === t || "left" === t ? s >= o : s <= o)) return n;
                         if (n === le()) break;
                         n = re(n, !1)
@@ -7637,9 +7610,9 @@
                     constructor: ye,
                     _computeIsAligned: function(t) {
                         var s;
-                        if (n && !Z ? (ue(), s = U.elementFromPoint(t.clientX, t.clientY), he()) : s = t.target, s = be(s, this.options.draggable, this.el, !1), !ee && e && e.parentNode === this.el) {
-                            for (var o, i, r, l, a, c, d, m, p = this.el.children, u = 0; u < p.length; u++) be(p[u], this.options.draggable, this.el, !1) && p[u] !== s && (p[u].sortableMouseAligned = (o = t.clientX, i = t.clientY, r = p[u], l = this._getDirection(t, null), this.options, a = void 0, c = void 0, d = void 0, m = void 0, a = He(r), c = "vertical" === l ? a.left : a.top, d = "vertical" === l ? a.right : a.bottom, c < (m = "vertical" === l ? o : i) && m < d));
-                            be(s, this.options.draggable, this.el, !0) || (S = null), ee = !0, H((function() {
+                        if (n && !Z ? (ue(), s = j.elementFromPoint(t.clientX, t.clientY), he()) : s = t.target, s = be(s, this.options.draggable, this.el, !1), !ee && e && e.parentNode === this.el) {
+                            for (var o, i, r, l, a, c, d, m, p = this.el.children, u = 0; u < p.length; u++) be(p[u], this.options.draggable, this.el, !1) && p[u] !== s && (p[u].sortableMouseAligned = (o = t.clientX, i = t.clientY, r = p[u], l = this._getDirection(t, null), this.options, a = void 0, c = void 0, d = void 0, m = void 0, a = $e(r), c = "vertical" === l ? a.left : a.top, d = "vertical" === l ? a.right : a.bottom, c < (m = "vertical" === l ? o : i) && m < d));
+                            be(s, this.options.draggable, this.el, !0) || (_ = null), ee = !0, $((function() {
                                 ee = !1
                             }), 30)
                         }
@@ -7667,7 +7640,7 @@
                                         s.checked && oe.push(s)
                                     }
                                 }(i), !e && !(/mousedown|pointerdown/.test(c) && 0 !== t.button || l.disabled || p.isContentEditable || (m = be(m, l.draggable, i, !1), r === m))) {
-                                if (n = Me(m), s = Me(m, l.draggable), "function" == typeof u) {
+                                if (n = Re(m), s = Re(m, l.draggable), "function" == typeof u) {
                                     if (u.call(this, t, m, this)) return we(o, p, "filter", m, i, i, n, void 0, s), void(a && t.cancelable && t.preventDefault())
                                 } else if (u && (u = u.split(",").some((function(e) {
                                         if (e = be(p, e.trim(), i, !1)) return we(o, e, "filter", m, i, i, n, void 0, s), !0
@@ -7680,14 +7653,14 @@
                         if (e && this.options.scroll) {
                             var s = t.clientX,
                                 o = t.clientY,
-                                i = U.elementFromPoint(s, o),
+                                i = j.elementFromPoint(s, o),
                                 r = this;
                             if (n || V || Y || q) {
                                 ce(t, r.options, i, n);
                                 var l = re(i, !0);
                                 !T || f && s === y && o === b || (f && clearInterval(f), f = setInterval((function() {
                                     if (e) {
-                                        var i = re(U.elementFromPoint(s, o), !0);
+                                        var i = re(j.elementFromPoint(s, o), !0);
                                         i !== l && (l = i, de(), ce(t, r.options, l, n))
                                     }
                                 }), 10), y = s, b = o)
@@ -7707,10 +7680,10 @@
                             clientX: (s || n).clientX,
                             clientY: (s || n).clientY
                         }, this._lastX = (s || n).clientX, this._lastY = (s || n).clientY, e.style["will-change"] = "all", e.style.transition = "", e.style.transform = "", m = function() {
-                            u._disableDelayedDragEvents(), !K && u.nativeDraggable && (e.draggable = !0), u._triggerDragStart(n, s), we(u, o, "choose", e, o, o, d, void 0, p), Se(e, f.chosenClass, !0)
+                            u._disableDelayedDragEvents(), !K && u.nativeDraggable && (e.draggable = !0), u._triggerDragStart(n, s), we(u, o, "choose", e, o, o, d, void 0, p), _e(e, f.chosenClass, !0)
                         }, f.ignore.split(",").forEach((function(t) {
                             xe(e, t.trim(), Ce)
-                        })), Ee(y, "dragover", fe), Ee(y, "mousemove", fe), Ee(y, "touchmove", fe), Ee(y, "mouseup", u._onDrop), Ee(y, "touchend", u._onDrop), Ee(y, "touchcancel", u._onDrop), K && this.nativeDraggable && (this.options.touchStartThreshold = 4, e.draggable = !0), !f.delay || f.delayOnTouchOnly && !s || this.nativeDraggable && (V || Y) ? m() : (Ee(y, "mouseup", u._disableDelayedDrag), Ee(y, "touchend", u._disableDelayedDrag), Ee(y, "touchcancel", u._disableDelayedDrag), Ee(y, "mousemove", u._delayedDragTouchMoveHandler), Ee(y, "touchmove", u._delayedDragTouchMoveHandler), f.supportPointer && Ee(y, "pointermove", u._delayedDragTouchMoveHandler), u._dragStartTimer = H(m, f.delay)))
+                        })), Se(y, "dragover", fe), Se(y, "mousemove", fe), Se(y, "touchmove", fe), Se(y, "mouseup", u._onDrop), Se(y, "touchend", u._onDrop), Se(y, "touchcancel", u._onDrop), K && this.nativeDraggable && (this.options.touchStartThreshold = 4, e.draggable = !0), !f.delay || f.delayOnTouchOnly && !s || this.nativeDraggable && (V || Y) ? m() : (Se(y, "mouseup", u._disableDelayedDrag), Se(y, "touchend", u._disableDelayedDrag), Se(y, "touchcancel", u._disableDelayedDrag), Se(y, "mousemove", u._delayedDragTouchMoveHandler), Se(y, "touchmove", u._delayedDragTouchMoveHandler), f.supportPointer && Se(y, "pointermove", u._delayedDragTouchMoveHandler), u._dragStartTimer = $(m, f.delay)))
                     },
                     _delayedDragTouchMoveHandler: function(e) {
                         var t = e.touches ? e.touches[0] : e;
@@ -7721,40 +7694,40 @@
                     },
                     _disableDelayedDragEvents: function() {
                         var e = this.el.ownerDocument;
-                        _e(e, "mouseup", this._disableDelayedDrag), _e(e, "touchend", this._disableDelayedDrag), _e(e, "touchcancel", this._disableDelayedDrag), _e(e, "mousemove", this._delayedDragTouchMoveHandler), _e(e, "touchmove", this._delayedDragTouchMoveHandler), _e(e, "pointermove", this._delayedDragTouchMoveHandler)
+                        Ee(e, "mouseup", this._disableDelayedDrag), Ee(e, "touchend", this._disableDelayedDrag), Ee(e, "touchcancel", this._disableDelayedDrag), Ee(e, "mousemove", this._delayedDragTouchMoveHandler), Ee(e, "touchmove", this._delayedDragTouchMoveHandler), Ee(e, "pointermove", this._delayedDragTouchMoveHandler)
                     },
                     _triggerDragStart: function(t, n) {
-                        n = n || ("touch" == t.pointerType ? t : null), !this.nativeDraggable || n ? this.options.supportPointer ? Ee(U, "pointermove", this._onTouchMove) : Ee(U, n ? "touchmove" : "mousemove", this._onTouchMove) : (Ee(e, "dragend", this), Ee(o, "dragstart", this._onDragStart));
+                        n = n || ("touch" == t.pointerType ? t : null), !this.nativeDraggable || n ? this.options.supportPointer ? Se(j, "pointermove", this._onTouchMove) : Se(j, n ? "touchmove" : "mousemove", this._onTouchMove) : (Se(e, "dragend", this), Se(o, "dragstart", this._onDragStart));
                         try {
-                            U.selection ? Ue((function() {
-                                U.selection.empty()
+                            j.selection ? je((function() {
+                                j.selection.empty()
                             })) : window.getSelection().removeAllRanges()
                         } catch (e) {}
                     },
                     _dragStarted: function(t, n) {
                         if (P = !1, o && e) {
-                            this.nativeDraggable && (Ee(U, "dragover", this._handleAutoScroll), Ee(U, "dragover", pe));
+                            this.nativeDraggable && (Se(j, "dragover", this._handleAutoScroll), Se(j, "dragover", pe));
                             var s = this.options;
-                            !t && Se(e, s.dragClass, !1), Se(e, s.ghostClass, !0), ve(e, "transform", ""), ye.active = this, t && this._appendGhost(), we(this, o, "start", e, o, o, d, void 0, p, void 0, n)
+                            !t && _e(e, s.dragClass, !1), _e(e, s.ghostClass, !0), ve(e, "transform", ""), ye.active = this, t && this._appendGhost(), we(this, o, "start", e, o, o, d, void 0, p, void 0, n)
                         } else this._nulling()
                     },
                     _emulateDragOver: function(t) {
-                        if (E) {
-                            if (this._lastX === E.clientX && this._lastY === E.clientY && !t) return;
-                            this._lastX = E.clientX, this._lastY = E.clientY, ue();
-                            for (var n = U.elementFromPoint(E.clientX, E.clientY), s = n; n && n.shadowRoot && (n = n.shadowRoot.elementFromPoint(E.clientX, E.clientY)) !== s;) s = n;
+                        if (S) {
+                            if (this._lastX === S.clientX && this._lastY === S.clientY && !t) return;
+                            this._lastX = S.clientX, this._lastY = S.clientY, ue();
+                            for (var n = j.elementFromPoint(S.clientX, S.clientY), s = n; n && n.shadowRoot && (n = n.shadowRoot.elementFromPoint(S.clientX, S.clientY)) !== s;) s = n;
                             if (s)
                                 do {
                                     if (s[N])
                                         if (s[N]._onDragOver({
-                                                clientX: E.clientX,
-                                                clientY: E.clientY,
+                                                clientX: S.clientX,
+                                                clientY: S.clientY,
                                                 target: n,
                                                 rootEl: s
                                             }) && !this.options.dragoverBubble) break;
                                     n = s
                                 } while (s = s.parentNode);
-                            e.parentNode[N]._computeIsAligned(E), he()
+                            e.parentNode[N]._computeIsAligned(S), he()
                         }
                     },
                     _onTouchMove: function(e, t) {
@@ -7773,33 +7746,33 @@
                             if (!ye.active && !P) {
                                 if (o && ne(te(r.clientX - this._lastX), te(r.clientY - this._lastY)) < o) return;
                                 this._onDragStart(e, !0)
-                            }!t && this._handleAutoScroll(r, !0), _ = !0, E = r, ve(n, "webkitTransform", u), ve(n, "mozTransform", u), ve(n, "msTransform", u), ve(n, "transform", u), e.cancelable && e.preventDefault()
+                            }!t && this._handleAutoScroll(r, !0), E = !0, S = r, ve(n, "webkitTransform", u), ve(n, "mozTransform", u), ve(n, "msTransform", u), ve(n, "transform", u), e.cancelable && e.preventDefault()
                         }
                     },
                     _appendGhost: function() {
                         if (!n) {
-                            var t = this.options.fallbackOnBody ? U.body : o,
-                                s = He(e, !0, t, !X),
+                            var t = this.options.fallbackOnBody ? j.body : o,
+                                s = $e(e, !0, t, !X),
                                 i = (ve(e), this.options);
                             if (X) {
                                 for (w = t;
-                                    "static" === ve(w, "position") && "none" === ve(w, "transform") && w !== U;) w = w.parentNode;
-                                if (w !== U) {
-                                    var r = He(w, !0);
+                                    "static" === ve(w, "position") && "none" === ve(w, "transform") && w !== j;) w = w.parentNode;
+                                if (w !== j) {
+                                    var r = $e(w, !0);
                                     s.top -= r.top, s.left -= r.left
                                 }
-                                w !== U.body && w !== U.documentElement ? (w === U && (w = le()), s.top += w.scrollTop, s.left += w.scrollLeft) : w = le(), L = We(w)
+                                w !== j.body && w !== j.documentElement ? (w === j && (w = le()), s.top += w.scrollTop, s.left += w.scrollLeft) : w = le(), L = We(w)
                             }
-                            Se(n = e.cloneNode(!0), i.ghostClass, !1), Se(n, i.fallbackClass, !0), Se(n, i.dragClass, !0), ve(n, "box-sizing", "border-box"), ve(n, "margin", 0), ve(n, "top", s.top), ve(n, "left", s.left), ve(n, "width", s.width), ve(n, "height", s.height), ve(n, "opacity", "0.8"), ve(n, "position", X ? "absolute" : "fixed"), ve(n, "zIndex", "100000"), ve(n, "pointerEvents", "none"), t.appendChild(n)
+                            _e(n = e.cloneNode(!0), i.ghostClass, !1), _e(n, i.fallbackClass, !0), _e(n, i.dragClass, !0), ve(n, "box-sizing", "border-box"), ve(n, "margin", 0), ve(n, "top", s.top), ve(n, "left", s.left), ve(n, "width", s.width), ve(n, "height", s.height), ve(n, "opacity", "0.8"), ve(n, "position", X ? "absolute" : "fixed"), ve(n, "zIndex", "100000"), ve(n, "pointerEvents", "none"), t.appendChild(n)
                         }
                     },
                     _onDragStart: function(t, n) {
                         var i = this,
                             r = t.dataTransfer,
                             l = i.options;
-                        (s = Fe(e)).draggable = !1, s.style["will-change"] = "", this._hideClone(), Se(s, i.options.chosenClass, !1), i._cloneId = Ue((function() {
+                        (s = Fe(e)).draggable = !1, s.style["will-change"] = "", this._hideClone(), _e(s, i.options.chosenClass, !1), i._cloneId = je((function() {
                             i.options.removeCloneOnHide || o.insertBefore(s, e), we(i, o, "clone", e)
-                        })), !n && Se(e, l.dragClass, !0), n ? (O = !0, i._loopId = setInterval(i._emulateDragOver, 50)) : (_e(U, "mouseup", i._onDrop), _e(U, "touchend", i._onDrop), _e(U, "touchcancel", i._onDrop), r && (r.effectAllowed = "move", l.setData && l.setData.call(i, r, e)), Ee(U, "drop", i), ve(e, "transform", "translateZ(0)")), P = !0, i._dragStartId = Ue(i._dragStarted.bind(i, n, t)), Ee(U, "selectstart", i), q && ve(U.body, "user-select", "none")
+                        })), !n && _e(e, l.dragClass, !0), n ? (O = !0, i._loopId = setInterval(i._emulateDragOver, 50)) : (Ee(j, "mouseup", i._onDrop), Ee(j, "touchend", i._onDrop), Ee(j, "touchcancel", i._onDrop), r && (r.effectAllowed = "move", l.setData && l.setData.call(i, r, e)), Se(j, "drop", i), ve(e, "transform", "translateZ(0)")), P = !0, i._dragStartId = je(i._dragStarted.bind(i, n, t)), Se(j, "selectstart", i), q && ve(j.body, "user-select", "none")
                     },
                     _onDragOver: function(n) {
                         var s, r, l, a = this.el,
@@ -7811,13 +7784,13 @@
                             b = m.sort,
                             k = this;
                         if (!J) {
-                            if (void 0 !== n.preventDefault && n.cancelable && n.preventDefault(), _ = !0, c = be(c, m.draggable, a, !0), e.contains(n.target) || c.animated) return G(!1);
+                            if (void 0 !== n.preventDefault && n.cancelable && n.preventDefault(), E = !0, c = be(c, m.draggable, a, !0), e.contains(n.target) || c.animated) return G(!1);
                             if (c !== e && (O = !1), f && !m.disabled && (y ? b || (l = !o.contains(e)) : g === this || (this.lastPutMode = h.checkPull(this, f, e, n)) && u.checkPut(this, f, e, n))) {
-                                var E = this._getDirection(n, c);
-                                if (s = He(e), l) return this._hideClone(), t = o, i ? o.insertBefore(e, i) : o.appendChild(e), G(!0);
+                                var S = this._getDirection(n, c);
+                                if (s = $e(e), l) return this._hideClone(), t = o, i ? o.insertBefore(e, i) : o.appendChild(e), G(!0);
                                 var w = Oe(a);
                                 if (!w || function(e, t, n) {
-                                        var s = He(Oe(n)),
+                                        var s = $e(Oe(n)),
                                             o = "vertical" === t ? e.clientY : e.clientX,
                                             i = "vertical" === t ? e.clientX : e.clientY,
                                             r = "vertical" === t ? s.bottom : s.right,
@@ -7825,18 +7798,18 @@
                                             a = "vertical" === t ? s.right : s.bottom,
                                             c = 10;
                                         return "vertical" === t ? i > a + c || i <= a && o > r && i >= l : o > r && i > l || o <= r && i > a + c
-                                    }(n, E, a) && !w.animated) {
-                                    if (w && a === n.target && (c = w), c && (r = He(c)), y ? f._hideClone() : f._showClone(this), !1 !== Ie(o, a, e, s, c, r, n, !!c)) return a.appendChild(e), t = a, I = null, Y(), G(!0)
+                                    }(n, S, a) && !w.animated) {
+                                    if (w && a === n.target && (c = w), c && (r = $e(c)), y ? f._hideClone() : f._showClone(this), !1 !== Ie(o, a, e, s, c, r, n, !!c)) return a.appendChild(e), t = a, I = null, Y(), G(!0)
                                 } else if (c && c !== e && c.parentNode === a) {
                                     var C, T = 0,
                                         P = c.sortableMouseAligned,
                                         D = e.parentNode !== a,
-                                        L = "vertical" === E ? "top" : "left",
-                                        B = $e(c, "top") || $e(e, "top"),
+                                        L = "vertical" === S ? "top" : "left",
+                                        B = He(c, "top") || He(e, "top"),
                                         F = B ? B.scrollTop : void 0;
-                                    if (S !== c && (A = null, C = He(c)[L], R = !1), function(t, n, s) {
-                                            var o = t === e && I || He(t),
-                                                i = n === e && I || He(n),
+                                    if (_ !== c && (A = null, C = $e(c)[L], M = !1), function(t, n, s) {
+                                            var o = t === e && I || $e(t),
+                                                i = n === e && I || $e(n),
                                                 r = "vertical" === s ? o.left : o.top,
                                                 l = "vertical" === s ? o.right : o.bottom,
                                                 a = "vertical" === s ? o.width : o.height,
@@ -7844,17 +7817,17 @@
                                                 d = "vertical" === s ? i.right : i.bottom,
                                                 m = "vertical" === s ? i.width : i.height;
                                             return r === c || l === d || r + a / 2 === c + m / 2
-                                        }(e, c, E) && P || D || B || m.invertSwap || "insert" === A || "swap" === A ? ("swap" !== A && (M = m.invertSwap || D), T = function(t, n, s, o, i, r, l) {
-                                            var a = He(n),
+                                        }(e, c, S) && P || D || B || m.invertSwap || "insert" === A || "swap" === A ? ("swap" !== A && (R = m.invertSwap || D), T = function(t, n, s, o, i, r, l) {
+                                            var a = $e(n),
                                                 c = "vertical" === s ? t.clientY : t.clientX,
                                                 d = "vertical" === s ? a.height : a.width,
                                                 m = "vertical" === s ? a.top : a.left,
                                                 p = "vertical" === s ? a.bottom : a.right,
-                                                u = He(e),
+                                                u = $e(e),
                                                 h = !1;
                                             if (!r)
                                                 if (l && x < d * o)
-                                                    if (!R && (1 === v ? c > m + d * i / 2 : c < p - d * i / 2) && (R = !0), R) h = !0;
+                                                    if (!M && (1 === v ? c > m + d * i / 2 : c < p - d * i / 2) && (M = !0), M) h = !0;
                                                     else {
                                                         "vertical" === s ? u.top : u.left, "vertical" === s ? u.bottom : u.right;
                                                         if (1 === v ? c < m + x : c > p - x) return -1 * v
@@ -7862,12 +7835,12 @@
                                             else if (c > m + d * (1 - o) / 2 && c < p - d * (1 - o) / 2) return De(n);
                                             if ((h = h || r) && (c < m + d * i / 2 || c > p - d * i / 2)) return c > m + d / 2 ? 1 : -1;
                                             return 0
-                                        }(n, c, E, m.swapThreshold, null == m.invertedSwapThreshold ? m.swapThreshold : m.invertedSwapThreshold, M, S === c), A = "swap") : (T = De(c), A = "insert"), 0 === T) return G(!1);
-                                    I = null, S = c, v = T, r = He(c);
-                                    var j = c.nextElementSibling,
-                                        $ = !1,
-                                        W = Ie(o, a, e, s, c, r, n, $ = 1 === T);
-                                    if (!1 !== W) return 1 !== W && -1 !== W || ($ = 1 === W), J = !0, H(Te, 30), y ? f._hideClone() : f._showClone(this), $ && !j ? a.appendChild(e) : c.parentNode.insertBefore(e, $ ? j : c), B && ae(B, 0, F - B.scrollTop), t = e.parentNode, void 0 === C || M || (x = te(C - He(c)[L])), Y(), G(!0)
+                                        }(n, c, S, m.swapThreshold, null == m.invertedSwapThreshold ? m.swapThreshold : m.invertedSwapThreshold, R, _ === c), A = "swap") : (T = De(c), A = "insert"), 0 === T) return G(!1);
+                                    I = null, _ = c, v = T, r = $e(c);
+                                    var U = c.nextElementSibling,
+                                        H = !1,
+                                        W = Ie(o, a, e, s, c, r, n, H = 1 === T);
+                                    if (!1 !== W) return 1 !== W && -1 !== W || (H = 1 === W), J = !0, $(Te, 30), y ? f._hideClone() : f._showClone(this), H && !U ? a.appendChild(e) : c.parentNode.insertBefore(e, H ? U : c), B && ae(B, 0, F - B.scrollTop), t = e.parentNode, void 0 === C || R || (x = te(C - $e(c)[L])), Y(), G(!0)
                                 }
                                 if (a.contains(e)) return G(!1)
                             }
@@ -7875,24 +7848,24 @@
                         }
 
                         function G(t) {
-                            return t && (y ? f._hideClone() : f._showClone(k), f && (Se(e, g ? g.options.ghostClass : f.options.ghostClass, !1), Se(e, m.ghostClass, !0)), g !== k && k !== ye.active ? g = k : k === ye.active && (g = null), s && k._animate(s, e), c && r && k._animate(r, c)), (c === e && !e.animated || c === a && !c.animated) && (S = null), m.dragoverBubble || n.rootEl || c === U || (k._handleAutoScroll(n), e.parentNode[N]._computeIsAligned(n), !t && fe(n)), !m.dragoverBubble && n.stopPropagation && n.stopPropagation(), !0
+                            return t && (y ? f._hideClone() : f._showClone(k), f && (_e(e, g ? g.options.ghostClass : f.options.ghostClass, !1), _e(e, m.ghostClass, !0)), g !== k && k !== ye.active ? g = k : k === ye.active && (g = null), s && k._animate(s, e), c && r && k._animate(r, c)), (c === e && !e.animated || c === a && !c.animated) && (_ = null), m.dragoverBubble || n.rootEl || c === j || (k._handleAutoScroll(n), e.parentNode[N]._computeIsAligned(n), !t && fe(n)), !m.dragoverBubble && n.stopPropagation && n.stopPropagation(), !0
                         }
 
                         function Y() {
-                            we(k, o, "change", c, a, o, d, Me(e), p, Me(e, m.draggable), n)
+                            we(k, o, "change", c, a, o, d, Re(e), p, Re(e, m.draggable), n)
                         }
                     },
                     _animate: function(t, n) {
                         var s = this.options.animation;
                         if (s) {
-                            var o = He(n);
-                            if (n === e && (I = o), 1 === t.nodeType && (t = He(t)), t.left + t.width / 2 !== o.left + o.width / 2 || t.top + t.height / 2 !== o.top + o.height / 2) {
+                            var o = $e(n);
+                            if (n === e && (I = o), 1 === t.nodeType && (t = $e(t)), t.left + t.width / 2 !== o.left + o.width / 2 || t.top + t.height / 2 !== o.top + o.height / 2) {
                                 var i = Ae(this.el),
                                     r = i && i.a,
                                     l = i && i.d;
                                 ve(n, "transition", "none"), ve(n, "transform", "translate3d(" + (t.left - o.left) / (r || 1) + "px," + (t.top - o.top) / (l || 1) + "px,0)"), this._repaint(n), ve(n, "transition", "transform " + s + "ms" + (this.options.easing ? " " + this.options.easing : "")), ve(n, "transform", "translate3d(0,0,0)")
                             }
-                            "number" == typeof n.animated && clearTimeout(n.animated), n.animated = H((function() {
+                            "number" == typeof n.animated && clearTimeout(n.animated), n.animated = $((function() {
                                 ve(n, "transition", ""), ve(n, "transform", ""), n.animated = !1
                             }), s)
                         }
@@ -7901,19 +7874,19 @@
                         return e.offsetWidth
                     },
                     _offMoveEvents: function() {
-                        _e(U, "touchmove", this._onTouchMove), _e(U, "pointermove", this._onTouchMove), _e(U, "dragover", fe), _e(U, "mousemove", fe), _e(U, "touchmove", fe)
+                        Ee(j, "touchmove", this._onTouchMove), Ee(j, "pointermove", this._onTouchMove), Ee(j, "dragover", fe), Ee(j, "mousemove", fe), Ee(j, "touchmove", fe)
                     },
                     _offUpEvents: function() {
                         var e = this.el.ownerDocument;
-                        _e(e, "mouseup", this._onDrop), _e(e, "touchend", this._onDrop), _e(e, "pointerup", this._onDrop), _e(e, "touchcancel", this._onDrop), _e(U, "selectstart", this)
+                        Ee(e, "mouseup", this._onDrop), Ee(e, "touchend", this._onDrop), Ee(e, "pointerup", this._onDrop), Ee(e, "touchcancel", this._onDrop), Ee(j, "selectstart", this)
                     },
                     _onDrop: function(r) {
                         var l = this.el,
                             a = this.options;
-                        P = !1, T = !1, M = !1, R = !1, clearInterval(this._loopId), clearInterval(f), de(), clearTimeout(ge), ge = void 0, clearTimeout(this._dragStartTimer), je(this._cloneId), je(this._dragStartId), _e(U, "mousemove", this._onTouchMove), this.nativeDraggable && (_e(U, "drop", this), _e(l, "dragstart", this._onDragStart), _e(U, "dragover", this._handleAutoScroll), _e(U, "dragover", pe)), q && ve(U.body, "user-select", ""), this._offMoveEvents(), this._offUpEvents(), r && (_ && (r.cancelable && r.preventDefault(), !a.dropBubble && r.stopPropagation()), n && n.parentNode && n.parentNode.removeChild(n), (o === t || g && "clone" !== g.lastPutMode) && s && s.parentNode && s.parentNode.removeChild(s), e && (this.nativeDraggable && _e(e, "dragend", this), Ce(e), e.style["will-change"] = "", Se(e, g ? g.options.ghostClass : this.options.ghostClass, !1), Se(e, this.options.chosenClass, !1), we(this, o, "unchoose", e, t, o, d, null, p, null, r), o !== t ? (m = Me(e), u = Me(e, a.draggable), m >= 0 && (we(null, t, "add", e, t, o, d, m, p, u, r), we(this, o, "remove", e, t, o, d, m, p, u, r), we(null, t, "sort", e, t, o, d, m, p, u, r), we(this, o, "sort", e, t, o, d, m, p, u, r)), g && g.save()) : e.nextSibling !== i && (m = Me(e), u = Me(e, a.draggable), m >= 0 && (we(this, o, "update", e, t, o, d, m, p, u, r), we(this, o, "sort", e, t, o, d, m, p, u, r))), ye.active && (null != m && -1 !== m || (m = d, u = p), we(this, o, "end", e, t, o, d, m, p, u, r), this.save()))), this._nulling()
+                        P = !1, T = !1, R = !1, M = !1, clearInterval(this._loopId), clearInterval(f), de(), clearTimeout(ge), ge = void 0, clearTimeout(this._dragStartTimer), Ue(this._cloneId), Ue(this._dragStartId), Ee(j, "mousemove", this._onTouchMove), this.nativeDraggable && (Ee(j, "drop", this), Ee(l, "dragstart", this._onDragStart), Ee(j, "dragover", this._handleAutoScroll), Ee(j, "dragover", pe)), q && ve(j.body, "user-select", ""), this._offMoveEvents(), this._offUpEvents(), r && (E && (r.cancelable && r.preventDefault(), !a.dropBubble && r.stopPropagation()), n && n.parentNode && n.parentNode.removeChild(n), (o === t || g && "clone" !== g.lastPutMode) && s && s.parentNode && s.parentNode.removeChild(s), e && (this.nativeDraggable && Ee(e, "dragend", this), Ce(e), e.style["will-change"] = "", _e(e, g ? g.options.ghostClass : this.options.ghostClass, !1), _e(e, this.options.chosenClass, !1), we(this, o, "unchoose", e, t, o, d, null, p, null, r), o !== t ? (m = Re(e), u = Re(e, a.draggable), m >= 0 && (we(null, t, "add", e, t, o, d, m, p, u, r), we(this, o, "remove", e, t, o, d, m, p, u, r), we(null, t, "sort", e, t, o, d, m, p, u, r), we(this, o, "sort", e, t, o, d, m, p, u, r)), g && g.save()) : e.nextSibling !== i && (m = Re(e), u = Re(e, a.draggable), m >= 0 && (we(this, o, "update", e, t, o, d, m, p, u, r), we(this, o, "sort", e, t, o, d, m, p, u, r))), ye.active && (null != m && -1 !== m || (m = d, u = p), we(this, o, "end", e, t, o, d, m, p, u, r), this.save()))), this._nulling()
                     },
                     _nulling: function() {
-                        o = e = t = n = i = s = r = l = a = C.length = f = y = b = k = E = _ = m = d = S = v = I = g = h = ye.active = null, oe.forEach((function(e) {
+                        o = e = t = n = i = s = r = l = a = C.length = f = y = b = k = S = E = m = d = _ = v = I = g = h = ye.active = null, oe.forEach((function(e) {
                             e.checked = !0
                         })), oe.length = 0
                     },
@@ -7935,7 +7908,7 @@
                         }
                     },
                     toArray: function() {
-                        for (var e, t = [], n = this.el.children, s = 0, o = n.length, i = this.options; s < o; s++) be(e = n[s], i.draggable, this.el, !1) && t.push(e.getAttribute(i.dataIdAttr) || Re(e));
+                        for (var e, t = [], n = this.el.children, s = 0, o = n.length, i = this.options; s < o; s++) be(e = n[s], i.draggable, this.el, !1) && t.push(e.getAttribute(i.dataIdAttr) || Me(e));
                         return t
                     },
                     sort: function(e) {
@@ -7962,7 +7935,7 @@
                     },
                     destroy: function() {
                         var e = this.el;
-                        e[N] = null, _e(e, "mousedown", this._onTapStart), _e(e, "touchstart", this._onTapStart), _e(e, "pointerdown", this._onTapStart), this.nativeDraggable && (_e(e, "dragover", this), _e(e, "dragenter", this)), Array.prototype.forEach.call(e.querySelectorAll("[draggable]"), (function(e) {
+                        e[N] = null, Ee(e, "mousedown", this._onTapStart), Ee(e, "touchstart", this._onTapStart), Ee(e, "pointerdown", this._onTapStart), this.nativeDraggable && (Ee(e, "dragover", this), Ee(e, "dragenter", this)), Array.prototype.forEach.call(e.querySelectorAll("[draggable]"), (function(e) {
                             e.removeAttribute("draggable")
                         })), this._onDrop(), D.splice(D.indexOf(this.el), 1), this.el = e = null
                     },
@@ -7972,11 +7945,11 @@
                     _showClone: function(t) {
                         "clone" === t.lastPutMode ? s.cloneHidden && (o.contains(e) && !this.options.group.revertClone ? o.insertBefore(s, e) : i ? o.insertBefore(s, i) : o.appendChild(s), this.options.group.revertClone && this._animate(e, s), ve(s, "display", ""), s.cloneHidden = !1) : this._hideClone()
                     }
-                }, Ee(U, "touchmove", (function(e) {
+                }, Se(j, "touchmove", (function(e) {
                     (ye.active || P) && e.cancelable && e.preventDefault()
                 })), ye.utils = {
-                    on: Ee,
-                    off: _e,
+                    on: Se,
+                    off: Ee,
                     css: ve,
                     find: xe,
                     is: function(e, t) {
@@ -7985,11 +7958,11 @@
                     extend: Ne,
                     throttle: Be,
                     closest: be,
-                    toggleClass: Se,
+                    toggleClass: _e,
                     clone: Fe,
-                    index: Me,
-                    nextTick: Ue,
-                    cancelNextTick: je,
+                    index: Re,
+                    nextTick: je,
+                    cancelNextTick: Ue,
                     detectDirection: ie,
                     getChild: Pe
                 }, ye.create = function(e, t) {
@@ -8339,37 +8312,35 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                o = f(n(148));
+                o = g(n(148));
             n(149);
-            var i = f(n(150)),
-                r = f(n(151)),
-                l = f(n(152)),
-                a = f(n(153)),
-                c = f(n(135)),
-                d = f(n(154)),
-                m = n(128),
-                p = n(129),
-                u = n(138),
-                h = n(155),
-                g = f(n(156));
+            var i = g(n(150)),
+                r = g(n(151)),
+                l = g(n(152)),
+                a = g(n(153)),
+                c = g(n(135)),
+                d = n(128),
+                m = n(129),
+                p = n(138),
+                u = n(154),
+                h = g(n(155));
 
-            function f(e) {
+            function g(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
             const {
-                RunMixin: y
-            } = s.EmberAddons.EmberLifeline, b = s.UIKit.getContextualNotificationManager(), k = s.UIKit.getFlyoutManager(), E = s.UIKit.getTemplateHelper();
-            var _ = s.Ember.Component.extend(y, s.Ember.Mixin.create(a.default, c.default, d.default), {
+                RunMixin: f
+            } = s.EmberAddons.EmberLifeline, y = s.UIKit.getContextualNotificationManager(), b = s.UIKit.getFlyoutManager(), k = s.UIKit.getTemplateHelper();
+            var S = s.Ember.Component.extend(f, s.Ember.Mixin.create(a.default, c.default), {
                 classNames: ["item-set-editor-component"],
                 classNameBindings: ["isLoaded"],
                 layout: o.default,
                 modalManager: s.ModalManager,
-                _eventSource: p.TELEMETRY_EVENT_SOURCE_EDITOR,
                 EmberApplicationFactory: s.EmberApplicationFactory,
-                exportItemSets: g.default,
-                maxTitleLength: p.TITLE_LENGTH_LIMIT,
+                exportItemSets: h.default,
+                maxTitleLength: m.TITLE_LENGTH_LIMIT,
                 itemSetsService: s.Ember.inject.service("itemSets"),
                 cannotCreateSets: s.Ember.computed.readOnly("itemSetsService.cannotAddMoreSets"),
                 cannotRemoveSet: s.Ember.computed.readOnly("itemSetsService.isSaving"),
@@ -8396,7 +8367,7 @@
                         current: e.uid === t.get("uid")
                     }))))
                 })),
-                helmetIcon: n(157),
+                helmetIcon: n(156),
                 _currentBlock: null,
                 currentBlock: s.Ember.computed("_currentBlock", "currentSet", {
                     get() {
@@ -8422,10 +8393,10 @@
                     return t && n && s && e && !(e.length <= 0) ? e.find((e => e.uid === o)) : null
                 },
                 sortOptions: s.Ember.computed("tra", (function() {
-                    const e = p.SORT_OPTIONS;
+                    const e = m.SORT_OPTIONS;
                     return s.Lodash.each(e, (e => {
                         e.displayName = this.get(`tra.item_sets_sort_option_${e.traKey}`), e.selected = !1
-                    })), s.Ember.A(s.Lodash.map(p.SORT_OPTIONS, (e => s.Ember.Object.create(s.Lodash.assign(e, {
+                    })), s.Ember.A(s.Lodash.map(m.SORT_OPTIONS, (e => s.Ember.Object.create(s.Lodash.assign(e, {
                         displayName: this.get(`tra.item_sets_sort_option_${e.traKey}`),
                         selected: !1
                     })))))
@@ -8445,8 +8416,8 @@
                 champAssociations: s.Ember.computed("currentSet.championDisplays.[]", (function() {
                     const e = this.get("currentSet.championDisplays");
                     return s.Ember.Object.create({
-                        champions: s.Lodash.take(e, p.MAX_CHAMPION_ASSOCIATION_DISPLAY),
-                        hasMore: e.length > p.MAX_CHAMPION_ASSOCIATION_DISPLAY,
+                        champions: s.Lodash.take(e, m.MAX_CHAMPION_ASSOCIATION_DISPLAY),
+                        hasMore: e.length > m.MAX_CHAMPION_ASSOCIATION_DISPLAY,
                         hasMoreText: this.get("tra.item_sets_champ_association_has_more")
                     })
                 })),
@@ -8462,7 +8433,7 @@
                             forceFallback: !0,
                             fallbackOnBody: !0,
                             group: {
-                                name: p.ITEM_BUILD_PATH_SORTABLE_GROUP_NAME,
+                                name: m.ITEM_BUILD_PATH_SORTABLE_GROUP_NAME,
                                 put: !1,
                                 pull: "clone",
                                 dataIdAttr: "sortable-data-id"
@@ -8484,7 +8455,7 @@
                     }))
                 },
                 _createNewBlock: function(e) {
-                    m.sfx.drop.play();
+                    d.sfx.drop.play();
                     const t = r.default.create({
                         type: this.get("tra.item_sets_new_item_block_prefix"),
                         items: s.Ember.A(e),
@@ -8504,14 +8475,14 @@
                     this._super(...arguments), this.send("selectSortOption", this.get("sortOptions.0")), this._addEscapeListener(".rename-input", "finishRenameBlock"), this._addEscapeListener(".rename-set-input", "finishRenamingSet"), this.set("beforeHide", this._handleBeforeHide.bind(this));
                     const e = this.get("willDestroyHandlers"),
                         t = this.element.querySelector(".item-set-sections"),
-                        n = p.SCROLLABLE_ITEM_BLOCKS_RECT,
+                        n = m.SCROLLABLE_ITEM_BLOCKS_RECT,
                         s = this._getItemBlockScrollHandler.bind(this)(t, n, {
-                            sensitivity: p.SCROLLABLE_AUTO_SCROLL_SENSITIVITY,
-                            step: p.SCROLLABLE_AUTO_SCROLL_STEP
+                            sensitivity: m.SCROLLABLE_AUTO_SCROLL_SENSITIVITY,
+                            step: m.SCROLLABLE_AUTO_SCROLL_STEP
                         });
                     return t.addEventListener("mousemove", s), e.pushObject((() => {
                         t.removeEventListener("mousemove", s)
-                    })), this._startTelemetrySession(), new Promise((e => {
+                    })), new Promise((e => {
                         this.runTask((() => {
                             this._activateSortable.call(this).then((() => e()))
                         }), 1)
@@ -8523,7 +8494,7 @@
                     }
                 },
                 _handleBeforeHide: function() {
-                    return this.get("nameErrorNotification") && b.remove(this.get("nameErrorNotification")), this.set("nameErrorNotification", null), this.set("renameIsPending", !1), this._popUpUnsaveDialogIfDirty()
+                    return this.get("nameErrorNotification") && y.remove(this.get("nameErrorNotification")), this.set("nameErrorNotification", null), this.set("renameIsPending", !1), this._popUpUnsaveDialogIfDirty()
                 },
                 _popUpUnsaveDialogIfDirty: function(e) {
                     return this.get("isDirty") ? this._popUpDialogue(this.get("dialogueContents.save")).then((() => e && e.skipSave ? this.get("currentSet").toJSON() : this._saveCurrentItemSet())).catch((() => {
@@ -8538,7 +8509,7 @@
                     }))
                 },
                 willDestroy: function() {
-                    this._super(...arguments), this.get("willDestroyHandlers").forEach((e => e.call(this))), this._endTelemetrySession()
+                    this._super(...arguments), this.get("willDestroyHandlers").forEach((e => e.call(this)))
                 },
                 _addEscapeListener: function(e, t) {
                     const n = this.$(this.element.querySelector(e));
@@ -8565,9 +8536,9 @@
                     const s = e.get("items");
                     return new Promise(((e, o) => {
                         this.runTask((() => {
-                            if (s.length >= p.MAX_ITEM_PER_BLOCK) return o({
+                            if (s.length >= m.MAX_ITEM_PER_BLOCK) return o({
                                 type: "MAX_ITEM_PER_BLOCK",
-                                msg: `block cannot have more than ${p.MAX_ITEM_PER_BLOCK} items`
+                                msg: `block cannot have more than ${m.MAX_ITEM_PER_BLOCK} items`
                             });
                             n < s.length ? s.insertAt(n, t) : s.pushObject(t), e(), this.set("isDirty", !0)
                         }), 1)
@@ -8604,7 +8575,7 @@
                     }))
                 },
                 _onAddToBlock: function(e) {
-                    m.sfx.drop.play();
+                    d.sfx.drop.play();
                     const t = e.from.getAttribute("block-index");
                     if (s.Lodash.isNil(t)) {
                         const t = Array.prototype.indexOf.call(e.item.parentNode.children, e.item),
@@ -8627,7 +8598,7 @@
                     }
                 },
                 _onUpdateBlock: function(e) {
-                    m.sfx.drop.play();
+                    d.sfx.drop.play();
                     const {
                         newIndex: t
                     } = e, {
@@ -8648,16 +8619,16 @@
                         n = this.element.querySelector("div.item-grid-and-build-path");
                     this._createSortable(n, {
                         group: {
-                            name: p.EMPTY_AREA_SORTABLE_GROUP_NAME,
-                            put: [p.ITEM_EDITOR_BLOCKS_SORTABLE_GROUP_NAME],
+                            name: m.EMPTY_AREA_SORTABLE_GROUP_NAME,
+                            put: [m.ITEM_EDITOR_BLOCKS_SORTABLE_GROUP_NAME],
                             pull: !1
                         },
                         draggable: ".none",
                         onAdd: this._onAddToEmptyArea.bind(this)
                     }), this._createSortable(t, {
                         group: {
-                            name: p.ITEM_EDITOR_BLOCKS_SORTABLE_GROUP_NAME,
-                            put: [p.ITEM_EDITOR_BLOCKS_SORTABLE_GROUP_NAME, p.ITEM_GRID_SORTABLE_GROUP_NAME, p.ITEM_BUILD_PATH_SORTABLE_GROUP_NAME],
+                            name: m.ITEM_EDITOR_BLOCKS_SORTABLE_GROUP_NAME,
+                            put: [m.ITEM_EDITOR_BLOCKS_SORTABLE_GROUP_NAME, m.ITEM_GRID_SORTABLE_GROUP_NAME, m.ITEM_BUILD_PATH_SORTABLE_GROUP_NAME],
                             pull: !1
                         },
                         onAdd: this._onAddToEditorBlock.bind(this)
@@ -8670,8 +8641,8 @@
                             forceFallback: !0,
                             fallbackOnBody: !0,
                             group: {
-                                name: p.ITEM_EDITOR_BLOCKS_SORTABLE_GROUP_NAME,
-                                put: [p.ITEM_EDITOR_BLOCKS_SORTABLE_GROUP_NAME, p.ITEM_GRID_SORTABLE_GROUP_NAME, p.ITEM_BUILD_PATH_SORTABLE_GROUP_NAME],
+                                name: m.ITEM_EDITOR_BLOCKS_SORTABLE_GROUP_NAME,
+                                put: [m.ITEM_EDITOR_BLOCKS_SORTABLE_GROUP_NAME, m.ITEM_GRID_SORTABLE_GROUP_NAME, m.ITEM_BUILD_PATH_SORTABLE_GROUP_NAME],
                                 pull: !0
                             },
                             onStart: this._onDragStart.bind(this),
@@ -8685,7 +8656,7 @@
                     if (e.item.children.length > 0) {
                         e.item.children[0].dispatchEvent(new Event("mouseleave"))
                     }
-                    this.set("isDragging", !0), m.sfx.drag.play()
+                    this.set("isDragging", !0), d.sfx.drag.play()
                 },
                 _getNextItemSetUidAfterRemove: function() {
                     const {
@@ -8699,26 +8670,20 @@
                     this.get("currentSet").setPreferredSlot(e.id, t), this.set("isDirty", !0)
                 },
                 _exportCurrentSetToClipboard: function() {
-                    this._sendEvent({
-                        id: p.TELEMETRY_EVENT_ID_MAP_EXPORT.clipboard,
-                        size: 1
-                    }), this.get("exportItemSets").copyToClipboard(this.get("currentSet")), this._popUpAlert(this.get("dialogueContents.clipboardCoplied"))
+                    this.get("exportItemSets").copyToClipboard(this.get("currentSet")), this._popUpAlert(this.get("dialogueContents.clipboardCoplied"))
                 },
                 _exportCurrentSetToFile: function() {
-                    this._sendEvent({
-                        id: p.TELEMETRY_EVENT_ID_MAP_EXPORT.file,
-                        size: 1
-                    }), this.get("exportItemSets").exportToFile(this.get("currentSet"), this.get("tra.item_sets_export_default_file_name") + ".json")
+                    this.get("exportItemSets").exportToFile(this.get("currentSet"), this.get("tra.item_sets_export_default_file_name") + ".json")
                 },
                 getTranslatedErrorMessage: function(e) {
                     return "INAPPROPRIATE" === e ? this.get("tra.item_sets_renaming_inappropriate") : "INVALID_CHARACTER" === e ? this.get("tra.item_sets_renaming_invalid_char") : this.get("tra.item_sets_renaming_service_unavailable")
                 },
                 showNameErrorNotification: function(e) {
-                    this.get("nameErrorNotification") && b.remove(this.get("nameErrorNotification"));
-                    const t = E.contentBlockDialogSimple(this.getTranslatedErrorMessage(e), "tooltip-small"),
+                    this.get("nameErrorNotification") && y.remove(this.get("nameErrorNotification"));
+                    const t = k.contentBlockDialogSimple(this.getTranslatedErrorMessage(e), "tooltip-small"),
                         n = this.get("element");
                     if (n) {
-                        const e = b.add(t, {
+                        const e = y.add(t, {
                             target: {
                                 domNode: n,
                                 anchor: {
@@ -8748,13 +8713,13 @@
                         }))
                     },
                     ascendBlock: function(e, t) {
-                        m.sfx.genericClickSm.play(), t.stopPropagation();
+                        d.sfx.genericClickSm.play(), t.stopPropagation();
                         const n = this.get("currentSet.blocks"),
                             s = n.indexOf(e);
                         0 !== n.indexOf(e) && (n.removeObject(e), n.insertAt(s - 1, e), this.set("isDirty", !0))
                     },
                     descendBlock: function(e, t) {
-                        m.sfx.genericClickSm.play(), t.stopPropagation();
+                        d.sfx.genericClickSm.play(), t.stopPropagation();
                         const n = this.get("currentSet.blocks"),
                             s = n.indexOf(e);
                         n.indexOf(e) !== n.length - 1 && (s + 2 > n.length ? n.pushObject(e) : n.insertAt(s + 2, e), n.removeAt(s, 1), this.set("isDirty", !0))
@@ -8823,7 +8788,7 @@
                         this._createNewBlock(e)
                     },
                     deleteBlock: function(e, t) {
-                        return m.sfx.genericClickSm.play(), t.stopPropagation(), this._popUpDialogue(this.get("dialogueContents.removeBlock")).then((() => {
+                        return d.sfx.genericClickSm.play(), t.stopPropagation(), this._popUpDialogue(this.get("dialogueContents.removeBlock")).then((() => {
                             this.get("currentSet.blocks").removeObject(e), this.get("currentSet").cleanUpPreferredSlots(), this.get("currentBlock") === e && this.set("currentBlock", null), this.set("isDirty", !0)
                         })).catch((() => {}))
                     },
@@ -8838,7 +8803,7 @@
                     openPreferredSlotMenu: function(e, t) {
                         if (!this.get("preferredSlotsDisabled") && !e.isTrinket && !e.shouldHideFromItemGrid) {
                             const n = t.target.parentElement;
-                            k.unassignFlyout(n), k.assignFlyout(n, "PreferredSlotsMenuComponent", {
+                            b.unassignFlyout(n), b.assignFlyout(n, "PreferredSlotsMenuComponent", {
                                 itemHotkeys: this.get("itemHotkeys"),
                                 setPreferredSlot: t => this._setPreferredSlot(e, t),
                                 selectedSlot: e.get("preferredSlot")
@@ -8863,7 +8828,7 @@
                                 closeWhenOutsideClicked: !0,
                                 closeWhenInsideClicked: !0,
                                 ComponentFactory: s.ComponentFactory
-                            }), k.sendEvent(n, "show")
+                            }), b.sendEvent(n, "show")
                         }
                     },
                     increaseStack: function(e) {
@@ -8894,7 +8859,7 @@
                         }))))
                     },
                     toggleSortOptions: function() {
-                        m.sfx.genericClickSm.play();
+                        d.sfx.genericClickSm.play();
                         const e = this.get("isShowingSortOptions");
                         e || this.runTask((() => {
                             const e = this.element.querySelector("lol-uikit-dialog-frame.sort-options-dialog");
@@ -8907,7 +8872,7 @@
                         }), 200)
                     },
                     selectSortOption: function(e) {
-                        m.sfx.genericClickSm.play();
+                        d.sfx.genericClickSm.play();
                         const t = this.get("currentSortOption");
                         t && t.set("selected", !1), e.set("selected", !0), this.set("currentSortOption", e), this.set("isShowingSortOptions", !1)
                     },
@@ -8921,10 +8886,10 @@
                         }), 1)
                     },
                     deselectItem: function() {
-                        m.sfx.genericClickSm.play(), this.set("selectedItem", null)
+                        d.sfx.genericClickSm.play(), this.set("selectedItem", null)
                     },
                     toggleChampSelector: function() {
-                        m.sfx.genericClickSm.play();
+                        d.sfx.genericClickSm.play();
                         const e = this.get("isShowingChampSelector");
                         e || this.runTask((() => {
                             const e = this.element.querySelector("lol-uikit-dialog-frame.champ-selector-dialog");
@@ -8937,12 +8902,12 @@
                         }), 200)
                     },
                     toggleMapAssociation: function(e) {
-                        m.sfx.genericClickSm.play();
+                        d.sfx.genericClickSm.play();
                         const t = this.get("currentSet.associatedMaps");
                         t.includes(e) ? t.removeObject(e) : t.pushObject(e), this.set("isDirty", !0)
                     },
                     toggleChampAssociation: function(e) {
-                        m.sfx.gridClick.play();
+                        d.sfx.gridClick.play();
                         const t = this.get("currentSet.associatedChampions");
                         t.includes(e) ? t.removeObject(e) : t.pushObject(e), this.set("isDirty", !0)
                     },
@@ -8950,7 +8915,7 @@
                         this.get("currentSet.associatedChampions").clear(), this.set("isDirty", !0)
                     },
                     addItemToCurrentBlock: function(e) {
-                        m.sfx.drop.play();
+                        d.sfx.drop.play();
                         const t = i.default.create(e);
                         t.set("preferredSlot", this.get("currentSet.itemToPreferredSlotMap")[e.id]);
                         let n = this.get("currentBlock");
@@ -8961,21 +8926,21 @@
                                         s = this.element.querySelector(".item-set-sections"),
                                         o = this.element.querySelector(`li.section[block-index="${t}"]`),
                                         i = o.querySelector(`li.item-set-item[item-index="${n.items.length-1}"]`);
-                                    (0, h.IsVisible)(o, s) || o.scrollIntoView(), (0, h.IsVisible)(i, s) || i.scrollIntoView(), e()
+                                    (0, u.IsVisible)(o, s) || o.scrollIntoView(), (0, u.IsVisible)(i, s) || i.scrollIntoView(), e()
                                 }
                                 t()
                             }))
                         }))
                     },
                     hoverSFX: function() {
-                        m.sfx.gridHover.play()
+                        d.sfx.gridHover.play()
                     },
                     displayItemTooltipById: function(e, t, n) {
                         const s = this.get("indexedItems")[e];
                         this.send("displayItemTooltip", s, t, n)
                     },
                     displayItemTooltip: function(e, t, n) {
-                        m.sfx.gridHover.play();
+                        d.sfx.gridHover.play();
                         const o = n.target;
                         if (e && "true" !== o.getAttribute("hasTooltip")) {
                             const n = document.createElement("div");
@@ -8995,15 +8960,15 @@
                                 },
                                 hideEvent: "mouseleave"
                             }), o.addEventListener("tooltip:beforeShow", (function() {
-                                u.itemTooltipManager.updateTooltip(e, t);
-                                const s = u.itemTooltipManager.getDomNode();
+                                p.itemTooltipManager.updateTooltip(e, t);
+                                const s = p.itemTooltipManager.getDomNode();
                                 n.appendChild(s), 0 === this.offsetLeft && 0 === this.offsetWidth && this.dispatchEvent(new Event("mouseleave"))
                             })), s.TooltipManager.show(o)
                         }
                     },
                     openExportOptionMenu: function() {
                         const e = event.target;
-                        k.unassignFlyout(e), k.assignFlyout(e, "ItemSetMenuComponent", {
+                        b.unassignFlyout(e), b.assignFlyout(e, "ItemSetMenuComponent", {
                             menuItems: s.Ember.A([{
                                 name: "export-clipboard",
                                 display: this.get("tra.item_sets_export_menu_clipboard"),
@@ -9036,11 +9001,11 @@
                             closeWhenOutsideClicked: !0,
                             closeWhenInsideClicked: !0,
                             ComponentFactory: s.ComponentFactory
-                        }), k.sendEvent(e, "show")
+                        }), b.sendEvent(e, "show")
                     }
                 }
             });
-            t.default = _
+            t.default = S
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
@@ -9272,40 +9237,6 @@
                     }
                 });
             t.default = o
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var s = n(1),
-                o = n(129);
-            const i = (0, s.dataBinding)("/telemetry"),
-                r = `/v1/events/${o.TELEMETRY_EVENT_NAME}`;
-            var l = s.Ember.Mixin.create({
-                _telemetryStartTs: null,
-                _eventSource: null,
-                _telemetryService: i,
-                _startTelemetrySession: function() {
-                    s.logger.trace("starting telemetry session"), this.set("_telemetryStartTs", new Date)
-                },
-                _getSessionTimestamp: function() {
-                    return s.Lodash.isNil(this.get("_telemetryStartTs")) ? 0 : new Date - this.get("_telemetryStartTs")
-                },
-                _endTelemetrySession: function() {
-                    this._sendEvent({
-                        id: o.TELEMETRY_EVENT_ID_CLOSE
-                    }), this.set("_telemetryStartTs", null)
-                },
-                _sendEvent: function(e) {
-                    if (s.Lodash.isNil(e.id)) return s.logger.warning("rejecting malformed telemetry event", e), Promise.reject("Required field: id is absent in the event");
-                    const t = Object.assign(e, {
-                        sessionTimestamp: this._getSessionTimestamp(),
-                        source: this.get("_eventSource")
-                    });
-                    return this.get("_telemetryService").post(r, t)
-                }
-            });
-            t.default = l
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -9355,21 +9286,16 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s = n(1),
-                o = r(n(159));
-            n(160);
-            var i = r(n(154));
-
-            function r(e) {
-                return e && e.__esModule ? e : {
-                    default: e
-                }
-            }
-            var l = s.Ember.Component.extend(s.Ember.Mixin.create(i.default), {
+            var s, o = n(1),
+                i = (s = n(158)) && s.__esModule ? s : {
+                    default: s
+                };
+            n(159);
+            var r = o.Ember.Component.extend({
                 classNames: ["item-set-import-modal"],
-                layout: o.default,
+                layout: i.default,
                 _closeModalCallback: null,
-                modalManager: s.ModalManager,
+                modalManager: o.ModalManager,
                 didInsertElement: function() {
                     this.set("dismissHandler", this._dismiss.bind(this)), this.element.querySelector("lol-uikit-dialog-frame").addEventListener("dialogFrameDismissed", this.get("dismissHandler"))
                 },
@@ -9408,7 +9334,7 @@
                     }
                 }
             });
-            t.default = l
+            t.default = r
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
@@ -9425,9 +9351,9 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(162);
+            n(161);
             var o = s.Ember.Component.extend({
-                layout: n(163),
+                layout: n(162),
                 classNames: ["item-set-menu-component"],
                 actions: {
                     triggerAction: function(e) {
@@ -9452,10 +9378,10 @@
                 value: !0
             }), t.default = void 0;
             var s, o = n(1),
-                i = (s = n(165)) && s.__esModule ? s : {
+                i = (s = n(164)) && s.__esModule ? s : {
                     default: s
                 };
-            n(166);
+            n(165);
             var r = o.Ember.Component.extend({
                 classNames: ["item-set-modal-root-component"],
                 layout: i.default,
@@ -9500,9 +9426,9 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(168);
+            n(167);
             var o = s.Ember.Component.extend({
-                layout: n(169),
+                layout: n(168),
                 classNames: ["item-sets-item-tooltip"]
             });
             t.default = o
@@ -9522,32 +9448,30 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                o = m(n(171));
-            n(172);
+                o = d(n(170));
+            n(171);
             var i = n(128),
                 r = n(129),
-                l = m(n(153)),
-                a = m(n(154)),
-                c = m(n(130)),
-                d = m(n(156));
+                l = d(n(153)),
+                a = d(n(130)),
+                c = d(n(155));
 
-            function m(e) {
+            function d(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
             const {
-                RunMixin: p
-            } = s.EmberAddons.EmberLifeline, u = s.UIKit.getFlyoutManager(), h = "collection_items";
-            var g = s.Ember.Component.extend(s.Ember.Mixin.create(p, l.default, a.default), {
+                RunMixin: m
+            } = s.EmberAddons.EmberLifeline, p = s.UIKit.getFlyoutManager(), u = "collection_items";
+            var h = s.Ember.Component.extend(s.Ember.Mixin.create(m, l.default), {
                 classNames: ["items-root-component"],
                 layout: o.default,
                 rootClasses: s.Ember.computed("isLoaded", (function() {
                     return "item-sets-browser " + (this.get("isLoaded") ? "is-loaded" : "")
                 })),
-                _eventSource: r.TELEMETRY_EVENT_SOURCE_BROWSER,
                 modalManager: s.ModalManager,
-                exportItemSets: d.default,
+                exportItemSets: c.default,
                 itemSetsService: s.Ember.inject.service("itemSets"),
                 cannotCreateSets: s.Ember.computed.readOnly("itemSetsService.cannotAddMoreSets"),
                 isSaving: s.Ember.computed.readOnly("itemSetsService.isSaving"),
@@ -9565,7 +9489,7 @@
                         t = this.get("recommendedSetChampId");
                     if (!t || !e) return s.Ember.Object.create({
                         id: "none",
-                        iconPath: n(173)
+                        iconPath: n(172)
                     });
                     const o = e[t];
                     return s.Ember.Object.create({
@@ -9614,16 +9538,13 @@
                     }))))
                 })),
                 filteredCustomSets: s.Ember.computed("customItemSets", "searchCustomSetText", (function() {
-                    return s.Lodash.filter(this.get("customItemSets"), (e => c.default.filter(this.get("searchCustomSetText"), [e.title]).length > 0))
+                    return s.Lodash.filter(this.get("customItemSets"), (e => a.default.filter(this.get("searchCustomSetText"), [e.title]).length > 0))
                 })),
                 init() {
-                    this._super(...arguments), s.TelemetryService.startTelemetryTimerEvent(h)
-                },
-                didInsertElement: function() {
-                    this._super(...arguments), this._startTelemetrySession()
+                    this._super(...arguments), s.TelemetryService.startTelemetryTimerEvent(u)
                 },
                 willDestroy: function() {
-                    this._super(...arguments), this._endTelemetrySession(), s.TelemetryService.stopTelemetryTimerEvent(h, "timeSpent", "collections")
+                    this._super(...arguments), s.TelemetryService.stopTelemetryTimerEvent(u, "timeSpent", "collections")
                 },
                 _duplicateItemSet: function(e) {
                     return this.get("itemSetsService").duplicateItemSetByUid(e).then((e => {
@@ -9637,17 +9558,11 @@
                 },
                 _exportSetsToClipboard: function() {
                     const e = this._getSelectedSets();
-                    this._sendEvent({
-                        id: r.TELEMETRY_EVENT_ID_MAP_EXPORT.clipboard,
-                        size: e.length
-                    }), this.get("exportItemSets").copyToClipboard(e), this._popUpAlert(this.get("dialogueContents.clipboardCoplied"))
+                    this.get("exportItemSets").copyToClipboard(e), this._popUpAlert(this.get("dialogueContents.clipboardCoplied"))
                 },
                 _exportSetsToFile: function() {
                     const e = this._getSelectedSets();
-                    this._sendEvent({
-                        id: r.TELEMETRY_EVENT_ID_MAP_EXPORT.file,
-                        size: e.length
-                    }), this.get("exportItemSets").exportToFile(e, this.get("tra.item_sets_export_default_file_name") + ".json")
+                    this.get("exportItemSets").exportToFile(e, this.get("tra.item_sets_export_default_file_name") + ".json")
                 },
                 _showPasteArea: function() {
                     this.set("isPasting", !0), this.runTask((() => {
@@ -9661,22 +9576,22 @@
                     const e = this.get("selectedItemSetUids");
                     return this.get("itemSetsService.itemSetsData").itemSets.filter((t => e.includes(t.uid)))
                 },
-                _importItemSets: function(e, t) {
-                    let n;
+                _importItemSets: function(e) {
+                    let t;
                     try {
-                        n = JSON.parse(e)
+                        t = JSON.parse(e)
                     } catch (e) {
-                        n = []
+                        t = []
                     }
-                    return this.get("itemSetsService").validateItemSetsBlob(n).then((e => {
-                        const n = this.get("itemSetsService.itemSetsData").itemSets.length,
-                            s = this.get("itemSetsService.maxItemSets");
-                        return 0 === e.length ? this._popUpAlert(this.get("dialogueContents.noValidImport")) : e.length + n > s ? this._popUpAlert({
+                    return this.get("itemSetsService").validateItemSetsBlob(t).then((e => {
+                        const t = this.get("itemSetsService.itemSetsData").itemSets.length,
+                            n = this.get("itemSetsService.maxItemSets");
+                        return 0 === e.length ? this._popUpAlert(this.get("dialogueContents.noValidImport")) : e.length + t > n ? this._popUpAlert({
                             contents: this.get("tra.formatString")("item_sets_import_over_size", {
-                                overBy: e.length + n - s
+                                overBy: e.length + t - n
                             }),
                             okText: this.get("tra.item_sets_import_over_size_ok")
-                        }) : this.get("itemSetsService").importItemSets(e, t).then((e => {
+                        }) : this.get("itemSetsService").importItemSets(e).then((e => {
                             1 === e.length ? this.send("editItemSet", e[0]) : this._popUpAlert({
                                 contents: this.get("tra.formatString")("item_sets_imported_multiple", {
                                     number: e.length
@@ -9687,7 +9602,7 @@
                     }))
                 },
                 _showItemSetMenu: function(e, t, n) {
-                    u.unassignFlyout(e), u.assignFlyout(e, "ItemSetMenuComponent", t, Object.assign({
+                    p.unassignFlyout(e), p.assignFlyout(e, "ItemSetMenuComponent", t, Object.assign({
                         showEvent: "show",
                         hideEvent: "hide",
                         targetAnchor: {
@@ -9708,7 +9623,7 @@
                         closeWhenOutsideClicked: !0,
                         closeWhenInsideClicked: !0,
                         ComponentFactory: s.ComponentFactory
-                    }, n)), u.sendEvent(e, "show")
+                    }, n)), p.sendEvent(e, "show")
                 },
                 actions: {
                     editItemSet: function(e, t) {
@@ -9831,7 +9746,7 @@
                     importItemSetsFromClipboard: function(e) {
                         this.runTask((() => {
                             const t = e.target;
-                            this._importItemSets(t.value, "clipboard").then((() => {
+                            this._importItemSets(t.value).then((() => {
                                 this.set("isPasting", !1), t.value = ""
                             }))
                         }), 1)
@@ -9841,7 +9756,7 @@
                         if (t.size > r.IMPORT_FILE_SIZE_LIMIT) return this._popUpAlert(this.get("dialogueContents.importFileOversize"));
                         const n = new FileReader;
                         n.onload = () => {
-                            this._importItemSets(n.result, "file").then((() => {
+                            this._importItemSets(n.result).then((() => {
                                 e.target.value = ""
                             }))
                         }, n.readAsText(t)
@@ -9851,7 +9766,7 @@
                     }
                 }
             });
-            t.default = g
+            t.default = h
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
@@ -9872,9 +9787,9 @@
             }), t.default = void 0;
             var s = n(1),
                 o = n(129);
-            n(175);
+            n(174);
             var i = s.Ember.Component.extend({
-                layout: n(176),
+                layout: n(175),
                 classNames: ["preferred-slots-menu-component"],
                 slotDisplays: s.Ember.computed("selectedSlot", "itemHotkeys", (function() {
                     return s.Ember.A(o.DEFAULT_ITEM_SLOTS.map((e => {
@@ -9910,10 +9825,10 @@
                 value: !0
             }), t.default = void 0;
             var s, o = n(1),
-                i = (s = n(178)) && s.__esModule ? s : {
+                i = (s = n(177)) && s.__esModule ? s : {
                     default: s
                 };
-            n(179);
+            n(178);
             var r = n(128),
                 l = n(129),
                 a = n(138);
@@ -10043,22 +9958,17 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s = n(1),
-                o = n(129),
-                i = a(n(154)),
+            var s, o = n(1),
+                i = n(129),
                 r = n(152),
-                l = a(n(181));
-
-            function a(e) {
-                return e && e.__esModule ? e : {
-                    default: e
-                }
-            }
-            const c = new(n(182).Validator),
-                d = n(193),
-                m = (0, s.emberDataBinding)({
-                    Ember: s.Ember,
-                    websocket: (0, s.getProvider)().getSocket(),
+                l = (s = n(180)) && s.__esModule ? s : {
+                    default: s
+                };
+            const a = new(n(181).Validator),
+                c = n(192),
+                d = (0, o.emberDataBinding)({
+                    Ember: o.Ember,
+                    websocket: (0, o.getProvider)().getSocket(),
                     basePaths: {
                         summoner: "/lol-summoner",
                         champions: "/lol-champions",
@@ -10093,29 +10003,28 @@
                         }
                     }
                 });
-            var p = s.Ember.Service.extend(s.Ember.Mixin.create(m, i.default), {
+            var m = o.Ember.Service.extend(o.Ember.Mixin.create(d), {
                 isSaving: !1,
-                _eventSource: o.TELEMETRY_EVENT_SOURCE_DATA_SERVICE,
-                currentSummonerId: s.Ember.computed.readOnly("currentSummoner.summonerId"),
-                currentSummonerPuuid: s.Ember.computed.readOnly("currentSummoner.puuid"),
-                isPotatoModeEnabled: s.Ember.computed.alias("userExperience.data.potatoModeEnabled"),
+                currentSummonerId: o.Ember.computed.readOnly("currentSummoner.summonerId"),
+                currentSummonerPuuid: o.Ember.computed.readOnly("currentSummoner.puuid"),
+                isPotatoModeEnabled: o.Ember.computed.alias("userExperience.data.potatoModeEnabled"),
                 itemSetsData: {
                     itemSets: []
                 },
-                isLoaded: s.Ember.computed.and("isGameDataLoaded", "isItemSetsLoaded"),
-                restrictedPageNamesEnabled: s.Ember.computed("itemSetsConfig.RestrictedPageNamesEnabled", (function() {
+                isLoaded: o.Ember.computed.and("isGameDataLoaded", "isItemSetsLoaded"),
+                restrictedPageNamesEnabled: o.Ember.computed("itemSetsConfig.RestrictedPageNamesEnabled", (function() {
                     const e = this.get("itemSetsConfig.RestrictedPageNamesEnabled");
-                    return void 0 === e ? o.RESTRICTED_PAGE_NAMES_ENABLED : e
+                    return void 0 === e ? i.RESTRICTED_PAGE_NAMES_ENABLED : e
                 })),
-                itemSetRenamingDisabled: s.Ember.computed("itemSetsConfig.ItemSetRenamingDisabled", (function() {
+                itemSetRenamingDisabled: o.Ember.computed("itemSetsConfig.ItemSetRenamingDisabled", (function() {
                     const e = this.get("itemSetsConfig.ItemSetRenamingDisabled");
-                    return void 0 === e ? o.ITEM_SET_RENAMING_DISABLED : e
+                    return void 0 === e ? i.ITEM_SET_RENAMING_DISABLED : e
                 })),
-                useDefaultedNames: s.Ember.computed("restrictedPageNamesEnabled", "itemSetRenamingDisabled", (function() {
+                useDefaultedNames: o.Ember.computed("restrictedPageNamesEnabled", "itemSetRenamingDisabled", (function() {
                     return this.get("restrictedPageNamesEnabled") && this.get("itemSetRenamingDisabled")
                 })),
                 init: function() {
-                    this._super.apply(this, arguments), this._startTelemetrySession(), this.set("isGameDataLoaded", !1), this.set("isItemSetsLoaded", !1), this._loadGameData()
+                    this._super.apply(this, arguments), this.set("isGameDataLoaded", !1), this.set("isItemSetsLoaded", !1), this._loadGameData()
                 },
                 willDestroy: function() {
                     this._super(...arguments);
@@ -10130,51 +10039,51 @@
                         this.set("itemsData", e)
                     })), this.get("api.gameData").get("/assets/v1/champion-summary.json").then((e => {
                         const t = e.filter((e => e.id > 0 && !(e.id >= 66600 && e.id <= 66699)));
-                        this.set("championSummary", t), this.set("indexedChampions", s.Lodash.reduce(t, ((e, t) => (e[t.id] = t, e)), {}))
+                        this.set("championSummary", t), this.set("indexedChampions", o.Lodash.reduce(t, ((e, t) => (e[t.id] = t, e)), {}))
                     }))]).then((() => {
                         this.set("isGameDataLoaded", !0)
                     }))
                 },
-                maxBlocksPerSet: s.Ember.computed("itemSetsConfig.MaxBlocksPerSet", (function() {
+                maxBlocksPerSet: o.Ember.computed("itemSetsConfig.MaxBlocksPerSet", (function() {
                     const e = this.get("itemSetsConfig.MaxBlocksPerSet");
-                    return void 0 === e ? o.MAX_BLOCKS_PER_ITEM_SET : e
+                    return void 0 === e ? i.MAX_BLOCKS_PER_ITEM_SET : e
                 })),
-                maxItemSets: s.Ember.computed("itemSetsConfig.MaxItemSets", (function() {
+                maxItemSets: o.Ember.computed("itemSetsConfig.MaxItemSets", (function() {
                     const e = this.get("itemSetsConfig.MaxItemSets");
-                    return void 0 === e ? o.MAX_ITEM_SETS_PER_PLAYER : e
+                    return void 0 === e ? i.MAX_ITEM_SETS_PER_PLAYER : e
                 })),
-                cannotAddMoreSets: s.Ember.computed("isSaving", "itemSetsData", "maxItemSets", (function() {
+                cannotAddMoreSets: o.Ember.computed("isSaving", "itemSetsData", "maxItemSets", (function() {
                     return !!this.get("isSaving") || this.get("itemSetsData").itemSets.length >= this.get("maxItemSets")
                 })),
-                items: s.Ember.computed("itemsData", "championSummary", "tra.formatString", (function() {
+                items: o.Ember.computed("itemsData", "championSummary", "tra.formatString", (function() {
                     const e = this.get("itemsData"),
                         t = this.get("championSummary"),
                         n = this.get("tra.formatString");
-                    return e && t && n ? s.Lodash.map(e, (e => {
+                    return e && t && n ? o.Lodash.map(e, (e => {
                         if (e.requiredChampion) {
-                            const o = s.Lodash.find(t, (t => t.alias === e.requiredChampion));
-                            o || s.logger.error(`Item id=${e.id} has requiredChampion=${e.requiredChampion} which is not found in champion-summary!`), e.requiredChampionDisplay = n("item_sets_item_tooltip_required_champion", {
-                                champion: o && o.name
+                            const s = o.Lodash.find(t, (t => t.alias === e.requiredChampion));
+                            s || o.logger.error(`Item id=${e.id} has requiredChampion=${e.requiredChampion} which is not found in champion-summary!`), e.requiredChampionDisplay = n("item_sets_item_tooltip_required_champion", {
+                                champion: s && s.name
                             })
                         }
                         if (e.requiredAlly) {
-                            const o = s.Lodash.find(t, (t => t.alias === e.requiredAlly));
-                            o || s.logger.error(`Item id=${e.id} has requiredAlly=${e.requiredAlly} which is not found in champion-summary!`), e.requiredAllyDisplay = n("item_sets_item_tooltip_required_ally", {
-                                champion: o && o.name
+                            const s = o.Lodash.find(t, (t => t.alias === e.requiredAlly));
+                            s || o.logger.error(`Item id=${e.id} has requiredAlly=${e.requiredAlly} which is not found in champion-summary!`), e.requiredAllyDisplay = n("item_sets_item_tooltip_required_ally", {
+                                champion: s && s.name
                             })
                         }
                         return e.shouldHideFromItemGrid = !e.displayInItemSets || !(e.inStore && !e.isEnchantment), e.stackable = e.maxStacks > 1, e.isTrinket = e.categories.includes("Trinket"), e.hasActive = e.active && !e.isTrinket, e
                     })) : []
                 })),
-                indexedItems: s.Ember.computed("items", (function() {
-                    return s.Lodash.reduce(this.get("items"), ((e, t) => (e[t.id] = t, e)), {})
+                indexedItems: o.Ember.computed("items", (function() {
+                    return o.Lodash.reduce(this.get("items"), ((e, t) => (e[t.id] = t, e)), {})
                 })),
-                indexedMaps: s.Ember.computed("maps", (function() {
+                indexedMaps: o.Ember.computed("maps", (function() {
                     const e = this.get("maps");
                     if (!e) return null;
-                    return e.reduce(((e, t) => (!e[t.id] && t.isDefault && o.ASSOCIABLE_MAPS.find((e => e.id === t.id)) && (e[t.id] = t), e)), {})
+                    return e.reduce(((e, t) => (!e[t.id] && t.isDefault && i.ASSOCIABLE_MAPS.find((e => e.id === t.id)) && (e[t.id] = t), e)), {})
                 })),
-                currentSummonerIdChanged: s.Ember.on("init", s.Ember.observer("currentSummonerId", (function() {
+                currentSummonerIdChanged: o.Ember.on("init", o.Ember.observer("currentSummonerId", (function() {
                     const e = this.get("currentSummonerId"),
                         t = this.get("currentSummonerPuuid"),
                         n = this.get("api.champions"),
@@ -10210,73 +10119,63 @@
                         this.set("hotkeySettings", e)
                     })))
                 }))),
-                itemHotkeys: s.Ember.computed("hotkeySettings", (function() {
+                itemHotkeys: o.Ember.computed("hotkeySettings", (function() {
                     const e = this.get("hotkeySettings"),
                         t = {};
-                    return e && e.GameEvents && o.DEFAULT_ITEM_SLOTS.forEach((n => {
+                    return e && e.GameEvents && i.DEFAULT_ITEM_SLOTS.forEach((n => {
                         const s = e.GameEvents[`evtUseItem${n+1}`],
                             o = s.slice(s.lastIndexOf("[", s.length - 3));
                         t[n] = l.default[o]
                     })), t
                 })),
-                currentLocale: s.Ember.computed("tra.metadata.locale.id", (function() {
+                currentLocale: o.Ember.computed("tra.metadata.locale.id", (function() {
                     const e = this.get("tra.metadata.locale.id"),
                         t = e ? e.substr(0, 2).toLowerCase() : "en";
                     return "cs" === t ? "en" : t
                 })),
-                sortedChampions: s.Ember.computed("indexedChampions", "championInventory", (function() {
+                sortedChampions: o.Ember.computed("indexedChampions", "championInventory", (function() {
                     const e = this.get("indexedChampions"),
                         t = this.get("championInventory");
-                    return e && t ? (s.Lodash.each(t, (t => {
+                    return e && t ? (o.Lodash.each(t, (t => {
                         e[t.id] && (e[t.id].freeToPlay = t.freeToPlay, e[t.id].ownership = t.ownership)
-                    })), s.Lodash.values(e).sort(((e, t) => e.name.localeCompare(t.name, this.get("currentLocale"))))) : []
+                    })), o.Lodash.values(e).sort(((e, t) => e.name.localeCompare(t.name, this.get("currentLocale"))))) : []
                 })),
                 saveItemSet: function(e) {
-                    this.set("isSaving", !0), this._sendEvent({
-                        id: o.TELEMETRY_EVENT_ID_SAVE
-                    });
+                    this.set("isSaving", !0);
                     const t = this._getDeepCloneObject(this.get("itemSetsData")),
                         n = t.itemSets.findIndex((t => t.uid === e.uid));
                     return n < 0 ? (this.set("isSaving", !1), Promise.resolve()) : (t.itemSets[n] = e, this._saveItemSets(t))
                 },
                 removeItemSetByUid: function(e) {
-                    this.set("isSaving", !0), this._sendEvent({
-                        id: o.TELEMETRY_EVENT_ID_DELETE
-                    });
+                    this.set("isSaving", !0);
                     const t = this._getDeepCloneObject(this.get("itemSetsData"));
                     return t.itemSets = t.itemSets.filter((t => t.uid !== e)), this._saveItemSets(t)
                 },
                 duplicateItemSetByUid: function(e, t) {
-                    this.set("isSaving", !0), this._sendEvent({
-                        id: o.TELEMETRY_EVENT_ID_DUPLICATE
-                    });
+                    this.set("isSaving", !0);
                     let n = this._getDeepCloneObject(this.get("itemSetsData"));
                     n = this._checkUnsavedOptions(n, t);
                     const s = n.itemSets.find((t => t.uid === e));
                     if (!s) return this.set("isSaving", !1), Promise.resolve(e);
-                    const i = this._getDeepCloneObject(s);
-                    return i.uid = d(), i.title = this._findNewTitle(i.title), n.itemSets.push(i), this._saveItemSets(n).then((() => i.uid))
+                    const o = this._getDeepCloneObject(s);
+                    return o.uid = c(), o.title = this._findNewTitle(o.title), n.itemSets.push(o), this._saveItemSets(n).then((() => o.uid))
                 },
                 createEmptyItemSet: function(e) {
-                    this.set("isSaving", !0), this._sendEvent({
-                        id: o.TELEMETRY_EVENT_ID_CREATE_NEW
-                    });
+                    this.set("isSaving", !0);
                     let t = this._getDeepCloneObject(this.get("itemSetsData"));
                     t = this._checkUnsavedOptions(t, e);
                     const n = (0, r.getNewItemSet)();
-                    return n.uid = d(), n.title = this._findNewTitle(), n.associatedMaps = Object.keys(this.get("indexedMaps")).map((e => parseInt(e))), t.itemSets.push(n), this._saveItemSets(t).then((() => n.uid))
+                    return n.uid = c(), n.title = this._findNewTitle(), n.associatedMaps = Object.keys(this.get("indexedMaps")).map((e => parseInt(e))), t.itemSets.push(n), this._saveItemSets(t).then((() => n.uid))
                 },
                 getRecommendedItemSets: function(e, t) {
                     const n = this.get("indexedChampions")[e].alias;
                     let s = n;
-                    o.SPECIAL_CHAMP_ALIAS_KEY_MAP[n] && (s = o.SPECIAL_CHAMP_ALIAS_KEY_MAP[n]);
-                    const i = o.MAP_ID_TO_RECOMMENDED_KEY_MAPPING[t];
-                    return this.get("api.gameData").get(`/assets/DATA/Characters/${n}/Recommended/${s}${i}.json`)
+                    i.SPECIAL_CHAMP_ALIAS_KEY_MAP[n] && (s = i.SPECIAL_CHAMP_ALIAS_KEY_MAP[n]);
+                    const o = i.MAP_ID_TO_RECOMMENDED_KEY_MAPPING[t];
+                    return this.get("api.gameData").get(`/assets/DATA/Characters/${n}/Recommended/${s}${o}.json`)
                 },
                 duplicateFromRecommendedSet: function(e, t) {
-                    return this.set("isSaving", !0), this._sendEvent({
-                        id: o.TELEMETRY_EVENT_ID_DUPLICATE_RECOMMENDED
-                    }), this.getRecommendedItemSets(e, t).then((n => {
+                    return this.set("isSaving", !0), this.getRecommendedItemSets(e, t).then((n => {
                         const s = this.get("tra"),
                             o = Object.assign((0, r.getNewItemSet)(), {
                                 associatedChampions: [e],
@@ -10286,7 +10185,7 @@
                                     items: e.items
                                 })))
                             });
-                        o.uid = d(), o.title = this._findNewTitle(s.get("formatString")("item_sets_browser_duplicated_recommended_set_default_name", {
+                        o.uid = c(), o.title = this._findNewTitle(s.get("formatString")("item_sets_browser_duplicated_recommended_set_default_name", {
                             champion: this.get("indexedChampions")[e].name
                         }));
                         const i = this._getDeepCloneObject(this.get("itemSetsData"));
@@ -10295,39 +10194,36 @@
                 },
                 checkItemSetTitleRename: function(e, t) {
                     const n = this.get("itemSetsData.itemSets");
-                    return s.Lodash.some(n, (n => n.title === e && n.uid !== t)) ? {
+                    return o.Lodash.some(n, (n => n.title === e && n.uid !== t)) ? {
                         exists: !0,
                         newTitle: this._findNewTitle(e, t)
                     } : {
                         exists: !1
                     }
                 },
-                importItemSets: function(e, t) {
-                    this.set("isSaving", !0), this._sendEvent({
-                        id: o.TELEMETRY_EVENT_ID_MAP_IMPORT[t],
-                        size: e.length
-                    });
-                    const n = [],
-                        s = this._getDeepCloneObject(this.get("itemSetsData"));
+                importItemSets: function(e) {
+                    this.set("isSaving", !0);
+                    const t = [],
+                        n = this._getDeepCloneObject(this.get("itemSetsData"));
                     return e.forEach((e => {
-                        e.uid = d(), this.sanitize(e.title).then((t => {
+                        e.uid = c(), this.sanitize(e.title).then((t => {
                             t.success ? e.title = t.name : e.title = this._findNewTitle()
-                        })), s.itemSets.push(e), n.push(e.uid)
-                    })), this._saveItemSets(s).then((() => n))
+                        })), n.itemSets.push(e), t.push(e.uid)
+                    })), this._saveItemSets(n).then((() => t))
                 },
                 validateItemSetsBlob: function(e) {
                     if (e) {
                         const t = [];
                         return (e instanceof Array ? e : e.itemSets instanceof Array ? e.itemSets : [e]).forEach((e => {
-                            const n = c.validate(e, o.ITEM_SET_JSON_SCHEMA);
-                            n.valid ? t.push(this._getImportableItemSetContent(e)) : (s.logger.warning("Item set failed validation", e), s.logger.warning("Item set validation errors", n.errors))
+                            const n = a.validate(e, i.ITEM_SET_JSON_SCHEMA);
+                            n.valid ? t.push(this._getImportableItemSetContent(e)) : (o.logger.warning("Item set failed validation", e), o.logger.warning("Item set validation errors", n.errors))
                         })), Promise.all(t)
                     }
                     return Promise.resolve([])
                 },
                 handleGetChampionInventory: function(e) {
                     let t = [];
-                    e ? t = e.filter((e => e.id > 0)) : s.logger.warning("Unable to retrieve champion inventory"), this.set("championInventory", t)
+                    e ? t = e.filter((e => e.id > 0)) : o.logger.warning("Unable to retrieve champion inventory"), this.set("championInventory", t)
                 },
                 handleGetChampionMasteries: function(e) {
                     this.set("championMasteries", e || [])
@@ -10359,14 +10255,14 @@
                 _getImportableItemSetContent: function(e) {
                     const t = [],
                         n = this.get("useDefaultedNames");
-                    return e.blocks.forEach((e => t.push(e.type))), this._sanitizeTitles(t, e.title, o.TITLE_LENGTH_LIMIT).then((t => {
-                        const o = {};
-                        return o.title = t[0], o.associatedChampions = e.associatedChampions, o.associatedMaps = e.associatedMaps, o.blocks = [], e.blocks.forEach(((e, i) => {
-                            o.blocks.push({
+                    return e.blocks.forEach((e => t.push(e.type))), this._sanitizeTitles(t, e.title, i.TITLE_LENGTH_LIMIT).then((t => {
+                        const s = {};
+                        return s.title = t[0], s.associatedChampions = e.associatedChampions, s.associatedMaps = e.associatedMaps, s.blocks = [], e.blocks.forEach(((e, i) => {
+                            s.blocks.push({
                                 type: n ? this.get("tra.item_sets_new_item_block_prefix") : t[i + 1],
-                                items: e.items.map((e => s.Lodash.pick(e, ["id", "count"])))
+                                items: e.items.map((e => o.Lodash.pick(e, ["id", "count"])))
                             })
-                        })), o
+                        })), s
                     }))
                 },
                 _sanitizeTitles: function(e, t, n) {
@@ -10385,9 +10281,7 @@
                 },
                 _saveItemSets: function(e) {
                     return this.get("api.itemSets").put(`/v1/item-sets/${this.get("currentSummonerId")}/sets`, e).catch((e => {
-                        s.logger.error("unable to save item sets", e), this._sendEvent({
-                            id: o.TELEMETRY_EVENT_ID_SAVE_FAILURE
-                        })
+                        o.logger.error("unable to save item sets", e)
                     })).then((() => {
                         this.set("isSaving", !1)
                     }))
@@ -10407,13 +10301,13 @@
                 _findNewTitle: function(e, t) {
                     void 0 === e && (e = this.get("tra.item_sets_new_empty_set_prefix"));
                     const n = this.get("itemSetsData.itemSets");
-                    let o = 1,
+                    let s = 1,
                         i = e = e.replace(/[\s]\([0-9]+\)$/, "");
-                    for (; s.Lodash.some(n, (e => e.title === i && e.uid !== t));) i = `${e} (${o++})`;
+                    for (; o.Lodash.some(n, (e => e.title === i && e.uid !== t));) i = `${e} (${s++})`;
                     return i
                 }
             });
-            t.default = p
+            t.default = m
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -10534,16 +10428,16 @@
             }
         }, (e, t, n) => {
             "use strict";
-            var s = e.exports.Validator = n(183);
-            e.exports.ValidatorResult = n(191).ValidatorResult, e.exports.ValidationError = n(191).ValidationError, e.exports.SchemaError = n(191).SchemaError, e.exports.SchemaScanResult = n(192).SchemaScanResult, e.exports.scan = n(192).scan, e.exports.validate = function(e, t, n) {
+            var s = e.exports.Validator = n(182);
+            e.exports.ValidatorResult = n(190).ValidatorResult, e.exports.ValidationError = n(190).ValidationError, e.exports.SchemaError = n(190).SchemaError, e.exports.SchemaScanResult = n(191).SchemaScanResult, e.exports.scan = n(191).scan, e.exports.validate = function(e, t, n) {
                 return (new s).validate(e, t, n)
             }
         }, (e, t, n) => {
             "use strict";
-            var s = n(184),
-                o = n(190),
-                i = n(191),
-                r = n(192).scan,
+            var s = n(183),
+                o = n(189),
+                i = n(190),
+                r = n(191).scan,
                 l = i.ValidatorResult,
                 a = i.SchemaError,
                 c = i.SchemaContext,
@@ -10675,11 +10569,11 @@
             }, e.exports = d
         }, (e, t, n) => {
             "use strict";
-            const s = n(185);
+            const s = n(184);
             s.URL = URL, e.exports = s
         }, (e, t, n) => {
             "use strict";
-            var s = n(186);
+            var s = n(185);
 
             function o() {
                 this.protocol = null, this.slashes = null, this.auth = null, this.host = null, this.port = null, this.hostname = null, this.hash = null, this.search = null, this.query = null, this.pathname = null, this.path = null, this.href = null
@@ -10713,7 +10607,7 @@
                     "gopher:": !0,
                     "file:": !0
                 },
-                y = n(187);
+                y = n(186);
 
             function b(e, t, n) {
                 if (e && "object" == typeof e && e instanceof o) return e;
@@ -10731,16 +10625,16 @@
                     var k = l.exec(b);
                     if (k) return this.path = b, this.href = b, this.pathname = k[1], k[2] ? (this.search = k[2], this.query = t ? y.parse(this.search.substr(1)) : this.search.substr(1)) : t && (this.search = "", this.query = {}), this
                 }
-                var E = i.exec(b);
-                if (E) {
-                    var _ = (E = E[0]).toLowerCase();
-                    this.protocol = _, b = b.substr(E.length)
+                var S = i.exec(b);
+                if (S) {
+                    var E = (S = S[0]).toLowerCase();
+                    this.protocol = E, b = b.substr(S.length)
                 }
-                if (n || E || b.match(/^\/\/[^@/]+@[^@/]+/)) {
-                    var S = "//" === b.substr(0, 2);
-                    !S || E && g[E] || (b = b.substr(2), this.slashes = !0)
+                if (n || S || b.match(/^\/\/[^@/]+@[^@/]+/)) {
+                    var _ = "//" === b.substr(0, 2);
+                    !_ || S && g[S] || (b = b.substr(2), this.slashes = !0)
                 }
-                if (!g[E] && (S || E && !f[E])) {
+                if (!g[S] && (_ || S && !f[S])) {
                     for (var v, A, x = -1, w = 0; w < m.length; w++) {
                         -1 !== (I = b.indexOf(m[w])) && (-1 === x || I < x) && (x = I)
                     } - 1 !== (A = -1 === x ? b.lastIndexOf("@") : b.lastIndexOf("@", x)) && (v = b.slice(0, A), b = b.slice(A + 1), this.auth = decodeURIComponent(v)), x = -1;
@@ -10752,7 +10646,7 @@
                         for (var T = this.hostname.split(/\./), P = (w = 0, T.length); w < P; w++) {
                             var O = T[w];
                             if (O && !O.match(p)) {
-                                for (var D = "", R = 0, M = O.length; R < M; R++) O.charCodeAt(R) > 127 ? D += "x" : D += O[R];
+                                for (var D = "", M = 0, R = O.length; M < R; M++) O.charCodeAt(M) > 127 ? D += "x" : D += O[M];
                                 if (!D.match(p)) {
                                     var L = T.slice(0, w),
                                         B = T.slice(w + 1),
@@ -10764,20 +10658,20 @@
                         }
                     this.hostname.length > 255 ? this.hostname = "" : this.hostname = this.hostname.toLowerCase(), C || (this.hostname = s.toASCII(this.hostname));
                     var F = this.port ? ":" + this.port : "",
-                        U = this.hostname || "";
-                    this.host = U + F, this.href += this.host, C && (this.hostname = this.hostname.substr(1, this.hostname.length - 2), "/" !== b[0] && (b = "/" + b))
+                        j = this.hostname || "";
+                    this.host = j + F, this.href += this.host, C && (this.hostname = this.hostname.substr(1, this.hostname.length - 2), "/" !== b[0] && (b = "/" + b))
                 }
-                if (!h[_])
+                if (!h[E])
                     for (w = 0, P = c.length; w < P; w++) {
-                        var j = c[w];
-                        if (-1 !== b.indexOf(j)) {
-                            var H = encodeURIComponent(j);
-                            H === j && (H = escape(j)), b = b.split(j).join(H)
+                        var U = c[w];
+                        if (-1 !== b.indexOf(U)) {
+                            var $ = encodeURIComponent(U);
+                            $ === U && ($ = escape(U)), b = b.split(U).join($)
                         }
                     }
-                var $ = b.indexOf("#"); - 1 !== $ && (this.hash = b.substr($), b = b.slice(0, $));
+                var H = b.indexOf("#"); - 1 !== H && (this.hash = b.substr(H), b = b.slice(0, H));
                 var W = b.indexOf("?");
-                if (-1 !== W ? (this.search = b.substr(W), this.query = b.substr(W + 1), t && (this.query = y.parse(this.query)), b = b.slice(0, W)) : t && (this.search = "", this.query = {}), b && (this.pathname = b), f[_] && this.hostname && !this.pathname && (this.pathname = "/"), this.pathname || this.search) {
+                if (-1 !== W ? (this.search = b.substr(W), this.query = b.substr(W + 1), t && (this.query = y.parse(this.query)), b = b.slice(0, W)) : t && (this.search = "", this.query = {}), b && (this.pathname = b), f[E] && this.hostname && !this.pathname && (this.pathname = "/"), this.pathname || this.search) {
                     F = this.pathname || "";
                     var G = this.search || "";
                     this.path = F + G
@@ -10837,24 +10731,24 @@
                 }
                 var b = n.pathname && "/" === n.pathname.charAt(0),
                     k = e.host || e.pathname && "/" === e.pathname.charAt(0),
-                    E = k || b || n.host && e.pathname,
-                    _ = E,
-                    S = n.pathname && n.pathname.split("/") || [],
+                    S = k || b || n.host && e.pathname,
+                    E = S,
+                    _ = n.pathname && n.pathname.split("/") || [],
                     v = (u = e.pathname && e.pathname.split("/") || [], n.protocol && !f[n.protocol]);
-                if (v && (n.hostname = "", n.port = null, n.host && ("" === S[0] ? S[0] = n.host : S.unshift(n.host)), n.host = "", e.protocol && (e.hostname = null, e.port = null, e.host && ("" === u[0] ? u[0] = e.host : u.unshift(e.host)), e.host = null), E = E && ("" === u[0] || "" === S[0])), k) n.host = e.host || "" === e.host ? e.host : n.host, n.hostname = e.hostname || "" === e.hostname ? e.hostname : n.hostname, n.search = e.search, n.query = e.query, S = u;
-                else if (u.length) S || (S = []), S.pop(), S = S.concat(u), n.search = e.search, n.query = e.query;
+                if (v && (n.hostname = "", n.port = null, n.host && ("" === _[0] ? _[0] = n.host : _.unshift(n.host)), n.host = "", e.protocol && (e.hostname = null, e.port = null, e.host && ("" === u[0] ? u[0] = e.host : u.unshift(e.host)), e.host = null), S = S && ("" === u[0] || "" === _[0])), k) n.host = e.host || "" === e.host ? e.host : n.host, n.hostname = e.hostname || "" === e.hostname ? e.hostname : n.hostname, n.search = e.search, n.query = e.query, _ = u;
+                else if (u.length) _ || (_ = []), _.pop(), _ = _.concat(u), n.search = e.search, n.query = e.query;
                 else if (null != e.search) {
-                    if (v) n.host = S.shift(), n.hostname = n.host, (C = !!(n.host && n.host.indexOf("@") > 0) && n.host.split("@")) && (n.auth = C.shift(), n.hostname = C.shift(), n.host = n.hostname);
+                    if (v) n.host = _.shift(), n.hostname = n.host, (C = !!(n.host && n.host.indexOf("@") > 0) && n.host.split("@")) && (n.auth = C.shift(), n.hostname = C.shift(), n.host = n.hostname);
                     return n.search = e.search, n.query = e.query, null === n.pathname && null === n.search || (n.path = (n.pathname ? n.pathname : "") + (n.search ? n.search : "")), n.href = n.format(), n
                 }
-                if (!S.length) return n.pathname = null, n.search ? n.path = "/" + n.search : n.path = null, n.href = n.format(), n;
-                for (var A = S.slice(-1)[0], x = (n.host || e.host || S.length > 1) && ("." === A || ".." === A) || "" === A, w = 0, I = S.length; I >= 0; I--) "." === (A = S[I]) ? S.splice(I, 1) : ".." === A ? (S.splice(I, 1), w++) : w && (S.splice(I, 1), w--);
-                if (!E && !_)
-                    for (; w--; w) S.unshift("..");
-                !E || "" === S[0] || S[0] && "/" === S[0].charAt(0) || S.unshift(""), x && "/" !== S.join("/").substr(-1) && S.push("");
-                var C, T = "" === S[0] || S[0] && "/" === S[0].charAt(0);
-                v && (n.hostname = T ? "" : S.length ? S.shift() : "", n.host = n.hostname, (C = !!(n.host && n.host.indexOf("@") > 0) && n.host.split("@")) && (n.auth = C.shift(), n.hostname = C.shift(), n.host = n.hostname));
-                return (E = E || n.host && S.length) && !T && S.unshift(""), S.length > 0 ? n.pathname = S.join("/") : (n.pathname = null, n.path = null), null === n.pathname && null === n.search || (n.path = (n.pathname ? n.pathname : "") + (n.search ? n.search : "")), n.auth = e.auth || n.auth, n.slashes = n.slashes || e.slashes, n.href = n.format(), n
+                if (!_.length) return n.pathname = null, n.search ? n.path = "/" + n.search : n.path = null, n.href = n.format(), n;
+                for (var A = _.slice(-1)[0], x = (n.host || e.host || _.length > 1) && ("." === A || ".." === A) || "" === A, w = 0, I = _.length; I >= 0; I--) "." === (A = _[I]) ? _.splice(I, 1) : ".." === A ? (_.splice(I, 1), w++) : w && (_.splice(I, 1), w--);
+                if (!S && !E)
+                    for (; w--; w) _.unshift("..");
+                !S || "" === _[0] || _[0] && "/" === _[0].charAt(0) || _.unshift(""), x && "/" !== _.join("/").substr(-1) && _.push("");
+                var C, T = "" === _[0] || _[0] && "/" === _[0].charAt(0);
+                v && (n.hostname = T ? "" : _.length ? _.shift() : "", n.host = n.hostname, (C = !!(n.host && n.host.indexOf("@") > 0) && n.host.split("@")) && (n.auth = C.shift(), n.hostname = C.shift(), n.host = n.hostname));
+                return (S = S || n.host && _.length) && !T && _.unshift(""), _.length > 0 ? n.pathname = _.join("/") : (n.pathname = null, n.path = null), null === n.pathname && null === n.search || (n.path = (n.pathname ? n.pathname : "") + (n.search ? n.search : "")), n.auth = e.auth || n.auth, n.slashes = n.slashes || e.slashes, n.href = n.format(), n
             }, o.prototype.parseHost = function() {
                 var e = this.host,
                     t = r.exec(e);
@@ -10890,9 +10784,9 @@
                             "not-basic": "Illegal input >= 0x80 (not a basic code point)",
                             "invalid-input": "Invalid input"
                         },
-                        E = a - c,
-                        _ = Math.floor,
-                        S = String.fromCharCode;
+                        S = a - c,
+                        E = Math.floor,
+                        _ = String.fromCharCode;
 
                     function v(e) {
                         throw new RangeError(k[e])
@@ -10917,7 +10811,7 @@
                     function I(e) {
                         return A(e, (function(e) {
                             var t = "";
-                            return e > 65535 && (t += S((e -= 65536) >>> 10 & 1023 | 55296), e = 56320 | 1023 & e), t += S(e)
+                            return e > 65535 && (t += _((e -= 65536) >>> 10 & 1023 | 55296), e = 56320 | 1023 & e), t += _(e)
                         })).join("")
                     }
 
@@ -10927,33 +10821,33 @@
 
                     function T(e, t, n) {
                         var s = 0;
-                        for (e = n ? _(e / p) : e >> 1, e += _(e / t); e > E * d >> 1; s += a) e = _(e / E);
-                        return _(s + (E + 1) * e / (e + m))
+                        for (e = n ? E(e / p) : e >> 1, e += E(e / t); e > S * d >> 1; s += a) e = E(e / S);
+                        return E(s + (S + 1) * e / (e + m))
                     }
 
                     function P(e) {
                         var t, n, s, o, i, r, m, p, f, y, b, k = [],
-                            E = e.length,
-                            S = 0,
+                            S = e.length,
+                            _ = 0,
                             A = h,
                             x = u;
                         for ((n = e.lastIndexOf(g)) < 0 && (n = 0), s = 0; s < n; ++s) e.charCodeAt(s) >= 128 && v("not-basic"), k.push(e.charCodeAt(s));
-                        for (o = n > 0 ? n + 1 : 0; o < E;) {
-                            for (i = S, r = 1, m = a; o >= E && v("invalid-input"), ((p = (b = e.charCodeAt(o++)) - 48 < 10 ? b - 22 : b - 65 < 26 ? b - 65 : b - 97 < 26 ? b - 97 : a) >= a || p > _((l - S) / r)) && v("overflow"), S += p * r, !(p < (f = m <= x ? c : m >= x + d ? d : m - x)); m += a) r > _(l / (y = a - f)) && v("overflow"), r *= y;
-                            x = T(S - i, t = k.length + 1, 0 == i), _(S / t) > l - A && v("overflow"), A += _(S / t), S %= t, k.splice(S++, 0, A)
+                        for (o = n > 0 ? n + 1 : 0; o < S;) {
+                            for (i = _, r = 1, m = a; o >= S && v("invalid-input"), ((p = (b = e.charCodeAt(o++)) - 48 < 10 ? b - 22 : b - 65 < 26 ? b - 65 : b - 97 < 26 ? b - 97 : a) >= a || p > E((l - _) / r)) && v("overflow"), _ += p * r, !(p < (f = m <= x ? c : m >= x + d ? d : m - x)); m += a) r > E(l / (y = a - f)) && v("overflow"), r *= y;
+                            x = T(_ - i, t = k.length + 1, 0 == i), E(_ / t) > l - A && v("overflow"), A += E(_ / t), _ %= t, k.splice(_++, 0, A)
                         }
                         return I(k)
                     }
 
                     function O(e) {
-                        var t, n, s, o, i, r, m, p, f, y, b, k, E, A, x, I = [];
-                        for (k = (e = w(e)).length, t = h, n = 0, i = u, r = 0; r < k; ++r)(b = e[r]) < 128 && I.push(S(b));
+                        var t, n, s, o, i, r, m, p, f, y, b, k, S, A, x, I = [];
+                        for (k = (e = w(e)).length, t = h, n = 0, i = u, r = 0; r < k; ++r)(b = e[r]) < 128 && I.push(_(b));
                         for (s = o = I.length, o && I.push(g); s < k;) {
                             for (m = l, r = 0; r < k; ++r)(b = e[r]) >= t && b < m && (m = b);
-                            for (m - t > _((l - n) / (E = s + 1)) && v("overflow"), n += (m - t) * E, t = m, r = 0; r < k; ++r)
+                            for (m - t > E((l - n) / (S = s + 1)) && v("overflow"), n += (m - t) * S, t = m, r = 0; r < k; ++r)
                                 if ((b = e[r]) < t && ++n > l && v("overflow"), b == t) {
-                                    for (p = n, f = a; !(p < (y = f <= i ? c : f >= i + d ? d : f - i)); f += a) x = p - y, A = a - y, I.push(S(C(y + x % A, 0))), p = _(x / A);
-                                    I.push(S(C(p, 0))), i = T(n, E, s == o), n = 0, ++s
+                                    for (p = n, f = a; !(p < (y = f <= i ? c : f >= i + d ? d : f - i)); f += a) x = p - y, A = a - y, I.push(_(C(y + x % A, 0))), p = E(x / A);
+                                    I.push(_(C(p, 0))), i = T(n, S, s == o), n = 0, ++s
                                 }++ n, ++t
                         }
                         return I.join("")
@@ -10982,7 +10876,7 @@
                 }()
         }, (e, t, n) => {
             "use strict";
-            t.decode = t.parse = n(188), t.encode = t.stringify = n(189)
+            t.decode = t.parse = n(187), t.encode = t.stringify = n(188)
         }, e => {
             "use strict";
 
@@ -11030,7 +10924,7 @@
             }
         }, (e, t, n) => {
             "use strict";
-            var s = n(191),
+            var s = n(190),
                 o = s.ValidatorResult,
                 i = s.SchemaError,
                 r = {
@@ -11401,7 +11295,7 @@
             }, e.exports = r
         }, (e, t, n) => {
             "use strict";
-            var s = n(184),
+            var s = n(183),
                 o = t.ValidationError = function(e, t, n, s, o, i) {
                     s && (this.property = s), e && (this.message = e), n && (n.id ? this.schema = n.id : this.schema = n), t && (this.instance = t), this.name = o, this.argument = i, this.stack = this.toString()
                 };
@@ -11556,8 +11450,8 @@
                 return 2 === s.length && (t += s[1].length), t
             }
         }, (e, t, n) => {
-            var s = n(184),
-                o = n(191);
+            var s = n(183),
+                o = n(190);
 
             function i(e, t) {
                 this.id = e, this.ref = t
@@ -11595,8 +11489,8 @@
                 return n(e, t), new i(a, c)
             }
         }, (e, t, n) => {
-            var s, o, i = n(194),
-                r = n(195),
+            var s, o, i = n(193),
+                r = n(194),
                 l = 0,
                 a = 0;
             e.exports = function(e, t, n) {
@@ -11645,10 +11539,10 @@
             "use strict";
             var s, o = n(1),
                 i = n(124),
-                r = (s = n(197)) && s.__esModule ? s : {
+                r = (s = n(196)) && s.__esModule ? s : {
                     default: s
                 };
-            n(198);
+            n(197);
             const l = {
                     EMOTE_WHEEL: "emotewheel",
                     REACTIONS: "reactions"
@@ -11657,7 +11551,7 @@
             e.exports = o.Ember.Component.extend({
                 classNames: ["emote-root-component"],
                 classNameBindings: ["isDemacia:emote-root-component--demacia"],
-                layout: n(199),
+                layout: n(198),
                 emotesService: o.Ember.inject.service("emotes"),
                 loadoutsService: o.Ember.inject.service("loadouts"),
                 errorsHandler: o.Ember.inject.service("errors-handler"),
@@ -11695,20 +11589,10 @@
                     }
                 },
                 didInsertElement: function() {
-                    this._super(...arguments), r.default.acknowledgeEmoteNotifications(), this.set("telemetryTimer", Date.now()), this.get("emotesService.isFromExternalSource") ? this.set("telemetryTimerId", "champion_select_session_time") : this.set("telemetryTimerId", "collections_session_time"), this.get("errorsHandler").checkAndDisplayErrors()
+                    this._super(...arguments), r.default.acknowledgeEmoteNotifications(), this.get("errorsHandler").checkAndDisplayErrors()
                 },
                 willDestroyElement: function() {
-                    this._super(...arguments);
-                    const e = this.get("telemetryTimer"),
-                        t = this.get("telemetryTimerId");
-                    if (e && t) {
-                        const n = {
-                            id: t,
-                            value: Date.now() - e
-                        };
-                        o.Telemetry.sendCustomData("emote_panel_v2_event", n)
-                    }
-                    o.TelemetryService.stopTelemetryTimerEvent(a, "timeSpent", "collections")
+                    this._super(...arguments), o.TelemetryService.stopTelemetryTimerEvent(a, "timeSpent", "collections")
                 }
             })
         }, (e, t, n) => {
@@ -11783,15 +11667,15 @@
             "use strict";
             var s = n(1),
                 o = n(65),
-                i = n(201);
-            n(202);
-            var r, l = (r = n(203)) && r.__esModule ? r : {
+                i = n(200);
+            n(201);
+            var r, l = (r = n(202)) && r.__esModule ? r : {
                     default: r
                 },
                 a = n(124);
             const c = s.UIKit.getTooltipManager();
             e.exports = s.Ember.Component.extend({
-                layout: n(204),
+                layout: n(203),
                 classNames: ["emote-inventory"],
                 classNameBindings: ["isEmotesInventoryLoaded:emote-inventory-loaded"],
                 loadoutsService: s.Ember.inject.service("loadouts"),
@@ -11861,15 +11745,9 @@
                 onItemClick: function(e) {
                     const t = e.currentTarget.querySelector(".emote-item-icon"),
                         n = t.getAttribute("data-emoteid");
-                    if (t.classList.contains("unowned")) {
-                        const e = {
-                            id: "emote-panel-unowned-emote-click",
-                            value: n
-                        };
-                        s.Telemetry.sendCustomData("emote_panel_v2_event", e), this.openPAW({
-                            id: parseInt(n)
-                        })
-                    }
+                    t.classList.contains("unowned") && this.openPAW({
+                        id: parseInt(n)
+                    })
                 },
                 onItemRightClick: function(e) {
                     e.preventDefault();
@@ -11878,15 +11756,7 @@
                     if (t.classList.contains("unowned")) return;
                     a.EMOTE_SLOTS_AS_LIST.some((e => {
                         const t = this.get(`emotesLoadout.${e.name}.itemId`);
-                        if (!(t && -1 !== t || isNaN(n))) {
-                            i.EMOTE_SFX.emotesPlace.play(), this.set(`emotesLoadout.${e.name}.itemId`, n), this.set("dragActive", "inactive"), this.set("dragstart", "dragout");
-                            const t = {
-                                id: "emote-panel-emote-equip",
-                                value: n,
-                                emotePosition: e.name
-                            };
-                            return s.Telemetry.sendCustomData("emote_panel_v2_event", t), this.get("loadoutsService").saveEmotesLoadout(), !0
-                        }
+                        if (!(t && -1 !== t || isNaN(n))) return i.EMOTE_SFX.emotesPlace.play(), this.set(`emotesLoadout.${e.name}.itemId`, n), this.set("dragActive", "inactive"), this.set("dragstart", "dragout"), this.get("loadoutsService").saveEmotesLoadout(), !0
                     })) || i.EMOTE_SFX.emotesFull.play()
                 },
                 onItemMouseOver: function(e) {
@@ -12079,10 +11949,10 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(1);
-            n(206);
+            n(205);
             var o = n(124);
             e.exports = s.Ember.Component.extend({
-                layout: n(207),
+                layout: n(206),
                 emotesService: s.Ember.inject.service("emotes"),
                 loadoutsService: s.Ember.inject.service("loadouts"),
                 emotesLoadout: s.Ember.computed.alias("loadoutsService.localEmoteLoadout"),
@@ -12148,10 +12018,10 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(1),
-                o = n(201),
+                o = n(200),
                 i = n(124);
-            n(209), e.exports = s.Ember.Component.extend({
-                layout: n(210),
+            n(208), e.exports = s.Ember.Component.extend({
+                layout: n(209),
                 classNames: ["emote-dropzone"],
                 classNameBindings: ["emoteTrayPosition", "dragClass.emote-tray:dragstart"],
                 attributeBindings: ["draggable"],
@@ -12193,19 +12063,13 @@
                 drop(e) {
                     const t = parseInt(e.dataTransfer.getData("text/data")),
                         n = this.get("emotesService").getEmoteData(t),
-                        r = n ? n.itemId : i.EMPTY_EMOTE_SLOT_ITEM_ID,
-                        l = e.dataTransfer.getData("emoteLoadoutPosition"),
-                        a = this.$(e.target).attr("data-loadout-position");
-                    this.set("emotesLoadout." + a + ".itemId", r);
-                    const c = {
-                        id: "emote-panel-emote-equip",
-                        value: r,
-                        emotePosition: a
-                    };
-                    if (s.Telemetry.sendCustomData("emote_panel_v2_event", c), o.EMOTE_SFX.emotesPlace.play(), l) {
+                        s = n ? n.itemId : i.EMPTY_EMOTE_SLOT_ITEM_ID,
+                        r = e.dataTransfer.getData("emoteLoadoutPosition"),
+                        l = this.$(e.target).attr("data-loadout-position");
+                    if (this.set("emotesLoadout." + l + ".itemId", s), o.EMOTE_SFX.emotesPlace.play(), r) {
                         const t = this.$(e.target).attr("data-emoteid"),
                             n = t ? parseInt(t) : i.EMPTY_EMOTE_SLOT_ITEM_ID;
-                        this.set("emotesLoadout." + l + ".itemId", n)
+                        this.set("emotesLoadout." + r + ".itemId", n)
                     }
                     this.set("dragSource", "dragsourced"), this.get("loadoutsService").saveEmotesLoadout(), setTimeout((() => {
                         this.set("dragstart", "dragout"), this.get("emotesService").setIsDragging(!1)
@@ -12226,9 +12090,9 @@
             "use strict";
             var s = n(1),
                 o = n(124),
-                i = n(201);
-            n(212), e.exports = s.Ember.Component.extend({
-                layout: n(213),
+                i = n(200);
+            n(211), e.exports = s.Ember.Component.extend({
+                layout: n(212),
                 loadoutsService: s.Ember.inject.service("loadouts"),
                 emotesService: s.Ember.inject.service("emotes"),
                 emotesLoadout: s.Ember.computed.alias("loadoutsService.localEmoteLoadout"),
@@ -12256,9 +12120,9 @@
             "use strict";
             var s = n(1),
                 o = n(124);
-            n(215), e.exports = s.Ember.Component.extend({
+            n(214), e.exports = s.Ember.Component.extend({
                 classNames: ["emote-reaction-wrapper"],
-                layout: n(216),
+                layout: n(215),
                 emotesService: s.Ember.inject.service("emotes"),
                 loadoutsService: s.Ember.inject.service("loadouts"),
                 emotesLoadout: s.Ember.computed.alias("loadoutsService.localEmoteLoadout"),
@@ -12296,7 +12160,7 @@
         }, (e, t, n) => {
             "use strict";
             var s, o = n(1),
-                i = (s = n(197)) && s.__esModule ? s : {
+                i = (s = n(196)) && s.__esModule ? s : {
                     default: s
                 };
             const r = (0, o.emberDataBinding)({
@@ -12396,17 +12260,9 @@
                         }), 1e4)
                     }));
                     Promise.race([e, n]).then((e => {
-                        if (!e) {
-                            const e = {
-                                id: `emote-panel-${t}`
-                            };
-                            s.Telemetry.sendCustomData("emote_panel_v2_event", e), this._displayErrorMessage(t)
-                        }
+                        e || this._displayErrorMessage(t)
                     })).catch((() => {
-                        const e = {
-                            id: `emote-panel-${t}`
-                        };
-                        s.Telemetry.sendCustomData("emote_panel_v2_event", e), this._displayErrorMessage(t)
+                        this._displayErrorMessage(t)
                     }))
                 },
                 _displayErrorMessage(e) {
@@ -12428,7 +12284,7 @@
             var s = n(1);
             class o extends s.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(220)
+                    return n(219)
                 }
                 constructor() {
                     super(), this._resetDefaultValues(), this._cacheSize = 1, this._containerHeightPx = 0, this._createListElement = () => {}, this._updateListElement = () => {}, this._resetListElement = () => {}, this._deleteListElement = () => {};
@@ -12791,8 +12647,8 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                o = n(224);
-            n(226);
+                o = n(223);
+            n(225);
             const {
                 RunMixin: i
             } = s.EmberAddons.EmberLifeline, r = s.UIKit.getContextualNotificationManager(), l = s.UIKit.getTemplateHelper();
@@ -12988,7 +12844,7 @@
                 }
                 return t
             };
-            var s = n(225);
+            var s = n(224);
             const o = {
                 PerkSelectionValid: {
                     code: 0,
@@ -13091,7 +12947,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                o = n(224);
+                o = n(223);
             const i = s.Ember.Component.extend({
                 classNames: ["perks-style-filter"],
                 riotclient: s.Ember.inject.service("riotclient"),
@@ -13161,7 +13017,7 @@
                 value: !0
             }), t.default = void 0;
             var s, o = n(1),
-                i = (s = n(230)) && s.__esModule ? s : {
+                i = (s = n(229)) && s.__esModule ? s : {
                     default: s
                 };
             const r = o.AudioPlugin.getChannel("sfx-ui"),
@@ -13453,7 +13309,7 @@
                         } s.default = e, n && n.set(e, s);
                     return s
                 }(n(1)),
-                i = (s = n(232)) && s.__esModule ? s : {
+                i = (s = n(231)) && s.__esModule ? s : {
                     default: s
                 };
 
@@ -13584,10 +13440,10 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                o = a(n(235)),
-                i = a(n(238)),
-                r = n(242),
-                l = n(243);
+                o = a(n(234)),
+                i = a(n(237)),
+                r = n(241),
+                l = n(242);
 
             function a(e) {
                 return e && e.__esModule ? e : {
@@ -13668,9 +13524,9 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                o = n(225),
-                i = l(n(236)),
-                r = l(n(238));
+                o = n(224),
+                i = l(n(235)),
+                r = l(n(237));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -13944,10 +13800,10 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                o = n(224),
-                i = n(225),
-                r = a(n(237)),
-                l = a(n(238));
+                o = n(223),
+                i = n(224),
+                r = a(n(236)),
+                l = a(n(237));
 
             function a(e) {
                 return e && e.__esModule ? e : {
@@ -14417,7 +14273,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                o = n(225);
+                o = n(224);
             var i = s.Ember.Object.extend({
                 type: null,
                 perks: null,
@@ -14442,9 +14298,9 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s = c(n(239)),
-                o = c(n(240)),
-                i = c(n(237)),
+            var s = c(n(238)),
+                o = c(n(239)),
+                i = c(n(236)),
                 r = function(e, t) {
                     if (!t && e && e.__esModule) return e;
                     if (null === e || "object" != typeof e && "function" != typeof e) return {
@@ -14461,7 +14317,7 @@
                         } s.default = e, n && n.set(e, s);
                     return s
                 }(n(1)),
-                l = c(n(241));
+                l = c(n(240));
 
             function a(e) {
                 if ("function" != typeof WeakMap) return null;
@@ -14597,7 +14453,7 @@
                 value: !0
             }), t.default = void 0;
             var s, o = n(1);
-            var i = ((s = n(239)) && s.__esModule ? s : {
+            var i = ((s = n(238)) && s.__esModule ? s : {
                 default: s
             }).default.extend({
                 slots: o.Ember.A(),
@@ -14684,8 +14540,8 @@
                 return r.default.extend(l).create()
             };
             var s, o = n(1),
-                i = n(243),
-                r = (s = n(245)) && s.__esModule ? s : {
+                i = n(242),
+                r = (s = n(244)) && s.__esModule ? s : {
                     default: s
                 }
         }, (e, t, n) => {
@@ -14699,17 +14555,17 @@
             }), t.getResourcePath = function(e) {
                 return "/" + s(e)
             }, t.interpolateResourceName = s, t.requireEntity = void 0;
-            const o = n(244);
+            const o = n(243);
             t.requireEntity = o
         }, (e, t, n) => {
             var s = {
-                "./page.js": 236,
-                "./perk.js": 239,
-                "./perks-book.js": 235,
-                "./perks-static-data.js": 238,
-                "./slot.js": 237,
-                "./style.js": 240,
-                "./utils.js": 224
+                "./page.js": 235,
+                "./perk.js": 238,
+                "./perks-book.js": 234,
+                "./perks-static-data.js": 237,
+                "./slot.js": 236,
+                "./style.js": 239,
+                "./utils.js": 223
             };
 
             function o(e) {
@@ -14726,7 +14582,7 @@
             }
             o.keys = function() {
                 return Object.keys(s)
-            }, o.resolve = i, e.exports = o, o.id = 244
+            }, o.resolve = i, e.exports = o, o.id = 243
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -14760,7 +14616,7 @@
                         } s.default = e, n && n.set(e, s);
                     return s
                 }(n(1)),
-                i = (s = n(232)) && s.__esModule ? s : {
+                i = (s = n(231)) && s.__esModule ? s : {
                     default: s
                 };
 
@@ -15090,7 +14946,7 @@
                 }), e
             };
             var s = i(n(1)),
-                o = i(n(280));
+                o = i(n(279));
 
             function i(e) {
                 return e && e.__esModule ? e : {
@@ -15102,7 +14958,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s, o = (s = n(281)) && s.__esModule ? s : {
+            var s, o = (s = n(280)) && s.__esModule ? s : {
                 default: s
             };
             t.default = class {
@@ -15134,8 +14990,8 @@
                 return a
             };
             var s, o = n(1),
-                i = n(283),
-                r = (s = n(284)) && s.__esModule ? s : {
+                i = n(282),
+                r = (s = n(283)) && s.__esModule ? s : {
                     default: s
                 };
             class l {
@@ -15160,7 +15016,7 @@
                 _initItemSetModalApp() {
                     return this._itemSetModalApp ? Promise.resolve(this._itemSetModalApp) : new Promise((e => {
                         Promise.resolve().then((() => {
-                            e(n(282).default)
+                            e(n(281).default)
                         }).bind(null, n)).catch(n.oe)
                     })).then((e => (this._itemSetModalApp = new e(this._traService), this._itemSetModalApp)))
                 }
@@ -15169,22 +15025,22 @@
                         name: "ItemTooltipComponent",
                         ComponentFactory: o.ComponentFactory,
                         tra: e,
-                        ItemTooltipComponent: n(167).default
+                        ItemTooltipComponent: n(166).default
                     }), o.EmberApplicationFactory.setFactoryDefinition({
                         name: "ItemSetMenuComponent",
                         ComponentFactory: o.ComponentFactory,
                         tra: e,
-                        ItemSetMenuComponent: n(161).default
+                        ItemSetMenuComponent: n(160).default
                     }), o.EmberApplicationFactory.setFactoryDefinition({
                         name: "PreferredSlotsMenuComponent",
                         ComponentFactory: o.ComponentFactory,
                         tra: e,
-                        ItemSetMenuComponent: n(174).default
+                        ItemSetMenuComponent: n(173).default
                     }), o.EmberApplicationFactory.setFactoryDefinition({
                         name: "rcp-fe-lol-item-set-import-modal",
                         tra: e,
                         ComponentFactory: o.ComponentFactory,
-                        RcpFeLolItemSetImportModalComponent: n(158).default
+                        RcpFeLolItemSetImportModalComponent: n(157).default
                     })
                 }
             }
@@ -15228,15 +15084,15 @@
                         name: "ItemSetModalRootComponent",
                         tra: e,
                         ComponentFactory: s.ComponentFactory,
-                        ItemSetModalRootComponent: n(164).default,
+                        ItemSetModalRootComponent: n(163).default,
                         ItemBuildTreeComponent: n(134).default,
                         ItemSetEditorComponent: n(147).default,
-                        RecommendedSetViewerComponent: n(177).default,
+                        RecommendedSetViewerComponent: n(176).default,
                         ItemFilterPanelComponent: n(140).default,
                         ItemGridComponent: n(143).default,
                         ChampionSelectorComponent: n(125).default,
                         CircleButtonComponent: n(131).default,
-                        ItemSetsService: n(180).default
+                        ItemSetsService: n(179).default
                     }), this._componentParams = s.Ember.Object.create(), this._subscribeNavigationEvents()
                 }
                 _subscribeNavigationEvents() {
@@ -15264,10 +15120,10 @@
                 })
             };
             var s = n(1),
-                o = a(n(170)),
+                o = a(n(169)),
                 i = a(n(125)),
                 r = a(n(131)),
-                l = a(n(180));
+                l = a(n(179));
 
             function a(e) {
                 return e && e.__esModule ? e : {
@@ -15281,27 +15137,26 @@
                 value: !0
             }), t.default = function(e, t) {
                 const n = (0, s.dataBinding)("/lol-item-sets", (0, s.getProvider)().getSocket()),
-                    i = (0, s.dataBinding)("/telemetry", (0, s.getProvider)().getSocket()),
-                    r = (0, s.dataBinding)("/lol-platform-config", (0, s.getProvider)().getSocket()),
-                    c = (0, s.dataBinding)("/lol-summoner", (0, s.getProvider)().getSocket());
-                return Promise.resolve().then((() => c.get("/v1/current-summoner"))).then((e => Promise.all([Promise.resolve(e.summonerId), n.get(`/v1/item-sets/${e.summonerId}/sets`), r.get("/v1/namespaces/ItemSets/MaxItemSets").then((e => e || o.MAX_ITEM_SETS_PER_PLAYER)).catch((() => (s.logger.warning(`Can't get platform config ItemSets/MaxItemSets, using default ${o.MAX_ITEM_SETS_PER_PLAYER}`), o.MAX_ITEM_SETS_PER_PLAYER)))]).then((e => ({
+                    i = (0, s.dataBinding)("/lol-platform-config", (0, s.getProvider)().getSocket()),
+                    r = (0, s.dataBinding)("/lol-summoner", (0, s.getProvider)().getSocket());
+                return Promise.resolve().then((() => r.get("/v1/current-summoner"))).then((e => Promise.all([Promise.resolve(e.summonerId), n.get(`/v1/item-sets/${e.summonerId}/sets`), i.get("/v1/namespaces/ItemSets/MaxItemSets").then((e => e || o.MAX_ITEM_SETS_PER_PLAYER)).catch((() => (s.logger.warning(`Can't get platform config ItemSets/MaxItemSets, using default ${o.MAX_ITEM_SETS_PER_PLAYER}`), o.MAX_ITEM_SETS_PER_PLAYER)))]).then((e => ({
                     summonerId: e[0],
                     myItemSets: e[1],
                     maxItemSets: e[2]
                 }))))).then((o => {
-                    const r = JSON.parse(JSON.stringify(o));
-                    t.name = a(r.myItemSets.itemSets.map((e => e.title)), t.name);
-                    const c = s.UIKit.getTemplateHelper().contentBlockDialog(e.get("item_sets_import_confirm_title"), e.formatString("item_sets_import_confirm_text", {
+                    const i = JSON.parse(JSON.stringify(o));
+                    t.name = a(i.myItemSets.itemSets.map((e => e.title)), t.name);
+                    const r = s.UIKit.getTemplateHelper().contentBlockDialog(e.get("item_sets_import_confirm_title"), e.formatString("item_sets_import_confirm_text", {
                             name: t.name
                         }), "dialog-medium", "confirm-friend-actions"),
-                        d = s.ModalManager.add({
+                        c = s.ModalManager.add({
                             type: "rcp-fe-lol-item-set-import-modal",
                             data: {
                                 _closeModalCallback: () => {
-                                    s.ModalManager.remove(d)
+                                    s.ModalManager.remove(c)
                                 },
-                                _importCallback: () => l(e, t, r, n, i),
-                                content: c,
+                                _importCallback: () => l(e, t, i, n),
+                                content: r,
                                 itemSetApi: s.ItemSetsApi,
                                 btnTextImport: e.get("item_sets_import_btn_import"),
                                 btnTextEdit: e.get("item_sets_import_btn_edit"),
@@ -15314,7 +15169,7 @@
             }, t.importSet = l, t.mergeBlocksAndItems = r, t.suffixDuplicateName = a;
             var s = n(1),
                 o = n(129);
-            const i = n(193);
+            const i = n(192);
 
             function r(e, t, n) {
                 const o = s.Lodash.isNil(t) ? [] : t;
@@ -15327,28 +15182,25 @@
                 }), o
             }
 
-            function l(e, t, n, l, a) {
+            function l(e, t, n, o) {
                 const {
-                    summonerId: c,
-                    maxItemSets: d
+                    summonerId: l,
+                    maxItemSets: a
                 } = n;
-                let m = n.myItemSets;
-                const p = r(e, t.blocks, t.items);
-                void 0 !== m && void 0 !== m.itemSets || (m = {
+                let c = n.myItemSets;
+                const d = r(e, t.blocks, t.items);
+                void 0 !== c && void 0 !== c.itemSets || (c = {
                     itemSets: []
                 });
-                const u = {
+                const m = {
                     uid: i(),
                     title: t.name,
                     associatedChampions: t.champions,
                     associatedMaps: t.maps,
-                    blocks: p
+                    blocks: d
                 };
-                return m.itemSets.push(u), m.itemSets.length <= d ? Promise.all([l.put(`/v1/item-sets/${c}/sets`, m).catch((e => s.logger.error("Failed to save item set", e))), a.post("/v1/events/item_sets__item_sets_event", {
-                    id: o.TELEMETRY_EVENT_ID_IMPORT,
-                    source: t.source
-                }).catch((e => s.logger.error("Failed to send import telemetry", e)))]).then((() => Promise.resolve(u))) : Promise.reject(new Error(e.formatString("item_sets_import_error_limit_exceeded", {
-                    max: d
+                return c.itemSets.push(m), c.itemSets.length <= a ? o.put(`/v1/item-sets/${l}/sets`, c).catch((e => s.logger.error("Failed to save item set", e))).then((() => m)) : Promise.reject(new Error(e.formatString("item_sets_import_error_limit_exceeded", {
+                    max: a
                 })))
             }
 
@@ -15381,8 +15233,8 @@
                 }), e
             };
             var s = r(n(1)),
-                o = r(n(286)),
-                i = r(n(219));
+                o = r(n(285)),
+                i = r(n(218));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -15415,8 +15267,8 @@
                             r && (r.get || r.set) ? Object.defineProperty(s, i, r) : s[i] = e[i]
                         } s.default = e, n && n.set(e, s);
                     return s
-                }(n(287)),
-                r = (s = n(197)) && s.__esModule ? s : {
+                }(n(286)),
+                r = (s = n(196)) && s.__esModule ? s : {
                     default: s
                 };
 
@@ -15480,25 +15332,25 @@
                         tra: s.traService,
                         ComponentFactory: s.ComponentFactory,
                         Router: e,
-                        EmoteRootComponent: n(196),
-                        EmoteInventoryComponent: n(200),
-                        EmoteWheelComponent: n(205),
-                        EmoteWheelSlotComponent: n(208),
-                        EmoteDeleteSlotComponent: n(211),
-                        EmoteReactionsComponent: n(214),
-                        EmotesService: n(217),
+                        EmoteRootComponent: n(195),
+                        EmoteInventoryComponent: n(199),
+                        EmoteWheelComponent: n(204),
+                        EmoteWheelSlotComponent: n(207),
+                        EmoteDeleteSlotComponent: n(210),
+                        EmoteReactionsComponent: n(213),
+                        EmotesService: n(216),
                         LoadoutsService: n(123),
-                        ErrorsHandlerService: n(218),
-                        IndexRoute: n(288),
+                        ErrorsHandlerService: n(217),
+                        IndexRoute: n(287),
                         TEMPLATES: {
-                            application: n(289),
-                            index: n(290)
+                            application: n(288),
+                            index: n(289)
                         }
                     }
                 }();
                 const {
                     registerEmoteWheelComponentsToFactoryDefinition: i
-                } = n(291);
+                } = n(290);
                 t = i(t), !1;
                 return t
             };
@@ -15544,20 +15396,20 @@
                 value: !0
             }), t.registerEmoteWheelComponentsToFactoryDefinition = function(e) {
                 const t = Object.assign({}, e.TEMPLATES || {}, {
-                    "components/jade-select": n(292),
-                    "components/demacia-emote-inventory": n(293),
-                    "components/demacia-emote-wheel": n(294),
-                    "components/demacia-emote-wheel-slot": n(295),
-                    "components/demacia-navigation": n(296),
-                    "components/demacia-emote-reactions": n(297)
+                    "components/jade-select": n(291),
+                    "components/demacia-emote-inventory": n(292),
+                    "components/demacia-emote-wheel": n(293),
+                    "components/demacia-emote-wheel-slot": n(294),
+                    "components/demacia-navigation": n(295),
+                    "components/demacia-emote-reactions": n(296)
                 });
                 return Object.assign(e, {
-                    JadeSelectComponent: n(298).default,
-                    DemaciaEmoteInventoryComponent: n(300),
-                    DemaciaEmoteWheelComponent: n(305),
-                    DemaciaEmoteWheelSlotComponent: n(307),
-                    DemaciaNavigationComponent: n(309),
-                    DemaciaEmoteReactionsComponent: n(311),
+                    JadeSelectComponent: n(297).default,
+                    DemaciaEmoteInventoryComponent: n(299),
+                    DemaciaEmoteWheelComponent: n(304),
+                    DemaciaEmoteWheelSlotComponent: n(306),
+                    DemaciaNavigationComponent: n(308),
+                    DemaciaEmoteReactionsComponent: n(310),
                     TEMPLATES: t
                 })
             }
@@ -15609,9 +15461,9 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(299);
+            n(298);
             var o = s.Ember.Component.extend({
-                layout: n(292),
+                layout: n(291),
                 classNames: ["jade-select"],
                 classNameBindings: ["isOpen:jade-select--open", "disabled:jade-select--disabled"],
                 isOpen: !1,
@@ -15664,14 +15516,14 @@
             "use strict";
             var s = n(1),
                 o = n(65),
-                i = n(301);
-            n(302);
-            var r, l = (r = n(303)) && r.__esModule ? r : {
+                i = n(300);
+            n(301);
+            var r, l = (r = n(302)) && r.__esModule ? r : {
                     default: r
                 },
-                a = n(304);
+                a = n(303);
             e.exports = s.Ember.Component.extend({
-                layout: n(293),
+                layout: n(292),
                 classNames: ["jade-emote-inventory"],
                 classNameBindings: ["isEmotesInventoryLoaded:emote-inventory-loaded"],
                 loadoutsService: s.Ember.inject.service("loadouts"),
@@ -15753,15 +15605,9 @@
                 onItemClick: function(e) {
                     const t = e.currentTarget.querySelector(".emote-item-icon"),
                         n = t.getAttribute("data-emoteid");
-                    if (t.classList.contains("unowned")) {
-                        const e = {
-                            id: "emote-panel-unowned-emote-click",
-                            value: n
-                        };
-                        s.Telemetry.sendCustomData("emote_panel_v2_event", e), this.openPAW({
-                            id: parseInt(n)
-                        })
-                    }
+                    t.classList.contains("unowned") && this.openPAW({
+                        id: parseInt(n)
+                    })
                 },
                 onItemRightClick: function(e) {
                     e.preventDefault();
@@ -15770,15 +15616,7 @@
                     if (t.classList.contains("unowned")) return;
                     a.EMOTE_SLOTS_AS_LIST.some((e => {
                         const t = this.get(`emotesLoadout.${e.name}.itemId`);
-                        if (!(t && -1 !== t || isNaN(n))) {
-                            i.EMOTE_SFX.emotesPlace.play(), this.set(`emotesLoadout.${e.name}.itemId`, n), this.set("dragActive", "inactive"), this.set("dragstart", "dragout");
-                            const t = {
-                                id: "emote-panel-emote-equip",
-                                value: n,
-                                emotePosition: e.name
-                            };
-                            return s.Telemetry.sendCustomData("emote_panel_v2_event", t), this.get("loadoutsService").saveEmotesLoadout(), !0
-                        }
+                        if (!(t && -1 !== t || isNaN(n))) return i.EMOTE_SFX.emotesPlace.play(), this.set(`emotesLoadout.${e.name}.itemId`, n), this.set("dragActive", "inactive"), this.set("dragstart", "dragout"), this.get("loadoutsService").saveEmotesLoadout(), !0
                     })) || i.EMOTE_SFX.emotesFull.play()
                 },
                 onItemMouseOver: function(e) {
@@ -16034,10 +15872,10 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(1);
-            n(306);
-            var o = n(304);
+            n(305);
+            var o = n(303);
             e.exports = s.Ember.Component.extend({
-                layout: n(294),
+                layout: n(293),
                 emotesService: s.Ember.inject.service("emotes"),
                 loadoutsService: s.Ember.inject.service("loadouts"),
                 emotesLoadout: s.Ember.computed.alias("loadoutsService.localEmoteLoadout"),
@@ -16096,10 +15934,10 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(1),
-                o = n(301),
-                i = n(304);
-            n(308), e.exports = s.Ember.Component.extend({
-                layout: n(295),
+                o = n(300),
+                i = n(303);
+            n(307), e.exports = s.Ember.Component.extend({
+                layout: n(294),
                 classNames: ["demacia-emote-dropzone"],
                 classNameBindings: ["emoteTrayPosition", "dragClass.emote-tray:dragstart"],
                 attributeBindings: ["draggable"],
@@ -16141,19 +15979,13 @@
                 drop(e) {
                     const t = parseInt(e.dataTransfer.getData("text/data")),
                         n = this.get("emotesService").getEmoteData(t),
-                        r = n ? n.itemId : i.EMPTY_EMOTE_SLOT_ITEM_ID,
-                        l = e.dataTransfer.getData("emoteLoadoutPosition"),
-                        a = this.$(e.target).attr("data-loadout-position");
-                    this.set("emotesLoadout." + a + ".itemId", r);
-                    const c = {
-                        id: "emote-panel-emote-equip",
-                        value: r,
-                        emotePosition: a
-                    };
-                    if (s.Telemetry.sendCustomData("emote_panel_v2_event", c), o.EMOTE_SFX.emotesPlace.play(), l) {
+                        s = n ? n.itemId : i.EMPTY_EMOTE_SLOT_ITEM_ID,
+                        r = e.dataTransfer.getData("emoteLoadoutPosition"),
+                        l = this.$(e.target).attr("data-loadout-position");
+                    if (this.set("emotesLoadout." + l + ".itemId", s), o.EMOTE_SFX.emotesPlace.play(), r) {
                         const t = this.$(e.target).attr("data-emoteid"),
                             n = t ? parseInt(t) : i.EMPTY_EMOTE_SLOT_ITEM_ID;
-                        this.set("emotesLoadout." + l + ".itemId", n)
+                        this.set("emotesLoadout." + r + ".itemId", n)
                     }
                     this.set("dragSource", "dragsourced"), this.get("loadoutsService").saveEmotesLoadout(), setTimeout((() => {
                         this.set("dragstart", "dragout"), this.get("emotesService").setIsDragging(!1)
@@ -16166,8 +15998,8 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(1);
-            n(310), e.exports = s.Ember.Component.extend({
-                layout: n(296),
+            n(309), e.exports = s.Ember.Component.extend({
+                layout: n(295),
                 classNames: ["jade-navigation-component"],
                 tabs: null,
                 currentTab: null,
@@ -16197,10 +16029,10 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(1),
-                o = n(304);
-            n(312), e.exports = s.Ember.Component.extend({
+                o = n(303);
+            n(311), e.exports = s.Ember.Component.extend({
                 classNames: ["jade-emote-reaction-wrapper"],
-                layout: n(297),
+                layout: n(296),
                 emotesService: s.Ember.inject.service("emotes"),
                 loadoutsService: s.Ember.inject.service("loadouts"),
                 emotesLoadout: s.Ember.computed.alias("loadoutsService.localEmoteLoadout"),
@@ -16234,8 +16066,8 @@
                 value: !0
             }), t.default = void 0;
             var s, o = n(1),
-                i = n(314),
-                r = (s = n(409)) && s.__esModule ? s : {
+                i = n(313),
+                r = (s = n(408)) && s.__esModule ? s : {
                     default: s
                 };
             t.default = class {
@@ -16319,60 +16151,60 @@
                 value: !0
             }), t.registerEmberApplication = t.createEmberApplication = void 0;
             var s = n(1),
-                o = oe(n(315)),
-                i = oe(n(316)),
-                r = oe(n(319)),
-                l = oe(n(320)),
-                a = oe(n(322)),
-                c = oe(n(323)),
-                d = oe(n(325)),
-                m = oe(n(326)),
-                p = oe(n(327)),
-                u = oe(n(229)),
-                h = (oe(n(116)), oe(n(231))),
-                g = oe(n(233)),
-                f = oe(n(234)),
-                y = oe(n(246)),
-                b = oe(n(328)),
-                k = oe(n(329)),
+                o = oe(n(314)),
+                i = oe(n(315)),
+                r = oe(n(318)),
+                l = oe(n(319)),
+                a = oe(n(321)),
+                c = oe(n(322)),
+                d = oe(n(324)),
+                m = oe(n(325)),
+                p = oe(n(326)),
+                u = oe(n(228)),
+                h = (oe(n(116)), oe(n(230))),
+                g = oe(n(232)),
+                f = oe(n(233)),
+                y = oe(n(245)),
+                b = oe(n(327)),
+                k = oe(n(328)),
+                S = oe(n(330)),
                 E = oe(n(331)),
-                _ = oe(n(332)),
-                S = oe(n(334)),
-                v = oe(n(335)),
-                A = oe(n(337)),
-                x = oe(n(339)),
-                w = oe(n(340)),
-                I = oe(n(341)),
-                C = oe(n(342)),
-                T = oe(n(343)),
-                P = oe(n(344)),
-                O = oe(n(345)),
-                D = oe(n(346)),
+                _ = oe(n(333)),
+                v = oe(n(334)),
+                A = oe(n(336)),
+                x = oe(n(338)),
+                w = oe(n(339)),
+                I = oe(n(340)),
+                C = oe(n(341)),
+                T = oe(n(342)),
+                P = oe(n(343)),
+                O = oe(n(344)),
+                D = oe(n(345)),
+                M = oe(n(346)),
                 R = oe(n(347)),
-                M = oe(n(348)),
-                L = oe(n(349)),
-                B = oe(n(350)),
-                N = oe(n(351)),
-                F = oe(n(352)),
+                L = oe(n(348)),
+                B = oe(n(349)),
+                N = oe(n(350)),
+                F = oe(n(351)),
+                j = oe(n(352)),
                 U = oe(n(353)),
-                j = oe(n(354)),
+                $ = oe(n(354)),
                 H = oe(n(355)),
-                $ = oe(n(356)),
-                W = oe(n(357)),
-                G = oe(n(358)),
-                Y = oe(n(359)),
-                V = oe(n(360)),
-                K = oe(n(361)),
-                q = oe(n(362)),
-                X = oe(n(363)),
-                z = oe(n(364)),
-                Q = oe(n(365)),
-                Z = oe(n(366)),
-                J = oe(n(367)),
-                ee = oe(n(368)),
-                te = oe(n(369)),
-                ne = oe(n(228)),
-                se = oe(n(370));
+                W = oe(n(356)),
+                G = oe(n(357)),
+                Y = oe(n(358)),
+                V = oe(n(359)),
+                K = oe(n(360)),
+                q = oe(n(361)),
+                X = oe(n(362)),
+                z = oe(n(363)),
+                Q = oe(n(364)),
+                Z = oe(n(365)),
+                J = oe(n(366)),
+                ee = oe(n(367)),
+                te = oe(n(368)),
+                ne = oe(n(227)),
+                se = oe(n(369));
 
             function oe(e) {
                 return e && e.__esModule ? e : {
@@ -16419,8 +16251,8 @@
                     AddPageButtonComponent: b.default,
                     ButtonMaskIconComponent: re,
                     CircleButtonComponent: k.default,
-                    ClickableIconLabelComponent: E.default,
-                    DeletePageButtonComponent: S.default,
+                    ClickableIconLabelComponent: S.default,
+                    DeletePageButtonComponent: _.default,
                     FramedIconButtonComponent: ie,
                     FramedPerkIconComponent: v.default,
                     KeystoneIconComponent: A.default,
@@ -16432,14 +16264,14 @@
                     PagesDropdownOptionComponent: T.default,
                     PerkIconButtonComponent: O.default,
                     PerkOptionComponent: D.default,
-                    PerksTooltipComponent: R.default,
-                    PrimaryPerkSelectorComponent: M.default,
+                    PerksTooltipComponent: M.default,
+                    PrimaryPerkSelectorComponent: R.default,
                     PrimarySelectedPerkComponent: L.default,
                     PrimaryStyleSelectorComponent: B.default,
-                    RunesRecommenderControlsComponent: U.default,
-                    RunesRecommenderPageComponent: H.default,
-                    RunesRecommenderPageSummaryComponent: j.default,
-                    RunesRecommenderPositionFiltersComponent: $.default,
+                    RunesRecommenderControlsComponent: j.default,
+                    RunesRecommenderPageComponent: $.default,
+                    RunesRecommenderPageSummaryComponent: U.default,
+                    RunesRecommenderPositionFiltersComponent: H.default,
                     RunesRecommenderSpellComponent: W.default,
                     SavePageButtonComponent: G.default,
                     SplashedPerkOptionComponent: Y.default,
@@ -16454,49 +16286,49 @@
                     ToggleRenameButtonComponent: ee.default,
                     ProgressBarComponent: N.default,
                     RunesDrawerComponent: F.default,
-                    ConstructMinspecComponent: _.default,
+                    ConstructMinspecComponent: E.default,
                     AddHelper: te.default,
                     EqHelper: ne.default,
                     ValueFromArrayHelper: se.default,
                     TEMPLATES: {
-                        application: n(371),
-                        "style-picker": n(372),
-                        "runes-recommender": n(373),
-                        "page-create": n(374),
-                        "page-edit": n(375),
-                        "components/circle-button": n(376),
-                        "components/clickable-icon-label": n(377),
-                        "components/delete-page-button": n(378),
-                        "components/framed-perk-icon": n(379),
-                        "components/keystone-icon": n(380),
-                        "components/link-to-page": n(381),
-                        "components/long-descriptions-checkbox": n(382),
-                        "components/page-editor": n(383),
-                        "components/pages-dropdown-option": n(384),
-                        "components/pages-dropdown": n(385),
-                        "components/perk-icon-button": n(386),
-                        "components/perk-option": n(387),
-                        "components/perks-tooltip": n(388),
-                        "components/primary-perk-selector": n(389),
-                        "components/primary-selected-perk": n(390),
-                        "components/primary-style-selector": n(391),
-                        "components/runes-recommender-controls": n(392),
-                        "components/runes-recommender-page": n(393),
-                        "components/runes-recommender-page-summary": n(394),
-                        "components/runes-recommender-position-filters": n(395),
-                        "components/runes-recommender-spell": n(396),
-                        "components/save-page-button": n(397),
-                        "components/splashed-perk-option": n(398),
-                        "components/splashed-perk-selector": n(399),
-                        "components/splashed-selected-perk-icon": n(400),
-                        "components/splashed-style-selector": n(401),
-                        "components/style-keystones": n(402),
-                        "components/style-option": n(403),
-                        "components/style-picker-column": n(404),
-                        "components/toggle-button": n(405),
-                        "components/progress-bar": n(406),
-                        "components/runes-drawer": n(407),
-                        "components/construct-minspec": n(408)
+                        application: n(370),
+                        "style-picker": n(371),
+                        "runes-recommender": n(372),
+                        "page-create": n(373),
+                        "page-edit": n(374),
+                        "components/circle-button": n(375),
+                        "components/clickable-icon-label": n(376),
+                        "components/delete-page-button": n(377),
+                        "components/framed-perk-icon": n(378),
+                        "components/keystone-icon": n(379),
+                        "components/link-to-page": n(380),
+                        "components/long-descriptions-checkbox": n(381),
+                        "components/page-editor": n(382),
+                        "components/pages-dropdown-option": n(383),
+                        "components/pages-dropdown": n(384),
+                        "components/perk-icon-button": n(385),
+                        "components/perk-option": n(386),
+                        "components/perks-tooltip": n(387),
+                        "components/primary-perk-selector": n(388),
+                        "components/primary-selected-perk": n(389),
+                        "components/primary-style-selector": n(390),
+                        "components/runes-recommender-controls": n(391),
+                        "components/runes-recommender-page": n(392),
+                        "components/runes-recommender-page-summary": n(393),
+                        "components/runes-recommender-position-filters": n(394),
+                        "components/runes-recommender-spell": n(395),
+                        "components/save-page-button": n(396),
+                        "components/splashed-perk-option": n(397),
+                        "components/splashed-perk-selector": n(398),
+                        "components/splashed-selected-perk-icon": n(399),
+                        "components/splashed-style-selector": n(400),
+                        "components/style-keystones": n(401),
+                        "components/style-option": n(402),
+                        "components/style-picker-column": n(403),
+                        "components/toggle-button": n(404),
+                        "components/progress-bar": n(405),
+                        "components/runes-drawer": n(406),
+                        "components/construct-minspec": n(407)
                     }
                 }, {
                     EMBER_CLI_COMPAT: !0
@@ -16525,7 +16357,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                o = n(317);
+                o = n(316);
             const {
                 RunMixin: i
             } = s.EmberAddons.EmberLifeline;
@@ -16642,7 +16474,7 @@
                             baseSplashPath: t
                         }
                     }));
-                    let E = function(e, t, n) {
+                    let S = function(e, t, n) {
                         const o = function(e) {
                                 const t = s.ChampionStatistics.getPreferredPosition(e);
                                 if (t === i.POSITION_SUPPORT) return i.VALID_POSITIONS.utility;
@@ -16652,46 +16484,46 @@
                             l = r && e === i.POSITION_NONE;
                         return l ? o : e
                     }((t || i.POSITION_NONE).toUpperCase(), n, e);
-                    const _ = (0, s.dataBinding)("/lol-perks").get(`v1/recommended-pages-position/champion/${e}`, {
+                    const E = (0, s.dataBinding)("/lol-perks").get(`v1/recommended-pages-position/champion/${e}`, {
                         skipCache: !0
-                    }).then((t => (E = t || E, (0, s.dataBinding)("/lol-perks").get(`/v1/recommended-pages/champion/${e}/position/${E}/map/${n}`))));
-                    return Promise.all([_, k, y, p, b]).then((e => {
+                    }).then((t => (S = t || S, (0, s.dataBinding)("/lol-perks").get(`/v1/recommended-pages/champion/${e}/position/${S}/map/${n}`))));
+                    return Promise.all([E, k, y, p, b]).then((e => {
                         const t = e[0],
                             s = e[1],
                             p = e[2],
                             y = e[3],
                             b = e[4],
                             k = d || [];
-                        if (n === i.SR_MAP_ID && E === i.POSITION_NONE) {
+                        if (n === i.SR_MAP_ID && S === i.POSITION_NONE) {
                             const e = t.find((e => e.isDefaultPosition));
-                            E = e && e.position || i.POSITION_NONE
+                            S = e && e.position || i.POSITION_NONE
                         }
-                        const _ = function(e, t, n, s, d, m, p, u, f) {
+                        const E = function(e, t, n, s, d, m, p, u, f) {
                             const y = !m || (0, o.isFlashOnF)(m[0], m[1]),
                                 b = n.roles.includes(r),
                                 k = f && f.selectedPerkIds || [];
                             return (t || []).map(((t, r) => {
                                 const f = t.keystone.id === l && b ? e.get("rune_recommender_attributes_descriptor_keystone_aery_override") : t.keystone.recommendationDescriptor,
-                                    E = e.get(`rune_recommender_attributes_descriptor_${t.primaryRecommendationAttribute}`),
-                                    _ = e.formatString("rune_recommender_attributes_page_summary", {
+                                    S = e.get(`rune_recommender_attributes_descriptor_${t.primaryRecommendationAttribute}`),
+                                    E = e.formatString("rune_recommender_attributes_page_summary", {
                                         keystoneDescriptor: f,
-                                        primaryAttribute: E
+                                        primaryAttribute: S
                                     });
-                                let S = [...t.summonerSpellIds];
-                                S = (0, o.normalizeSpellSelections)(S), S = d === i.VALID_POSITIONS.jungle ? (0, o.ensureSmite)(S) : (0, o.substituteSmite)(d, S);
+                                let _ = [...t.summonerSpellIds];
+                                _ = (0, o.normalizeSpellSelections)(_), _ = d === i.VALID_POSITIONS.jungle ? (0, o.ensureSmite)(_) : (0, o.substituteSmite)(d, _);
                                 const v = s.gameData && s.gameData.queue && s.gameData.queue.gameMode;
-                                v === a ? S = (0, o.getUrfSpells)(S) : v === c && (S = (0, o.ensureUltbookSpells)(S, m));
-                                const A = (0, o.isEligibleToUseSpells)(u, S, p, v);
+                                v === a ? _ = (0, o.getUrfSpells)(_) : v === c && (_ = (0, o.ensureUltbookSpells)(_, m));
+                                const A = (0, o.isEligibleToUseSpells)(u, _, p, v);
                                 return {
                                     name: e.formatString("rune_recommender_page_name", {
                                         keystoneName: t.keystone.name,
                                         champName: n.name
                                     }),
-                                    attributesLoc: _,
+                                    attributesLoc: E,
                                     primaryPerkStyleId: t.primaryPerkStyleId,
                                     secondaryPerkStyleId: t.secondaryPerkStyleId,
                                     keystone: t.keystone,
-                                    summonerSpells: m ? h(m, S, A, y, v) : [],
+                                    summonerSpells: m ? h(m, _, A, y, v) : [],
                                     perks: t.perks,
                                     isSelected: g(k, t.perks.map((e => e.id))),
                                     recommendationId: t.recommendationId,
@@ -16700,12 +16532,12 @@
                                     recommendationIndex: r
                                 }
                             }))
-                        }(m, t, s, f, E, k, y, p, b);
+                        }(m, t, s, f, S, k, y, p, b);
                         return {
-                            recommendedPages: _,
+                            recommendedPages: E,
                             champData: s,
                             mapId: n,
-                            position: E,
+                            position: S,
                             shouldShowPositionSelector: u(n),
                             currentPage: b
                         }
@@ -16716,8 +16548,8 @@
                 })))
             };
             var s = n(1),
-                o = n(318),
-                i = n(225);
+                o = n(317),
+                i = n(224);
             const r = "support",
                 l = 8214,
                 a = "URF",
@@ -16880,8 +16712,8 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                o = n(317),
-                i = n(321);
+                o = n(316),
+                i = n(320);
             var r = s.Ember.Route.extend({
                 getSettingOrDefault(e, t, n) {
                     let s = n;
@@ -17136,7 +16968,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(324);
+            n(323);
             var o = s.Ember.Controller.extend({});
             t.default = o
         }, (e, t, n) => {
@@ -17148,7 +16980,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                o = n(317),
+                o = n(316),
                 i = s.Ember.Controller.extend({
                     createPerksPage: e => (0, s.dataBinding)("/lol-perks").post("/v1/pages", e),
                     actions: {
@@ -17194,7 +17026,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                o = n(317);
+                o = n(316);
             var i = s.Ember.Controller.extend({
                 getSummonerSpells(e) {
                     const t = (e.summonerSpells || []).map((e => e.id)),
@@ -17273,11 +17105,11 @@
                 value: !0
             }), t.default = void 0;
             var s, o = n(1),
-                i = (s = n(241)) && s.__esModule ? s : {
+                i = (s = n(240)) && s.__esModule ? s : {
                     default: s
                 },
-                r = n(224),
-                l = n(225);
+                r = n(223),
+                l = n(224);
             var a = o.Ember.Controller.extend({
                 store: o.Ember.inject.service(),
                 tutorial: o.Ember.inject.service(),
@@ -17345,7 +17177,7 @@
                 value: !0
             }), t.default = void 0;
             var s, o = n(1);
-            var i = ((s = n(329)) && s.__esModule ? s : {
+            var i = ((s = n(328)) && s.__esModule ? s : {
                 default: s
             }).default.extend({
                 classNames: ["add-page"],
@@ -17371,7 +17203,7 @@
                 value: !0
             }), t.default = void 0;
             var s, o = n(1),
-                i = (s = n(330)) && s.__esModule ? s : {
+                i = (s = n(329)) && s.__esModule ? s : {
                     default: s
                 };
             var r = o.Ember.Component.extend((0, i.default)("disabled"), {
@@ -17435,10 +17267,10 @@
                 value: !0
             }), t.default = void 0;
             var s, o = n(1),
-                i = (s = n(333)) && s.__esModule ? s : {
+                i = (s = n(332)) && s.__esModule ? s : {
                     default: s
                 },
-                r = n(225);
+                r = n(224);
             const l = 8e3,
                 a = 8100,
                 c = 8200,
@@ -18629,7 +18461,7 @@
                 value: !0
             }), t.default = void 0;
             var s, o = n(1),
-                i = (s = n(336)) && s.__esModule ? s : {
+                i = (s = n(335)) && s.__esModule ? s : {
                     default: s
                 };
             var r = o.Ember.Component.extend({
@@ -18656,8 +18488,8 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                o = r(n(336)),
-                i = r(n(338));
+                o = r(n(335)),
+                i = r(n(337));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -18949,9 +18781,9 @@
                 value: !0
             }), t.default = void 0;
             var s, o = n(1),
-                i = n(224),
-                r = n(225),
-                l = (s = n(236)) && s.__esModule ? s : {
+                i = n(223),
+                r = n(224),
+                l = (s = n(235)) && s.__esModule ? s : {
                     default: s
                 };
             const {
@@ -19495,7 +19327,7 @@
                 i = (s = n(136)) && s.__esModule ? s : {
                     default: s
                 },
-                r = n(224);
+                r = n(223);
             const l = o.Ember.Component.extend({
                 classNames: ["perks-panel-perks-pages-dropdown"],
                 tutorial: o.Ember.inject.service(),
@@ -19563,7 +19395,7 @@
                 value: !0
             }), t.default = void 0;
             var s, o = n(1),
-                i = (s = n(330)) && s.__esModule ? s : {
+                i = (s = n(329)) && s.__esModule ? s : {
                     default: s
                 };
             const r = o.Ember.Component.extend((0, i.default)("isDisabled", "disabled"), {
@@ -19604,7 +19436,7 @@
                 value: !0
             }), t.default = void 0;
             var s, o = n(1),
-                i = (s = n(338)) && s.__esModule ? s : {
+                i = (s = n(337)) && s.__esModule ? s : {
                     default: s
                 };
             const r = o.Ember.Component.extend(i.default, {
@@ -19629,7 +19461,7 @@
                 value: !0
             }), t.default = void 0;
             var s, o = n(1),
-                i = (s = n(336)) && s.__esModule ? s : {
+                i = (s = n(335)) && s.__esModule ? s : {
                     default: s
                 };
             const r = o.Ember.Component.extend({
@@ -19663,8 +19495,8 @@
                 value: !0
             }), t.default = void 0;
             var s, o = n(1),
-                i = n(224),
-                r = (s = n(336)) && s.__esModule ? s : {
+                i = n(223),
+                r = (s = n(335)) && s.__esModule ? s : {
                     default: s
                 };
             const l = o.Ember.Component.extend({
@@ -19778,7 +19610,7 @@
                 value: !0
             }), t.default = void 0;
             var s, o = n(1),
-                i = (s = n(338)) && s.__esModule ? s : {
+                i = (s = n(337)) && s.__esModule ? s : {
                     default: s
                 };
             const r = o.Ember.Component.extend(i.default, {
@@ -19994,7 +19826,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                o = n(225),
+                o = n(224),
                 i = s.Ember.Component.extend({
                     classNames: ["runes-recommender-page-summary-component"],
                     primaryStylePerks: s.Ember.computed("page.perks.@each.styleId", "page.primaryPerkStyleId", (function() {
@@ -20058,7 +19890,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                o = n(225),
+                o = n(224),
                 i = s.Ember.Component.extend({
                     classNames: ["runes-recommender-position-filters-component"],
                     audio: s.Ember.inject.service(),
@@ -20124,8 +19956,8 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                o = r(n(330)),
-                i = r(n(338));
+                o = r(n(329)),
+                i = r(n(337));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -20172,7 +20004,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                o = n(225);
+                o = n(224);
             const i = s.Ember.Component.extend({
                 sfxAudioChannel: null,
                 audio: s.Ember.inject.service(),
@@ -20263,9 +20095,9 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                o = l(n(336)),
-                i = n(224),
-                r = l(n(338));
+                o = l(n(335)),
+                i = n(223),
+                r = l(n(337));
 
             function l(e) {
                 return e && e.__esModule ? e : {
@@ -20318,7 +20150,7 @@
                 value: !0
             }), t.default = void 0;
             var s, o = n(1),
-                i = (s = n(336)) && s.__esModule ? s : {
+                i = (s = n(335)) && s.__esModule ? s : {
                     default: s
                 };
             const r = o.Ember.Component.extend({
@@ -20382,9 +20214,9 @@
                 value: !0
             }), t.default = void 0;
             var s, o = n(1),
-                i = n(224),
-                r = n(225);
-            var l = ((s = n(348)) && s.__esModule ? s : {
+                i = n(223),
+                r = n(224);
+            var l = ((s = n(347)) && s.__esModule ? s : {
                 default: s
             }).default.extend({
                 classNames: ["stat-mod-perk-selector"],
@@ -20470,8 +20302,8 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                o = r(n(336)),
-                i = r(n(330));
+                o = r(n(335)),
+                i = r(n(329));
 
             function r(e) {
                 return e && e.__esModule ? e : {
@@ -20531,7 +20363,7 @@
                 value: !0
             }), t.default = void 0;
             var s, o = n(1),
-                i = (s = n(330)) && s.__esModule ? s : {
+                i = (s = n(329)) && s.__esModule ? s : {
                     default: s
                 };
             const r = o.Ember.Component.extend((0, i.default)("isInspirationPlaceholder", "disabled"), {
@@ -20591,7 +20423,7 @@
                 value: !0
             }), t.default = void 0;
             var s, o = n(1);
-            var i = ((s = n(329)) && s.__esModule ? s : {
+            var i = ((s = n(328)) && s.__esModule ? s : {
                 default: s
             }).default.extend({
                 classNames: ["perks-edit-btn"],
@@ -20927,34 +20759,34 @@
                     name: "ShowcaseComponent",
                     ComponentFactory: o.ComponentFactory,
                     tra: o.traService,
-                    ShowcaseComponent: n(415),
-                    SkinPurchaseButtonComponent: n(432),
-                    SkinCarouselComponent: n(435),
-                    TieredTransformationsComponent: n(438),
-                    EqHelper: n(441).eqHelper,
+                    ShowcaseComponent: n(414),
+                    SkinPurchaseButtonComponent: n(429),
+                    SkinCarouselComponent: n(432),
+                    TieredTransformationsComponent: n(435),
+                    EqHelper: n(438).eqHelper,
                     ClientConfigService: n(116).default,
-                    EventHubService: n(442).default
+                    EventHubService: n(439).default
                 }), o.EmberApplicationFactory.setFactoryDefinition({
                     name: "SkinLinePopup",
                     ComponentFactory: o.ComponentFactory,
                     tra: o.traService,
-                    SkinLinePopupComponent: n(443)
+                    SkinLinePopupComponent: n(440)
                 }), o.EmberApplicationFactory.setFactoryDefinition({
                     name: "ChromaPopup",
                     ComponentFactory: o.ComponentFactory,
                     tra: o.traService,
-                    ChromaPopupComponent: n(447)
+                    ChromaPopupComponent: n(444)
                 }), o.EmberApplicationFactory.setFactoryDefinition({
                     name: "QuestFormsPopup",
                     ComponentFactory: o.ComponentFactory,
                     tra: o.traService,
                     QuestFormsPopupComponent: i.default,
                     ConcatTraHelper: o.SharedComponents.getApi_traTemplateHelpers().ConcatTra,
-                    EqHelper: n(441).eqHelper
+                    EqHelper: n(438).eqHelper
                 })
             };
             var s, o = n(1),
-                i = (s = n(411)) && s.__esModule ? s : {
+                i = (s = n(410)) && s.__esModule ? s : {
                     default: s
                 }
         }, (e, t, n) => {
@@ -20963,12 +20795,12 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                o = n(412);
-            n(413);
+                o = n(411);
+            n(412);
             var i = s.Ember.Component.extend({
                 classNames: ["quest-forms-flyout"],
                 isShow: !1,
-                layout: n(414),
+                layout: n(413),
                 selectedSkinIndex: s.Ember.computed.alias("showcaseComponent.selectedQuestFormIndex"),
                 skinTiers: s.Ember.computed.alias("tiers"),
                 isTieredSkin: !1,
@@ -21032,73 +20864,70 @@
             "use strict";
             var s = n(1),
                 o = n(46),
-                i = n(416);
-            n(417);
-            var r = n(412),
-                l = n(418),
-                a = y(n(419)),
-                c = y(n(420)),
-                d = y(n(421)),
-                m = y(n(422)),
-                p = y(n(425)),
-                u = y(n(426)),
-                h = y(n(429)),
-                g = n(427),
-                f = n(65);
+                i = n(415);
+            n(416);
+            var r = n(411),
+                l = g(n(417)),
+                a = g(n(418)),
+                c = g(n(419)),
+                d = g(n(422)),
+                m = g(n(423)),
+                p = g(n(426)),
+                u = n(424),
+                h = n(65);
 
-            function y(e) {
+            function g(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
             const {
-                RunMixin: b
+                RunMixin: f
             } = s.EmberAddons.EmberLifeline, {
-                computed: k,
-                Component: E,
-                get: _,
+                computed: y,
+                Component: b,
+                get: k,
                 getWithDefault: S,
-                set: v,
-                run: A,
-                observer: x
-            } = s.Ember, w = s.Ember.A, I = s.UIKit.getFlyoutManager(), C = "showcase-view", T = "splash-view", P = [C, T];
-            e.exports = E.extend(b, d.default, c.default, m.default, {
+                set: E,
+                run: _,
+                observer: v
+            } = s.Ember, A = s.Ember.A, x = s.UIKit.getFlyoutManager(), w = "showcase-view", I = "splash-view", C = [w, I];
+            e.exports = b.extend(f, a.default, l.default, c.default, {
                 eventHubService: s.Ember.inject.service("event-hub"),
                 skinsFromActiveEvents: s.Ember.computed.alias("eventHubService.skinsFromActiveEvents"),
                 classNames: ["showcase-view-root-component"],
                 currentSkinId: -1,
                 rp: 0,
                 ip: 0,
-                currentlyDisplayedSection: C,
-                layout: n(431),
-                isPotatoModeEnabled: k.bool("userExperience.data.potatoModeEnabled"),
+                currentlyDisplayedSection: w,
+                layout: n(428),
+                isPotatoModeEnabled: y.bool("userExperience.data.potatoModeEnabled"),
                 selectedQuestFormIndex: null,
-                disableSkinsViewer: k.bool("jmxSettings.SkinsViewer.SkinsViewerDisabled"),
-                disableAllPurchase: k.bool("jmxSettings.SkinsViewer.DisableAllPurchase"),
-                disableGridViewPurchase: k.bool("jmxSettings.SkinsViewer.DisableGridViewPurchase"),
-                disableShowcaseViewPurchase: k.bool("jmxSettings.SkinsViewer.DisableShowcaseViewPurchase"),
-                disableChromasPurchase: k.bool("jmxSettings.SkinsViewer.DisableChromasPurchase"),
-                disableAllTelemetry: k.bool("jmxSettings.SkinsViewer.DisableAllTelemetry"),
-                disabledChromas: k.readOnly("jmxSettings.disabledChromas"),
-                purchaseEnabled: k.not("purchaseDisabled"),
-                purchaseDisabled: k.or("platformSettings.disableAllPurchase", "platformSettings.disableShowcaseViewPurchase"),
-                currentSkinName: k("currentSkin.name", "currentSkin.questSkinInfo.name", "selectedSkinTier.name", "currentSkin.skinNameOverride", (function() {
-                    const e = _(this, "currentSkin.name"),
-                        t = _(this, "currentSkin.questSkinInfo.name");
+                disableSkinsViewer: y.bool("jmxSettings.SkinsViewer.SkinsViewerDisabled"),
+                disableAllPurchase: y.bool("jmxSettings.SkinsViewer.DisableAllPurchase"),
+                disableGridViewPurchase: y.bool("jmxSettings.SkinsViewer.DisableGridViewPurchase"),
+                disableShowcaseViewPurchase: y.bool("jmxSettings.SkinsViewer.DisableShowcaseViewPurchase"),
+                disableChromasPurchase: y.bool("jmxSettings.SkinsViewer.DisableChromasPurchase"),
+                disabledChromas: y.readOnly("jmxSettings.disabledChromas"),
+                purchaseEnabled: y.not("purchaseDisabled"),
+                purchaseDisabled: y.or("platformSettings.disableAllPurchase", "platformSettings.disableShowcaseViewPurchase"),
+                currentSkinName: y("currentSkin.name", "currentSkin.questSkinInfo.name", "selectedSkinTier.name", "currentSkin.skinNameOverride", (function() {
+                    const e = k(this, "currentSkin.name"),
+                        t = k(this, "currentSkin.questSkinInfo.name");
                     if (this.get("isTieredSkin")) {
                         const e = this.get("currentSkin");
                         return e.skinNameOverride ? e.skinNameOverride : this.get("selectedSkinTier.name")
                     }
                     return t || e
                 })),
-                currentSkinOwned: k.alias("currentSkin.ownership.owned"),
-                currentSkinUnowned: k.not("currentSkinOwned"),
-                currentSkinSplashPath: k.alias("currentSkin.uncenteredSplashPath"),
-                notPurchasable: k.not("isPurchasable"),
-                purchaseUnavailable: k.and("currentSkinUnowned", "purchaseEnabled", "notPurchasable"),
-                currentSkin: k("currentSkinId", "skins", (function() {
-                    const e = _(this, "currentSkinId"),
-                        t = _(this, "skins");
+                currentSkinOwned: y.alias("currentSkin.ownership.owned"),
+                currentSkinUnowned: y.not("currentSkinOwned"),
+                currentSkinSplashPath: y.alias("currentSkin.uncenteredSplashPath"),
+                notPurchasable: y.not("isPurchasable"),
+                purchaseUnavailable: y.and("currentSkinUnowned", "purchaseEnabled", "notPurchasable"),
+                currentSkin: y("currentSkinId", "skins", (function() {
+                    const e = k(this, "currentSkinId"),
+                        t = k(this, "skins");
                     return e && t ? t.find((t => t.id === e)) : null
                 })),
                 _assignSkinsToSkinLine(e, t) {
@@ -21113,7 +20942,7 @@
                             }))
                         }
                 },
-                skinlines: k("skinData", "skinlinesInfo", (function() {
+                skinlines: y("skinData", "skinlinesInfo", (function() {
                     const e = this.get("skinData"),
                         t = this.get("skinlinesInfo");
                     if (!e || !t) return null;
@@ -21121,32 +20950,31 @@
                     const n = t.filter((e => e.id !== i.DEFAULT_SKINLINE_ID));
                     return n.sort(((e, t) => e.name.localeCompare(t.name))), n
                 })),
-                skinLinesById: k("skinlines", (function() {
+                skinLinesById: y("skinlines", (function() {
                     const e = this.get("skinlines");
                     return s.Lodash.keyBy(e, "id")
                 })),
                 _handleStoreCatalogSuccess(e) {
                     s.logger.trace("Get catalogs from store", e), e = e || [];
-                    const t = new u.default(e);
-                    v(this, "storeCatalogManager", t), v(this, "allStoreSkins", t.getAllSkins())
+                    const t = new m.default(e);
+                    E(this, "storeCatalogManager", t), E(this, "allStoreSkins", t.getAllSkins())
                 },
                 _handleStoreCatalogFail(e) {
                     s.logger.error("Failure to retrieve inventory from store catalog", e);
-                    const t = new u.default(null);
-                    v(this, "storeCatalogManager", t), v(this, "allStoreSkins", t.getAllSkins())
+                    const t = new m.default(null);
+                    E(this, "storeCatalogManager", t), E(this, "allStoreSkins", t.getAllSkins())
                 },
-                platformSettings: k("disableSkinsViewer", "disableAllPurchase", "disableGridViewPurchase", "disableShowcaseViewPurchase", "disableChromasPurchase", "disableAllTelemetry", (function() {
+                platformSettings: y("disableSkinsViewer", "disableAllPurchase", "disableGridViewPurchase", "disableShowcaseViewPurchase", "disableChromasPurchase", (function() {
                     return {
-                        disableSkinsViewer: _(this, "disableSkinsViewer"),
-                        disableAllPurchase: _(this, "disableAllPurchase"),
-                        disableGridViewPurchase: _(this, "disableGridViewPurchase"),
-                        disableShowcaseViewPurchase: _(this, "disableShowcaseViewPurchase"),
-                        disableChromasPurchase: _(this, "disableChromasPurchase"),
-                        disableAllTelemetry: _(this, "disableAllTelemetry")
+                        disableSkinsViewer: k(this, "disableSkinsViewer"),
+                        disableAllPurchase: k(this, "disableAllPurchase"),
+                        disableGridViewPurchase: k(this, "disableGridViewPurchase"),
+                        disableShowcaseViewPurchase: k(this, "disableShowcaseViewPurchase"),
+                        disableChromasPurchase: k(this, "disableChromasPurchase")
                     }
                 })),
-                hasChroma: k.bool("currentSkin.chromas.length"),
-                hasQuestForms: k.bool("currentSkin.questSkinInfo"),
+                hasChroma: y.bool("currentSkin.chromas.length"),
+                hasQuestForms: y.bool("currentSkin.questSkinInfo"),
                 lastSelectedSkinIndex: null,
                 questSkinInfo: s.Ember.computed.alias("currentSkin.questSkinInfo"),
                 questSkinTiers: s.Ember.computed.alias("questSkinInfo.tiers"),
@@ -21175,97 +21003,97 @@
                         this._setSelectedQuestForm(e), this._overrideSplashPath(t.uncenteredSplashPath), this._overrideSkinDescription(t.description), this._overrideSplashVideoPath(t.collectionSplashVideoPath), this._overrideAugments(t.ownedSkinAugments), this._overrideSkinName(t.name)
                     }
                 })),
-                isPurchasable: k("currentSkin", "storeCatalogManager", (function() {
-                    const e = _(this, "currentSkin"),
-                        t = _(this, "storeCatalogManager");
+                isPurchasable: y("currentSkin", "storeCatalogManager", (function() {
+                    const e = k(this, "currentSkin"),
+                        t = k(this, "storeCatalogManager");
                     return !(!e || !t) && (!e.ownership.owned && t.getSkinItemCatalog(e.id).isSinglePurchasable())
                 })),
-                currentSkinSplashVideoPath: k("currentSkin.splashVideoPath", "currentSkin.skinSplashVideoOverride", "hasQuestForms", (function() {
-                    const e = _(this, "currentSkin.collectionSplashVideoPath"),
-                        t = _(this, "hasQuestForms"),
-                        n = _(this, "currentSkin.skinSplashVideoOverride");
+                currentSkinSplashVideoPath: y("currentSkin.splashVideoPath", "currentSkin.skinSplashVideoOverride", "hasQuestForms", (function() {
+                    const e = k(this, "currentSkin.collectionSplashVideoPath"),
+                        t = k(this, "hasQuestForms"),
+                        n = k(this, "currentSkin.skinSplashVideoOverride");
                     return n || (t ? null : e)
                 })),
-                currentBackgroundPath: k("currentSkinSplashPath", "shouldShowVideoForSkin", "currentSkin.skinSplashOverride", "hasQuestForms", "currentSkinSplashVideoPath", "currentSkin", "currentSkin.questSkinInfo.uncenteredSplashPath", (function() {
-                    if (_(this, "shouldShowVideoForSkin")) return _(this, "currentSkinSplashVideoPath");
+                currentBackgroundPath: y("currentSkinSplashPath", "shouldShowVideoForSkin", "currentSkin.skinSplashOverride", "hasQuestForms", "currentSkinSplashVideoPath", "currentSkin", "currentSkin.questSkinInfo.uncenteredSplashPath", (function() {
+                    if (k(this, "shouldShowVideoForSkin")) return k(this, "currentSkinSplashVideoPath");
                     {
-                        const e = _(this, "currentSkin.skinSplashOverride");
-                        return e || (_(this, "hasQuestForms") ? _(this, "currentSkin.questSkinInfo.uncenteredSplashPath") : _(this, "currentSkinSplashPath"))
+                        const e = k(this, "currentSkin.skinSplashOverride");
+                        return e || (k(this, "hasQuestForms") ? k(this, "currentSkin.questSkinInfo.uncenteredSplashPath") : k(this, "currentSkinSplashPath"))
                     }
                 })),
-                selectedSkinAugments: k("isTieredSkin", "selectedSkinTier", "currentSkin.skinAugmentsOverride", "currentSkin", (function() {
+                selectedSkinAugments: y("isTieredSkin", "selectedSkinTier", "currentSkin.skinAugmentsOverride", "currentSkin", (function() {
                     let e = [];
                     return e = this.get("currentSkin.skinAugmentsOverride") ? this.get("currentSkin.skinAugmentsOverride") : this.get("isTieredSkin") ? this.get("selectedSkinTier.ownedSkinAugments") : this.get("currentSkin.ownedSkinAugments"), e?.map?.((e => e.uncenteredLCOverlayPath))
                 })),
-                currentSkinLine: k("currentSkin", "skinLinesById", (function() {
-                    const e = _(this, "currentSkin");
+                currentSkinLine: y("currentSkin", "skinLinesById", (function() {
+                    const e = k(this, "currentSkin");
                     if (e && e.skinLines && e.skinLines.length > 0) {
-                        const t = _(this, "skinLinesById");
+                        const t = k(this, "skinLinesById");
                         return e.skinLines.find((e => t[e.id]))
                     }
                     return null
                 })),
-                currentChampion: k("currentSkin", "championsById", (function() {
-                    const e = _(this, "currentSkin"),
-                        t = _(this, "championsById");
+                currentChampion: y("currentSkin", "championsById", (function() {
+                    const e = k(this, "currentSkin"),
+                        t = k(this, "championsById");
                     return e && t ? t[e.championId] : {}
                 })),
-                currentSkinReleaseDate: k("currentSkin", (function() {
-                    const e = _(this, "currentSkin");
-                    return e.releaseDate ? _(this, "tra.moment")(e.releaseDate).format(_(this, "tra.showcase_release_date_format")) : null
+                currentSkinReleaseDate: y("currentSkin", (function() {
+                    const e = k(this, "currentSkin");
+                    return e.releaseDate ? k(this, "tra.moment")(e.releaseDate).format(k(this, "tra.showcase_release_date_format")) : null
                 })),
-                currentSkinAcquireDate: k("currentSkin.ownership.owned", "currentSkin.ownership.rental.purchaseDate", (function() {
-                    const e = _(this, "currentSkin");
+                currentSkinAcquireDate: y("currentSkin.ownership.owned", "currentSkin.ownership.rental.purchaseDate", (function() {
+                    const e = k(this, "currentSkin");
                     if (e && e.ownership.owned) {
-                        const e = _(this, "currentSkin.ownership.rental.purchaseDate");
-                        return null !== e ? _(this, "tra.moment")(new Date(e)).format(_(this, "tra.showcase_acquire_date_format")) : null
+                        const e = k(this, "currentSkin.ownership.rental.purchaseDate");
+                        return null !== e ? k(this, "tra.moment")(new Date(e)).format(k(this, "tra.showcase_acquire_date_format")) : null
                     }
                     return null
                 })),
-                currentSkinDescription: k("currentSkin.description", "currentSkin.questSkinInfo.collectionDescription", "currentSkin.skinDescriptionOverride", (function() {
-                    const e = _(this, "currentSkin.questSkinInfo.collectionDescription"),
-                        t = _(this, "currentSkin.description"),
-                        n = _(this, "currentSkin.skinDescriptionOverride");
+                currentSkinDescription: y("currentSkin.description", "currentSkin.questSkinInfo.collectionDescription", "currentSkin.skinDescriptionOverride", (function() {
+                    const e = k(this, "currentSkin.questSkinInfo.collectionDescription"),
+                        t = k(this, "currentSkin.description"),
+                        n = k(this, "currentSkin.skinDescriptionOverride");
                     return n || (e || t)
                 })),
-                displayLegacy: k.and("currentSkin.isLegacy", "showLegacyInfo"),
-                displayDescriptionBackground: k.or("hasDescription", "hasFeaturesText"),
-                displayLimited: k("currentSkin", (function() {
+                displayLegacy: y.and("currentSkin.isLegacy", "showLegacyInfo"),
+                displayDescriptionBackground: y.or("hasDescription", "hasFeaturesText"),
+                displayLimited: y("currentSkin", (function() {
                     return !1
                 })),
-                displayClassicExclusive: k("currentSkin.tags", (function() {
-                    return (_(this, "currentSkin.tags") || []).includes("jade_exclusive")
+                displayClassicExclusive: y("currentSkin.tags", (function() {
+                    return (k(this, "currentSkin.tags") || []).includes("jade_exclusive")
                 })),
-                hasFeaturesText: k("currentSkin.featuresText", (function() {
-                    const e = _(this, "currentSkin.featuresText");
+                hasFeaturesText: y("currentSkin.featuresText", (function() {
+                    const e = k(this, "currentSkin.featuresText");
                     return !s.Lodash.isNil(e) && s.Lodash.isString(e) && e.length > 0
                 })),
-                hasDescription: k("currentSkin.description", "currentSkin.questSkinInfo.collectionDescription", (function() {
-                    const e = _(this, "currentSkin.description"),
-                        t = _(this, "currentSkin.questSkinInfo.collectionDescription"),
+                hasDescription: y("currentSkin.description", "currentSkin.questSkinInfo.collectionDescription", (function() {
+                    const e = k(this, "currentSkin.description"),
+                        t = k(this, "currentSkin.questSkinInfo.collectionDescription"),
                         n = this._hasDescription(e),
                         s = this._hasDescription(t);
                     return n || s
                 })),
-                usingSplitLayout: k.and("hasFeaturesText", "hasDescription"),
-                shouldShowVideoForSkin: k("userExperience.data.potatoModeEnabled", "currentSkinSplashVideoPath", (function() {
-                    const e = _(this, "userExperience.data.potatoModeEnabled");
-                    return !e && ((void 0 !== e || !_(this, "defaultPotatoModeEnabled")) && !!_(this, "currentSkinSplashVideoPath"))
+                usingSplitLayout: y.and("hasFeaturesText", "hasDescription"),
+                shouldShowVideoForSkin: y("userExperience.data.potatoModeEnabled", "currentSkinSplashVideoPath", (function() {
+                    const e = k(this, "userExperience.data.potatoModeEnabled");
+                    return !e && ((void 0 !== e || !k(this, "defaultPotatoModeEnabled")) && !!k(this, "currentSkinSplashVideoPath"))
                 })),
-                focusChanged: x("hasFocus", (function() {
-                    _(this, "hasFocus") && this._focusOnHiddenInput()
+                focusChanged: v("hasFocus", (function() {
+                    k(this, "hasFocus") && this._focusOnHiddenInput()
                 })),
                 _hasDescription: e => !s.Lodash.isNil(e) && s.Lodash.isString(e) && e.length > 0,
                 _updateChampionsData(e) {
                     this._isDestroyed || this._isDestroying || !e || this.set("champions", e)
                 },
                 _initSettingsManager() {
-                    const e = _(this, "settingsManager");
+                    const e = k(this, "settingsManager");
                     if (!e) throw new Error("Cannot retrieve settingsManager in root component");
                     this._registeredSettingsReadyCallback = this._settingsReadyCallback.bind(this), e.addReadyStateListener(this._registeredSettingsReadyCallback)
                 },
                 _settingsReadyCallback() {
-                    v(this, "settingsReady", !0)
+                    E(this, "settingsReady", !0)
                 },
                 _getLootItems() {
                     (0, s.dataBinding)("/lol-loot", s.socket).get("/v1/loot-items").then(this._handleLootItemsSuccess.bind(this)).catch(this._handleLootItemsFail.bind(this))
@@ -21278,44 +21106,43 @@
                 },
                 _createLootItemManager(e) {
                     e = e || [];
-                    const t = new h.default(e);
-                    v(this, "lootItemManager", t)
+                    const t = new p.default(e);
+                    E(this, "lootItemManager", t)
                 },
                 _handleDataReady(e) {
-                    _(this, "isLoading") && v(this, "isLoading", !1)
+                    k(this, "isLoading") && E(this, "isLoading", !1)
                 },
                 init() {
                     this._super(...arguments);
-                    const e = s.dataBinding.bindTo(s.socket);
-                    a.default.startTelemetrySession();
-                    const t = new p.default(e);
-                    t.loadSettings(), v(this, "settingsManager", t), this._initSettingsManager(), v(this, "purchasedSkins", w());
+                    const e = s.dataBinding.bindTo(s.socket),
+                        t = new d.default(e);
+                    t.loadSettings(), E(this, "settingsManager", t), this._initSettingsManager(), E(this, "purchasedSkins", A());
                     const n = s.Ember.Object.create({
                         openPawModal: this._openPawModal.bind(this)
                     });
-                    this.set("openPawModalCallback", n), v(this, "jmxSettings", s.Ember.Object.create()), this._getLootItems(), (0, s.dataBinding)("/lol-login", s.socket).observe("/v1/session", this, (e => {
+                    this.set("openPawModalCallback", n), E(this, "jmxSettings", s.Ember.Object.create()), this._getLootItems(), (0, s.dataBinding)("/lol-login", s.socket).observe("/v1/session", this, (e => {
                         !e || this.isDestroyed || this.isDestroying || ((0, s.dataBinding)("/lol-login", s.socket).unobserve("v1/session", this), (0, s.dataBinding)("/lol-collections", s.socket).observe(`/v1/inventories/${e.puuid}/champion-mastery`, this, (e => {
-                            this.isDestroyed || this.isDestroying || !e || v(this, "playerChampionMastery", e)
+                            this.isDestroyed || this.isDestroying || !e || E(this, "playerChampionMastery", e)
                         })))
-                    })), (0, s.dataBinding)("/lol-store", s.socket).get(`/v1/catalog?inventoryType=["${g.STORE_INVENTORY_TYPE.CHAMPION_SKIN}","${g.STORE_INVENTORY_TYPE.BUNDLES}"]`).then(this._handleStoreCatalogSuccess.bind(this)).catch(this._handleStoreCatalogFail.bind(this)), (0, s.dataBinding)("/lol-game-data", s.socket).observe("/assets/v1/champion-summary.json", this, this._updateChampionsData), (0, s.dataBinding)("/lol-platform-config", s.socket).observe("/v1/namespaces/SkinsViewer", this, (e => {
-                        this.isDestroying || this.isDestroyed || v(this, "jmxSettings.SkinsViewer", s.Ember.Object.create(e))
+                    })), (0, s.dataBinding)("/lol-store", s.socket).get(`/v1/catalog?inventoryType=["${u.STORE_INVENTORY_TYPE.CHAMPION_SKIN}","${u.STORE_INVENTORY_TYPE.BUNDLES}"]`).then(this._handleStoreCatalogSuccess.bind(this)).catch(this._handleStoreCatalogFail.bind(this)), (0, s.dataBinding)("/lol-game-data", s.socket).observe("/assets/v1/champion-summary.json", this, this._updateChampionsData), (0, s.dataBinding)("/lol-platform-config", s.socket).observe("/v1/namespaces/SkinsViewer", this, (e => {
+                        this.isDestroying || this.isDestroyed || E(this, "jmxSettings.SkinsViewer", s.Ember.Object.create(e))
                     })), (0, s.dataBinding)("/lol-platform-config", s.socket).observe("/v1/namespaces/DisabledChampionSkins/DisabledChromas", this, (e => {
-                        this.isDestroying || this.isDestroyed || v(this, "jmxSettings.disabledChromas", e)
-                    })), v(this, "registeredFlyoutTargets", new Set), v(this, "acceptKeydownEvent", !0), v(this, "enableKeydownEvent", this._enableKeydownEvent.bind(this)), v(this, "keydownEventHandler", this._keydownEventHandler.bind(this)), v(this, "acceptMouseWheelEvent", !0), v(this, "enableMouseWheelEvent", this._enableMouseWheelEvent.bind(this)), v(this, "mouseWheelEventHandler", this._mouseWheelEventHandler.bind(this)), v(this, "mouseMoveEventHandler", this._mouseMoveEventHandler.bind(this)), v(this, "flyoutComponents", new Map), v(this, "tracker", new O)
+                        this.isDestroying || this.isDestroyed || E(this, "jmxSettings.disabledChromas", e)
+                    })), E(this, "registeredFlyoutTargets", new Set), E(this, "acceptKeydownEvent", !0), E(this, "enableKeydownEvent", this._enableKeydownEvent.bind(this)), E(this, "keydownEventHandler", this._keydownEventHandler.bind(this)), E(this, "acceptMouseWheelEvent", !0), E(this, "enableMouseWheelEvent", this._enableMouseWheelEvent.bind(this)), E(this, "mouseWheelEventHandler", this._mouseWheelEventHandler.bind(this)), E(this, "mouseMoveEventHandler", this._mouseMoveEventHandler.bind(this)), E(this, "flyoutComponents", new Map), E(this, "tracker", new T)
                 },
                 didInsertElement() {
-                    this._cacheHTMLElements(), this._bindNavigationInputs(this.element), this._bindMouseWheelEventListenerForDescription(this.element), _(this, "hasFocus") && this._focusOnHiddenInput()
+                    this._cacheHTMLElements(), this._bindNavigationInputs(this.element), this._bindMouseWheelEventListenerForDescription(this.element), k(this, "hasFocus") && this._focusOnHiddenInput()
                 },
                 willDestroyElement() {
-                    (0, s.dataBinding)("/lol-game-data", s.socket).unobserve(this), (0, s.dataBinding)("/lol-platform-config", s.socket).unobserve(this), (0, s.dataBinding)("/lol-login", s.socket).unobserve(this), (0, s.dataBinding)("/lol-collections", s.socket).unobserve(this), a.default.endTelemetrySession();
-                    const e = _(this, "hiddenInput");
-                    v(this, "hiddenInput", null), e.removeEventListener("keydown", _(this, "keydownEventHandler")), v(this, "keydownEventHandler", null), this.element.removeEventListener("mousewheel", _(this, "mouseWheelEventHandler")), v(this, "mouseWheelEventHandler", null), this._clearMouseMoveEventListener(), v(this, "mouseMoveEventHandler", null), v(this, "sectionController", null), this._unassignAllFlyout();
-                    let t = _(this, "chromaFlyoutComponentData");
-                    v(this, "chromaFlyoutComponentData", null), t && (t.set("skin", null), t.set("openPawModal", null), t.set("storeCatalogManager", null), t = null);
-                    const n = _(this, "skinLineFlyoutComponentData");
-                    v(this, "skinLineFlyoutComponentData", null), n && n.set("showcaseComponent", null);
-                    const o = _(this, "flyoutComponents");
-                    v(this, "flyoutComponents", null), o.forEach((function(e) {
+                    (0, s.dataBinding)("/lol-game-data", s.socket).unobserve(this), (0, s.dataBinding)("/lol-platform-config", s.socket).unobserve(this), (0, s.dataBinding)("/lol-login", s.socket).unobserve(this), (0, s.dataBinding)("/lol-collections", s.socket).unobserve(this);
+                    const e = k(this, "hiddenInput");
+                    E(this, "hiddenInput", null), e.removeEventListener("keydown", k(this, "keydownEventHandler")), E(this, "keydownEventHandler", null), this.element.removeEventListener("mousewheel", k(this, "mouseWheelEventHandler")), E(this, "mouseWheelEventHandler", null), this._clearMouseMoveEventListener(), E(this, "mouseMoveEventHandler", null), E(this, "sectionController", null), this._unassignAllFlyout();
+                    let t = k(this, "chromaFlyoutComponentData");
+                    E(this, "chromaFlyoutComponentData", null), t && (t.set("skin", null), t.set("openPawModal", null), t.set("storeCatalogManager", null), t = null);
+                    const n = k(this, "skinLineFlyoutComponentData");
+                    E(this, "skinLineFlyoutComponentData", null), n && n.set("showcaseComponent", null);
+                    const o = k(this, "flyoutComponents");
+                    E(this, "flyoutComponents", null), o.forEach((function(e) {
                         e?.componentPromise && e.componentPromise.then((function(e) {
                             e.app.destroy()
                         }))
@@ -21323,35 +21150,32 @@
                 },
                 actions: {
                     moveToLeft(e = -1, t = !0) {
-                        _(this, "currentlyDisplayedSection") === C && (this._switchSkin(e), t && r.SFX.browseLeftSfx.play())
+                        k(this, "currentlyDisplayedSection") === w && (this._switchSkin(e), t && r.SFX.browseLeftSfx.play())
                     },
                     moveToRight(e = 1, t = !0) {
-                        _(this, "currentlyDisplayedSection") === C && (this._switchSkin(e), t && r.SFX.browseRightSfx.play())
+                        k(this, "currentlyDisplayedSection") === w && (this._switchSkin(e), t && r.SFX.browseRightSfx.play())
                     },
                     toggleQuestFormsFlyout() {
-                        I.isActive() ? this._hideFlyoutModal() : (this._showQuestFormsFlyout(), a.default.addUserBehavior(l.USER_ACTIVITIES.CLICK_ON_QUEST_FORMS_FLYOUT))
+                        x.isActive() ? this._hideFlyoutModal() : this._showQuestFormsFlyout()
                     },
                     toggleSkinLineFlyout() {
-                        I.isActive() ? this._hideFlyoutModal() : (this._showSkinLineFlyout(), a.default.addUserBehavior(l.USER_ACTIVITIES.CLICK_ON_THEME_FLYOUT))
+                        x.isActive() ? this._hideFlyoutModal() : this._showSkinLineFlyout()
                     },
                     toggleChromaFlyout() {
-                        I.isActive() ? this._hideFlyoutModal() : (this._showChromaFlyout(), a.default.addUserBehavior(l.USER_ACTIVITIES.CLICK_ON_CHROMA_FLYOUT))
+                        x.isActive() ? this._hideFlyoutModal() : this._showChromaFlyout()
                     },
                     focusOnHiddenInput() {
                         this._focusOnHiddenInput()
                     },
                     toggleUi() {
-                        this._switchSection(T), this._registerMouseMoveEventListener(), r.SFX.showcaseEnlargeClick.play(), a.default.addUserBehavior(l.USER_ACTIVITIES.SHOW_SPLASH_VIEW)
+                        this._switchSection(I), this._registerMouseMoveEventListener(), r.SFX.showcaseEnlargeClick.play()
                     },
-                    openPawModal(e, t) {
-                        _(this, "openPawModalCallback.openPawModal")(e, t)
+                    openPawModal(e) {
+                        k(this, "openPawModalCallback.openPawModal")(e)
                     },
                     navigateToCurrentEvent() {
                         const e = this.get("skinsFromActiveEvents")?.[this.get("currentSkin.id")]?.eventId;
-                        a.default.sendEvent(l.TELEMETRY_EVENT_ID.SKINS_VIEWER_NAVIGATE_TO_EVENT_HUB, l.TELEMETRY_EVENT_SOURCE.SKIN_COLLECTION_VIEW, {
-                            skindId: this.get("currentSkin.id"),
-                            eventId: e
-                        }), s.Router.navigateTo(`rcp-fe-lol-event-hub#${e}`, {
+                        s.Router.navigateTo(`rcp-fe-lol-event-hub#${e}`, {
                             openPassPurchase: !0,
                             eventId: e
                         })
@@ -21359,12 +21183,12 @@
                 },
                 _showQuestFormsFlyout() {
                     const e = "QuestFormsPopup",
-                        t = _(this, "currentSkin.questSkinInfo.tiers"),
+                        t = k(this, "currentSkin.questSkinInfo.tiers"),
                         n = ".quest-forms",
                         o = this.element.querySelector(n);
-                    let i = _(this, "flyoutComponents").get(e);
+                    let i = k(this, "flyoutComponents").get(e);
                     if (i) {
-                        const e = _(this, "questFormsFlyoutComponentData");
+                        const e = k(this, "questFormsFlyoutComponentData");
                         e.set("tiers", t), e.set("isTieredSkin", this.get("isTieredSkin"))
                     } else {
                         this.set("lastSelectedSkinIndex", this.get("selectedQuestFormIndex"));
@@ -21373,49 +21197,49 @@
                             tiers: t,
                             isTieredSkin: this.get("isTieredSkin")
                         });
-                        v(this, "questFormsFlyoutComponentData", n), i = this._createFlyoutComponent(e, n)
+                        E(this, "questFormsFlyoutComponentData", n), i = this._createFlyoutComponent(e, n)
                     }
                     const l = s.ComponentFactory.getDOMNode(i);
-                    this._assignFlyout(o, l), I.sendEvent(o, "show"), r.SFX.flyoutOpenClick.play(), v(this, "flyoutTargetClass", n)
+                    this._assignFlyout(o, l), x.sendEvent(o, "show"), r.SFX.flyoutOpenClick.play(), E(this, "flyoutTargetClass", n)
                 },
                 _showSkinLineFlyout() {
                     const e = "SkinLinePopup",
-                        t = _(this, "skinLinesById")[_(this, "currentSkinLine.id")],
+                        t = k(this, "skinLinesById")[k(this, "currentSkinLine.id")],
                         n = ".skinline",
                         o = this.element.querySelector(n);
-                    let i = _(this, "flyoutComponents").get(e);
+                    let i = k(this, "flyoutComponents").get(e);
                     if (i) {
-                        _(this, "skinLineFlyoutComponentData").set("skinLine", t)
+                        k(this, "skinLineFlyoutComponentData").set("skinLine", t)
                     } else {
                         const n = s.Ember.Object.create({
                             showcaseComponent: this,
                             skinLine: t
                         });
-                        v(this, "skinLineFlyoutComponentData", n), i = this._createFlyoutComponent(e, n)
+                        E(this, "skinLineFlyoutComponentData", n), i = this._createFlyoutComponent(e, n)
                     }
                     const l = s.ComponentFactory.getDOMNode(i);
-                    this._assignFlyout(o, l), I.sendEvent(o, "show"), r.SFX.flyoutOpenClick.play(), v(this, "flyoutTargetClass", n)
+                    this._assignFlyout(o, l), x.sendEvent(o, "show"), r.SFX.flyoutOpenClick.play(), E(this, "flyoutTargetClass", n)
                 },
                 _updateSkinWithSkinLine(e, t) {
-                    v(this, "currentSkinId", e), v(this, "skins", t)
+                    E(this, "currentSkinId", e), E(this, "skins", t)
                 },
                 _overrideSkinName(e) {
-                    v(this, "currentSkin.skinNameOverride", e)
+                    E(this, "currentSkin.skinNameOverride", e)
                 },
                 _overrideSkinDescription(e) {
-                    v(this, "currentSkin.skinDescriptionOverride", e)
+                    E(this, "currentSkin.skinDescriptionOverride", e)
                 },
                 _overrideSplashPath(e) {
-                    v(this, "currentSkin.skinSplashOverride", e)
+                    E(this, "currentSkin.skinSplashOverride", e)
                 },
                 _overrideSplashVideoPath(e) {
-                    v(this, "currentSkin.skinSplashVideoOverride", e)
+                    E(this, "currentSkin.skinSplashVideoOverride", e)
                 },
                 _overrideAugments(e) {
-                    v(this, "currentSkin.skinAugmentsOverride", e ?? [])
+                    E(this, "currentSkin.skinAugmentsOverride", e ?? [])
                 },
                 _setSelectedQuestForm(e) {
-                    v(this, "selectedQuestFormIndex", e), v(this, "lastSelectedSkinIndex", e)
+                    E(this, "selectedQuestFormIndex", e), E(this, "lastSelectedSkinIndex", e)
                 },
                 _showChromaFlyout() {
                     const e = "ChromaPopup",
@@ -21423,26 +21247,26 @@
                         n = this.element.querySelector(t),
                         o = this.get("currentSkin"),
                         i = this.get("storeCatalogManager"),
-                        l = _(this, "platformSettings");
-                    let a = _(this, "flyoutComponents").get(e);
+                        l = k(this, "platformSettings");
+                    let a = k(this, "flyoutComponents").get(e);
                     if (a) {
-                        _(this, "chromaFlyoutComponentData").set("skin", o)
+                        k(this, "chromaFlyoutComponentData").set("skin", o)
                     } else {
                         const t = s.Ember.Object.create({
                             skin: o,
                             storeCatalogManager: i,
                             platformSettings: l,
-                            openPawModal: _(this, "openPawModalCallback")
+                            openPawModal: k(this, "openPawModalCallback")
                         });
-                        v(this, "chromaFlyoutComponentData", t), a = this._createFlyoutComponent(e, t)
+                        E(this, "chromaFlyoutComponentData", t), a = this._createFlyoutComponent(e, t)
                     }
                     this._assignFlyout(n, s.ComponentFactory.getDOMNode(a)), this.scheduleTask("render", (() => {
-                        I.sendEvent(n, "show"), r.SFX.flyoutOpenClick.play(), v(this, "flyoutTargetClass", t)
+                        x.sendEvent(n, "show"), r.SFX.flyoutOpenClick.play(), E(this, "flyoutTargetClass", t)
                     }))
                 },
                 _createTemplatePaw(e) {
                     const t = {
-                        templateType: f.PAW.TEMPLATE_TYPES.LARGE_TWO_COLUMN_LANDSCAPE
+                        templateType: h.PAW.TEMPLATE_TYPES.LARGE_TWO_COLUMN_LANDSCAPE
                     };
                     return s.pawApi.createPawTemplateModalAsync(e.offerId, t, i.SKINS_VIEWER_PAW_SOURCE).then((() => {
                         s.pawApi.getBaseSkinLineData(e.offerId).then((e => {
@@ -21450,54 +21274,53 @@
                         }))
                     }))
                 },
-                _openPawModal(e, t) {
+                _openPawModal(e) {
                     const {
-                        item: n,
-                        inventoryType: r,
-                        modalType: l,
-                        ownerElement: a
+                        item: t,
+                        inventoryType: n,
+                        modalType: r,
+                        ownerElement: l
                     } = e;
-                    t = t || _(this, "telemetryEventSource");
-                    let c = !1;
-                    c = n.tags && n.tags.includes(o.SKIN_TAGS.QUEST_SKIN) ? this._createTemplatePaw(n) : s.pawApi.createPAWModal({
-                        itemId: n.itemId || n.id,
-                        inventoryType: r
-                    }, i.SKINS_VIEWER_PAW_SOURCE, l, a), c && v(this, "pawModalOpening", !0)
+                    let a = !1;
+                    a = t.tags && t.tags.includes(o.SKIN_TAGS.QUEST_SKIN) ? this._createTemplatePaw(t) : s.pawApi.createPAWModal({
+                        itemId: t.itemId || t.id,
+                        inventoryType: n
+                    }, i.SKINS_VIEWER_PAW_SOURCE, r, l), a && E(this, "pawModalOpening", !0)
                 },
                 _cacheHTMLElements() {
                     const e = this.element.querySelector(".showcase-hidden-input");
-                    v(this, "hiddenInput", e);
+                    E(this, "hiddenInput", e);
                     const t = this.element.querySelector(".section-controller");
-                    v(this, "sectionController", t)
+                    E(this, "sectionController", t)
                 },
                 _updateCurrentSkinData(e) {
-                    v(this, "currentSkinId", e.id);
-                    const t = _(this, "champions").find((t => t.id === e.championId));
-                    if (t && t.roles ? v(this, "currentChampionRole", t.roles[0]) : v(this, "currentChampionRole", null), e.ownership.owned) {
-                        const t = _(this, "tra.moment")(new Date(e.ownership.rental.purchaseDate)).format(_(this, "tra.showcase_unlock_date_format"));
-                        v(this, "currentSkinUnlockDate", t)
-                    } else v(this, "currentSkinUnlockDate", null)
+                    E(this, "currentSkinId", e.id);
+                    const t = k(this, "champions").find((t => t.id === e.championId));
+                    if (t && t.roles ? E(this, "currentChampionRole", t.roles[0]) : E(this, "currentChampionRole", null), e.ownership.owned) {
+                        const t = k(this, "tra.moment")(new Date(e.ownership.rental.purchaseDate)).format(k(this, "tra.showcase_unlock_date_format"));
+                        E(this, "currentSkinUnlockDate", t)
+                    } else E(this, "currentSkinUnlockDate", null)
                 },
                 _resetOverrideData() {
-                    if (v(this, "currentSkin.skinSplashOverride", null), v(this, "currentSkin.skinSplashVideoOverride", null), v(this, "currentSkin.skinDescriptionOverride", null), v(this, "currentSkin.skinAugmentsOverride", null), v(this, "currentSkin.skinNameOverride", null), v(this, "selectedQuestFormIndex", null), _(this, "hasQuestForms")) {
-                        const e = _(this, "currentSkin.questSkinInfo.tiers");
-                        for (let t = 0; t < e.length; ++t) v(e[t], "selected", !1)
+                    if (E(this, "currentSkin.skinSplashOverride", null), E(this, "currentSkin.skinSplashVideoOverride", null), E(this, "currentSkin.skinDescriptionOverride", null), E(this, "currentSkin.skinAugmentsOverride", null), E(this, "currentSkin.skinNameOverride", null), E(this, "selectedQuestFormIndex", null), k(this, "hasQuestForms")) {
+                        const e = k(this, "currentSkin.questSkinInfo.tiers");
+                        for (let t = 0; t < e.length; ++t) E(e[t], "selected", !1)
                     }
                 },
                 _switchSkin(e) {
                     if (!this._isSkinSwitchStillRateLimited()) return;
                     const t = this._getSkinByOffset(e);
-                    t && (I.isActive() && this._hideFlyoutModal(), this._resetOverrideData(), this._updateLastSwitchSkinTime(), this._updateCurrentSkinData(t))
+                    t && (x.isActive() && this._hideFlyoutModal(), this._resetOverrideData(), this._updateLastSwitchSkinTime(), this._updateCurrentSkinData(t))
                 },
                 _isSkinSwitchStillRateLimited() {
-                    const e = _(this, "lastSkinSwitchTime");
+                    const e = k(this, "lastSkinSwitchTime");
                     return !e || !Number.isInteger(e) || Date.now() - e >= 125
                 },
                 _updateLastSwitchSkinTime() {
-                    v(this, "lastSkinSwitchTime", Date.now())
+                    E(this, "lastSkinSwitchTime", Date.now())
                 },
                 _getSkinByOffset(e) {
-                    const t = _(this, "skins");
+                    const t = k(this, "skins");
                     if (!t || 0 === t.length) return null;
                     const n = this._getCurrentShowingSkinIndex();
                     if (-1 === n) return null;
@@ -21505,70 +21328,70 @@
                     return s = (s + t.length) % t.length, t[s]
                 },
                 _getCurrentShowingSkinIndex() {
-                    const e = _(this, "currentSkinId"),
-                        t = _(this, "skins");
+                    const e = k(this, "currentSkinId"),
+                        t = k(this, "skins");
                     let n = -1;
                     return e && t && (n = t.findIndex((t => t.id === e))), n
                 },
                 _switchSection(e) {
-                    if (t = e, !P.find((e => e === t))) return;
+                    if (t = e, !C.find((e => e === t))) return;
                     var t;
-                    const n = _(this, "sectionController");
-                    n && (n.setAttribute("selected-item", e), v(this, "currentlyDisplayedSection", e))
+                    const n = k(this, "sectionController");
+                    n && (n.setAttribute("selected-item", e), E(this, "currentlyDisplayedSection", e))
                 },
                 _registerMouseMoveEventListener() {
-                    const e = _(this, "mouseMoveEventHandler");
+                    const e = k(this, "mouseMoveEventHandler");
                     this.runTask((() => this.element.addEventListener("mousemove", e)), 500)
                 },
                 _mouseMoveEventHandler() {
-                    this._switchSection(C), this._clearMouseMoveEventListener()
+                    this._switchSection(w), this._clearMouseMoveEventListener()
                 },
                 _clearMouseMoveEventListener() {
-                    this.element.removeEventListener("mousemove", _(this, "mouseMoveEventHandler"))
+                    this.element.removeEventListener("mousemove", k(this, "mouseMoveEventHandler"))
                 },
                 _registerKeydownEventsListener() {
-                    const e = _(this, "hiddenInput"),
-                        t = _(this, "keydownEventHandler");
+                    const e = k(this, "hiddenInput"),
+                        t = k(this, "keydownEventHandler");
                     e.addEventListener("keydown", t)
                 },
                 _keydownEventHandler(e) {
-                    const t = _(this, "acceptKeydownEvent");
-                    e && t ? (v(this, "acceptKeydownEvent", !1), "ArrowLeft" === e.code ? (this.send("moveToLeft"), a.default.addUserBehavior(l.USER_ACTIVITIES.SWITCH_SPLASH_BY_KEY_BOARD, "Left")) : "ArrowRight" === e.code ? (this.send("moveToRight"), a.default.addUserBehavior(l.USER_ACTIVITIES.SWITCH_SPLASH_BY_KEY_BOARD, "Right")) : "Escape" === e.code && (this.element.dispatchEvent(new Event("close-modal", {
+                    const t = k(this, "acceptKeydownEvent");
+                    e && t ? (E(this, "acceptKeydownEvent", !1), "ArrowLeft" === e.code ? this.send("moveToLeft") : "ArrowRight" === e.code ? this.send("moveToRight") : "Escape" === e.code && this.element.dispatchEvent(new Event("close-modal", {
                         bubbles: !0
-                    })), a.default.addUserBehavior(l.USER_ACTIVITIES.SWITCH_SPLASH_BY_KEY_BOARD, "Escape")), requestAnimationFrame(_(this, "enableKeydownEvent"))) : s.logger.trace("wait for keydown enabled")
+                    })), requestAnimationFrame(k(this, "enableKeydownEvent"))) : s.logger.trace("wait for keydown enabled")
                 },
                 _registerMousewheelEventsListener(e) {
-                    const t = _(this, "mouseWheelEventHandler");
+                    const t = k(this, "mouseWheelEventHandler");
                     e.addEventListener("mousewheel", t)
                 },
                 _enableMouseWheelEvent() {
-                    v(this, "acceptMouseWheelEvent", !0)
+                    E(this, "acceptMouseWheelEvent", !0)
                 },
                 _enableKeydownEvent() {
-                    v(this, "acceptKeydownEvent", !0)
+                    E(this, "acceptKeydownEvent", !0)
                 },
                 _mouseWheelEventHandler(e) {
-                    const t = _(this, "acceptMouseWheelEvent");
-                    e && t ? (v(this, "acceptMouseWheelEvent", !1), e.wheelDelta < 0 ? (this.send("moveToLeft"), a.default.addUserBehavior(l.USER_ACTIVITIES.SWITCH_SPLASH_BY_MOUSE, "Left")) : e.wheelDelta > 0 && (this.send("moveToRight"), a.default.addUserBehavior(l.USER_ACTIVITIES.SWITCH_SPLASH_BY_MOUSE, "Right")), requestAnimationFrame(_(this, "enableMouseWheelEvent"))) : s.logger.trace("wait for mouse wheel enabled")
+                    const t = k(this, "acceptMouseWheelEvent");
+                    e && t ? (E(this, "acceptMouseWheelEvent", !1), e.wheelDelta < 0 ? this.send("moveToLeft") : e.wheelDelta > 0 && this.send("moveToRight"), requestAnimationFrame(k(this, "enableMouseWheelEvent"))) : s.logger.trace("wait for mouse wheel enabled")
                 },
                 _bindNavigationInputs(e) {
                     this._registerKeydownEventsListener(), this._registerMousewheelEventsListener(e)
                 },
                 _focusOnHiddenInput() {
-                    const e = _(this, "hiddenInput");
+                    const e = k(this, "hiddenInput");
                     e && e.focus()
                 },
                 _unassignAllFlyout() {
-                    _(this, "registeredFlyoutTargets").forEach((e => {
-                        I.sendEvent(e, "hide"), I.unassignFlyout(e)
-                    })), _(this, "registeredFlyoutTargets").clear(), v(this, "registeredFlyoutTargets", null)
+                    k(this, "registeredFlyoutTargets").forEach((e => {
+                        x.sendEvent(e, "hide"), x.unassignFlyout(e)
+                    })), k(this, "registeredFlyoutTargets").clear(), E(this, "registeredFlyoutTargets", null)
                 },
                 _createFlyoutComponent(e, t) {
                     const n = s.ComponentFactory.create(e, t);
-                    return _(this, "flyoutComponents").set(e, n), n
+                    return k(this, "flyoutComponents").set(e, n), n
                 },
                 _assignFlyout(e, t) {
-                    I.assignFlyout(e, t, {}, {
+                    x.assignFlyout(e, t, {}, {
                         showEvent: "show",
                         hideEvent: "hide",
                         targetAnchor: {
@@ -21587,13 +21410,13 @@
                         orientation: "top",
                         animated: !0,
                         ComponentFactory: s.ComponentFactory
-                    }), _(this, "registeredFlyoutTargets").add(e)
+                    }), k(this, "registeredFlyoutTargets").add(e)
                 },
                 _hideFlyoutModal() {
-                    const e = _(this, "flyoutTargetClass");
+                    const e = k(this, "flyoutTargetClass");
                     if (e) {
                         const t = this.element.querySelector(e);
-                        I.sendEvent(t, "hide"), I.unassignFlyout(t), r.SFX.flyoutCloseClick.play(), v(this, "flyoutTargetClass", null)
+                        x.sendEvent(t, "hide"), x.unassignFlyout(t), r.SFX.flyoutCloseClick.play(), E(this, "flyoutTargetClass", null)
                     }
                 },
                 _bindMouseWheelEventListenerForDescription(e) {
@@ -21602,7 +21425,7 @@
                     }))
                 }
             });
-            class O {}
+            class T {}
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -21613,110 +21436,6 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t)
-        }, (e, t) => {
-            "use strict";
-
-            function n(e) {
-                const t = new Set;
-                for (const n in e) t.add(e[n]);
-                return t
-            }
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.USER_ACTIVITIES = t.TELEMETRY_EVENT_SOURCE_SET = t.TELEMETRY_EVENT_SOURCE = t.TELEMETRY_EVENT_NAME = t.TELEMETRY_EVENT_ID_SET = t.TELEMETRY_EVENT_ID = void 0, t.getAllValues = n;
-            t.TELEMETRY_EVENT_NAME = "skins_collection__skins_collection_event";
-            const s = {
-                SKINS_VIEWER_ENTER: "skins_viewer_enter",
-                SKINS_VIEWER_EXIT: "skins_viewer_exit",
-                SKINS_VIEWER_NAVIGATE_TO_EVENT_HUB: "skins_viewer_navigate_to_event_hub",
-                PURCHASE_MODAL_SHOW: "purchase_modal_show",
-                PURCHASE_SUCCESS: "purchase_success",
-                GRID_FIRST_SHOW: "grid_first_show",
-                GRID_GROUP_BY_MY_COLLECTION: "grid_group_by_my_collection",
-                GRID_GROUP_BY_ALL: "group_by_all",
-                GRID_GROUP_BY_CHAMPION: "grid_group_by_champion",
-                GRID_GROUP_BY_RARITY: "grid_group_by_rarity",
-                GRID_GROUP_BY_THEME: "grid_group_by_theme",
-                GRID_SORT_ALPHABETICAL: "grid_sort_alphabetical",
-                GRID_SHOW_UNOWNED: "grid_show_unowned",
-                GRID_SHOW_LEGACY: "grid_show_legacy",
-                GRID_CLICK_RARITY_ICON: "grid_click_rarity_icon",
-                SPLASH_VIEW_DISPLAY: "splash_view_display",
-                SPLASH_VIEW_CLOSE: "splash_view_close",
-                SPLASH_VIEW_KEYBOARD_CLOSE: "splash_view_keyboard_close",
-                SPLASH_VIEW_KEYBOARD_NAVIGATION: "splash_view_keyboard_navigation",
-                SHOWCASE_VIEW_DISPLAY: "showcase_view_display",
-                SHOWCASE_VIEW_KEYBOARD_CLOSE: "showcase_view_keyboard_close",
-                SHOWCASE_VIEW_KEYBOARD_NAVIGATION: "showcase_view_keyboard_navigation"
-            };
-            t.TELEMETRY_EVENT_ID = s;
-            const o = n(s);
-            t.TELEMETRY_EVENT_ID_SET = o;
-            const i = {
-                SKIN_COLLECTION_VIEW: "skin_collection_view",
-                SKIN_SHOWCASE_VIEW: "skin_showcase_view",
-                SKIN_CHROMA_FLYOUT_VIEW: "skin_chroma_flyout_view",
-                SKIN_THEME_FLYOUT_VIEW: "skin_theme_flyout_view"
-            };
-            t.TELEMETRY_EVENT_SOURCE = i;
-            const r = n(i);
-            t.TELEMETRY_EVENT_SOURCE_SET = r;
-            t.USER_ACTIVITIES = {
-                CLICK_ON_PLAYER_NOTIFICATION: "clickOnPlayerNotification",
-                SWITCH_GROUPING: "switchGrouping",
-                SWITCH_SORTING: "switchSorting",
-                TOGGLE_UNOWNED: "toggleUnowned",
-                CLICK_ON_RARITY_ICON: "clickOnRarityIcon",
-                INPUT_NAME_FILTER: "inputNameFilter",
-                SWITCH_SPLASH_BY_KEY_BOARD: "switchSplashByKeyBoard",
-                SWITCH_SPLASH_BY_MOUSE: "switchSplashByMouse",
-                SWITCH_SPLASH_BY_BUTTON: "switchSplashByButton",
-                SWITCH_SPLASH_BY_CLICK_CAROUSEL: "switchSplashByClickingCarousel",
-                CLICK_ON_CHROMA_FLYOUT: "clickOnChromaFlyout",
-                CLICK_ON_THEME_FLYOUT: "clickOnThemeFlyout",
-                CLICK_ON_SKIN_IN_THEME_FLYOUT: "clickOnSkinInThemeFlyout",
-                CLICK_ON_QUEST_FORMS_FLYOUT: "clickOnQuestFormsFlyout",
-                SHOW_SPLASH_VIEW: "showSplashView",
-                VIEWED_TIERED_SKIN: "viewedTieredSkin"
-            }
-        }, (e, t, n) => {
-            "use strict";
-            var s = n(1),
-                o = n(418);
-            const i = `/v1/events/${o.TELEMETRY_EVENT_NAME}`;
-            const r = new class {
-                constructor() {
-                    this._dataBinding = (0, s.dataBinding)("/telemetry", (0, s.getProvider)().getSocket()), this._sessionStartTime = 0, this._userActivities = {}
-                }
-                startTelemetrySession() {
-                    this._sessionStartTime = Date.now(), this._userActivities = {}, this.sendEvent(o.TELEMETRY_EVENT_ID.SKINS_VIEWER_ENTER, o.TELEMETRY_EVENT_SOURCE.SKIN_COLLECTION_VIEW)
-                }
-                endTelemetrySession() {
-                    this.sendEvent(o.TELEMETRY_EVENT_ID.SKINS_VIEWER_EXIT, o.TELEMETRY_EVENT_SOURCE.SKIN_COLLECTION_VIEW, this._userActivities), this._sessionStartTime = 0, this._userActivities = {}
-                }
-                sendEvent(e, t, n) {
-                    if (!o.TELEMETRY_EVENT_ID_SET.has(e)) return s.logger.warning(`Invalid telemetry event id ${e}`), Promise.reject(`Invalid telemetry event id ${e}`);
-                    if (!o.TELEMETRY_EVENT_SOURCE_SET.has(t)) return s.logger.warning(`Invalid telemetry event source ${t}`), Promise.reject(`Invalid telemetry event source ${t}`);
-                    const r = Object.assign({
-                        id: e,
-                        source: t,
-                        sessionId: this._sessionStartTime,
-                        sessionTimestamp: this._getSessionTimestamp()
-                    }, n);
-                    this._dataBinding.post(i, r)
-                }
-                addUserBehavior(e, t) {
-                    Object.prototype.hasOwnProperty.call(this._userActivities, e) || (this._userActivities[e] = {
-                        count: 0
-                    });
-                    const n = this._userActivities[e];
-                    n.count++, null != t && (Object.prototype.hasOwnProperty.call(n, t) ? n[t]++ : n[t] = 1)
-                }
-                _getSessionTimestamp() {
-                    return this._sessionStartTime ? Date.now() - this._sessionStartTime : 0
-                }
-            };
-            e.exports = r
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -21800,8 +21519,8 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(1),
-                o = n(423),
-                i = n(424);
+                o = n(420),
+                i = n(421);
             const {
                 Mixin: r,
                 computed: l,
@@ -21901,7 +21620,7 @@
                 value: !0
             }), t.addStoreData = t.addSkinlineData = t.addSkinStaticData = t.addPurchaseData = t.addMasteryData = t.addLootableProperty = void 0, t.getSkinRarity = g;
             var s = n(1),
-                o = n(416);
+                o = n(415);
             const i = s.RarityManager.agregatedSkinRarityInformationByTier,
                 {
                     set: r,
@@ -22165,8 +21884,8 @@
                 value: !0
             }), t.default = void 0;
             var s, o = n(1),
-                i = n(427),
-                r = (s = n(428)) && s.__esModule ? s : {
+                i = n(424),
+                r = (s = n(425)) && s.__esModule ? s : {
                     default: s
                 };
             class l {
@@ -22320,7 +22039,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s = n(430);
+            var s = n(427);
             const o = new Set([s.LOOT_ITEM_TYPES.SKIN, s.LOOT_ITEM_TYPES.SUMMONER_ICON, s.LOOT_ITEM_TYPES.WARD_SKIN]);
             class i {
                 static isAvailableLootItem(e) {
@@ -22381,26 +22100,25 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(1);
-            n(433);
-            var o = n(424),
-                i = n(418),
-                r = n(65);
+            n(430);
+            var o = n(421),
+                i = n(65);
             const {
-                Component: l,
-                computed: a
+                Component: r,
+                computed: l
             } = s.Ember;
-            e.exports = l.extend({
+            e.exports = r.extend({
                 classNames: ["skin-purchase"],
-                layout: n(434),
-                showSkinPurchaseButton: a.not("viewSkin.ownership.owned"),
-                enabled: a.not("disabled"),
-                disabled: a("viewSkin.{id,canUse,stillObtainable,isLegacy}", (function() {
+                layout: n(431),
+                showSkinPurchaseButton: l.not("viewSkin.ownership.owned"),
+                enabled: l.not("disabled"),
+                disabled: l("viewSkin.{id,canUse,stillObtainable,isLegacy}", (function() {
                     const e = this.get("viewSkin"),
                         t = this.get("storeCatalogManager");
                     return !(0, o.isPurchasable)(e, t)
                 })),
                 init() {
-                    this._super(...arguments), this.set("tracker", new c)
+                    this._super(...arguments), this.set("tracker", new a)
                 },
                 actions: {
                     showSkinPurchaseModal() {
@@ -22412,12 +22130,11 @@
                     const e = this.get("viewSkin");
                     this.openPawModal({
                         item: e,
-                        inventoryType: r.PAW.INVENTORY_TYPES.CHAMPION_SKIN
-                    }, this.get("telemetryEventSource"))
-                },
-                telemetryEventSource: i.TELEMETRY_EVENT_SOURCE.SKIN_SHOWCASE_VIEW
+                        inventoryType: i.PAW.INVENTORY_TYPES.CHAMPION_SKIN
+                    })
+                }
             });
-            class c {}
+            class a {}
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -22433,76 +22150,72 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.THUMBNAIL_ANIMATION_CACHE_SIZE = t.MAX_THUMBNAILS_VISIBLE = void 0;
-            var s, o = n(1),
-                i = n(418),
-                r = (s = n(419)) && s.__esModule ? s : {
-                    default: s
-                };
-            n(436);
+            var s = n(1);
+            n(433);
             const {
-                computed: l,
-                Component: a,
-                get: c,
-                getWithDefault: d,
-                set: m
-            } = o.Ember;
+                computed: o,
+                Component: i,
+                get: r,
+                getWithDefault: l,
+                set: a
+            } = s.Ember;
             t.MAX_THUMBNAILS_VISIBLE = 5;
-            t.THUMBNAIL_ANIMATION_CACHE_SIZE = 1, e.exports = a.extend({
+            t.THUMBNAIL_ANIMATION_CACHE_SIZE = 1, e.exports = i.extend({
                 classNames: ["skin-carousel-component"],
                 activeSkinVirtualIndex: 0,
                 maxThumbnailsVisible: 5,
-                layout: n(437),
-                longCarousel: l("skins.length", "maxThumbnailsVisible", (function() {
+                layout: n(434),
+                longCarousel: o("skins.length", "maxThumbnailsVisible", (function() {
                     return this.get("skins.length") > this.get("maxThumbnailsVisible")
                 })),
-                carouselWidth: l("skins", "maxThumbnailsVisible", (function() {
+                carouselWidth: o("skins", "maxThumbnailsVisible", (function() {
                     const e = this.get("skins.length");
                     return e > this.get("maxThumbnailsVisible") ? 513 : 125 + 97 * (e - 1)
                 })),
-                initialOffset: l("skins", (function() {
+                initialOffset: o("skins", (function() {
                     let e;
                     return e = this.get("skins").length > 5 ? -98 : 0, this.set("offset", e), e
                 })),
-                skins: l("activeSkinIndex", "championSkins", "maxThumbnailsVisible", (function() {
-                    const e = c(this, "championSkins"),
-                        t = c(this, "activeSkinIndex"),
-                        n = c(this, "maxThumbnailsVisible"),
-                        s = c(this, "storeCatalogManager"),
-                        i = c(this, "purchaseEnabled");
+                skins: o("activeSkinIndex", "championSkins", "maxThumbnailsVisible", (function() {
+                    const e = r(this, "championSkins"),
+                        t = r(this, "activeSkinIndex"),
+                        n = r(this, "maxThumbnailsVisible"),
+                        o = r(this, "storeCatalogManager"),
+                        i = r(this, "purchaseEnabled");
                     if (e.forEach((e => {
                             if (e.questSkinInfo)
-                                if ("kQuestSkin" === e.questSkinInfo.productType) o.Ember.set(e, "customTilePath", e.questSkinInfo.tilePath);
+                                if ("kQuestSkin" === e.questSkinInfo.productType) s.Ember.set(e, "customTilePath", e.questSkinInfo.tilePath);
                                 else {
                                     const t = e.questSkinInfo.tiers.reduce(((e, t) => t.ownership.owned ? t : e), e.questSkinInfo?.tiers?.[0]),
                                         n = t?.tilePath;
-                                    o.Ember.set(e, "customTilePath", n)
+                                    s.Ember.set(e, "customTilePath", n)
                                 }
-                        })), !e || !Number.isInteger(t) || t < 0 || !s) return [];
-                    if (e.length <= n) return m(this, "activeSkinVirtualIndex", t), e;
-                    return this._buildSkinsVirtualList(n, e, t).map((e => (e.purchaseAvailable = this._isSkinPurchaseAvailable(e, s, i), {
+                        })), !e || !Number.isInteger(t) || t < 0 || !o) return [];
+                    if (e.length <= n) return a(this, "activeSkinVirtualIndex", t), e;
+                    return this._buildSkinsVirtualList(n, e, t).map((e => (e.purchaseAvailable = this._isSkinPurchaseAvailable(e, o, i), {
                         ...e
                     })))
                 })),
-                activeSkinIndex: l("currentSkin", "championSkins", (function() {
-                    const e = c(this, "currentSkin"),
-                        t = c(this, "championSkins");
+                activeSkinIndex: o("currentSkin", "championSkins", (function() {
+                    const e = r(this, "currentSkin"),
+                        t = r(this, "championSkins");
                     if (e && Array.isArray(t)) return t.findIndex((t => t.id === e.id))
                 })),
                 init() {
-                    this._super(...arguments), m(this, "championSkins", d(this, "championSkins", [])), m(this, "tracker", new p)
+                    this._super(...arguments), a(this, "championSkins", l(this, "championSkins", [])), a(this, "tracker", new c)
                 },
                 actions: {
                     prevSkin() {
-                        this.moveToLeft(-1, !1), r.default.addUserBehavior(i.USER_ACTIVITIES.SWITCH_SPLASH_BY_BUTTON, "Left")
+                        this.moveToLeft(-1, !1)
                     },
                     nextSkin() {
-                        this.moveToRight(1, !1), r.default.addUserBehavior(i.USER_ACTIVITIES.SWITCH_SPLASH_BY_BUTTON, "Right")
+                        this.moveToRight(1, !1)
                     },
                     skinThumbnailClicked(e) {
                         const t = this.get("activeSkinVirtualIndex");
                         if (t === e) return;
                         const n = e - t;
-                        n < 0 ? (r.default.addUserBehavior(i.USER_ACTIVITIES.SWITCH_SPLASH_BY_CLICK_CAROUSEL, "Left"), this.moveToLeft(n)) : (r.default.addUserBehavior(i.USER_ACTIVITIES.SWITCH_SPLASH_BY_CLICK_CAROUSEL, "Right"), this.moveToRight(n))
+                        n < 0 ? this.moveToLeft(n) : this.moveToRight(n)
                     }
                 },
                 _buildSkinsVirtualList: function(e, t, n) {
@@ -22517,7 +22230,7 @@
                     if (n - i < 0) {
                         r = t.slice(t.length - Math.abs(n - i)).concat(r)
                     }
-                    m(this, "activeSkinVirtualIndex", r.length);
+                    a(this, "activeSkinVirtualIndex", r.length);
                     return r.concat(o)
                 },
                 _isSkinPurchaseAvailable(e, t, n) {
@@ -22528,7 +22241,7 @@
                     return !1
                 }
             });
-            class p {}
+            class c {}
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -22541,27 +22254,23 @@
             })
         }, (e, t, n) => {
             "use strict";
-            var s, o = n(1),
-                i = n(412),
-                r = (s = n(419)) && s.__esModule ? s : {
-                    default: s
-                },
-                l = n(418);
-            n(439), e.exports = o.Ember.Component.extend({
+            var s = n(1),
+                o = n(411);
+            n(436), e.exports = s.Ember.Component.extend({
                 classNames: ["tiered-transformations"],
-                layout: n(440),
+                layout: n(437),
                 showcaseComponent: null,
-                selectedSkinIndex: o.Ember.computed.alias("showcaseComponent.selectedQuestFormIndex"),
+                selectedSkinIndex: s.Ember.computed.alias("showcaseComponent.selectedQuestFormIndex"),
                 overrideTargetSplashPath(e) {
                     const t = this.get("skinTiers");
-                    this.get("showcaseComponent")._overrideSplashPath(t[e].uncenteredSplashPath), this.get("showcaseComponent")._overrideSkinDescription(t[e].description), this.get("showcaseComponent")._overrideSplashVideoPath(t[e].collectionSplashVideoPath), this.get("showcaseComponent")._overrideAugments(t[e].ownedSkinAugments), this.get("showcaseComponent")._overrideSkinName(t[e].name), r.default.addUserBehavior(l.USER_ACTIVITIES.VIEWED_TIERED_SKIN, t[e].id)
+                    this.get("showcaseComponent")._overrideSplashPath(t[e].uncenteredSplashPath), this.get("showcaseComponent")._overrideSkinDescription(t[e].description), this.get("showcaseComponent")._overrideSplashVideoPath(t[e].collectionSplashVideoPath), this.get("showcaseComponent")._overrideAugments(t[e].ownedSkinAugments), this.get("showcaseComponent")._overrideSkinName(t[e].name)
                 },
                 actions: {
                     tierClicked(e) {
-                        i.SFX.gridClick.play(), this.get("showcaseComponent")._setSelectedQuestForm(e)
+                        o.SFX.gridClick.play(), this.get("showcaseComponent")._setSelectedQuestForm(e)
                     },
                     onMouseEnterTier(e) {
-                        this.overrideTargetSplashPath(e), i.SFX.gridHover.play()
+                        this.overrideTargetSplashPath(e), o.SFX.gridHover.play()
                     },
                     onMouseLeaveTier() {
                         const e = this.get("skinTiers")[this.get("showcaseComponent.lastSelectedSkinIndex")] ?? this.get("showcaseComponent.questSkinInfo");
@@ -22614,30 +22323,24 @@
             t.default = i
         }, (e, t, n) => {
             "use strict";
-            var s = a(n(1));
-            n(444);
-            var o = n(412),
-                i = n(445),
-                r = a(n(419)),
-                l = n(418);
-
-            function a(e) {
-                return e && e.__esModule ? e : {
-                    default: e
-                }
-            }
+            var s, o = (s = n(1)) && s.__esModule ? s : {
+                default: s
+            };
+            n(441);
+            var i = n(411),
+                r = n(442);
             const {
-                Ember: c
-            } = s.default, {
-                computed: d,
-                Component: m,
-                get: p
-            } = c, u = m.extend({
+                Ember: l
+            } = o.default, {
+                computed: a,
+                Component: c,
+                get: d
+            } = l, m = c.extend({
                 classNames: ["skin-line-flyout"],
                 isShow: !1,
-                layout: n(446),
-                skins: d("skinLine.skins", (function() {
-                    const e = p(this, "skinLine.skins");
+                layout: n(443),
+                skins: a("skinLine.skins", (function() {
+                    const e = d(this, "skinLine.skins");
                     return e?.map((e => ("kTieredSkin" === e?.questSkinInfo?.productType && e.questSkinInfo.tiers.forEach((t => {
                         t?.ownership?.owned && (e.skinLinePopupOverride = t.tilePath)
                     })), e)))
@@ -22650,15 +22353,15 @@
                 willDestroyElement() {
                     this._super(...arguments);
                     const e = this.element.querySelectorAll(".skinline-skin");
-                    (0, i.removeHoverEvents)(e)
+                    (0, r.removeHoverEvents)(e)
                 },
                 actions: {
                     skinClicked: function(e) {
-                        p(this, "showcaseComponent")._updateSkinWithSkinLine(e.id, p(this, "skins")), o.SFX.gridClick.play(), r.default.addUserBehavior(l.USER_ACTIVITIES.CLICK_ON_SKIN_IN_THEME_FLYOUT)
+                        d(this, "showcaseComponent")._updateSkinWithSkinLine(e.id, d(this, "skins")), i.SFX.gridClick.play()
                     }
                 },
                 _handleMouseEnter() {
-                    o.SFX.gridHover.play()
+                    i.SFX.gridHover.play()
                 },
                 _bindHoverSound(e) {
                     e && e.forEach((e => {
@@ -22668,7 +22371,7 @@
                     }))
                 }
             });
-            e.exports = u
+            e.exports = m
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -22692,28 +22395,27 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(1);
-            n(448);
-            var o, i = n(412),
-                r = n(445),
-                l = n(418),
-                a = (o = n(426)) && o.__esModule ? o : {
+            n(445);
+            var o, i = n(411),
+                r = n(442),
+                l = (o = n(423)) && o.__esModule ? o : {
                     default: o
                 },
-                c = n(427),
-                d = n(65);
+                a = n(424),
+                c = n(65);
             const {
-                computed: m,
-                Component: p,
-                get: u
-            } = s.Ember, h = p.extend({
+                computed: d,
+                Component: m,
+                get: p
+            } = s.Ember, u = m.extend({
                 classNames: ["chroma-flyout"],
                 isShow: !1,
-                layout: n(449),
-                parentSkinOwned: m.alias("skin.ownership.owned"),
-                chromas: m.alias("skin.chromas"),
-                chromaBundlePurchaseDisabled: m.or("allChromasOwned", "purchaseDisabled"),
-                purchaseDisabled: m.or("platformSettings.disableAllPurchase", "platformSettings.disableShowcaseViewPurchase", "platformSettings.disableChromasPurchase"),
-                chromaCatalogs: m("chromas.@each.{owned,disabled}", "purchaseDisabled", (function() {
+                layout: n(446),
+                parentSkinOwned: d.alias("skin.ownership.owned"),
+                chromas: d.alias("skin.chromas"),
+                chromaBundlePurchaseDisabled: d.or("allChromasOwned", "purchaseDisabled"),
+                purchaseDisabled: d.or("platformSettings.disableAllPurchase", "platformSettings.disableShowcaseViewPurchase", "platformSettings.disableChromasPurchase"),
+                chromaCatalogs: d("chromas.@each.{owned,disabled}", "purchaseDisabled", (function() {
                     const e = this.get("chromas"),
                         t = this.get("storeCatalogManager"),
                         n = this.get("purchaseDisabled");
@@ -22722,14 +22424,14 @@
                         const o = Object.assign({
                             purchasable: !1
                         }, s);
-                        if (!u(s, "ownership.owned") && !n) {
+                        if (!p(s, "ownership.owned") && !n) {
                             const e = t.getSkinItemCatalog(s.id);
-                            e && e.isSinglePurchasable() && a.default.isChroma(e.singleCatalog) && (o.purchasable = !0)
+                            e && e.isSinglePurchasable() && l.default.isChroma(e.singleCatalog) && (o.purchasable = !0)
                         }
                         return s.disabled || e.push(o), e
                     }), [])), s
                 })),
-                chromaBundle: m("skin", "storeCatalogManager", (function() {
+                chromaBundle: d("skin", "storeCatalogManager", (function() {
                     let e = null;
                     const t = this.get("storeCatalogManager");
                     if (t) {
@@ -22738,7 +22440,7 @@
                     }
                     return e
                 })),
-                allChromasOwned: m("chromas", "chromas.@each.{owned,ownership}", (function() {
+                allChromasOwned: d("chromas", "chromas.@each.{owned,ownership}", (function() {
                     const e = this.get("chromas");
                     return !e || void 0 === e.find((e => !e.ownership || !e.ownership.owned))
                 })),
@@ -22758,26 +22460,26 @@
                     chromaBundleClicked: function() {
                         i.SFX.gridClick.play();
                         const e = this.get("chromaBundle");
-                        null !== e && u(this, "openPawModal.openPawModal")({
+                        null !== e && p(this, "openPawModal.openPawModal")({
                             item: e,
-                            inventoryType: d.PAW.INVENTORY_TYPES.BUNDLES,
-                            modalType: d.PAW.MODAL_TYPES.CHROMA_BUNDLE_MODAL
-                        }, this.get("telemetryEventSource"))
+                            inventoryType: c.PAW.INVENTORY_TYPES.BUNDLES,
+                            modalType: c.PAW.MODAL_TYPES.CHROMA_BUNDLE_MODAL
+                        })
                     },
                     chromaClicked: function(e) {
-                        i.SFX.gridClick.play(), u(this, "openPawModal.openPawModal")({
+                        i.SFX.gridClick.play(), p(this, "openPawModal.openPawModal")({
                             item: e,
-                            inventoryType: d.PAW.INVENTORY_TYPES.CHAMPION_SKIN,
-                            modalType: d.PAW.MODAL_TYPES.CHROMA_MODAL
-                        }, this.get("telemetryEventSource"))
+                            inventoryType: c.PAW.INVENTORY_TYPES.CHAMPION_SKIN,
+                            modalType: c.PAW.MODAL_TYPES.CHROMA_MODAL
+                        })
                     }
                 },
                 _getLargestValidBundle(e) {
                     const t = this.get("skin"),
                         n = e.filter((function(e) {
                             if (!e.bundled.items.find((e => e.itemId === t.id))) return !1;
-                            if (!(e.active && e.subInventoryType === c.STORE_SUB_INVENTORY_TYPE.CHROMA_BUNDLE)) return !1;
-                            return !e.bundled.items.find((e => e.inventoryType !== c.STORE_INVENTORY_TYPE.CHAMPION && e.inventoryType !== c.STORE_INVENTORY_TYPE.CHAMPION_SKIN))
+                            if (!(e.active && e.subInventoryType === a.STORE_SUB_INVENTORY_TYPE.CHROMA_BUNDLE)) return !1;
+                            return !e.bundled.items.find((e => e.inventoryType !== a.STORE_INVENTORY_TYPE.CHAMPION && e.inventoryType !== a.STORE_INVENTORY_TYPE.CHAMPION_SKIN))
                         }));
                     if (!n.length) return null;
                     return n.sort(((e, t) => t.bundled.items.length - e.bundled.items.length))[0]
@@ -22793,10 +22495,9 @@
                             mouseenter: this._handleMouseEnter
                         }, e.addEventListener("mouseenter", this._handleMouseEnter)
                     }))
-                },
-                telemetryEventSource: l.TELEMETRY_EVENT_SOURCE.SKIN_CHROMA_FLYOUT_VIEW
+                }
             });
-            e.exports = h
+            e.exports = u
         }, (e, t, n) => {
             "use strict";
             n.r(t)

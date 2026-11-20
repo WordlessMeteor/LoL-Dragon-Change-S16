@@ -1372,15 +1372,9 @@
                 onItemClick: function(e) {
                     const t = e.currentTarget.querySelector(".emote-item-icon"),
                         n = t.getAttribute("data-emoteid");
-                    if (t.classList.contains("unowned")) {
-                        const e = {
-                            id: "emote-panel-unowned-emote-click",
-                            value: n
-                        };
-                        s.Telemetry.sendCustomData("emote_panel_v2_event", e), this.openPAW({
-                            id: parseInt(n)
-                        })
-                    }
+                    t.classList.contains("unowned") && this.openPAW({
+                        id: parseInt(n)
+                    })
                 },
                 onItemRightClick: function(e) {
                     e.preventDefault();
@@ -1389,15 +1383,7 @@
                     if (t.classList.contains("unowned")) return;
                     r.EMOTE_SLOTS_AS_LIST.some((e => {
                         const t = this.get(`emotesLoadout.${e.name}.itemId`);
-                        if (!(t && -1 !== t || isNaN(n))) {
-                            o.EMOTE_SFX.emotesPlace.play(), this.set(`emotesLoadout.${e.name}.itemId`, n), this.set("dragActive", "inactive"), this.set("dragstart", "dragout");
-                            const t = {
-                                id: "emote-panel-emote-equip",
-                                value: n,
-                                emotePosition: e.name
-                            };
-                            return s.Telemetry.sendCustomData("emote_panel_v2_event", t), this.get("loadoutsService").saveEmotesLoadout(), !0
-                        }
+                        if (!(t && -1 !== t || isNaN(n))) return o.EMOTE_SFX.emotesPlace.play(), this.set(`emotesLoadout.${e.name}.itemId`, n), this.set("dragActive", "inactive"), this.set("dragstart", "dragout"), this.get("loadoutsService").saveEmotesLoadout(), !0
                     })) || o.EMOTE_SFX.emotesFull.play()
                 },
                 onItemMouseOver: function(e) {
@@ -1760,19 +1746,13 @@
                 drop(e) {
                     const t = parseInt(e.dataTransfer.getData("text/data")),
                         n = this.get("emotesService").getEmoteData(t),
-                        l = n ? n.itemId : o.EMPTY_EMOTE_SLOT_ITEM_ID,
-                        i = e.dataTransfer.getData("emoteLoadoutPosition"),
-                        r = this.$(e.target).attr("data-loadout-position");
-                    this.set("emotesLoadout." + r + ".itemId", l);
-                    const c = {
-                        id: "emote-panel-emote-equip",
-                        value: l,
-                        emotePosition: r
-                    };
-                    if (s.Telemetry.sendCustomData("emote_panel_v2_event", c), a.EMOTE_SFX.emotesPlace.play(), i) {
+                        s = n ? n.itemId : o.EMPTY_EMOTE_SLOT_ITEM_ID,
+                        l = e.dataTransfer.getData("emoteLoadoutPosition"),
+                        i = this.$(e.target).attr("data-loadout-position");
+                    if (this.set("emotesLoadout." + i + ".itemId", s), a.EMOTE_SFX.emotesPlace.play(), l) {
                         const t = this.$(e.target).attr("data-emoteid"),
                             n = t ? parseInt(t) : o.EMPTY_EMOTE_SLOT_ITEM_ID;
-                        this.set("emotesLoadout." + i + ".itemId", n)
+                        this.set("emotesLoadout." + l + ".itemId", n)
                     }
                     this.set("dragSource", "dragsourced"), this.get("loadoutsService").saveEmotesLoadout(), setTimeout((() => {
                         this.set("dragstart", "dragout"), this.get("emotesService").setIsDragging(!1)

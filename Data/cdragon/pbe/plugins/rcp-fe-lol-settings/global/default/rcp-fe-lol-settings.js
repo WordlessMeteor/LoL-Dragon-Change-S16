@@ -47,7 +47,6 @@
                         SharedComponents: e => e.get("rcp-fe-lol-shared-components"),
                         SharedPlayerBehaviorApps: e => e.get("rcp-fe-lol-shared-components").getApi_SharedPlayerBehaviorApps(),
                         sounds: i.default.init(s.default.audioPlugin),
-                        Telemetry: e => e.get("rcp-fe-common-libs").getTelemetry("1"),
                         templateHelper: e => e.get("rcp-fe-lol-uikit").getTemplateHelper(),
                         TooltipManager: e => e.get("rcp-fe-lol-uikit").getTooltipManager(),
                         WindowManager: e => e.get("rcp-fe-lol-uikit").getWindowManager()
@@ -1362,14 +1361,9 @@
                         this.set(e, t)
                     },
                     onSaveSetting: function(e, t) {},
-                    doSaveSetting: function(e, t, n, s, a) {
-                        const o = {};
-                        o[e] = t, this.get("persistenceService").saveDefaultSetting(o, n, s, a), l.Telemetry.invokeWithLowProbability((() => {
-                            l.Telemetry.sendCustomData("league-client-setting-changed", {
-                                setting_name: e,
-                                setting_value: t
-                            })
-                        }))
+                    doSaveSetting: function(e, t, n, l, s) {
+                        const a = {};
+                        a[e] = t, this.get("persistenceService").saveDefaultSetting(a, n, l, s)
                     },
                     _saveSetting: function(e, t) {
                         const {

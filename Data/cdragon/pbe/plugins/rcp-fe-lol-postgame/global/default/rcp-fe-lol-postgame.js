@@ -5615,7 +5615,6 @@
                     const t = e.championName,
                         n = e.championId,
                         a = {
-                            source: "eog",
                             items: (e.items || []).slice(),
                             name: this.get("tra").formatString("postgame_item_sets_import_name", {
                                 champion: t,

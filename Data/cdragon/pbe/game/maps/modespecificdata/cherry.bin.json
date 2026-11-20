@@ -19252,69 +19252,44 @@
         "objectPath": "Maps/ModeSpecificData/Augments/SurgeField/Augment_SurgeField",
         "mScriptName": "Augment_SurgeField",
         "mSpell": {
+            "flags": 4,
             "DataValues": [
                 {
                     "name": "Buff_Duration",
                     "values": [
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "Radius",
                     "values": [
-                        300.0,
-                        300.0,
-                        300.0,
-                        300.0,
-                        300.0,
-                        300.0,
-                        300.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MissileDamagePercent",
-                    "values": [
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "ZoneMovementSpeed",
-                    "values": [
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645
+                        360.0,
+                        360.0,
+                        360.0,
+                        360.0,
+                        360.0,
+                        360.0,
+                        360.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "ZoneAbilityHaste",
                     "values": [
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -19332,26 +19307,51 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "mSpellCalculations": {
+                "{2a606923}": {
+                    "mFormulaParts": [
+                        {
+                            "mNumber": 0.30000001192092896,
+                            "__type": "NumberCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                },
+                "{fb39b301}": {
+                    "mFormulaParts": [
+                        {
+                            "mNumber": 0.4000000059604645,
+                            "__type": "NumberCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Characters/Blitzcrank/HUD/Icons2D/BlitzcrankR.dds"
+            ],
             "cooldownTime": [
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0
+                75.0,
+                75.0,
+                75.0,
+                75.0,
+                75.0,
+                75.0,
+                75.0
             ],
             "Cooldown": {
                 "values": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    102.0,
+                    102.0,
+                    102.0,
+                    102.0,
+                    102.0,
+                    102.0,
+                    102.0
                 ],
-                "{0a3e0478}": 0.0,
+                "{0a3e0478}": 102.0,
                 "__type": "{0a0eddc9}"
             },
             "castRange": [
@@ -19379,6 +19379,21 @@
             "mResourceResolvers": [
                 "Maps/ModeSpecificData/Augments/SurgeField/Resources"
             ],
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Augment_SurgeField",
+                    "mFormat": "{b5df7ddb}",
+                    "mLocKeys": {
+                        "keyName": "Kiwi_SurgeField_Name",
+                        "keyTooltip": "Augment_SurgeField_Tooltip"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
             "__type": "SpellDataResource"
         },
         "__type": "SpellObject"
@@ -352626,6 +352641,27 @@
             "Tooltip": "Template_Buff_Tooltip",
             "TooltipSimple": "Template_Buff_TooltipSimple",
             "TooltipWithExtendedBehaviorHint": "Template_Buff_TooltipWithExtendedBehaviorHint"
+        },
+        "__type": "TooltipFormat"
+    },
+    "{b5df7ddb}": {
+        "mObjectName": "SummonerSpell",
+        "mInputLocKeysWithDefaults": {
+            "keyName": "",
+            "keySummary": "",
+            "keyTooltip": "",
+            "keyCooldown": "Spell_Default_Cooldown",
+            "keyNameUnformatted": "Spell_Default_NameUnformatted",
+            "keyHotkey": "Spell_Default_Hotkey",
+            "keyCost": "Spell_Cost_NoCost"
+        },
+        "mOutputStrings": {
+            "Description": "Template_Spell_Description",
+            "DisplayName": "Template_Spell_DisplayName",
+            "Tooltip": "Template_SummonerSpell_Tooltip",
+            "TooltipSimple": "Template_SummonerSpell_Tooltip",
+            "TooltipExtended": "Template_SummonerSpell_Tooltip",
+            "TooltipWithExtendedBehaviorHint": "Template_SummonerSpell_Tooltip"
         },
         "__type": "TooltipFormat"
     },

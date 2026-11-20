@@ -4447,7 +4447,8 @@
                 XP_STORE_CURRENCY_PURCHASE_VIEW: "client.xp.store.currency.purchase.view",
                 XP_STORE_CURRENCY_UPDATED: "client.xp.store.currency.updated",
                 XP_STORE_ITEM_PURCHASE: "client.xp.store.item.purchase",
-                XP_STORE_ITEM_VIEW: "client.xp.store.item.view"
+                XP_STORE_ITEM_VIEW: "client.xp.store.item.view",
+                XP_STORE_SHOPPEFRONT_LOAD: "client.xp.store.shoppefront.load"
             };
             let h = -1;
             class f {
@@ -4516,7 +4517,8 @@
                     [e.Operation.XP_STORE_CURRENCY_PURCHASE_VIEW]: 18e5,
                     [e.Operation.XP_STORE_CURRENCY_UPDATED]: 1e4,
                     [e.Operation.XP_STORE_ITEM_PURCHASE]: 3e4,
-                    [e.Operation.XP_STORE_ITEM_VIEW]: 3e4
+                    [e.Operation.XP_STORE_ITEM_VIEW]: 3e4,
+                    [e.Operation.XP_STORE_SHOPPEFRONT_LOAD]: 3e4
                 };
                 _dataBinding;
                 _datadogRumInit;

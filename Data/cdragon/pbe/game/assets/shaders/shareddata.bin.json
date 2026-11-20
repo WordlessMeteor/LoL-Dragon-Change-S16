@@ -36,6 +36,7 @@
                 "name": "sDepthTexture",
                 "IsCurrentFramebufferDepthRead": true,
                 "{ec5a120e}": 1,
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "DefaultValue": [
                     1.0,
                     1.0,
@@ -126,6 +127,7 @@
             },
             {
                 "name": "SPOT_PROJECTED_TEXTURE",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
@@ -135,10 +137,12 @@
             },
             {
                 "name": "PLANAR_REFLECTION_MAP",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
                 "name": "NAVMESH_MASK_TEXTURE",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "DefaultValue": [
                     1.0,
                     1.0,
@@ -171,6 +175,7 @@
             },
             {
                 "name": "NAV_GRID_TYPE_MASK",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
@@ -187,6 +192,7 @@
             {
                 "name": "ENV_EFFECTOR_TEXTURE",
                 "BindLocation": 0,
+                "SAMPLER": "{d5fd4053}",
                 "DefaultValue": [
                     0.5,
                     0.0,
@@ -221,7 +227,7 @@
                 "name": "TERRAIN_BLEND_VS",
                 "type": 5,
                 "BindLocation": 0,
-                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
+                "SAMPLER": "{9fb2626a}",
                 "__type": "X3DSharedTextureDef"
             },
             {
@@ -234,6 +240,7 @@
             },
             {
                 "name": "ENV_EFFECTOR_TEXTURE_PS",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "DefaultValue": [
                     0.5,
                     0.0,
@@ -244,6 +251,7 @@
             },
             {
                 "name": "WATER_DISTURBANCE_TEXTURE_PS",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "DefaultValue": [
                     0.5,
                     0.5,
@@ -269,6 +277,7 @@
             },
             {
                 "name": "GAMEPLAY_TEXTURE",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
@@ -279,6 +288,7 @@
             {
                 "name": "GAMEPLAY_TEXTURE_VS",
                 "BindLocation": 0,
+                "SAMPLER": "{d5fd4053}",
                 "__type": "X3DSharedTextureDef"
             },
             {
@@ -301,7 +311,9 @@
             "Shaders/SharedData/SharedSamplers/CharacterClamp",
             "Shaders/SharedData/SharedSamplers/EnvironmentClamp",
             "Shaders/SharedData/SharedSamplers/EnvironmentWrap",
-            "Shaders/SharedData/SharedSamplers/Clamp_Linear_Mip"
+            "Shaders/SharedData/SharedSamplers/Clamp_Linear_Mip",
+            "{d5fd4053}",
+            "{9fb2626a}"
         ],
         "dataBuffers": [
             {
@@ -452,6 +464,12 @@
         "mipLodBias": -1,
         "__type": "X3DSharedSamplerDef"
     },
+    "{9fb2626a}": {
+        "name": "Clamp_Nearest_Mip_VS",
+        "BindLocation": 0,
+        "mipFilter": 1,
+        "__type": "X3DSharedSamplerDef"
+    },
     "Shaders/SharedData/SharedSamplers/Clamp_No_Mip": {
         "name": "Clamp_No_Mip",
         "register": 15,
@@ -471,6 +489,12 @@
         "addressModeU": 0,
         "addressModeV": 0,
         "addressModeW": 0,
+        "mipFilter": 0,
+        "__type": "X3DSharedSamplerDef"
+    },
+    "{d5fd4053}": {
+        "name": "Clamp_No_Mip_VS",
+        "BindLocation": 0,
         "mipFilter": 0,
         "__type": "X3DSharedSamplerDef"
     },

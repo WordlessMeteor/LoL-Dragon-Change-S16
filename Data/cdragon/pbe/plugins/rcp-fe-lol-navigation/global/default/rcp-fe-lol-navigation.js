@@ -8673,7 +8673,7 @@
                 PURCHASED: "purchased"
             };
             t.MISSION_ATTRIBUTE_CLASSNAME = s;
-            const o = new Set(["NPE_REWARDS_LEVEL_UP", "NPE_REWARDS_DAILY_PLAY", "NPE_CHALLENGE_PROGRESS"]),
+            const o = new Set(["NPE_REWARDS_LEVEL_UP", "NPE_REWARDS_DAILY_PLAY", "NPE_CHALLENGE_PROGRESS", "TFT_WEEKLY"]),
                 r = function(e, t) {
                     return "function" == typeof e.get ? e.get(t) : e[t]
                 },

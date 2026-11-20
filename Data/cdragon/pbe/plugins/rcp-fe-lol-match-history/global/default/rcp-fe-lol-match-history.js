@@ -5432,8 +5432,7 @@
                             summoner: t
                         }),
                         maps: [this.get("mapId")],
-                        champions: [e.id],
-                        source: "match_history"
+                        champions: [e.id]
                     };
                     (0, s.getProvider)().getOptional("rcp-fe-lol-collections").then((e => e.getItemSetsApi().saveItemSet(a)), (e => s.logger.error("Provider getOptional failure", e)))
                 },

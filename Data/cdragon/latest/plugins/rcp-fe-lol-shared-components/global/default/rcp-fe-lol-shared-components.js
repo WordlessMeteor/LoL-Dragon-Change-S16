@@ -28129,6 +28129,7 @@
                     SHOW_SEARCH_BAR: !0,
                     SHOW_HELP_BUTTON: !0,
                     SHOW_CATEGORIES: !0,
+                    ENRICH_FROM_STORE_CATALOG: !0,
                     PURCHASE_TIMEOUT_MS: 1e4
                 },
                 JADE_BP: {
@@ -29362,7 +29363,8 @@
             var a = n(1),
                 s = n(774),
                 r = n(813),
-                i = a.Ember.Service.extend({
+                i = n(775),
+                o = a.Ember.Service.extend({
                     lootService: a.Ember.inject.service("shoppefront-loot"),
                     shoppefrontService: a.Ember.inject.service("shoppefront"),
                     init() {
@@ -29458,7 +29460,7 @@
                     },
                     async enrichGenericItem(e) {
                         const t = await this.getGameDataItem(e),
-                            n = await this.getStoreCatalogItem(t),
+                            n = this.shouldEnrichFromStoreCatalog() ? await this.getStoreCatalogItem(t) : null,
                             a = this.isItemTomacco(e),
                             s = this.getParentSkinId(t, a),
                             r = this.isItemChroma(s, a),
@@ -29502,6 +29504,9 @@
                         if (s) return s;
                         a.logger.error(`Catalog item with id ${e.id} not Found in game data`)
                     },
+                    shouldEnrichFromStoreCatalog() {
+                        return !!i.STORES[this.get("shoppefrontService.shoppefrontId")]?.ENRICH_FROM_STORE_CATALOG
+                    },
                     async getStoreCatalogItem(e) {
                         const t = e?.gipInventoryType,
                             n = e?.gipItemId;
@@ -29537,7 +29542,7 @@
                         })) : this.set("lootItem", {})
                     }
                 });
-            t.default = i
+            t.default = o
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -29647,15 +29652,16 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.default = void 0;
+            }), t.loadMeasuredShoppefrontIds = t.default = void 0;
             var a = n(1),
                 s = n(774),
                 r = n(775),
                 i = n(781);
             const {
                 RunMixin: o
-            } = a.EmberAddons.EmberLifeline;
-            var l = a.Ember.Service.extend(o, {
+            } = a.EmberAddons.EmberLifeline, l = new Set;
+            t.loadMeasuredShoppefrontIds = l;
+            var c = a.Ember.Service.extend(o, {
                 catalogItemEnricher: a.Ember.inject.service("shoppefront-catalog-item-enricher"),
                 noStoresFound: !1,
                 searchText: "",
@@ -29667,7 +29673,7 @@
                     this._super(...arguments), this.set("sentImpressionItems", new Set), this.db = a.dataBinding.bindTo(a.socket), this.addPurchaseLimitsObserver()
                 },
                 willDestroy() {
-                    this._super(...arguments), this.updateLastViewed(), this.db.unobserve(this.get("activeStorePathRegistered"), this)
+                    this._super(...arguments), this.updateLastViewed(), this.db.unobserve(this.get("activeStorePathRegistered"), this), this.isMeasuringLoad && (a.datadogRum.stopOperationWithAbort(a.datadogRum.XP_STORE_SHOPPEFRONT_LOAD), this.isMeasuringLoad = !1)
                 },
                 addCustomizations(e, t) {
                     this.get("customizations").set(e, t)
@@ -29763,11 +29769,13 @@
                     this.set("shoppefrontId", e), this.get("sentImpressionItems").clear();
                     const t = `${s.SHOPPEFRONT_PATHS.GET_ACTIVE_STORES_PATH}/${e}`;
                     if (this.get("activeStorePathRegistered") !== t) {
-                        const e = this.get("activeStorePathRegistered");
-                        e && this.db.unobserve(e, this), this.db.addObserver(t, this, (async function(e) {
-                            const t = e || [];
-                            if (t?.length > 0) {
-                                const e = t.map((async e => {
+                        const n = this.get("activeStorePathRegistered");
+                        n && this.db.unobserve(n, this), this.isMeasuringLoad && (a.datadogRum.stopOperationWithAbort(a.datadogRum.XP_STORE_SHOPPEFRONT_LOAD), this.isMeasuringLoad = !1), l.has(e) || (l.add(e), a.datadogRum.startOperation(a.datadogRum.XP_STORE_SHOPPEFRONT_LOAD, {
+                            shoppefrontId: e
+                        }), this.isMeasuringLoad = !0), this.db.addObserver(t, this, (async function(t) {
+                            const n = t || [];
+                            if (n?.length > 0) {
+                                const e = n.map((async e => {
                                     const t = this.get("catalogItemEnricher"),
                                         n = e.analytics?.modelRef || "",
                                         a = await t.enrichItems(e.catalogEntries.map((e => ({
@@ -29786,12 +29794,22 @@
                                         catalogEntry: r.get(e.catalogEntryId)
                                     })))
                                 }));
-                                await Promise.all(e), this.set("stores", a.Ember.A(t)), this.debounceTask("queueNextRefresh", t, 1e3)
+                                await Promise.all(e), this.set("stores", a.Ember.A(n)), this.debounceTask("queueNextRefresh", n, 1e3)
                             }
-                            this.set("noStoresFound", 0 === t?.length)
+                            this.set("noStoresFound", 0 === n?.length), this.isMeasuringLoad && (a.datadogRum.stopOperationWithOk(a.datadogRum.XP_STORE_SHOPPEFRONT_LOAD, {
+                                shoppefrontId: e,
+                                storeCount: n.length,
+                                catalogEntryCount: n.reduce(((e, t) => e + (t.catalogEntries?.length || 0)), 0)
+                            }), this.isMeasuringLoad = !1)
                         })), this.set("activeStorePathRegistered", t)
                     }
-                    await this.db.post(s.SHOPPEFRONT_PATHS.STORE_DIGESTS_PATH)
+                    try {
+                        await this.db.post(s.SHOPPEFRONT_PATHS.STORE_DIGESTS_PATH)
+                    } catch (t) {
+                        throw this.isMeasuringLoad && (a.datadogRum.stopOperationWithError(a.datadogRum.XP_STORE_SHOPPEFRONT_LOAD, t, {
+                            shoppefrontId: e
+                        }), this.isMeasuringLoad = !1), t
+                    }
                 },
                 updateLastViewed() {
                     this.debounceTask("_debouncedUpdateLastViewed", (new Date).toISOString(), 1e3)
@@ -29859,7 +29877,7 @@
                     }
                 }
             });
-            t.default = l
+            t.default = c
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {

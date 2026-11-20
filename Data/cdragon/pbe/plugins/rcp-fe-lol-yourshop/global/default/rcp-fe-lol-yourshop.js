@@ -64,7 +64,7 @@
                 };
             t.default = class {
                 constructor() {
-                    this.settingsBinding = (0, a.dataBinding)("/lol-settings"), this.telemetryBinding = (0, a.dataBinding)("telemetry"), this.isScreenRootBumped = !1, this.application = void 0, this.screenRoot = a.Viewport.main().getScreenRoot("rcp-fe-lol-yourshop"), this.initializeTra()
+                    this.settingsBinding = (0, a.dataBinding)("/lol-settings"), this.isScreenRootBumped = !1, this.application = void 0, this.screenRoot = a.Viewport.main().getScreenRoot("rcp-fe-lol-yourshop"), this.initializeTra()
                 }
                 initializeTra() {
                     this.tra = (0, a.getProvider)().get("rcp-fe-lol-l10n").tra().overlay("/fe/lol-l10n/trans.json").overlay("/fe/ember-libs/trans-icon-rarity.json").overlay("/fe/lol-yourshop/trans.json").overlay("/fe/lol-shared-components/trans-digital-goods-disclaimer.json")
@@ -96,19 +96,10 @@
                             lastViewedTimestamp: (new Date).toISOString()
                         },
                         schemaVersion: 1
-                    }), this.sendTelemetryEvent("yourshop_event", {
-                        id: "YOURSHOP_SHOW_EVENT"
                     })
                 }
                 hide() {
-                    this.application && (this.application.onRemove(), this.application = null), this.isScreenRootBumped && (this.screenRoot.release(), this.isScreenRootBumped = !1), this.sendTelemetryEvent("yourshop_event", {
-                        id: "YOURSHOP_HIDE_EVENT"
-                    })
-                }
-                sendTelemetryEvent(e, t) {
-                    t = Object.assign(t, {
-                        plugin: "rcp-fe-lol-yourshop"
-                    }), this.telemetryBinding.post(`/v1/events/${e}`, t)
+                    this.application && (this.application.onRemove(), this.application = null), this.isScreenRootBumped && (this.screenRoot.release(), this.isScreenRootBumped = !1)
                 }
             }
         }, e => {
@@ -317,7 +308,7 @@
                     default: o
                 };
             const s = n(17),
-                i = (0, a.emberDataBinding)({
+                l = (0, a.emberDataBinding)({
                     Ember: a.Ember,
                     websocket: a.socket,
                     logPrefix: "yourshop-service",
@@ -335,8 +326,8 @@
                         playerHasSetPermissions: "/lol-yourshop/v1/has-permissions"
                     }
                 }),
-                l = a.lolUikitPlugin.getModalManager();
-            e.exports = a.Ember.Service.extend(i, {
+                i = a.lolUikitPlugin.getModalManager();
+            e.exports = a.Ember.Service.extend(l, {
                 telemetry: a.Ember.inject.service(),
                 willDestroy() {
                     this._super(...arguments);
@@ -359,7 +350,7 @@
                     }))
                 },
                 showOfferDetails: function(e) {
-                    const t = l.add({
+                    const t = i.add({
                         type: "YourshopDetails",
                         data: {
                             yourshop: this,
@@ -368,7 +359,7 @@
                         ComponentFactory: a.componentFactory
                     });
                     t.domNode.addEventListener("closeButtonClick", (function() {
-                        l.remove(t)
+                        i.remove(t)
                     })), this.get("telemetry").sendOfferEvent({
                         action: "show_offer_details",
                         offer: e
@@ -407,7 +398,7 @@
                                         e(!1)
                                     }))
                                 };
-                            l.add({
+                            i.add({
                                 type: "DialogConfirm",
                                 data: {
                                     contents: t,
@@ -478,26 +469,26 @@
                 compiler: [7, ">= 4.0.0"],
                 main: function(e, t, n, o, a) {
                     var r, s = null != t ? t : e.nullContext || {},
-                        i = n.helperMissing,
-                        l = "function",
+                        l = n.helperMissing,
+                        i = "function",
                         c = e.escapeExpression;
-                    return '<div class="data-auth-selection-contents">\r\n  <div class="data-auth-modal-title">' + c(typeof(r = null != (r = n.title || (null != t ? t.title : t)) ? r : i) === l ? r.call(s, {
+                    return '<div class="data-auth-selection-contents">\r\n  <div class="data-auth-modal-title">' + c(typeof(r = null != (r = n.title || (null != t ? t.title : t)) ? r : l) === i ? r.call(s, {
                         name: "title",
                         hash: {},
                         data: a
-                    }) : r) + '</div>\r\n\r\n  <div class="data-auth-paragraph-one">\r\n    ' + c(typeof(r = null != (r = n.paragraphOne || (null != t ? t.paragraphOne : t)) ? r : i) === l ? r.call(s, {
+                    }) : r) + '</div>\r\n\r\n  <div class="data-auth-paragraph-one">\r\n    ' + c(typeof(r = null != (r = n.paragraphOne || (null != t ? t.paragraphOne : t)) ? r : l) === i ? r.call(s, {
                         name: "paragraphOne",
                         hash: {},
                         data: a
-                    }) : r) + '\r\n  </div>\r\n  <hr class="data-auth-modal-line" />\r\n  <div class="data-auth-more-info-section">\r\n    <img src="/fe/lol-static-assets/images/i-info-icon-in-rhombus.svg" />\r\n    <div class="data-auth-paragraph-two">\r\n      ' + c(typeof(r = null != (r = n.paragraphTwo || (null != t ? t.paragraphTwo : t)) ? r : i) === l ? r.call(s, {
+                    }) : r) + '\r\n  </div>\r\n  <hr class="data-auth-modal-line" />\r\n  <div class="data-auth-more-info-section">\r\n    <img src="/fe/lol-static-assets/images/i-info-icon-in-rhombus.svg" />\r\n    <div class="data-auth-paragraph-two">\r\n      ' + c(typeof(r = null != (r = n.paragraphTwo || (null != t ? t.paragraphTwo : t)) ? r : l) === i ? r.call(s, {
                         name: "paragraphTwo",
                         hash: {},
                         data: a
-                    }) : r) + "\r\n    </div>\r\n  </div>\r\n\r\n  <a href=" + c(typeof(r = null != (r = n.dataUsageLink || (null != t ? t.dataUsageLink : t)) ? r : i) === l ? r.call(s, {
+                    }) : r) + "\r\n    </div>\r\n  </div>\r\n\r\n  <a href=" + c(typeof(r = null != (r = n.dataUsageLink || (null != t ? t.dataUsageLink : t)) ? r : l) === i ? r.call(s, {
                         name: "dataUsageLink",
                         hash: {},
                         data: a
-                    }) : r) + ' class="data-auth-link" target="_blank">\r\n    ' + c(typeof(r = null != (r = n.dataUsageLinkText || (null != t ? t.dataUsageLinkText : t)) ? r : i) === l ? r.call(s, {
+                    }) : r) + ' class="data-auth-link" target="_blank">\r\n    ' + c(typeof(r = null != (r = n.dataUsageLinkText || (null != t ? t.dataUsageLinkText : t)) ? r : l) === i ? r.call(s, {
                         name: "dataUsageLinkText",
                         hash: {},
                         data: a
@@ -526,14 +517,14 @@
             t.__esModule = !0;
             var r = a(n(20)),
                 s = o(n(34)),
-                i = o(n(22)),
-                l = a(n(21)),
+                l = o(n(22)),
+                i = a(n(21)),
                 c = a(n(35)),
                 u = o(n(36));
 
             function p() {
                 var e = new r.HandlebarsEnvironment;
-                return l.extend(e, r), e.SafeString = s.default, e.Exception = i.default, e.Utils = l, e.escapeExpression = l.escapeExpression, e.VM = c, e.template = function(t) {
+                return i.extend(e, r), e.SafeString = s.default, e.Exception = l.default, e.Utils = i, e.escapeExpression = i.escapeExpression, e.VM = c, e.template = function(t) {
                     return c.template(t, e)
                 }, e
             }
@@ -551,8 +542,8 @@
             var a = n(21),
                 r = o(n(22)),
                 s = n(23),
-                i = n(31),
-                l = o(n(33));
+                l = n(31),
+                i = o(n(33));
             t.VERSION = "4.1.2";
             t.COMPILER_REVISION = 7;
             t.REVISION_CHANGES = {
@@ -567,12 +558,12 @@
             var c = "[object Object]";
 
             function u(e, t, n) {
-                this.helpers = e || {}, this.partials = t || {}, this.decorators = n || {}, s.registerDefaultHelpers(this), i.registerDefaultDecorators(this)
+                this.helpers = e || {}, this.partials = t || {}, this.decorators = n || {}, s.registerDefaultHelpers(this), l.registerDefaultDecorators(this)
             }
             u.prototype = {
                 constructor: u,
-                logger: l.default,
-                log: l.default.log,
+                logger: i.default,
+                log: i.default.log,
                 registerHelper: function(e, t) {
                     if (a.toString.call(e) === c) {
                         if (t) throw new r.default("Arg not supported with multiple helpers");
@@ -602,8 +593,8 @@
                     delete this.decorators[e]
                 }
             };
-            var p = l.default.log;
-            t.log = p, t.createFrame = a.createFrame, t.logger = l.default
+            var p = i.default.log;
+            t.log = p, t.createFrame = a.createFrame, t.logger = i.default
         }, (e, t) => {
             "use strict";
             t.__esModule = !0, t.extend = s, t.indexOf = function(e, t) {
@@ -650,16 +641,16 @@
                     for (var n in arguments[t]) Object.prototype.hasOwnProperty.call(arguments[t], n) && (e[n] = arguments[t][n]);
                 return e
             }
-            var i = Object.prototype.toString;
-            t.toString = i;
-            var l = function(e) {
+            var l = Object.prototype.toString;
+            t.toString = l;
+            var i = function(e) {
                 return "function" == typeof e
             };
-            l(/x/) && (t.isFunction = l = function(e) {
-                return "function" == typeof e && "[object Function]" === i.call(e)
-            }), t.isFunction = l;
+            i(/x/) && (t.isFunction = i = function(e) {
+                return "function" == typeof e && "[object Function]" === l.call(e)
+            }), t.isFunction = i;
             var c = Array.isArray || function(e) {
-                return !(!e || "object" != typeof e) && "[object Array]" === i.call(e)
+                return !(!e || "object" != typeof e) && "[object Array]" === l.call(e)
             };
             t.isArray = c
         }, (e, t) => {
@@ -672,7 +663,7 @@
                     r = void 0,
                     s = void 0;
                 a && (e += " - " + (r = a.start.line) + ":" + (s = a.start.column));
-                for (var i = Error.prototype.constructor.call(this, e), l = 0; l < n.length; l++) this[n[l]] = i[n[l]];
+                for (var l = Error.prototype.constructor.call(this, e), i = 0; i < n.length; i++) this[n[i]] = l[n[i]];
                 Error.captureStackTrace && Error.captureStackTrace(this, o);
                 try {
                     a && (this.lineNumber = r, Object.defineProperty ? Object.defineProperty(this, "column", {
@@ -691,13 +682,13 @@
                 }
             }
             t.__esModule = !0, t.registerDefaultHelpers = function(e) {
-                a.default(e), r.default(e), s.default(e), i.default(e), l.default(e), c.default(e), u.default(e)
+                a.default(e), r.default(e), s.default(e), l.default(e), i.default(e), c.default(e), u.default(e)
             };
             var a = o(n(24)),
                 r = o(n(25)),
                 s = o(n(26)),
-                i = o(n(27)),
-                l = o(n(28)),
+                l = o(n(27)),
+                i = o(n(28)),
                 c = o(n(29)),
                 u = o(n(30))
         }, (e, t, n) => {
@@ -734,24 +725,24 @@
                     var n = t.fn,
                         o = t.inverse,
                         r = 0,
-                        i = "",
-                        l = void 0,
+                        l = "",
+                        i = void 0,
                         c = void 0;
 
                     function u(t, o, r) {
-                        l && (l.key = t, l.index = o, l.first = 0 === o, l.last = !!r, c && (l.contextPath = c + t)), i += n(e[t], {
-                            data: l,
+                        i && (i.key = t, i.index = o, i.first = 0 === o, i.last = !!r, c && (i.contextPath = c + t)), l += n(e[t], {
+                            data: i,
                             blockParams: a.blockParams([e[t], t], [c + t, null])
                         })
                     }
-                    if (t.data && t.ids && (c = a.appendContextPath(t.data.contextPath, t.ids[0]) + "."), a.isFunction(e) && (e = e.call(this)), t.data && (l = a.createFrame(t.data)), e && "object" == typeof e)
+                    if (t.data && t.ids && (c = a.appendContextPath(t.data.contextPath, t.ids[0]) + "."), a.isFunction(e) && (e = e.call(this)), t.data && (i = a.createFrame(t.data)), e && "object" == typeof e)
                         if (a.isArray(e))
                             for (var p = e.length; r < p; r++) r in e && u(r, r, r === e.length - 1);
                         else {
                             var d = void 0;
                             for (var f in e) e.hasOwnProperty(f) && (void 0 !== d && u(d, r - 1), d = f, r++);
                             void 0 !== d && u(d, r - 1, !0)
-                        } return 0 === r && (i = o(this)), i
+                        } return 0 === r && (l = o(this)), l
                 }))
             }, e.exports = t.default
         }, (e, t, n) => {
@@ -832,8 +823,8 @@
                     return t.partials || (t.partials = {}, r = function(a, r) {
                         var s = n.partials;
                         n.partials = o.extend({}, s, t.partials);
-                        var i = e(a, r);
-                        return n.partials = s, i
+                        var l = e(a, r);
+                        return n.partials = s, l
                     }), t.partials[a.args[0]] = a.fn, r
                 }))
             }, e.exports = t.default
@@ -874,11 +865,11 @@
             "use strict";
             t.__esModule = !0, t.checkRevision = function(e) {
                 var t = e && e[0] || 1,
-                    n = i.COMPILER_REVISION;
+                    n = l.COMPILER_REVISION;
                 if (t !== n) {
                     if (t < n) {
-                        var o = i.REVISION_CHANGES[n],
-                            a = i.REVISION_CHANGES[t];
+                        var o = l.REVISION_CHANGES[n],
+                            a = l.REVISION_CHANGES[t];
                         throw new s.default("Template was precompiled with an older version of Handlebars than the current runtime. Please update your precompiler to a newer version (" + o + ") or downgrade your runtime to an older version (" + a + ").")
                     }
                     throw new s.default("Template was precompiled with a newer version of Handlebars than the current runtime. Please update your runtime to a newer version (" + e[1] + ").")
@@ -902,13 +893,13 @@
                     escapeExpression: a.escapeExpression,
                     invokePartial: function(n, o, r) {
                         r.hash && (o = a.extend({}, o, r.hash), r.ids && (r.ids[0] = !0)), n = t.VM.resolvePartial.call(this, n, o, r);
-                        var i = t.VM.invokePartial.call(this, n, o, r);
-                        if (null == i && t.compile && (r.partials[r.name] = t.compile(n, e.compilerOptions, t), i = r.partials[r.name](o, r)), null != i) {
+                        var l = t.VM.invokePartial.call(this, n, o, r);
+                        if (null == l && t.compile && (r.partials[r.name] = t.compile(n, e.compilerOptions, t), l = r.partials[r.name](o, r)), null != l) {
                             if (r.indent) {
-                                for (var l = i.split("\n"), c = 0, u = l.length; c < u && (l[c] || c + 1 !== u); c++) l[c] = r.indent + l[c];
-                                i = l.join("\n")
+                                for (var i = l.split("\n"), c = 0, u = i.length; c < u && (i[c] || c + 1 !== u); c++) i[c] = r.indent + i[c];
+                                l = i.join("\n")
                             }
-                            return i
+                            return l
                         }
                         throw new s.default("The partial " + r.name + " could not be compiled when running in runtime-only mode")
                     },
@@ -920,7 +911,7 @@
                     program: function(e, t, n, o, a) {
                         var r = this.programs[e],
                             s = this.fn(e);
-                        return t || a || o || n ? r = l(this, e, s, t, n, o, a) : r || (r = this.programs[e] = l(this, e, s)), r
+                        return t || a || o || n ? r = i(this, e, s, t, n, o, a) : r || (r = this.programs[e] = i(this, e, s)), r
                     },
                     data: function(e, t) {
                         for (; e && t--;) e = e._parent;
@@ -939,25 +930,25 @@
                     var a = arguments.length <= 1 || void 0 === arguments[1] ? {} : arguments[1],
                         r = a.data;
                     o._setup(a), !a.partial && e.useData && (r = function(e, t) {
-                        t && "root" in t || ((t = t ? i.createFrame(t) : {}).root = e);
+                        t && "root" in t || ((t = t ? l.createFrame(t) : {}).root = e);
                         return t
                     }(t, r));
                     var s = void 0,
-                        l = e.useBlockParams ? [] : void 0;
+                        i = e.useBlockParams ? [] : void 0;
 
                     function c(t) {
-                        return "" + e.main(n, t, n.helpers, n.partials, r, l, s)
+                        return "" + e.main(n, t, n.helpers, n.partials, r, i, s)
                     }
-                    return e.useDepths && (s = a.depths ? t != a.depths[0] ? [t].concat(a.depths) : a.depths : [t]), (c = u(e.main, c, n, a.depths || [], r, l))(t, a)
+                    return e.useDepths && (s = a.depths ? t != a.depths[0] ? [t].concat(a.depths) : a.depths : [t]), (c = u(e.main, c, n, a.depths || [], r, i))(t, a)
                 }
                 return o.isTop = !0, o._setup = function(o) {
                     o.partial ? (n.helpers = o.helpers, n.partials = o.partials, n.decorators = o.decorators) : (n.helpers = n.merge(o.helpers, t.helpers), e.usePartial && (n.partials = n.merge(o.partials, t.partials)), (e.usePartial || e.useDecorators) && (n.decorators = n.merge(o.decorators, t.decorators)))
                 }, o._child = function(t, o, a, r) {
                     if (e.useBlockParams && !a) throw new s.default("must pass block params");
                     if (e.useDepths && !r) throw new s.default("must pass parent depths");
-                    return l(n, t, e[t], o, 0, a, r)
+                    return i(n, t, e[t], o, 0, a, r)
                 }, o
-            }, t.wrapProgram = l, t.resolvePartial = function(e, t, n) {
+            }, t.wrapProgram = i, t.resolvePartial = function(e, t, n) {
                 e ? e.call || n.name || (n.name = e, e = n.partials[e]) : e = "@partial-block" === n.name ? n.data["partial-block"] : n.partials[n.name];
                 return e
             }, t.invokePartial = function(e, t, n) {
@@ -965,11 +956,11 @@
                 n.partial = !0, n.ids && (n.data.contextPath = n.ids[0] || n.data.contextPath);
                 var r = void 0;
                 n.fn && n.fn !== c && function() {
-                    n.data = i.createFrame(n.data);
+                    n.data = l.createFrame(n.data);
                     var e = n.fn;
                     r = n.data["partial-block"] = function(t) {
                         var n = arguments.length <= 1 || void 0 === arguments[1] ? {} : arguments[1];
-                        return n.data = i.createFrame(n.data), n.data["partial-block"] = o, e(t, n)
+                        return n.data = l.createFrame(n.data), n.data["partial-block"] = o, e(t, n)
                     }, e.partials && (n.partials = a.extend({}, n.partials, e.partials))
                 }();
                 void 0 === e && r && (e = r);
@@ -987,15 +978,15 @@
                 s = (o = r) && o.__esModule ? o : {
                     default: o
                 },
-                i = n(20);
+                l = n(20);
 
-            function l(e, t, n, o, a, r, s) {
-                function i(t) {
+            function i(e, t, n, o, a, r, s) {
+                function l(t) {
                     var a = arguments.length <= 1 || void 0 === arguments[1] ? {} : arguments[1],
-                        i = s;
-                    return !s || t == s[0] || t === e.nullContext && null === s[0] || (i = [t].concat(s)), n(e, t, e.helpers, e.partials, a.data || o, r && [a.blockParams].concat(r), i)
+                        l = s;
+                    return !s || t == s[0] || t === e.nullContext && null === s[0] || (l = [t].concat(s)), n(e, t, e.helpers, e.partials, a.data || o, r && [a.blockParams].concat(r), l)
                 }
-                return (i = u(n, i, e, s, o, r)).program = t, i.depth = s ? s.length : 0, i.blockParams = a || 0, i
+                return (l = u(n, l, e, s, o, r)).program = t, l.depth = s ? s.length : 0, l.blockParams = a || 0, l
             }
 
             function c() {
@@ -1004,8 +995,8 @@
 
             function u(e, t, n, o, r, s) {
                 if (e.decorator) {
-                    var i = {};
-                    t = e.decorator(t, i, n, o && o[0], r, s, o), a.extend(t, i)
+                    var l = {};
+                    t = e.decorator(t, l, n, o && o[0], r, s, o), a.extend(t, l)
                 }
                 return t
             }
@@ -1028,7 +1019,6 @@
                 GENERIC_CODE: "yourshop_generic_error_text"
             };
             e.exports = o.Ember.Service.extend({
-                telemetry: o.Ember.inject.service(),
                 currentErorCode: null,
                 currentErrorText: null,
                 checkForOffersAndErrors: function() {
@@ -1039,10 +1029,7 @@
                 handleOffersError: function(e) {
                     const t = this.getErrorCode(e && e.data && e.data.message);
                     let n;
-                    n = void 0 !== a[t] ? this.tra.get(a[t]) : this.tra.get(a.GENERIC_CODE), this.set("currentErrorText", n), this.set("currentErrorCode", t), this.get("telemetry").sendEvent({
-                        id: "get_show_offers_error",
-                        error: e
-                    })
+                    n = void 0 !== a[t] ? this.tra.get(a[t]) : this.tra.get(a.GENERIC_CODE), this.set("currentErrorText", n), this.set("currentErrorCode", t)
                 },
                 getErrorCode: function(e) {
                     try {
@@ -1057,9 +1044,6 @@
             var o = n(1);
             const a = (0, o.dataBinding)("/telemetry");
             e.exports = o.Ember.Service.extend({
-                sendEvent: function(e) {
-                    a.post("/v1/events/yourshop_event", e)
-                },
                 sendOfferEvent: function(e = {}) {
                     const {
                         offer: t
@@ -1272,8 +1256,8 @@
                             e.stopPropagation()
                         };
                         const s = o.Ember.Handlebars.Utils.escapeExpression(e[1]),
-                            i = o.Ember.Handlebars.Utils.escapeExpression(e[2]);
-                        return t.appendChild(document.createTextNode(s)), t.appendChild(n), t.appendChild(document.createTextNode(i)), ""
+                            l = o.Ember.Handlebars.Utils.escapeExpression(e[2]);
+                        return t.appendChild(document.createTextNode(s)), t.appendChild(n), t.appendChild(document.createTextNode(l)), ""
                     }
                     return this.get("tra.yourshop_details_purchase_confirmation_text")
                 })),

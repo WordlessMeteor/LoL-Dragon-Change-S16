@@ -83,54 +83,48 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i, o = n(1),
-                r = (i = n(5)) && i.__esModule ? i : {
-                    default: i
-                };
-            const s = o.UiKitPlugin.getModalManager();
-            var a = class {
+            var i = n(1);
+            const o = i.UiKitPlugin.getModalManager();
+            var r = class {
                 constructor(e) {
-                    this._isObservingJmxToggle = !1, this._rootElement = e, this._isSkinsPickerEnabled = !1, this._hasOngoingSession = !1, this._hasInitialised = !1
+                    this._isObservingJmxToggle = !1, this._rootElement = e, this._isSkinsPickerEnabled = !1, this._hasInitialised = !1
                 }
                 initialise() {
-                    this._dataBinding = o.DataBinding.bindTo((0, o.getProvider)().getSocket()), this._loginSessionCallback = this._handleLoginSession.bind(this, this._dataBinding), this._dataBinding.addObserver("/lol-login/v1/session", this._loginSessionCallback), this._emberApplicationModel = o.Ember.Object.create(), this._hasInitialised = !0
+                    this._dataBinding = i.DataBinding.bindTo((0, i.getProvider)().getSocket()), this._loginSessionCallback = this._handleLoginSession.bind(this, this._dataBinding), this._dataBinding.addObserver("/lol-login/v1/session", this._loginSessionCallback), this._emberApplicationModel = i.Ember.Object.create(), this._hasInitialised = !0
                 }
                 getEmberApplication() {
                     if (!this._isSkinsPickerEnabled) throw new Error("Skin Picker is not enabled");
                     return this._application || (this._application = this._createEmberApplication()), this._application
                 }
                 selectSkin(e, t, n) {
-                    if (!this._isSkinsPickerEnabled) return void o.logger.error("Skin Picker is not enabled");
+                    if (!this._isSkinsPickerEnabled) return void i.logger.error("Skin Picker is not enabled");
                     if ([e, t, n].some((e => "function" != typeof e))) throw new TypeError("selectSkin callbacks should be functions");
                     this._emberApplicationModel.set("onSkinSelected", e), this._emberApplicationModel.set("onDefault", t), this._emberApplicationModel.set("selectedSkinId", null), this._emberApplicationModel.set("onCloseButtonClicked", this._onCloseButtonClicked.bind(this));
-                    const i = o.ComponentFactory.getDOMNode(this.getEmberApplication());
+                    const r = i.ComponentFactory.getDOMNode(this.getEmberApplication());
                     this.getEmberApplication().renderPromise.then((() => {
-                        this._modal = s.add({
+                        this._modal = o.add({
                             type: "DialogConfirm",
                             data: {
-                                contents: i,
+                                contents: r,
                                 acceptText: this._tra.get("flyout_title_set_dynamic_background"),
                                 declineText: this._tra.get("mastery_page_save_label"),
                                 defaultTabIndex: 2
                             },
                             show: !0
                         }), this._modal.acceptPromise.then((() => {
-                            t(), this.removeCallbacks(), this._endTelemetrySession()
+                            t(), this.removeCallbacks()
                         }), (() => {
                             const t = this._emberApplicationModel.get("selectedSkinId"),
                                 n = this._emberApplicationModel.get("selectedAugments");
-                            Number.isInteger(t) && e(t, n), this.removeCallbacks(), this._endTelemetrySession()
-                        })), n(), this._hasOngoingSession = !0, r.default.startTelemetrySession()
+                            Number.isInteger(t) && e(t, n), this.removeCallbacks()
+                        })), n()
                     }))
                 }
                 removeCallbacks() {
                     this._emberApplicationModel && (this._emberApplicationModel.set("onSkinSelected", null), this._emberApplicationModel.set("onDefault", null), this._emberApplicationModel.set("selectedSkinId", null), this._emberApplicationModel.set("selectedAugments", null), this._emberApplicationModel.set("onCloseButtonClicked", null))
                 }
                 destroy() {
-                    this._hasInitialised || o.logger.warning("Trying to destroy an uninitialised API instance"), this._application && (this._application.onRemove(), delete this._application), this.removeCallbacks(), this._dataBinding.removeObserver("/lol-login/v1/session", this._loginSessionCallback)
-                }
-                _endTelemetrySession() {
-                    this._hasOngoingSession && r.default.endTelemetrySession(), this._hasOngoingSession = !1
+                    this._hasInitialised || i.logger.warning("Trying to destroy an uninitialised API instance"), this._application && (this._application.onRemove(), delete this._application), this.removeCallbacks(), this._dataBinding.removeObserver("/lol-login/v1/session", this._loginSessionCallback)
                 }
                 _handleLoginSession(e, t) {
                     const n = t && "SUCCEEDED" === t.state,
@@ -141,26 +135,26 @@
                     !1 !== e && (this._isSkinsPickerEnabled = !0, this._onPluginInit())
                 }
                 _onPluginInit() {
-                    this._tra = o.l10n.tra().overlay("/fe/lol-l10n/trans.json").overlay("/fe/ember-libs/trans-icon-rarity.json").overlay("/fe/lol-skins-picker/trans.json"), this._tra.ready().then((() => this._traService = (0, o.EmberL10n)(o.Ember, this._tra)), (() => o.logger.error("Could not initialize l10n!"))).then((() => {
+                    this._tra = i.l10n.tra().overlay("/fe/lol-l10n/trans.json").overlay("/fe/ember-libs/trans-icon-rarity.json").overlay("/fe/lol-skins-picker/trans.json"), this._tra.ready().then((() => this._traService = (0, i.EmberL10n)(i.Ember, this._tra)), (() => i.logger.error("Could not initialize l10n!"))).then((() => {
                         if (this._setEmberFactoryDefinitions(this._traService), this._rootElement) {
                             const e = this.getEmberApplication();
-                            this._rootElement.appendChild(o.ComponentFactory.getDOMNode(e))
+                            this._rootElement.appendChild(i.ComponentFactory.getDOMNode(e))
                         }
-                    }), (() => o.logger.error("Could not initialize Ember factory!")))
+                    }), (() => i.logger.error("Could not initialize Ember factory!")))
                 }
                 _setEmberFactoryDefinitions(e) {
-                    o.EmberApplicationFactory.setFactoryDefinition({
+                    i.EmberApplicationFactory.setFactoryDefinition({
                         name: "Flyout",
                         tra: e,
-                        ComponentFactory: o.ComponentFactory,
-                        FlyoutComponent: n(7).default,
-                        ControlPanelComponent: n(10).default,
-                        SkinsGridComponent: n(20).default,
-                        SkinsStoreService: n(32).default
+                        ComponentFactory: i.ComponentFactory,
+                        FlyoutComponent: n(5).default,
+                        ControlPanelComponent: n(8).default,
+                        SkinsGridComponent: n(18).default,
+                        SkinsStoreService: n(30).default
                     })
                 }
                 _createEmberApplication() {
-                    return o.ComponentFactory.create("Flyout", {
+                    return i.ComponentFactory.create("Flyout", {
                         model: this._emberApplicationModel
                     })
                 }
@@ -168,92 +162,10 @@
                     this.destroy()
                 }
                 _onCloseButtonClicked() {
-                    s.remove(this._modal, (() => this.removeCallbacks()))
+                    o.remove(this._modal, (() => this.removeCallbacks()))
                 }
             };
-            t.default = a
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var i = n(1),
-                o = n(6);
-            const r = `/v1/events/${o.TELEMETRY_EVENT_NAME}`;
-            var s = new class {
-                constructor() {
-                    this._dataBinding = (0, i.DataBinding)("/telemetry", (0, i.getProvider)().getSocket()), this._sessionStartTime = 0, this._userActivities = {}
-                }
-                startTelemetrySession() {
-                    this._sessionStartTime = Date.now(), this._userActivities = {}, this.sendEvent(o.TELEMETRY_EVENT_ID.SKINS_PICKER_SHOW, o.TELEMETRY_EVENT_SOURCE.SKINS_PICKER)
-                }
-                endTelemetrySession() {
-                    this._sessionStartTime > 0 ? this.sendEvent(o.TELEMETRY_EVENT_ID.SKINS_PICKER_HIDE, o.TELEMETRY_EVENT_SOURCE.SKINS_PICKER, this._userActivities) : i.logger.warning("Tried to end a telemetry session without having started it."), this._sessionStartTime = 0, this._userActivities = {}
-                }
-                sendEvent(e, t, n) {
-                    if (!o.TELEMETRY_EVENT_ID_SET.has(e)) return i.logger.warning(`Invalid telemetry event id ${e}`), Promise.reject(`Invalid telemetry event id ${e}`);
-                    if (!o.TELEMETRY_EVENT_SOURCE_SET.has(t)) return i.logger.warning(`Invalid telemetry event source ${t}`), Promise.reject(`Invalid telemetry event source ${t}`);
-                    const s = Object.assign({
-                        id: e,
-                        source: t,
-                        sessionId: this._sessionStartTime,
-                        sessionTimestamp: this._getSessionTimestamp()
-                    }, n);
-                    this._dataBinding.post(r, s)
-                }
-                addUserBehaviorCount(e, t) {
-                    Object.prototype.hasOwnProperty.call(this._userActivities, e) || (this._userActivities[e] = {
-                        count: 0
-                    });
-                    const n = this._userActivities[e];
-                    n.count++, null != t && (Object.prototype.hasOwnProperty.call(n, t) ? n[t]++ : n[t] = 1)
-                }
-                addUserBehaviorValue(e, t) {
-                    Object.prototype.hasOwnProperty.call(this._userActivities, e) || (this._userActivities[e] = []);
-                    const n = this._userActivities[e];
-                    n.push(t), n.length > o.MAX_VALUE_FOR_SAME_USER_BEHAVIOR && n.splice(0, n.length - o.MAX_VALUE_FOR_SAME_USER_BEHAVIOR)
-                }
-                setUserBehaviorValue(e, t) {
-                    this._userActivities[e] = t
-                }
-                _getSessionTimestamp() {
-                    return this._sessionStartTime ? Date.now() - this._sessionStartTime : 0
-                }
-            };
-            t.default = s
-        }, (e, t) => {
-            "use strict";
-
-            function n(e) {
-                const t = new Set;
-                for (const n in e) t.add(e[n]);
-                return t
-            }
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.USER_ACTIVITIES = t.TELEMETRY_EVENT_SOURCE_SET = t.TELEMETRY_EVENT_SOURCE = t.TELEMETRY_EVENT_NAME = t.TELEMETRY_EVENT_ID_SET = t.TELEMETRY_EVENT_ID = t.MAX_VALUE_FOR_SAME_USER_BEHAVIOR = void 0, t.getAllValues = n;
-            t.TELEMETRY_EVENT_NAME = "profile__skins_picker_event";
-            const i = {
-                SKINS_PICKER_SHOW: "skins_picker_show",
-                SKINS_PICKER_HIDE: "skins_picker_hide"
-            };
-            t.TELEMETRY_EVENT_ID = i;
-            const o = n(i);
-            t.TELEMETRY_EVENT_ID_SET = o;
-            const r = {
-                SKINS_PICKER: "skins_picker"
-            };
-            t.TELEMETRY_EVENT_SOURCE = r;
-            const s = n(r);
-            t.TELEMETRY_EVENT_SOURCE_SET = s;
-            t.USER_ACTIVITIES = {
-                PREVIEW_SKIN: "previewSkin",
-                SET_BACKGROUND_SKIN_ID: "setBackgroundSkinId",
-                RESET_BACKGROUND_SKIN: "resetBackgroundSkin",
-                SWITCH_GROUPING: "switchGrouping",
-                SWITCH_SORTING: "switchSorting"
-            };
-            t.MAX_VALUE_FOR_SAME_USER_BEHAVIOR = 20
+            t.default = r
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -274,8 +186,8 @@
             i.Ember.A;
             var u = r.extend({
                 classNames: ["flyout-component"],
-                layout: n(8),
-                style: n(9),
+                layout: n(6),
+                style: n(7),
                 skinsStore: c(),
                 groupingSortingState: o.alias("skinsStore.groupingSortingState"),
                 actions: {
@@ -310,37 +222,33 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i, o = n(1),
-                r = n(11),
-                s = (i = n(5)) && i.__esModule ? i : {
-                    default: i
-                },
-                a = n(6);
+            var i = n(1),
+                o = n(9);
             const {
-                computed: l,
-                Component: _,
-                observer: c,
-                get: u,
-                run: p,
-                set: d
-            } = o.Ember, g = o.Ember.A;
-            class E {}
-            var S = _.extend({
+                computed: r,
+                Component: s,
+                observer: a,
+                get: l,
+                run: _,
+                set: c
+            } = i.Ember, u = i.Ember.A;
+            class p {}
+            var d = s.extend({
                 classNames: ["control-panel-component"],
-                layout: n(18),
-                style: n(19),
-                availableGroupList: r.CONTROL_PANEL_GROUP_DROPDOWN_OPTIONS,
-                onNameFilterChange: c("nameFilter", (function() {
-                    const e = u(this, "nameFilter");
-                    u(this, "setNameFilter")(e)
+                layout: n(16),
+                style: n(17),
+                availableGroupList: o.CONTROL_PANEL_GROUP_DROPDOWN_OPTIONS,
+                onNameFilterChange: a("nameFilter", (function() {
+                    const e = l(this, "nameFilter");
+                    l(this, "setNameFilter")(e)
                 })),
                 init() {
-                    this._super(...arguments), d(this, "tracker", new E)
+                    this._super(...arguments), c(this, "tracker", new p)
                 },
-                availableGroups: l("groupingSortingState.grouping", (function() {
-                    const e = u(this, "groupingSortingState.grouping"),
-                        t = u(this, "tra");
-                    return Object.entries(u(this, "availableGroupList")).map((function(n) {
+                availableGroups: r("groupingSortingState.grouping", (function() {
+                    const e = l(this, "groupingSortingState.grouping"),
+                        t = l(this, "tra");
+                    return Object.entries(l(this, "availableGroupList")).map((function(n) {
                         const i = n[1];
                         return {
                             name: t.get(i.traKey),
@@ -349,11 +257,11 @@
                         }
                     }))
                 })),
-                availableSorts: l("groupingSortingState.grouping", "groupingSortingState.groupSortOrder", (function() {
-                    const e = u(this, "groupingSortingState.grouping"),
-                        t = u(this, "groupingSortingState.groupSortOrder");
+                availableSorts: r("groupingSortingState.grouping", "groupingSortingState.groupSortOrder", (function() {
+                    const e = l(this, "groupingSortingState.grouping"),
+                        t = l(this, "groupingSortingState.groupSortOrder");
                     if (e) {
-                        const n = u(this, "tra"),
+                        const n = l(this, "tra"),
                             i = e.sortOptions;
                         return Object.entries(i).map((e => {
                             const i = e[1];
@@ -364,27 +272,27 @@
                             }
                         }))
                     }
-                    return g()
+                    return u()
                 })),
                 actions: {
                     setSortOrder(e) {
-                        d(this, "sortOrder", e);
-                        const t = u(this, "groupingSortingState.grouping").sortOptions[e.name];
-                        d(this, "groupingSortingState.groupSortOrder", t.name);
-                        u(this, "setGroupingAndSorting")(t.groupingConfig, t.sortingConfig), s.default.addUserBehaviorCount(a.USER_ACTIVITIES.SWITCH_SORTING, e.name)
+                        c(this, "sortOrder", e);
+                        const t = l(this, "groupingSortingState.grouping").sortOptions[e.name];
+                        c(this, "groupingSortingState.groupSortOrder", t.name);
+                        l(this, "setGroupingAndSorting")(t.groupingConfig, t.sortingConfig)
                     },
                     setGroupingKey(e) {
-                        const t = u(this, "availableGroupList")[e];
+                        const t = l(this, "availableGroupList")[e];
                         t && this.send("setGrouping", t)
                     },
                     setGrouping(e) {
-                        if (u(this, "groupingSortingState.grouping") === e) return;
-                        d(this, "groupingSortingState.grouping", e);
+                        if (l(this, "groupingSortingState.grouping") === e) return;
+                        c(this, "groupingSortingState.grouping", e);
                         const t = e.sortOptions[e.defaultSortOptionName],
                             n = t.groupingConfig,
                             i = t.sortingConfig;
-                        d(this, "groupingSortingState.groupSortOrder", t.name), p.scheduleOnce("afterRender", (() => this._selectSortOption.bind(this)(i.name)));
-                        u(this, "setGroupingAndSorting")(n, i), s.default.addUserBehaviorCount(a.USER_ACTIVITIES.SWITCH_GROUPING, e.key)
+                        c(this, "groupingSortingState.groupSortOrder", t.name), _.scheduleOnce("afterRender", (() => this._selectSortOption.bind(this)(i.name)));
+                        l(this, "setGroupingAndSorting")(n, i)
                     }
                 },
                 _selectSortOption(e) {
@@ -392,14 +300,14 @@
                     t.length && t[0].setAttribute("selected", !0)
                 }
             });
-            t.default = S
+            t.default = d
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.TIER_GROUPING_TYPE = t.DEFAULT_CONTROL_PANEL_SORTING = t.DEFAULT_CONTROL_PANEL_DROPDOWN_OPTION = t.CONTROL_PANEL_GROUP_DROPDOWN_OPTIONS = t.COLLECTION_GRID_NO_SKIN_SORTING_CONFIG = t.COLLECTION_GRID_NO_SKIN_DROPDOWN_OPTION = void 0;
-            var i = n(12),
-                o = n(14);
+            var i = n(10),
+                o = n(12);
             const r = {
                     groupingByMyCollectionPurchaseDateDescending: {
                         name: "purchaseDateDescending",
@@ -544,9 +452,9 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.GROUPING_CONFIGS = void 0;
-            var i = n(13),
-                o = n(15),
-                r = n(17);
+            var i = n(11),
+                o = n(13),
+                r = n(15);
             const s = {
                 BY_ACQUIRE_YEAR_AND_RECENT_DATE: {
                     ownershipFilter: r.COLLECTION_GRID_OWNERSHIP_FILTERS.OWNED,
@@ -635,7 +543,7 @@
                 value: !0
             }), t.GROUPING_STRATEGIES = void 0, t.getFirstLetter = s, t.getOwnedSkinCount = r;
             var i = n(1),
-                o = n(14);
+                o = n(12);
 
             function r(e) {
                 return i.lodash.filter(e, "ownership.owned").length
@@ -784,7 +692,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.SORTING_CONFIGS = void 0;
-            var i = n(16);
+            var i = n(14);
             const o = {
                 CHAMPION_NAME_ASCENDING: {
                     groupSortingStrategy: i.GROUP_SORTING_STRATEGIES.CHAMPION_NAME_ASCENDING,
@@ -1220,85 +1128,83 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                o = n(21),
-                r = n(17),
-                s = p(n(24)),
-                a = p(n(26)),
-                l = p(n(28)),
-                _ = p(n(29)),
-                c = p(n(5)),
-                u = n(6);
+                o = n(19),
+                r = n(15),
+                s = c(n(22)),
+                a = c(n(24)),
+                l = c(n(26)),
+                _ = c(n(27));
 
-            function p(e) {
+            function c(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
             const {
-                Component: d,
-                get: g,
-                observer: E,
-                set: S,
+                Component: u,
+                get: p,
+                observer: d,
+                set: g,
                 inject: {
-                    service: I
+                    service: E
                 },
-                computed: N
-            } = i.Ember, h = "lol-collectibles-libs-virtual-list";
-            var T = d.extend({
+                computed: S
+            } = i.Ember, N = "lol-collectibles-libs-virtual-list";
+            var I = u.extend({
                 classNames: ["skins-grid-component"],
-                layout: n(30),
-                style: n(31),
-                skinsStore: I(),
-                skinAugments: N("skinsStore.skinAugmentInventory.[]", (function() {
+                layout: n(28),
+                style: n(29),
+                skinsStore: E(),
+                skinAugments: S("skinsStore.skinAugmentInventory.[]", (function() {
                     return (this.get("skinsStore.skinAugmentInventory") ?? []).reduce(((e, t) => (e[t.uuid] = t.owned, e)), {})
                 })),
-                onFilteredSkinsChange: E("filteredSkins", (function() {
-                    const e = g(this, "filteredSkins");
+                onFilteredSkinsChange: d("filteredSkins", (function() {
+                    const e = p(this, "filteredSkins");
                     this._refreshSkinsGroupingResult(e)
                 })),
-                onSkinsDataChange: E("groupsAndSkinsRows", (function() {
+                onSkinsDataChange: d("groupsAndSkinsRows", (function() {
                     this._refreshSkinRows()
                 })),
                 init() {
-                    this._super(...arguments), S(this, "rowRendererMap", new Map), S(this, "skinTileClickCallback", this._skinTileClickCallback.bind(this))
+                    this._super(...arguments), g(this, "rowRendererMap", new Map), g(this, "skinTileClickCallback", this._skinTileClickCallback.bind(this))
                 },
                 didInsertElement() {
-                    const e = g(this, "element");
+                    const e = p(this, "element");
                     if (e) {
                         const t = e.querySelector(".skins-grid-content");
-                        S(this, "skinGridScrollElement", t);
+                        g(this, "skinGridScrollElement", t);
                         const n = this._initialiseVirtualList(t);
-                        S(this, "virtualList", n), this._refreshSkinRows()
+                        g(this, "virtualList", n), this._refreshSkinRows()
                     }
                 },
                 willDestroy() {
-                    const e = g(this, "virtualList");
-                    e && (S(this, "virtualList", null), e.destroy())
+                    const e = p(this, "virtualList");
+                    e && (g(this, "virtualList", null), e.destroy())
                 },
                 _skinTileClickCallback(e, t) {
-                    const n = g(this, "selectedSkinId"),
-                        i = g(this, "virtualList");
+                    const n = p(this, "selectedSkinId"),
+                        i = p(this, "virtualList");
                     if (e && e !== n) {
-                        const n = g(this, "onSkinSelected");
-                        n && (n(e), S(this, "selectedSkinId", e), S(this, "selectedAugments", t), i.refresh()), c.default.addUserBehaviorValue(u.USER_ACTIVITIES.PREVIEW_SKIN, e), c.default.setUserBehaviorValue(u.USER_ACTIVITIES.SET_BACKGROUND_SKIN_ID, e)
+                        const n = p(this, "onSkinSelected");
+                        n && (n(e), g(this, "selectedSkinId", e), g(this, "selectedAugments", t), i.refresh())
                     }
                 },
                 _refreshSkinsGroupingResult(e) {
-                    const t = (0, o.generateRowDataFromGroupingResult)(e, g(this, "tra"));
-                    S(this, "groupsAndSkinsRows", t)
+                    const t = (0, o.generateRowDataFromGroupingResult)(e, p(this, "tra"));
+                    g(this, "groupsAndSkinsRows", t)
                 },
                 _refreshSkinRows() {
-                    const e = g(this, "groupsAndSkinsRows"),
-                        t = g(this, "virtualList");
+                    const e = p(this, "groupsAndSkinsRows"),
+                        t = p(this, "virtualList");
                     e && t && (this._scrollToTop(), t.data = e)
                 },
                 _scrollToTop() {
-                    const e = g(this, "skinGridScrollElement");
+                    const e = p(this, "skinGridScrollElement");
                     e && (e.scrollTop = 0)
                 },
                 _initialiseVirtualList(e) {
-                    let t = e.querySelector(h);
-                    return t || (t = document.createElement(h), t.container = e, t.containerHeightPx = r.COLLECTION_GRID_HEIGHT, t.createElement = this._createRow.bind(this), t.updateElement = this._updateRow.bind(this), t.resetElement = this._resetRow.bind(this), t.deleteElement = this._deleteRow.bind(this), e.appendChild(t)), t
+                    let t = e.querySelector(N);
+                    return t || (t = document.createElement(N), t.container = e, t.containerHeightPx = r.COLLECTION_GRID_HEIGHT, t.createElement = this._createRow.bind(this), t.updateElement = this._updateRow.bind(this), t.resetElement = this._resetRow.bind(this), t.deleteElement = this._deleteRow.bind(this), e.appendChild(t)), t
                 },
                 _createRow(e) {
                     return this._getRowRenderer(e.type).createRow(e)
@@ -1313,7 +1219,7 @@
                     this._getRowRenderer(t).deleteRow(e)
                 },
                 _getRowRenderer(e) {
-                    const t = g(this, "rowRendererMap");
+                    const t = p(this, "rowRendererMap");
                     if (!t.has(e)) {
                         const n = this._createRowRenderer(e);
                         t.set(e, n)
@@ -1335,16 +1241,16 @@
                     }
                 }
             });
-            t.default = T
+            t.default = I
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t._generateGroupTitleObject = p, t._generateGroupTitleRowData = d, t._generateSkinThumbnailRows = g, t.generateRowDataFromGroupingResult = I;
-            var i, o = n(14),
-                r = n(17),
-                s = n(22),
-                a = (i = n(23)) && i.__esModule ? i : {
+            }), t._generateGroupTitleObject = p, t._generateGroupTitleRowData = d, t._generateSkinThumbnailRows = g, t.generateRowDataFromGroupingResult = N;
+            var i, o = n(12),
+                r = n(15),
+                s = n(20),
+                a = (i = n(21)) && i.__esModule ? i : {
                     default: i
                 };
             const l = {
@@ -1384,7 +1290,7 @@
             function d(e, t, n) {
                 if (!e) throw new Error(`groupTitleObject is null for group node ${t}`);
                 let i = [];
-                if (t.subGroups.length > 0 ? t.subGroups.forEach((e => i = i.concat(I(e, n)))) : i = i.concat(g(t.filteredGroupMembers)), i.length > 0) {
+                if (t.subGroups.length > 0 ? t.subGroups.forEach((e => i = i.concat(N(e, n)))) : i = i.concat(g(t.filteredGroupMembers)), i.length > 0) {
                     const n = new a.default({
                         type: r.COLLECTION_GRID_ROW_TYPES.GROUP.id,
                         height: r.COLLECTION_GRID_ROW_TYPES.GROUP.height,
@@ -1413,12 +1319,12 @@
             function E(e, t) {
                 let n = [];
                 return e.subGroups.forEach((e => {
-                    n = n.concat(I(e, t))
+                    n = n.concat(N(e, t))
                 })), n
             }
             const S = new Map;
 
-            function I(e, t) {
+            function N(e, t) {
                 let n = [];
                 return e.groupNodes.forEach((e => {
                     if (e.filteredGroupMembers && e.filteredGroupMembers.length > 0) {
@@ -1657,7 +1563,7 @@
                 value: !0
             }), t.default = void 0;
             var i, o = n(1),
-                r = (i = n(25)) && i.__esModule ? i : {
+                r = (i = n(23)) && i.__esModule ? i : {
                     default: i
                 };
             const {
@@ -1719,8 +1625,8 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                o = n(17),
-                r = n(27);
+                o = n(15),
+                r = n(25);
             const {
                 get: s,
                 getWithDefault: a
@@ -1855,7 +1761,7 @@
                 value: !0
             }), t.default = void 0;
             n(1);
-            var i, o = (i = n(25)) && i.__esModule ? i : {
+            var i, o = (i = n(23)) && i.__esModule ? i : {
                 default: i
             };
             class r extends o.default {
@@ -1899,7 +1805,7 @@
                 value: !0
             }), t.default = void 0;
             n(1);
-            var i, o = (i = n(25)) && i.__esModule ? i : {
+            var i, o = (i = n(23)) && i.__esModule ? i : {
                 default: i
             };
             class r extends o.default {
@@ -1933,9 +1839,9 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1),
-                o = n(17),
-                r = n(33),
-                s = p(n(34)),
+                o = n(15),
+                r = n(31),
+                s = p(n(32)),
                 a = function(e, t) {
                     if (!t && e && e.__esModule) return e;
                     if (null === e || "object" != typeof e && "function" != typeof e) return {
@@ -1951,10 +1857,10 @@
                             s && (s.get || s.set) ? Object.defineProperty(i, r, s) : i[r] = e[r]
                         } i.default = e, n && n.set(e, i);
                     return i
-                }(n(35)),
-                l = p(n(37)),
-                _ = n(22),
-                c = n(11);
+                }(n(33)),
+                l = p(n(35)),
+                _ = n(20),
+                c = n(9);
 
             function u(e) {
                 if ("function" != typeof WeakMap) return null;
@@ -1975,43 +1881,37 @@
                 {
                     computed: E,
                     Service: S,
-                    isArray: I,
-                    get: N,
+                    isArray: N,
+                    get: I,
                     set: h,
-                    run: T
+                    run: O
                 } = i.Ember;
             var R = S.extend(s.default, {
                 isLoading: !0,
                 groupingSortingState: l.default.create(),
                 allStoreSkins: null,
                 isPotatoModeEnabled: E.bool("userExperience.data.potatoModeEnabled"),
-                disableAllTelemetry: E.bool("jmxSettings.SkinsViewer.DisableAllTelemetry"),
                 showLegacyInfo: E.not("isTencentRegion"),
                 currentRegion: E.alias("locale.region"),
                 isTencentRegion: E("currentRegion", (function() {
-                    const e = N(this, "currentRegion");
+                    const e = I(this, "currentRegion");
                     return !!e && e.toUpperCase() === o.TENCENT_REGION_NAME
                 })),
                 skinRarities: E("isTencentRegion", (function() {
-                    return N(this, "isTencentRegion") ? i.RarityManager.tencentSkinRarityInformationByTier : i.RarityManager.skinRarityInformationByTier
-                })),
-                platformSettings: E("disableAllTelemetry", (function() {
-                    return {
-                        disableAllTelemetry: N(this, "disableAllTelemetry")
-                    }
+                    return I(this, "isTencentRegion") ? i.RarityManager.tencentSkinRarityInformationByTier : i.RarityManager.skinRarityInformationByTier
                 })),
                 init() {
                     this._super(...arguments), this._initFilters(), this._setDefaultGrouping(), h(this, "purchasedSkins", g()), h(this, "champions", g()), this._initSkinSearch(), d.addObserver("/lol-game-data/assets/v1/champion-summary.json", this, this._updateChampionsData)
                 },
                 skinFilter: E("nameFilter", "unownedFilter", "groupingConfig", (function() {
                     const e = [],
-                        t = N(this, "nameFilter");
+                        t = I(this, "nameFilter");
                     if (t && t.length > 0) {
-                        const n = N(this, "skinSearchTermManager");
-                        e.push((0, a.getSkinNameFilter)(t, n, N(this, "currentLocale")))
+                        const n = I(this, "skinSearchTermManager");
+                        e.push((0, a.getSkinNameFilter)(t, n, I(this, "currentLocale")))
                     }
-                    const n = N(this, "groupingConfig"),
-                        i = N(this, "unownedFilter");
+                    const n = I(this, "groupingConfig"),
+                        i = I(this, "unownedFilter");
                     return i === o.COLLECTION_GRID_OWNERSHIP_FILTERS.OWNED ? e.push(o.OWNED_SKIN_FILTER) : i === o.COLLECTION_GRID_OWNERSHIP_FILTERS.UNOWNED && e.push(o.UNOWNED_SKIN_FILTER), n.filters && e.push(...n.filters), new a.SkinFilter(e)
                 })),
                 currentLocale: E("tra.metadata.locale.id", (function() {
@@ -2061,7 +1961,7 @@
                         championsById: n
                     };
                     if (this._dataInitReady(s)) {
-                        const s = N(this, "isTencentRegion");
+                        const s = I(this, "isTencentRegion");
                         o = e.map((0, r.addSkinStaticData)({
                             playerChampionInfo: t,
                             skinsGameData: i,
@@ -2074,7 +1974,7 @@
                 championsById: E("champions", "playerChampionMastery", (function() {
                     const e = this.get("champions"),
                         t = this.get("playerChampionMastery");
-                    if (I(e) && I(t)) {
+                    if (N(e) && N(t)) {
                         const n = i.lodash.keyBy(t, "championId");
                         return e.reduce(((e, t) => {
                             const o = i.lodash.assign({}, t, n[t.id]);
@@ -2085,7 +1985,7 @@
                 })),
                 skinsById: E("skinData", (function() {
                     const e = this.get("skinData");
-                    if (I(e)) {
+                    if (N(e)) {
                         return i.lodash.keyBy(e, "id")
                     }
                     return {}
@@ -2103,7 +2003,7 @@
                     return i.lodash.keyBy(e, "id")
                 })),
                 universeBySkinlineId: E("skinUniverseInfo", (function() {
-                    const e = N(this, "skinUniverseInfo"),
+                    const e = I(this, "skinUniverseInfo"),
                         t = new Map;
                     return e && e.forEach((e => {
                         e.skinSets && e.skinSets.forEach((n => {
@@ -2112,12 +2012,12 @@
                     })), t
                 })),
                 groupedSkins: E("groupingConfig", "skinData", "championsById", "skinLinesById", "currentLocale", (function() {
-                    const e = N(this, "groupingConfig"),
-                        t = N(this, "skinData"),
-                        n = N(this, "championsById"),
-                        i = N(this, "skinLinesById"),
-                        o = N(this, "currentLocale"),
-                        r = N(this, "universeBySkinlineId");
+                    const e = I(this, "groupingConfig"),
+                        t = I(this, "skinData"),
+                        n = I(this, "championsById"),
+                        i = I(this, "skinLinesById"),
+                        o = I(this, "currentLocale"),
+                        r = I(this, "universeBySkinlineId");
                     return (0, _.group)(e, t, {
                         championsById: n,
                         skinLinesById: i,
@@ -2126,16 +2026,16 @@
                     })
                 })),
                 sortedSkins: E("sortingConfig", "groupedSkins", (function() {
-                    const e = N(this, "sortingConfig"),
-                        t = N(this, "groupedSkins"),
-                        n = N(this, "currentLocale");
+                    const e = I(this, "sortingConfig"),
+                        t = I(this, "groupedSkins"),
+                        n = I(this, "currentLocale");
                     return (0, _.sortGroupResult)(e, t, {
                         locale: n
                     }), t
                 })),
                 filteredSkins: E("skinFilter", "sortedSkins", (function() {
-                    const e = N(this, "sortedSkins"),
-                        t = N(this, "skinFilter");
+                    const e = I(this, "sortedSkins"),
+                        t = I(this, "skinFilter");
                     return this._filterGroupingResult(e, t), i.Ember.Object.create(e)
                 })),
                 willDestroy() {
@@ -2166,7 +2066,7 @@
                     h(this, "groupingSortingState.grouping", e), h(this, "groupingSortingState.groupSortOrder", t.name), this._updateGroupingAndSortingConfig(t.groupingConfig, t.sortingConfig, n)
                 },
                 _updateGroupingAndSortingConfig(e, t, n = !0) {
-                    N(this, "groupingConfig") !== e && this._setUnownedFilter(e.ownershipFilter, n), h(this, "groupingConfig", e), h(this, "sortingConfig", t)
+                    I(this, "groupingConfig") !== e && this._setUnownedFilter(e.ownershipFilter, n), h(this, "groupingConfig", e), h(this, "sortingConfig", t)
                 },
                 _filterGroupingResult(e, t) {
                     e.groupNodes.forEach((e => {
@@ -2182,7 +2082,7 @@
                     this._updateControlPanelGroupingAndSortingOption(c.DEFAULT_CONTROL_PANEL_DROPDOWN_OPTION, c.DEFAULT_CONTROL_PANEL_SORTING, !1)
                 },
                 _initSkinSearch() {
-                    const e = N(this, "tra"),
+                    const e = I(this, "tra"),
                         t = new a.default;
                     t.tra = e, h(this, "skinSearch", t);
                     const n = new a.SkinSearchTermManager(e);
@@ -2219,7 +2119,7 @@
                 value: !0
             }), t.addUsageData = t.addSkinlineData = t.addSkinStaticData = t.addReleaseData = t.addPurchaseData = t.addProvenanceData = t.addOwnershipForBaseSkin = t.addMasteryData = t.addLootableProperty = void 0, t.getSkinRarity = c;
             var i = n(1),
-                o = n(17);
+                o = n(15);
             const {
                 set: r,
                 get: s
@@ -2291,7 +2191,6 @@
                 websocket: (0, i.getProvider)().getSocket(),
                 basePaths: {
                     login: "/lol-login",
-                    platformConfig: "/lol-platform-config",
                     collections: "/lol-collections",
                     champions: "/lol-champions",
                     gameData: "/lol-game-data",
@@ -2328,10 +2227,6 @@
                         api: "gameData",
                         path: "/assets/v1/universes.json"
                     },
-                    jmxSettings: {
-                        api: "platformConfig",
-                        path: "/v1/namespaces"
-                    },
                     locale: {
                         api: "riotclient",
                         path: "/region-locale"
@@ -2359,8 +2254,8 @@
                 }
             };
             var i = n(1),
-                o = n(17);
-            const r = n(36);
+                o = n(15);
+            const r = n(34);
             var s = class {
                 constructor() {
                     this._filter = "", this._locale = o.DEFAULT_LOCALE, this._ownership = o.COLLECTION_GRID_OWNERSHIP_FILTERS.ALL, this._hasChroma = !1, this._skinLineId = 0, this._useFuzzy = !1, this._showBaseSkin = !0
