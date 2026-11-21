@@ -91572,7 +91572,7 @@
                     "__type": "ValueFloat"
                 },
                 "CustomMaterial": {
-                    "Material": "{a7e1c7d8}",
+                    "Material": "Shared/Materials/Squid_Ink_Exploration/Squid_Ink_Chaos",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 5,
@@ -91978,6 +91978,157 @@
         "flags": 215,
         "objectPath": "Shared/Particles/Squid_Ink_Chaos",
         "__type": "VfxSystemDefinitionData"
+    },
+    "Shared/Materials/Squid_Ink_Exploration/Squid_Ink_Chaos": {
+        "name": "Shared/Materials/Squid_Ink_Exploration/Squid_Ink_Chaos",
+        "type": 2,
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Mask_Multiply",
+                "texturePath": "assets/shared/materials/void_test/corruption_diffuse_mask.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Edge_Texture",
+                "texturePath": "assets/shared/materials/cloudnoise.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/characters/srt_2024_void_pool/srt_2024_void_pool_ground_main_inverted.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Edge_Texture",
+                "texturePath": "assets/characters/srt_2024_void_pool/srt_void_pool_circle_base.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "EdgeLength",
+                "value": [
+                    0.4000000059604645,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MinAlpha",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollUV",
+                "value": [
+                    0.004000000189989805,
+                    0.0024999999441206455,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UVScale",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MaskControl",
+                "value": [
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "UVScale",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MinAlpha",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollUV",
+                "value": [
+                    0.20000000298023224,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EdgeLength",
+                "value": [
+                    0.4000000059604645,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "WORLD_SPACE_UV",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/Particles/Void_Pool_Test",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "writeMask": 15,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
     },
     "{2943bce0}": {
         "{d29457ab}": 2.0,

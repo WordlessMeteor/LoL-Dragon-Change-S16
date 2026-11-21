@@ -284,7 +284,7 @@
                     "__type": "ValueFloat"
                 },
                 "CustomMaterial": {
-                    "Material": "{2e48abf3}",
+                    "Material": "Characters/Taric/Skins/Skin18/Materials/HKG_MatCap_Dissolve_inst",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 0,
@@ -656,7 +656,7 @@
                     "__type": "ValueFloat"
                 },
                 "CustomMaterial": {
-                    "Material": "{2e48abf3}",
+                    "Material": "Characters/Taric/Skins/Skin18/Materials/HKG_MatCap_Dissolve_inst",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 0,
@@ -954,7 +954,7 @@
                     "__type": "ValueVector3"
                 },
                 "CustomMaterial": {
-                    "Material": "{2ff02af0}",
+                    "Material": "Characters/Taric/Skins/Skin18/Materials/HKG_MatCap_Translucent_Jelly_inst",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 0,
@@ -2808,7 +2808,7 @@
                     "__type": "VfxFlexShapeDefinitionData"
                 },
                 "CustomMaterial": {
-                    "Material": "{2e48abf3}",
+                    "Material": "Characters/Taric/Skins/Skin18/Materials/HKG_MatCap_Dissolve_inst",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 0,
@@ -3089,7 +3089,7 @@
                     "__type": "VfxFlexShapeDefinitionData"
                 },
                 "CustomMaterial": {
-                    "Material": "{2e48abf3}",
+                    "Material": "Characters/Taric/Skins/Skin18/Materials/HKG_MatCap_Dissolve_inst",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 0,
@@ -10463,7 +10463,7 @@
                     "__type": "VfxFlexShapeDefinitionData"
                 },
                 "CustomMaterial": {
-                    "Material": "{2ff02af0}",
+                    "Material": "Characters/Taric/Skins/Skin18/Materials/HKG_MatCap_Translucent_Jelly_inst",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 0,
@@ -17640,140 +17640,6 @@
         "objectPath": "Characters/Taric/Skins/Skin18/Particles/Taric_Skin18_Idle_Shoulder_02",
         "__type": "VfxSystemDefinitionData"
     },
-    "Characters/Taric/Skins/Skin18/Materials/HKG_MatCap_Dissolve_inst": {
-        "name": "Characters/Taric/Skins/Skin18/Materials/HKG_MatCap_Dissolve_inst",
-        "samplerValues": [
-            {
-                "TextureName": "MatCap_Tex",
-                "texturePath": "assets/characters/taric/skins/skin18/particles/taric_skin18_idle_petjelly01.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Dissolve_Texture",
-                "texturePath": "assets/shared/materials/lava_mask.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "modelHeight",
-                "value": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "rimOffset",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMax",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMin",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Dissolve_Biasa",
-                "value": [
-                    -1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_RIM",
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NUM_BLEND_WEIGHTS": "4"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/SkinnedMesh/HKG_MatCap_Dissolve",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "childTechniques": [
-            {
-                "name": "transition",
-                "parentName": "normal",
-                "shaderMacros": {
-                    "TRANSITION": "1"
-                },
-                "__type": "StaticMaterialChildTechniqueDef"
-            }
-        ],
-        "dynamicMaterial": {
-            "parameters": [
-                {
-                    "name": "Dissolve_Biasa",
-                    "Enabled": false,
-                    "driver": {
-                        "mBoolDriver": {
-                            "mScriptName": "TaricWSelfBuff",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
-                        },
-                        "mOnValue": -1.0,
-                        "mOffValue": 1.0,
-                        "mTurnOffTimeSec": 0.5,
-                        "__type": "LerpMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                }
-            ],
-            "__type": "DynamicMaterialDef"
-        },
-        "__type": "StaticMaterialDef"
-    },
     "Characters/Taric/Skins/Skin18/Materials/HKG_MatCap_Translucent_Jelly_inst": {
         "name": "Characters/Taric/Skins/Skin18/Materials/HKG_MatCap_Translucent_Jelly_inst",
         "samplerValues": [
@@ -18257,6 +18123,7 @@
         "DATA/Characters/Taric/Taric_Multi_Skins_Skin18_Skins_Skin19_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26.bin",
         "DATA/Characters/Taric/Taric.bin",
         "DATA/Characters/Taric/Animations/Skin18.bin",
-        "DATA/Characters/Taric/Taric_Multi_Skins_Root_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin3_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin"
+        "DATA/Characters/Taric/Taric_Multi_Skins_Root_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin3_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/Characters/Taric/Taric_Multi_Skins_Skin18_Skins_Skin20.bin"
     ]
 }

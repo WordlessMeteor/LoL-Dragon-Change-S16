@@ -5573,7 +5573,6 @@ lol-uikit-content-block[type=dialog-small].app-controls-exit-dialog {
 .info-hub-riot__error-description,
 .info-hub__button,
 .new-player-pack-component ul.store-item-contents-list,
-.persistent-header-opal__currency,
 .persistent-header-opal__disabled-title-text,
 .render-mode-carousel.new-player-pack-component .rewards-subtitle,
 lol-uikit-content-block.ac-mute-button__tooltip {
@@ -5656,7 +5655,6 @@ lol-uikit-content-block.ac-mute-button__tooltip {
 .new-player-pack-component .store-item-contents-header,
 .new-player-pack-component .total-cost,
 .new-player-pack-component ul.store-item-contents-list,
-.persistent-header-opal__currency,
 .persistent-header-opal__disabled-title-text,
 .render-mode-carousel.new-player-pack-component .discount,
 .render-mode-carousel.new-player-pack-component .rewards-subtitle,
@@ -6230,7 +6228,6 @@ lol-uikit-content-block.ac-mute-button__tooltip {
 .challenges-card .progress-label,
 .challenges-card .section-subtitle,
 .new-player-pack-component ul.store-item-contents-list,
-.persistent-header-opal__currency,
 .persistent-header-opal__disabled-title-text,
 .render-mode-carousel.new-player-pack-component .rewards-subtitle,
 lol-uikit-content-block.ac-mute-button__tooltip {
@@ -6267,7 +6264,6 @@ lol-uikit-content-block.ac-mute-button__tooltip {
 .challenges-card .progress-label:lang(ja-jp),
 .challenges-card .section-subtitle:lang(ja-jp),
 .new-player-pack-component ul.store-item-contents-list:lang(ja-jp),
-.persistent-header-opal__currency:lang(ja-jp),
 .persistent-header-opal__disabled-title-text:lang(ja-jp),
 .render-mode-carousel.new-player-pack-component .rewards-subtitle:lang(ja-jp),
 lol-uikit-content-block.ac-mute-button__tooltip:lang(ja-jp) {
@@ -6299,21 +6295,15 @@ lol-uikit-content-block.ac-mute-button__tooltip:lang(ja-jp) {
 .challenges-card .progress-label:lang(ar-ae),
 .challenges-card .section-subtitle:lang(ar-ae),
 .new-player-pack-component ul.store-item-contents-list:lang(ar-ae),
-.persistent-header-opal__currency:lang(ar-ae),
 .persistent-header-opal__disabled-title-text:lang(ar-ae),
 .render-mode-carousel.new-player-pack-component .rewards-subtitle:lang(ar-ae),
 lol-uikit-content-block.ac-mute-button__tooltip:lang(ar-ae) {
     letter-spacing: 0
 }
 
-.activity-center-skin-activity__selected-content-price,
-.persistent-header-opal__currency {
+.activity-center-skin-activity__selected-content-price {
     font-weight: 400;
     letter-spacing: .05em
-}
-
-.persistent-header-opal__currency {
-    font-weight: 550
 }
 
 #activity-center {
@@ -8645,6 +8635,10 @@ lol-uikit-content-block.ac-mute-button__tooltip {
     filter: brightness(1.5)
 }
 
+.persistent-header-opal--hovered .persistent-header-opal__title {
+    filter: brightness(1.3)
+}
+
 .persistent-header-opal--hovered .persistent-header-opal__content-container {
     background-image: linear-gradient(to right, rgba(27, 21, 5, .7), rgba(27, 21, 5, .85)), var(--opal-background-url)
 }
@@ -8662,13 +8656,8 @@ lol-uikit-content-block.ac-mute-button__tooltip {
     width: 100%
 }
 
-.persistent-header-opal__divider {
-    margin-top: 5px;
-    width: 80%
-}
-
 .persistent-header-opal__title {
-    color: #463714;
+    color: #c79f4f;
     font-size: 15px;
     text-align: center
 }
@@ -8678,41 +8667,10 @@ lol-uikit-content-block.ac-mute-button__tooltip {
     width: 160px
 }
 
-.persistent-header-opal__currency-container {
-    align-items: center;
-    display: flex;
-    gap: 2px;
-    position: absolute
-}
-
-.persistent-header-opal__currency-container--right {
-    right: 20px;
-    top: 10px
-}
-
 .persistent-header-opal__icon {
     height: 32px;
     margin-right: 3px;
     width: 32px
-}
-
-.persistent-header-opal__currency-icon {
-    height: 13px;
-    width: 17px
-}
-
-.persistent-header-opal__currency-icon--glow {
-    filter: drop-shadow(0 0 5px #d8a521) brightness(2.6)
-}
-
-.persistent-header-opal__currency {
-    color: #c79f4f;
-    font-size: 13px
-}
-
-.persistent-header-opal__currency--glow {
-    color: #faf0d1;
-    text-shadow: 0 0 5px #d8a521
 }
 
 .persistent-header-opal__disabled-title-container {
@@ -9195,6 +9153,12 @@ lol-uikit-content-block[type=tooltip-system].persistent-header-opal__disabled-to
 
 .activity-center-default-activity__footer--flex-end {
     justify-content: flex-end
+}
+
+.activity-center-default-activity__footer--voting {
+    bottom: 0;
+    inset-inline: 0;
+    position: absolute
 }
 
 .activity-center-eras-activity-root__content {

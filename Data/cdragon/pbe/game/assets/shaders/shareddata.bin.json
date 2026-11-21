@@ -1,6 +1,6 @@
 {
     "Shaders/SharedData": {
-        "{f2b7ce50}": 3,
+        "{f2b7ce50}": 4,
         "constantBuffers": [
             "Shaders/SharedData/ConstantBuffers/PerFrameVertex",
             "Shaders/SharedData/ConstantBuffers/PerFramePixel",
@@ -63,20 +63,24 @@
             {
                 "name": "TERRAIN_BLEND",
                 "type": 5,
+                "SAMPLER": "{f1e238dc}",
                 "__type": "X3DSharedTextureDef"
             },
             {
                 "name": "ENV_CUBE",
                 "type": 2,
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_Linear_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
                 "name": "MIP_COLORS_TEX",
+                "SAMPLER": "{85243a52}",
                 "__type": "X3DSharedTextureDef"
             },
             {
                 "name": "UI_PRIMARY_TEXTURE",
                 "frequency": 2,
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
@@ -90,12 +94,9 @@
                 "__type": "X3DSharedTextureDef"
             },
             {
-                "name": "ShadowMapBlurInput",
-                "__type": "X3DSharedTextureDef"
-            },
-            {
                 "name": "SHADOW_MAP_DEPTH_PCF",
                 "type": 3,
+                "SAMPLER": "{1ecbdf16}",
                 "DefaultValue": [
                     1.0,
                     1.0,
@@ -108,16 +109,13 @@
                 "name": "IBL_CUBEMAP",
                 "type": 7,
                 "{a1d375b5}": 2,
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_Linear_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
                 "name": "LIGHT_GRID_TEXTURE",
                 "type": 5,
                 "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
-                "__type": "X3DSharedTextureDef"
-            },
-            {
-                "name": "SSS_LUT",
                 "__type": "X3DSharedTextureDef"
             },
             {
@@ -154,6 +152,7 @@
             {
                 "name": "SPOT_SHADOW_MAP_DEPTH_PCF",
                 "type": 3,
+                "SAMPLER": "{1ecbdf16}",
                 "DefaultValue": [
                     1.0,
                     1.0,
@@ -165,6 +164,7 @@
             {
                 "name": "POINT_SHADOW_MAP_DEPTH_PCF",
                 "type": 4,
+                "SAMPLER": "{1ecbdf16}",
                 "DefaultValue": [
                     1.0,
                     1.0,
@@ -294,6 +294,19 @@
             {
                 "name": "PROJECTED_DECAL_RECEIVER_DEPTH",
                 "{ec5a120e}": 1,
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
+                "DefaultValue": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "X3DSharedTextureDef"
+            },
+            {
+                "name": "sVfxCustomDepthTexture",
+                "{ec5a120e}": 1,
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "DefaultValue": [
                     1.0,
                     1.0,
@@ -313,7 +326,10 @@
             "Shaders/SharedData/SharedSamplers/EnvironmentWrap",
             "Shaders/SharedData/SharedSamplers/Clamp_Linear_Mip",
             "{d5fd4053}",
-            "{9fb2626a}"
+            "{9fb2626a}",
+            "{1ecbdf16}",
+            "{f1e238dc}",
+            "{85243a52}"
         ],
         "dataBuffers": [
             {
@@ -443,6 +459,17 @@
         "name": "Clamp_Linear_Mip",
         "__type": "X3DSharedSamplerDef"
     },
+    "{1ecbdf16}": {
+        "name": "Shadow_PCF_Border",
+        "type": 1,
+        "addressModeU": 3,
+        "addressModeV": 3,
+        "addressModeW": 3,
+        "mipFilter": 0,
+        "CompareOp": 3,
+        "{625b5b86}": 2,
+        "__type": "X3DSharedSamplerDef"
+    },
     "Shaders/SharedData/SharedSamplers/EnvironmentWrap": {
         "name": "EnvironmentWrap",
         "addressModeU": 0,
@@ -462,6 +489,13 @@
         "addressModeV": 2,
         "addressModeW": 2,
         "mipLodBias": -1,
+        "__type": "X3DSharedSamplerDef"
+    },
+    "{85243a52}": {
+        "name": "Wrap_Linear_Mip",
+        "addressModeU": 0,
+        "addressModeV": 0,
+        "addressModeW": 0,
         "__type": "X3DSharedSamplerDef"
     },
     "{9fb2626a}": {
@@ -496,6 +530,11 @@
         "name": "Clamp_No_Mip_VS",
         "BindLocation": 0,
         "mipFilter": 0,
+        "__type": "X3DSharedSamplerDef"
+    },
+    "{f1e238dc}": {
+        "name": "Clamp_Nearest_Mip",
+        "mipFilter": 1,
         "__type": "X3DSharedSamplerDef"
     },
     "Shaders/SharedData/ConstantBuffers/EnvEffectorVertex": {
@@ -1370,6 +1409,11 @@
                 "name": "USE_INSTANCE_DRAW",
                 "type": 4,
                 "{a1d375b5}": 2,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "VFX_CUSTOM_DEPTH_CULLING_ENABLED",
+                "type": 4,
                 "__type": "X3DSharedConstantDef"
             }
         ],

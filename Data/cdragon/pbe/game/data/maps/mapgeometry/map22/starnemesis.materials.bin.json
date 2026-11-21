@@ -5753,6 +5753,412 @@
         "objectPath": "Maps/Particles/TFT/Set16/StarNemesis/ArenaSkin_StarNemesis_Victory_GlowStar_Red01",
         "__type": "VfxSystemDefinitionData"
     },
+    "Maps/Particles/TFT/Set16/StarNemesis/Materials/StarNemesis_Glitch_Inst": {
+        "name": "Maps/Particles/TFT/Set16/StarNemesis/Materials/StarNemesis_Glitch_Inst",
+        "samplerValues": [
+            {
+                "TextureName": "Noise_Mask_Texture",
+                "texturePath": "assets/maps/kitpieces/tft/villainmeetingroom/textures/villainmeetingroom_night_distortionswirl.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Noise_Gradient_Texture",
+                "texturePath": "assets/shared/materials/corruptgradient.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "DistortionA_Texture",
+                "texturePath": "assets/shared/materials/noise_clouds_01.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "DistortionB_Texture",
+                "texturePath": "assets/maps/kitpieces/tft/villainmeetingroom/textures/villainmeetingroom_night_distortionswirl.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Alpha_Scroll_Texture",
+                "texturePath": "assets/characters/petcreepycat/themes/base/petcreepycat_base_variant5_tx_mask2.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/characters/petcreepycat/themes/base/petcreepycat_base_variant5_tx_mask2.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Effects_Mask",
+                "texturePath": "assets/maps/particles/tft/set16_starnemesis/tft_starnemesis_vfx_008.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Glitch_Speed",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Glitch_Strength",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Pixelation_Size",
+                "value": [
+                    64.0,
+                    32.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Noise_Mask_Tiling",
+                "value": [
+                    2.0,
+                    3.0,
+                    0.0,
+                    -0.009999999776482582
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scanline_Size",
+                "value": [
+                    0.5,
+                    0.75,
+                    20.0,
+                    12.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Noise_Mask_Strength",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DistortionA_Strength",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DistortionA_Tiling",
+                "value": [
+                    0.20000000298023224,
+                    0.30000001192092896,
+                    -0.0010000000474974513,
+                    0.0020000000949949026
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DistortionB_Strength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DistortionB_Tiling",
+                "value": [
+                    0.5,
+                    0.5,
+                    -0.019999999552965164,
+                    0.05000000074505806
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Gradient_Shift",
+                "value": [
+                    -0.8999999761581421,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Contrast",
+                "value": [
+                    0.30000001192092896,
+                    0.6000000238418579,
+                    -0.0020000000949949026,
+                    0.004999999888241291
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Scroll_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    -0.009999999776482582,
+                    -0.014999999664723873
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Gradient_Scroll_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DistortionA_UV_Strength",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DistortionB_UV_Strength",
+                "value": [
+                    0.30000001192092896,
+                    0.20000000298023224,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_DistortionUV_Strength",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Distortion_Strength",
+                "value": [
+                    3.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Base_Diffuse_Tiling",
+                "value": [
+                    1.0,
+                    2.0,
+                    -0.004999999888241291,
+                    0.004999999888241291
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Pixelate_Frequency",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Effects_Mask_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Remap_Param_U",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Remap_Param_V",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISABLE_PIXELATE",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISABLE_GLITCH",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISABLE_UV_DISTORTION",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISABLE_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_SS_UVS",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISABLE_UV_DISTORTION_ALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISABLE_DIFFUSE_BLEND",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISTORT_BASE_ONLY",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_SS_UVS_PIXELATE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_SS_UVS_GLITCH",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_SS_UVS_FX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/TFT_Screenspace_Glitch",
+                        "stencilEnable": true,
+                        "blendEnable": true,
+                        "stencilCompareFunc": 7,
+                        "StencilReferenceId": "{6ac73574}",
+                        "stencilMask": 255,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
     "Maps/Particles/TFT/Set16/StarNemesis/ArenaSkin_StarNemesis_Victory_GlowStar_Green01": {
         "complexEmitterDefinitionData": [
             {
@@ -53030,7 +53436,7 @@
                     "__type": "IntegratedValueVector3"
                 },
                 "CustomMaterial": {
-                    "Material": "{10b0bd67}",
+                    "Material": "Maps/Particles/TFT/Set16/StarNemesis/Materials/StarNemesis_Glitch_Inst",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 5,

@@ -37,6 +37,328 @@
         "objectPath": "Characters/IreliaBlades/Skins/Skin6",
         "__type": "SkinCharacterDataProperties"
     },
+    "Characters/IreliaBlades/Skins/Skin6/Materials/Irelia_Skin06_bladewall_inst": {
+        "name": "Characters/IreliaBlades/Skins/Skin6/Materials/Irelia_Skin06_bladewall_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/characters/irelia/skins/skin06/irelia_skin06_blades_tx_cm.tex",
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask_Texture",
+                "texturePath": "assets/characters/irelia/skins/base/particles/defaultcoloroverlifetime.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Color1",
+                "value": [
+                    0.7058823704719543,
+                    0.6666666865348816,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel1_Bias",
+                "value": [
+                    -1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel1_Size",
+                "value": [
+                    3.1608023643493652,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Num_Steps",
+                "value": [
+                    10.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "stepValue",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Color",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ENV_Map_Contribution",
+                "value": [
+                    2.075000047683716,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Color2",
+                "value": [
+                    0.21960784494876862,
+                    0.33725491166114807,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ENV_Fresnel_Masking",
+                "value": [
+                    19.840845108032227,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Reflection_Tint",
+                "value": [
+                    0.9882352948188782,
+                    1.0,
+                    0.7254902124404907,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel2_Size",
+                "value": [
+                    0.8809449672698975,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel2_Bias",
+                "value": [
+                    -0.5400000214576721,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Bias",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_FRESNEL_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Glow_TextureSteps",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Fresnel_Color1",
+                    "driver": {
+                        "mBoolDriver": {
+                            "__type": "IsEnemyDynamicMaterialBoolDriver"
+                        },
+                        "mColorOn": [
+                            1.0,
+                            0.6352941393852234,
+                            0.0,
+                            1.0
+                        ],
+                        "mColorOff": [
+                            1.0,
+                            0.8899977207183838,
+                            0.7600061297416687,
+                            0.6000000238418579
+                        ],
+                        "__type": "ColorChooserMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Bloom_Color",
+                    "driver": {
+                        "mBoolDriver": {
+                            "__type": "IsEnemyDynamicMaterialBoolDriver"
+                        },
+                        "mColorOn": [
+                            1.0,
+                            0.9411764740943909,
+                            0.48627451062202454,
+                            1.0
+                        ],
+                        "mColorOff": [
+                            0.6200045943260193,
+                            0.4000000059604645,
+                            0.25999847054481506,
+                            1.0
+                        ],
+                        "__type": "ColorChooserMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Fresnel_Color2",
+                    "driver": {
+                        "mBoolDriver": {
+                            "__type": "IsEnemyDynamicMaterialBoolDriver"
+                        },
+                        "mColorOn": [
+                            1.0,
+                            0.95686274766922,
+                            0.6313725709915161,
+                            1.0
+                        ],
+                        "mColorOff": [
+                            1.0,
+                            0.6352941393852234,
+                            0.2705882489681244,
+                            0.6000000238418579
+                        ],
+                        "__type": "ColorChooserMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "textures": [
+                {
+                    "name": "Diffuse_Texture",
+                    "options": [
+                        {
+                            "driver": {
+                                "__type": "IsEnemyDynamicMaterialBoolDriver"
+                            },
+                            "TextureName": "assets/characters/irelia/skins/skin05/irelia_skin05_blades_tx_cm.tex",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        }
+                    ],
+                    "__type": "DynamicMaterialTextureSwapDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
     "Characters/IreliaBlades/Skins/Skin6/Resources": {
         "resourceMap": {
             "Irelia_emote_death_sound": "Characters/Irelia/Skins/Skin0/Particles/Irelia_Base_emote_death_sound",
@@ -109,7 +431,6 @@
         "__type": "ResourceResolver"
     },
     "__linked": [
-        "DATA/Characters/IreliaBlades/IreliaBlades_Multi_Skins_Skin6_Skins_Skin73.bin",
         "DATA/Characters/IreliaBlades/IreliaBlades.bin",
         "DATA/Characters/IreliaBlades/Animations/Skin0.bin"
     ]

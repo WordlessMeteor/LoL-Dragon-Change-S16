@@ -76,13 +76,15 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.UI_AUDIO_SFX_PATH = t.TFT_MAX_BENCH_SLOTS = t.SUBTEAM_PLACEMENT_LONG_TRA_KEY = t.STAT_SWITCHER_STATS = t.STATIC_ASSETS_PATH = t.SFX_SUB_CHANNEL_UI_NAME = t.REWARD_CELEBRATION_NAME = t.POSTGAME_PLAYER_HONOR_NAME = t.POSTGAME_EMBER_APP_NAME = t.PLAYER_STATUS_TO_ORDER_MAP = t.PARTY_STATUS = t.MODAL_CATEGORY = t.LOTTIE_RADIAL_UNITS = t.JADE_POSTGAME_GAME_MODES = t.HONOR_VIDEO_PATH = t.HONOR_DISABLED_GAME_MODES = t.HONOR_CATEGORY_DATA = t.HONOR_ASSET_PATH = t.GAME_MODES_WITH_SUBTEAMS = t.FULL_LIST_ERROR = t.DEFAULT_CHERRY_TEAM_SIZE = t.CONVERSATION_TYPE_POSTGAME = t.CHERRY_PLACEMENT_TRA_KEY = void 0;
+            }), t.UI_AUDIO_SFX_PATH = t.TFT_MAX_BENCH_SLOTS = t.SUBTEAM_PLACEMENT_LONG_TRA_KEY = t.STAT_SWITCHER_STATS = t.STATIC_ASSETS_PATH = t.SFX_SUB_CHANNEL_UI_NAME = t.REWARD_CELEBRATION_NAME = t.POSTGAME_PLAYER_HONOR_NAME = t.POSTGAME_EMBER_APP_NAME = t.PLAYER_STATUS_TO_ORDER_MAP = t.PARTY_STATUS = t.MODES_WITHOUT_RUNES = t.MODAL_CATEGORY = t.LOTTIE_RADIAL_UNITS = t.JADE_POSTGAME_GAME_MODES = t.HONOR_VIDEO_PATH = t.HONOR_DISABLED_GAME_MODES = t.HONOR_CATEGORY_DATA = t.HONOR_ASSET_PATH = t.GAME_MODES_WITH_SUBTEAMS = t.FULL_LIST_ERROR = t.DEFAULT_CHERRY_TEAM_SIZE = t.CONVERSATION_TYPE_POSTGAME = t.CHERRY_PLACEMENT_TRA_KEY = void 0;
             var s = n(4);
             t.POSTGAME_EMBER_APP_NAME = "rcp-fe-lol-postgame-ember";
             const a = [s.GAME_MODES.CHERRY, s.GAME_MODES.STRAWBERRY, s.GAME_MODES.TFT, s.GAME_MODES.PROMETHIUM, s.GAME_MODES.CUSTOM, s.GAME_MODES.TUTORIAL, s.GAME_MODES.PRACTICETOOL];
             t.HONOR_DISABLED_GAME_MODES = a;
             const o = [s.GAME_MODES.JADE, s.GAME_MODES.CRAB];
             t.JADE_POSTGAME_GAME_MODES = o;
+            const l = [s.GAME_MODES.KIWI];
+            t.MODES_WITHOUT_RUNES = l;
             t.TFT_MAX_BENCH_SLOTS = 10;
             t.FULL_LIST_ERROR = "max_roster_size_sender";
             t.REWARD_CELEBRATION_NAME = "PostgameRewardComponent";
@@ -155,18 +157,18 @@
                 ETERNALS: "eternals"
             };
             t.LOTTIE_RADIAL_UNITS = 75;
-            const l = {
+            const i = {
                 DEFAULT_WAITING_STATUS: "waiting",
                 READY_STATUS: "ready",
                 LEFT_PARTY_STATUS: "left"
             };
-            t.PARTY_STATUS = l;
-            const i = {
-                [l.READY_STATUS]: -1,
-                [l.DEFAULT_WAITING_STATUS]: 0,
-                [l.LEFT_PARTY_STATUS]: 1
+            t.PARTY_STATUS = i;
+            const r = {
+                [i.READY_STATUS]: -1,
+                [i.DEFAULT_WAITING_STATUS]: 0,
+                [i.LEFT_PARTY_STATUS]: 1
             };
-            t.PLAYER_STATUS_TO_ORDER_MAP = i;
+            t.PLAYER_STATUS_TO_ORDER_MAP = r;
             t.CHERRY_PLACEMENT_TRA_KEY = "cherry_placement_";
             t.SUBTEAM_PLACEMENT_LONG_TRA_KEY = "subteam_placement_long_";
             t.GAME_MODES_WITH_SUBTEAMS = {
@@ -1007,8 +1009,8 @@
                     PostgameScoreboardReplayButtonComponent: A.default,
                     TftHeaderComponent: M.default,
                     TftPartnerGroupPlacementComponent: R.default,
-                    TftPlayerComponent: L.default,
-                    TftTooltipComponent: I.default,
+                    TftPlayerComponent: I.default,
+                    TftTooltipComponent: L.default,
                     TftSkilltreeScoreboardComponent: O.default,
                     TftSkilltreeScoreRowComponent: D.default,
                     TftSkilltreeProgressionComponent: N.default,
@@ -1127,8 +1129,8 @@
                         "components/strawberry-scoreboard-row": wt.default,
                         "components/render-timer": Mt.default,
                         "components/eternals-token": Rt.default,
-                        "components/postgame-root": Lt.default,
-                        "components/postgame-sub-navigation": It.default,
+                        "components/postgame-root": It.default,
+                        "components/postgame-sub-navigation": Lt.default,
                         "components/postgame-progression": Ot.default,
                         "components/prestige-progression": Dt.default,
                         "components/prestige-progression-tooltip": Nt.default,
@@ -1159,8 +1161,8 @@
                         "components/tft-partner-group-placement": we.default,
                         "components/tft-player": Me.default,
                         "components/tft-tooltip": Re.default,
-                        "components/tft-skilltree-scoreboard": Le.default,
-                        "components/tft-skilltree-score-row": Ie.default,
+                        "components/tft-skilltree-scoreboard": Ie.default,
+                        "components/tft-skilltree-score-row": Le.default,
                         "components/tft-skilltree-progression": Oe.default,
                         "components/tft-skilltree-progression-banner-spine": De.default
                     }
@@ -1193,7 +1195,7 @@
                     wn = n(235).default,
                     Mn = n(237).default,
                     Rn = n(239).default,
-                    Ln = n(241).default;
+                    In = n(241).default;
                 Object.assign(e, {
                     JadeLevelProgressionComponent: t,
                     JadePostgameComponent: ln,
@@ -1203,9 +1205,9 @@
                     JadeScoreboardRowComponent: Mn,
                     JadeScoreboardScreenComponent: Cn,
                     JadeSeasonPassProgressionComponent: Rn,
-                    SummonersJourneyService: Ln
+                    SummonersJourneyService: In
                 });
-                const In = n(243),
+                const Ln = n(243),
                     On = n(244),
                     Dn = n(245),
                     Nn = n(246),
@@ -1214,7 +1216,7 @@
                     Un = n(249),
                     Hn = n(250);
                 Object.assign(e.TEMPLATES, {
-                    "components/jade-level-progression": In,
+                    "components/jade-level-progression": Ln,
                     "components/jade-postgame": On,
                     "components/jade-progression-screen": Dn,
                     "components/jade-ranked-progression": Nn,
@@ -1281,8 +1283,8 @@
                 w = ln(n(63)),
                 M = ln(n(64)),
                 R = ln(n(65)),
-                L = ln(n(66)),
-                I = ln(n(67)),
+                I = ln(n(66)),
+                L = ln(n(67)),
                 O = ln(n(68)),
                 D = ln(n(69)),
                 N = ln(n(70)),
@@ -1335,8 +1337,8 @@
                 we = ln(n(118)),
                 Me = ln(n(119)),
                 Re = ln(n(120)),
-                Le = ln(n(121)),
-                Ie = ln(n(122)),
+                Ie = ln(n(121)),
+                Le = ln(n(122)),
                 Oe = ln(n(123)),
                 De = ln(n(124)),
                 Ne = ln(n(125)),
@@ -1389,8 +1391,8 @@
                 wt = ln(n(194)),
                 Mt = ln(n(195)),
                 Rt = ln(n(196)),
-                Lt = ln(n(197)),
-                It = ln(n(198)),
+                It = ln(n(197)),
+                Lt = ln(n(198)),
                 Ot = ln(n(199)),
                 Dt = ln(n(200)),
                 Nt = ln(n(201)),
@@ -7352,13 +7354,14 @@
                     displayAdvancedDetails: function() {
                         const e = () => this.set("isDetailsTabOpen", !1);
                         let t = ["stats", "graph", "runes"];
-                        o.JADE_POSTGAME_GAME_MODES.includes(this.get("gameMode")) && (t = ["stats", "graph"]), (0, s.getProvider)().getOptional("rcp-fe-lol-match-history").then((n => {
-                            n.displayMatchDetails({
+                        const n = this.get("gameMode");
+                        (o.JADE_POSTGAME_GAME_MODES.includes(n) || o.MODES_WITHOUT_RUNES.includes(n)) && (t = ["stats", "graph"]), (0, s.getProvider)().getOptional("rcp-fe-lol-match-history").then((s => {
+                            s.displayMatchDetails({
                                 sections: t,
                                 defaultSection: "stats",
                                 dataSource: "eogStats",
                                 hideHeader: !0,
-                                gameMode: this.get("gameMode"),
+                                gameMode: n,
                                 closeModalCallback: e
                             })
                         }), (e => s.logger.error("Provider getOptional failure", e))), this.set("isDetailsTabOpen", !0), this.get("postgame").trigger("advancedDetailsDisplayed"), s.TelemetryService.sendTelemetryEvent("eog_advDetails", "featureClick", "postgame", {

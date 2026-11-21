@@ -489018,7 +489018,11 @@
         "RootSpell": "Maps/ModeSpecificData/Augments/BiggestSnowballEver/Augment_BiggestSnowballEver",
         "AdditionalSpells": [
             "Maps/ModeSpecificData/Augments/BiggestSnowballEver/Augment_BiggestSnowballEver_Knockup",
-            "Maps/ModeSpecificData/Augments/BiggestSnowballEver/Augment_BiggestSnowballEver_MinionSlow"
+            "Maps/ModeSpecificData/Augments/BiggestSnowballEver/Augment_BiggestSnowballEver_MinionSlow",
+            "{ffd51dd5}",
+            "{d03b6714}",
+            "{5004be24}",
+            "{a06685e9}"
         ],
         "mAugmentTags": 64,
         "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/biggestsnowballever_large.tex",
@@ -492757,7 +492761,8 @@
             "Kiwi_Augment_BiggestSnowballEver_KnockedDownMinion": "Maps/ModeSpecificData/Augments/BiggestSnowballEver/Particles/Kiwi_Augment_BiggestSnowballEver_KnockedDownMinion",
             "Kiwi_Augment_BiggestSnowballEver_AvatarMinion": "Maps/ModeSpecificData/Augments/BiggestSnowballEver/Particles/Kiwi_Augment_BiggestSnowballEver_AvatarMinion",
             "Kiwi_Augment_BiggestSnowballEver_MinionUnstuck": "Maps/ModeSpecificData/Augments/BiggestSnowballEver/Particles/Kiwi_Augment_BiggestSnowballEver_MinionUnstuck",
-            "Kiwi_Augment_BiggestSnowballEver_Knockup": "Maps/ModeSpecificData/Augments/BiggestSnowballEver/Particles/Kiwi_Augment_BiggestSnowballEver_Knockup"
+            "Kiwi_Augment_BiggestSnowballEver_Knockup": "Maps/ModeSpecificData/Augments/BiggestSnowballEver/Particles/Kiwi_Augment_BiggestSnowballEver_Knockup",
+            "{e377b97e}": "Characters/Sejuani/Skins/Skin0/Particles/Sejuani_Base_freeze"
         },
         "__type": "ResourceResolver"
     },
@@ -492767,6 +492772,15 @@
         "mScriptName": "Augment_BiggestSnowballEver_Knockup",
         "mBuff": {
             "mDescription": "Kiwi_Augment_BiggestSnowballEver_Knockup",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{a06685e9}": {
+        "ObjectName": "Augment_BiggestSnowballEver_Knockback",
+        "objectPath": "{a06685e9}",
+        "mScriptName": "Augment_BiggestSnowballEver_Knockback",
+        "mBuff": {
             "__type": "BuffData"
         },
         "__type": "SpellObject"
@@ -492867,6 +492881,110 @@
                         1.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StunDuration",
+                    "values": [
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MissileStartSpeedRatio",
+                    "values": [
+                        0.6499999761581421,
+                        0.6499999761581421,
+                        0.6499999761581421,
+                        0.6499999761581421,
+                        0.6499999761581421,
+                        0.6499999761581421,
+                        0.6499999761581421
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MissileStartSizeRatio",
+                    "values": [
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MissileGrowthDistanceRatio",
+                    "values": [
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "KnockbackDistance",
+                    "values": [
+                        120.0,
+                        120.0,
+                        120.0,
+                        120.0,
+                        120.0,
+                        120.0,
+                        120.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "KnockbackSpeed",
+                    "values": [
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinStunDuration",
+                    "values": [
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinKnockbackDistance",
+                    "values": [
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -492933,6 +493051,15 @@
                 },
                 "__type": "TooltipInstanceBuff"
             },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{ffd51dd5}": {
+        "ObjectName": "Augment_BiggestSnowballEver_Freeze",
+        "objectPath": "{ffd51dd5}",
+        "mScriptName": "Augment_BiggestSnowballEver_Freeze",
+        "mBuff": {
             "__type": "BuffData"
         },
         "__type": "SpellObject"
@@ -934129,6 +934256,236 @@
         },
         "__type": "TooltipFormat"
     },
+    "{5004be24}": {
+        "ObjectName": "Augment_BiggestSnowballEver_GrowingBounce",
+        "objectPath": "{5004be24}",
+        "mScriptName": "Augment_BiggestSnowballEver_GrowingBounce",
+        "OverrideScriptName": "Augment_SnowballMissile_Bounce",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 2058,
+            "DataValues": [
+                {
+                    "name": "BigSnowball_MissileWidth",
+                    "values": [
+                        180.0,
+                        180.0,
+                        180.0,
+                        180.0,
+                        180.0,
+                        180.0,
+                        180.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mAnimationName": "",
+            "mMinimapIconName": "assets/spells/icon_porosnowballmissile_minimap.tex",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mProjectTargetToCastRange": true,
+            "mMinimapIconRotation": true,
+            "castRange": [
+                1800.0,
+                1800.0,
+                1800.0,
+                1800.0,
+                1800.0,
+                1800.0,
+                1800.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    1800.0,
+                    1800.0,
+                    1800.0,
+                    1800.0,
+                    1800.0,
+                    1800.0,
+                    1800.0
+                ],
+                "{0a3e0478}": 1800.0,
+                "__type": "{0a0eddc9}"
+            },
+            "luaOnMissileUpdateDistanceInterval": 60.0,
+            "mMissileSpec": {
+                "mMissileWidth": 80.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mStartBoneName": "root ",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 1200.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "visibilityComponent": {
+                    "mPerceptionBubbleRadius": 250.0,
+                    "__type": "Defaultvisibility"
+                },
+                "heightSolver": {
+                    "mHeightOffset": 75.0,
+                    "__type": "FollowTerrainHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "missileSpeed": 1200.0,
+            "mLineWidth": 65.0,
+            "mHitEffectOrientType": 0,
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{d03b6714}": {
+        "ObjectName": "Augment_BiggestSnowballEver_GrowingMissile",
+        "objectPath": "{d03b6714}",
+        "mScriptName": "Augment_BiggestSnowballEver_GrowingMissile",
+        "OverrideScriptName": "Augment_SnowballMissile_NoBounce",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "DataValues": [
+                {
+                    "name": "BigSnowball_MissileWidth",
+                    "values": [
+                        180.0,
+                        180.0,
+                        180.0,
+                        180.0,
+                        180.0,
+                        180.0,
+                        180.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mAnimationName": "",
+            "mMinimapIconName": "assets/spells/icon_porosnowballmissile_minimap.tex",
+            "mCastTime": 0.5,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mProjectTargetToCastRange": true,
+            "mMinimapIconRotation": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castRangeValues": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "luaOnMissileUpdateDistanceInterval": 60.0,
+            "mMissileSpec": {
+                "mMissileWidth": 80.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mStartBoneName": "root ",
+                    "mSpeed": 1200.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "visibilityComponent": {
+                    "mPerceptionBubbleRadius": 250.0,
+                    "__type": "Defaultvisibility"
+                },
+                "heightSolver": {
+                    "mHeightOffset": 75.0,
+                    "__type": "FollowTerrainHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "missileSpeed": 1200.0,
+            "mLineWidth": 80.0,
+            "mHitEffectOrientType": 0,
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
     "Characters/Jinx/Skins/Skin2/Particles/Jinx_Skin02_Q_Rocket_hurricane_tar": {
         "complexEmitterDefinitionData": [
             {
@@ -942980,6 +943337,634 @@
         "particleName": "FiddleSticks_Skin35_R_AOE",
         "particlePath": "Characters/FiddleSticks/Skins/Skin35/Particles/FiddleSticks_Skin35_R_AOE",
         "objectPath": "Characters/FiddleSticks/Skins/Skin35/Particles/FiddleSticks_Skin35_R_AOE",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/Sejuani/Skins/Skin0/Particles/Sejuani_Base_freeze": {
+        "complexEmitterDefinitionData": [
+            {
+                "timeBeforeFirstEmission": 0.02500000037252903,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "crystalspike",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "FlexShapeDefinition": {
+                    "scaleBirthScaleByBoundObjectSize": 0.0044999998062849045,
+                    "__type": "VfxFlexShapeDefinitionData"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Sejuani/Skins/Base/Particles/Sejuani_Base_E_FrozenCrystal.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "miscRenderFlags": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        15.0,
+                        360.0,
+                        15.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                15.0,
+                                360.0,
+                                15.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        60.0,
+                        100.0,
+                        60.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.002601000014692545,
+                            0.014303999952971935,
+                            0.018205000087618828,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.15048544108867645,
+                                0.15048544108867645,
+                                0.15048544108867645
+                            ],
+                            [
+                                1.1938424110412598,
+                                1.1938424110412598,
+                                1.1938424110412598
+                            ],
+                            [
+                                0.6294072270393372,
+                                0.6294208765029907,
+                                0.6294072270393372
+                            ],
+                            [
+                                1.0055842399597168,
+                                1.0048226118087769,
+                                1.004809856414795
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Sejuani/Skins/Base/Particles/Sejuani_Base_E_FrostCrystal.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.05000000074505806,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "crystalspike1",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "FlexShapeDefinition": {
+                    "scaleBirthScaleByBoundObjectSize": 0.0044999998062849045,
+                    "__type": "VfxFlexShapeDefinitionData"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Sejuani/Skins/Base/Particles/Sejuani_Base_E_FrozenCrystal.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        360.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                360.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        60.0,
+                        100.0,
+                        60.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.002601000014692545,
+                            0.014303999952971935,
+                            0.018205000087618828,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.15048544108867645,
+                                0.15048544108867645,
+                                0.15048544108867645
+                            ],
+                            [
+                                1.1938424110412598,
+                                1.1938424110412598,
+                                1.1938424110412598
+                            ],
+                            [
+                                0.6294072270393372,
+                                0.6294208765029907,
+                                0.6294072270393372
+                            ],
+                            [
+                                1.0055842399597168,
+                                1.0048226118087769,
+                                1.004809856414795
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Sejuani/Skins/Base/Particles/Sejuani_Base_E_FrostCrystal.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.05000000074505806,
+                "rate": {
+                    "constantValue": 3.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.15000000596046448,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "crystalspike_Add",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "FlexShapeDefinition": {
+                    "scaleBirthScaleByBoundObjectSize": 0.0044999998062849045,
+                    "__type": "VfxFlexShapeDefinitionData"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Sejuani/Skins/Base/Particles/Sejuani_Base_E_FrozenCrystal.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 5,
+                "miscRenderFlags": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        360.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                360.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        60.0,
+                        100.0,
+                        60.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.002601000014692545,
+                            0.014303999952971935,
+                            0.018205000087618828,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.15048544108867645,
+                                0.15048544108867645,
+                                0.15048544108867645
+                            ],
+                            [
+                                1.1938424110412598,
+                                1.1938424110412598,
+                                1.1938424110412598
+                            ],
+                            [
+                                0.6294072270393372,
+                                0.6294208765029907,
+                                0.6294072270393372
+                            ],
+                            [
+                                1.0055842399597168,
+                                1.0048226118087769,
+                                1.004809856414795
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Sejuani/Skins/Base/Particles/Sejuani_Base_E_FrostCrystal.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 15.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 4.0,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.30000001192092896,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            4.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 2.0,
+                "emitterName": "sparkles",
+                "birthDrag": {
+                    "constantValue": [
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.30000001192092896,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "emissionMeshScale": 80.0,
+                "SpawnShape": {
+                    "flags": 1,
+                    "radius": 100.0,
+                    "height": 250.0,
+                    "__type": "VfxShapeCylinder"
+                },
+                "blendMode": 4,
+                "pass": 3,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        10.0,
+                        50.0,
+                        50.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.30000001192092896,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                10.0,
+                                50.0,
+                                50.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.15000000596046448,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Sejuani/Skins/Base/Particles/Sejuani_Base_FrostCrystals.tex",
+                "numFrames": 4,
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "Ice_Override",
+                "particleColorTexture": "ASSETS/Characters/Sejuani/Skins/Base/Particles/Sejuani_Base_Temp_color-rampdown.tex",
+                "blendMode": 1,
+                "meshRenderFlags": 0,
+                "colorLookUpTypeY": 3,
+                "isUniformScale": 1,
+                "materialOverrideDefinitions": [
+                    {
+                        "priority": 50,
+                        "baseTexture": "assets/characters/sejuani/skins/base/particles/sejuani_base_r_frostmaterial.tex",
+                        "__type": "VfxMaterialOverrideDefinitionData"
+                    }
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Sejuani_Base_freeze",
+        "particlePath": "Characters/Sejuani/Skins/Skin0/Particles/Sejuani_Base_freeze",
+        "overrideScaleCap": 370.0,
+        "objectPath": "Characters/Sejuani/Skins/Skin0/Particles/Sejuani_Base_freeze",
         "__type": "VfxSystemDefinitionData"
     },
     "__linked": []
