@@ -950,6 +950,10 @@
                 _updateParentalControlsRestriction() {
                     this._isVoiceChatRestricted && this.addInnerHtml(i.tra.get("parties_comm_panel_parental_controls_restricted"), this._selectors.restrictedMessage), this._updatePanelDisplayState()
                 }
+                _requestMicrophonePermissions() {
+                    const e = this._connectionState === B.VOICE_DISCONNECTED_STATE && this._teamConnectionState === B.VOICE_DISCONNECTED_STATE;
+                    return m.default.checkMicrophonePermissions().then((t => t || !e ? t : m.default.startMicTest().catch((() => {})).then((() => m.default.checkMicrophonePermissions())).finally((() => m.default.stopMicTest().catch((() => {}))))))
+                }
                 _showMicrophonePermissionsModal() {
                     const e = i.tra.get("voice_microphone_permissions_modal_header"),
                         t = i.tra.get("voice_microphone_permissions_modal_body"),
@@ -964,8 +968,11 @@
                     i.ModalManager.add(n)
                 }
                 _toggleMute() {
-                    this._settings && (this._teamVoicePluginEnabled || this._settings.inputMode !== S.INPUT_MODE_PUSH_TO_TALK) && m.default.checkMicrophonePermissions().then((e => {
-                        e ? (this._teamVoicePluginEnabled && (this._settings.localMicMuted ? k.default.play(this._unmuteSound) : k.default.play(this._muteSound)), m.default.muteSelf(!this._settings.localMicMuted)) : this._showMicrophonePermissionsModal()
+                    if (!this._settings) return;
+                    if (!this._teamVoicePluginEnabled && this._settings.inputMode === S.INPUT_MODE_PUSH_TO_TALK) return;
+                    const e = this._settings.localMicMuted;
+                    return this._requestMicrophonePermissions().then((t => {
+                        t ? (this._teamVoicePluginEnabled && (e ? k.default.play(this._unmuteSound) : k.default.play(this._muteSound)), m.default.muteSelf(!e)) : this._showMicrophonePermissionsModal()
                     }))
                 }
                 _settingsClicked() {

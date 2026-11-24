@@ -16111,16 +16111,8 @@
                             o.classList.remove("loading")
                         })), r.appendChild(o), i.appendTo(r), (0, s.default)(e, i, t, n), r
                     }), (e => {
-                        i.startListening();
-                        const t = Date.now();
-                        e.addEventListener("close", (() => {
-                            i.remove();
-                            const e = Date.now() - t,
-                                n = {
-                                    url: i.domNode.src,
-                                    time: e
-                                };
-                            e > 10 && r.Telemetry.sendCustomData("time_spent_on_article", n)
+                        i.startListening(), e.addEventListener("close", (() => {
+                            i.remove()
                         }))
                     }))(...a)
                 }

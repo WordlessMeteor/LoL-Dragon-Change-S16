@@ -1,19 +1,19 @@
 (() => {
     var e = [function(e, t, n) {
             "use strict";
-            var s, i = this && this.__createBinding || (Object.create ? function(e, t, n, s) {
+            var s, a = this && this.__createBinding || (Object.create ? function(e, t, n, s) {
                     void 0 === s && (s = n);
-                    var i = Object.getOwnPropertyDescriptor(t, n);
-                    i && !("get" in i ? !t.__esModule : i.writable || i.configurable) || (i = {
+                    var a = Object.getOwnPropertyDescriptor(t, n);
+                    a && !("get" in a ? !t.__esModule : a.writable || a.configurable) || (a = {
                         enumerable: !0,
                         get: function() {
                             return t[n]
                         }
-                    }), Object.defineProperty(e, s, i)
+                    }), Object.defineProperty(e, s, a)
                 } : function(e, t, n, s) {
                     void 0 === s && (s = n), e[s] = t[n]
                 }),
-                a = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                i = this && this.__setModuleDefault || (Object.create ? function(e, t) {
                     Object.defineProperty(e, "default", {
                         enumerable: !0,
                         value: t
@@ -31,8 +31,8 @@
                     if (e && e.__esModule) return e;
                     var t = {};
                     if (null != e)
-                        for (var n = s(e), l = 0; l < n.length; l++) "default" !== n[l] && i(t, e, n[l]);
-                    return a(t, e), t
+                        for (var n = s(e), l = 0; l < n.length; l++) "default" !== n[l] && a(t, e, n[l]);
+                    return i(t, e), t
                 }),
                 o = this && this.__importDefault || function(e) {
                     return e && e.__esModule ? e : {
@@ -78,14 +78,14 @@
                     }), await r.default.tra.ready(), await r.default.traService.ready(), await r.default.add({
                         EmberApplicationFactory: e => e.get("rcp-fe-ember-libs").getEmberApplicationFactory()
                     });
-                    const i = await
+                    const a = await
                     function(e, t) {
                         const s = t.viewport.getApiKey(e),
-                            i = t.viewport.fullScreen().getScreenRoot(s, e).getElement(),
-                            a = {
+                            a = t.viewport.fullScreen().getScreenRoot(s, e).getElement(),
+                            i = {
                                 name: e,
                                 ComponentFactory: t.ComponentFactory,
-                                rootElement: i,
+                                rootElement: a,
                                 tra: t.traService,
                                 Router: n(5).default,
                                 ApplicationController: n(6).default,
@@ -117,13 +117,13 @@
                                     "tft-launch-button": n(37)
                                 }
                             },
-                            l = t.SharedComponents.getSharedEmberComponents().EmberCollectionApi.registerToFactoryDefinition(a);
+                            l = t.SharedComponents.getSharedEmberComponents().EmberCollectionApi.registerToFactoryDefinition(i);
                         return t.EmberApplicationFactory.setFactoryDefinition(e, l, {
                             EMBER_CLI_COMPAT: !0
                         }), t.ComponentFactory.create(e).emberAppInstancePromise
-                    }(c.pluginName, r.default), a = new c.default(i);
-                    return r.default.api = a, {
-                        api: a,
+                    }(c.pluginName, r.default), i = new c.default(a);
+                    return r.default.api = i, {
+                        api: i,
                         getBridgeComponents: function() {
                             return {
                                 BridgeService: n(11).default,
@@ -163,11 +163,11 @@
                     const t = [],
                         n = this;
                     return Object.keys(e).forEach((function(s) {
-                        const i = e[s],
-                            a = n._getValue(s, i);
-                        a && a.then ? (a.then((function(e) {
+                        const a = e[s],
+                            i = n._getValue(s, a);
+                        i && i.then ? (i.then((function(e) {
                             e || console.warn("The promise for the key " + s + " resolved with a falsy value: ", e), n._addValue(s, e)
-                        })), t.push(a)) : n._addValue(s, a)
+                        })), t.push(i)) : n._addValue(s, i)
                     })), Promise.all(t)
                 },
                 _addValue: function(e, t) {
@@ -191,18 +191,18 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.pluginName = void 0;
-            const i = s(n(3));
-            var a = n(3);
+            const a = s(n(3));
+            var i = n(3);
             Object.defineProperty(t, "pluginName", {
                 enumerable: !0,
                 get: function() {
-                    return a.pluginName
+                    return i.pluginName
                 }
             });
             t.default = class {
                 _tft;
                 constructor(e) {
-                    this._tft = new i.default(e, {
+                    this._tft = new a.default(e, {
                         fullLaunchService: e.__container__.lookup("service:full-launch"),
                         tftHomeService: e.__container__.lookup("service:tft-home"),
                         indexController: e.__container__.lookup("controller:index")
@@ -355,17 +355,17 @@
                 value: !0
             });
             const s = n(1),
-                i = "/lol-gameflow/v1/gameflow-phase",
-                a = "/lol-gameflow/v1/launch-tft";
+                a = "/lol-gameflow/v1/gameflow-phase",
+                i = "/lol-gameflow/v1/launch-tft";
             t.default = s.Ember.Service.extend({
                 init: function() {
                     this._super(...arguments)
                 },
                 getGameflowPhase: function() {
-                    return s.dataBinding.get(i)
+                    return s.dataBinding.get(a)
                 },
                 launchTFT: function() {
-                    s.dataBinding.post(a)
+                    s.dataBinding.post(i)
                 },
                 willDestroy: function() {
                     this._super(...arguments)
@@ -377,17 +377,17 @@
                 value: !0
             });
             const s = n(1),
-                i = "/lol-lobby/v2/lobby/matchmaking/search",
-                a = "/lol-lobby/v2/lobby";
+                a = "/lol-lobby/v2/lobby/matchmaking/search",
+                i = "/lol-lobby/v2/lobby";
             t.default = s.Ember.Service.extend({
                 init: function() {
                     this._super(...arguments)
                 },
                 cancelMatchmaking: function() {
-                    s.dataBinding.delete(i)
+                    s.dataBinding.delete(a)
                 },
                 leaveParty: function() {
-                    s.dataBinding.delete(a)
+                    s.dataBinding.delete(i)
                 },
                 willDestroy: function() {
                     this._super(...arguments)
@@ -399,10 +399,10 @@
                 value: !0
             });
             const s = n(1),
-                i = "/lol-client-config/v3/client-config/",
-                a = i + "lol.client_settings.tft.bridge_enabled",
-                l = i + "lol.client_settings.tft.bridge_tooltips_enabled",
-                o = i + "lol.client_settings.tft.feedback.url",
+                a = "/lol-client-config/v3/client-config/",
+                i = a + "lol.client_settings.tft.bridge_enabled",
+                l = a + "lol.client_settings.tft.bridge_tooltips_enabled",
+                o = a + "lol.client_settings.tft.feedback.url",
                 r = "/lol-settings/v2/local/lol-user-experience",
                 c = "/lol-gameflow/v1/session",
                 d = "/riotclient/region-locale",
@@ -411,7 +411,7 @@
             t.default = s.Ember.Service.extend({
                 locale: null,
                 init: function() {
-                    this._super(...arguments), this.set("bridgeEnabled", !1), this.set("bridgeTooltipsEnabled", !1), this.set("feedbackUrl", ""), this.set("showPardonOurDustButton", !1), this.set("hasSeenBridgeTftTooltip", !1), this.set("showPardonOurDustPip", !0), this.set("blockPartyInvites", !1), this.set("blockTFTMode", !1), this.set("isTencentRegion", !1), this.set("bridgeAnnouncementSeen", !1), s.dataBinding.observe(a, this, (e => {
+                    this._super(...arguments), this.set("bridgeEnabled", !1), this.set("bridgeTooltipsEnabled", !1), this.set("feedbackUrl", ""), this.set("showPardonOurDustButton", !1), this.set("hasSeenBridgeTftTooltip", !1), this.set("showPardonOurDustPip", !0), this.set("blockPartyInvites", !1), this.set("blockTFTMode", !1), this.set("isTencentRegion", !1), this.set("bridgeAnnouncementSeen", !1), s.dataBinding.observe(i, this, (e => {
                         this.set("bridgeEnabled", e), this.set("showPardonOurDustButton", e)
                     })), s.dataBinding.observe(l, this, (e => {
                         this.set("bridgeTooltipsEnabled", e)
@@ -479,7 +479,7 @@
                     })
                 },
                 willDestroy: function() {
-                    this._super(...arguments), s.dataBinding.unobserve(a, this), s.dataBinding.unobserve(l, this), s.dataBinding.unobserve(o, this), s.dataBinding.unobserve(d, this), s.dataBinding.unobserve(r, this), s.dataBinding.removeObserver(c, this), s.dataBinding.unobserve(u, this)
+                    this._super(...arguments), s.dataBinding.unobserve(i, this), s.dataBinding.unobserve(l, this), s.dataBinding.unobserve(o, this), s.dataBinding.unobserve(d, this), s.dataBinding.unobserve(r, this), s.dataBinding.removeObserver(c, this), s.dataBinding.unobserve(u, this)
                 }
             })
         }, (e, t, n) => {
@@ -489,8 +489,8 @@
             });
             const s = n(1);
             n(13);
-            const i = "wide",
-                a = "compact";
+            const a = "wide",
+                i = "compact";
             t.default = s.Ember.Component.extend({
                 tagName: "",
                 classNames: ["rcp-fe-tft-persistent-tooltip"],
@@ -535,10 +535,10 @@
                 assignTooltipVariant() {
                     let e = "tft-persistent-tooltip";
                     switch (this.tooltipStyle) {
-                        case i:
+                        case a:
                             e = "tft-persistent-tooltip-wide";
                             break;
-                        case a:
+                        case i:
                             e = "tft-persistent-tooltip-compact"
                     }
                     this.set("tooltipClass", e)
@@ -618,12 +618,12 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.setFullLaunchProxy = function(e) {
-                p = e
+                d = e
             };
             const s = n(1),
-                i = "/lol-client-config/v3/client-config/",
-                a = i + "lol.client_settings.tft.full_launch_enabled",
-                l = i + "lol.client_settings.tft.showTFTSpectator",
+                a = "/lol-client-config/v3/client-config/",
+                i = a + "lol.client_settings.tft.full_launch_enabled",
+                l = a + "lol.client_settings.tft.showTFTSpectator",
                 o = {
                     id: "spectator-mode",
                     title: "tft_spectator_mode_title",
@@ -631,34 +631,20 @@
                     description: "tft_spectator_mode_description",
                     descriptionFallback: "Launch Teamfight Tactics in Spectator Mode."
                 },
-                r = i + "lol.client_settings.tft.new_tab.overrideUrl",
-                c = i + "lol.client_settings.tft.launch_url",
-                d = "/deep-links/v1/settings",
-                u = i + "lol.client_settings.tft.set17_extension_config",
-                m = "/telemetry/v1/common-data",
-                h = "/riotclient/region-locale";
-            let p = null;
+                r = a + "lol.client_settings.tft.new_tab.overrideUrl",
+                c = a + "lol.client_settings.tft.set17_extension_config";
+            let d = null;
             t.default = s.Ember.Service.extend({
                 homeOverrideUrl: "",
                 init: function() {
-                    this._super(...arguments), p && (p._registerLaunchTFTCallback(this.launchTFT.bind(this)), p._registerIsFullLaunchEnabledCallback(this.isFullLaunchEnabled.bind(this)), p._registerIsHextechTFTQueueCallback(this.isHextechTFTQueue.bind(this))), this.set("fullLaunchEnabled", !1), this.set("showTFTSpectator", !1), this.set("directLaunchEnabled", !0), this.set("TFTNewTabVisible", !1), this.set("isTencentRegion", !1), this.set("launchLink", ""), this.set("externalClientScheme", ""), this.set("leagueSessionId", ""), s.dataBinding.observe(a, this, (e => {
+                    this._super(...arguments), d && (d._registerLaunchTFTCallback(this.launchTFT.bind(this)), d._registerIsFullLaunchEnabledCallback(this.isFullLaunchEnabled.bind(this)), d._registerIsHextechTFTQueueCallback(this.isHextechTFTQueue.bind(this))), this.set("fullLaunchEnabled", !1), this.set("showTFTSpectator", !1), this.set("directLaunchEnabled", !0), this.set("TFTNewTabVisible", !1), s.dataBinding.observe(i, this, (e => {
                         this.set("fullLaunchEnabled", e)
                     })), s.dataBinding.observe(l, this, (e => {
                         this.set("showTFTSpectator", !0 === e)
                     })), s.dataBinding.observe(r, this, (e => {
                         this.set("homeOverrideUrl", e)
-                    })), this.sharedAudioManager = s.navigation?.activityCenter?.getHomeHubsSharedAudioManager(), s.dataBinding.observe(h, this, (e => {
-                        this.set("isTencentRegion", "TENCENT" === e?.region)
-                    })), s.dataBinding.observe(d, this, (e => {
-                        e ? (this.set("externalClientScheme", e.externalClientScheme), s.logger.info(`Saves externalClientScheme as ${this.get("externalClientScheme")}`)) : s.logger.warning("No external link settings received.")
-                    })), s.dataBinding.observe(c, this, (e => {
-                        e ? (s.logger.info(`Saving launchUrl product with link: ${e}`), this.set("launchLink", e)) : s.logger.warning(`${c} not recieved, not configure, or set to empty.`)
-                    })), s.dataBinding.observe(u, this, (e => {
+                    })), this.sharedAudioManager = s.navigation?.activityCenter?.getHomeHubsSharedAudioManager(), s.dataBinding.observe(c, this, (e => {
                         e ? this.set("set17ExtensionConfig", e) : s.logger.warning("No set17 extension config received.")
-                    })), s.dataBinding.observe(m, this, (e => {
-                        if (!e) return;
-                        const t = e["common.session_id"];
-                        t ? this.set("leagueSessionId", t) : this.set("leagueSessionId", "")
                     }))
                 },
                 isFullLaunchEnabled: function() {
@@ -668,22 +654,15 @@
                     return this.get("directLaunchEnabled")
                 },
                 willDestroy: function() {
-                    this._super(...arguments), s.dataBinding.unobserve(a, this), s.dataBinding.unobserve(l, this), s.dataBinding.unobserve(r, this), s.dataBinding.unobserve(h, this), s.dataBinding.unobserve(d, this), s.dataBinding.unobserve(u, this), s.dataBinding.unobserve(m, this), p && p._unregisterCallbacks()
+                    this._super(...arguments), s.dataBinding.unobserve(i, this), s.dataBinding.unobserve(l, this), s.dataBinding.unobserve(r, this), s.dataBinding.unobserve(c, this), d && d._unregisterCallbacks()
                 },
                 launchTFT: function(e, t) {
                     if (t === o.id) {
                         if (!this.get("showTFTSpectator") || !this.isDirectLaunchEnabled()) return;
                         return this.sendTFTuLaunchButtonTelemetry(e), s.dataBinding.post("/lol-gameflow/v1/launch-tft-spectator")
                     }
-                    if (this.get("isTencentRegion")) return s.logger.info("Launching bundled executable for Tencent."), void s.dataBinding.post("/lol-gameflow/v1/launch-tft");
-                    const n = this.get("launchLink");
-                    if (!n) return void s.logger.warning("No external product link found");
-                    const i = this.get("externalClientScheme");
-                    if (!i) return void s.logger.warning("No riot client launch scheme found");
-                    const a = this.get("leagueSessionId");
-                    a || s.logger.warning("No league session ID found"), this.sendTFTuLaunchButtonTelemetry(e);
-                    const l = a ? `${n}&session_id=${a}` : n;
-                    s.logger.info(`Launching external product with link: ${l}`), window.open(`${i}://${l}`)
+                    if (s.navigation?.launchTFT) return s.navigation.launchTFT(e);
+                    s.logger.warning("Navigation TFT launcher unavailable")
                 },
                 setTFTNewTabVisible: function(e) {
                     this.set("TFTNewTabVisible", e), !e && this.sharedAudioManager && this.sharedAudioManager.stopAll({
@@ -717,7 +696,7 @@
                 async sendTFTuLaunchButtonTelemetry(e) {
                     const t = Number(await s.Telemetry.getApplicationStartTime()),
                         n = Date.now(),
-                        i = {
+                        a = {
                             event_family: "click_element",
                             session_secs: Math.floor((n - t) / 1e3),
                             path: e?.path || "unset",
@@ -725,7 +704,7 @@
                             sub_screen: e?.subScreen || "unset",
                             click_element: e?.buttonClicked || "open_tftu"
                         };
-                    s.Telemetry.sendCustomData("click_element", i)
+                    s.Telemetry.sendCustomData("click_element", a)
                 }
             })
         }, (e, t, n) => {
@@ -748,11 +727,11 @@
                             }), 8e3)
                         })),
                         n = e ? `?pageName=${encodeURIComponent(e)}` : "",
-                        i = await Promise.race([s.dataBinding.get(`/lol-tft/v1/tft/home/content${n}`, {
+                        a = await Promise.race([s.dataBinding.get(`/lol-tft/v1/tft/home/content${n}`, {
                             skipCache: !0
                         }), t]);
-                    if (!i) throw new Error("No content received from API");
-                    return i
+                    if (!a) throw new Error("No content received from API");
+                    return a
                 }
             })
         }, (e, t, n) => {
@@ -923,15 +902,15 @@
                     const t = `https://www.youtube.com/embed/${e}`,
                         n = document.createElement("iframe");
                     n.src = t, n.width = "100%", n.height = "100%", n.setAttribute("frameborder", "0"), n.setAttribute("allow", "encrypted-media"), n.setAttribute("allowfullscreen", "");
-                    const i = s.navigation.getFullPageModalManager().open({
+                    const a = s.navigation.getFullPageModalManager().open({
                             data: {
                                 contents: n
                             }
                         }),
-                        a = () => {
-                            n.src = "", i.removeEventListener("fullPageModalClose", a)
+                        i = () => {
+                            n.src = "", a.removeEventListener("fullPageModalClose", i)
                         };
-                    i.addEventListener("fullPageModalClose", a)
+                    a.addEventListener("fullPageModalClose", i)
                 },
                 actions: {
                     onFirstCardClick() {
@@ -1131,12 +1110,12 @@
         t = {};
 
     function n(s) {
-        var i = t[s];
-        if (void 0 !== i) return i.exports;
-        var a = t[s] = {
+        var a = t[s];
+        if (void 0 !== a) return a.exports;
+        var i = t[s] = {
             exports: {}
         };
-        return e[s].call(a.exports, a, a.exports, n), a.exports
+        return e[s].call(i.exports, i, i.exports, n), i.exports
     }
     n.r = e => {
         "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {

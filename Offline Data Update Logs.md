@@ -3013,5 +3013,21 @@
 					</ul>
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-11-22 10-53-57</td>
+			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td>No changes</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-11-24 20-17-12</td>
+			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td>
+				CDragon: <br>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>Latest: 16.23.840.6595 -> 16.23.841.3489</li>
+						<li>PBE: 16.24.840.7700 -> 16.24.841.2701</li>
+					</ul>
+			</td>
+		</tr>
 	</tbody>
 </table>

@@ -1,19 +1,19 @@
 (() => {
     var e = [function(e, t, n) {
             "use strict";
-            var i, s = this && this.__createBinding || (Object.create ? function(e, t, n, i) {
-                    void 0 === i && (i = n);
+            var a, s = this && this.__createBinding || (Object.create ? function(e, t, n, a) {
+                    void 0 === a && (a = n);
                     var s = Object.getOwnPropertyDescriptor(t, n);
                     s && !("get" in s ? !t.__esModule : s.writable || s.configurable) || (s = {
                         enumerable: !0,
                         get: function() {
                             return t[n]
                         }
-                    }), Object.defineProperty(e, i, s)
-                } : function(e, t, n, i) {
-                    void 0 === i && (i = n), e[i] = t[n]
+                    }), Object.defineProperty(e, a, s)
+                } : function(e, t, n, a) {
+                    void 0 === a && (a = n), e[a] = t[n]
                 }),
-                a = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                i = this && this.__setModuleDefault || (Object.create ? function(e, t) {
                     Object.defineProperty(e, "default", {
                         enumerable: !0,
                         value: t
@@ -21,18 +21,18 @@
                 } : function(e, t) {
                     e.default = t
                 }),
-                l = this && this.__importStar || (i = function(e) {
-                    return i = Object.getOwnPropertyNames || function(e) {
+                l = this && this.__importStar || (a = function(e) {
+                    return a = Object.getOwnPropertyNames || function(e) {
                         var t = [];
                         for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[t.length] = n);
                         return t
-                    }, i(e)
+                    }, a(e)
                 }, function(e) {
                     if (e && e.__esModule) return e;
                     var t = {};
                     if (null != e)
-                        for (var n = i(e), l = 0; l < n.length; l++) "default" !== n[l] && s(t, e, n[l]);
-                    return a(t, e), t
+                        for (var n = a(e), l = 0; l < n.length; l++) "default" !== n[l] && s(t, e, n[l]);
+                    return i(t, e), t
                 }),
                 o = this && this.__importDefault || function(e) {
                     return e && e.__esModule ? e : {
@@ -70,19 +70,19 @@
                         Objectives: e
                     })));
                     const t = e.get("rcp-fe-lol-l10n").tra().overlay("/fe/lol-l10n/trans.json").overlay("/fe/tft/trans.json"),
-                        i = r.default.EmberL10n(r.default.Ember, t);
+                        a = r.default.EmberL10n(r.default.Ember, t);
                     await r.default.add({
                         dataBinding: r.default.dataBinding.bindTo(r.default.websocket),
                         tra: t,
-                        traService: i
+                        traService: a
                     }), await r.default.tra.ready(), await r.default.traService.ready(), await r.default.add({
                         EmberApplicationFactory: e => e.get("rcp-fe-ember-libs").getEmberApplicationFactory()
                     });
                     const s = await
                     function(e, t) {
-                        const i = t.viewport.getApiKey(e),
-                            s = t.viewport.fullScreen().getScreenRoot(i, e).getElement(),
-                            a = {
+                        const a = t.viewport.getApiKey(e),
+                            s = t.viewport.fullScreen().getScreenRoot(a, e).getElement(),
+                            i = {
                                 name: e,
                                 ComponentFactory: t.ComponentFactory,
                                 rootElement: s,
@@ -117,13 +117,13 @@
                                     "tft-launch-button": n(37)
                                 }
                             },
-                            l = t.SharedComponents.getSharedEmberComponents().EmberCollectionApi.registerToFactoryDefinition(a);
+                            l = t.SharedComponents.getSharedEmberComponents().EmberCollectionApi.registerToFactoryDefinition(i);
                         return t.EmberApplicationFactory.setFactoryDefinition(e, l, {
                             EMBER_CLI_COMPAT: !0
                         }), t.ComponentFactory.create(e).emberAppInstancePromise
-                    }(c.pluginName, r.default), a = new c.default(s);
-                    return r.default.api = a, {
-                        api: a,
+                    }(c.pluginName, r.default), i = new c.default(s);
+                    return r.default.api = i, {
+                        api: i,
                         getBridgeComponents: function() {
                             return {
                                 BridgeService: n(11).default,
@@ -150,24 +150,24 @@
             function n() {
                 return t || (console.error("The `provider` object has not been set, please do so by calling the `init` method."), null)
             }
-            const i = {
+            const a = {
                 init: function(e, n) {
                     return t = e, this.add(n)
                 },
                 _getValue: function(e, n) {
-                    let i;
-                    return "function" == typeof n ? (i = n(t), i || console.warn("The function for key " + e + " returned a falsy value: ", i)) : "string" == typeof n ? (i = t.get(n), i || console.warn("The provider `get` invocation for the key " + e + " returned a falsy value: ", i)) : "object" == typeof n && (i = n), i
+                    let a;
+                    return "function" == typeof n ? (a = n(t), a || console.warn("The function for key " + e + " returned a falsy value: ", a)) : "string" == typeof n ? (a = t.get(n), a || console.warn("The provider `get` invocation for the key " + e + " returned a falsy value: ", a)) : "object" == typeof n && (a = n), a
                 },
                 add: function(e) {
                     e = e || {};
                     const t = [],
                         n = this;
-                    return Object.keys(e).forEach((function(i) {
-                        const s = e[i],
-                            a = n._getValue(i, s);
-                        a && a.then ? (a.then((function(e) {
-                            e || console.warn("The promise for the key " + i + " resolved with a falsy value: ", e), n._addValue(i, e)
-                        })), t.push(a)) : n._addValue(i, a)
+                    return Object.keys(e).forEach((function(a) {
+                        const s = e[a],
+                            i = n._getValue(a, s);
+                        i && i.then ? (i.then((function(e) {
+                            e || console.warn("The promise for the key " + a + " resolved with a falsy value: ", e), n._addValue(a, e)
+                        })), t.push(i)) : n._addValue(a, i)
                     })), Promise.all(t)
                 },
                 _addValue: function(e, t) {
@@ -180,10 +180,10 @@
                     return n()
                 }
             };
-            e.exports = i
+            e.exports = a
         }, function(e, t, n) {
             "use strict";
-            var i = this && this.__importDefault || function(e) {
+            var a = this && this.__importDefault || function(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -191,12 +191,12 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.pluginName = void 0;
-            const s = i(n(3));
-            var a = n(3);
+            const s = a(n(3));
+            var i = n(3);
             Object.defineProperty(t, "pluginName", {
                 enumerable: !0,
                 get: function() {
-                    return a.pluginName
+                    return i.pluginName
                 }
             });
             t.default = class {
@@ -220,7 +220,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.pluginName = void 0;
-            const i = n(1);
+            const a = n(1);
             t.pluginName = "rcp-fe-tft";
             t.default = class {
                 screenRoot;
@@ -229,21 +229,21 @@
                 navigationItem;
                 _services;
                 constructor(e, n) {
-                    this.viewportApiKey = i.viewport.getApiKey(t.pluginName), this.screenRoot = i.viewport.main().getScreenRoot(this.viewportApiKey, t.pluginName), this.app = e, this.navigationItem = null, this._services = n
+                    this.viewportApiKey = a.viewport.getApiKey(t.pluginName), this.screenRoot = a.viewport.main().getScreenRoot(this.viewportApiKey, t.pluginName), this.app = e, this.navigationItem = null, this._services = n
                 }
                 init() {
-                    i.dataBinding.observe("/lol-client-config/v3/client-config/lol.client_settings.tft.new_tab.enabled", this, (e => {
+                    a.dataBinding.observe("/lol-client-config/v3/client-config/lol.client_settings.tft.new_tab.enabled", this, (e => {
                         if (e) {
                             if (this.navigationItem) return;
-                            this.navigationItem = i.navigation.addItem({
+                            this.navigationItem = a.navigation.addItem({
                                 show: () => this.showTFTMenu(),
                                 hide: () => this.hideTFTMenu()
                             }, {
-                                displayName: i.tra.get("tft_navbar_name"),
+                                displayName: a.tra.get("tft_navbar_name"),
                                 id: t.pluginName,
                                 priority: 400
                             }), this.screenRoot.getElement().appendChild(this.app.rootElement)
-                        } else this.navigationItem && (i.navigation.removeItem(this.navigationItem), this.navigationItem = null)
+                        } else this.navigationItem && (a.navigation.removeItem(this.navigationItem), this.navigationItem = null)
                     }))
                 }
                 showTFTMenu() {
@@ -287,17 +287,17 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            const i = n(1).Ember.Router.extend({
+            const a = n(1).Ember.Router.extend({
                 location: "none"
             });
-            t.default = i
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            const i = n(1);
-            n(7), t.default = i.Ember.Controller.extend({})
+            const a = n(1);
+            n(7), t.default = a.Ember.Controller.extend({})
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -306,12 +306,12 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            const i = n(1);
-            t.default = i.Ember.Controller.extend({
-                gameflowService: i.Ember.inject.service("gameflow"),
-                lobbyService: i.Ember.inject.service("lobby"),
-                matchmakingService: i.Ember.inject.service("matchmaking"),
-                tftHomeService: i.Ember.inject.service("tft-home"),
+            const a = n(1);
+            t.default = a.Ember.Controller.extend({
+                gameflowService: a.Ember.inject.service("gameflow"),
+                lobbyService: a.Ember.inject.service("lobby"),
+                matchmakingService: a.Ember.inject.service("matchmaking"),
+                tftHomeService: a.Ember.inject.service("tft-home"),
                 pageContent: null,
                 isLoading: !0,
                 init: function() {
@@ -323,7 +323,7 @@
                 },
                 actions: {
                     launchTFT: function() {
-                        this.get("gameflowService").getGameflowPhase().then((e => "Lobby" === e ? i.UIKit.getModalManager().add({
+                        this.get("gameflowService").getGameflowPhase().then((e => "Lobby" === e ? a.UIKit.getModalManager().add({
                             type: "DialogConfirm",
                             data: {
                                 contents: this.get("tra.leave_lobby_dialog_contents"),
@@ -333,7 +333,7 @@
                             show: !0
                         }).acceptPromise.then((() => {
                             this.get("lobbyService").leaveParty()
-                        })) : "Matchmaking" === e ? i.UIKit.getModalManager().add({
+                        })) : "Matchmaking" === e ? a.UIKit.getModalManager().add({
                             type: "DialogConfirm",
                             data: {
                                 contents: this.get("tra.leave_matchmaking_dialog_contents"),
@@ -354,18 +354,18 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            const i = n(1),
+            const a = n(1),
                 s = "/lol-gameflow/v1/gameflow-phase",
-                a = "/lol-gameflow/v1/launch-tft";
-            t.default = i.Ember.Service.extend({
+                i = "/lol-gameflow/v1/launch-tft";
+            t.default = a.Ember.Service.extend({
                 init: function() {
                     this._super(...arguments)
                 },
                 getGameflowPhase: function() {
-                    return i.dataBinding.get(s)
+                    return a.dataBinding.get(s)
                 },
                 launchTFT: function() {
-                    i.dataBinding.post(a)
+                    a.dataBinding.post(i)
                 },
                 willDestroy: function() {
                     this._super(...arguments)
@@ -376,18 +376,18 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            const i = n(1),
+            const a = n(1),
                 s = "/lol-lobby/v2/lobby/matchmaking/search",
-                a = "/lol-lobby/v2/lobby";
-            t.default = i.Ember.Service.extend({
+                i = "/lol-lobby/v2/lobby";
+            t.default = a.Ember.Service.extend({
                 init: function() {
                     this._super(...arguments)
                 },
                 cancelMatchmaking: function() {
-                    i.dataBinding.delete(s)
+                    a.dataBinding.delete(s)
                 },
                 leaveParty: function() {
-                    i.dataBinding.delete(a)
+                    a.dataBinding.delete(i)
                 },
                 willDestroy: function() {
                     this._super(...arguments)
@@ -398,9 +398,9 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            const i = n(1),
+            const a = n(1),
                 s = "/lol-client-config/v3/client-config/",
-                a = s + "lol.client_settings.tft.bridge_enabled",
+                i = s + "lol.client_settings.tft.bridge_enabled",
                 l = s + "lol.client_settings.tft.bridge_tooltips_enabled",
                 o = s + "lol.client_settings.tft.feedback.url",
                 r = "/lol-settings/v2/local/lol-user-experience",
@@ -408,29 +408,29 @@
                 d = "/riotclient/region-locale",
                 u = "/lol-settings/v2/account/LCUPreferences/lol-tft",
                 m = "tftBridgeAnnouncementSeen";
-            t.default = i.Ember.Service.extend({
+            t.default = a.Ember.Service.extend({
                 locale: null,
                 init: function() {
-                    this._super(...arguments), this.set("bridgeEnabled", !1), this.set("bridgeTooltipsEnabled", !1), this.set("feedbackUrl", ""), this.set("showPardonOurDustButton", !1), this.set("hasSeenBridgeTftTooltip", !1), this.set("showPardonOurDustPip", !0), this.set("blockPartyInvites", !1), this.set("blockTFTMode", !1), this.set("isTencentRegion", !1), this.set("bridgeAnnouncementSeen", !1), i.dataBinding.observe(a, this, (e => {
+                    this._super(...arguments), this.set("bridgeEnabled", !1), this.set("bridgeTooltipsEnabled", !1), this.set("feedbackUrl", ""), this.set("showPardonOurDustButton", !1), this.set("hasSeenBridgeTftTooltip", !1), this.set("showPardonOurDustPip", !0), this.set("blockPartyInvites", !1), this.set("blockTFTMode", !1), this.set("isTencentRegion", !1), this.set("bridgeAnnouncementSeen", !1), a.dataBinding.observe(i, this, (e => {
                         this.set("bridgeEnabled", e), this.set("showPardonOurDustButton", e)
-                    })), i.dataBinding.observe(l, this, (e => {
+                    })), a.dataBinding.observe(l, this, (e => {
                         this.set("bridgeTooltipsEnabled", e)
-                    })), i.dataBinding.observe(o, this, (e => {
+                    })), a.dataBinding.observe(o, this, (e => {
                         this.set("feedbackUrl", "string" == typeof e ? e : "")
-                    })), i.dataBinding.observe(d, this, (e => {
+                    })), a.dataBinding.observe(d, this, (e => {
                         this.set("isTencentRegion", "TENCENT" === e?.region)
-                    })), i.dataBinding.get("/riotclient/system-info/v1/basic-info").then((e => {
+                    })), a.dataBinding.get("/riotclient/system-info/v1/basic-info").then((e => {
                         const t = e.operatingSystem.versionMajor,
                             n = parseInt(t) || 0;
-                        let i = !0;
-                        "Windows" === e.operatingSystem.platform && n < 10 && (i = !1), this.set("blockPartyInvites", !i), this.set("blockTFTMode", !i)
-                    })), i.dataBinding.observe(r, this, (e => {
+                        let a = !0;
+                        "Windows" === e.operatingSystem.platform && n < 10 && (a = !1), this.set("blockPartyInvites", !a), this.set("blockTFTMode", !a)
+                    })), a.dataBinding.observe(r, this, (e => {
                         this.set("hasSeenBridgeTftTooltip", e?.data?.hasSeenBridgeTftTooltip ?? !1)
-                    })), i.dataBinding.observe(r, this, (e => {
+                    })), a.dataBinding.observe(r, this, (e => {
                         this.set("showPardonOurDustPip", e?.data?.showPardonOurDustPip ?? !0)
-                    })), i.dataBinding.observe(u, this, (e => {
+                    })), a.dataBinding.observe(u, this, (e => {
                         this.set("bridgeAnnouncementSeen", Boolean(e?.data?.[m]))
-                    })), i.dataBinding.addObserver(c, this, (e => {
+                    })), a.dataBinding.addObserver(c, this, (e => {
                         const t = "TFT" === e?.gameData?.queue?.gameMode,
                             n = e?.phase;
                         t && ("GameStart" === n || ("WaitingForStats" === n || "PreEndOfGame" === n || "EndOfGame" === n)) && this.recordPersistedSeenBridgeTooltip()
@@ -455,7 +455,7 @@
                     return this.get("bridgeEnabled")
                 },
                 recordPersistedSeenBridgeTooltip() {
-                    this.get("hasSeenBridgeTftTooltip") || i.dataBinding.patch(r, {
+                    this.get("hasSeenBridgeTftTooltip") || a.dataBinding.patch(r, {
                         data: {
                             hasSeenBridgeTftTooltip: !0
                         },
@@ -465,13 +465,13 @@
                 recordBridgeAnnouncementSeen() {
                     this.set("bridgeAnnouncementSeen", !0);
                     const e = {};
-                    e[m] = !0, i.dataBinding.patch(u, {
+                    e[m] = !0, a.dataBinding.patch(u, {
                         data: e,
                         schemaVersion: 1
                     })
                 },
                 recordPersistedClickedPardonOurDustButton() {
-                    this.get("showPardonOurDustPip") && i.dataBinding.patch(r, {
+                    this.get("showPardonOurDustPip") && a.dataBinding.patch(r, {
                         data: {
                             showPardonOurDustPip: !1
                         },
@@ -479,7 +479,7 @@
                     })
                 },
                 willDestroy: function() {
-                    this._super(...arguments), i.dataBinding.unobserve(a, this), i.dataBinding.unobserve(l, this), i.dataBinding.unobserve(o, this), i.dataBinding.unobserve(d, this), i.dataBinding.unobserve(r, this), i.dataBinding.removeObserver(c, this), i.dataBinding.unobserve(u, this)
+                    this._super(...arguments), a.dataBinding.unobserve(i, this), a.dataBinding.unobserve(l, this), a.dataBinding.unobserve(o, this), a.dataBinding.unobserve(d, this), a.dataBinding.unobserve(r, this), a.dataBinding.removeObserver(c, this), a.dataBinding.unobserve(u, this)
                 }
             })
         }, (e, t, n) => {
@@ -487,11 +487,11 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            const i = n(1);
+            const a = n(1);
             n(13);
             const s = "wide",
-                a = "compact";
-            t.default = i.Ember.Component.extend({
+                i = "compact";
+            t.default = a.Ember.Component.extend({
                 tagName: "",
                 classNames: ["rcp-fe-tft-persistent-tooltip"],
                 layout: n(14),
@@ -503,30 +503,30 @@
                     this._super(...arguments), this.assignTooltipVariant()
                 },
                 didInsertElement() {
-                    if (this._super(...arguments), i.ModalManager.addModalQueueObserver(this, this.checkModalQueueEmpty), i.TeamPlanner && this.get("hideWhenTeamPlannerVisible")) {
-                        const e = i.TeamPlanner.addVisibilityObserverCallback((e => {
+                    if (this._super(...arguments), a.ModalManager.addModalQueueObserver(this, this.checkModalQueueEmpty), a.TeamPlanner && this.get("hideWhenTeamPlannerVisible")) {
+                        const e = a.TeamPlanner.addVisibilityObserverCallback((e => {
                             this.set("isTeamPlannerVisible", e)
                         }));
                         this.set("_visibilityObserverIndex", e)
                     }
-                    if ((0, i.getProvider)().getOptional("rcp-fe-lol-social").then((e => {
+                    if ((0, a.getProvider)().getOptional("rcp-fe-lol-social").then((e => {
                             if (this.isDestroyed || this.isDestroying) return;
                             const t = e.addChatWindowVisibilityObserverCallback((e => {
                                 this.set("isChatWindowOpen", e)
                             }));
                             this.set("_chatWindowVisibilityObserverIndex", t), this.set("_socialPlugin", e)
-                        }), (e => i.logger.error("Provider getOptional failure", e))), i.Objectives) {
-                        const e = i.Objectives.addObjectivesModalVisibilityObserverCallback((e => {
+                        }), (e => a.logger.error("Provider getOptional failure", e))), a.Objectives) {
+                        const e = a.Objectives.addObjectivesModalVisibilityObserverCallback((e => {
                             this.set("isObjectivesModalOpen", e)
                         }));
                         this.set("_objectivesModalvisibilityObserverIndex", e)
                     }
                 },
                 willDestroyElement() {
-                    this._super(...arguments), i.ModalManager.removeModalQueueObserver(this.checkModalQueueEmpty), i.TeamPlanner && void 0 !== this.get("_visibilityObserverIndex") && i.TeamPlanner.removeVisibilityObserverCallback(this.get("_visibilityObserverIndex"));
+                    this._super(...arguments), a.ModalManager.removeModalQueueObserver(this.checkModalQueueEmpty), a.TeamPlanner && void 0 !== this.get("_visibilityObserverIndex") && a.TeamPlanner.removeVisibilityObserverCallback(this.get("_visibilityObserverIndex"));
                     const e = this.get("_socialPlugin"),
                         t = this.get("_chatWindowVisibilityObserverIndex");
-                    e && void 0 !== t && e.removeChatWindowVisibilityObserverCallback(this.get("_chatWindowVisibilityObserverIndex")), i.Objectives && void 0 !== this.get("_objectivesModalvisibilityObserverIndex") && i.Objectives.removeObjectivesModalVisibilityObserverCallback(this.get("_objectivesModalvisibilityObserverIndex"))
+                    e && void 0 !== t && e.removeChatWindowVisibilityObserverCallback(this.get("_chatWindowVisibilityObserverIndex")), a.Objectives && void 0 !== this.get("_objectivesModalvisibilityObserverIndex") && a.Objectives.removeObjectivesModalVisibilityObserverCallback(this.get("_objectivesModalvisibilityObserverIndex"))
                 },
                 isModalQueueEmpty: !0,
                 checkModalQueueEmpty(e) {
@@ -538,25 +538,25 @@
                         case s:
                             e = "tft-persistent-tooltip-wide";
                             break;
-                        case a:
+                        case i:
                             e = "tft-persistent-tooltip-compact"
                     }
                     this.set("tooltipClass", e)
                 },
-                shouldShowTooltip: i.Ember.computed("isModalQueueEmpty", "hideWhenTeamPlannerVisible", "isTeamPlannerVisible", "isChatWindowOpen", "isObjectivesModalOpen", (function() {
+                shouldShowTooltip: a.Ember.computed("isModalQueueEmpty", "hideWhenTeamPlannerVisible", "isTeamPlannerVisible", "isChatWindowOpen", "isObjectivesModalOpen", (function() {
                     const e = this.get("isModalQueueEmpty"),
                         t = this.get("hideWhenTeamPlannerVisible") && this.get("isTeamPlannerVisible"),
                         n = this.get("isChatWindowOpen"),
-                        i = this.get("isObjectivesModalOpen");
-                    return e && !t && !n && !i
+                        a = this.get("isObjectivesModalOpen");
+                    return e && !t && !n && !a
                 }))
             })
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const i = n(1).Ember;
-            e.exports = i.HTMLBars.template({
+            const a = n(1).Ember;
+            e.exports = a.HTMLBars.template({
                 id: "/T3tFtLg",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\templates\\\\tft-persistent-tooltip.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\styles\\\\tft-persistent-tooltip.styl\\" js-path=\\"null\\" "],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","type","show","offsetY"],["top","persistent",["get",["shouldShowTooltip"]],["get",["tooltipOffsetY"]]]],0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["dynamic-attr","class",["unknown",["tooltipClass"]],null],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["text","\\n        "],["append",["helper",["sanitize"],[["get",["tooltipText"]]],null],false],["text","\\n    "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
@@ -566,26 +566,26 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            const i = n(1);
-            n(16), t.default = i.Ember.Component.extend({
+            const a = n(1);
+            n(16), t.default = a.Ember.Component.extend({
                 classNames: ["rcp-fe-tft-pardon-our-dust"],
-                tra: i.tra,
+                tra: a.tra,
                 layout: n(17),
-                bridgeService: i.Ember.inject.service("bridge"),
-                pardonOurDustContents: i.Ember.computed("bridgeService.locale", (function() {
+                bridgeService: a.Ember.inject.service("bridge"),
+                pardonOurDustContents: a.Ember.computed("bridgeService.locale", (function() {
                     const e = `<a class='' href='${this.get("tra.pardon_our_dust_link")}' target='_blank'>${this.get("tra.pardon_our_dust_link_text")}</a>`,
                         t = this.get("tra").formatString("pardon_our_dust_modal_body", {
                             link: e
                         }),
-                        n = i.htmlSanitizer.sanitize(t);
-                    return i.UIKit.getTemplateHelper().contentBlockDialog(this.get("tra.pardon_our_dust_modal_title"), n, "dialog-large")
+                        n = a.htmlSanitizer.sanitize(t);
+                    return a.UIKit.getTemplateHelper().contentBlockDialog(this.get("tra.pardon_our_dust_modal_title"), n, "dialog-large")
                 })),
-                showPardonOurDustPip: i.Ember.computed("bridgeService.showPardonOurDustPip", (function() {
+                showPardonOurDustPip: a.Ember.computed("bridgeService.showPardonOurDustPip", (function() {
                     return this.get("bridgeService.showPardonOurDustPip")
                 })),
                 actions: {
                     pardonOurDustClicked: function() {
-                        const e = i.UIKit.getModalManager(),
+                        const e = a.UIKit.getModalManager(),
                             t = this.get("pardonOurDustContents");
                         e.add({
                             type: "DialogAlert",
@@ -607,8 +607,8 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const i = n(1).Ember;
-            e.exports = i.HTMLBars.template({
+            const a = n(1).Ember;
+            e.exports = a.HTMLBars.template({
                 id: "gCseT77n",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\templates\\\\pardon-our-dust-button.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\styles\\\\pardon-our-dust-button.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","tft-pardon-our-dust"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"pardonOurDustClicked"],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","tft-pardon-our-dust-label"],["flush-element"],["append",["unknown",["tra","pardon_our_dust_button_text"]],false],["close-element"],["text","\\n  "],["open-element","img",[]],["static-attr","src","/fe/tft/images/pardon-our-dust-message-button.png"],["static-attr","class","tft-pardon-our-dust-img-main"],["flush-element"],["close-element"],["text","\\n  "],["open-element","img",[]],["static-attr","src","/fe/tft/images/pardon-our-dust-message-button-hovered.png"],["static-attr","class","tft-pardon-our-dust-img-hover"],["flush-element"],["close-element"],["text","\\n  "],["open-element","img",[]],["static-attr","src","/fe/tft/images/pardon-our-dust-message-button-pressed.png"],["static-attr","class","tft-pardon-our-dust-img-clicked"],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showPardonOurDustPip"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["open-element","div",[]],["static-attr","class","tft-pardon-our-dust-pip"],["flush-element"],["text","\\n  "],["append",["unknown",["call-to-action-pip"]],false],["text","\\n"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
@@ -618,11 +618,11 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.setFullLaunchProxy = function(e) {
-                p = e
+                d = e
             };
-            const i = n(1),
+            const a = n(1),
                 s = "/lol-client-config/v3/client-config/",
-                a = s + "lol.client_settings.tft.full_launch_enabled",
+                i = s + "lol.client_settings.tft.full_launch_enabled",
                 l = s + "lol.client_settings.tft.showTFTSpectator",
                 o = {
                     id: "spectator-mode",
@@ -632,33 +632,19 @@
                     descriptionFallback: "Launch Teamfight Tactics in Spectator Mode."
                 },
                 r = s + "lol.client_settings.tft.new_tab.overrideUrl",
-                c = s + "lol.client_settings.tft.launch_url",
-                d = "/deep-links/v1/settings",
-                u = s + "lol.client_settings.tft.set17_extension_config",
-                m = "/telemetry/v1/common-data",
-                h = "/riotclient/region-locale";
-            let p = null;
-            t.default = i.Ember.Service.extend({
+                c = s + "lol.client_settings.tft.set17_extension_config";
+            let d = null;
+            t.default = a.Ember.Service.extend({
                 homeOverrideUrl: "",
                 init: function() {
-                    this._super(...arguments), p && (p._registerLaunchTFTCallback(this.launchTFT.bind(this)), p._registerIsFullLaunchEnabledCallback(this.isFullLaunchEnabled.bind(this)), p._registerIsHextechTFTQueueCallback(this.isHextechTFTQueue.bind(this))), this.set("fullLaunchEnabled", !1), this.set("showTFTSpectator", !1), this.set("directLaunchEnabled", !0), this.set("TFTNewTabVisible", !1), this.set("isTencentRegion", !1), this.set("launchLink", ""), this.set("externalClientScheme", ""), this.set("leagueSessionId", ""), i.dataBinding.observe(a, this, (e => {
+                    this._super(...arguments), d && (d._registerLaunchTFTCallback(this.launchTFT.bind(this)), d._registerIsFullLaunchEnabledCallback(this.isFullLaunchEnabled.bind(this)), d._registerIsHextechTFTQueueCallback(this.isHextechTFTQueue.bind(this))), this.set("fullLaunchEnabled", !1), this.set("showTFTSpectator", !1), this.set("directLaunchEnabled", !0), this.set("TFTNewTabVisible", !1), a.dataBinding.observe(i, this, (e => {
                         this.set("fullLaunchEnabled", e)
-                    })), i.dataBinding.observe(l, this, (e => {
+                    })), a.dataBinding.observe(l, this, (e => {
                         this.set("showTFTSpectator", !0 === e)
-                    })), i.dataBinding.observe(r, this, (e => {
+                    })), a.dataBinding.observe(r, this, (e => {
                         this.set("homeOverrideUrl", e)
-                    })), this.sharedAudioManager = i.navigation?.activityCenter?.getHomeHubsSharedAudioManager(), i.dataBinding.observe(h, this, (e => {
-                        this.set("isTencentRegion", "TENCENT" === e?.region)
-                    })), i.dataBinding.observe(d, this, (e => {
-                        e ? (this.set("externalClientScheme", e.externalClientScheme), i.logger.info(`Saves externalClientScheme as ${this.get("externalClientScheme")}`)) : i.logger.warning("No external link settings received.")
-                    })), i.dataBinding.observe(c, this, (e => {
-                        e ? (i.logger.info(`Saving launchUrl product with link: ${e}`), this.set("launchLink", e)) : i.logger.warning(`${c} not recieved, not configure, or set to empty.`)
-                    })), i.dataBinding.observe(u, this, (e => {
-                        e ? this.set("set17ExtensionConfig", e) : i.logger.warning("No set17 extension config received.")
-                    })), i.dataBinding.observe(m, this, (e => {
-                        if (!e) return;
-                        const t = e["common.session_id"];
-                        t ? this.set("leagueSessionId", t) : this.set("leagueSessionId", "")
+                    })), this.sharedAudioManager = a.navigation?.activityCenter?.getHomeHubsSharedAudioManager(), a.dataBinding.observe(c, this, (e => {
+                        e ? this.set("set17ExtensionConfig", e) : a.logger.warning("No set17 extension config received.")
                     }))
                 },
                 isFullLaunchEnabled: function() {
@@ -668,22 +654,15 @@
                     return this.get("directLaunchEnabled")
                 },
                 willDestroy: function() {
-                    this._super(...arguments), i.dataBinding.unobserve(a, this), i.dataBinding.unobserve(l, this), i.dataBinding.unobserve(r, this), i.dataBinding.unobserve(h, this), i.dataBinding.unobserve(d, this), i.dataBinding.unobserve(u, this), i.dataBinding.unobserve(m, this), p && p._unregisterCallbacks()
+                    this._super(...arguments), a.dataBinding.unobserve(i, this), a.dataBinding.unobserve(l, this), a.dataBinding.unobserve(r, this), a.dataBinding.unobserve(c, this), d && d._unregisterCallbacks()
                 },
                 launchTFT: function(e, t) {
                     if (t === o.id) {
                         if (!this.get("showTFTSpectator") || !this.isDirectLaunchEnabled()) return;
-                        return this.sendTFTuLaunchButtonTelemetry(e), i.dataBinding.post("/lol-gameflow/v1/launch-tft-spectator")
+                        return this.sendTFTuLaunchButtonTelemetry(e), a.dataBinding.post("/lol-gameflow/v1/launch-tft-spectator")
                     }
-                    if (this.get("isTencentRegion")) return i.logger.info("Launching bundled executable for Tencent."), void i.dataBinding.post("/lol-gameflow/v1/launch-tft");
-                    const n = this.get("launchLink");
-                    if (!n) return void i.logger.warning("No external product link found");
-                    const s = this.get("externalClientScheme");
-                    if (!s) return void i.logger.warning("No riot client launch scheme found");
-                    const a = this.get("leagueSessionId");
-                    a || i.logger.warning("No league session ID found"), this.sendTFTuLaunchButtonTelemetry(e);
-                    const l = a ? `${n}&session_id=${a}` : n;
-                    i.logger.info(`Launching external product with link: ${l}`), window.open(`${s}://${l}`)
+                    if (a.navigation?.launchTFT) return a.navigation.launchTFT(e);
+                    a.logger.warning("Navigation TFT launcher unavailable")
                 },
                 setTFTNewTabVisible: function(e) {
                     this.set("TFTNewTabVisible", e), !e && this.sharedAudioManager && this.sharedAudioManager.stopAll({
@@ -715,7 +694,7 @@
                     return this.getHextechTFTQueueIds().includes(e)
                 },
                 async sendTFTuLaunchButtonTelemetry(e) {
-                    const t = Number(await i.Telemetry.getApplicationStartTime()),
+                    const t = Number(await a.Telemetry.getApplicationStartTime()),
                         n = Date.now(),
                         s = {
                             event_family: "click_element",
@@ -725,7 +704,7 @@
                             sub_screen: e?.subScreen || "unset",
                             click_element: e?.buttonClicked || "open_tftu"
                         };
-                    i.Telemetry.sendCustomData("click_element", s)
+                    a.Telemetry.sendCustomData("click_element", s)
                 }
             })
         }, (e, t, n) => {
@@ -733,8 +712,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            const i = n(1);
-            t.default = i.Ember.Service.extend({
+            const a = n(1);
+            t.default = a.Ember.Service.extend({
                 init: function() {
                     this._super(...arguments)
                 },
@@ -748,7 +727,7 @@
                             }), 8e3)
                         })),
                         n = e ? `?pageName=${encodeURIComponent(e)}` : "",
-                        s = await Promise.race([i.dataBinding.get(`/lol-tft/v1/tft/home/content${n}`, {
+                        s = await Promise.race([a.dataBinding.get(`/lol-tft/v1/tft/home/content${n}`, {
                             skipCache: !0
                         }), t]);
                     if (!s) throw new Error("No content received from API");
@@ -760,28 +739,28 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            const i = n(1);
+            const a = n(1);
             n(21);
-            t.default = i.Ember.Component.extend({
+            t.default = a.Ember.Component.extend({
                 classNames: ["rcp-fe-tft-home-content"],
                 classNameBindings: ["shouldShowIframe:iframe-view"],
-                tra: i.tra,
+                tra: a.tra,
                 layout: n(22),
-                fullLaunchService: i.Ember.inject.service("full-launch"),
-                bridgeService: i.Ember.inject.service("bridge"),
+                fullLaunchService: a.Ember.inject.service("full-launch"),
+                bridgeService: a.Ember.inject.service("bridge"),
                 pageContent: null,
                 isLoading: !1,
-                landingRichTextCard: i.Ember.computed("pageContent", (function() {
+                landingRichTextCard: a.Ember.computed("pageContent", (function() {
                     return (this.get("pageContent.blades") || []).find((e => "landingRichText" === e.type)) || null
                 })),
-                richTextBody: i.Ember.computed("landingRichTextCard", (function() {
+                richTextBody: a.Ember.computed("landingRichTextCard", (function() {
                     return this.get("landingRichTextCard.richText.body") || null
                 })),
-                backgroundContent: i.Ember.computed.alias("pageContent.metaImage.url"),
-                assetHighlightCard: i.Ember.computed("pageContent", (function() {
+                backgroundContent: a.Ember.computed.alias("pageContent.metaImage.url"),
+                assetHighlightCard: a.Ember.computed("pageContent", (function() {
                     return (this.get("pageContent.blades") || []).find((e => "assetHighlight" === e.type)) || null
                 })),
-                headerData: i.Ember.computed("assetHighlightCard", "tra", (function() {
+                headerData: a.Ember.computed("assetHighlightCard", "tra", (function() {
                     const e = this.get("assetHighlightCard.header");
                     if (!e) return {
                         supertitle: null,
@@ -800,13 +779,13 @@
                         imageUrl: n || null
                     }
                 })),
-                directLaunchDisabled: i.Ember.computed.not("fullLaunchService.directLaunchEnabled"),
-                blockTFTMode: i.Ember.computed.alias("bridgeService.blockTFTMode"),
-                launchButtonDisabled: i.Ember.computed.or("directLaunchDisabled", "blockTFTMode"),
-                launchButtonEnabled: i.Ember.computed.not("launchButtonDisabled"),
-                newTabVisible: i.Ember.computed.alias("fullLaunchService.TFTNewTabVisible"),
-                showTooltip: i.Ember.computed.and("launchButtonDisabled", "newTabVisible"),
-                tooltipText: i.Ember.computed("tra", "directLaunchDisabled", "blockTFTMode", (function() {
+                directLaunchDisabled: a.Ember.computed.not("fullLaunchService.directLaunchEnabled"),
+                blockTFTMode: a.Ember.computed.alias("bridgeService.blockTFTMode"),
+                launchButtonDisabled: a.Ember.computed.or("directLaunchDisabled", "blockTFTMode"),
+                launchButtonEnabled: a.Ember.computed.not("launchButtonDisabled"),
+                newTabVisible: a.Ember.computed.alias("fullLaunchService.TFTNewTabVisible"),
+                showTooltip: a.Ember.computed.and("launchButtonDisabled", "newTabVisible"),
+                tooltipText: a.Ember.computed("tra", "directLaunchDisabled", "blockTFTMode", (function() {
                     if (this.get("blockTFTMode")) {
                         return `${this.get("tra.tft_mode_unsupportedclientplatform_tooltip")} ${this.get("tra.tft_mode_unsupportedclientplatform_link")}`
                     }
@@ -814,9 +793,9 @@
                 })),
                 shouldShowIframe: !1,
                 tftHomeOverrideUrl: null,
-                isIframeMode: i.Ember.computed.bool("tftHomeOverrideUrl"),
-                isHidden: i.Ember.computed.not("newTabVisible"),
-                audioManager: i.Ember.computed("fullLaunchService", (function() {
+                isIframeMode: a.Ember.computed.bool("tftHomeOverrideUrl"),
+                isHidden: a.Ember.computed.not("newTabVisible"),
+                audioManager: a.Ember.computed("fullLaunchService", (function() {
                     return this.get("fullLaunchService").getTftAudioManager()
                 })),
                 init() {
@@ -831,13 +810,13 @@
                 },
                 tryActivateIframe() {
                     if (!this.get("isDestroyed") && !this.get("isDestroying")) {
-                        if (!this.get("newTabVisible")) return i.Ember.run.cancel(this._activateRetry), this._activateAttempts = 0, void this.set("shouldShowIframe", !1);
-                        if (!this.element || !this.element.isConnected) return i.Ember.run.cancel(this._activateRetry), 60 == this._activateAttempts++ && i.logger.error("tft-home-content: element still not connected after threshold; continuing to retry"), void(this._activateRetry = i.Ember.run.later(this, this.tryActivateIframe, 16));
+                        if (!this.get("newTabVisible")) return a.Ember.run.cancel(this._activateRetry), this._activateAttempts = 0, void this.set("shouldShowIframe", !1);
+                        if (!this.element || !this.element.isConnected) return a.Ember.run.cancel(this._activateRetry), 60 == this._activateAttempts++ && a.logger.error("tft-home-content: element still not connected after threshold; continuing to retry"), void(this._activateRetry = a.Ember.run.later(this, this.tryActivateIframe, 16));
                         this._activateAttempts = 0, this.set("shouldShowIframe", !0)
                     }
                 },
                 willDestroyElement() {
-                    this._activateRetry && (i.Ember.run.cancel(this._activateRetry), this._activateRetry = null), this.removeObserver("fullLaunchService.homeOverrideUrl", this, this.setOverrideUrlCache), this.removeObserver("newTabVisible", this, this.tryActivateIframe), this._super(...arguments)
+                    this._activateRetry && (a.Ember.run.cancel(this._activateRetry), this._activateRetry = null), this.removeObserver("fullLaunchService.homeOverrideUrl", this, this.setOverrideUrlCache), this.removeObserver("newTabVisible", this, this.tryActivateIframe), this._super(...arguments)
                 },
                 actions: {
                     launchTFT: function() {
@@ -852,8 +831,8 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const i = n(1).Ember;
-            e.exports = i.HTMLBars.template({
+            const a = n(1).Ember;
+            e.exports = a.HTMLBars.template({
                 id: "a8RK9XRM",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\templates\\\\tft-home-content.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\styles\\\\tft-home-content.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","section",[]],["static-attr","class","tft-home-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isIframeMode"]]],null,6,4],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["unknown",["tft-home-loading-screen"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["helper",["tft-persistent-tooltip"],null,[["tooltipText","tooltipOffsetY","tooltipStyle","hideWhenTeamPlannerVisible"],[["get",["tooltipText"]],-6,"compact",true]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["showTooltip"]]],null,1]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","tft-home-content__cards"],["flush-element"],["text","\\n            "],["append",["helper",["tft-home-card"],null,[["data"],[["get",["assetHighlightCard"]]]]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["tft-home-background"],null,[["src"],[["get",["backgroundContent"]]]]],false],["text","\\n\\n    "],["open-element","section",[]],["static-attr","class","tft-home-content"],["flush-element"],["text","\\n      "],["open-element","main",[]],["static-attr","class","tft-home-content__main-content"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","tft-home-content__header"],["flush-element"],["text","\\n          "],["append",["helper",["tft-home-header"],null,[["headerData"],[["get",["headerData"]]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","footer",[]],["static-attr","class","tft-home-content__footer"],["flush-element"],["text","\\n"],["block",["if"],[["get",["assetHighlightCard"]]],null,3],["text","\\n"],["block",["tft-launch-button"],null,[["isEnabled","onClick","baseImgPath","overImgPath","downImgPath","disabledImgPath","buttonText"],[["get",["launchButtonEnabled"]],["helper",["action"],[["get",[null]],"launchTFT"],null],"/fe/lol-static-assets/images/buttons/find_match_default.png","/fe/lol-static-assets/images/buttons/find_match_hover.png","/fe/lol-static-assets/images/buttons/find_match_active.png","/fe/lol-static-assets/images/buttons/find_match_default.png",["get",["tra","tft_launch_button"]]]],2],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["isLoading"]]],null,0]],"locals":[]},{"statements":[["text","      "],["append",["helper",["managed-iframe"],null,[["url","isHidden","audioManager","isQuickLoadEnabled"],[["get",["tftHomeOverrideUrl"]],["get",["isHidden"]],["get",["audioManager"]],true]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["shouldShowIframe"]]],null,5]],"locals":[]}],"hasPartials":false}',
                 meta: {}
@@ -863,41 +842,41 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            const i = n(1);
-            n(24), t.default = i.Ember.Component.extend({
+            const a = n(1);
+            n(24), t.default = a.Ember.Component.extend({
                 classNames: ["tft-home-card"],
                 classNameBindings: ["isArticleRichText:tft-home-card--article", "isAssetHighlight:tft-home-card--asset"],
                 layout: n(25),
                 data: null,
-                isArticleRichText: i.Ember.computed("data.type", (function() {
+                isArticleRichText: a.Ember.computed("data.type", (function() {
                     return "articleRichText" === this.get("data.type")
                 })),
-                isAssetHighlight: i.Ember.computed("data.type", (function() {
+                isAssetHighlight: a.Ember.computed("data.type", (function() {
                     return "assetHighlight" === this.get("data.type")
                 })),
-                richTextBody: i.Ember.computed.alias("data.richText.body"),
-                headerTitle: i.Ember.computed.alias("data.header.title"),
-                headerSubtitle: i.Ember.computed.alias("data.header.subtitle"),
-                headerSupertitle: i.Ember.computed.alias("data.header.supertitle"),
-                headerLinks: i.Ember.computed.alias("data.header.links"),
-                firstCard: i.Ember.computed("headerLinks", (function() {
+                richTextBody: a.Ember.computed.alias("data.richText.body"),
+                headerTitle: a.Ember.computed.alias("data.header.title"),
+                headerSubtitle: a.Ember.computed.alias("data.header.subtitle"),
+                headerSupertitle: a.Ember.computed.alias("data.header.supertitle"),
+                headerLinks: a.Ember.computed.alias("data.header.links"),
+                firstCard: a.Ember.computed("headerLinks", (function() {
                     const e = this.get("headerLinks");
                     return e && e.length > 0 ? e[0] : null
                 })),
-                firstCardMediaUrl: i.Ember.computed.alias("firstCard.media.url"),
-                firstCardTitle: i.Ember.computed.alias("firstCard.title"),
-                firstCardActionType: i.Ember.computed.alias("firstCard.action.type"),
-                firstCardUrl: i.Ember.computed.alias("firstCard.action.payload.url"),
-                firstCardYoutubeId: i.Ember.computed.alias("firstCard.action.payload.youtubeId"),
-                secondCard: i.Ember.computed("headerLinks", (function() {
+                firstCardMediaUrl: a.Ember.computed.alias("firstCard.media.url"),
+                firstCardTitle: a.Ember.computed.alias("firstCard.title"),
+                firstCardActionType: a.Ember.computed.alias("firstCard.action.type"),
+                firstCardUrl: a.Ember.computed.alias("firstCard.action.payload.url"),
+                firstCardYoutubeId: a.Ember.computed.alias("firstCard.action.payload.youtubeId"),
+                secondCard: a.Ember.computed("headerLinks", (function() {
                     const e = this.get("headerLinks");
                     return e && e.length > 1 ? e[1] : null
                 })),
-                secondCardMediaUrl: i.Ember.computed.alias("secondCard.media.url"),
-                secondCardTitle: i.Ember.computed.alias("secondCard.title"),
-                secondCardActionType: i.Ember.computed.alias("secondCard.action.type"),
-                secondCardUrl: i.Ember.computed.alias("secondCard.action.payload.url"),
-                secondCardYoutubeId: i.Ember.computed.alias("secondCard.action.payload.youtubeId"),
+                secondCardMediaUrl: a.Ember.computed.alias("secondCard.media.url"),
+                secondCardTitle: a.Ember.computed.alias("secondCard.title"),
+                secondCardActionType: a.Ember.computed.alias("secondCard.action.type"),
+                secondCardUrl: a.Ember.computed.alias("secondCard.action.payload.url"),
+                secondCardYoutubeId: a.Ember.computed.alias("secondCard.action.payload.youtubeId"),
                 didInsertElement() {
                     this._super(...arguments), this.element.addEventListener("mouseenter", this._onMouseEnter.bind(this)), this.element.addEventListener("mouseleave", this._onMouseLeave.bind(this))
                 },
@@ -923,15 +902,15 @@
                     const t = `https://www.youtube.com/embed/${e}`,
                         n = document.createElement("iframe");
                     n.src = t, n.width = "100%", n.height = "100%", n.setAttribute("frameborder", "0"), n.setAttribute("allow", "encrypted-media"), n.setAttribute("allowfullscreen", "");
-                    const s = i.navigation.getFullPageModalManager().open({
+                    const s = a.navigation.getFullPageModalManager().open({
                             data: {
                                 contents: n
                             }
                         }),
-                        a = () => {
-                            n.src = "", s.removeEventListener("fullPageModalClose", a)
+                        i = () => {
+                            n.src = "", s.removeEventListener("fullPageModalClose", i)
                         };
-                    s.addEventListener("fullPageModalClose", a)
+                    s.addEventListener("fullPageModalClose", i)
                 },
                 actions: {
                     onFirstCardClick() {
@@ -946,8 +925,8 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const i = n(1).Ember;
-            e.exports = i.HTMLBars.template({
+            const a = n(1).Ember;
+            e.exports = a.HTMLBars.template({
                 id: "2QfDQKoA",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\templates\\\\tft-home-card.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\styles\\\\tft-home-card.styl\\" js-path=\\"null\\" "],["text","\\n"],["block",["if"],[["get",["isAssetHighlight"]]],null,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["open-element","button",[]],["static-attr","class","tft-home-card__card"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onSecondCardClick"],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","tft-home-card__card-image"],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","src",["unknown",["secondCardMediaUrl"]],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","tft-home-card__card-image-gradient"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","tft-home-card__external-link tft-home-card__external-link--hover"],["static-attr","src","fe/lol-navigation/activity-center/external-link-hover.svg"],["flush-element"],["close-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","tft-home-card__external-link"],["static-attr","src","fe/lol-navigation/activity-center/external-link-rest.svg"],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","tft-home-card__card-content"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","tft-home-card__card-label"],["flush-element"],["append",["unknown",["secondCardTitle"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["open-element","button",[]],["static-attr","class","tft-home-card__card"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onFirstCardClick"],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","tft-home-card__card-image"],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","src",["unknown",["firstCardMediaUrl"]],null],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","tft-home-card__card-image-gradient"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","tft-home-card__external-link tft-home-card__external-link--hover"],["static-attr","src","fe/lol-navigation/activity-center/external-link-hover.svg"],["flush-element"],["close-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","tft-home-card__external-link"],["static-attr","src","fe/lol-navigation/activity-center/external-link-rest.svg"],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","tft-home-card__card-content"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","tft-home-card__card-label"],["flush-element"],["append",["unknown",["firstCardTitle"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["firstCard"]]],null,1],["block",["if"],[["get",["secondCard"]]],null,0]],"locals":[]}],"hasPartials":false}',
                 meta: {}
@@ -957,8 +936,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            const i = n(1);
-            n(27), t.default = i.Ember.Component.extend({
+            const a = n(1);
+            n(27), t.default = a.Ember.Component.extend({
                 classNames: ["tft-home-header"],
                 layout: n(28),
                 headerData: null
@@ -967,8 +946,8 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const i = n(1).Ember;
-            e.exports = i.HTMLBars.template({
+            const a = n(1).Ember;
+            e.exports = a.HTMLBars.template({
                 id: "I79rKYnF",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\templates\\\\tft-home-header.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\styles\\\\tft-home-header.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","tft-home-header_container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["headerData","imageUrl"]]],null,4],["text","\\n"],["block",["if"],[["get",["headerData","supertitle"]]],null,3],["text","\\n"],["block",["if"],[["get",["headerData","title"]]],null,2],["text","\\n"],["block",["if"],[["get",["headerData","subtitle"]]],null,1],["text","\\n"],["block",["if"],[["get",["headerData","description"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","p",[]],["static-attr","class","tft-home-header_description"],["flush-element"],["text","\\n    "],["append",["helper",["sanitize"],[["get",["headerData","description"]]],null],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","h4",[]],["static-attr","class","tft-home-header_subtitle"],["flush-element"],["text","\\n    "],["append",["helper",["sanitize"],[["get",["headerData","subtitle"]]],null],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","h1",[]],["static-attr","class","tft-home-header_title"],["flush-element"],["text","\\n    "],["append",["helper",["sanitize"],[["get",["headerData","title"]]],null],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","tft-home-header_super-title_container"],["flush-element"],["text","\\n    "],["open-element","h5",[]],["static-attr","class","tft-home-header_super-title"],["flush-element"],["text","\\n      "],["append",["helper",["sanitize"],[["get",["headerData","supertitle"]]],null],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","img",[]],["static-attr","class","tft-home-header_image"],["dynamic-attr","src",["unknown",["headerData","imageUrl"]],null],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
@@ -978,15 +957,15 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            const i = n(1);
-            n(30), t.default = i.Ember.Component.extend({
+            const a = n(1);
+            n(30), t.default = a.Ember.Component.extend({
                 classNames: ["tft-home-background"],
                 layout: n(31),
                 src: null,
-                imageSrc: i.Ember.computed("src", (function() {
+                imageSrc: a.Ember.computed("src", (function() {
                     return this.get("src") || "/lol-game-data/assets/ASSETS/UX/TFT/OutOfGame/Backgrounds/gameflow.jpg"
                 })),
-                imageClass: i.Ember.computed("src", (function() {
+                imageClass: a.Ember.computed("src", (function() {
                     return this.get("src") ? "" : "tft-home-background__image--default"
                 })),
                 didInsertElement() {
@@ -997,20 +976,20 @@
                         const e = this.get("src"),
                             t = [];
                         if (e) {
-                            const n = new i.Ember.RSVP.Promise(((t, n) => {
-                                const i = new Image;
-                                i.src = e, i.onload = t({
+                            const n = new a.Ember.RSVP.Promise(((t, n) => {
+                                const a = new Image;
+                                a.src = e, a.onload = t({
                                     url: e
-                                }), i.onerror = n({
+                                }), a.onerror = n({
                                     url: e
                                 })
                             }));
                             t.push(n)
                         }
-                        i.Ember.RSVP.allSettled(t).then((() => {
+                        a.Ember.RSVP.allSettled(t).then((() => {
                             this.get("onMediaLoaded")()
                         })).catch((e => {
-                            i.logger.info(`Error Loading Media: ${e}`), this.get("onMediaLoaded")()
+                            a.logger.info(`Error Loading Media: ${e}`), this.get("onMediaLoaded")()
                         }))
                     }
                 }
@@ -1019,8 +998,8 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const i = n(1).Ember;
-            e.exports = i.HTMLBars.template({
+            const a = n(1).Ember;
+            e.exports = a.HTMLBars.template({
                 id: "xLAWxC/1",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\templates\\\\tft-home-background.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\styles\\\\tft-home-background.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","img",[]],["dynamic-attr","class",["concat",["tft-home-background__image ",["unknown",["imageClass"]]]]],["dynamic-attr","src",["unknown",["imageSrc"]],null],["static-attr","alt",""],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
@@ -1030,8 +1009,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            const i = n(1);
-            n(33), t.default = i.Ember.Component.extend({
+            const a = n(1);
+            n(33), t.default = a.Ember.Component.extend({
                 classNames: ["tft-home-loading-screen"],
                 layout: n(34)
             })
@@ -1039,8 +1018,8 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const i = n(1).Ember;
-            e.exports = i.HTMLBars.template({
+            const a = n(1).Ember;
+            e.exports = a.HTMLBars.template({
                 id: "/5ekeBdg",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\templates\\\\tft-home-loading-screen.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\styles\\\\tft-home-loading-screen.styl\\" js-path=\\"null\\" "],["text","\\n"],["append",["helper",["uikit-spinner"],null,[["class","width","height"],["tft-home-loading-screen__spinner","40px","40px"]]],false],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
@@ -1050,8 +1029,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            const i = n(1);
-            n(36), t.default = i.Ember.Component.extend({
+            const a = n(1);
+            n(36), t.default = a.Ember.Component.extend({
                 classNames: ["tft-launch-button-wrapper"],
                 layout: n(37),
                 isEnabled: !1,
@@ -1065,22 +1044,22 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const i = n(1).Ember;
-            e.exports = i.HTMLBars.template({
+            const a = n(1).Ember;
+            e.exports = a.HTMLBars.template({
                 id: "JfrH+11C",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\templates\\\\tft-launch-button.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\styles\\\\tft-launch-button.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","tft-launch-button-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["tft-launch-button-bg ",["helper",["unless"],[["get",["isEnabled"]],"disabled"],null]]]],["flush-element"],["text","\\n    "],["open-element","button",[]],["dynamic-attr","class",["concat",["tft-launch-button-btn ",["helper",["unless"],[["get",["isEnabled"]],"disabled"],null]]]],["modifier",["action"],[["get",[null]],"handleClick"]],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","tft-launch-button-label"],["flush-element"],["append",["unknown",["buttonText"]],false],["close-element"],["text","\\n      "],["yield","default"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const i = n(1).Ember;
-            e.exports = i.HTMLBars.template({
+            const a = n(1).Ember;
+            e.exports = a.HTMLBars.template({
                 id: "XfSrU8j1",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\templates\\\\application.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","rcp-fe-tft-application"],["flush-element"],["text","\\n  "],["append",["unknown",["outlet"]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
-            const i = n(1).Ember;
-            e.exports = i.HTMLBars.template({
+            const a = n(1).Ember;
+            e.exports = a.HTMLBars.template({
                 id: "ARbU6/v2",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\templates\\\\index.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["append",["helper",["tft-home-content"],null,[["pageContent","isLoading"],[["get",["pageContent"]],["get",["isLoading"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
@@ -1090,26 +1069,26 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            const i = n(1);
-            n(41), t.default = i.Ember.Component.extend({
+            const a = n(1);
+            n(41), t.default = a.Ember.Component.extend({
                 classNames: ["tft-bridge-announcement-modal"],
-                tra: i.tra,
+                tra: a.tra,
                 layout: n(42),
-                bridgeService: i.Ember.inject.service("bridge"),
+                bridgeService: a.Ember.inject.service("bridge"),
                 didInsertElement() {
                     this._super(...arguments)
                 },
                 willDestroyElement() {
                     this._super(...arguments)
                 },
-                hasNotSeenAnnouncement: i.Ember.computed.not("bridgeService.bridgeAnnouncementSeen"),
-                showBridgeAnnouncement: i.Ember.computed.and("bridgeService.bridgeEnabled", "hasNotSeenAnnouncement"),
-                bridgeAnnouncementBody: i.Ember.computed((function() {
+                hasNotSeenAnnouncement: a.Ember.computed.not("bridgeService.bridgeAnnouncementSeen"),
+                showBridgeAnnouncement: a.Ember.computed.and("bridgeService.bridgeEnabled", "hasNotSeenAnnouncement"),
+                bridgeAnnouncementBody: a.Ember.computed((function() {
                     const e = `<a class='' href='${this.get("tra.pardon_our_dust_link")}' target='_blank'>${this.get("tra.pardon_our_dust_link_text")}</a>`,
                         t = this.get("tra").formatString("pardon_our_dust_modal_body", {
                             link: e
                         });
-                    return i.htmlSanitizer.sanitize(t)
+                    return a.htmlSanitizer.sanitize(t)
                 })),
                 actions: {
                     confirm: function() {
@@ -1121,8 +1100,8 @@
             "use strict";
             n.r(t)
         }, (e, t, n) => {
-            const i = n(1).Ember;
-            e.exports = i.HTMLBars.template({
+            const a = n(1).Ember;
+            e.exports = a.HTMLBars.template({
                 id: "daE4kkFT",
                 block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\templates\\\\tft-bridge-announcement-modal.hbs\\" style-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-tft\\\\src\\\\app\\\\styles\\\\tft-bridge-announcement-modal.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lc-alert-modal",[]],["dynamic-attr","open",["unknown",["showBridgeAnnouncement"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"confirm"],null],null],["dynamic-attr","okText",["unknown",["tra","dialog_accept"]],null],["dynamic-attr","dismissible",true,null],["static-attr","dismissibleType","inside"],["flush-element"],["text","\\n  "],["open-element","lc-modal-content",[]],["flush-element"],["text","\\n    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","dialog-large"],["flush-element"],["text","\\n      "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","pardon_our_dust_modal_title"]],false],["close-element"],["text","\\n      "],["open-element","p",[]],["flush-element"],["append",["unknown",["bridgeAnnouncementBody"]],true],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
@@ -1130,13 +1109,13 @@
         }],
         t = {};
 
-    function n(i) {
-        var s = t[i];
+    function n(a) {
+        var s = t[a];
         if (void 0 !== s) return s.exports;
-        var a = t[i] = {
+        var i = t[a] = {
             exports: {}
         };
-        return e[i].call(a.exports, a, a.exports, n), a.exports
+        return e[a].call(i.exports, i, i.exports, n), i.exports
     }
     n.r = e => {
         "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {

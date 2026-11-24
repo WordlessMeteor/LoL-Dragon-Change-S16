@@ -1,0 +1,676 @@
+{
+    "id": 60101,
+    "contentId": "51d5f896-b1c1-419a-b868-1a290b0ed381",
+    "relatedPrimeContentId": "72ed9e0c-570a-4d97-a9ef-15c8b488add7",
+    "relatedPrimeItemId": 101,
+    "name": "远古巫灵",
+    "alias": "Jade_Xerath",
+    "title": "泽拉斯",
+    "shortBio": "- 被动技能会根据法术强度提供额外护甲。<br>- Q技能不再需要引导。<br>- W变为新技能：原地锚定以获得额外距离和法术穿透。<br>- E变为新技能：对敌人造成伤害并将其标记，下一次技能命中时可令其晕眩。<br>- R技能不再让泽拉斯在全部三次施放期间都定在原地无法移动。",
+    "isVisibleInClient": true,
+    "tacticalInfo": {
+        "style": 9,
+        "difficulty": 1,
+        "damageType": "kMagic",
+        "attackType": "ranged"
+    },
+    "playstyleInfo": {
+        "damage": 3,
+        "durability": 1,
+        "crowdControl": 2,
+        "mobility": 1,
+        "utility": 1
+    },
+    "championTagInfo": {
+        "championTagPrimary": "远距离",
+        "championTagSecondary": "群体效果"
+    },
+    "squarePortraitPath": "/lol-game-data/assets/v1/champion-icons/60101.png",
+    "stingerSfxPath": "/lol-game-data/assets/v1/champion-sfx-audios/60101.ogg",
+    "chooseVoPath": "/lol-game-data/assets/v1/champion-choose-vo/60101.ogg",
+    "banVoPath": "/lol-game-data/assets/v1/champion-ban-vo/60101.ogg",
+    "roles": [
+        "mage",
+        "support"
+    ],
+    "recommendedItemDefaults": [],
+    "skins": [
+        {
+            "id": 60101000,
+            "contentId": "47afff63-079e-498c-8dc9-19f2f0a5606c",
+            "relatedPrimeContentId": "586c2161-018b-4a60-8f6b-e5410abe5690",
+            "relatedPrimeItemId": 101000,
+            "isBase": true,
+            "name": "远古巫灵",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Xerath/Skins/Base/Images/jade_xerath_splash_centered_0.project_jade_xerath.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Xerath/Skins/Base/Images/jade_xerath_splash_uncentered_0.project_jade_xerath.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Xerath/Skins/Base/Images/jade_xerath_splash_tile_0.project_jade_xerath.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Xerath/Skins/Base/Jade_XerathLoadScreen_0.project_jade_xerath.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Xerath/Skins/Base/Jade_XerathLoadScreen_0_LE.project_jade_xerath.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": null
+        }
+    ],
+    "passive": {
+        "name": "飞升形态",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Xerath_AscendedForm.png",
+        "abilityVideoPath": "champion-abilities/60101/ability_60101_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/60101/ability_60101_P1.jpg",
+        "description": "泽拉斯汲取奥术能量，基于自身法术强度获得额外护甲。"
+    },
+    "spells": [
+        {
+            "spellKey": "q",
+            "name": "奥能脉冲",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Xerath_Arcanopulse.project_jade_16_18.png",
+            "abilityVideoPath": "champion-abilities/60101/ability_60101_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/60101/ability_60101_Q1.jpg",
+            "cost": "@Cost@ @AbilityResourceName@",
+            "cooldown": "@Cooldown@秒 %i:cooldown%",
+            "description": "泽拉斯聚集能量，随后发射出一道超远射程能量光束，对命中的所有敌人造成伤害。",
+            "dynamicDescription": "泽拉斯聚集能量，随后发射出一道超远射程能量光束，对所有命中的敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "range": [
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
+            ],
+            "costCoefficients": [
+                65.0,
+                70.0,
+                75.0,
+                80.0,
+                85.0,
+                85.0
+            ],
+            "cooldownCoefficients": [
+                7.0,
+                6.5,
+                6.0,
+                5.5,
+                5.0,
+                5.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    9.0,
+                    8.0,
+                    7.0,
+                    6.0,
+                    5.0,
+                    5.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "w",
+            "name": "能量之座",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Xerath_LocusOfPower.png",
+            "abilityVideoPath": "champion-abilities/60101/ability_60101_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/60101/ability_60101_W1.jpg",
+            "cost": "无消耗",
+            "cooldown": "@Cooldown@秒 %i:cooldown%",
+            "description": "泽拉斯定身自己，提高所有技能的距离，并获得额外法术穿透。效果结束时，泽拉斯的移动速度短暂提升。",
+            "dynamicDescription": "泽拉斯定身自己最多@RootDuration@秒，提高所有技能的距离，并获得<magicPen>@MagicPenValue@%法术穿透</magicPen>。他可再次释放该技能，或进行移动，提前取消效果。<br><br>效果结束时，泽拉斯获得持续@MovementSpeedDuration@秒的<speed>@MovementSpeedValue*100@%移动速度</speed>。@SpellModifierDescriptionAppend@",
+            "range": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "costCoefficients": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "cooldownCoefficients": [
+                20.0,
+                16.0,
+                12.0,
+                8.0,
+                4.0,
+                4.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "e",
+            "name": "法师锁链",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Xerath_MageChains.png",
+            "abilityVideoPath": "champion-abilities/60101/ability_60101_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/60101/ability_60101_E1.jpg",
+            "cost": "@Cost@ @AbilityResourceName@",
+            "cooldown": "@Cooldown@秒 %i:cooldown%",
+            "description": "泽拉斯对单个敌人造成魔法伤害，并为其添加不稳定魔法标记。泽拉斯的下一个技能命中该敌人时，会使其晕眩。",
+            "dynamicDescription": "泽拉斯对单个敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>，并为其施加<keywordMajor>不稳定魔法</keywordMajor>标记。泽拉斯的下一个技能命中该敌人时，会使其<status>晕眩</status>@StunDuration@秒。@SpellModifierDescriptionAppend@",
+            "range": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "costCoefficients": [
+                70.0,
+                75.0,
+                80.0,
+                85.0,
+                90.0,
+                90.0
+            ],
+            "cooldownCoefficients": [
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                8.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        },
+        {
+            "spellKey": "r",
+            "name": "奥术弹幕",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Xerath_ArcaneBarrage.project_jade_16_18.png",
+            "abilityVideoPath": "champion-abilities/60101/ability_60101_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/60101/ability_60101_R1.jpg",
+            "cost": "@Cost@ @AbilityResourceName@",
+            "cooldown": "@Cooldown@秒 %i:cooldown%",
+            "description": "泽拉斯向目标区域轰击奥术能量，对区域内的所有敌人造成魔法伤害。在进入冷却以前可被施放最多三次。",
+            "dynamicDescription": "泽拉斯向目标区域轰击奥术能量，对区域内的所有敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。在进入冷却以前可被施放最多@AvailableCasts@次。@SpellModifierDescriptionAppend@",
+            "range": [
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0
+            ],
+            "costCoefficients": [
+                150.0,
+                180.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "cooldownCoefficients": [
+                80.0,
+                70.0,
+                60.0,
+                60.0,
+                60.0,
+                60.0
+            ],
+            "coefficients": {
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
+            },
+            "effectAmounts": {
+                "Effect1Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect2Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect3Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect4Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect5Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect6Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect7Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect8Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect9Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "Effect10Amount": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "ammo": {
+                "ammoRechargeTime": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "maxAmmo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "maxLevel": 0
+        }
+    ]
+}

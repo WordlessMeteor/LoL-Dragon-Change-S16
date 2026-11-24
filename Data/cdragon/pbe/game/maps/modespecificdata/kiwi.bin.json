@@ -589936,8 +589936,8 @@
             "Maps/ModeSpecificData/Augments/BiggestSnowballEver/Augment_BiggestSnowballEver_Knockup",
             "Maps/ModeSpecificData/Augments/BiggestSnowballEver/Augment_BiggestSnowballEver_MinionSlow",
             "{ffd51dd5}",
-            "{d03b6714}",
-            "{5004be24}",
+            "Shared/Spells/Augment_BiggestSnowballEver_GrowingMissile",
+            "Shared/Spells/Augment_BiggestSnowballEver_GrowingBounce",
             "{a06685e9}"
         ],
         "mAugmentTags": 64,
@@ -593801,31 +593801,18 @@
                 {
                     "name": "StunDuration",
                     "values": [
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "MissileStartSpeedRatio",
-                    "values": [
-                        0.6499999761581421,
-                        0.6499999761581421,
-                        0.6499999761581421,
-                        0.6499999761581421,
-                        0.6499999761581421,
-                        0.6499999761581421,
-                        0.6499999761581421
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MissileStartSizeRatio",
                     "values": [
                         0.4000000059604645,
                         0.4000000059604645,
@@ -593838,15 +593825,28 @@
                     "__type": "SpellDataValue"
                 },
                 {
+                    "name": "MissileStartSizeRatio",
+                    "values": [
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
                     "name": "MissileGrowthDistanceRatio",
                     "values": [
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -593901,6 +593901,19 @@
                         50.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SnowballDamageMinPercent",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -593923,6 +593936,14 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                },
+                "{a3239fe6}": {
+                    "mMultiplier": {
+                        "mDataValue": "{06ebf8bf}",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "SnowballDamage",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mImgIconName": [
@@ -1220355,9 +1220376,9 @@
         },
         "__type": "TooltipFormat"
     },
-    "{5004be24}": {
+    "Shared/Spells/Augment_BiggestSnowballEver_GrowingBounce": {
         "ObjectName": "Augment_BiggestSnowballEver_GrowingBounce",
-        "objectPath": "{5004be24}",
+        "objectPath": "Shared/Spells/Augment_BiggestSnowballEver_GrowingBounce",
         "mScriptName": "Augment_BiggestSnowballEver_GrowingBounce",
         "OverrideScriptName": "Augment_SnowballMissile_Bounce",
         "mSpell": {
@@ -1220470,9 +1220491,9 @@
         },
         "__type": "SpellObject"
     },
-    "{d03b6714}": {
+    "Shared/Spells/Augment_BiggestSnowballEver_GrowingMissile": {
         "ObjectName": "Augment_BiggestSnowballEver_GrowingMissile",
-        "objectPath": "{d03b6714}",
+        "objectPath": "Shared/Spells/Augment_BiggestSnowballEver_GrowingMissile",
         "mScriptName": "Augment_BiggestSnowballEver_GrowingMissile",
         "OverrideScriptName": "Augment_SnowballMissile_NoBounce",
         "mSpell": {
