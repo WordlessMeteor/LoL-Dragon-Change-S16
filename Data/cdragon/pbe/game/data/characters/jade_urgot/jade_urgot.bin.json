@@ -1,8 +1,8 @@
 {
-    "{fb22b3b2}": {
-        "mRootSpell": "{11be2e30}",
+    "Characters/Jade_Urgot/Spells/Jade_UrgotQAbility": {
+        "mRootSpell": "Characters/Jade_Urgot/Spells/Jade_UrgotQAbility/Jade_UrgotQ",
         "mChildSpells": [
-            "{11be2e30}",
+            "Characters/Jade_Urgot/Spells/Jade_UrgotQAbility/Jade_UrgotQ",
             "{2723d756}",
             "{09fcd82f}"
         ],
@@ -132,7 +132,7 @@
             },
             "mCastType": 1,
             "missileSpeed": 0.0,
-            "mMissileEffectKey": "{04e90d9f}",
+            "mMissileEffectKey": "Jade_UrgotLineMissile_mis_311",
             "mFloatVarsDecimals": [
                 0,
                 0,
@@ -193,9 +193,9 @@
         },
         "__type": "SpellObject"
     },
-    "{11be2e30}": {
+    "Characters/Jade_Urgot/Spells/Jade_UrgotQAbility/Jade_UrgotQ": {
         "ObjectName": "Jade_UrgotQ",
-        "objectPath": "{11be2e30}",
+        "objectPath": "Characters/Jade_Urgot/Spells/Jade_UrgotQAbility/Jade_UrgotQ",
         "mScriptName": "Jade_UrgotQ",
         "mSpell": {
             "mAffectsTypeFlags": 6666,
@@ -535,7 +535,7 @@
             },
             "mCastType": 1,
             "missileSpeed": 0.0,
-            "mMissileEffectKey": "{a0844a8c}",
+            "mMissileEffectKey": "Jade_UrgotLobMissile_mis_311",
             "mFloatVarsDecimals": [
                 0,
                 0,
@@ -581,9 +581,9 @@
         },
         "__type": "SpellObject"
     },
-    "{0dd5d767}": {
+    "Characters/Jade_Urgot/Spells/Jade_UrgotSkin03CritDummy": {
         "ObjectName": "Jade_UrgotSkin03CritDummy",
-        "objectPath": "{0dd5d767}",
+        "objectPath": "Characters/Jade_Urgot/Spells/Jade_UrgotSkin03CritDummy",
         "mScriptName": "Jade_UrgotSkin03CritDummy",
         "mSpell": {
             "mAffectsTypeFlags": 8191,
@@ -656,10 +656,10 @@
         },
         "__type": "SpellObject"
     },
-    "{6b930109}": {
-        "mRootSpell": "{7f72a266}",
+    "Characters/Jade_Urgot/Spells/Jade_UrgotRAbility": {
+        "mRootSpell": "Characters/Jade_Urgot/Spells/Jade_UrgotRAbility/Jade_UrgotR",
         "mChildSpells": [
-            "{7f72a266}",
+            "Characters/Jade_Urgot/Spells/Jade_UrgotRAbility/Jade_UrgotR",
             "{dfa7c27a}",
             "{33cdc47e}",
             "{86fc5b4d}"
@@ -1029,9 +1029,9 @@
         },
         "__type": "SpellObject"
     },
-    "{7f72a266}": {
+    "Characters/Jade_Urgot/Spells/Jade_UrgotRAbility/Jade_UrgotR": {
         "ObjectName": "Jade_UrgotR",
-        "objectPath": "{7f72a266}",
+        "objectPath": "Characters/Jade_Urgot/Spells/Jade_UrgotRAbility/Jade_UrgotR",
         "mScriptName": "Jade_UrgotR",
         "mSpell": {
             "flags": 4,
@@ -1131,15 +1131,15 @@
             ],
             "Cooldown": {
                 "values": [
+                    140.0,
                     120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
+                    100.0,
+                    80.0,
+                    60.0,
+                    40.0,
+                    20.0
                 ],
-                "{0a3e0478}": 120.0,
+                "{0a3e0478}": 140.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -1192,14 +1192,14 @@
             ],
             "manaValues": {
                 "values": [
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0,
-                    120.0
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
                 ],
-                "{0a3e0478}": 120.0,
+                "{0a3e0478}": 100.0,
                 "__type": "{630af303}"
             },
             "selectionPriority": 1,
@@ -1230,6 +1230,10 @@
                                 {
                                     "type": "DefenseIncrease",
                                     "nameOverride": "Spell_ListType_ArmorandMagicResist",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -1412,7 +1416,7 @@
             "mCastType": 1,
             "castFrame": 8.5,
             "missileSpeed": 1000.0,
-            "mMissileEffectKey": "{797234f4}",
+            "mMissileEffectKey": "Jade_SwapArrow_green_311",
             "mLineWidth": 80.0,
             "mana": [
                 100.0,
@@ -1799,7 +1803,7 @@
             "mCastType": 1,
             "castFrame": 8.5,
             "missileSpeed": 1000.0,
-            "mMissileEffectKey": "{120507d4}",
+            "mMissileEffectKey": "Jade_SwapArrow_red_311",
             "mLineWidth": 80.0,
             "mana": [
                 100.0,
@@ -1886,10 +1890,10 @@
         },
         "__type": "SpellObject"
     },
-    "{2bd4036e}": {
-        "mRootSpell": "{50afd080}",
+    "Characters/Jade_Urgot/Spells/Jade_UrgotEAbility": {
+        "mRootSpell": "Characters/Jade_Urgot/Spells/Jade_UrgotEAbility/Jade_UrgotE",
         "mChildSpells": [
-            "{50afd080}",
+            "Characters/Jade_Urgot/Spells/Jade_UrgotEAbility/Jade_UrgotE",
             "{187e5c5f}",
             "{9c248422}"
         ],
@@ -2029,7 +2033,7 @@
             "mCastType": 1,
             "castFrame": 7.5,
             "missileSpeed": 1500.0,
-            "mMissileEffectKey": "{8a4f0b23}",
+            "mMissileEffectKey": "Jade_Urgot_Q_mis",
             "mLineWidth": 100.0,
             "mFloatVarsDecimals": [
                 0,
@@ -2085,9 +2089,9 @@
         },
         "__type": "SpellObject"
     },
-    "{50afd080}": {
+    "Characters/Jade_Urgot/Spells/Jade_UrgotEAbility/Jade_UrgotE": {
         "ObjectName": "Jade_UrgotE",
-        "objectPath": "{50afd080}",
+        "objectPath": "Characters/Jade_Urgot/Spells/Jade_UrgotEAbility/Jade_UrgotE",
         "mScriptName": "Jade_UrgotE",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -2531,7 +2535,7 @@
             "mCastType": 1,
             "castFrame": 7.5,
             "missileSpeed": 1500.0,
-            "mMissileEffectKey": "{196675c1}",
+            "mMissileEffectKey": "Jade_UrgotPlasmaGrenade_mis_311",
             "mLineWidth": 100.0,
             "mFloatVarsDecimals": [
                 0,
@@ -2644,8 +2648,8 @@
             "mCastType": 1,
             "castFrame": 8.0,
             "missileSpeed": 2500.0,
-            "mMissileEffectKey": "{f745504b}",
-            "mHitEffectKey": "{c8164309}",
+            "mMissileEffectKey": "Jade_UrgotBasicAttack_mis_311",
+            "mHitEffectKey": "Jade_Urgot_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2666,9 +2670,9 @@
         },
         "__type": "SpellObject"
     },
-    "{3cd0c3bd}": {
+    "Characters/Jade_Urgot/Spells/Jade_UrgotBasicAttack2": {
         "ObjectName": "Jade_UrgotBasicAttack2",
-        "objectPath": "{3cd0c3bd}",
+        "objectPath": "Characters/Jade_Urgot/Spells/Jade_UrgotBasicAttack2",
         "mScriptName": "Jade_UrgotBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -2704,7 +2708,7 @@
                     "mOffsetInitialTargetHeight": 150.0,
                     "mStartBoneName": "L_Weapon",
                     "mTargetBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
-                    "mSpeed": 1300.0,
+                    "mSpeed": 1600.0,
                     "__type": "FixedSpeedMovement"
                 },
                 "verticalFacing": {
@@ -2723,9 +2727,9 @@
             "mCastType": 1,
             "castFrame": 8.0,
             "missileSpeed": 1300.0,
-            "mMissileEffectKey": "{f745504b}",
+            "mMissileEffectKey": "Jade_UrgotBasicAttack_mis_311",
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{c8164309}",
+            "mHitEffectKey": "Jade_Urgot_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2746,9 +2750,9 @@
         },
         "__type": "SpellObject"
     },
-    "{4282d61d}": {
+    "Characters/Jade_Urgot/Spells/Jade_UrgotCritAttack": {
         "ObjectName": "Jade_UrgotCritAttack",
-        "objectPath": "{4282d61d}",
+        "objectPath": "Characters/Jade_Urgot/Spells/Jade_UrgotCritAttack",
         "mScriptName": "Jade_UrgotCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -2782,7 +2786,7 @@
                     "mTargetHeightAugment": 150.0,
                     "mOffsetInitialTargetHeight": 150.0,
                     "mStartBoneName": "L_Weapon",
-                    "mSpeed": 1300.0,
+                    "mSpeed": 1600.0,
                     "__type": "FixedSpeedMovement"
                 },
                 "verticalFacing": {
@@ -2801,7 +2805,7 @@
             "mCastType": 1,
             "castFrame": 8.0,
             "missileSpeed": 1300.0,
-            "mMissileEffectKey": "{f745504b}",
+            "mMissileEffectKey": "Jade_UrgotBasicAttack_mis_311",
             "mHitEffectOrientType": 2,
             "mHitEffectKey": "{30660118}",
             "bHaveHitBone": true,
@@ -2930,17 +2934,17 @@
         },
         "__type": "SpellObject"
     },
-    "{6274695c}": {
-        "mRootSpell": "{d8a54260}",
+    "Characters/Jade_Urgot/Spells/Jade_UrgotWAbility": {
+        "mRootSpell": "Characters/Jade_Urgot/Spells/Jade_UrgotWAbility/Jade_UrgotW",
         "mChildSpells": [
-            "{d8a54260}"
+            "Characters/Jade_Urgot/Spells/Jade_UrgotWAbility/Jade_UrgotW"
         ],
         "mName": "Jade_UrgotWAbility",
         "__type": "AbilityObject"
     },
-    "{ae90b75d}": {
+    "Characters/Jade_Urgot/Spells/Jade_UrgotBasicAttack": {
         "ObjectName": "Jade_UrgotBasicAttack",
-        "objectPath": "{ae90b75d}",
+        "objectPath": "Characters/Jade_Urgot/Spells/Jade_UrgotBasicAttack",
         "mScriptName": "Jade_UrgotBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -2975,7 +2979,7 @@
                     "mOffsetInitialTargetHeight": 150.0,
                     "mStartBoneName": "L_Weapon",
                     "mTargetBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
-                    "mSpeed": 1300.0,
+                    "mSpeed": 1600.0,
                     "__type": "FixedSpeedMovement"
                 },
                 "verticalFacing": {
@@ -2994,9 +2998,9 @@
             "mCastType": 1,
             "castFrame": 8.0,
             "missileSpeed": 1300.0,
-            "mMissileEffectKey": "{f745504b}",
+            "mMissileEffectKey": "Jade_UrgotBasicAttack_mis_311",
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{c8164309}",
+            "mHitEffectKey": "Jade_Urgot_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -3017,9 +3021,9 @@
         },
         "__type": "SpellObject"
     },
-    "{d8a54260}": {
+    "Characters/Jade_Urgot/Spells/Jade_UrgotWAbility/Jade_UrgotW": {
         "ObjectName": "Jade_UrgotW",
-        "objectPath": "{d8a54260}",
+        "objectPath": "Characters/Jade_Urgot/Spells/Jade_UrgotWAbility/Jade_UrgotW",
         "mScriptName": "Jade_UrgotW",
         "mSpell": {
             "flags": 4,
@@ -3028,13 +3032,13 @@
                 {
                     "name": "ShieldAmount",
                     "values": [
-                        30.0,
-                        80.0,
-                        130.0,
+                        20.0,
+                        60.0,
+                        100.0,
+                        140.0,
                         180.0,
-                        230.0,
-                        280.0,
-                        330.0
+                        220.0,
+                        260.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -3076,6 +3080,19 @@
                         1.5
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ManaRatio",
+                    "values": [
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066,
+                        0.07999999821186066
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -3089,6 +3106,10 @@
                             "OutputType": 2,
                             "mCoefficient": 0.800000011920929,
                             "__type": "StatByCoefficientCalculationPart"
+                        },
+                        {
+                            "DataValue": "ManaRatio",
+                            "__type": "{2b25a73a}"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -3315,7 +3336,7 @@
         },
         "__type": "SpellObject"
     },
-    "{18db06a3}": {
+    "Characters/Jade_Urgot/CharacterRecords/Root": {
         "mCharacterName": "Jade_Urgot",
         "baseHPModifiable": {
             "baseValue": 526.0,
@@ -3428,10 +3449,10 @@
             "Jade_UrgotRAbility/Jade_UrgotR"
         ],
         "spells": [
-            "{11be2e30}",
-            "{d8a54260}",
-            "{50afd080}",
-            "{7f72a266}"
+            "Characters/Jade_Urgot/Spells/Jade_UrgotQAbility/Jade_UrgotQ",
+            "Characters/Jade_Urgot/Spells/Jade_UrgotWAbility/Jade_UrgotW",
+            "Characters/Jade_Urgot/Spells/Jade_UrgotEAbility/Jade_UrgotE",
+            "Characters/Jade_Urgot/Spells/Jade_UrgotRAbility/Jade_UrgotR"
         ],
         "extraSpells": [
             "Jade_UrgotQMissile",
@@ -3470,17 +3491,17 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{2bd4036e}",
+            "Characters/Jade_Urgot/Spells/Jade_UrgotEAbility",
             "{8c4af0e4}",
-            "{fb22b3b2}",
-            "{6b930109}",
-            "{6274695c}"
+            "Characters/Jade_Urgot/Spells/Jade_UrgotQAbility",
+            "Characters/Jade_Urgot/Spells/Jade_UrgotRAbility",
+            "Characters/Jade_Urgot/Spells/Jade_UrgotWAbility"
         ],
         "passiveName": "Spell_UrgotPassive_Jade_Name",
         "passiveLuaName": "",
         "passiveToolTip": "Spell_UrgotPassive_Jade_Summary",
         "passiveSpell": "Jade_UrgotPassive",
-        "passive1IconName": "{b5aea98af70af072}",
+        "passive1IconName": "assets/characters/jade_urgot/hud/icons2d/jade_urgot_passive.dds",
         "name": "game_character_displayname_Jade_Urgot",
         "mUseCCAnimations": true,
         "selectionHeight": 155.55560302734375,
@@ -3593,7 +3614,7 @@
         ],
         "__type": "CharacterRecord"
     },
-    "{2404fb5f}": {
+    "Characters/Jade_Urgot/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "{302095f4}": {
@@ -3983,7 +4004,7 @@
         ],
         "__type": "RecSpellRankUpInfoList"
     },
-    "{46faa55b}": {
+    "Characters/Jade_Urgot/CAC/Jade_Urgot_Base": {
         "mCooldown": 15.0,
         "mSituations": {
             "MoveOrder2D": {
@@ -4217,7 +4238,7 @@
                                 "__type": "ContextualConditionCharacter"
                             },
                             {
-                                "mSpell": "{7f72a266}",
+                                "mSpell": "Characters/Jade_Urgot/Spells/Jade_UrgotRAbility/Jade_UrgotR",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -4252,7 +4273,7 @@
                                 "__type": "ContextualConditionCharacter"
                             },
                             {
-                                "mSpell": "{7f72a266}",
+                                "mSpell": "Characters/Jade_Urgot/Spells/Jade_UrgotRAbility/Jade_UrgotR",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -4287,7 +4308,7 @@
                                 "__type": "ContextualConditionCharacter"
                             },
                             {
-                                "mSpell": "{7f72a266}",
+                                "mSpell": "Characters/Jade_Urgot/Spells/Jade_UrgotRAbility/Jade_UrgotR",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -4322,7 +4343,7 @@
                                 "__type": "ContextualConditionCharacter"
                             },
                             {
-                                "mSpell": "{7f72a266}",
+                                "mSpell": "Characters/Jade_Urgot/Spells/Jade_UrgotRAbility/Jade_UrgotR",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -4357,7 +4378,7 @@
                                 "__type": "ContextualConditionCharacter"
                             },
                             {
-                                "mSpell": "{7f72a266}",
+                                "mSpell": "Characters/Jade_Urgot/Spells/Jade_UrgotRAbility/Jade_UrgotR",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -4392,7 +4413,7 @@
                                 "__type": "ContextualConditionCharacter"
                             },
                             {
-                                "mSpell": "{7f72a266}",
+                                "mSpell": "Characters/Jade_Urgot/Spells/Jade_UrgotRAbility/Jade_UrgotR",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -4427,7 +4448,7 @@
                                 "__type": "ContextualConditionCharacter"
                             },
                             {
-                                "mSpell": "{7f72a266}",
+                                "mSpell": "Characters/Jade_Urgot/Spells/Jade_UrgotRAbility/Jade_UrgotR",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -4462,7 +4483,7 @@
                                 "__type": "ContextualConditionCharacter"
                             },
                             {
-                                "mSpell": "{7f72a266}",
+                                "mSpell": "Characters/Jade_Urgot/Spells/Jade_UrgotRAbility/Jade_UrgotR",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -4497,7 +4518,7 @@
                                 "__type": "ContextualConditionCharacter"
                             },
                             {
-                                "mSpell": "{7f72a266}",
+                                "mSpell": "Characters/Jade_Urgot/Spells/Jade_UrgotRAbility/Jade_UrgotR",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -4532,7 +4553,7 @@
                                 "__type": "ContextualConditionCharacter"
                             },
                             {
-                                "mSpell": "{7f72a266}",
+                                "mSpell": "Characters/Jade_Urgot/Spells/Jade_UrgotRAbility/Jade_UrgotR",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -4567,7 +4588,7 @@
                                 "__type": "ContextualConditionCharacter"
                             },
                             {
-                                "mSpell": "{7f72a266}",
+                                "mSpell": "Characters/Jade_Urgot/Spells/Jade_UrgotRAbility/Jade_UrgotR",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -6827,7 +6848,7 @@
                         "mRuleName": "Basic 1",
                         "mConditions": [
                             {
-                                "mSpell": "{ae90b75d}",
+                                "mSpell": "Characters/Jade_Urgot/Spells/Jade_UrgotBasicAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -6853,7 +6874,7 @@
                         "mRuleName": "Basic 2",
                         "mConditions": [
                             {
-                                "mSpell": "{3cd0c3bd}",
+                                "mSpell": "Characters/Jade_Urgot/Spells/Jade_UrgotBasicAttack2",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -6905,7 +6926,7 @@
                         "mRuleName": "Crit",
                         "mConditions": [
                             {
-                                "mSpell": "{4282d61d}",
+                                "mSpell": "Characters/Jade_Urgot/Spells/Jade_UrgotCritAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -6982,7 +7003,7 @@
                         "mRuleName": "R",
                         "mConditions": [
                             {
-                                "mSpell": "{7f72a266}",
+                                "mSpell": "Characters/Jade_Urgot/Spells/Jade_UrgotRAbility/Jade_UrgotR",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {

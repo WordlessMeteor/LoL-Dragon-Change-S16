@@ -101,27 +101,26 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1),
-                i = l(n(12)),
-                o = l(n(47)),
-                s = n(48),
-                r = l(n(53));
+                i = r(n(12)),
+                o = n(47),
+                s = r(n(52));
 
-            function l(e) {
+            function r(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            const c = "/lol-npe-tutorial-path/v1/tutorials/init",
-                u = "/lol-lobby/v2/lobby",
-                m = "/lol-npe-tutorial-path/v1/settings",
-                p = "/lol-npe-tutorial-path/v1/tutorials",
-                d = a.dataBinding.bindTo(a.socket);
+            const l = "/lol-npe-tutorial-path/v1/tutorials/init",
+                c = "/lol-lobby/v2/lobby",
+                u = "/lol-npe-tutorial-path/v1/settings",
+                m = "/lol-npe-tutorial-path/v1/tutorials",
+                p = a.dataBinding.bindTo(a.socket);
             e.exports = class {
                 constructor(e) {
-                    this.screenRoot = e, this.isShowing = !1, this.application = null, this.binding = d, this.navigationElements = null, this.patcherButtonObserver = null
+                    this.screenRoot = e, this.isShowing = !1, this.application = null, this.binding = p, this.navigationElements = null, this.patcherButtonObserver = null
                 }
                 show() {
-                    d.get(m).then((e => {
+                    p.get(u).then((e => {
                         !e || e.hasSeenTutorialPath ? (this._tutorialSeriesOptIn(), this._addNewPlayerExperience()) : this._addFirstTimeNPE()
                     })).catch((e => {
                         a.logger.warning("There was a problem fetching required settings, with error:", e)
@@ -139,7 +138,7 @@
                                 })).catch((e => a.logger.error("Failed to show parties screen", e)))
                             })).catch((e => a.logger.error("Failed to create lobby", e)))
                         } else this.screenRoot.release(), this.isShowing = !1, this._deleteParty(), this._showNavigationElements(), a.Navigation.show(), a.Home.showHome();
-                        o.default.hideNewPlayerTutorial(), this.screenRoot.getElement().removeChild(this.application.domNode), this.application.onRemove(), this.application = null, this.binding.unobserve(p, this)
+                        this.screenRoot.getElement().removeChild(this.application.domNode), this.application.onRemove(), this.application = null, this.binding.unobserve(m, this)
                     }
                 }
                 _getExperimentQueueId(e) {
@@ -199,18 +198,16 @@
                     }))
                 }
                 _addNewPlayerExperience() {
-                    !this.isShowing && this.screenRoot && (a.logger.trace("NPE: Bumping new player experience viewport."), this.screenRoot.bump(), this.isShowing = !0, (0, r.default)((e => e.hasSeenTutorialPath = !0)), this._hideNavigationExceptPatcher(), o.default.showNewPlayerTutorial(), a.Telemetry.invokeWithLowProbability((() => {
+                    !this.isShowing && this.screenRoot && (a.logger.trace("NPE: Bumping new player experience viewport."), this.screenRoot.bump(), this.isShowing = !0, (0, s.default)((e => e.hasSeenTutorialPath = !0)), this._hideNavigationExceptPatcher(), a.Telemetry.invokeWithLowProbability((() => {
                         a.Telemetry.recordNonTimingTracingEvent("npe-tutorial-seen", 1, "click")
                     })), this.application = this._createApp(), this.screenRoot.getElement().appendChild(this.application.domNode))
                 }
                 _playFirstTutorial() {
                     const e = this;
                     return new Promise(((t, n) => {
-                        this.binding.observe(p, e, (a => {
-                            a && 0 !== a.length && (this.binding.unobserve(p, e), s.TutorialLauncher.playTutorial(a[0]).then((() => {
-                                o.default.sendTelemetryEvent("auto_launch_tutorial", {
-                                    queueId: a[0].queueId
-                                }), t()
+                        this.binding.observe(m, e, (a => {
+                            a && 0 !== a.length && (this.binding.unobserve(m, e), o.TutorialLauncher.playTutorial(a[0]).then((() => {
+                                t()
                             })).catch((() => {
                                 n()
                             })))
@@ -218,10 +215,10 @@
                     }))
                 }
                 _deleteParty() {
-                    return d.delete(u)
+                    return p.delete(c)
                 }
                 _tutorialSeriesOptIn() {
-                    return d.patch(c)
+                    return p.patch(l)
                 }
                 _createApp() {
                     const e = {
@@ -263,13 +260,13 @@
                         tra: e,
                         ComponentFactory: i.ComponentFactory,
                         NpeTutorialPathRootComponent: n(46),
-                        NpeTutorialPathFooterComponent: n(51),
-                        NpeTutorialPathCarouselComponent: n(58),
-                        NpeTutorialPathCarouselNavigationComponent: n(61),
-                        NpeTutorialPathItemCardComponent: n(64),
-                        NpeTutorialPathItemRewardComponent: n(67),
-                        NpeTutorialPathHeaderComponent: n(70),
-                        NpeTutorialPathFooterMissionsTrackerComponent: n(74),
+                        NpeTutorialPathFooterComponent: n(50),
+                        NpeTutorialPathCarouselComponent: n(57),
+                        NpeTutorialPathCarouselNavigationComponent: n(60),
+                        NpeTutorialPathItemCardComponent: n(63),
+                        NpeTutorialPathItemRewardComponent: n(66),
+                        NpeTutorialPathHeaderComponent: n(69),
+                        NpeTutorialPathFooterMissionsTrackerComponent: n(73),
                         MissionsButtonComponent: d.MissionsButtonComponent,
                         GameflowService: t,
                         NpeService: a,
@@ -286,7 +283,7 @@
                         name: "rcp-fe-lol-new-player-experience-reward-celebration",
                         tra: e,
                         ComponentFactory: i.ComponentFactory,
-                        NpeRewardCelebrationComponent: n(77),
+                        NpeRewardCelebrationComponent: n(76),
                         GameflowService: t,
                         NpeService: a,
                         GameDataService: r,
@@ -1281,40 +1278,37 @@
             })
         }, (e, t, n) => {
             "use strict";
-            var a, i = n(1),
-                o = (a = n(47)) && a.__esModule ? a : {
-                    default: a
-                },
-                s = n(48);
-            n(49), e.exports = i.Ember.Component.extend({
+            var a = n(1),
+                i = n(47);
+            n(48), e.exports = a.Ember.Component.extend({
                 classNames: ["npe-root-component"],
-                layout: n(50),
-                gameflowService: i.Ember.inject.service("gameflow"),
-                npeService: i.Ember.inject.service("npe"),
-                tutorials: i.Ember.computed.alias("npeService.tutorials"),
-                partiesService: i.Ember.inject.service("parties"),
-                endOfGameService: i.Ember.inject.service("end-of-game"),
-                uxSettingsService: i.Ember.inject.service("ux-settings"),
-                largeAreaAnimationsEnabled: i.Ember.computed.alias("uxSettingsService.largeAreaAnimationsEnabled"),
-                session: i.Ember.computed.alias("gameflowService.session"),
-                isWaitingForStats: i.Ember.computed.alias("gameflowService.isWaitingForStats"),
-                isEndOfGame: i.Ember.computed.alias("gameflowService.isEndOfGame"),
+                layout: n(49),
+                gameflowService: a.Ember.inject.service("gameflow"),
+                npeService: a.Ember.inject.service("npe"),
+                tutorials: a.Ember.computed.alias("npeService.tutorials"),
+                partiesService: a.Ember.inject.service("parties"),
+                endOfGameService: a.Ember.inject.service("end-of-game"),
+                uxSettingsService: a.Ember.inject.service("ux-settings"),
+                largeAreaAnimationsEnabled: a.Ember.computed.alias("uxSettingsService.largeAreaAnimationsEnabled"),
+                session: a.Ember.computed.alias("gameflowService.session"),
+                isWaitingForStats: a.Ember.computed.alias("gameflowService.isWaitingForStats"),
+                isEndOfGame: a.Ember.computed.alias("gameflowService.isEndOfGame"),
                 waitingForStatsTimer: null,
-                isTutorialDataReady: i.Ember.computed.gt("tutorials.length", 0),
+                isTutorialDataReady: a.Ember.computed.gt("tutorials.length", 0),
                 _selectedTutorialId: 0,
-                selectedTutorial: i.Ember.computed("tutorials.[]", "_selectedTutorialId", (function() {
+                selectedTutorial: a.Ember.computed("tutorials.[]", "_selectedTutorialId", (function() {
                     const e = this.get("tutorials");
                     return e && 0 !== e.length ? this.get("tutorials")[this.get("_selectedTutorialId")] : null
                 })),
-                endOfGameTutorialObserver: i.Ember.observer("session", "session.phase", (function() {
+                endOfGameTutorialObserver: a.Ember.observer("session", "session.phase", (function() {
                     const e = this.get("isWaitingForStats"),
                         t = this.get("isEndOfGame");
                     if (e && !this.waitingForStatsTimer) {
                         const e = this.get("npeService.waitingForStatsTimeout");
-                        this.waitingForStatsTimer = i.Ember.run.later((() => {
+                        this.waitingForStatsTimer = a.Ember.run.later((() => {
                             this.waitingForStatsTimer = null, this.finalizeTutorialGame()
                         }), e)
-                    } else !e && this.waitingForStatsTimer && (i.Ember.run.cancel(this.waitingForStatsTimer), this.waitingForStatsTimer = null);
+                    } else !e && this.waitingForStatsTimer && (a.Ember.run.cancel(this.waitingForStatsTimer), this.waitingForStatsTimer = null);
                     t && this.finalizeTutorialGame()
                 })),
                 finalizeTutorialGame() {
@@ -1324,7 +1318,7 @@
                     playTutorial: function() {
                         const e = this.get("selectedTutorial"),
                             t = this.get("npeService.experimentGroup");
-                        e.isExperimentCard && t ? this.get("closeNPE")(t) : (s.TutorialLauncher.playTutorial(e), o.default.logButtonClick("launch_tutorial", e.queueId))
+                        e.isExperimentCard && t ? this.get("closeNPE")(t) : i.TutorialLauncher.playTutorial(e)
                     },
                     selectTutorial: function(e) {
                         this.set("_selectedTutorialId", e)
@@ -1334,89 +1328,6 @@
                     }
                 }
             })
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var a = function(e, t) {
-                if (!t && e && e.__esModule) return e;
-                if (null === e || "object" != typeof e && "function" != typeof e) return {
-                    default: e
-                };
-                var n = i(t);
-                if (n && n.has(e)) return n.get(e);
-                var a = {},
-                    o = Object.defineProperty && Object.getOwnPropertyDescriptor;
-                for (var s in e)
-                    if ("default" !== s && Object.prototype.hasOwnProperty.call(e, s)) {
-                        var r = o ? Object.getOwnPropertyDescriptor(e, s) : null;
-                        r && (r.get || r.set) ? Object.defineProperty(a, s, r) : a[s] = e[s]
-                    } a.default = e, n && n.set(e, a);
-                return a
-            }(n(1));
-
-            function i(e) {
-                if ("function" != typeof WeakMap) return null;
-                var t = new WeakMap,
-                    n = new WeakMap;
-                return (i = function(e) {
-                    return e ? n : t
-                })(e)
-            }
-            var o = new class {
-                constructor() {
-                    const e = a.default.getProvider().getSocket();
-                    this._telemetryBinding = (0, a.dataBinding)("/telemetry", e), this._pluginName = "rcp-fe-lol-new-player-experience", this._eventName = "new_player_experience"
-                }
-                sendTelemetryEvent(e, t) {
-                    t = t || {};
-                    const n = {
-                        eventName: e,
-                        plugin: this._pluginName
-                    };
-                    Object.assign(t, n), this._logDradisEvent(this._eventName, t)
-                }
-                _sendDetailedEvent(e, t, n, a, i) {
-                    (i = i || {}).eventContext = e, i.eventType = t, i.eventAction = n, this._logDradisEvent(a, i)
-                }
-                _logDradisEvent(e, t) {
-                    this._telemetryBinding.post(`/v1/events/${e}`, t)
-                }
-                logError(e, t, n) {
-                    const a = {
-                        action: e,
-                        errorDescription: t,
-                        errorData: n
-                    };
-                    return this._sendDetailedEvent("app", "general", "error", this._pluginName, a)
-                }
-                showNewPlayerTutorial() {
-                    this._logDradisEvent(this._eventName, {
-                        eventName: "show_screen",
-                        plugin: this._pluginName,
-                        screenName: "npe_tutorial_modules"
-                    })
-                }
-                hideNewPlayerTutorial() {
-                    this._logDradisEvent(this._eventName, {
-                        eventName: "hide_screen",
-                        plugin: this._pluginName,
-                        screenName: "npe_tutorial_modules"
-                    })
-                }
-                logButtonClick(e, t, n) {
-                    n = n || {};
-                    const a = {
-                        eventName: "button_click",
-                        plugin: this._pluginName,
-                        buttonAction: e,
-                        buttonDestination: t
-                    };
-                    Object.assign(n, a), this._logDradisEvent(this._eventName, n)
-                }
-            };
-            t.default = o
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1507,20 +1418,15 @@
             })
         }, (e, t, n) => {
             "use strict";
-            var a = n(1),
-                i = r(n(47));
-            n(52);
-            var o = r(n(53)),
-                s = n(54);
-
-            function r(e) {
-                return e && e.__esModule ? e : {
-                    default: e
-                }
-            }
+            var a = n(1);
+            n(51);
+            var i, o = (i = n(52)) && i.__esModule ? i : {
+                    default: i
+                },
+                s = n(53);
             e.exports = a.Ember.Component.extend({
                 classNames: ["npe-footer-component"],
-                layout: n(57),
+                layout: n(56),
                 tutorialService: a.Ember.inject.service("npe"),
                 gameflowService: a.Ember.inject.service("gameflow"),
                 partiesService: a.Ember.inject.service("parties"),
@@ -1611,9 +1517,9 @@
                                 closeButton: !1
                             }
                         }).acceptPromise.then((() => {
-                            (0, o.default)((e => e.hasSkippedTutorialPath = !0)), i.default.logButtonClick("exit_npe_tutorials", "client_home"), this.sendAction("exit")
+                            (0, o.default)((e => e.hasSkippedTutorialPath = !0)), this.sendAction("exit")
                         }), (() => {}))
-                    } else i.default.logButtonClick("exit_npe_tutorials", "client_home"), this.sendAction("exit")
+                    } else this.sendAction("exit")
                 },
                 actions: {
                     exitTutorial: function() {
@@ -1652,8 +1558,8 @@
         }, (e, t, n) => {
             "use strict";
             e.exports = {
-                CountingElement: n(55),
-                shallowEquals: n(56)
+                CountingElement: n(54),
+                shallowEquals: n(55)
             }
         }, e => {
             "use strict";
@@ -1695,13 +1601,13 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(59);
-            var i, o = (i = n(53)) && i.__esModule ? i : {
+            n(58);
+            var i, o = (i = n(52)) && i.__esModule ? i : {
                 default: i
             };
             e.exports = a.Ember.Component.extend({
                 classNames: ["npe-tutorial-carousel-component"],
-                layout: n(60),
+                layout: n(59),
                 npeService: a.Ember.inject.service("npe"),
                 gameflowService: a.Ember.inject.service("gameflow"),
                 partiesService: a.Ember.inject.service("parties"),
@@ -1892,19 +1798,16 @@
             })
         }, (e, t, n) => {
             "use strict";
-            var a, i = n(1),
-                o = (a = n(47)) && a.__esModule ? a : {
-                    default: a
-                };
-            n(62);
-            e.exports = i.Ember.Component.extend({
+            var a = n(1);
+            n(61);
+            e.exports = a.Ember.Component.extend({
                 classNames: ["npe-tp-carousel-navigation"],
                 classNameBindings: ["isUnableToLaunch:hidden:visible"],
-                layout: n(63),
+                layout: n(62),
                 isUnableToLaunch: !1,
                 selectedIndex: 0,
-                tutorialNavItems: i.Ember.computed("tutorials.[]", "tutorials.@each.status", "selectedIndex", (function() {
-                    const e = i.Ember.A(),
+                tutorialNavItems: a.Ember.computed("tutorials.[]", "tutorials.@each.status", "selectedIndex", (function() {
+                    const e = a.Ember.A(),
                         t = this.get("tutorials");
                     return t ? (t.forEach(((t, n) => {
                         const a = {},
@@ -1914,7 +1817,7 @@
                 })),
                 actions: {
                     selectCarouselItem: function(e) {
-                        this.sendAction("carouselNavItemSelect", e.position), o.default.logButtonClick("selectCarouselItem", "carouselItem" + e.position)
+                        this.sendAction("carouselNavItemSelect", e.position)
                     }
                 }
             })
@@ -1930,29 +1833,26 @@
             })
         }, (e, t, n) => {
             "use strict";
-            var a, i = n(1),
-                o = (a = n(47)) && a.__esModule ? a : {
-                    default: a
-                };
-            n(65), e.exports = i.Ember.Component.extend({
+            var a = n(1);
+            n(64), e.exports = a.Ember.Component.extend({
                 classNames: ["npe-tutorial-item-card-component"],
                 classNameBindings: ["isSelected:selected", "isReward:reward:card", "isLocked:locked"],
-                layout: n(66),
+                layout: n(65),
                 tutorial: null,
-                title: i.Ember.computed.alias("tutorial.title"),
-                description: i.Ember.computed.alias("tutorial.description"),
-                stepNumber: i.Ember.computed.alias("tutorial.stepNumber"),
-                rewards: i.Ember.computed.alias("tutorial.rewards"),
-                isReward: i.Ember.computed.equal("tutorial.type", "REWARD"),
-                isCompleted: i.Ember.computed.equal("tutorial.status", "COMPLETED"),
-                isNotCompleted: i.Ember.computed.not("isCompleted"),
-                isUnlocked: i.Ember.computed.equal("tutorial.status", "UNLOCKED"),
-                isLocked: i.Ember.computed.equal("tutorial.status", "LOCKED"),
-                isSelected: i.Ember.computed.alias("tutorial.isSelected"),
-                isNotReward: i.Ember.computed.not("isReward"),
-                isSelectedNotReward: i.Ember.computed.and("isNotReward", "isSelected"),
+                title: a.Ember.computed.alias("tutorial.title"),
+                description: a.Ember.computed.alias("tutorial.description"),
+                stepNumber: a.Ember.computed.alias("tutorial.stepNumber"),
+                rewards: a.Ember.computed.alias("tutorial.rewards"),
+                isReward: a.Ember.computed.equal("tutorial.type", "REWARD"),
+                isCompleted: a.Ember.computed.equal("tutorial.status", "COMPLETED"),
+                isNotCompleted: a.Ember.computed.not("isCompleted"),
+                isUnlocked: a.Ember.computed.equal("tutorial.status", "UNLOCKED"),
+                isLocked: a.Ember.computed.equal("tutorial.status", "LOCKED"),
+                isSelected: a.Ember.computed.alias("tutorial.isSelected"),
+                isNotReward: a.Ember.computed.not("isReward"),
+                isSelectedNotReward: a.Ember.computed.and("isNotReward", "isSelected"),
                 largeAreaAnimationsEnabled: !1,
-                backgroundUrlSource: i.Ember.computed.alias("tutorial.backgroundUrl"),
+                backgroundUrlSource: a.Ember.computed.alias("tutorial.backgroundUrl"),
                 shouldAnimate: !1,
                 isAnimating: !1,
                 hasUpdateStateAnimated: !1,
@@ -1966,26 +1866,17 @@
                     this._super(...arguments), this.shouldAnimate && !this.isAnimating && (this.isAnimating = !0, this.animateTutorialCard())
                 },
                 willDestroyElement() {
-                    this._super(...arguments), i.Ember.run.cancel(this.animationReset), i.Ember.run.cancel(this.onCompleteTimeout)
+                    this._super(...arguments), a.Ember.run.cancel(this.animationReset), a.Ember.run.cancel(this.onCompleteTimeout)
                 },
                 animateTutorialCard() {
                     const e = this.get("tutorial.status");
-                    "UNLOCKED" !== e || this.hasUpdateStateAnimated ? "COMPLETED" === e && (i.tutorialSounds.getSound("MODULE_COMPLETE").play(), this.element.querySelector(".npe-tutorial-item-complete-video").play(), this.onCompleteTimeout = i.Ember.run.later(this, (() => this.get("onCompleted")()), 2e3)) : (i.tutorialSounds.getSound("MODULE_UNLOCK").play(), this.element.querySelector(".npe-tutorial-item-unlock-video").play(), this.hasUpdateStateAnimated = !0), this.animationReset = i.Ember.run.later(this, (() => {
+                    "UNLOCKED" !== e || this.hasUpdateStateAnimated ? "COMPLETED" === e && (a.tutorialSounds.getSound("MODULE_COMPLETE").play(), this.element.querySelector(".npe-tutorial-item-complete-video").play(), this.onCompleteTimeout = a.Ember.run.later(this, (() => this.get("onCompleted")()), 2e3)) : (a.tutorialSounds.getSound("MODULE_UNLOCK").play(), this.element.querySelector(".npe-tutorial-item-unlock-video").play(), this.hasUpdateStateAnimated = !0), this.animationReset = a.Ember.run.later(this, (() => {
                         this.shouldAnimate = !1, this.isAnimating = !1
                     }), 3e3)
                 },
                 actions: {
                     onClicked() {
-                        if (this.get("isSelected")) return;
-                        this.get("onSelect")();
-                        const e = "stepNumber" + this.tutorial.stepNumber,
-                            t = {
-                                stepNumber: this.tutorial.stepNumber,
-                                tutorialType: this.tutorial.type,
-                                tutorialStatus: this.tutorial.status,
-                                tutorialTitle: this.tutorial.title.split(" ").join("_").toLowerCase().replace(/\W+/g, "")
-                            };
-                        o.default.logButtonClick("carouselNavigation", e, t)
+                        this.get("isSelected") || this.get("onSelect")()
                     }
                 }
             })
@@ -2001,44 +1892,33 @@
             })
         }, (e, t, n) => {
             "use strict";
-            var a, i = n(1),
-                o = (a = n(47)) && a.__esModule ? a : {
-                    default: a
-                };
-            n(68), e.exports = i.Ember.Component.extend({
+            var a = n(1);
+            n(67), e.exports = a.Ember.Component.extend({
                 classNames: ["npe-tutorial-item-reward-component"],
                 classNameBindings: ["isSelected:selected", "isReward:reward:card", "isLocked:locked"],
-                layout: n(69),
+                layout: n(68),
                 tutorial: null,
-                title: i.Ember.computed.alias("tutorial.title"),
-                description: i.Ember.computed.alias("tutorial.description"),
-                stepNumber: i.Ember.computed.alias("tutorial.stepNumber"),
-                rewards: i.Ember.computed.alias("tutorial.rewards"),
-                isReward: i.Ember.computed.equal("tutorial.type", "REWARD"),
-                isCompleted: i.Ember.computed.equal("tutorial.status", "COMPLETED"),
-                isNotCompleted: i.Ember.computed.not("isCompleted"),
-                isUnlocked: i.Ember.computed.equal("tutorial.status", "UNLOCKED"),
-                isLocked: i.Ember.computed.equal("tutorial.status", "LOCKED"),
-                isSelected: i.Ember.computed.alias("tutorial.isSelected"),
-                isNotReward: i.Ember.computed.not("isReward"),
-                isSelectedNotReward: i.Ember.computed.and("isNotReward", "isSelected"),
-                uxSettingsService: i.Ember.inject.service("ux-settings"),
-                largeAreaAnimationsEnabled: i.Ember.computed.alias("uxSettingsService.largeAreaAnimationsEnabled"),
-                backgroundUrlSource: i.Ember.computed("tutorial.backgroundUrl", (function() {
+                title: a.Ember.computed.alias("tutorial.title"),
+                description: a.Ember.computed.alias("tutorial.description"),
+                stepNumber: a.Ember.computed.alias("tutorial.stepNumber"),
+                rewards: a.Ember.computed.alias("tutorial.rewards"),
+                isReward: a.Ember.computed.equal("tutorial.type", "REWARD"),
+                isCompleted: a.Ember.computed.equal("tutorial.status", "COMPLETED"),
+                isNotCompleted: a.Ember.computed.not("isCompleted"),
+                isUnlocked: a.Ember.computed.equal("tutorial.status", "UNLOCKED"),
+                isLocked: a.Ember.computed.equal("tutorial.status", "LOCKED"),
+                isSelected: a.Ember.computed.alias("tutorial.isSelected"),
+                isNotReward: a.Ember.computed.not("isReward"),
+                isSelectedNotReward: a.Ember.computed.and("isNotReward", "isSelected"),
+                uxSettingsService: a.Ember.inject.service("ux-settings"),
+                largeAreaAnimationsEnabled: a.Ember.computed.alias("uxSettingsService.largeAreaAnimationsEnabled"),
+                backgroundUrlSource: a.Ember.computed("tutorial.backgroundUrl", (function() {
                     const e = this.get("tutorial.backgroundUrl");
                     return e ? "background-image: url(" + e + ")" : ""
                 })),
                 actions: {
                     onClicked() {
-                        this.get("onSelect")();
-                        const e = "stepNumber" + this.tutorial.stepNumber,
-                            t = {
-                                stepNumber: this.tutorial.stepNumber,
-                                tutorialType: this.tutorial.type,
-                                tutorialStatus: this.tutorial.status,
-                                tutorialTitle: this.tutorial.title.split(" ").join("_").toLowerCase().replace(/\W+/g, "")
-                            };
-                        o.default.logButtonClick("carouselNavigation", e, t)
+                        this.get("onSelect")()
                     }
                 }
             })
@@ -2055,9 +1935,9 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(71), e.exports = a.Ember.Component.extend({
+            n(70), e.exports = a.Ember.Component.extend({
                 classNames: ["npe-header-component"],
-                layout: n(72),
+                layout: n(71),
                 gameDataService: a.Ember.inject.service("game-data"),
                 summonerService: a.Ember.inject.service("summoner"),
                 currentPlayerLevel: a.Ember.computed.alias("summonerService.localSummonerData.summonerLevel"),
@@ -2067,7 +1947,7 @@
                 currentPlayerPuuid: a.Ember.computed.alias("summonerService.localSummonerData.puuid"),
                 hasLongSummonerLevel: a.Ember.computed.gt("summonerService.localSummonerData.summonerLevel", 999),
                 percentCompleteForNextLevel: a.Ember.computed.alias("summonerService.localSummonerData.percentCompleteForNextLevel"),
-                leagueLogoIdle: n(73),
+                leagueLogoIdle: n(72),
                 summonerIconUrl: a.Ember.computed("gameDataService.profileIcons", "gameDataService.profileIcons.[]", "summonerService", "summonerService.localSummonerData", "summonerService.localSummonerData.profileIconId", (function() {
                     let e = this.get("summonerService.localSummonerData.profileIconId");
                     e = !e || e < 0 ? 29 : e;
@@ -2101,8 +1981,8 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(75), e.exports = a.Ember.Component.extend({
-                layout: n(76),
+            n(74), e.exports = a.Ember.Component.extend({
+                layout: n(75),
                 classNames: ["missions-tracker-component"],
                 missionsButton: null,
                 npeService: a.Ember.inject.service("npe"),
@@ -2130,10 +2010,10 @@
         }, (e, t, n) => {
             "use strict";
             var a = n(1);
-            n(78);
+            n(77);
             const i = a.Ember.Component.extend({
                 classNames: ["npe-reward-celebration-component"],
-                layout: n(79),
+                layout: n(78),
                 tutorial: null,
                 celebrationComplete: !1,
                 rewardCelebrationState: "",
@@ -2235,7 +2115,7 @@
                     })
                 })).then((() => {
                     const e = new(n(11))(o);
-                    return new(n(80))(e)
+                    return new(n(79))(e)
                 }))
             }))
         }), {

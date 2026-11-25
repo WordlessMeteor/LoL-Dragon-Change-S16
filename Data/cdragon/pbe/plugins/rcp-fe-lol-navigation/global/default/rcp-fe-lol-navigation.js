@@ -12678,7 +12678,7 @@
                     return t === s.REWARDS_STATUS.FULFILLED || t === s.REWARDS_STATUS.FAILED
                 }
                 _isGrantCelebratable(e) {
-                    return e.celebrationType !== s.REWARDS_CELEBRATION_TYPES.NONE
+                    return !e.types?.includes("tft") && e.celebrationType !== s.REWARDS_CELEBRATION_TYPES.NONE
                 }
                 async _notifyGrantsWereViewed(e) {
                     for (const t of e) this._viewedGrants[t] = !0;
@@ -31446,7 +31446,7 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.TABLE_NPE = t.SHOW_TUTORIAL_MODULES = t.SHOW_TFT = t.SHOW_NAME_CHANGE = t.SHOW_JADE = t.SHOW_HOME = t.SHOW_GAME_MODE_SELECT = t.SHOW_FIRST_TOUCH_WITH_GAME_SELECT = t.SHOW_FIRST_TOUCH = t.MAX_NPE_SUMMONER_LEVEL = t.EVENT_SUMMONER_NAME_CREATE_NAME_CHECK = t.EVENT_SHOW_SCREEN_SECTION = t.EVENT_SHOW_SCREEN = t.EVENT_MODE_SELECTED = t.EVENT_LINK_CLICK = t.EVENT_BUTTON_CLICK = t.EVENT_ABTEST_ACCOUNT_PERCENTAGE = t.DO_NOTHING = t.DEFAULT_CHAMPION_IDS = void 0;
+            }), t.SHOW_TUTORIAL_MODULES = t.SHOW_TFT = t.SHOW_NAME_CHANGE = t.SHOW_JADE = t.SHOW_HOME = t.SHOW_GAME_MODE_SELECT = t.SHOW_FIRST_TOUCH_WITH_GAME_SELECT = t.SHOW_FIRST_TOUCH = t.MAX_NPE_SUMMONER_LEVEL = t.EVENT_ABTEST_ACCOUNT_PERCENTAGE = t.DO_NOTHING = t.DEFAULT_CHAMPION_IDS = void 0;
             t.DO_NOTHING = "DO_NOTHING";
             t.SHOW_FIRST_TOUCH = "SHOW_FIRST_TOUCH";
             t.SHOW_FIRST_TOUCH_WITH_GAME_SELECT = "SHOW_FIRST_TOUCH_WITH_GAME_SELECT";
@@ -31456,14 +31456,7 @@
             t.SHOW_TFT = "SHOW_TFT";
             t.SHOW_JADE = "SHOW_JADE";
             t.SHOW_HOME = "SHOW_HOME";
-            t.TABLE_NPE = "new_player_experience";
-            t.EVENT_SHOW_SCREEN = "show-screen";
-            t.EVENT_SHOW_SCREEN_SECTION = "show-screen-section";
-            t.EVENT_LINK_CLICK = "link-click";
-            t.EVENT_BUTTON_CLICK = "button-click";
-            t.EVENT_SUMMONER_NAME_CREATE_NAME_CHECK = "summoner-name-create-name-check";
             t.EVENT_ABTEST_ACCOUNT_PERCENTAGE = "abtest-account-percentage";
-            t.EVENT_MODE_SELECTED = "mode-selected";
             t.MAX_NPE_SUMMONER_LEVEL = 10;
             t.DEFAULT_CHAMPION_IDS = [22, 86, 21, 103, 141]
         }, (e, t, n) => {
@@ -31486,19 +31479,19 @@
                     FirstTouchComponent: n(565).default,
                     IntroVideoComponent: n(568).default,
                     AliasCreateComponent: n(571).default,
-                    SummonerNameCreateComponent: n(577).default,
-                    PatchingExperienceComponent: n(580).default,
-                    ChampionCarouselComponent: n(583).default,
-                    ChampionCarouselItemComponent: n(586).default,
-                    ChampionInformationComponent: n(589).default,
-                    GameModeSelectComponent: n(592).default,
+                    SummonerNameCreateComponent: n(576).default,
+                    PatchingExperienceComponent: n(579).default,
+                    ChampionCarouselComponent: n(582).default,
+                    ChampionCarouselItemComponent: n(585).default,
+                    ChampionInformationComponent: n(588).default,
+                    GameModeSelectComponent: n(591).default,
                     ArrowFooterComponent: o,
                     PlayerNameComponent: r,
-                    FirstTouchService: n(595).default,
-                    LanguageFilterService: n(596).default,
-                    PlayerNameStateService: n(599).default,
-                    WaitForResolvedStringHelper: n(600).default,
-                    IsEqualHelper: n(601).default
+                    FirstTouchService: n(594).default,
+                    LanguageFilterService: n(595).default,
+                    PlayerNameStateService: n(598).default,
+                    WaitForResolvedStringHelper: n(599).default,
+                    IsEqualHelper: n(600).default
                 };
                 i.EmberApplicationFactory.setFactoryDefinition(l);
                 const c = i.ComponentFactory.create(l.name, {
@@ -31631,41 +31624,39 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.errorStrings = t.dom = t.default = t.classNames = t.TAG_LINE_MAX = t.NAME_MIN = t.GAME_NAME_MAX = void 0, t.isPossiblyValid = T;
-            var i = n(1),
-                a = n(572);
-            n(573);
-            var s, o = n(563),
-                r = (s = n(574)) && s.__esModule ? s : {
-                    default: s
-                };
-            const l = {
+            }), t.errorStrings = t.dom = t.default = t.classNames = t.TAG_LINE_MAX = t.NAME_MIN = t.GAME_NAME_MAX = void 0, t.isPossiblyValid = f;
+            var i = n(1);
+            n(572);
+            var a, s = (a = n(573)) && a.__esModule ? a : {
+                default: a
+            };
+            const o = {
                     header: "alias_create_new_header",
                     subhead: "alias_create_new_subhead",
                     subheadNoTag: "alias_create_new_subhead_no_tag",
                     button: "alias_create_new_button"
                 },
-                c = {
+                r = {
                     header: "alias_create_change_header",
                     subhead: "alias_create_change_subhead",
                     subheadNoTag: "alias_create_change_subhead_no_tag",
                     button: "alias_create_change_button"
                 },
-                d = {
+                l = {
                     GAME_NAME_LENGTH: "alias_create_game_name_length",
                     TAG_LINE_LENGTH: "alias_create_tag_line_length",
                     NAME_UNAVAILABLE: "alias_create_name_unavailable",
                     RATE_LIMITED: "alias_create_rate_limited",
                     SERVER_ERROR: "alias_create_server_error"
                 };
-            t.errorStrings = d;
-            const u = 3;
-            t.NAME_MIN = u;
-            const m = 16;
-            t.GAME_NAME_MAX = m;
-            const h = 5;
-            t.TAG_LINE_MAX = h;
-            const p = {
+            t.errorStrings = l;
+            const c = 3;
+            t.NAME_MIN = c;
+            const d = 16;
+            t.GAME_NAME_MAX = d;
+            const u = 5;
+            t.TAG_LINE_MAX = u;
+            const m = {
                 COMPONENT: "alias-create",
                 ICON_CONFIRMED: "alias-create__content__icon--valid",
                 ICON_WARNING: "alias-create__content__icon--warning",
@@ -31674,92 +31665,64 @@
                 MESSAGE_ERROR: "alias-create__content__message--error",
                 CHAR_COUNT_ERROR: "alias-create__content__character-count--error"
             };
-            t.classNames = p;
-            const g = "name_change_forbidden",
-                f = "name_not_available",
-                _ = "rate_limited",
-                v = "SERVER_ERROR",
-                E = new Map([
-                    [g, d.SERVER_ERROR],
-                    [f, d.NAME_UNAVAILABLE],
-                    [_, d.RATE_LIMITED],
-                    [v, d.SERVER_ERROR]
+            t.classNames = m;
+            const h = "SERVER_ERROR",
+                p = new Map([
+                    ["name_change_forbidden", l.SERVER_ERROR],
+                    ["name_not_available", l.NAME_UNAVAILABLE],
+                    ["rate_limited", l.RATE_LIMITED],
+                    [h, l.SERVER_ERROR]
                 ]),
-                b = new Map([
-                    [d.GAME_NAME_LENGTH, {
-                        message: p.MESSAGE_WARNING
+                g = new Map([
+                    [l.GAME_NAME_LENGTH, {
+                        message: m.MESSAGE_WARNING
                     }],
-                    [d.TAG_LINE_LENGTH, {
-                        message: p.MESSAGE_WARNING
+                    [l.TAG_LINE_LENGTH, {
+                        message: m.MESSAGE_WARNING
                     }],
-                    [d.NAME_UNAVAILABLE, {
-                        message: p.MESSAGE_WARNING,
-                        icon: p.ICON_WARNING
+                    [l.NAME_UNAVAILABLE, {
+                        message: m.MESSAGE_WARNING,
+                        icon: m.ICON_WARNING
                     }],
-                    [d.RATE_LIMITED, {
-                        message: p.MESSAGE_WARNING,
-                        icon: p.ICON_WARNING
+                    [l.RATE_LIMITED, {
+                        message: m.MESSAGE_WARNING,
+                        icon: m.ICON_WARNING
                     }],
-                    [d.SERVER_ERROR, {
-                        message: p.MESSAGE_ERROR,
-                        icon: p.ICON_ERROR
+                    [l.SERVER_ERROR, {
+                        message: m.MESSAGE_ERROR,
+                        icon: m.ICON_ERROR
                     }]
                 ]);
 
-            function y(e) {
-                switch (e.errorCode) {
-                    case g:
-                        return {
-                            responseType: "error", errorType: "name_change_not_allowed"
-                        };
-                    case f:
-                        return {
-                            responseType: "taken"
-                        };
-                    case _:
-                        return {
-                            responseType: "error", errorType: "rate_limited"
-                        };
-                    default:
-                        return {
-                            responseType: "error", errorType: "request_failed_name_submit"
-                        }
-                }
-            }
-
-            function T(e = "", t = "", n = !1) {
+            function f(e = "", t = "", n = !1) {
                 const {
                     length: i
                 } = e, {
                     length: a
                 } = t;
-                return !(i < u || i > m) && (!n || !(a < u || a > h))
+                return !(i < c || i > d) && (!n || !(a < c || a > u))
             }
-            const S = {
+            const _ = {
                 GAME_NAME: "input[name=game_name]",
                 TAG_LINE: "input[name=tag_line]",
                 CHARACTER_COUNT: ".alias-create__content__character-count"
             };
 
-            function C(e) {
+            function v(e) {
                 return i.Ember.computed("isNameChange", "tra", (function() {
-                    const t = this.get("isNameChange") ? c : l;
+                    const t = this.get("isNameChange") ? r : o;
                     return this.get("tra").get(t[e])
                 }))
             }
-            t.dom = S;
-            var I = i.Ember.Component.extend({
-                classNames: [p.COMPONENT],
-                layout: r.default,
+            t.dom = _;
+            var E = i.Ember.Component.extend({
+                classNames: [m.COMPONENT],
+                layout: s.default,
                 init() {
-                    this._super(...arguments), this._databinding = i.db, this._sendEvent = a.sendEvent, this._navigation = i.Navigation, this._logger = i.logger, this._submitCooldown = 2e3
+                    this._super(...arguments), this._databinding = i.db, this._navigation = i.Navigation, this._logger = i.logger, this._submitCooldown = 2e3
                 },
                 didInsertElement() {
-                    const e = this.get("isNameChange") ? "npe_first_touch_name_change_forced" : "npe_first_touch_name_create";
-                    this._sendEvent({
-                        eventName: o.EVENT_SHOW_SCREEN,
-                        screenName: e
-                    }), this._navigation.hide(), this.$(S.GAME_NAME).focus()
+                    this._navigation.hide(), this.$(_.GAME_NAME).focus()
                 },
                 playerNameState: i.Ember.inject.service(),
                 gameName: "",
@@ -31768,40 +31731,40 @@
                 serverMessage: null,
                 isValidityVerified: !1,
                 isTaglineCustomizable: i.Ember.computed.alias("playerNameState.isTaglineCustomizable"),
-                header: C("header"),
+                header: v("header"),
                 subhead: i.Ember.computed("tra", "isTaglineCustomizable", (function() {
-                    const e = this.get("isNameChange") ? c : l,
+                    const e = this.get("isNameChange") ? r : o,
                         t = this.get("isTaglineCustomizable") ? e.subhead : e.subheadNoTag;
                     return this.get("tra").get(t)
                 })),
-                placeholder: C("placeholder"),
-                button: C("button"),
+                placeholder: v("placeholder"),
+                button: v("button"),
                 gameNameCount: i.Ember.computed("gameName", (function() {
-                    return m - this.get("gameName")?.length
+                    return d - this.get("gameName")?.length
                 })),
                 gameNameCountClass: i.Ember.computed("gameName", (function() {
                     const e = this.get("gameName")?.length;
-                    return e > 0 && (e < u || e > m) ? p.CHAR_COUNT_ERROR : null
+                    return e > 0 && (e < c || e > d) ? m.CHAR_COUNT_ERROR : null
                 })),
                 tagLineCount: i.Ember.computed("tagLine", (function() {
-                    return h - this.get("tagLine")?.length
+                    return u - this.get("tagLine")?.length
                 })),
                 tagLineCountClass: i.Ember.computed("isTaglineCustomizable", "tagLine", (function() {
                     if (!this.get("isTaglineCustomizable")) return null;
                     const e = this.get("tagLine")?.length;
-                    return e > 0 && (e < u || e > h) ? p.CHAR_COUNT_ERROR : null
+                    return e > 0 && (e < c || e > u) ? m.CHAR_COUNT_ERROR : null
                 })),
                 message: i.Ember.computed("serverMessage", "gameNameCountClass", "tagLineCountClass", (function() {
-                    return this.get("gameNameCountClass") ? d.GAME_NAME_LENGTH : this.get("tagLineCountClass") ? d.TAG_LINE_LENGTH : this.get("serverMessage")
+                    return this.get("gameNameCountClass") ? l.GAME_NAME_LENGTH : this.get("tagLineCountClass") ? l.TAG_LINE_LENGTH : this.get("serverMessage")
                 })),
                 iconClass: i.Ember.computed("message", "isValidityVerified", (function() {
-                    return this.get("isValidityVerified") ? p.ICON_CONFIRMED : b.get(this.get("message"))?.icon
+                    return this.get("isValidityVerified") ? m.ICON_CONFIRMED : g.get(this.get("message"))?.icon
                 })),
                 messageClass: i.Ember.computed("message", (function() {
-                    return b.get(this.get("message"))?.message
+                    return g.get(this.get("message"))?.message
                 })),
-                startButtonSoundHover: n(575),
-                startButtonSoundClick: n(576),
+                startButtonSoundHover: n(574),
+                startButtonSoundClick: n(575),
                 disableRegisterButton: i.Ember.computed("isLoading", "validityVerified", (function() {
                     return this.get("isLoading") || !this.get("isValidityVerified")
                 })),
@@ -31809,7 +31772,7 @@
                     const e = this.get("gameName"),
                         t = this.get("tagLine"),
                         n = this.get("isTaglineCustomizable");
-                    this.set("isValidityVerified", !1), T(e, t, n) ? this._validityDebouncer = i.Ember.run.debounce(this, this.verifyValidity, 700) : this._validityDebouncer && (i.Ember.run.cancel(this._validityDebouncer), this._validityDebouncer = null)
+                    this.set("isValidityVerified", !1), f(e, t, n) ? this._validityDebouncer = i.Ember.run.debounce(this, this.verifyValidity, 700) : this._validityDebouncer && (i.Ember.run.cancel(this._validityDebouncer), this._validityDebouncer = null)
                 })),
                 willDestroy() {
                     this._validityDebouncer && i.Ember.run.cancel(this._validityDebouncer)
@@ -31818,11 +31781,11 @@
                     this._validityDebouncer = null;
                     const e = this.get("gameName"),
                         t = this.get("tagLine");
-                    if (!T(e, t, this.get("isTaglineCustomizable"))) return;
+                    if (!f(e, t, this.get("isTaglineCustomizable"))) return;
                     this.set("isLoading", !0), this.set("serverMessage", null);
                     let n = {
                         isSuccess: !1,
-                        errorCode: v
+                        errorCode: h
                     };
                     const i = {
                         gameName: e,
@@ -31845,7 +31808,7 @@
                     if (e === a && t === s)
                         if (n.isSuccess) this.set("isValidityVerified", !0);
                         else {
-                            const e = E.get(n.errorCode) || E.SERVER_ERROR;
+                            const e = p.get(n.errorCode) || p.SERVER_ERROR;
                             this.set("serverMessage", e)
                         }
                 },
@@ -31862,7 +31825,7 @@
                     this.set("isLoading", !1);
                     let a = {
                         isSuccess: !1,
-                        errorCode: v
+                        errorCode: h
                     };
                     if ("rejected" === i.status ? this._logger.error("Failed to save alias", {
                             ...n,
@@ -31870,18 +31833,9 @@
                         }) : (a = i.value, this._logger.always("Attempted to save alias", {
                             ...n,
                             ...a
-                        })), a.isSuccess) this._sendEvent({
-                        eventName: o.EVENT_BUTTON_CLICK,
-                        buttonAction: this.get("isNamedChange") ? "summoner_name_change_forced" : "summoner_name_create",
-                        buttonDestination: "npe_tutorial_modules"
-                    }), this.sendAction("showNextScreen"), this._navigation.show();
+                        })), a.isSuccess) this.sendAction("showNextScreen"), this._navigation.show();
                     else {
-                        this._sendEvent({
-                            eventName: o.EVENT_SUMMONER_NAME_CREATE_NAME_CHECK,
-                            form: this.get("isNameChange") ? "summoner_name_change_forced" : "summoner_name_create",
-                            ...y(a)
-                        });
-                        const e = E.get(a.errorCode) || d.SERVER_ERROR;
+                        const e = p.get(a.errorCode) || l.SERVER_ERROR;
                         this.set("serverMessage", e)
                     }
                 },
@@ -31894,19 +31848,7 @@
                     }
                 }
             });
-            t.default = I
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.sendEvent = function(e = {}, t = a.TABLE_NPE) {
-                const n = Object.assign({}, e, {
-                    plugin: "rcp-fe-lol-npe-first-touch"
-                });
-                i.Telemetry.sendCustomData(t, n)
-            };
-            var i = n(1),
-                a = n(563)
+            t.default = E
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -31928,16 +31870,14 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i = n(1),
-                a = n(572);
-            n(578);
-            var s = n(563);
+            var i = n(1);
+            n(577);
             const {
-                RunMixin: o
+                RunMixin: a
             } = i.EmberAddons.EmberLifeline;
-            var r = i.Ember.Component.extend(o, {
+            var s = i.Ember.Component.extend(a, {
                 classNames: ["summoner-name-create-component"],
-                layout: n(579),
+                layout: n(578),
                 firstTouchService: i.Ember.inject.service("first-touch"),
                 languageFilterService: i.Ember.inject.service("language-filter"),
                 username: i.Ember.computed.alias("firstTouchService.session.username"),
@@ -31951,31 +31891,14 @@
                 isNameAvailabilityRequestError: !1,
                 isFormSubmitRequestErrorMessage: !1,
                 startNowButtonSound: {
-                    onHover: n(575),
-                    onClick: n(576)
+                    onHover: n(574),
+                    onClick: n(575)
                 },
                 init() {
-                    this._super(...arguments);
-                    const e = this.get("isNameChange") ? "npe_first_touch_name_change_forced" : "npe_first_touch_name_create";
-                    (0, a.sendEvent)({
-                        eventName: s.EVENT_SHOW_SCREEN,
-                        screenName: e
-                    }), i.Navigation.hide()
+                    this._super(...arguments), i.Navigation.hide()
                 },
                 didInsertElement: function() {
                     this._super(...arguments), this.$(".first-touch-summoner-name-creation-input").focus()
-                },
-                sendNameCheckEventTelemetry: function(e, t = null) {
-                    const n = this.get("isNameChange") ? "summoner_name_change_forced" : "summoner_name_create",
-                        i = {
-                            eventName: s.EVENT_SUMMONER_NAME_CREATE_NAME_CHECK,
-                            form: n,
-                            responseType: e
-                        };
-                    "error" === e && null !== t && (i.errorType = t), (0, a.sendEvent)(i)
-                },
-                maybeSendApproriateNameCheckErrorType: function() {
-                    this.get("failsInvalidCharCheck") ? this.sendNameCheckEventTelemetry("error", "special_character") : this.get("failsLengthCharacterCheck") && this.sendNameCheckEventTelemetry("error", "length")
                 },
                 nameLength: i.Ember.computed("nameInput", (function() {
                     const e = this.get("nameInput");
@@ -32041,34 +31964,29 @@
                     this.set("loading", !0);
                     const t = `/v1/check-name-availability-new-summoners/${e}`;
                     return (0, i.dataBinding)("/lol-summoner").get(t).then((e => {
-                        this.set("loading", !1), this.set("disableRegisterButton", !e), this.set("isNameUnavailable", !e), e ? (this.set("allChecksPass", !0), this.sendNameCheckEventTelemetry("available")) : this.sendNameCheckEventTelemetry("taken")
+                        this.set("loading", !1), this.set("disableRegisterButton", !e), this.set("isNameUnavailable", !e), e && this.set("allChecksPass", !0)
                     })).catch((e => {
-                        this.set("loading", !1), this.set("isNameAvailabilityRequestError", !0), i.logger.trace("Error checking summoner name availability", e), this.sendNameCheckEventTelemetry("error", "request_failed_name_availability")
+                        this.set("loading", !1), this.set("isNameAvailabilityRequestError", !0), i.logger.trace("Error checking summoner name availability", e)
                     }))
                 },
                 registerSummonerName: function() {
                     const e = this.get("nameInput"),
                         t = this.get("isNameChange"),
                         n = t ? "/v1/current-summoner/name" : "/v1/summoners",
-                        o = t ? e : {
+                        a = t ? e : {
                             name: e
-                        },
-                        r = t ? "change_forced" : "create";
-                    return this.set("loading", !0), (0, i.dataBinding)("/lol-summoner").post(n, o).then((e => {
-                        e && e.summonerId && ((0, a.sendEvent)({
-                            eventName: s.EVENT_BUTTON_CLICK,
-                            buttonAction: `summoner_name_${r}`,
-                            buttonDestination: "npe_tutorial_modules"
-                        }), this.sendAction("showNextScreen"), i.Navigation.show())
+                        };
+                    return this.set("loading", !0), (0, i.dataBinding)("/lol-summoner").post(n, a).then((e => {
+                        e && e.summonerId && (this.sendAction("showNextScreen"), i.Navigation.show())
                     })).catch((e => {
-                        this.set("loading", !1), this.set("isFormSubmitRequestErrorMessage", !0), i.logger.trace("Error registering summoner name", e), this.sendNameCheckEventTelemetry("error", "request_failed_name_submit")
+                        this.set("loading", !1), this.set("isFormSubmitRequestErrorMessage", !0), i.logger.trace("Error registering summoner name", e)
                     }))
                 },
                 resetValidationPropertiesToDefaultValues: function() {
                     this.set("isFormSubmitRequestErrorMessage", !1), this.set("isNameAvailabilityRequestError", !1), this.set("disableRegisterButton", !0), this.set("isNameUnavailable", !1), this.set("allChecksPass", !1)
                 },
                 checkInput() {
-                    this.checkInputNamePassRequirementsThenUpdateUI(), this.maybeSendApproriateNameCheckErrorType()
+                    this.checkInputNamePassRequirementsThenUpdateUI()
                 },
                 actions: {
                     setInputFocus(e) {
@@ -32085,7 +32003,7 @@
                     }
                 }
             });
-            t.default = r
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -32102,27 +32020,21 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(581);
-            var a = n(572),
-                s = n(563),
-                o = i.Ember.Component.extend({
-                    classNames: ["npe-first-touch-patching-experience-component"],
-                    layout: n(582),
-                    firstTouchService: i.Ember.inject.service("first-touch"),
-                    champions: i.Ember.computed.alias("firstTouchService.champions"),
-                    didSendEvent: !1,
-                    init() {
-                        this._super(...arguments);
-                        const e = t => {
-                            "done" === t ? (i.Navigation.unsubscribe("patcherState", e), i.Navigation.setShowFirstExperience(!1), this.sendAction("showNextScreen")) : this.didSendEvent || ((0, a.sendEvent)({
-                                eventName: s.EVENT_SHOW_SCREEN,
-                                screenName: "npe_first_touch_patching_experience"
-                            }), this.didSendEvents = !0)
-                        };
-                        i.Navigation.setShowFirstExperience(!0), i.Navigation.subscribe("patcherState", e)
-                    }
-                });
-            t.default = o
+            n(580);
+            var a = i.Ember.Component.extend({
+                classNames: ["npe-first-touch-patching-experience-component"],
+                layout: n(581),
+                firstTouchService: i.Ember.inject.service("first-touch"),
+                champions: i.Ember.computed.alias("firstTouchService.champions"),
+                init() {
+                    this._super(...arguments);
+                    const e = t => {
+                        "done" === t && (i.Navigation.unsubscribe("patcherState", e), i.Navigation.setShowFirstExperience(!1), this.sendAction("showNextScreen"))
+                    };
+                    i.Navigation.setShowFirstExperience(!0), i.Navigation.subscribe("patcherState", e)
+                }
+            });
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -32139,16 +32051,14 @@
                 value: !0
             }), t.default = t.SFX_PIP_FORWARD = t.SFX_PIP_BACKWARD = void 0;
             var i = n(1);
-            n(584);
-            var a = n(572),
-                s = n(563);
-            const o = "/fe/lol-static-assets/sounds/npe-ft-sfx-pip-backward-click.ogg";
-            t.SFX_PIP_BACKWARD = o;
-            const r = "/fe/lol-static-assets/sounds/npe-ft-sfx-pip-forward-click.ogg";
-            t.SFX_PIP_FORWARD = r;
-            var l = i.Ember.Component.extend({
+            n(583);
+            const a = "/fe/lol-static-assets/sounds/npe-ft-sfx-pip-backward-click.ogg";
+            t.SFX_PIP_BACKWARD = a;
+            const s = "/fe/lol-static-assets/sounds/npe-ft-sfx-pip-forward-click.ogg";
+            t.SFX_PIP_FORWARD = s;
+            var o = i.Ember.Component.extend({
                 classNames: ["npe-first-touch-champion-carousel-component"],
-                layout: n(585),
+                layout: n(584),
                 champions: null,
                 currentChampionIdx: 0,
                 lastChampionIdx: i.Ember.computed("champions", (function() {
@@ -32160,31 +32070,19 @@
                         t = this.get("currentChampionIdx");
                     if (e) return e[t].id
                 })),
-                sendShowScreenSectionEvent: function(e, t, n) {
-                    const i = this.get("champions");
-                    (0, a.sendEvent)({
-                        screenName: "npe_first_touch_patching_experience",
-                        eventName: s.EVENT_SHOW_SCREEN_SECTION,
-                        destinationScreenSection: `champion_carousel_${i[e].id}`,
-                        currentScreenSection: `champion_carousel_${i[t].id}`,
-                        navigationElement: n,
-                        currentChampionId: i[t].id,
-                        destinationChampionId: i[e].id
-                    })
-                },
                 actions: {
                     moveCarousel: function(e) {
                         const t = this.get("currentChampionIdx"),
                             n = this.get("lastChampionIdx");
                         let i = t + ("left" === e ? -1 : 1);
-                        i > n ? i = 0 : i < 0 && (i = n), this.set("currentChampionIdx", i), this.sendShowScreenSectionEvent(i, t, e)
+                        i > n ? i = 0 : i < 0 && (i = n), this.set("currentChampionIdx", i)
                     },
                     pipClicked: function(e, t) {
-                        e !== t && (e < t ? i.Audio.getChannel("sfx-ui").playSound(r) : i.Audio.getChannel("sfx-ui").playSound(o), this.set("currentChampionIdx", t), this.sendShowScreenSectionEvent(t, e, "pip"))
+                        e !== t && (e < t ? i.Audio.getChannel("sfx-ui").playSound(s) : i.Audio.getChannel("sfx-ui").playSound(a), this.set("currentChampionIdx", t))
                     }
                 }
             });
-            t.default = l
+            t.default = o
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -32201,10 +32099,10 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(587);
+            n(586);
             var a = i.Ember.Component.extend({
                 classNames: ["npe-first-touch-champion-carousel-item-component"],
-                layout: n(588),
+                layout: n(587),
                 champion: null,
                 uncenteredSplashPath: i.Ember.computed("champion", (function() {
                     const e = this.get("champion");
@@ -32228,46 +32126,33 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(590);
-            var a = n(563),
-                s = n(572),
-                o = i.Ember.Component.extend({
-                    classNames: ["npe-first-touch-champion-information-component"],
-                    layout: n(591),
-                    firstTouchService: i.Ember.inject.service("first-touch"),
-                    locale: i.Ember.computed.alias("firstTouchService.locale"),
-                    primaryRole: i.Ember.computed("champion.roles", (function() {
-                        const e = this.get("champion.roles");
-                        if (e && e[0]) return e[0]
-                    })),
-                    shortBio: i.Ember.computed("champion.shortBio", (function() {
-                        const e = this.get("champion.shortBio");
-                        return "string" != typeof e ? "" : e.replace(/''/g, '"')
-                    })),
-                    universeLink: i.Ember.computed("champion", "locale", (function() {
-                        return `https://universe.leagueoflegends.com/${this.get("locale")}/champion/${this.get("champion.alias")}/`
-                    })),
-                    actions: {
-                        learnMore(e, t) {
-                            (0, s.sendEvent)({
-                                eventName: a.EVENT_LINK_CLICK,
-                                screenName: "npe_first_touch_patching_experience",
-                                currentScreenSection: `champion_carousel_${e}`,
-                                linkAddress: t,
-                                championId: e
-                            })
-                        }
-                    }
-                });
-            t.default = o
+            n(589);
+            var a = i.Ember.Component.extend({
+                classNames: ["npe-first-touch-champion-information-component"],
+                layout: n(590),
+                firstTouchService: i.Ember.inject.service("first-touch"),
+                locale: i.Ember.computed.alias("firstTouchService.locale"),
+                primaryRole: i.Ember.computed("champion.roles", (function() {
+                    const e = this.get("champion.roles");
+                    if (e && e[0]) return e[0]
+                })),
+                shortBio: i.Ember.computed("champion.shortBio", (function() {
+                    const e = this.get("champion.shortBio");
+                    return "string" != typeof e ? "" : e.replace(/''/g, '"')
+                })),
+                universeLink: i.Ember.computed("champion", "locale", (function() {
+                    return `https://universe.leagueoflegends.com/${this.get("locale")}/champion/${this.get("champion.alias")}/`
+                }))
+            });
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "LjrsLZ+f",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\lib\\\\npe-first-touch\\\\addon\\\\app\\\\templates\\\\components\\\\champion-information.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\lib\\\\npe-first-touch\\\\addon\\\\app\\\\components\\\\champion-information.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","champion-information-mask"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","champion-heading"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","heading-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["champion-role-icon ",["unknown",["primaryRole"]]]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","heading-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","champion-name"],["flush-element"],["text","\\n        "],["append",["unknown",["champion","name"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","champion-title"],["flush-element"],["text","\\n        "],["append",["unknown",["champion","title"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","champion-description"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","disabled"],["flush-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","short-bio"],["flush-element"],["append",["helper",["sanitize"],[["get",["shortBio"]]],null],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","a",[]],["dynamic-attr","href",["unknown",["universeLink"]],null],["static-attr","class","learn-more-link"],["static-attr","target","_blank"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"learnMore",["get",["champion","id"]],["get",["universeLink"]]],null],null],["flush-element"],["text","\\n      "],["append",["unknown",["tra","patching_experience_champion_universe_link_text"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "UFk0YEy3",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\lib\\\\npe-first-touch\\\\addon\\\\app\\\\templates\\\\components\\\\champion-information.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\vfs\\\\mount\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\lib\\\\npe-first-touch\\\\addon\\\\app\\\\components\\\\champion-information.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","champion-information-mask"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","champion-heading"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","heading-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["champion-role-icon ",["unknown",["primaryRole"]]]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","heading-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","champion-name"],["flush-element"],["text","\\n        "],["append",["unknown",["champion","name"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","champion-title"],["flush-element"],["text","\\n        "],["append",["unknown",["champion","title"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","champion-description"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","disabled"],["flush-element"],["text","\\n      "],["open-element","p",[]],["static-attr","class","short-bio"],["flush-element"],["append",["helper",["sanitize"],[["get",["shortBio"]]],null],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","a",[]],["dynamic-attr","href",["unknown",["universeLink"]],null],["static-attr","class","learn-more-link"],["static-attr","target","_blank"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","patching_experience_champion_universe_link_text"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -32276,41 +32161,36 @@
                 value: !0
             }), t.default = void 0;
             var i = n(1);
-            n(593);
-            var a = n(572),
-                s = n(563),
-                o = i.Ember.Component.extend({
-                    classNames: ["npe-first-touch-game-mode-select-component"],
-                    layout: n(594),
-                    firstTouchService: i.Ember.inject.service("first-touch"),
-                    tftMapAssets: i.Ember.computed.alias("firstTouchService.tftMapAssets"),
-                    init() {
-                        this._super(...arguments), i.Navigation.hide()
-                    },
-                    willDestroyElement() {
-                        this._super(...arguments), i.Navigation.show()
-                    },
-                    sendPreferencesAndTelemetry(e) {
-                        (0, i.dataBinding)("/lol-settings").put("/v2/account/LCUPreferences/lol-npe-first-touch", {
-                            data: {
-                                modeSelected: e
-                            },
-                            schemaVersion: 1
-                        }), (0, a.sendEvent)({
-                            eventName: s.EVENT_MODE_SELECTED,
-                            modeName: e
-                        })
-                    },
-                    actions: {
-                        pickedLeague() {
-                            this.sendPreferencesAndTelemetry("summoners-rift"), this.sendAction("showNextScreen")
+            n(592);
+            var a = i.Ember.Component.extend({
+                classNames: ["npe-first-touch-game-mode-select-component"],
+                layout: n(593),
+                firstTouchService: i.Ember.inject.service("first-touch"),
+                tftMapAssets: i.Ember.computed.alias("firstTouchService.tftMapAssets"),
+                init() {
+                    this._super(...arguments), i.Navigation.hide()
+                },
+                willDestroyElement() {
+                    this._super(...arguments), i.Navigation.show()
+                },
+                sendPreferencesAndTelemetry(e) {
+                    (0, i.dataBinding)("/lol-settings").put("/v2/account/LCUPreferences/lol-npe-first-touch", {
+                        data: {
+                            modeSelected: e
                         },
-                        pickedTft() {
-                            this.get("firstTouchService").setHasSkippedTutorialPath(), this.sendPreferencesAndTelemetry("teamfight"), this.sendAction("skipToTeamfight")
-                        }
+                        schemaVersion: 1
+                    })
+                },
+                actions: {
+                    pickedLeague() {
+                        this.sendPreferencesAndTelemetry("summoners-rift"), this.sendAction("showNextScreen")
+                    },
+                    pickedTft() {
+                        this.get("firstTouchService").setHasSkippedTutorialPath(), this.sendPreferencesAndTelemetry("teamfight"), this.sendAction("skipToTeamfight")
                     }
-                });
-            t.default = o
+                }
+            });
+            t.default = a
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -32388,10 +32268,10 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(597)) && i.__esModule ? i : {
+                s = (i = n(596)) && i.__esModule ? i : {
                     default: i
                 },
-                o = n(598);
+                o = n(597);
             var r = a.Ember.Service.extend({
                 ready: !1,
                 init() {
@@ -32421,7 +32301,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i = n(598);
+            var i = n(597);
             t.default = class {
                 build(e) {
                     this._allowedCharactersMap = {};
@@ -32527,7 +32407,7 @@
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
-                s = (i = n(603)) && i.__esModule ? i : {
+                s = (i = n(602)) && i.__esModule ? i : {
                     default: i
                 };
 
@@ -32539,24 +32419,24 @@
                     return e ? n : t
                 })(e)
             }
-            n(608);
+            n(607);
             var r = async function() {
                 const e = a.default.getProvider().get("rcp-fe-lol-l10n").tra(),
-                    t = n(616).default,
+                    t = n(615).default,
                     i = function() {
-                        const e = n(609).default,
+                        const e = n(608).default,
                             t = "rcp-fe-lol-reconnect",
                             i = a.default.Viewport.main().getScreenRoot(t);
                         return i.getElement().className = t, new e(i)
                     }(),
                     o = function() {
-                        const e = n(611).default,
+                        const e = n(610).default,
                             t = "rcp-fe-lol-game-in-progress",
                             i = a.default.Viewport.main().getScreenRoot(t);
                         return i.getElement().className = t, new e(i)
                     }(),
                     r = function() {
-                        const e = n(613).default,
+                        const e = n(612).default,
                             t = "rcp-fe-lol-repair-while-in-game",
                             i = a.default.Viewport.main().getScreenRoot(t);
                         return i.getElement().className = t, new e(i)
@@ -32585,7 +32465,7 @@
                         } i.default = e, n && n.set(e, i);
                     return i
                 }(n(1)),
-                a = o(n(604)),
+                a = o(n(603)),
                 s = o(n(77));
 
             function o(e) {
@@ -32701,8 +32581,8 @@
                 t.innerHTML = n, !1 !== e.showSpinner ? t.querySelector(".spinner").setAttribute("src", a.default) : t.querySelector(".spinner").style.display = "none";
                 return d(t, e), o = window.setInterval(c, 1e3, t, e), t
             };
-            var i = s(n(605)),
-                a = s(n(606));
+            var i = s(n(604)),
+                a = s(n(605));
 
             function s(e) {
                 return e && e.__esModule ? e : {
@@ -32734,7 +32614,7 @@
                 const s = t.lockoutText.replace(/\{\{lockoutTimeRemaining\}\}/, i);
                 r > 0 && (a += ` ${s}`), n && (n.textContent = a)
             }
-            n(607)
+            n(606)
         }, e => {
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<lol-uikit-dialog-frame class="dialog-frame" data-type="reconnect-notification">\r\n  <div class="dialog-content">\r\n    <lol-uikit-content-block type="dialog-medium">\r\n      <h4>{{TITLE}}</h4>\r\n      <hr class="heading-spacer" />\r\n      <p>{{BODY}}</p>\r\n\r\n      <img class="spinner" />\r\n    </lol-uikit-content-block>\r\n\r\n    <lol-uikit-flat-button-group type="dialog-frame">\r\n      <lol-uikit-flat-button class="button-shutdown" disabled> </lol-uikit-flat-button>\r\n    </lol-uikit-flat-button-group>\r\n  </div>\r\n</lol-uikit-dialog-frame>\r\n'
@@ -32753,7 +32633,7 @@
                 value: !0
             }), t.default = void 0;
             var i, a = n(1),
-                s = (i = n(610)) && i.__esModule ? i : {
+                s = (i = n(609)) && i.__esModule ? i : {
                     default: i
                 };
             t.default = class {
@@ -32949,7 +32829,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i, a = (i = n(612)) && i.__esModule ? i : {
+            var i, a = (i = n(611)) && i.__esModule ? i : {
                 default: i
             };
             t.default = class {
@@ -33014,7 +32894,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i, a = (i = n(614)) && i.__esModule ? i : {
+            var i, a = (i = n(613)) && i.__esModule ? i : {
                 default: i
             };
             t.default = class {
@@ -33070,7 +32950,7 @@
                     this._element.querySelector(".repair-body .header").innerText = e.get("game_in_progress_client_repair"), this._element.querySelector(".repair-body .body").innerText = e.get("game_in_progress_client_repair_explanation"), this._element.querySelector(".repair-body .link").innerHTML = e.get("game_in_progress_client_repair_learn")
                 }
                 _buildElement() {
-                    const e = n(615);
+                    const e = n(614);
                     return this._element = document.createElement("DIV"), this._element.innerHTML = e, this._element
                 }
             }
@@ -33356,8 +33236,8 @@
                 T.initLinks(), T._initMissionsAPI(), T._initRewardsAPI(), T._initAppControlsAPI(t.default), T._initEmailVerificationAPI(t.default), await t.default.add({
                     Navigation: T
                 });
-                (0, n(560).default)().then((() => (0, n(602).default)()));
-                const S = n(617);
+                (0, n(560).default)().then((() => (0, n(601).default)()));
+                const S = n(616);
                 return S.recordPotatoMode(), S.recordWebglSupport(), T
             }))
         }), {
