@@ -2434,12 +2434,7 @@
                 shouldShowAgreementSection: s.Ember.computed("voiceComplianceAgreementAuthorized", "teamVoiceEnabledConfig", (function() {
                     return this.get("teamVoiceEnabledConfig") && !this.get("voiceComplianceAgreementAuthorized")
                 })),
-                isTeamVoiceDisabled: s.Ember.computed(u.property, "voiceComplianceAgreementAuthorized", (function() {
-                    return !this.get(u.property) || !this.get("voiceComplianceAgreementAuthorized")
-                })),
-                autoJoinObserver: s.Ember.observer(u.property, (function() {
-                    this.get(u.property) || this.changeSetting(p.property, !1)
-                })),
+                isTeamVoiceDisabled: s.Ember.computed.not("voiceComplianceAgreementAuthorized"),
                 captureDevices: s.Ember.computed("voiceService.captureDevices", g.property, (function() {
                     const e = this.get("voiceService.captureDevices") || [],
                         t = this.get(g.property) || s.lodash.get(s.lodash.first(e.filter((e => e.is_current_device))), "handle");
